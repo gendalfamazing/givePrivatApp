@@ -49,27 +49,19 @@ struct Postanovlenie99Alg4View: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                   
-                    MyViewBuilder(title: Text("4"), content: Text("41. Лабораторно-инструментальные показания к ИВЛ")).buildBlue1Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text("41. Лабораторно-инструментальные показания к ИВЛ"), content: Text(LocalizedStringKey("Post99Alg4B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
                             }
                         }
-                    if isTextExpanded2{
-                        MyViewBuilder(title: Text("4"), content: Text(LocalizedStringKey("Post99Alg4B0G0S2"))).buildGrayText()
-                        
-                    }
-                    MyViewBuilder(title: Text("4"), content: Text("42. Абсолютные медицинские противопоказания к ИВЛ")).buildBlue1Text(isTextExpanded: isTextExpanded3)
+                    MyViewBuilder(title: Text("42. Абсолютные медицинские противопоказания к ИВЛ"), content: Text(LocalizedStringKey("Post99Alg4B0G0S3"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded3.toggle()
                             }
                         }
-                    if isTextExpanded3{
-                        MyViewBuilder(title: Text("4"), content: Text(LocalizedStringKey("Post99Alg4B0G0S3"))).buildGrayText()
-                        
-                    }
+                    
                     MyViewBuilder(title: Text("4"), content: Text("43. Уход за пациентом, находящимся на ИВЛ")).buildBlue1Text(isTextExpanded: isTextExpanded4)
                         .onTapGesture {
                             withAnimation (.snappy) {
