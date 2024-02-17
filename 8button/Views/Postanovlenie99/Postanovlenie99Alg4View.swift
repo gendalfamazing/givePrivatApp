@@ -43,16 +43,13 @@ struct Postanovlenie99Alg4View: View {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
-                    MyViewBuilder(title: Text("4"), content: Text("40. Клинические показания к ИВЛ")).buildBlue1Text(isTextExpanded: isTextExpanded1)
+                    MyViewBuilder(title: Text("40. Клинические показания к ИВЛ"), content: Text(LocalizedStringKey("Post99Alg4B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    if isTextExpanded1{
-                        MyViewBuilder(title: Text("4"), content: Text(LocalizedStringKey("Post99Alg4B0G0S1"))).buildGrayText()
-                        
-                    }
+                   
                     MyViewBuilder(title: Text("4"), content: Text("41. Лабораторно-инструментальные показания к ИВЛ")).buildBlue1Text(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
