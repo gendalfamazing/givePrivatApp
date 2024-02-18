@@ -19,39 +19,20 @@ struct Postanovlenie118Alg10View: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
-                    MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B1G0S0"))).buildBlue1Text(isTextExpanded: isTextExpanded1)
+                VStack (spacing: 5) {
+                    MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg10B1G0S0")), content: Text(LocalizedStringKey("Post118Alg10B1G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    
-                    if isTextExpanded1 {
-                        MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B1G0S1"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B1G0S2"))).buildGrayText()
-                        
-                        
-                    }
-                    
-                    MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B2G0S0"))).buildBlue1Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg10B2G0S0")), content: Text(LocalizedStringKey("Post118Alg10B2G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
                             }
                         }
                     
-                    if isTextExpanded2 {
-                        MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B2G0S1"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B2G0S2"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B2G0S3"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("10"), content: Text(LocalizedStringKey("Post118Alg10B2G0S4"))).buildGrayText()
-                        
-                    }
                     
                     Spacer()
                     Spacer()
