@@ -23,11 +23,12 @@ struct Postanovlenie99Alg14View: View {
     @State private var isTextExpanded10 = false
     @State private var isTextExpanded11 = false
     @State private var isTextExpanded12 = false
+    @State private var isTextExpanded13 = false
     var body: some View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
+                VStack (spacing: 5) {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
@@ -40,17 +41,17 @@ struct Postanovlenie99Alg14View: View {
                         .padding(5)
                     }
                     ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack {
-                                MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**1. Пропофол**")).buildGreen1Text(isTextExpanded: isTextExpanded1)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded1.toggle()
-                                            
-                                        }
+                            MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**1. Пропофол**")).buildBlue59Text(isTextExpanded: isTextExpanded1)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded1.toggle()
+                                        
                                     }
-                                if isTextExpanded1{
-                                    
+                                }
+                            if isTextExpanded1{
+                                VStack(spacing: 1) {
                                     MyViewBuilder(title: Text(""),content: Text("""
                                                         **Концентрация раствора**:
                                                         """)
@@ -77,35 +78,41 @@ struct Postanovlenie99Alg14View: View {
                                                 Не следует превышать максимальную дозу и вводить его в течение > 7 суток; при более продолжительном введении описан «синдром, связанный с инфузией пропофола» (PRIS) – внезапная рефрактерная брадикардия и асистолия
                                                 """)
                                     ).buildGrayInHiddenText()
-                                    
                                 }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded1.toggle()
+                                        
+                                    }
+                                }
+                            }
                         }
-                        .padding(5)
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                                MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2. Бензодиазепины**")).buildGreen1Text(isTextExpanded: isTextExpanded2)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded2.toggle()
-                                            if isTextExpanded2 == false {
-                                                isTextExpanded5 = false
-                                                isTextExpanded6 = false
+                    
+                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2. Бензодиазепины**")).buildBlue591Text(isTextExpanded: isTextExpanded2)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded2.toggle()
+                                if isTextExpanded2 == false {
+                                    isTextExpanded5 = false
+                                    isTextExpanded6 = false
+                                }
+                            }
+                        }
+                    if isTextExpanded2 {
+                        VStack (spacing: 5) {
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2.1 Мидазолам**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded5)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded5.toggle()
+                                                
                                             }
                                         }
-                                    }
-                                if isTextExpanded2 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2.1 Мидазолам**")).buildGreen1Text(isTextExpanded: isTextExpanded5)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded5.toggle()
-                                                    
-                                                }
-                                            }
-                                        if isTextExpanded5{
-                                            
+                                    if isTextExpanded5{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -132,17 +139,28 @@ struct Postanovlenie99Alg14View: View {
                                                         При сниженной перфузии печени практически не метаболизируется; при почечной недостаточности накапливаются активные метаболиты
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
                                         }
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2.2 Диазепам**")).buildGreen1Text(isTextExpanded: isTextExpanded6)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded6.toggle()
-                                                    
-                                                }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded5.toggle()
+                                                
                                             }
-                                        if isTextExpanded6{
-                                            
+                                        }
+                                    }
+                                }
+                            }
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2.2 Диазепам**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded6)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded6.toggle()
+                                                
+                                            }
+                                        }
+                                    if isTextExpanded6{
+                                        VStack (spacing: 1){
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -167,37 +185,45 @@ struct Postanovlenie99Alg14View: View {
                                                         ЛС выбора для продолжительной седации (длительный период полувыведения ~ 20–120 ч; имеет активные метаболиты); возможно отсроченное угнетение дыхания после прекращения ИВЛ.
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
+                                        }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded6.toggle()
+                                                
+                                            }
                                         }
                                     }
+                                    
                                 }
+                            }
                         }
-                        .padding(5)
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                                MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3. Опиоиды**")).buildGreen1Text(isTextExpanded: isTextExpanded3)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded3.toggle()
-                                            if isTextExpanded3 == false {
-                                                isTextExpanded7 = false
-                                                isTextExpanded8 = false
+                    
+                    
+                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3. Опиоиды**")).buildBlue591Text(isTextExpanded: isTextExpanded3)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded3.toggle()
+                                if isTextExpanded3 == false {
+                                    isTextExpanded7 = false
+                                    isTextExpanded8 = false
+                                }
+                            }
+                        }
+                    if isTextExpanded3 {
+                        VStack (spacing: 5) {
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3.1 Фентанил**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded7)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded7.toggle()
+                                                
                                             }
                                         }
-                                    }
-                                if isTextExpanded3 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3.1 Фентанил**")).buildGreen1Text(isTextExpanded: isTextExpanded7)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded7.toggle()
-                                                    
-                                                }
-                                            }
-                                        if isTextExpanded7{
-                                            
+                                    if isTextExpanded7{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -224,17 +250,29 @@ struct Postanovlenie99Alg14View: View {
                                                         Вызывает брадикардию и артериальную гипотензию, мышечную ригидность, тошноту и рвоту
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
                                         }
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3.2 Морфин**")).buildGreen1Text(isTextExpanded: isTextExpanded8)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded8.toggle()
-                                                    
-                                                }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded7.toggle()
+                                                
                                             }
-                                        if isTextExpanded8{
-                                            
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3.2 Морфин**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded8)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded8.toggle()
+                                                
+                                            }
+                                        }
+                                    if isTextExpanded8{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -260,37 +298,45 @@ struct Postanovlenie99Alg14View: View {
                                                         Вызывает брадикардию, артериальную гипотензию, тошноту, рвоту и парез желудочно-кишечного тракта; может вызвать зуд вследствие высвобождения гистамина
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
+                                        }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded8.toggle()
+                                                
+                                            }
                                         }
                                     }
+                                    
                                 }
+                            }
                         }
-                        .padding(5)
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                                MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4. Агонисты a2-адренорецепторов**")).buildGreen1Text(isTextExpanded: isTextExpanded4)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded4.toggle()
-                                            if isTextExpanded4 == false {
-                                                isTextExpanded9 = false
-                                                isTextExpanded10 = false
+                    
+                    
+                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4. Агонисты a2-адренорецепторов**")).buildBlue591Text(isTextExpanded: isTextExpanded4)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded4.toggle()
+                                if isTextExpanded4 == false {
+                                    isTextExpanded9 = false
+                                    isTextExpanded10 = false
+                                }
+                            }
+                        }
+                    if isTextExpanded4 {
+                        VStack (spacing: 5) {
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4.1 Клонидин** *")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded9)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded9.toggle()
+                                                
                                             }
                                         }
-                                    }
-                                if isTextExpanded4 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4.1 Клонидин** *")).buildGreen1Text(isTextExpanded: isTextExpanded9)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded9.toggle()
-                                                    
-                                                }
-                                            }
-                                        if isTextExpanded9{
-                                            
+                                    if isTextExpanded9{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -320,17 +366,29 @@ struct Postanovlenie99Alg14View: View {
                                                         Не вызывает угнетения дыхания. Способствует развитию брадикардии и артериальной гипотензии
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
                                         }
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4.2 Дексмедетомидин**")).buildGreen1Text(isTextExpanded: isTextExpanded10)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded10.toggle()
-                                                    
-                                                }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded9.toggle()
+                                                
                                             }
-                                        if isTextExpanded10{
-                                            
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4.2 Дексмедетомидин**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded10)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded10.toggle()
+                                                
+                                            }
+                                        }
+                                    if isTextExpanded10{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -359,37 +417,44 @@ struct Postanovlenie99Alg14View: View {
                                                         При нарушении функции почек коррекции дозы не требуется, при нарушении функции печени дозу снижают
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
+                                        }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded10.toggle()
+                                                
+                                            }
                                         }
                                     }
+                                    
                                 }
+                            }
                         }
-                        .padding(5)
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                                MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5. Другие средства**")).buildGreen1Text(isTextExpanded: isTextExpanded5)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded5.toggle()
-                                            if isTextExpanded5 == false {
-                                                isTextExpanded11 = false
-                                                isTextExpanded12 = false
+                    
+                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5. Другие средства**")).buildBlue591Text(isTextExpanded: isTextExpanded13)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded13.toggle()
+                                if isTextExpanded13 == false {
+                                    isTextExpanded11 = false
+                                    isTextExpanded12 = false
+                                }
+                            }
+                        }
+                    if isTextExpanded13 {
+                        VStack (spacing: 5) {
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5.1 Тиопентал натрия** *")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded11)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded11.toggle()
+                                                
                                             }
                                         }
-                                    }
-                                if isTextExpanded5 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5.1 Тиопентал натрия** *")).buildGreen1Text(isTextExpanded: isTextExpanded11)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded11.toggle()
-                                                    
-                                                }
-                                            }
-                                        if isTextExpanded11{
-                                            
+                                    if isTextExpanded11{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -421,17 +486,29 @@ struct Postanovlenie99Alg14View: View {
                                                         в отдельный канал многоканального центрального венозного катетера)
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
                                         }
-                                        MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5.2 Кетамин**")).buildGreen1Text(isTextExpanded: isTextExpanded12)
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded12.toggle()
-                                                    
-                                                }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded11.toggle()
+                                                
                                             }
-                                        if isTextExpanded12{
-                                            
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                VStack {
+                                    MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5.2 Кетамин**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded12)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded12.toggle()
+                                                
+                                            }
+                                        }
+                                    if isTextExpanded12{
+                                        VStack (spacing: 1) {
                                             MyViewBuilder(title: Text(""),content: Text("""
                                                                 **Концентрация раствора**:
                                                                 """)
@@ -460,27 +537,26 @@ struct Postanovlenie99Alg14View: View {
                                                         Не рекомендуют вводить в течение длительного времени
                                                         """)
                                             ).buildGrayInHiddenText()
-                                            
+                                        }
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded12.toggle()
+                                                
+                                            }
                                         }
                                     }
                                 }
-                            
-                            
+                            }
                         }
-                        .padding(5)
                     }
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("dfdfdf"),content: Text("""
+                    
+                    
+                    MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                         * Off-label, назначаются врачебным консилиумом.
                                         """)
-                            ).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                    ).buildGrayText()
+                    
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
