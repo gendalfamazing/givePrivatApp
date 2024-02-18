@@ -49,14 +49,14 @@ struct Postanovlenie118Alg6View: View {
                         }
                     
                     if isTextExpanded3 {
-                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg6B3G1S0")), content: Text(LocalizedStringKey("Post118Alg6B3G1S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded4)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg6B3G1S0")), content: Text(LocalizedStringKey("Post118Alg6B3G1S1"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded4)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded4.toggle()
                                 }
                             }
                         
-                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg6B3G2S0")), content: Text(LocalizedStringKey("Post118Alg6B3G2S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded5)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg6B3G2S0")), content: Text(LocalizedStringKey("Post118Alg6B3G2S1"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded5)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded5.toggle()
