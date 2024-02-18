@@ -21,7 +21,8 @@ struct Postanovlenie99Alg7View: View {
     @State private var isTextExpanded8 = false
     @State private var isTextExpanded9 = false
     @State private var isTextExpanded10 = false
- 
+    @State private var isTextExpanded11 = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
