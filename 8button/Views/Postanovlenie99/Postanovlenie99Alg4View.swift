@@ -23,21 +23,7 @@ struct Postanovlenie99Alg4View: View {
     @State private var isTextExpanded10 = false
     @State private var isTextExpanded11 = false
     @State private var isTextExpanded12 = false
-    @State private var isTextExpanded13 = false
-    @State private var isTextExpanded14 = false
-    @State private var isTextExpanded15 = false
-    @State private var isTextExpanded16 = false
-    @State private var isTextExpanded17 = false
-    @State private var isTextExpanded18 = false
-    @State private var isTextExpanded19 = false
-    @State private var isTextExpanded20 = false
-    @State private var isTextExpanded21 = false
-    @State private var isTextExpanded22 = false
-    @State private var isTextExpanded23 = false
-    @State private var isTextExpanded24 = false
-    @State private var isTextExpanded25 = false
-    @State private var isTextExpanded26 = false
-    @State private var isTextExpanded27 = false
+
     var body: some View {
         NavigationStack {
             ScrollView {

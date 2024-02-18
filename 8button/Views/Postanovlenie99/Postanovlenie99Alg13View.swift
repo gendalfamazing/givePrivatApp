@@ -97,7 +97,7 @@ struct Postanovlenie99Alg13View: View {
                         }
                     }
                     .cornerRadius(10)
-                    .shadow(color: .shadow, radius: 2)
+                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {

@@ -19,110 +19,61 @@ struct Postanovlenie99Alg6View: View {
     @State private var isTextExpanded6 = false
     @State private var isTextExpanded7 = false
     @State private var isTextExpanded8 = false
-    @State private var isTextExpanded9 = false
-    @State private var isTextExpanded10 = false
-    @State private var isTextExpanded11 = false
-    @State private var isTextExpanded12 = false
-    @State private var isTextExpanded13 = false
-    @State private var isTextExpanded14 = false
-    @State private var isTextExpanded15 = false
-    @State private var isTextExpanded16 = false
-    @State private var isTextExpanded17 = false
-    @State private var isTextExpanded18 = false
-    @State private var isTextExpanded19 = false
-    @State private var isTextExpanded20 = false
-    @State private var isTextExpanded21 = false
-    @State private var isTextExpanded22 = false
-    @State private var isTextExpanded23 = false
-    @State private var isTextExpanded24 = false
-    @State private var isTextExpanded25 = false
-    @State private var isTextExpanded26 = false
-    @State private var isTextExpanded27 = false
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
-                    MyViewBuilder(title: Text("6"), content: Text("64. Формы анафилактических реакций")).buildBlue1Text(isTextExpanded: isTextExpanded1)
+                    MyViewBuilder(title: Text("64. Формы анафилактических реакций"), content: Text(LocalizedStringKey("Post99Alg6B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    if isTextExpanded1{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S1"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("65. Критерии анафилаксии")).buildBlue1Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text("65. Критерии анафилаксии"), content: Text(LocalizedStringKey("Post99Alg6B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
                             }
                         }
-                    if isTextExpanded2{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S2"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("66. Фактор успешности лечения")).buildBlue1Text(isTextExpanded: isTextExpanded3)
+                    MyViewBuilder(title: Text("66. Фактор успешности лечения"), content: Text(LocalizedStringKey("Post99Alg6B0G0S3"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded3.toggle()
                             }
                         }
-                    if isTextExpanded3{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S3"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("67. Алгоритм оказания медицинской помощи при анафилаксии")).buildBlue1Text(isTextExpanded: isTextExpanded4)
+                    MyViewBuilder(title: Text("67. Алгоритм оказания медицинской помощи при анафилаксии"), content: Text(LocalizedStringKey("Post99Alg6B0G0S4"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded4)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded4.toggle()
                             }
                         }
-                    if isTextExpanded4{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S4"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("68. Последующее лечение")).buildBlue1Text(isTextExpanded: isTextExpanded5)
+                    MyViewBuilder(title: Text("68. Последующее лечение"), content: Text(LocalizedStringKey("Post99Alg6B0G0S5"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded5)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded5.toggle()
                             }
                         }
-                    if isTextExpanded5{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S5"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("69. Длительность наблюдения и мониторинга")).buildBlue1Text(isTextExpanded: isTextExpanded6)
+                    MyViewBuilder(title: Text("69. Длительность наблюдения и мониторинга"), content: Text(LocalizedStringKey("Post99Alg6B0G0S6"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded6)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded6.toggle()
                             }
                         }
-                    if isTextExpanded6{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S6"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("70. Уведомление о развитии анафилаксии")).buildBlue1Text(isTextExpanded: isTextExpanded7)
+                    MyViewBuilder(title: Text("70. Уведомление о развитии анафилаксии"), content: Text(LocalizedStringKey("Post99Alg6B0G0S7"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded7)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded7.toggle()
                             }
                         }
-                    if isTextExpanded7{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S7"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("6"), content: Text("71. Подтверждение анафилаксии")).buildBlue1Text(isTextExpanded: isTextExpanded8)
+                    MyViewBuilder(title: Text("71. Подтверждение анафилаксии"), content: Text(LocalizedStringKey("Post99Alg6B0G0S8"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded8)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded8.toggle()
                             }
                         }
-                    if isTextExpanded8{
-                        MyViewBuilder(title: Text("6"),
-                                      content: Text(LocalizedStringKey("Post99Alg6B0G0S8"))).buildGrayText()
-                    }
+                    
                     MyViewBuilder(title: Text("6"),
                                   content: Text(LocalizedStringKey("Post99Alg6B0G0S9"))).buildGrayText()
                     

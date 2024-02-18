@@ -178,10 +178,7 @@ struct Prikaz1030Alg41View: View {
                                 
                                 HStack {
                                     MyViewBuilder(title: Text("41"), content: Text("""
-                                    
                                     **Наружное кровотечение**
-                                    
-                                    
                                     """)).buildGreen1Text(isTextExpanded: isTextExpanded3)
                                         .onTapGesture {
                                             withAnimation (.snappy) {
