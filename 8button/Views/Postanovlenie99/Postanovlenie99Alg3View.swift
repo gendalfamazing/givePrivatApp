@@ -79,91 +79,26 @@ struct Postanovlenie99Alg3View: View {
                                 isTextExpanded12.toggle()
                             }
                         }
+                    MyViewBuilder(title: Text("15. Алгоритм немедленных действий при потере сознания или коллапсе пациента"), content: Text(LocalizedStringKey("Post99Alg3B0G0S6"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded5)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded5.toggle()
+                            }
+                        }
+                    MyViewBuilder(title: Text("16. Алгоритм СЛР до момента доставки дефибриллятора (Алгоритм CAB)"), content: Text(LocalizedStringKey("Post99Alg3B0G0S10"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded6)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded6.toggle()
+                            }
+                        }
+                    MyViewBuilder(title: Text("17. Алгоритм СЛР после доставки дефибриллятора (оценка сердечного ритма)"), content: Text(LocalizedStringKey("Post99Alg3B0G0S18"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded7)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded7.toggle()
+                            }
+                        }
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1) {
-                            MyViewBuilder(title: Text("1"), content: Text("15. Алгоритм немедленных действий при потере сознания или коллапсе пациента")).buildBlue59Text(isTextExpanded: isTextExpanded5)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded5.toggle()
-                                    }
-                                }
-                            
-                            if isTextExpanded5{
-                                VStack {
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S6"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S7"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S8"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S9"))).buildGrayInHidden59Text()
-                                }
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded5.toggle()
-                                    }
-                                }
-                                
-                            }
-                            
-                        }
-                    }
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1)  {
-                            MyViewBuilder(title: Text("1"), content: Text("16. Алгоритм СЛР до момента доставки дефибриллятора (Алгоритм CAB)")).buildBlue59Text(isTextExpanded: isTextExpanded6)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded6.toggle()
-                                    }
-                                }
-                            
-                            if isTextExpanded6{
-                                VStack {
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S10"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S11"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S12"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S13"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S14"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S15"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S16"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S17"))).buildGrayInHidden59Text()
-                                }
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded6.toggle()
-                                    }
-                                }
-                                
-                            }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1)  {
-                            MyViewBuilder(title: Text("1"), content: Text("17. Алгоритм СЛР после доставки дефибриллятора (оценка сердечного ритма)")).buildBlue59Text(isTextExpanded: isTextExpanded7)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded7.toggle()
-                                    }
-                                }
-                            
-                            if isTextExpanded7{
-                                VStack {
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S18"))).buildGrayInHidden59Text()
-                                    MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S19"))).buildGrayInHidden59Text()
-                                }
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded7.toggle()
-                                    }
-                                }
-                                
-                            }
-                            
-                        }
-                    }
                     MyViewBuilder(title: Text("18. Алгоритм СЛР при выявлении ритма ФЖ или ЖТбП"), content: Text(LocalizedStringKey("Post99Alg3B0G0S20"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded8)
                         .onTapGesture {
                             withAnimation (.snappy) {

@@ -29,40 +29,13 @@ struct Postanovlenie99Alg2View: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1)  {
-                            MyViewBuilder(title: Text("1"), content: Text("5. Оценка состояния пациента в критическом состоянии по алгоритму ABCDE")).buildBlue59Text(isTextExpanded: isTextExpanded2)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded2.toggle()
-                                    }
-                                }
-                            
-                            if isTextExpanded2{
-                                VStack {
-                                    MyViewBuilder(title: Text("2"), content: Text(LocalizedStringKey("Post99Alg2B0G0S2"))).buildGrayInHidden59Text()
-                                    
-                                    MyViewBuilder(title: Text("2"), content: Text(LocalizedStringKey("Post99Alg2B0G0S3"))).buildGrayInHidden59Text()
-                                    
-                                    
-                                    MyViewBuilder(title: Text("2"), content: Text(LocalizedStringKey("Post99Alg2B0G0S4"))).buildGrayInHidden59Text()
-                                    
-                                    MyViewBuilder(title: Text("2"), content: Text(LocalizedStringKey("Post99Alg2B0G0S5"))).buildGrayInHidden59Text()
-                                    
-                                    
-                                    MyViewBuilder(title: Text("2"), content: Text(LocalizedStringKey("Post99Alg2B0G0S6"))).buildGrayInHidden59Text()
-                                }
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded2.toggle()
-                                    }
-                                }
+                    MyViewBuilder(title: Text("5. Оценка состояния пациента в критическом состоянии по алгоритму ABCDE"), content: Text(LocalizedStringKey("Post99Alg2B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded2.toggle()
                             }
-                            
                         }
-                    }
+                    
                     MyViewBuilder(title: Text("6. Поддержание витальных функций организма"), content: Text(LocalizedStringKey("Post99Alg2B0G0S7"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded6)
                         .onTapGesture {
                             withAnimation (.snappy) {
