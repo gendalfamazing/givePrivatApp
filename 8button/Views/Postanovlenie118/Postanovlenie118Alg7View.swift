@@ -28,27 +28,14 @@ struct Postanovlenie118Alg7View: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
-                    MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B1G0S0"))).buildBlue1Text(isTextExpanded: isTextExpanded1)
+                VStack (spacing: 5) {
+                    MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B1G0S0")), content: Text(LocalizedStringKey("Post118Alg7B1G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    
-                    if isTextExpanded1 {
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B1G0S1"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B1G0S2"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B1G0S3"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B1G0S4"))).buildGrayText()
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B1G0S5"))).buildGrayText()
-                    }
-                    
-                    MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G0S0"))).buildBlue1Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B2G0S0")), content: Text(LocalizedStringKey("Post118Alg7B2G0S0"))).buildBlue591Text(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
@@ -61,19 +48,13 @@ struct Postanovlenie118Alg7View: View {
                         }
                     
                     if isTextExpanded2 {
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G1S0"))).buildGreen2Text(isTextExpanded: isTextExpanded3)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B2G1S0")), content: Text(LocalizedStringKey("Post118Alg7B2G1S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded3.toggle()
                                 }
                             }
-                        
-                        if isTextExpanded3 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G1S1"))).buildGrayText()
-                            
-                        }
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G2S0"))).buildGreen2Text(isTextExpanded: isTextExpanded4)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B2G2S0")), content: Text(LocalizedStringKey("Post118Alg7B2G2S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded4)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded4.toggle()
@@ -81,33 +62,21 @@ struct Postanovlenie118Alg7View: View {
                             }
                         
                         if isTextExpanded4 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G2S1"))).buildGrayText()
-                            
                             NavigationLink (destination: Postanovlenie118Alg3View()) {
                                 MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G2S2"))).buildNavigationText()
                             }
                             
                         }
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G3S0"))).buildGreen2Text(isTextExpanded: isTextExpanded5)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B2G3S0")), content: Text(LocalizedStringKey("Post118Alg7B2G3S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded5)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded5.toggle()
                                 }
                             }
                         
-                        if isTextExpanded5 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G3S1"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G3S2"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B2G3S3"))).buildGrayText()
-                            
-                        }
-                        
                     }
                     
-                    MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G0S0"))).buildBlue1Text(isTextExpanded: isTextExpanded6)
+                    MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G0S0"))).buildBlue591Text(isTextExpanded: isTextExpanded6)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded6.toggle()
@@ -119,42 +88,23 @@ struct Postanovlenie118Alg7View: View {
                         }
                     
                     if isTextExpanded6 {
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G1S0"))).buildGreen2Text(isTextExpanded: isTextExpanded7)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B3G1S0")), content: Text(LocalizedStringKey("Post118Alg7B3G1S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded7)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded7.toggle()
                                 }
                             }
-                        
-                        if isTextExpanded7 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G1S1"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G1S2"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G1S3"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G1S4"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G1S5"))).buildGrayText()
-                            
-                        }
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G2S0"))).buildGreen2Text(isTextExpanded: isTextExpanded8)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B3G2S0")), content: Text(LocalizedStringKey("Post118Alg7B3G2S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded8)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded8.toggle()
-                                    
                                 }
                             }
                         
-                        if isTextExpanded8 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B3G2S1"))).buildGrayText()
-                            
-                        }
                         
                     }
                     
-                    MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G0S0"))).buildBlue1Text(isTextExpanded: isTextExpanded9)
+                    MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G0S0"))).buildBlue591Text(isTextExpanded: isTextExpanded9)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded9.toggle()
@@ -166,35 +116,19 @@ struct Postanovlenie118Alg7View: View {
                         }
                     
                     if isTextExpanded9 {
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G1S0"))).buildGreen2Text(isTextExpanded: isTextExpanded10)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B4G1S0")), content: Text(LocalizedStringKey("Post118Alg7B4G1S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded10)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded10.toggle()
                                 }
                             }
-                        
-                        if isTextExpanded10 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G1S1"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G1S2"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G1S3"))).buildGrayText()
-                            
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G1S4"))).buildGrayText()
-                            
-                        }
-                        
-                        MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G2S0"))).buildGreen2Text(isTextExpanded: isTextExpanded11)
+                        MyViewBuilder(title: Text(LocalizedStringKey("Post118Alg7B4G2S0")), content: Text(LocalizedStringKey("Post118Alg7B4G2S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded11)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded11.toggle()
                                 }
                             }
                         
-                        if isTextExpanded11 {
-                            MyViewBuilder(title: Text("7"), content: Text(LocalizedStringKey("Post118Alg7B4G2S1"))).buildGrayText()
-                            
-                        }
                         
                     }
                     

@@ -130,7 +130,38 @@ class MyViewBuilder: ViewBuilder1 {
 //
                 
     }
-    
+    func buildBlue591Text(isTextExpanded: Bool) -> some View {
+        
+        return
+                HStack {
+                    content
+                    Spacer()
+                    Spacer()
+                    Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
+//                        .resizable()
+//                        .frame(width: 20, height: 20)
+                        .opacity(0.3)
+//                        .multilineTextAlignment(.center)
+                        .padding(.trailing, 7)
+                }
+                .padding(7.0)
+//                .lineLimit(2)
+                
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .fontWeight(.semibold)
+                .frame(minHeight: 49)
+                .frame(minWidth: 49)
+                
+                .modifier(ThemeBlueColorModifier())
+                .background(Color.blueButton)
+        //                .background(isTextExpanded ? Color.toggle : Color.blueButton)
+                .font(.subheadline)
+                .cornerRadius(10)
+                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+//
+                
+    }
     func buildBlue59NavigationText() -> some View {
         
         return
