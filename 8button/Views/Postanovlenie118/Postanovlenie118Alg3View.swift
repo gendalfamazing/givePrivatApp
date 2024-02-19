@@ -85,12 +85,7 @@ struct Postanovlenie118Alg3View: View {
                     .font(.caption2)
                 }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Image(systemName: "doc.text")
-                    .foregroundColor(.blue)
-                
-                
-            }
+            
         }
     }
     
