@@ -18,7 +18,7 @@ struct Postanovlenie2Alg6View: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
+                VStack (spacing: 5){
                     MyViewBuilder(title: Text("6"), 
                                   content: Text(LocalizedStringKey("Post2Alg6B0G0S1"))).buildGrayText()
                     MyViewBuilder(title: Text("6"),

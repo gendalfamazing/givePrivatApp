@@ -26,67 +26,44 @@ struct Postanovlenie2Alg3View: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
-                    MyViewBuilder(title: Text("3"), content: Text("14. Основные задачи службы СМП")).buildBlue1Text(isTextExpanded: isTextExpanded1)
+                VStack (spacing: 5){
+                    MyViewBuilder(title: Text("14. Основные задачи службы СМП"), content: Text(LocalizedStringKey("Post2Alg3B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    if isTextExpanded1{
-                        MyViewBuilder(title: Text("3"),
-                                      content: Text(LocalizedStringKey("Post2Alg3B0G0S1"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("3"), content: Text("15. Режимы функционирования службы СМП")).buildBlue1Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text("15. Режимы функционирования службы СМП"), content: Text(LocalizedStringKey("Post2Alg3B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
                             }
                         }
-                    if isTextExpanded2{
-                        MyViewBuilder(title: Text("3"),
-                                      content: Text(LocalizedStringKey("Post2Alg3B0G0S2"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("3"), content: Text("16. Режим повседневной деятельности")).buildBlue1Text(isTextExpanded: isTextExpanded3)
+                    MyViewBuilder(title: Text("16. Режим повседневной деятельности"), content: Text(LocalizedStringKey("Post2Alg3B0G0S3"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded3.toggle()
                             }
                         }
-                    if isTextExpanded3{
-                        MyViewBuilder(title: Text("3"),
-                                      content: Text(LocalizedStringKey("Post2Alg3B0G0S3"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("3"), content: Text("17. Режим повышенной готовности")).buildBlue1Text(isTextExpanded: isTextExpanded4)
+                    MyViewBuilder(title: Text("17. Режим повышенной готовности"), content: Text(LocalizedStringKey("Post2Alg3B0G0S4"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded4)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded4.toggle()
                             }
                         }
-                    if isTextExpanded4{
-                        MyViewBuilder(title: Text("3"),
-                                      content: Text(LocalizedStringKey("Post2Alg3B0G0S4"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("3"), content: Text("18. Чрезвычайный режим")).buildBlue1Text(isTextExpanded: isTextExpanded5)
+                    MyViewBuilder(title: Text("18. Чрезвычайный режим"), content: Text(LocalizedStringKey("Post2Alg3B0G0S5"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded5)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded5.toggle()
                             }
                         }
-                    if isTextExpanded5{
-                        MyViewBuilder(title: Text("3"),
-                                      content: Text(LocalizedStringKey("Post2Alg3B0G0S5"))).buildGrayText()
-                    }
-                    MyViewBuilder(title: Text("3"), content: Text("19. Служба СМП не осуществляет")).buildBlue1Text(isTextExpanded: isTextExpanded6)
+                    MyViewBuilder(title: Text("19. Служба СМП не осуществляет"), content: Text(LocalizedStringKey("Post2Alg3B0G0S6"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded6)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded6.toggle()
                             }
                         }
-                    if isTextExpanded6{
-                        MyViewBuilder(title: Text("3"),
-                                      content: Text(LocalizedStringKey("Post2Alg3B0G0S6"))).buildGrayText()
-                    }
+                    
                     
                     
                     Spacer()
