@@ -154,8 +154,8 @@ class MyViewBuilder: ViewBuilder1 {
                 .frame(minWidth: 49)
                 
                 .modifier(ThemeBlueColorModifier())
-                .background(Color.blueButton)
-//                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+//                .background(Color.blueButton)
+                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
                 .font(.subheadline)
                 .cornerRadius(10)
                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
@@ -187,8 +187,8 @@ class MyViewBuilder: ViewBuilder1 {
                 .frame(minWidth: 49)
                 
                 .modifier(ThemeBlueColorModifier())
-                .background(Color.blueButtonLowLevel)
-//                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+//                .background(Color.blueButtonLowLevel)
+                .background(isTextExpanded ? Color.toggleLowLevel : Color.blueButtonLowLevel)
                 .font(.subheadline)
                 .cornerRadius(10)
 //                .shadow(color: .shadowGrayRectangle, radius: 0.5)
@@ -506,8 +506,8 @@ class MyViewBuilder: ViewBuilder1 {
                 .frame(minHeight: 49)
                 .frame(minWidth: 49)
                 .modifier(ThemeBlueColorModifier())
-                .background(Color.blueButton)
-//                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+//                .background(Color.blueButton)
+                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
                 .font(.subheadline)
                 .cornerRadius(10)
                     
@@ -554,8 +554,8 @@ class MyViewBuilder: ViewBuilder1 {
                 .frame(minHeight: 49)
                 .frame(minWidth: 49)
                 .modifier(ThemeBlueColorModifier())
-                .background(Color.blueButtonLowLevel)
-//                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+//                .background(Color.blueButtonLowLevel)
+                        .background(isTextExpanded ? Color.toggleLowLevel : Color.blueButtonLowLevel)
                 .font(.subheadline)
                 .cornerRadius(10)
                     
