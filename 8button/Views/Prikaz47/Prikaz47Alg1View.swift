@@ -18,7 +18,7 @@ struct Prikaz47Alg1View: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
+                VStack (spacing: 5){
                     MyViewBuilder(title: Text("1"), 
                                   content: Text(LocalizedStringKey("Prikaz47Alg1B0G0S1"))).buildGrayText()
                     MyViewBuilder(title: Text("1"),
