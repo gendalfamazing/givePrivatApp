@@ -203,7 +203,7 @@ struct Postanovlenie118Alg5View: View {
                         .font(.headline)
                         .bold()
                     Text("""
-                        «Оказание неотложной медицинской помощи в детской хирургии»
+                        «Оказание медицинской помощи в детской хирургии»
                         """)
                     .font(.caption2)
                 }
