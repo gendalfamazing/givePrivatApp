@@ -32,7 +32,7 @@ struct Prikaz1030Alg10View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 5){
                             MyViewBuilder(title: Text("10"), content: Text("""
                     **Анамнез, осмотр, контроль АД, ЭКГ**
                     """)).buildGrayInText()

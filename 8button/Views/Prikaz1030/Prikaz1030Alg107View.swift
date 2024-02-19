@@ -66,7 +66,7 @@ struct Prikaz1030Alg7View: View {
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 5){
                             MyViewBuilder(title: Text("7"), content: Text("""
                     **Достигнутый эффект**:
                     """)).buildGrayInText()
@@ -74,7 +74,7 @@ struct Prikaz1030Alg7View: View {
                             
                             MyViewBuilder(title: Text("7"), content: Text("""
                         Асистолия
-                        """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
+                        """)).buildBlue591Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -91,7 +91,7 @@ struct Prikaz1030Alg7View: View {
                             }
                             MyViewBuilder(title: Text("7"), content: Text("""
                         Появление эффективного ритма
-                        """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
+                        """)).buildBlue591Text(isTextExpanded: isTextExpanded2)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded2.toggle()
@@ -110,7 +110,7 @@ struct Prikaz1030Alg7View: View {
                             }
                             MyViewBuilder(title: Text("7"), content: Text("""
                         Электрическая активность (фибрилляция)
-                        """)).buildGreen1Text(isTextExpanded: isTextExpanded3)
+                        """)).buildBlue591Text(isTextExpanded: isTextExpanded3)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded3.toggle()

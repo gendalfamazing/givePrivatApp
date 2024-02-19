@@ -28,7 +28,7 @@ struct Postanovlenie59Alg1P2View: View {
      var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
+                VStack (spacing: 5){
                 Spacer()
                     
                     
@@ -240,7 +240,7 @@ struct Postanovlenie59Alg1P2View: View {
                         }
                     }
                     
-                    Spacer(minLength: 30)
+                    Spacer(minLength: 15)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {

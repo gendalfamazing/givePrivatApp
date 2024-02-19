@@ -24,7 +24,8 @@ struct Prikaz1030Alg14View: View {
     @State private var isTextExpanded10 = false
     @State private var isTextExpanded11 = false
     @State private var isTextExpanded12 = false
-    
+    @State private var isTextExpanded91 = false
+    @State private var isTextExpanded92 = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -37,73 +38,110 @@ struct Prikaz1030Alg14View: View {
                     **Мерцательная аритмия – ЭКГ**
                     """)).buildGrayInText()
                         }
-                        .padding(5)
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("14"), content: Text("""
-                    **Постоянная форма и повторный пароксизм длительностью более 48 часов**
-                    """)).buildGrayInText()
-                            
-                            HStack {
-                                MyViewBuilder(title: Text("14"), content: Text("""
-                            Гемодинамика **стабильная**
-                            """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded1.toggle()
-                                            if isTextExpanded2 == true {
-                                                isTextExpanded2.toggle()
-                                            }
-                                        }
-                                    }
-                                
-                                MyViewBuilder(title: Text("14"), content: Text("""
-                            ЧСС **более 120 уд/мин**
-                            """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded2.toggle()
-                                            if isTextExpanded1 == true {
-                                                isTextExpanded1.toggle()
-                                            }
-                                        }
-                                    }
-                            }
-                            
-                        }
-                        .padding(5)
-                    }
-                    
-                    
-                    if isTextExpanded1 {
-                        Image(systemName: "arrow.down")
-                           
-                        MyViewBuilder(title: Text("14"), content: Text("""
-                        **Рекомендовать дообследование** и лечение в поликлинике по месту жительства
-                        """)).buildGrayText()
                         
                     }
-                    if isTextExpanded2 {
+                    MyViewBuilder(title: Text("14"), content: Text("""
+                **Постоянная форма и повторный пароксизм длительностью более 48 часов**
+                """)).buildBlue591Text(isTextExpanded: isTextExpanded91)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded91.toggle()
+                                if isTextExpanded91 == false {
+                                    isTextExpanded1 = false
+                                    isTextExpanded2 = false
+                                }
+                                if isTextExpanded92 == true {
+                                    isTextExpanded92.toggle()
+                                }
+                            }
+                        }
+                    if isTextExpanded91 {
                         Image(systemName: "arrow.down")
-                           
-                        MyViewBuilder(title: Text("14"), content: Text("""
+                        ZStack {
+                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            VStack (spacing: 5){
+                                HStack {
+                                    MyViewBuilder(title: Text("14"), content: Text("""
+                            Гемодинамика **стабильная**
+                            """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded1.toggle()
+                                                if isTextExpanded2 == true {
+                                                    isTextExpanded2.toggle()
+                                                }
+                                            }
+                                        }
+                                    
+                                    MyViewBuilder(title: Text("14"), content: Text("""
+                            ЧСС **более 120 уд/мин**
+                            """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded2.toggle()
+                                                if isTextExpanded1 == true {
+                                                    isTextExpanded1.toggle()
+                                                }
+                                            }
+                                        }
+                                }
+                                
+                            }
+                            .padding(5)
+                        }
+                        
+                        
+                        if isTextExpanded1 {
+                            Image(systemName: "arrow.down")
+                            
+                            MyViewBuilder(title: Text("14"), content: Text("""
+                        **Рекомендовать дообследование** и лечение в поликлинике по месту жительства
+                        """)).buildGrayText()
+                            
+                        }
+                        if isTextExpanded2 {
+                            Image(systemName: "arrow.down")
+                            
+                            MyViewBuilder(title: Text("14"), content: Text("""
                         **1 мл – 0,025% раствора дигоксина в 20 мл 0,9% раствора натрия хлорида в/в струйно**
                         """)).buildGrayText()
-                        Image(systemName: "arrow.down")
-                           
-                        MyViewBuilder(title: Text("14"), content: Text("""
+                            Image(systemName: "arrow.down")
+                            
+                            MyViewBuilder(title: Text("14"), content: Text("""
                         **Доставка в стационар** по профилю заболевания
                         """)).buildGrayText()
+                        }
                     }
                     
+                    MyViewBuilder(title: Text("14"), content: Text("""
+                **Иной пароксизм**
+                """)).buildBlue591Text(isTextExpanded: isTextExpanded92)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded92.toggle()
+                                if isTextExpanded91 == true {
+                                    isTextExpanded91.toggle()
+                                }
+                                if isTextExpanded92 == false {
+                                    isTextExpanded3 = false
+                                    isTextExpanded4 = false
+                                    isTextExpanded5 = false
+                                    isTextExpanded6 = false
+                                    isTextExpanded7 = false
+                                    isTextExpanded8 = false
+                                    isTextExpanded9 = false
+                                    isTextExpanded10 = false
+                                    isTextExpanded11 = false
+                                    isTextExpanded12 = false
+                                }
+                            }
+                        }
+                    if isTextExpanded92 {
+                        Image(systemName: "arrow.down")
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("14"), content: Text("""
-                    **Пароксизм**
-                    """)).buildGrayInText()
+                        VStack (spacing: 5) {
+                            
                             
                             MyViewBuilder(title: Text("14"), content: Text("""
                             **Гемодинамика стабильная**:
@@ -164,7 +202,7 @@ struct Prikaz1030Alg14View: View {
                     
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
@@ -226,22 +264,22 @@ struct Prikaz1030Alg14View: View {
                     }
                     if isTextExpanded5 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                             **Электроимпульсная терапия дефибриллятором с функцией кардиоверсии** (синхронизация) с предварительной в/в **премедикацией диазепамом 0,5% – 2–4 мл, морфином 1% – 1 мл** (тримеперидин 2%-1 мл) с **оксигенотерапией 100% кислородом**
                             """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                             **Доставка в стационар (ОИТАР, минуя приемное отделение)**
                             """)).buildGrayText()
                     }
                     if isTextExpanded10 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 5){
                                 MyViewBuilder(title: Text("14"), content: Text("""
                             **Повторный пароксизм**:
                             """)).buildGrayInText()
@@ -288,7 +326,7 @@ struct Prikaz1030Alg14View: View {
                     }
                     if isTextExpanded11 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
@@ -327,7 +365,7 @@ struct Prikaz1030Alg14View: View {
                     }
                     if isTextExpanded6 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
@@ -366,36 +404,38 @@ struct Prikaz1030Alg14View: View {
                     }
                     if isTextExpanded7 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                     **Прокаинамид 10 % – 5-10 мл в 0,9% растворе натрия хлорида в/в медленно под контролем АД** (возможно **в одном шприце с 1% раствором фенилэфрина 0,1-0,3-0,5мл**) или в/в **верапамил 2-4 мл 0,25%** раствора **при наличии медицинского документа об эффективности** последнего препарата
                     """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                     **Доставка в стационар** по профилю заболевания
                     """)).buildGrayText()
                     }
                     if isTextExpanded8 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                     **Доставка в стационар** по профилю заболевания
                     """)).buildGrayText()
                     }
                     if isTextExpanded9 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                     **1 мл – 0,025% раствора дигоксина в 20 мл 0,9% раствора натрия хлорида в/в струйно**
                     """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("14"), content: Text("""
                     **Доставка в стационар** по профилю заболевания
                     """)).buildGrayText()
                     }
                     
+                    
+                }
                     Spacer(minLength: 30)
                     HStack {
                         ForEach(0..<13) { _ in

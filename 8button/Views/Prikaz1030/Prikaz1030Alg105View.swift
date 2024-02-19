@@ -32,7 +32,7 @@ struct Prikaz1030Alg5View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 5){
                             MyViewBuilder(title: Text("5"), content: Text("""
                             **Провести обследование**
                             """)).buildGrayInText()
@@ -75,6 +75,7 @@ struct Prikaz1030Alg5View: View {
                                     }
                             }
                             if isTextExpanded1 {
+                                VStack (spacing: 5) {
                                 MyViewBuilder(title: Text("5"), content: Text("""
                             При кровотечении – **временная остановка кровотечения**.
                             Обеспечить внутривенный доступ через периферический **катетер наибольшего диаметра**.
@@ -86,9 +87,25 @@ struct Prikaz1030Alg5View: View {
                             - **обезболивание** (**1 мл 0,005%** раствора **фентанила**, **1 мл 2%** раствора **тримеперидина**, **1-2 мл 5%** раствора **трамадола**);
                             - **глюкокортикостероиды**: **преднизолон 120-300 мг** или **метилпреднизолон до 30 мг/кг** массы тела.
                             """)).buildGrayInHiddenText()
-                                
                             }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded1.toggle()
+                                        if isTextExpanded2 == true {
+                                            isTextExpanded2.toggle()
+                                        }
+                                        if isTextExpanded4 == true {
+                                            isTextExpanded4.toggle()
+                                        }
+                                        if isTextExpanded5 == true {
+                                            isTextExpanded5.toggle()
+                                        }
+                                    }
+                                }
+                            }
+                            
                             if isTextExpanded2 {
+                                VStack (spacing: 5) {
                                 MyViewBuilder(title: Text("5"), content: Text("""
                             При присоединении клинических признаков **острой дыхательной недостаточности**:
                             - частота дыхания **более 40** или **менее 8 в 1 мин**;
@@ -104,7 +121,21 @@ struct Prikaz1030Alg5View: View {
                             - **обезболивание** (**1 мл 0,005%** раствора **фентанила**, **1 мл 2%** раствора **тримеперидина**, **1-2 мл 5%** раствора **трамадола**);
                             - **глюкокортикостероиды**: **преднизолон 120-300 мг** или **метилпреднизолон до 30 мг/кг** массы тела.
                             """)).buildGrayInHiddenText()
-                                
+                            }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded2.toggle()
+                                        if isTextExpanded1 == true {
+                                            isTextExpanded1.toggle()
+                                        }
+                                        if isTextExpanded4 == true {
+                                            isTextExpanded4.toggle()
+                                        }
+                                        if isTextExpanded5 == true {
+                                            isTextExpanded5.toggle()
+                                        }
+                                    }
+                                }
                             }
                             
                             

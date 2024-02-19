@@ -34,13 +34,13 @@ struct Prikaz1030Alg12View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 5){
                             MyViewBuilder(title: Text("12"), content: Text("""
                     **Анамнез, осмотр, контроль АД, ЭКГ**
                     """)).buildGrayInText()
                             MyViewBuilder(title: Text("12"), content: Text("""
                     **Хроническое течение заболевания**
-                    """)).buildBlue1Text(isTextExpanded: isTextExpanded)
+                    """)).buildBlue591Text(isTextExpanded: isTextExpanded)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded.toggle()
@@ -61,7 +61,7 @@ struct Prikaz1030Alg12View: View {
                             
                             MyViewBuilder(title: Text("12"), content: Text("""
                     **Частая или политопная в острейшей фазе ИМ**
-                    """)).buildBlue1Text(isTextExpanded: isTextExpanded1)
+                    """)).buildBlue591Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -82,7 +82,7 @@ struct Prikaz1030Alg12View: View {
                             
                             MyViewBuilder(title: Text("12"), content: Text("""
                     **Частые групповые** экстрасистолы **гемодинамически значимые** или **субъективно плохо переносимые**
-                    """)).buildBlue1Text(isTextExpanded: isTextExpanded2)
+                    """)).buildBlue591Text(isTextExpanded: isTextExpanded2)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded2.toggle()
@@ -142,7 +142,7 @@ struct Prikaz1030Alg12View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:5){
                                 MyViewBuilder(title: Text("12"), content: Text("""
                         **Признаки кардиогенного шока**:
                         """)).buildGrayInText()

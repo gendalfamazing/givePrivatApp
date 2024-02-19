@@ -230,11 +230,11 @@ struct Prikaz1030Alg4View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 5){
                                 MyViewBuilder(title: Text("4"), content: Text("**Венозный доступ с внутривенной (далее – в/в) инфузионной терапией 0,9% раствора натрия хлорида.**")).buildGrayInHiddenText()
                                 
                                 MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText()
-                                MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildGreen1Text(isTextExpanded: isTextExpanded7)
+                                MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded7.toggle()
@@ -254,7 +254,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 6 «Фибрилляция желудочков (ФЖ), желудочковая тахикардия (ЖТ) с острой сердечной недостаточностью»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Асистолия**")).buildGreen1Text(isTextExpanded: isTextExpanded8)
+                                MyViewBuilder(title: Text("4"), content: Text("**Асистолия**")).buildBlue591Text(isTextExpanded: isTextExpanded8)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded8.toggle()
@@ -274,7 +274,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 7 «Асистолия»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Наличие электрической активности на ЭКГ без пульсации** на крупных артериях (**электромеханическая диссоциация**)")).buildGreen1Text(isTextExpanded: isTextExpanded9)
+                                MyViewBuilder(title: Text("4"), content: Text("**Наличие электрической активности на ЭКГ без пульсации** на крупных артериях (**электромеханическая диссоциация**)")).buildBlue591Text(isTextExpanded: isTextExpanded9)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded9.toggle()
@@ -294,7 +294,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 8 «Электромеханическая диссо- циация (нарушение насосной функции при сохранении электрической активности)»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Восстановление ритма**")).buildGreen1Text(isTextExpanded: isTextExpanded10)
+                                MyViewBuilder(title: Text("4"), content: Text("**Восстановление ритма**")).buildBlue591Text(isTextExpanded: isTextExpanded10)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded10.toggle()
@@ -488,7 +488,7 @@ struct Prikaz1030Alg4View: View {
                             VStack {
                                 MyViewBuilder(title: Text("4"), content: Text("**Закрытый массаж сердца** по общепринятой схеме.")).buildGrayInHiddenText()
                                 MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText()
-                                MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildGreen1Text(isTextExpanded: isTextExpanded7)
+                                MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded7.toggle()
@@ -508,7 +508,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 6 «Фибрилляция желудочков (ФЖ), желудочковая тахикардия (ЖТ) с острой сердечной недостаточностью»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Асистолия**")).buildGreen1Text(isTextExpanded: isTextExpanded8)
+                                MyViewBuilder(title: Text("4"), content: Text("**Асистолия**")).buildBlue591Text(isTextExpanded: isTextExpanded8)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded8.toggle()
@@ -528,7 +528,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 7 «Асистолия»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Наличие электрической активности на ЭКГ без пульсации** на крупных артериях (**электромеханическая диссоциация**)")).buildGreen1Text(isTextExpanded: isTextExpanded9)
+                                MyViewBuilder(title: Text("4"), content: Text("**Наличие электрической активности на ЭКГ без пульсации** на крупных артериях (**электромеханическая диссоциация**)")).buildBlue591Text(isTextExpanded: isTextExpanded9)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded9.toggle()
@@ -548,7 +548,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 8 «Электромеханическая диссо- циация (нарушение насосной функции при сохранении электрической активности)»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Восстановление ритма**")).buildGreen1Text(isTextExpanded: isTextExpanded10)
+                                MyViewBuilder(title: Text("4"), content: Text("**Восстановление ритма**")).buildBlue591Text(isTextExpanded: isTextExpanded10)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded10.toggle()
@@ -584,7 +584,7 @@ struct Prikaz1030Alg4View: View {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
                                 MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText()
-                                MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildGreen1Text(isTextExpanded: isTextExpanded7)
+                                MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded7.toggle()
@@ -604,7 +604,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 6 «Фибрилляция желудочков (ФЖ), желудочковая тахикардия (ЖТ) с острой сердечной недостаточностью»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Асистолия**")).buildGreen1Text(isTextExpanded: isTextExpanded8)
+                                MyViewBuilder(title: Text("4"), content: Text("**Асистолия**")).buildBlue591Text(isTextExpanded: isTextExpanded8)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded8.toggle()
@@ -624,7 +624,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 7 «Асистолия»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Наличие электрической активности на ЭКГ без пульсации** на крупных артериях (**электромеханическая диссоциация**)")).buildGreen1Text(isTextExpanded: isTextExpanded9)
+                                MyViewBuilder(title: Text("4"), content: Text("**Наличие электрической активности на ЭКГ без пульсации** на крупных артериях (**электромеханическая диссоциация**)")).buildBlue591Text(isTextExpanded: isTextExpanded9)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded9.toggle()
@@ -644,7 +644,7 @@ struct Prikaz1030Alg4View: View {
                                         MyViewBuilder(title: Text("4"), content: Text("Алгоритм 8 «Электромеханическая диссо- циация (нарушение насосной функции при сохранении электрической активности)»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("4"), content: Text("**Восстановление ритма**")).buildGreen1Text(isTextExpanded: isTextExpanded10)
+                                MyViewBuilder(title: Text("4"), content: Text("**Восстановление ритма**")).buildBlue591Text(isTextExpanded: isTextExpanded10)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded10.toggle()

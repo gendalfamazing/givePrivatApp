@@ -35,7 +35,7 @@ struct Prikaz1030Alg11View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 5){
                             MyViewBuilder(title: Text("11"), content: Text("""
                     **Анамнез, осмотр, установка периферического катера (контроль вены), контроль АД, ритма, ЭКГ, пульсоксиметрия**
                     """)).buildGrayInHiddenText()

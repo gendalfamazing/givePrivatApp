@@ -99,8 +99,8 @@ struct Prikaz1030Alg6View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("6"), content: Text("Электро-механическая диссоциация")).buildGreen1Text(isTextExpanded: isTextExpanded1)
+                            VStack (spacing: 5){
+                                MyViewBuilder(title: Text("6"), content: Text("Электро-механическая диссоциация")).buildBlue591Text(isTextExpanded: isTextExpanded1)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded1.toggle()
@@ -111,7 +111,7 @@ struct Prikaz1030Alg6View: View {
                                         MyViewBuilder(title: Text("6"), content: Text("Алгоритм 8 «Электро-механическая диссоциация»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("6"), content: Text("Появился пульс")).buildGreen1Text(isTextExpanded: isTextExpanded2)
+                                MyViewBuilder(title: Text("6"), content: Text("Появился пульс")).buildBlue591Text(isTextExpanded: isTextExpanded2)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded2.toggle()
@@ -125,7 +125,7 @@ struct Prikaz1030Alg6View: View {
                                         MyViewBuilder(title: Text("6"), content: Text("Алгоритм 9 «Постреанимационная поддержка»")).buildNavigationText()
                                     }
                                 }
-                                MyViewBuilder(title: Text("6"), content: Text("Асистолия")).buildGreen1Text(isTextExpanded: isTextExpanded3)
+                                MyViewBuilder(title: Text("6"), content: Text("Асистолия")).buildBlue591Text(isTextExpanded: isTextExpanded3)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded3.toggle()
