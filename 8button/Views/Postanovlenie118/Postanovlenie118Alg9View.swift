@@ -159,7 +159,7 @@ struct Postanovlenie118Alg9View: View {
                         .font(.headline)
                         .bold()
                     Text("""
-                        «Неот. состояния при инфекционных заболеваниях»
+                        «Неотл. состояния при инфекционных заболеваниях»
                         """)
                     .font(.caption2)
                 }

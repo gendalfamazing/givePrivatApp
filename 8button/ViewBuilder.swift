@@ -121,8 +121,8 @@ class MyViewBuilder: ViewBuilder1 {
                 .frame(minWidth: 49)
                 
                 .modifier(ThemeBlueColorModifier())
-                .background(Color.blueButton)
-        //                .background(isTextExpanded ? Color.toggle : Color.blueButton)
+//                .background(Color.blueButton)
+                .background(isTextExpanded ? Color.toggle : Color.blueButton)
                 .font(.subheadline)
                 .cornerRadius(10)
 //                .shadow(color: isTextExpanded ? Color.shadowGrayRectangle : Color.shadowGrayRectangle,
