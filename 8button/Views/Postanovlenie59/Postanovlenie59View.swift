@@ -13,11 +13,13 @@ struct Postanovlenie59View: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
+                VStack (spacing: 5){
                     NavigationLink(destination: Postanovlenie59Alg1View()) {
                         MyViewBuilder(title: Text("01"), content:Text("«Артериальная гипертензия»")).buildTitleBlueText()
                     }
-                   
+                    NavigationLink(destination: Postanovlenie59Alg2View()) {
+                        MyViewBuilder(title: Text("02"), content:Text("«Артериальная гипертензия у беременных»")).buildTitleBlueText()
+                    }
                     
                     
                 }

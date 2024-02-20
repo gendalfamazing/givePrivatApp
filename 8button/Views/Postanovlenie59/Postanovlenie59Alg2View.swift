@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Postanovlenie59Alg1View: View {
+struct Postanovlenie59Alg2View: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isTextExpanded = false
@@ -41,7 +41,7 @@ struct Postanovlenie59Alg1View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg1P1View()) {
+                            NavigationLink (destination: Postanovlenie59Alg2P1View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Амбулаторный этап")).buildBlue59NavigationText()
                             }
                         }
@@ -49,7 +49,7 @@ struct Postanovlenie59Alg1View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg1P2View()) {
+                            NavigationLink (destination: Postanovlenie59Alg2P2View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Стационарный этап")).buildBlue59NavigationText()
                             }
                         }
@@ -237,7 +237,7 @@ struct Postanovlenie59Alg1View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Артериальная гипертензия»
+                    «Артериальная гипертензия у беременных»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)
@@ -249,6 +249,6 @@ struct Postanovlenie59Alg1View: View {
     
 }
 #Preview {
-    Postanovlenie59Alg1View()
+    Postanovlenie59Alg2View()
 }
 

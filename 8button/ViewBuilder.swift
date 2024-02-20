@@ -950,7 +950,7 @@ class MyViewBuilder59: ViewBuilder3 {
   
     func buildTable59AG() -> some View {
         
-        return VStack {
+        return VStack (spacing: 1){
             
             Text(LocalizedStringKey(title1))
                 .padding(.horizontal, 7)
@@ -1116,6 +1116,154 @@ class MyViewBuilder59: ViewBuilder3 {
             
             
             Spacer()
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    func buildTable59AGPreg() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            Spacer()
+            HStack (alignment: .center) {
+                
+                Text(LocalizedStringKey(title3))
+                    .padding(.horizontal, 7)
+                    .font(.subheadline)
+                    .bold()
+                Spacer()
+                Text(LocalizedStringKey(title5))
+                    .padding(.horizontal, 7)
+                    .font(.subheadline)
+                    .bold()
+                Spacer()
+            }
+            HStack {
+                    Text(LocalizedStringKey(title4))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption2)
+                        .padding(7)
+                
+                    Text(LocalizedStringKey(title6))
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption2)
+                        .padding(7)
+                
+            }
+            Text(LocalizedStringKey(title7))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title8))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title9))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title10))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title11))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title12))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    func buildTable59AGPreg1() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .lineLimit(4)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+                Text(LocalizedStringKey(title3))
+                    .padding(.horizontal, 7)
+                    .font(.subheadline)
+                    .bold()
+                
+                Text(LocalizedStringKey(title4))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                //                .frame(maxWidth: 70)
+                    .font(.caption2)
+                    .padding(7)
+            
+            
+            Text(LocalizedStringKey(title9))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title10))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title11))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title12))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            Spacer(minLength: 1)
             
         }
         .padding(2)
