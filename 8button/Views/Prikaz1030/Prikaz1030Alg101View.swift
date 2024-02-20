@@ -19,110 +19,82 @@ struct Prikaz1030Alg1View: View {
                 ZStack {
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                     VStack {
-                MyViewBuilder(title: Text("1"), content: Text("**Убедиться в личной безопасности и безопасности пациента**")).buildGrayInText()
+                        MyViewBuilder(title: Text("1"), content: Text("**Убедиться в личной безопасности и безопасности пациента**")).buildGrayInText()
                     }
-                    .padding(5.0)
+                    
                 }
                 Image(systemName: "arrow.down")
-                    
+                
                 ZStack{
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack{
+                    VStack (spacing: 1){
                         MyViewBuilder(title: Text("1"), content: Text("Осуществить **первичный осмотр пациента** для оценки нарушения витальных функций")).buildGrayInHidden59Text()
                         
                         NavigationLink (destination: Prikaz1030Alg2View()) {
                             MyViewBuilder(title: Text("1"), content: Text("Алгоритм 2 «Первичный осмотр пациента (ABCD)».")).buildNavigationText()
                         }
+                        .padding(.horizontal, 5.0)
+                        
                         MyViewBuilder(title: Text("1"), content: Text("Обеспечить **проходимость дыхательных путей, иммобилизацию шейного отдела позвоночника**, адекватное дыхание, гемодинамику, остановку профузного кровотечения, пульсоксиметрию (по показаниям).")).buildGrayInHidden59Text()
                     }
-                    .padding(5.0)
+                    
                 }
                 Image(systemName: "arrow.down")
-                    
-                ZStack{
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack{
-                MyViewBuilder(title: Text("1"), content: Text("""
-                        **Неотложная медицинская помощь** (по экстренным показаниям):
-                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("1"), content: Text("""
-                                1) обеспечить **венозный доступ и инфузионную терапию** под контролем АД;
-                                2) **ЭКГ-мониторирование** по показаниям;
-                                3) **оксигенотерапия** (под контролем SpO2);
-                                4) **оказание медицинской помощи** в соответствии с выявленной патологией;
-                                5) обеспечить **необходимую иммобилизацию и способ транспортировки** с соответствующим имеющейся патологии положением пациента.
-                                """)).buildGrayInHidden59Text()
-                    }
-                   
-                }
-                Image(systemName: "arrow.down")
-                    
-                ZStack{
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack{
-                MyViewBuilder(title: Text("1"), content: Text("""
-                        **Выполнить углубленный осмотр пациента**:
-                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("1"), content: Text("""
-                                1) оценка **основных витальных функций**, осмотр **«с головы до пят»**;
-                                2) сбор **анамнестических** сведений:
-                                - перенесенные заболевания;
-                                - осложняющие факторы (наличие сопутствующих заболеваний);
-                                - аллергоанамнез;
-                                - принятые лекарственные средства;
-                                - наблюдение врача.
-                                """)).buildGrayInHidden59Text()
-            }
-            
-        }
-                Image(systemName: "arrow.down")
-                    
-                ZStack{
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack{
-                        MyViewBuilder(title: Text("1"), content: Text("""
-                                **Информировать отдел госпитализации** службы СНМП о доставке пациента, находящегося в тяжелом состоянии **(не позже чем за 10 минут до приезда в стационар)**.
-                                """)).buildGrayInHidden59Text()
-            }
-            
-        }
-              
+                MyViewBuilder(title: Text("""
+                                          **Неотложная медицинская помощь**
+                                          (по экстренным показаниям):
+                                          """),
+                              content: Text("""
+                                            1) обеспечить **венозный доступ и инфузионную терапию** под контролем АД;
+                                            2) **ЭКГ-мониторирование** по показаниям;
+                                            3) **оксигенотерапия** (под контролем SpO2);
+                                            4) **оказание медицинской помощи** в соответствии с выявленной патологией;
+                                            5) обеспечить **необходимую иммобилизацию и способ транспортировки** с соответствующим имеющейся патологии положением пациента.
+                                            """)).buildGrayInAndHiddenBlock()
                 
                 Image(systemName: "arrow.down")
-                    
-                ZStack{
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack{
-                        MyViewBuilder(title: Text("1"), content: Text("""
+                MyViewBuilder(title: Text("""
+                                          **Выполнить углубленный осмотр пациента**:
+                                          """),
+                              content: Text("""
+                                            1) оценка **основных витальных функций**, осмотр **«с головы до пят»**;
+                                            2) сбор **анамнестических** сведений:
+                                            - перенесенные заболевания;
+                                            - осложняющие факторы (наличие сопутствующих заболеваний);
+                                            - аллергоанамнез;
+                                            - принятые лекарственные средства;
+                                            - наблюдение врача.
+                                            """)).buildGrayInAndHiddenBlock()
+                
+                Image(systemName: "arrow.down")
+                
+                MyViewBuilder(title: Text("1"), content: Text("""
+                                **Информировать отдел госпитализации** службы СНМП о доставке пациента, находящегося в тяжелом состоянии **(не позже чем за 10 минут до приезда в стационар)**.
+                                """)).buildGrayText()
+                
+                Image(systemName: "arrow.down")
+                
+                MyViewBuilder(title: Text("1"), content: Text("""
                                 **Доставить пациента, находящегося в тяжелом состоянии в ближайший стационар**, передать врачу-реаниматологу, **минуя приемное отделение, не прекращая оказания медицинской помощи**.
-                                """)).buildGrayInHidden59Text()
-            }
-            
-        }
+                                """)).buildGrayText()
+                
                 
                 Spacer(minLength: 30)
                 HStack {
-                    ForEach(0..<13) { _ in
+                    ForEach(0..<14) { _ in
                         Image(systemName: "minus")
                     }
                 }
                 
                 Image(systemName: "minus")
-                ZStack{
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack{
-                MyViewBuilder(title: Text("1"), content: Text("""
-                        **Примечание**.
-                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("1"), content: Text("""
-                                **Соблюдать следующие принципы**:
-                                1. Сохранять **спокойное**, внимательное отношение ко всем пациентам без исключения.
-                                2. Соблюдать **установленную форму одежды**, иметь опрятный внешний вид.
-                                3.Использовать при оказании медицинской помощи **принципы рациональной психотерапии** для успокоения больного.
-                                """)).buildGrayInHidden59Text()
-            }
-            .padding(5.0)
-        }
+                
+                MyViewBuilder(title: Text("**Примечание**."), 
+                              content: Text("""
+                                            **Соблюдать следующие принципы**:
+                                            1. Сохранять **спокойное**, внимательное отношение ко всем пациентам без исключения.
+                                            2. Соблюдать **установленную форму одежды**, иметь опрятный внешний вид.
+                                            3.Использовать при оказании медицинской помощи **принципы рациональной психотерапии** для успокоения больного.
+                                            """)).buildGrayInAndHiddenBlock()
                 Spacer()
                 Spacer()
             }

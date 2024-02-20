@@ -34,7 +34,7 @@ struct Prikaz1030Alg9View: View {
                     ZStack {
                         Text("")
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("9"), content: Text("""
                     **Появилась самостоятельная пульсация на крупных артериях**
                     """)).buildGrayInHiddenText()
@@ -119,7 +119,7 @@ struct Prikaz1030Alg9View: View {
                                 
                                 ZStack {
                                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                    VStack {
+                                    VStack (spacing: 1){
                                 MyViewBuilder(title: Text("9"), content: Text("""
                                 **Выраженные нарушения ритма**:
                                 """)).buildGrayInText()
@@ -189,7 +189,7 @@ struct Prikaz1030Alg9View: View {
                                 
                                 ZStack {
                                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                    VStack {
+                                    VStack (spacing: 1){
                                 MyViewBuilder(title: Text("9"), content: Text("""
                                 **Выраженные нарушения ритма**:
                                 """)).buildGrayInText()
@@ -258,7 +258,7 @@ struct Prikaz1030Alg9View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("9"), content: Text("""
                         **Систолическое АД выше 90 мм.рт.ст.**:
                         """)).buildGrayInText()
@@ -322,7 +322,7 @@ struct Prikaz1030Alg9View: View {
                                 
                                 ZStack {
                                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                    VStack {
+                                    VStack (spacing: 1){
                                 MyViewBuilder(title: Text("9"), content: Text("""
                     **Гипогликемия**:
                     """)).buildGrayInText()
@@ -372,7 +372,7 @@ struct Prikaz1030Alg9View: View {
                                    
                                 ZStack {
                                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                    VStack {
+                                    VStack (spacing: 1){
                                 MyViewBuilder(title: Text("9"), content: Text("""
                     **Гипогликемия**:
                     """)).buildGrayInText()

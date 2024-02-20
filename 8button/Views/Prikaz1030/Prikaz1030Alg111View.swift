@@ -35,7 +35,7 @@ struct Prikaz1030Alg11View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 5){
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("11"), content: Text("""
                     **Анамнез, осмотр, установка периферического катера (контроль вены), контроль АД, ритма, ЭКГ, пульсоксиметрия**
                     """)).buildGrayInHiddenText()
@@ -260,7 +260,7 @@ struct Prikaz1030Alg11View: View {
                                
                             ZStack {
                                 MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
+                                VStack (spacing: 5){
                                     MyViewBuilder(title: Text("10"), content: Text("""
                             **Амиодарон 5 % – 6 мл в/в болюсно**, можно **повторно 3 мл через 15 минут** при отсутствии эффекта
                             """)).buildGrayInHiddenText()

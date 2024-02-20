@@ -30,21 +30,20 @@ struct Prikaz1030Alg3View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    
-                    MyViewBuilder(title: Text("3"), content: Text("""
-                            **Клинические признаки**:
-                            
-                            - **цианоз кожных покровов**;
-                            - частота дыхания **более 40 или менее 8 в 1 мин**;
-                            - **SpО2 менее 90%** при дыхании атмосферным воздухом.
-                            """)).buildGrayText()
+                    MyViewBuilder(title: Text("""
+                                              **Клинические признаки**:
+                                              """),
+                                  content: Text("""
+                                                - **цианоз кожных покровов**;
+                                                - частота дыхания **более 40 или менее 8 в 1 мин**;
+                                                - **SpО2 менее 90%** при дыхании атмосферным воздухом.
+                                                """)).buildGrayInAndHiddenBlock()
                     
                     Image(systemName: "arrow.down")
                         
-                    
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("3"), content: Text("**Катетеризация периферической** (при необходимости центральной) **вены. ЭКГ-мониторинг. Оценка АД. Аускультация лёгких.**")).buildGrayInHiddenText()
                             
                             NavigationLink (destination: Prikaz1030Alg77View()) {
@@ -130,16 +129,20 @@ struct Prikaz1030Alg3View: View {
                                 }
                             
                             if isTextExpanded6 {
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                **Клинические признаки**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                – **отсутствие дыхательных шумов и движений грудной клетки** на стороне поражения;
-                                – **внезапное начало**.
-                                """)).buildGrayInHiddenText()
-                                NavigationLink (destination: Prikaz1030Alg42View()) {
-                                    MyViewBuilder(title: Text("3"), content: Text("Алгоритм 42 «Травмы груди»")).buildNavigationText()
+                                VStack (spacing: 1){
+                                    MyViewBuilder(title: Text("""
+                                                              **Клинические признаки**:
+                                                              """),
+                                                  content: Text("""
+                                                                - **отсутствие дыхательных шумов и движений грудной клетки** на стороне поражения;
+                                                                – **внезапное начало**.
+                                                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                                    NavigationLink (destination: Prikaz1030Alg42View()) {
+                                        MyViewBuilder(title: Text("3"), content: Text("Алгоритм 42 «Травмы груди»")).buildNavigationText()
+                                    }
                                 }
+                                
+                                
                             }
                             MyViewBuilder(title: Text("3"), content: Text("Признаки отека легких")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                 .onTapGesture {
@@ -152,17 +155,21 @@ struct Prikaz1030Alg3View: View {
                                 }
                             
                             if isTextExpanded7 {
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                **Клинические признаки**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                – **мелко- и средне- пузырчатые хрипы** над лёгкими;
-                                – вынужденное положение **(ортопное)**;
-                                – **пенистая мокрота**.
-                                """)).buildGrayInHiddenText()
-                                NavigationLink (destination: Prikaz1030Alg17View()) {
-                                    MyViewBuilder(title: Text("3"), content: Text("Алгоритм 17 «Отек легких»")).buildNavigationText()
+                                VStack (spacing: 1) {
+                                    MyViewBuilder(title: Text("""
+                                                              **Клинические признаки**:
+                                                              """),
+                                                  content: Text("""
+                                                                - **мелко- и средне- пузырчатые хрипы** над лёгкими;
+                                                                – вынужденное положение **(ортопное)**;
+                                                                – **пенистая мокрота**.
+                                                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                                    NavigationLink (destination: Prikaz1030Alg17View()) {
+                                        MyViewBuilder(title: Text("3"), content: Text("Алгоритм 17 «Отек легких»")).buildNavigationText()
+                                    }
                                 }
+                                
+                                
                             }
                             
                             

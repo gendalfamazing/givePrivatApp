@@ -374,7 +374,55 @@ class MyViewBuilder: ViewBuilder1 {
     }
     
     
+    func buildGrayInAndHiddenBlock() -> some View {
+        
+        return VStack (spacing: 1){
+                title
+                
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 10)
+                    
+                content
+                    
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+            
+        }
+        .padding(10)
+        
+        .fixedSize(horizontal: false, vertical: false)
+        .frame(minHeight: 20)
+        .modifier(ThemeGrayColorModifier())
+        .font(.subheadline)
+        .cornerRadius(10)
+        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        
+    }
     
+    func buildGrayInAndHiddenBlockWithBlueButtons() -> some View {
+        
+        return VStack (spacing: 1){
+                title
+                
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 10)
+                    
+                content
+                    
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+            
+        }
+        .padding(10)
+        
+        .fixedSize(horizontal: false, vertical: false)
+        .frame(minHeight: 20)
+        .modifier(ThemeGrayColorModifier())
+        .font(.subheadline)
+        .cornerRadius(10)
+        
+        
+    }
     func buildGrayInText() -> some View {
 
         return content
@@ -392,7 +440,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayInHiddenText() -> some View {
 
         return content
-            .padding(10)
+            .padding(5)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 20)

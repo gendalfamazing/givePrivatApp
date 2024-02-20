@@ -140,7 +140,7 @@ struct Prikaz1030Alg14View: View {
                         Image(systemName: "arrow.down")
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 5) {
+                        VStack (spacing: 1) {
                             
                             
                             MyViewBuilder(title: Text("14"), content: Text("""
@@ -205,7 +205,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("14"), content: Text("""
                             **Впервые выявленный пароксизм**:
                             """)).buildGrayInText()
@@ -279,7 +279,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 5){
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("14"), content: Text("""
                             **Повторный пароксизм**:
                             """)).buildGrayInText()
@@ -329,7 +329,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("14"), content: Text("""
                         **ЧСС более 120 уд/мин**
                         """)).buildGrayInText()
@@ -368,7 +368,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("14"), content: Text("""
                         **ЧСС более 120 уд/мин**
                         """)).buildGrayInText()
@@ -438,32 +438,26 @@ struct Prikaz1030Alg14View: View {
                 }
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                    MyViewBuilder(title: Text("14"), content: Text("""
-                            **Примечание**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("14"), content: Text("""
-                                    **Противопоказания к восстановлению синусового ритма на догоспитальном этапе**:.
-                                    """)).buildGrayInText()
-                            MyViewBuilder(title: Text("14"), content: Text("""
-                                    - **впервые выявленный пароксизм** мерцательной аритмии;
-                                    - **длительность пароксизма** мерцания предсердий **более суток**;
-                                    - **доказанная дилатация левого предсердия** (передне-задний размер 4,5 см по данным эхокардиографии);
-                                    - **наличие тромбов в предсердиях** и **тромбоэмболические осложнения в анамнезе**;
-                                    - **развитие пароксизма на фоне выраженных электролитных нарушений**;
-                                    - **декомпенсация тиреотоксикоза**.
-                                    """)).buildGrayInHiddenText()
-                }
-                .padding(5.0)
-            }
+                    MyViewBuilder(title: Text("""
+                                              **Примечание**.
+                                              """),
+                                  content: Text("""
+                                                **Противопоказания к восстановлению синусового ритма на догоспитальном этапе**:.
+                                                
+                                                - **впервые выявленный пароксизм** мерцательной аритмии;
+                                                - **длительность пароксизма** мерцания предсердий **более суток**;
+                                                - **доказанная дилатация левого предсердия** (передне-задний размер 4,5 см по данным эхокардиографии);
+                                                - **наличие тромбов в предсердиях** и **тромбоэмболические осложнения в анамнезе**;
+                                                - **развитие пароксизма на фоне выраженных электролитных нарушений**;
+                                                - **декомпенсация тиреотоксикоза**.
+                                                """)).buildGrayInAndHiddenBlock()
+                    
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

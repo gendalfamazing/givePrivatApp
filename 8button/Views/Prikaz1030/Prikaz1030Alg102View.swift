@@ -46,7 +46,7 @@ struct Prikaz1030Alg2View: View {
             VStack {
                 ZStack {
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                    VStack {
+                    VStack (spacing: 1){
                         MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                     **Проходимость дыхательных путей**:
                                     """)
@@ -138,14 +138,13 @@ struct Prikaz1030Alg2View: View {
                 if isTextExpanded2 {
                     Image(systemName: "arrow.down")
                         
-                    
-                    MyViewBuilder(title: Text("dfdfdf"),content: Text("""
-                                        **Провести очистку дыхательных путей**:
-                                        
-                                        - **удаление инородных тел**, зубных протезов, **отсасывание** рвотных масс, крови, слизи и др.
-                                        При подозрении на **травму головы и шеи** осуществить **шинирование шейной шиной** соответствующего размера. **Обязательно!**
-                                        """)
-                    ).buildGrayText()
+                    MyViewBuilder(title: Text("""
+                                              **Провести очистку дыхательных путей**:
+                                              """),
+                                  content: Text("""
+                                                - **удаление инородных тел**, зубных протезов, **отсасывание** рвотных масс, крови, слизи и др.
+                                                При подозрении на **травму головы и шеи** осуществить **шинирование шейной шиной** соответствующего размера. **Обязательно!**
+                                                """)).buildGrayInAndHiddenBlock()
                     
                 }
                 
@@ -155,7 +154,7 @@ struct Prikaz1030Alg2View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack (spacing: 1){
                             
                             MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                         **Нарушения функции дыхания**:
@@ -298,7 +297,7 @@ struct Prikaz1030Alg2View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack(spacing: 1){
                             
                             MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                         **Нарушения функции кровообращения**:
@@ -396,7 +395,7 @@ struct Prikaz1030Alg2View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("dfdfdf"), content: Text("""
                                         **Уточнить наличие признаков клинической смерти** (реакция зрачков на свет, отсутствие сознания, самостоятельного дыхания).
                                         """)
@@ -416,7 +415,7 @@ struct Prikaz1030Alg2View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack(spacing: 1){
                             MyViewBuilder(title: Text("dfdfdf"), content: Text("""
                                         **Признаки гиповолемического шока**:
                                         """)
@@ -508,7 +507,7 @@ struct Prikaz1030Alg2View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack(spacing: 1){
                             MyViewBuilder(title: Text("dfdfdf"), content: Text("""
                                     **Травмы различного генеза**:
                                     """)
@@ -556,22 +555,13 @@ struct Prikaz1030Alg2View: View {
                         Image(systemName: "arrow.down")
                             
                     
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
                                 MyViewBuilder(title: Text("dfdfdf"), content: Text("""
                                                 **Углубленное обследование пациента** (ЭКГ, измерение гликемии и другое по показаниям).
-                                                """)
-                                ).buildGrayInHiddenText()
-                                
-                                MyViewBuilder(title: Text("dfdfdf"),  content: Text("""
+                                                
                                                 Установление **предварительного диагноза**, **оказание медицинской помощи** по соответствующему алгоритму.
                                                 """)
-                                ).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5.0)
-                        }
+                                ).buildGrayText()
+                              
                         Spacer()
                     }
                 }

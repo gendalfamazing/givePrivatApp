@@ -41,7 +41,7 @@ struct Prikaz1030Alg4View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("4"), content: Text("""
                       **Констатирована клиническая смерть**.
                       **Смерть в присутствии бригады**:
@@ -141,9 +141,9 @@ struct Prikaz1030Alg4View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("4"), content: Text("""
-                                            Нанести прекардиальный удар
+                                            **Нанести прекардиальный удар**
                                             
                                             **Дыхание и сердечная деятельность восстановились**:
                                             """)).buildGrayInText()
@@ -325,7 +325,7 @@ struct Prikaz1030Alg4View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 if isTextExpanded71 {
                                     MyViewBuilder(title: Text("4"), content: Text("**Восстановить проходимость дыхательных путей**: тройной приём Сафара, **установка воздуховода** (интубационная трубка, ларингиальная маска, пищеводно-трахеальный обтуратор), **ИВЛ мешком Амбу.**")).buildGrayInHiddenText()
                                         .onTapGesture {

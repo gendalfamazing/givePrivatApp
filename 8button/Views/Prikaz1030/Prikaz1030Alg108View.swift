@@ -49,6 +49,7 @@ struct Prikaz1030Alg8View: View {
                     - ацидоз;
                     - обширный ИМ с кардиогенным шоком.
                     """)).buildGrayText()
+                    
                     Image(systemName: "arrow.down")
                         
                     
@@ -67,7 +68,7 @@ struct Prikaz1030Alg8View: View {
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("7"), content: Text("""
                             **Электрическая актиность появилась**:
                             """)).buildGrayInText()

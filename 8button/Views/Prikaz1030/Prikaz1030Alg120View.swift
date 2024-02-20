@@ -48,7 +48,7 @@ struct Prikaz1030Alg20View: View {
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("19"), content: Text("""
                     **При присоединении клинических признаков гиповолемического шока**:
                     """)).buildGrayInText()
@@ -208,16 +208,17 @@ struct Prikaz1030Alg20View: View {
                     }
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
-                           
-                        MyViewBuilder(title: Text("20"), content: Text("""
-                        **Клинические признаки**:
+                        MyViewBuilder(title: Text("""
+                                                  **Клинические признаки**:
+                                                  """),
+                                      content: Text("""
+                                                    - **Острая боль** в конечности.
+                                                    - **Бледность и мраморный оттенок** кожных покровов.
+                                                    - **Исчезновение чувствительности** на конечности.
+                                                    - **Понижение местной кожной температуры**.
+                                                    - **Исчезновение пульсации** периферических артерий.
+                                                    """)).buildGrayInAndHiddenBlock()
                         
-                        - **Острая боль** в конечности.
-                        - **Бледность и мраморный оттенок** кожных покровов.
-                        - **Исчезновение чувствительности** на конечности.
-                        - **Понижение местной кожной температуры**.
-                        - **Исчезновение пульсации** периферических артерий.
-                        """)).buildGrayText()
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("20"), content: Text("""
@@ -238,20 +239,23 @@ struct Prikaz1030Alg20View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        MyViewBuilder(title: Text("20"), content: Text("""
-                        **Клинические признаки**:
+                        MyViewBuilder(title: Text("""
+                                                  **Клинические признаки**:
+                                                  """),
+                                      content: Text("""
+                                                    - **Острая боль** в конечности.
+                                                    - **Отёчность мягких тканей** и **повышение местной кожной температуры.**
+                                                    - **Повышение общей температуры**.
+                                                    - **Багрово-синюшная окраска** конечности.
+                                                    - **Усиление поверхностного венозного рисунка**.
+                                                    - **Пульсация периферических артерий ослабевает**.
+                                                    """)).buildGrayInAndHiddenBlock()
                         
-                        - **Острая боль** в конечности.
-                        - **Отёчность мягких тканей** и **повышение местной кожной температуры.**
-                        - **Повышение общей температуры**.
-                        - **Багрово-синюшная окраска** конечности.
-                        - **Усиление поверхностного венозного рисунка**.
-                        - **Пульсация периферических артерий ослабевает**.
-                        """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
-                        MyViewBuilder(title: Text("20"), content: Text("""
+                        
+                        
+                                
+                                MyViewBuilder(title: Text("20"), content: Text("""
                         **Ввести**:
                         
                         - **1мл 1% раствора морфина** или **1 мл 2% раствора тримеперидина** в/в;
@@ -260,6 +264,7 @@ struct Prikaz1030Alg20View: View {
                         
                         **Наложить на конечность тугую повязку. Иммобилизация, возвышенное положение конечности**.
                         """)).buildGrayText()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("19"), content: Text("""

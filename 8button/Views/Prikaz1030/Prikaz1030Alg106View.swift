@@ -32,7 +32,7 @@ struct Prikaz1030Alg6View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("6"), content: Text("**Осуществлять основные реанимационные мероприятия**: алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация». **До регистрации ЭКГ** (в том числе с электродов дефибриллятора) **продолжать основные реанимационные мероприятия**.")).buildGrayInHiddenText()
                             NavigationLink (destination: Prikaz1030Alg4View()) {
                                 MyViewBuilder(title: Text("6"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText()
@@ -156,7 +156,7 @@ struct Prikaz1030Alg6View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("6"), content: Text("**Рефрактерная или рецидивирующая ФЖ/ЖТ**:")).buildGrayInText()
                                 MyViewBuilder(title: Text("6"), content: Text("""
                         **Основные реанимационные мероприятия** – см. алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация».
@@ -198,7 +198,7 @@ struct Prikaz1030Alg6View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("6"), content: Text("""
                                 **Ритм стабилизирован**:
                                 """)).buildGrayInText()
@@ -244,7 +244,7 @@ struct Prikaz1030Alg6View: View {
                     
                             ZStack {
                                 MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
+                                VStack (spacing: 1){
                                     MyViewBuilder(title: Text("6"), content: Text("""
                                     **Отсутствие электрической активности**:
                                     """)).buildGrayInText()

@@ -35,17 +35,18 @@ struct Prikaz1030Alg17View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("17"), content: Text("""
-                    **Клинические признаки**:
-                    """)).buildGrayInText()
-                            MyViewBuilder(title: Text("17"), content: Text("""
-                            - **кожные покровы бледно-синюшные, покрыты потом**;
-                            - частота дыхания учащена, ортопноэ;
-                            - тахикардия;
-                            - кашель с выделением **пенистой мокроты**;
-                            - **«клокочущее» дыхание**.
-                            """)).buildGrayInHiddenText()
+                        VStack (spacing: 1){
+                            MyViewBuilder(title: Text("""
+                                                      **Клинические признаки**:
+                                                      """),
+                                          content: Text("""
+                                                        - **кожные покровы бледно-синюшные, покрыты потом**;
+                                                        - частота дыхания учащена, ортопноэ;
+                                                        - тахикардия;
+                                                        - кашель с выделением **пенистой мокроты**;
+                                                        - **«клокочущее» дыхание**.
+                                                        """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                            
                             HStack {
                                 MyViewBuilder(title: Text("17"), content: Text("""
                         **ЭКГ-мониторинг**
@@ -109,7 +110,7 @@ struct Prikaz1030Alg17View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("17"), content: Text("""
                         **САД менее 90 мм.рт.ст.**:
                         """)).buildGrayInText()
@@ -185,21 +186,23 @@ struct Prikaz1030Alg17View: View {
                     }
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    MyViewBuilder(title: Text("17"), content: Text("""
-                    **Примечание**
+                    MyViewBuilder(title: Text("""
+                                              **Примечание**
+                                              """),
+                                  content: Text("""
+                                                **Не применять**:
+                                                - сердечные гликозиды (за исключением тахиформы мерцательной аритмии);
+                                                - глюкокортикоиды.
+                                                
+                                                **Осторожно нитраты при аортальном стенозе, кардиомиопатии, инфаркте правого желудочка**.
+                                                """)).buildGrayInAndHiddenBlock()
                     
-                    **Не применять**:
-                    - сердечные гликозиды (за исключением тахиформы мерцательной аритмии);
-                    - глюкокортикоиды.
-                    
-                    **Осторожно нитраты при аортальном стенозе, кардиомиопатии, инфаркте правого желудочка**.
-                    """)).buildGrayText()
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

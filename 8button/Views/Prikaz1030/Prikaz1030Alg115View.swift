@@ -38,7 +38,7 @@ struct Prikaz1030Alg15View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("15"), content: Text("""
                     **Ангинозный приступ**
                     """)).buildGrayInText()
@@ -162,7 +162,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("15"), content: Text("""
                         **Аналогичные приступы возникали ранее**:
                         """)).buildGrayInText()
@@ -276,7 +276,7 @@ struct Prikaz1030Alg15View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("15"), content: Text("""
                                 **Норма или отсутствие отрицательной динамики**:
                                 """)).buildGrayInText()
@@ -322,7 +322,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("15"), content: Text("""
                         **Подъем сегмента ST**, остро возникшая **ПБЛНПГ** или **Депрессия ST, отрицательный зубец Т** и (или) **появление патологического зубца Q**
                         """)).buildGrayInText()
@@ -484,7 +484,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("15"), content: Text("""
                             **Провести дифференциальную диагностику**:
                             """)).buildGrayInText()
@@ -557,7 +557,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing: 1){
                                 MyViewBuilder(title: Text("15"), content: Text("""
                         **Оценить противопоказания к ТЛТ**:
                         """)).buildGrayInText()
