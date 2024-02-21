@@ -24,6 +24,20 @@ struct Table59AG: Identifiable {
     let content12: String
     let content13: String
     let content14: String
+    let content15: String
+    let content16: String
+    let content17: String
+    let content18: String
+    let content19: String
+    let content20: String
+    let content21: String
+    let content22: String
+    let content23: String
+    let content24: String
+    let content25: String
+    let content26: String
+    let content27: String
+    let content28: String
     let id: Int
     
     
@@ -96,6 +110,20 @@ struct Table59AG: Identifiable {
                       content12: "Лечение проводится постоянно с коррекцией доз лекарственных средств в зависимости от уровня АД.",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Снижение АД до целевых уровней в течение 3-6 месяцев лечения, устранение модифицированных факторов риска. Отсутствие прогрессирования поражения органов- мишеней.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -141,6 +169,20 @@ struct Table59AG: Identifiable {
                       content12: "Постоянно",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Снижение АД до целевых уровней в течение 3-6 месяцев лечения, устранение модифицированных факторов риска, отсутствие прогрессирования поражения органов-мишеней. Компенсация сердечно-сосудистых осложнений.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -191,6 +233,20 @@ struct Table59AG: Identifiable {
                       content12: "Постоянно",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Купирование отека органов грудной полости, уменьшение симптомов декомпенсации. Снижение АД в течение 3-6 месяцев лечения, устранение модифицированных факторов риска. Стабилизация.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -236,6 +292,20 @@ struct Table59AG: Identifiable {
                       content12: "Постоянно",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Снижение АД. Компенсация осложнений, улучшение самочувствия, уменьшение кардиальных и церебральных жалоб, увеличение толерантности к нагрузке.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -282,6 +352,20 @@ struct Table59AG: Identifiable {
                       content12: "Постоянно",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Уменьшение явлений декомпенсации и почечной недостаточности. Снижение АД, снижение уровня мочевины и креатина.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -319,6 +403,20 @@ struct Table59AG: Identifiable {
                       content12: "Постоянно",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Снижение уровня АД.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -391,6 +489,20 @@ struct Table59AG: Identifiable {
                       content12: "Гипертонический криз (далее-ГК) неосложненный ГК – 5-7 дней, осложненный ГК - индивидуально зависимо от вида осложнения",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Снижение АД до целевых уровней, устранение модифицированных факторов риска.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -435,6 +547,20 @@ struct Table59AG: Identifiable {
                       content12: "12 дней",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Купирование отека органов грудной полости, уменьшение симптомов декомпенсации. Снижение АД до целевых уровней или не менее чем на 20% от исходного. Уменьшение кардиальных и церебральных жалоб.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -482,6 +608,20 @@ struct Table59AG: Identifiable {
                       content12: "10 дней",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Купирование отека органов грудной полости, уменьшение симптомов декомпенсации.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -529,6 +669,20 @@ struct Table59AG: Identifiable {
                       content12: "10 дней",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Уменьшение симптомов декомпенсации. Снижение АД. Уменьшение кардиальных и церебральных жалоб.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -576,6 +730,20 @@ struct Table59AG: Identifiable {
                       content12: "Постоянно",
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Уменьшение симптомов декомпенсации и почечной недостаточности. Снижение АД до целевых уровней.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -623,6 +791,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "Исход заболевания, цель мероприятий (результат мероприятий)",
                       content14: "Улучшение состояния. Снижение АД до целевых уровней, но не ниже 130/85 мм ртутного столба. Выздоровление с частичным нарушением физиологического процесса, функций.",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -650,6 +832,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 2),
             Table59AG(content1: "Суточное мониторирование АД",
                       content2: "",
@@ -665,6 +861,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 3),
             Table59AG(content1: "  Среднее АД за сутки",
                       content2: """
@@ -684,6 +894,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 4),
             
             Table59AG(content1: "  Среднее АД за день",
@@ -704,6 +928,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 5),
             Table59AG(content1: "  Среднее АД за ночь",
                       content2: """
@@ -723,6 +961,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 6),
             Table59AG(content1: "Домашнее измерение АД",
                       content2: """
@@ -742,6 +994,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 7),
             
         ]
@@ -775,6 +1041,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1),
             Table59AG(content1: """
                                 Бета-блокаторы
@@ -800,6 +1080,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 2),
             Table59AG(content1: """
                                 Антагонисты кальция (дигидропиридины)
@@ -822,6 +1116,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 3),
             Table59AG(content1: """
                                 Антагонисты кальция (верапамил, дилтиазем)
@@ -847,6 +1155,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 4),
             Table59AG(content1: """
                                 Ингибиторы АПФ
@@ -871,6 +1193,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 5),
             Table59AG(content1: """
                                 Блокаторы рецепторов ангиотензина
@@ -894,6 +1230,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 6),
             Table59AG(content1: """
                                 Антагонисты рецепторов минералокортикоидов
@@ -916,6 +1266,20 @@ struct Table59AG: Identifiable {
                       content12: "",
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 6),
             
             
@@ -1012,6 +1376,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1048,6 +1426,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1086,6 +1478,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     } //без доп. диагностики (для копирования)
@@ -1171,6 +1577,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1206,6 +1626,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1241,6 +1675,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1306,6 +1754,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1370,6 +1832,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1468,6 +1944,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1558,6 +2048,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1642,6 +2146,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1688,6 +2206,20 @@ struct Table59AG: Identifiable {
                                  """,
                       content13: "",
                       content14: "",
+                      content15:"",
+                      content16:"",
+                      content17:"",
+                      content18:"",
+                      content19:"",
+                      content20:"",
+                      content21:"",
+                      content22:"",
+                      content23:"",
+                      content24:"",
+                      content25:"",
+                      content26:"",
+                      content27:"",
+                      content28:"",
                       id: 1)
         ]
     }
@@ -1728,29 +2260,23 @@ struct Table59OKS: Identifiable {
     
     
     //Амбулаторные
+    //  ¹²³⁴⁵
     static func getTable59OKS1() -> [Table59OKS] {
         [
             Table59OKS(content1:"""
                                 Обязательная диагностика
                                 """,
                        content2:"""
-                                ЭКГ в 12-ти отведениях – при поступлении, через 6 и 24 часа, далее по показаниям; при возобновлении болевого синдрома, ухудшении состояния. Запись дополнительных отведений (V7-9, V3-4R) необходима при нижней локализации инфаркта миокарда и всех неясных ЭКГ картинах.
-                                
-                                Общий анализ крови (в том числе тромбоциты) и мочи – при поступлении, далее – по показаниям
-                                
-                                Биохимический анализ крови (концентрация натрия, калия, глюкозы, общего белка, мочевины,креатинина, общего билирубина, холестерина; активность АлАТ, АсАТ, КФК) – при поступлении, далее – по показаниям
-                                   
-                                Маркеры некроза миокарда (Тропонин T или I, КФК-МВ, миоглобин): Тропонин T или I при поступлении, повторно в интервале 6-12 часов после первого отрицательного результата (при использовании тропонина высокой чувствительности – через 3 часа). При выявлении повышенного уровня тропонина повторное определение маркеров не проводится.
-                                
-                                КФК-МВ – при поступлении, повторно в первые сутки каждые 6-12 часов, на 2-3-и сутки – однократно.
+                                **ЭКГ в 12-ти отведениях** – при поступлении, через 6 и 24 часа, далее по показаниям; при возобновлении болевого синдрома, ухудшении состояния. Запись дополнительных отведений (V7-9, V3-4R) необходима при нижней локализации инфаркта миокарда и всех неясных ЭКГ картинах.
+                                **Общий анализ крови (в том числе тромбоциты) и мочи** – при поступлении, далее – по показаниям
+                                **Биохимический анализ крови** (концентрация натрия, калия, глюкозы, общего белка, мочевины,креатинина, общего билирубина, холестерина; активность АлАТ, АсАТ, КФК) – при поступлении, далее – по показаниям
+                                **Маркеры некроза миокарда (Тропонин T или I, КФК-МВ, миоглобин)**: Тропонин T или I при поступлении, повторно в интервале 6-12 часов после первого отрицательного результата (при использовании тропонина высокой чувствительности – через 3 часа). При выявлении повышенного уровня тропонина повторное определение маркеров не проводится.
+                                **КФК-МВ** – при поступлении, повторно в первые сутки каждые 6-12 часов, на 2-3-и сутки – однократно.
                                 В последующем маркеры некроза миокарда – только при подозрении на повторное повреждение миокарда.
-                                
-                                Группа крови и резус-фактор.
-                                Коагулограмма (АЧТВ, протромбиновое время, фибриноген, МНО; при выполнении ЧКВ - АВСК)
-                                
-                                Рентгенография органов грудной клетки.
-                                
-                                ЭхоКГ – в первые часы во всех случаях неопределенных электрокардиографических данных, подозрении на структурные повреждения миокарда, ТЭЛА, ОЛЖН, перикардит, а также у остальных пациентов по возможности. При отсутствии осложнений в конце острого периода -  нагрузочный ЭКГ-тест (ВЭМ, тредмил) или стресс-тест с визуализацией при наличии показаний (ОФЭКТ миокарда, стресс-ЭхоКГ).
+                                **Группа крови и резус-фактор**.
+                                **Коагулограмма** (АЧТВ, протромбиновое время, фибриноген, МНО; при выполнении ЧКВ - АВСК)
+                                **Рентгенография органов грудной клетки**.
+                                **ЭхоКГ** – в первые часы во всех случаях неопределенных электрокардиографических данных, подозрении на структурные повреждения миокарда, ТЭЛА, ОЛЖН, перикардит, а также у остальных пациентов по возможности. При отсутствии осложнений в конце острого периода -  нагрузочный ЭКГ-тест (ВЭМ, тредмил) или стресс-тест с визуализацией при наличии показаний (ОФЭКТ миокарда, стресс-ЭхоКГ).
                                 """,
                        content3:"""
                                 Дополнительная диагностика (по показаниям)
@@ -1765,7 +2291,8 @@ struct Table59OKS: Identifiable {
                                 Консультация кардиохирурга* и узких врачей-специалистов.
                                 """,
                        content5:"""
-                                Мероприятия (дозы, способ введения, пояснения)
+                                                    Мероприятия
+                                (дозы, способ введения, пояснения)
                                 """,
                        content6:"""
                                 Купирование болевого синдрома
@@ -1778,21 +2305,21 @@ struct Table59OKS: Identifiable {
                                 Антиишемическая терапия
                                 """,
                        content9:"""
-                                Отмена нестероидных противовоспалительных препаратов в остром периоде заболевания.
+                                **Отмена нестероидных противовоспалительных препаратов в остром периоде заболевания**.
                                 
-                                **Нитраты внутривенно капельно в течение 6-24 часов с учетом противопоказаний3**:
+                                **Нитраты внутривенно капельно в течение 6-24 часов с учетом противопоказаний³**:
                                 - **Глицерил тринитрат (нитроглицерин) 0,25 мкг/кг/мин** с последующим увеличением дозы каждые 5 минут до тех пор, пока АД не снизится на 30 мм рт. ст. или САД не достигнет 90 мм рт. ст.;
                                 - **Изосорбид динитрат внутривенно, 2-10 мг/час**.
                                 Введение нитратов более 6-24 часов показано только при наличии постинфарктной стенокардии или ОЛЖН.
                                 
-                                **β-адреноблокаторы с учетом противопоказаний2 с достижением целевых значений ЧСС 60-70 в минуту**:
+                                **β-адреноблокаторы с учетом противопоказаний² с достижением целевых значений ЧСС 60-70 в минуту**:
                                 1. **Метопролол**
                                 - **внутривенно**: Метопролола сукцинат по 5 мг с интервалом 5 минут (максимальная доза 15 мг) под контролем ЧСС и АВ- проводимости; Метопролола тартрат по 5 мг с интервалом 5 минут (максимальная доза 15 мг) под контролем ЧСС и АВ- проводимости или
                                 - **внутрь**: Метопролола тартрат 25-100 мг, в 2-3 приема; Метопролола сукцинат 50-200 мг 1 раз в сутки
                                 или
-                                - **Карведилол 3,125-6,25 мг**, 2 раза/сутки с последующим постепенным титрованием дозы до достижения целевой ЧСС 60-70 ударов в минуту под контролем АД (максимальная суточная доза 50 мг 2 раза в сутки).
+                                2. **Карведилол 3,125-6,25 мг**, 2 раза/сутки с последующим постепенным титрованием дозы до достижения целевой ЧСС 60-70 ударов в минуту под контролем АД (максимальная суточная доза 50 мг 2 раза в сутки).
                                 или
-                                - **Бисопролол 2,5 – 10 мг**, 1 раз в сутки
+                                3. **Бисопролол 2,5 – 10 мг**, 1 раз в сутки
                                 
                                 **Ингибиторы АПФ**:
                                 - **Рамиприл**: начальная доза внутрь 1,25-2,5 мг 1 раз/сут, рекомендуемая целевая доза10 мг 1 раз/сут;
@@ -1813,55 +2340,121 @@ struct Table59OKS: Identifiable {
                                 Антитромбоцитарная терапия
                                 """,
                        content11:"""
-                                С тромболитической терапией и при отсутствии реперфузионной терапии:
-                                Ацетилсалициловая кислота - нагрузочная доза 150-300 мг внутрь (нагрузочная доза не должна быть в кишечнорастворимой форме), со второго дня поддерживающая доза - 75-100 мг/сутки совместно с
-                                Клопидогрелем - нагрузочная доза 300 мг внутрь, если возраст < 75 лет или 75 мг, если > 75 лет. 
+                                **С тромболитической терапией и при отсутствии реперфузионной терапии**:
+                                **Ацетилсалициловая кислота** - нагрузочная доза 150-300 мг внутрь (нагрузочная доза не должна быть в кишечнорастворимой форме), со второго дня поддерживающая доза - 75-100 мг/сутки совместно с
+                                **Клопидогрелем** - нагрузочная доза 300 мг внутрь, если возраст < 75 лет или 75 мг, если > 75 лет.
                                 
-                                Долговременная терапия.
-                                Ацетилсалициловая кислота 75-100 мг/сутки в сочетании с клопидогрелем 75 мг/сут до 1 года. Далее -
-                                Ацетилсалициловая кислота 75-100 мг/сутки.
+                                **Долговременная терапия**.
+                                **Ацетилсалициловая кислота** 75-100 мг/сутки в сочетании с **клопидогрелем** 75 мг/сут до 1 года.
+                                Далее - **Ацетилсалициловая кислота** 75-100 мг/сутки.
                                 
-                                Первичное ЧКВ.
-                                Ацетилсалициловая кислота внутрь(нагрузочная доза не должна быть в кишечнорастворимой форме) 150-300 мг с
-                                последующим продолжением 75-100 мг в день совместно с
+                                **Первичное ЧКВ**.
+                                **Ацетилсалициловая кислота** внутрь (нагрузочная доза не должна быть в кишечнорастворимой форме) 150-300 мг с последующим продолжением 75-100 мг в день совместно с
+                                **Клопидогрелем** - нагрузочная доза 600 мг внутрь, поддерживающая доза 75 мг/сутки(учитывать дозы препаратов на предыдущих этапах),
+                                или **Тикагрелором** – нагрузочная доза 180 мг внутрь, поддерживающая доза 90 мг 2 раза в сутки
+                                или **Прасугрел** – нагрузочная доза 60 мг внутрь,поддерживающая доза 10 мг в сутки (для пациентов весом менее 60 кг, а также старше 75 лет – 5 мг в сутки)
                                 
-                                Клопидогрелем - нагрузочная доза 600 мг внутрь, поддерживающая доза 75 мг/сутки(учитывать дозы препаратов на предыдущих этапах),
-                                или Тикагрелором – нагрузочная доза 180 мг внутрь, поддерживающая доза 90 мг 2 раза в сутки
-                                или Прасугрел – нагрузочная доза 60 мг внутрь,поддерживающая доза 10 мг в сутки (для пациентов весом менее 60 кг, а также старше 75 лет – 5 мг в сутки)
+                                **Долговременная терапия**.
+                                **Голометаллический (непокрытый) стент**, **Стент с лекарственным покрытием** - **Ацетилсалициловая кислота** 75- 100 мг/сутки в сочетании с **Клопидогрелем** 75 мг/сут до 1 года, далее - **Ацетилсалициловая кислота** 75-100 мг/сутки.
                                 
-                                Долговременная терапия.
-                                Голометаллический (непокрытый) стент, Стент с лекарственным покрытием - Ацетилсалициловая кислота 75-
-                                100 мг/сутки в сочетании с Клопидогрелем 75 мг/сут до 1 года, далее - Ацетилсалициловая кислота 75-100 мг/сутки.
-                                
-                                При резистентности к клопидогрелу - Тикагрелор 90 мг 2 раза в сутки или Прасугрел – нагрузочная доза 60 мг внутрь, поддерживающая доза 10 мг в сутки (для пациентов весом менее 60 кг, а также старше 75 лет – 5 мг в сутки)
+                                **При резистентности к клопидогрелу** - **Тикагрелор** 90 мг 2 раза в сутки или **Прасугрел** – нагрузочная доза 60 мг внутрь, поддерживающая доза 10 мг в сутки (для пациентов весом менее 60 кг, а также старше 75 лет – 5 мг в сутки)
                                 """,
                        content12:"""
+                                Тромболитическая терапия
                                 """,
                        content13:"""
+                                **См. приложение 2**.
+                                
+                                **Тенектеплаза** – внутривенно болюсно, однократно, в течение 5–10 сек. Доза рассчитывается в зависимости от массы тела. Максимальная доза не должна превышать 10 тыс. ЕД (50 мг). Объем раствора для введения необходимой дозы: 6 мл (6 тыс. ЕД или 30 мг Тенектеплазы) при массе тела менее 60 кг, 7 мл - при массе тела 60-70 кг (7 тыс. ЕД или 35 мг), 8 мл (8 тыс. ЕД или 40 мг) при массе тела 70-80 кг, 9 мл (9 тыс. ЕД или 45 мг) при массе тела 80-90 кг, 1 мл (10 тыс. ЕД или 50 мг) при массе тела более 90 кг, или
+                                **Альтеплаза** - внутривенно болюсно 15 мг, далее 0,75 мг/кг за 30 мин (до 50 мг), а затем 0,5 мг/кг за 60 мин (до 35 мг), или
+                                **Стрептокиназа** - 1,5 млн. ЕД за 30-60 мин в 100 мл 0,9% раствора натрия хлорида или 5% раствора глюкозы вводят внутривенно капельно (предварительно вводится внутривенно болюсно 60-90 мг Преднизолона)
                                 """,
                        content14:"""
+                                Антикоагулянтная терапия
                                 """,
                        content15:"""
+                                **С тромболитической терапией и при отсутствии реперфузионной терапии**.
+                                **Эноксапарин**: в возрасте до 75 лет внутривенно струйно 30 мг, через 15 минут 1 мг/кг подкожно (первые 2 введения не должны превышать 100 мг). Старше 75 лет: 0,75 мг/кг подкожно (первые 2 введения не должны превышать 75 мг). У пациентов с КК <30 мл/мин Эноксапарин вводится подкожно 1 раз/сутки, или
+                                **Фондапаринукс**: первый болюс 2,5 мг внутривенно однократно, со вторых суток 2,5 мг подкожно, до 8 суток. (Фондапаринукс 2,5 мг внутривенно болюсно при ТЛТ Стрептокиназой)
+                                или
+                                **Нефракционированный гепарин** (НФГ) 60 ЕД/кг (максимальная доза 4000 ЕД) внутривенно болюсно с последующим введением внутривенно 12-15 ЕД/кг/ч (не более 1000 ЕД/ч) под контролем АЧТВ (с увеличением в 1,5-2,5 раза выше нормы) в течение 24-48 часов. Алгоритм подбора скорости титрования – см. приложение 4 (введение НФГ подкожно, а также без контроля АЧТВ, уровня тромбоцитов недопустимо).
+                                
+                                **Первичное ЧКВ**.
+                                **До ЧКВ внутривенно болюсно - Эноксапарин** 0,5 мг/кг или **Нефракционированный гепарин** 70-100 ЕД/кг.
+                                Во время проведения первичного ЧКВ обеспечить (если не было выполнено на предыдущих этапах) внутривенное титрование НФГ из расчета 100 ЕД/кг под контролем активированного времени свертывания крови. Поддерживающая доза НФГ определяется под контролем уровня АВСК в пределах 250-350 сек.
+                                
+                                **При выполнении подкожного введения НМГ (Эноксапарин) на предыдущих этапах**:
+                                - если после подкожной инъекции **Эноксапарина** в дозе 1 мг/кг прошло менее 8 часов, дополнительного введения антикоагулянтов во время проведения ЧКВ не требуется;
+                                -если прошло 8-12 часов, непосредственно перед ЧКВ внутривенно струйно вводится 0,3 мг/кг **Эноксапарина**;
+                                - если от момента последнего введения **Эноксапарина** прошло более 12 часов, вначале процедуры ЧКВ внутривенно струйно вводится 0,5-0,75 мг/кг **Эноксапарина**.
+                                
+                                Если стартовым препаратом на предыдущих этапах оказался **Фондапаринукс**, при проведении ЧКВ должен быть введен **однократный болюс Нефракционированного гепарина** 85 ЕД/кг, адаптированный по АЧТВ.
+                                
+                                **После ЧКВ**.
+                                - **Эноксапарин** (предпочтительно) при низком риске кровотечений 1 мг/кг подкожно 2 раза в сутки до 2 суток, или
+                                - **Фондапаринукс** 2,5 мг подкожно 1 раз в сутки до 2суток, или
+                                - **НФГ** назначается в течение 24-48 часов внутривенно капельно 12-15 ЕД/кг/ч (не более 1000 ЕД/ч) под контролем АЧТВ (в 1,5-2,5 раза выше нормы) только при наличии высокого риска тромбообразования в зоне вмешательства (неполное раскрытие стента, остаточный тромбоз в зоне проведения ЧКВ, наличие неприкрытых диссекций). Подбор скорости титрования – **см. приложение 4**. Введение НФГ подкожно, а также без контроля АЧТВ, уровня тромбоцитов недопустимо.
+                                
+                                Длительное рутинное назначение антикоагулянтной терапии после первичного ЧКВ не показано, кроме отдельных случаев (при фибрилляции предсердий, механических клапанах сердца, тромбах ЛЖ, а также для профилактики венозной тромбоэмболии у пациентов, которым нужен продолжительный постельный режим).
                                 """,
                        content16:"""
+                                Коррекция гипоксии
                                 """,
                        content17:"""
+                                Оксигенотерапия показана пациентам с гипоксией (SaO2 <95%), одышкой или острой сердечной недостаточностью
                                 """,
                        content18:"""
+                                Статины
                                 """,
                        content19:"""
+                                Независимо от уровня показателей липидного спектра при поступлении в стационар или на догоспитальном этапе назначаются высокие дозы статинов (например, **Аторвастатин** 40-80 мг/сут, **Розувастатин** 10-20 мг/сутки). Последующая коррекция дозы с целью достижения целевого уровня ХС ЛПНП < 1,8 ммоль/л. Требуется контроль уровней АлАТ и КФК перед выпиской из стационара, затем в течение первого года 1 раз в 3 месяца, в последующем 1 раз в полгода.
                                 """,
                        content20:"""
+                                Дополнительные мероприятия
                                 """,
                        content21:"""
+                                Уровни глюкозы крови должны контролироваться часто у пациентов с установленным диабетом или гипергликемией при поступлении.
+                                Контроль гликемии: при коррекции повышенной глюкозы крови необходимо избегать как чрезмерной гипергликемии (10-11 ммоль/л, так и и гипогликемии <5 ммоль/л) с последующим достижением HbAc<6,5%.
+                                Рутинная инфузия глюкозы, инсулина и калия не показана.
+                                Защита ЖКТ ингибиторами протонного насоса (предпочтительно пантопразол) назначается пациентам с кровотечением из ЖКТ в анамнезе, с множественными факторами риска кровотечения (пожилой возраст, прием других антикоагулянтов, стероидов или НПВС, включая высокодозовый аспирин, а также с инфекцией Helicobacter pylori).
+                                Реабилитация, основанная на физических нагрузках;
+                                физическая активность 30 минут 7 дней в неделю, минимум 5 дней в неделю.
+                                Отказ от активного и пассивного курения.
+                                Контроль веса(индекс массы тела 20-24,9 кг/м2). 
+                                Ежегодная вакцинация против гриппа.
+                                Для вторичной профилактики возможно применение недигидропиридиновых блокаторов кальциевых каналов: **Дилтиазем 60-360 мг** в сутки, **Верапамил 40-240 мг** в сутки.
                                 """,
                        content22:"""
+                                Пероральная антикоагулянтная терапия
                                 """,
                        content23:"""
+                                При наличии показаний для антикоагулянтной терапии (при фибрилляции предсердий с количеством баллов по
+                                шкале CHA
+                                2DS2
+                                -VASc ≥ 2, механическом протезе клапана,
+                                тромбозе глубоких вен, ТЭЛА, гиперкоагуляционных заболеваниях) антикоагулянтная терапия оральными антикоагулянтами назначается в дополнение к комбинированному антитромбоцитарному лечению
+                                ацетилсалициловой кислотой и клопидогрелом.
+                                У пациентов после ОКС с ЧКВ и фибрилляцией
+                                предсердий:
+                                - при низком риске кровотечения (HAS BLED≤2) тройная терапия назначается до 6 месяцев независимо от типа стента с последующим переходом на оральный антикоагулянт и ацетилсалициловую кислоту (75 мг/день) или оральный антикоагулянт и клопидогрел (75 мг/день)
+                                длительностью до 12 месяцев;
+                                - при высоком риске кровотечений (HAS BLED≥3) тройная терапия назначается до 1 месяца с последующим переходом на оральный антикоагулянт и ацетилсалициловую кислоту (75 мг/день) или оральный антикоагулянт и клопидогрел (75
+                                мг/день) независимо от типа стента.
+                                Дозу пероральных антикоагулянтов подбирают и тщательно контролируют с достижением целевого МНО 2,0-2,5 в случае с антагонистами витамина К и использования более низкой испытанной дозы для профилактики инсульта в случае новых оральных антикоагулянтов (дабигатран 110 мг два раза в день; ривароксабан 15 мг один раз в день и т.д.).
+                                Применение тройной антикоагулянтной терапии сопряжено с повышенным риском кровотечений. Уменьшение риска кровотечений достигается минимизацией длительности тройной терапии.
+                                При наличии тромба левого желудочка
+                                антикоагулянтная терапия должна продолжаться не менее 3-
+                                х месяцев.
+                                Для минимизации риска кровотечений из
+                                ЖКТ проводится защита ингибиторами протонного насоса.
+                                У пациентов после ОКС с ЧКВ с высоким риском тромбозов стентов и низким риском кровотечений может быть назначен Ривароксабан в дозе 2,5 мг дважды в день в сочетании с клопидогрел (75 мг/день) + ацетилсалициловая
+                                кислота (75 мг/день).
                                 """,
                        content24:"""
+                                Лечение аритмий, острой сердечной недостаточности
                                 """,
                        content25:"""
+                                См. приложене 5,6.
                                 """,
                        content26:"""
                                 """,

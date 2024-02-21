@@ -989,7 +989,21 @@ class MyViewBuilder59: ViewBuilder3 {
     private let title12: String
     private let title13: String
     private let title14: String
-    init(title1: String, title2: String, title3: String, title4: String, title5: String, title6: String, title7: String, title8: String, title9: String, title10: String, title11: String, title12: String, title13: String, title14: String) {
+    private let title15: String
+    private let title16: String
+    private let title17: String
+    private let title18: String
+    private let title19: String
+    private let title20: String
+    private let title21: String
+    private let title22: String
+    private let title23: String
+    private let title24: String
+    private let title25: String
+    private let title26: String
+    private let title27: String
+    private let title28: String
+    init(title1: String, title2: String, title3: String, title4: String, title5: String, title6: String, title7: String, title8: String, title9: String, title10: String, title11: String, title12: String, title13: String, title14: String, title15: String, title16: String, title17: String, title18: String, title19: String, title20: String, title21: String, title22: String, title23: String, title24: String, title25: String, title26: String, title27: String, title28: String) {
         
         self.title1 = title1
         self.title2 = title2
@@ -1005,7 +1019,20 @@ class MyViewBuilder59: ViewBuilder3 {
         self.title12 = title12
         self.title13 = title13
         self.title14 = title14
-        
+        self.title15 = title15
+        self.title16 = title16
+        self.title17 = title17
+        self.title18 = title18
+        self.title19 = title19
+        self.title20 = title20
+        self.title21 = title21
+        self.title22 = title22
+        self.title23 = title23
+        self.title24 = title24
+        self.title25 = title25
+        self.title26 = title26
+        self.title27 = title27
+        self.title28 = title28
     }
   
     func buildTable59AG() -> some View {
@@ -1324,6 +1351,158 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Spacer(minLength: 1)
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    func buildTable59OKS() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title3))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title4))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title5))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Spacer()
+            
+            Text(LocalizedStringKey(title6))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title7))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title8))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title9))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title10))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title11))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title12))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title13))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title14))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title15))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title16))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title17))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title18))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title19))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title20))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title21))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title22))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title23))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title24))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title25))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
             
         }
         .padding(2)
