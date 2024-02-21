@@ -20,7 +20,9 @@ struct Postanovlenie59View: View {
                     NavigationLink(destination: Postanovlenie59Alg2View()) {
                         MyViewBuilder(title: Text("02"), content:Text("«Артериальная гипертензия у беременных»")).buildTitleBlueText()
                     }
-                    
+                    NavigationLink(destination: Postanovlenie59Alg3View()) {
+                        MyViewBuilder(title: Text("03"), content:Text("«Клинический протокол диагностики и лечения инфаркта миокарда, нестабильной стенокардии»")).buildTitleBlueText()
+                    }
                     
                 }
                 .navigationBarTitle("Постановление № 59", displayMode: .inline)

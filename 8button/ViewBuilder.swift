@@ -372,7 +372,19 @@ class MyViewBuilder: ViewBuilder1 {
             .shadow(color: .shadowGrayRectangle, radius: 0.5)
         
     }
-    
+    func buildGrayTextCenter() -> some View {
+
+        return content
+            .padding(10)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+            .fixedSize(horizontal: false, vertical: false)
+            .frame(minHeight: 50)
+            .modifier(ThemeGrayColorModifier())
+            .font(.subheadline)
+            .cornerRadius(10)
+            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        
+    }
     
     func buildGrayInAndHiddenBlock() -> some View {
         
