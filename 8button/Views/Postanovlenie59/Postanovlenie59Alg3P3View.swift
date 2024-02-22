@@ -16,7 +16,7 @@ struct Postanovlenie59Alg3P3View: View {
     @State private var isTextExpanded3 = false
     @State private var isTextExpanded4 = false
     @State private var isTextExpanded5 = false
-    @State private var isTextExpanded6 = true
+    @State private var isTextExpanded6 = false
     @State private var isTextExpanded7 = false
     @State private var isTextExpanded8 = false
     @State private var isTextExpanded9 = false

@@ -311,6 +311,16 @@ struct Postanovlenie59Alg3View: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P3View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 3. Выбор стратегии ведения пациентов при остром коронарном синдроме без подъема сегмента ST
+                                    """)).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 95)
