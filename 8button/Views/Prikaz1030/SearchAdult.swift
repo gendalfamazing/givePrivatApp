@@ -165,7 +165,7 @@ struct SearchAdult: View {
                             .frame(maxWidth: .infinity)
                             .background(.back)
                     } else {
-                        VStack(spacing: 5) {
+                        LazyVStack(spacing: 5) {
                             ForEach(viewModel.isSearching ? viewModel.filteredAdult : viewModel.allAdult) { adult in
                                 adultRow(adult: adult)
                                     .padding(.horizontal, 10)

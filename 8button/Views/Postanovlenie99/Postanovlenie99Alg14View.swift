@@ -29,17 +29,12 @@ struct Postanovlenie99Alg14View: View {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                         **ЛС для седации пациентов на ИВЛ**
                                         """)
-                            ).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            ).buildGrayTextCenter()
+                      
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack {

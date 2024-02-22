@@ -43,17 +43,12 @@ struct Postanovlenie99Alg13View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("dfdfdf"),content: Text("""
-                                        ЛС для купирования синдрома отмены алкоголя
+                                        **ЛС для купирования синдрома отмены алкоголя**
                                         """)
-                            ).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            ).buildGrayTextCenter()
+                       
                     Spacer(minLength: 10)
                     VStack (spacing: 1){
                         

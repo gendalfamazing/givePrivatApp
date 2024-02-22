@@ -1509,4 +1509,145 @@ class MyViewBuilder59: ViewBuilder3 {
         .background(Color.grayButton)
         
     }
+    
+    func buildTable59OKS1() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title3))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            
+            Text(LocalizedStringKey(title4))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+            Text(LocalizedStringKey(title5))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Spacer()
+            
+            Text(LocalizedStringKey(title6))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title7))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title8))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title9))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title10))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title11))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title12))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title13))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title14))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title15))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title16))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title17))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title18))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title19))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title20))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title21))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Text(LocalizedStringKey(title22))
+                .padding(.horizontal, 7)
+                .font(.footnote)
+                .bold()
+            
+            Text(LocalizedStringKey(title23))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
 }

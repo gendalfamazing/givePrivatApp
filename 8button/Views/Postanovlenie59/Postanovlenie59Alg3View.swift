@@ -25,7 +25,7 @@ struct Postanovlenie59Alg3View: View {
     @State private var isTextExpanded12 = false
     @State private var isTextExpanded13 = false
     @State private var isTextExpanded14 = false
-    
+    @State private var isTextExpanded15 = false
     //  ¹²³⁴⁵
     var body: some View {
         NavigationStack {
@@ -290,7 +290,7 @@ struct Postanovlenie59Alg3View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            MyViewBuilder(title: Text("1"), content: Text("Эссенциальная (первичная) гипертензия Артериальная гипертензия I-III ст. (I10.0)")).buildBlue59Text(isTextExpanded: isTextExpanded14)
+                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом со стойким подъемом сегмента ST")).buildBlue59Text(isTextExpanded: isTextExpanded14)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded14.toggle()
@@ -298,7 +298,17 @@ struct Postanovlenie59Alg3View: View {
                                 }
                             
                             if isTextExpanded14{
-                                
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                    **Нозологические формы по МКБ-10**: острый инфаркт миокарда (**I21.-**) , повторный инфаркт миокарда (**I22.-**)
+                    **Отделения**: реанимация, блок интенсивной терапии, инфарктное отделение
+                    **Цель мероприятий, исходы заболевания**: купирование болевого синдрома, положительная динамика ЭКГ, профилактика сложных нарушений ритма, развития левожелудочковой недостаточности, повышение толерантности к физической нагрузке, улучшение состояния.
+                    **Средняя длительность лечения**: до стабилизации состояния
+                    """)).buildGrayInHiddenText()
+                                    .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded14.toggle()
+                                    }
+                                }
                                 
                                 VStack (spacing: 1){
                                     
@@ -325,8 +335,67 @@ struct Postanovlenie59Alg3View: View {
                                     MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
                                 }
                                 NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5).padding(.bottom, 5)
                                 }
+                                
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом без подъема сегмента st")).buildBlue59Text(isTextExpanded: isTextExpanded15)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded15.toggle()
+                                    }
+                                }
+                            
+                            if isTextExpanded15{
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                    **Нозологические формы по МКБ-10**: острый инфаркт миокарда (**I21.-**), повторный инфаркт миокарда (**I22.-**), нестабильная стенокардия (**I20.0**).
+                    **Отделения**: реанимация, блок интенсивной терапии, инфарктное отделение
+                    **Цель мероприятий, исходы заболевания**: купирование болевого синдрома, положительная динамика ЭКГ, профилактика сложных нарушений ритма, развития левожелудочковой недостаточности, повышение толерантности к физической нагрузке, улучшение состояния.
+                    **Средняя длительность лечения**: до стабилизации состояния
+                    """)).buildGrayInHiddenText()
+                                    .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded15.toggle()
+                                    }
+                                }
+                                
+                                VStack (spacing: 1){
+                                    
+                                    
+                                    ForEach(Table59OKS.getTable59OKS2(), id: \.id) { name in
+                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59OKS1()
+                                    }
+                                    
+                                }
+                                .cornerRadius(10)
+                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded15.toggle()
+                                    }
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 2")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 4")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5).padding(.bottom, 5)
+                                }
+                                
                                 
                             }
                             
@@ -350,7 +419,7 @@ struct Postanovlenie59Alg3View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Лечение инфаркта миокарда, нестабильной стенокардии»
+                    «Лечение ИМ, нестабильной стенокардии»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

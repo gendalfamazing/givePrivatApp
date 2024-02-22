@@ -15,7 +15,7 @@ struct CustomTabBarView: View {
 
     @Binding var selection: TabBarItem
     @Namespace private var namespace
-    
+    @Namespace private var namespace1
     var body: some View {
         tabBarVersion2
     }
@@ -39,13 +39,7 @@ extension CustomTabBarView {
     
     private func tabView2(tab: TabBarItem) -> some View {
         
-        Button {
-            withAnimation(.easeInOut(duration: 0.3)) {
-                
-                switchToTab(tab: tab)
-            }
-        } label: {
-            
+        
             VStack {
                 Image(systemName: tab.iconName)
                     .resizable()
@@ -59,17 +53,39 @@ extension CustomTabBarView {
             .foregroundColor(selection == tab ? tab.color : Color.gray)
             .padding(.vertical, 6)
             .frame(maxWidth: .infinity)
+//            .background(
+//                ZStack{
+//                    if selection == tab {
+//                        RoundedRectangle(cornerRadius: 10)
+//                            .fill(tab.color.opacity(0.2))
+//                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+//                    }
+//                }
+//            )
             .background(
                 ZStack{
-                    if selection == tab {
+                    if selection == tab && selection == .home {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(tab.color.opacity(0.2))
                             .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+                    } else if selection == tab && selection == .adult {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(tab.color.opacity(0.2))
+                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+                    }else if selection == tab && selection == .child {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(tab.color.opacity(0.2))
+                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+                    } else if selection == tab && selection == .search {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(tab.color.opacity(0.2))
+                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+                    } else {
                     }
                 }
             )
             
-        }
+        
     
     }
     
@@ -95,10 +111,42 @@ extension CustomTabBarView {
     }
     private func switchToTab(tab: TabBarItem) {
         withAnimation(.easeInOut(duration: 0.3)) {
+            if selection == tab && selection == .home{
+                withAnimation() {
+                    selection = .adult
+                }
+                withAnimation (.easeInOut(duration: 0.3)) {
+                    selection = .home
+                }
+            } else if selection == tab && selection == .adult{
+                withAnimation() {
+                    selection = .child
+                }
+                withAnimation (.easeInOut(duration: 0.3)) {
+                    selection = .adult
+                }
+            } else if selection == tab && selection == .child{
+                withAnimation() {
+                    selection = .adult
+                }
+                withAnimation (.easeInOut(duration: 0.3)) {
+                    selection = .child
+                }
+            }else if selection == tab && selection == .search{
+                withAnimation() {
+                    selection = .child
+                }
+                withAnimation (.easeInOut(duration: 0.3)) {
+                    selection = .search
+                }
+            } else {
                 selection = tab
+            }
         }
     }
     
 }
 
-
+#Preview {
+        AppTabBarView()
+    }

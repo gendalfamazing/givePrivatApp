@@ -17,17 +17,12 @@ struct Postanovlenie99Alg12View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text(""),content: Text("""
-                                        Шкала возбуждения и седации Ричмонда (RASS)
+                                        **Шкала возбуждения и седации Ричмонда (RASS)**
                                         """)
-                            ).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            ).buildGrayTextCenter()
+                       
                     Spacer(minLength: 10)
                     VStack (spacing: 1){
                         
