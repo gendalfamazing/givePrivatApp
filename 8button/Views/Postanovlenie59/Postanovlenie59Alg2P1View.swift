@@ -31,15 +31,10 @@ struct Postanovlenie59Alg2P1View: View {
                 VStack (spacing: 5){
                 Spacer()
                     
-                    
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
                             MyViewBuilder(title: Text("3"), content: Text("""
                             **Диагностика и лечение артериальной гипертензии у беременных в амбулатоных условиях**
-                            """)).buildGrayInHidden59Text()
-                        }
-                    }
+                            """)).buildGrayTextCenter()
+                      
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
@@ -235,14 +230,11 @@ struct Postanovlenie59Alg2P1View: View {
                     }
                     
                     Spacer(minLength: 15)
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("3"), content: Text("""
                             * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
-                            """)).buildGrayInHidden59Text()
-                        }
-                    }
+                            """)).buildGrayText()
+                      
                     
             }
                 .padding(.horizontal, 10)

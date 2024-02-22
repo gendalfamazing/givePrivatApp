@@ -199,8 +199,9 @@ class MyViewBuilder: ViewBuilder1 {
     func buildBlue59NavigationText() -> some View {
         
         return
-                HStack {
+                HStack  {
                     content
+                        .multilineTextAlignment(.leading)
                     Spacer()
                     Spacer()
                     Image(systemName: ("chevron.right"))
@@ -311,7 +312,73 @@ class MyViewBuilder: ViewBuilder1 {
         .background(Color.grayButton)
         
     }
-    
+    func buildTable59OKSSmall() -> some View {
+        
+        return HStack(alignment: .top) {
+            
+                title
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                .font(.caption2)
+                .padding(3)
+            
+            Spacer()
+            content
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                .font(.caption2)
+                .padding(3)
+            
+        Spacer()
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    func buildTableGRACE() -> some View {
+        
+        return HStack (alignment: .bottom){
+            ZStack {
+                title
+                .padding(.horizontal, 10)
+                .font(.subheadline)
+                
+                
+            }
+            
+            Spacer()
+            content
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: 40)
+//                .frame(maxWidth: 70)
+                .font(.footnote)
+                .bold()
+                .padding(3)
+            
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    func buildTableGRACEKey() -> some View {
+        
+        return HStack (alignment: .bottom){
+            
+                title
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+//                .frame(maxWidth: 70)
+                .font(.subheadline)
+                .padding(3)
+            Spacer()
+            content
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+//                .frame(maxWidth: 70)
+                .font(.subheadline)
+                .padding(3)
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
     func buildGreen1Text(isTextExpanded: Bool) -> some View {
         
         return content
@@ -957,7 +1024,31 @@ class MyViewBuilderTables: ViewBuilder2 {
         .background(Color.grayButton)
         
     }
-    
+    func buildTableGRACE() -> some View {
+        
+        return HStack (alignment: .bottom){
+            ZStack {
+                title1
+                .padding(.horizontal, 10)
+                .font(.subheadline)
+                .bold()
+                
+            }
+            .frame(width: 40)
+            Spacer()
+            title2
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(3)
+            
+            Spacer()
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
     
 }
 

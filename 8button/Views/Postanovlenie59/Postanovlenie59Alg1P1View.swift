@@ -31,15 +31,10 @@ struct Postanovlenie59Alg1P1View: View {
                 VStack (spacing: 5){
                 Spacer()
                     
-                    
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
                             MyViewBuilder(title: Text("3"), content: Text("""
                             **Диагностика и лечение заболеваний, характеризующихся повышенным кровяным давлением в амбулаторных условиях**
-                            """)).buildGrayInHidden59Text()
-                        }
-                    }
+                            """)).buildGrayTextCenter()
+                       
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {

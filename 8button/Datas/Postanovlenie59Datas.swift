@@ -2640,6 +2640,110 @@ struct Table59OKS: Identifiable {
         ]
     }
 }
+struct Table59OKSSmall: Identifiable {
+    let name: String
+    let code: String
+    let id: Int
+    
+    
+    
+    
+    
+    static func getTable59OKSSmall1() -> [Table59OKSSmall] {
+        [
+            
+            //Рекомендуемые временные интервалы на этапах оказания помощи пациентам с ОКС с подъемом сегмента ST
+            
+            
+            Table59OKSSmall(name: "От первичного медицинского контакта до записи ЭКГ и постановки диагноза «ОКС с подъемом сегмента ST» (ПМК – ЭКГ)", code: "≤ 10 мин", id: 2),
+            Table59OKSSmall(name: "От ПМК до проведения тромболизиса (ПМК – игла)", code: "≤ 30 мин", id: 3),
+            Table59OKSSmall(name: "От ПМК до первичного ЧКВ (ПМК – раздутие баллона в инфаркт-связанной артерии)", code: "≤ 90 мин", id: 4),
+            Table59OKSSmall(name: "От ПМК до первичного ЧКВ при транспортировке пациента в другой стационар", code: "≤ 120 мин и ≤ 90 минут при большой площади поражения и высоком риске неблагоприятных кардиоваскулярных событий", id: 5),
+            Table59OKSSmall(name: "От успешного тромболизиса до КАГ", code: "3-24 часа", id: 6),
+            Table59OKSSmall(name: "При неэффективном тромболизисе или повторной ишемической атаке", code: "ЧКВ спасения в максимально ранние сроки", id: 7),
+            
+        ]
+    }
+    //age
+    static func getTable59GRACE1() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "<40", code: "0", id: 1),
+            Table59OKSSmall(name: "40-49", code: "18", id: 2),
+            Table59OKSSmall(name: "50-59", code: "36", id: 3),
+            Table59OKSSmall(name: "60-69", code: "55", id: 4),
+            Table59OKSSmall(name: "70-79", code: "73", id: 5),
+            Table59OKSSmall(name: "≥80", code: "91", id: 6),
+            
+        ]
+    }
+    //SAD
+    static func getTable59GRACE2() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "<80", code: "63", id: 1),
+            Table59OKSSmall(name: "80-99", code: "58", id: 2),
+            Table59OKSSmall(name: "100-119", code: "47", id: 3),
+            Table59OKSSmall(name: "120-139", code: "37", id: 4),
+            Table59OKSSmall(name: "140–159", code: "26", id: 5),
+            Table59OKSSmall(name: "160–199", code: "11", id: 6),
+            Table59OKSSmall(name: ">200", code: "0", id: 7),
+            
+        ]
+    }
+    // Kilip
+    static func getTable59GRACE3() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "I", code: "0", id: 1),
+            Table59OKSSmall(name: "II", code: "21", id: 2),
+            Table59OKSSmall(name: "III", code: "43", id: 3),
+            Table59OKSSmall(name: "IV", code: "64", id: 4),
+            
+        ]
+    }
+    
+    //Pulse
+    static func getTable59GRACE4() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "<70", code: "0", id: 1),
+            Table59OKSSmall(name: "70-989", code: "7", id: 2),
+            Table59OKSSmall(name: "90-109", code: "13", id: 3),
+            Table59OKSSmall(name: "110-149", code: "23", id: 4),
+            Table59OKSSmall(name: "150–199", code: "36", id: 5),
+            Table59OKSSmall(name: ">200", code: "46", id: 6),
+            
+        ]
+    }
+    //Creatinin
+    static func getTable59GRACE5() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "0-34", code: "2", id: 1),
+            Table59OKSSmall(name: "35-69", code: "5", id: 2),
+            Table59OKSSmall(name: "70-104", code: "8", id: 3),
+            Table59OKSSmall(name: "105-139", code: "11", id: 4),
+            Table59OKSSmall(name: "140-175", code: "14", id: 5),
+            Table59OKSSmall(name: "176-351", code: "23", id: 6),
+            Table59OKSSmall(name: ">352", code: "31", id: 7),
+            
+        ]
+    }
+    // other
+    static func getTable59GRACE6() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "Остановка сердца", code: "43", id: 1),
+            Table59OKSSmall(name: "Повышение TnT или МВ-КФК", code: "15", id: 2),
+            Table59OKSSmall(name: "Девиация сегмента ST", code: "30", id: 3),
+            
+        ]
+    }
+    //GRACE KEY
+    static func getTable59GRACE7() -> [Table59OKSSmall] {
+        [
+            Table59OKSSmall(name: "1-108", code: "Низкий", id: 1),
+            Table59OKSSmall(name: "109-140", code: "Умеренный", id: 2),
+            Table59OKSSmall(name: "140-372", code: "Высокий", id: 3),
+            
+        ]
+    }
+}
 #Preview {
     Postanovlenie59Alg3View()
 }

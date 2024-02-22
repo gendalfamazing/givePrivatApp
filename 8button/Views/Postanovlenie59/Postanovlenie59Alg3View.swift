@@ -52,35 +52,35 @@ struct Postanovlenie59Alg3View: View {
                             }
                         }
                     if isTextExpanded2 {
-                    MyViewBuilder(title: Text("""
+                        MyViewBuilder(title: Text("""
                                               I А. Фельдшерско-акушерский пункт
                                               """),
-                                  content: Text(LocalizedStringKey("Post59Alg3B0G0S2"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded3)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded3.toggle()
+                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S2"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded3)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
+                                }
                             }
-                        }
-                    
-                    MyViewBuilder(title: Text("""
+                        
+                        MyViewBuilder(title: Text("""
                                               I Б. Врач общей практики, участковый врач вне амбулаторно-поликлинической организации здравоохранения
                                               """),
-                                  content: Text(LocalizedStringKey("Post59Alg3B0G0S3"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded4)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded4.toggle()
-                            }
-                        }//  ¹²³⁴⁵
-                    MyViewBuilder(title: Text("""
+                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S3"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded4)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded4.toggle()
+                                }
+                            }//  ¹²³⁴⁵
+                        MyViewBuilder(title: Text("""
                                               I В. Врачи в условиях амбулаторно-поликлинических организаций здравоохранения
                                               """),
-                                  content: Text(LocalizedStringKey("Post59Alg3B0G0S4"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded5)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded5.toggle()
+                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S4"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded5)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded5.toggle()
+                                }
                             }
-                        }
-                }
+                    }
                     MyViewBuilder(title: Text("""
                                               """),
                                   content: Text("""
@@ -179,10 +179,10 @@ struct Postanovlenie59Alg3View: View {
                             if isTextExpanded14{
                                 MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post59Alg3B0G0S11"))).buildGrayInHiddenText()
                                     .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded14.toggle()
+                                        withAnimation (.snappy) {
+                                            isTextExpanded14.toggle()
+                                        }
                                     }
-                                }
                                 
                                 VStack (spacing: 1){
                                     
@@ -209,7 +209,16 @@ struct Postanovlenie59Alg3View: View {
                                     MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
                                 }
                                 NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5).padding(.bottom, 5)
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                Spacer(minLength: 15)
+                                
+                                MyViewBuilder(title: Text("3"), content: Text("""
+                                        * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
+                                        """)).buildGrayInHiddenText().onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded14.toggle()
+                                    }
                                 }
                                 
                                 
@@ -232,10 +241,10 @@ struct Postanovlenie59Alg3View: View {
                             if isTextExpanded15{
                                 MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post59Alg3B0G0S12"))).buildGrayInHiddenText()
                                     .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded15.toggle()
+                                        withAnimation (.snappy) {
+                                            isTextExpanded15.toggle()
+                                        }
                                     }
-                                }
                                 
                                 VStack (spacing: 1){
                                     
@@ -262,12 +271,44 @@ struct Postanovlenie59Alg3View: View {
                                     MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
                                 }
                                 NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5).padding(.bottom, 5)
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
                                 }
+                                Spacer(minLength: 15)
+                                
+                                MyViewBuilder(title: Text("3"), content: Text("""
+                                        * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
+                                        """)).buildGrayInHiddenText()
+                                    .onTapGesture {
+                                        withAnimation (.snappy) {
+                                            isTextExpanded15.toggle()
+                                        }
+                                    }
                                 
                                 
                             }
                             
+                        }
+                    }
+                    
+                    Spacer(minLength: 15)
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P1View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 1. Рекомендации по выбору стратегии ведения пациентов с ОКС с подъемом сегмента ST
+                                    """)).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P2View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 2. Протокол выбора и проведения тромболитической терапии при ОКС с подъемом сегмента ST
+                                    """)).buildBlue59NavigationText()
+                            }
                         }
                     }
                 }

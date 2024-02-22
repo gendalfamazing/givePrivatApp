@@ -261,6 +261,184 @@ struct ScalesTables: View {
                                 }
                         }
                     }
+                    MyViewBuilder(title: Text("1"), content: Text("Шкала GRACE")).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded3.toggle()
+                            }
+                        }
+                    if isTextExpanded3{
+                        VStack {
+                            
+                            VStack (spacing: 1){
+                                HStack (spacing: 1){
+                                    VStack (spacing: 1){
+                                        HStack (alignment: .bottom){
+                                            Text("Возраст (годы)")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            Spacer()
+                                            Text("Баллы")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(maxWidth: 50)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            
+                                        }
+                                        .padding(2)
+                                        .background(Color.grayButton)
+                                        ForEach(Table59OKSSmall.getTable59GRACE1(), id: \.id) { name in
+                                            MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACE()
+                                        }
+                                    }
+                                    VStack (spacing: 1){
+                                        HStack (alignment: .bottom){
+                                            Text("ЧСС (уд/мин)")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            Spacer()
+                                            Text("Баллы")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(maxWidth: 50)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            
+                                        }
+                                        .padding(2)
+                                        .background(Color.grayButton)
+                                        ForEach(Table59OKSSmall.getTable59GRACE4(), id: \.id) { name in
+                                            MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACE()
+                                        }
+                                    }
+                                }
+                                HStack (spacing:1){
+                                    VStack (spacing:1){
+                                        HStack (alignment: .bottom){
+                                            Text("""
+                                                САД
+                                                (мм рт.ст.)
+                                                """)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            Spacer()
+                                            Text("Баллы")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(maxWidth: 50)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            
+                                        }
+                                        .padding(2)
+                                        .background(Color.grayButton)
+                                        ForEach(Table59OKSSmall.getTable59GRACE2(), id: \.id) { name in
+                                            MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACE()
+                                        }
+                                    }
+                                    VStack (spacing:1){
+                                        HStack (alignment: .bottom){
+                                            Text("Креатинин (мкмоль/л)")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            Spacer()
+                                            Text("Баллы")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(maxWidth: 50)
+                                                .font(.footnote)
+                                                .bold()
+                                                .padding(3)
+                                            
+                                        }
+                                        .padding(2)
+                                        .background(Color.grayButton)
+                                        ForEach(Table59OKSSmall.getTable59GRACE5(), id: \.id) { name in
+                                            MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACE()
+                                        }
+                                    }
+                                }
+                                
+                                HStack (spacing:1){
+                                VStack (spacing:1){
+                                HStack (alignment: .bottom){
+                                    Text("Класс тяжести Killip")
+                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                        .font(.footnote)
+                                        .bold()
+                                        .padding(.horizontal, 3)
+                                        .padding(.vertical, 1.5)
+                                    
+                                    Spacer()
+                                    Text("Баллы")
+                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                        .frame(maxWidth: 50)
+                                        .font(.footnote)
+                                        .bold()
+                                        .padding(3)
+                                    
+                                }
+                                .padding(2)
+                                .background(Color.grayButton)
+                                ForEach(Table59OKSSmall.getTable59GRACE3(), id: \.id) { name in
+                                    MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACE()
+                                }
+                            }
+                                VStack (spacing:1){
+                                    ForEach(Table59OKSSmall.getTable59GRACE6(), id: \.id) { name in
+                                        MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACE()
+                                    }
+                                }
+                            }
+                            }
+                            .cornerRadius(10)
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
+                                }
+                            }
+                            Spacer(minLength: 10)
+                            ZStack {
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                                VStack (spacing: 1) {
+                                    MyViewBuilder(title: Text(""), content: Text("**Определение риска по шкале GRACE**")).buildGrayInText()
+                                    HStack (alignment: .bottom){
+                                        Text("Риск по шкале GRACE")
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                            .font(.subheadline)
+                                            .bold()
+                                            .padding(3)
+                                        
+                                        Spacer()
+                                        Text("Категории риска")
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                            .font(.subheadline)
+                                            .bold()
+                                            .padding(3)
+                                        
+                                    }
+                                    ForEach(Table59OKSSmall.getTable59GRACE7(), id: \.id) { name in
+                                        MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACEKey()
+                                    }
+                                }
+                            }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded3.toggle()
+                                    }
+                                }
+                        }
+                    }
             }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
