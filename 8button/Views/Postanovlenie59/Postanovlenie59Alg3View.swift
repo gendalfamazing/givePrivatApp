@@ -331,6 +331,16 @@ struct Postanovlenie59Alg3View: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P5View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 5. Схема последовательных неотложных мероприятий при острой сердечной недостаточности
+                                    """)).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 95)

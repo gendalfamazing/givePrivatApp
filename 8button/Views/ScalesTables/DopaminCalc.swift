@@ -103,7 +103,7 @@ struct InfusionRateCalculatorView: View {
                                 HStack (spacing: 1){
                                     Spacer()
                                 Text("""
-                                    - **\(calculatedDose, specifier: "%.2f")**
+                                    **\(calculatedDose, specifier: "%.2f")**
                                     мл/мин
                                     """)
                                     .padding(5)
@@ -111,7 +111,7 @@ struct InfusionRateCalculatorView: View {
                                     .font(.subheadline)
                                     Spacer()
                                 Text("""
-                                    - **\(calculatedDoseHour, specifier: "%.2f")**
+                                    **\(calculatedDoseHour, specifier: "%.2f")**
                                     мл/час
                                     """)
                                     .padding(5)
@@ -119,7 +119,7 @@ struct InfusionRateCalculatorView: View {
                                     .font(.subheadline)
                                     Spacer()
                                 Text("""
-                                    - **≈ \(calculatedDrops, specifier: "%.2f")**
+                                    **≈ \(calculatedDrops, specifier: "%.2f")**
                                     кап/мин
                                     """)
                                     .padding(5)
@@ -159,7 +159,7 @@ struct InfusionRateCalculatorView: View {
                                             """)).buildGrayText()
             }
             .padding(.horizontal, 10)
-            .padding(.bottom, 65)
+            .padding(.bottom, 85)
         }
         
         //        .onTapGesture { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil) }
