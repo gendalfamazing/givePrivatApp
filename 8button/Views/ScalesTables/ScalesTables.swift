@@ -472,11 +472,7 @@ struct ScalesTables: View {
                         }
                     }
                     
-                    NavigationLink (destination: InfusionRateCalculatorView()) {
-                        MyViewBuilder(title: Text("1"), content: Text("Калькулятор Допамина")).buildBlue59NavigationText()
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    }
-                        
+                     
             }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

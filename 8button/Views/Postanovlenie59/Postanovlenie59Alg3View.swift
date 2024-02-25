@@ -336,7 +336,7 @@ struct Postanovlenie59Alg3View: View {
                         VStack  {
                             NavigationLink (destination: Postanovlenie59Alg3P5View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 5. Схема последовательных неотложных мероприятий при острой сердечной недостаточности
+                                    Приложение 5. Схема последовательных неотложных мероприятий при острой сердечной недостаточности (класс Киллип)
                                     """)).buildBlue59NavigationText()
                             }
                         }

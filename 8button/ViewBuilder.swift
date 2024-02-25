@@ -1742,4 +1742,513 @@ class MyViewBuilder59: ViewBuilder3 {
         
     }
     
+    func buildTable59Killip12() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            HStack (alignment: .bottom){
+                Text(LocalizedStringKey(title3))
+                    .frame(minWidth: 0, maxWidth: 100, alignment: .center)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                
+                Text(LocalizedStringKey(title4))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+            }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title5))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title6))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title7))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+            
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title8))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title9))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title10))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                        //                        .truncationMode(.head)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title11))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title12))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title13))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                        //                        .truncationMode(.head)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title14))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title15))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title16))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title17))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title18))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title19))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    func buildTable59Killip3() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            HStack (alignment: .bottom){
+                Text(LocalizedStringKey(title3))
+                    .frame(minWidth: 0, maxWidth: 100, alignment: .center)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                
+                Text(LocalizedStringKey(title4))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+            }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title5))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title6))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title7))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+            
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title8))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title9))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title10))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                        //                        .truncationMode(.head)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title11))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title12))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title13))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                        //                        .truncationMode(.head)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title14))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title15))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title16))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                        //                        .truncationMode(.head)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title17))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title18))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title19))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                        //                        .truncationMode(.head)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title20))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title21))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title22))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title23))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    func buildTable59Killip4() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            Text(LocalizedStringKey(title3))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            Divider()
+            HStack (alignment: .bottom){
+                Text(LocalizedStringKey(title4))
+                    .frame(minWidth: 0, maxWidth: 100, alignment: .center)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                
+                Text(LocalizedStringKey(title5))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+            }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title6))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title7))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title8))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title9))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title10))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title11))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+            Divider()
+                HStack (alignment: .top, spacing: 1){
+                    Text(LocalizedStringKey(title12))
+                        .frame(width: 110, alignment: .leading)
+                        .frame(height: .infinity)
+                    //                .frame(maxWidth: 70)
+                        .font(.caption)
+                        .bold()
+                        .padding(5)
+                    VStack (spacing:1){
+                        Text(LocalizedStringKey(title13))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                        Divider()
+                        Text(LocalizedStringKey(title14))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption2)
+                            .padding(5)
+                    }
+                }
+            Divider()
+            Text(LocalizedStringKey(title15))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+}
+#Preview {
+    Postanovlenie59Alg3P5View()
 }
