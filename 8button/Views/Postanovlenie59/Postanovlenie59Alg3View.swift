@@ -183,7 +183,7 @@ struct Postanovlenie59Alg3View: View {
                                             isTextExpanded14.toggle()
                                         }
                                     }
-                                
+                                Divider()
                                 VStack (spacing: 1){
                                     
                                     
@@ -212,7 +212,7 @@ struct Postanovlenie59Alg3View: View {
                                     MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
                                 }
                                 Spacer(minLength: 15)
-                                
+                                Divider()
                                 MyViewBuilder(title: Text("3"), content: Text("""
                                         * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
                                         """)).buildGrayInHiddenText().onTapGesture {
@@ -245,7 +245,7 @@ struct Postanovlenie59Alg3View: View {
                                             isTextExpanded15.toggle()
                                         }
                                     }
-                                
+                                Divider()
                                 VStack (spacing: 1){
                                     
                                     
@@ -274,7 +274,7 @@ struct Postanovlenie59Alg3View: View {
                                     MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
                                 }
                                 Spacer(minLength: 15)
-                                
+                                Divider()
                                 MyViewBuilder(title: Text("3"), content: Text("""
                                         * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
                                         """)).buildGrayInHiddenText()
@@ -317,6 +317,16 @@ struct Postanovlenie59Alg3View: View {
                             NavigationLink (destination: Postanovlenie59Alg3P3View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("""
                                     Приложение 3. Выбор стратегии ведения пациентов при остром коронарном синдроме без подъема сегмента ST
+                                    """)).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P4View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 4. Номограмма для коррекции скорости введения гепарина
                                     """)).buildBlue59NavigationText()
                             }
                         }

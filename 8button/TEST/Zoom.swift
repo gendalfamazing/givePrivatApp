@@ -15,7 +15,7 @@ struct ImageModifier: ViewModifier {
         TapGesture(count: 2).onEnded {
             if currentScale <= min { currentScale = max } else
             if currentScale >= max { currentScale = min } else {
-                currentScale = ((max - min) * 0.5 + min) < currentScale ? max : min
+                currentScale = ((max - min) * 0.3 + min) < currentScale ? max : min
             }
         }
     }

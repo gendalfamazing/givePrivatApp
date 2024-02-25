@@ -452,6 +452,12 @@ struct Prikaz1030Alg15View: View {
                                                 if isTextExpanded6 == true {
                                                     isTextExpanded6.toggle()
                                                 }
+                                                if isTextExpanded7 == true {
+                                                    isTextExpanded7.toggle()
+                                                }
+                                                if isTextExpanded8 == true {
+                                                    isTextExpanded8.toggle()
+                                                }
                                             }
                                         }
                                     

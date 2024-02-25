@@ -235,7 +235,7 @@ struct Postanovlenie59Alg3P3View: View {
                                         .font(.footnote)
                                         .bold()
                                         .padding(.horizontal, 3)
-                                        .padding(.vertical, 1.5)
+                                        .padding(.vertical, 2.5)
                                     
                                     Spacer()
                                     Text("Баллы")

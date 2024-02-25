@@ -10,11 +10,43 @@ import SwiftUI
 struct ScalesTables: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var drugConcentration = ""
+    @State private var drugVolume = ""
+    @State private var solventVolume = ""
+    @State private var drugDosage = ""
+    @State private var patientWeight = ""
+    @State private var convertMG = 1000.0
+
+    var calculatedDose: Double {
+        if let concentration = Double(drugConcentration),
+           let volume = Double(drugVolume),
+           let solvent = Double(solventVolume),
+           let dosage = Double(drugDosage),
+           let weight = Double(patientWeight) {
+            let totalVolume = volume + solvent
+            let dose = ((dosage * weight ) / ((concentration * volume * convertMG) / (totalVolume)))
+            return dose
+        }
+        return 0
+    }
+    var calculatedDrops: Double {
+        if let concentration = Double(drugConcentration),
+           let volume = Double(drugVolume),
+           let solvent = Double(solventVolume),
+           let dosage = Double(drugDosage),
+           let weight = Double(patientWeight) {
+            let totalVolume = volume + solvent
+            let dose = ((dosage * weight ) / ((concentration * volume * convertMG) / (totalVolume)))
+            return dose * 20
+        }
+        return 0
+    }
     
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
     @State private var isTextExpanded3 = false
-   
+    @State private var isTextExpanded4 = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -376,7 +408,7 @@ struct ScalesTables: View {
                                         .font(.footnote)
                                         .bold()
                                         .padding(.horizontal, 3)
-                                        .padding(.vertical, 1.5)
+                                        .padding(.vertical, 2.5)
                                     
                                     Spacer()
                                     Text("Баллы")
@@ -439,6 +471,12 @@ struct ScalesTables: View {
                                 }
                         }
                     }
+                    
+                    NavigationLink (destination: InfusionRateCalculatorView()) {
+                        MyViewBuilder(title: Text("1"), content: Text("Калькулятор Допамина")).buildBlue59NavigationText()
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    }
+                        
             }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

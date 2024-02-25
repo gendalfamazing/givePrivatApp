@@ -122,6 +122,8 @@ struct HomeView: View {
                     Spacer()
                     
                     
+                    
+                    
                 }
                 .navigationBarTitle("СМП", displayMode: .inline)
                 .padding()

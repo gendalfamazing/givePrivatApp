@@ -117,6 +117,9 @@
 		C6C2229E2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229D2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift */; };
 		C6C222A02B4C40E2006CE154 /* Prikaz1030Alg109View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229F2B4C40E2006CE154 /* Prikaz1030Alg109View.swift */; };
 		C6C222A22B4C47FA006CE154 /* Prikaz1030Alg110View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C222A12B4C47FA006CE154 /* Prikaz1030Alg110View.swift */; };
+		C6C9862E2B8A082800F624B1 /* DopaminCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */; };
+		C6C986322B8A20CD00F624B1 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C986312B8A20CD00F624B1 /* UITextField+Extensions.swift */; };
+		C6C986342B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */; };
 		C6D69FAB2B5A3C5000235B09 /* Prikaz1030Alg65View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAA2B5A3C5000235B09 /* Prikaz1030Alg65View.swift */; };
 		C6D69FAD2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAC2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift */; };
 		C6D69FAF2B5A50B700235B09 /* Prikaz1030Alg67View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAE2B5A50B700235B09 /* Prikaz1030Alg67View.swift */; };
@@ -284,6 +287,9 @@
 		C6C2229D2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg108View.swift; sourceTree = "<group>"; };
 		C6C2229F2B4C40E2006CE154 /* Prikaz1030Alg109View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg109View.swift; sourceTree = "<group>"; };
 		C6C222A12B4C47FA006CE154 /* Prikaz1030Alg110View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg110View.swift; sourceTree = "<group>"; };
+		C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopaminCalc.swift; sourceTree = "<group>"; };
+		C6C986312B8A20CD00F624B1 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P4View.swift; sourceTree = "<group>"; };
 		C6D69FAA2B5A3C5000235B09 /* Prikaz1030Alg65View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg65View.swift; sourceTree = "<group>"; };
 		C6D69FAC2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg66View.swift; sourceTree = "<group>"; };
 		C6D69FAE2B5A50B700235B09 /* Prikaz1030Alg67View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg67View.swift; sourceTree = "<group>"; };
@@ -533,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				C6445A652B6F8806001CEF35 /* ScalesTables.swift */,
+				C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */,
 			);
 			path = ScalesTables;
 			sourceTree = "<group>";
@@ -573,6 +580,7 @@
 				C69AE77D2B8761C100B1EADF /* Postanovlenie59Alg3P1View.swift */,
 				C69AE77F2B87A57C00B1EADF /* Postanovlenie59Alg3P2View.swift */,
 				C69AE7812B87AE6F00B1EADF /* Postanovlenie59Alg3P3View.swift */,
+				C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */,
 			);
 			path = Postanovlenie59;
 			sourceTree = "<group>";
@@ -582,6 +590,7 @@
 			children = (
 				C63E75B62B14BA9400524502 /* ContentView.swift */,
 				C6DB60552B14BBEA0050DAD6 /* BackButton.swift */,
+				C6C986312B8A20CD00F624B1 /* UITextField+Extensions.swift */,
 				C6E1C4842B46EDBA0070B0B9 /* Zoom1.swift */,
 				C6E1C4862B46FB000070B0B9 /* Zoom2.swift */,
 				C620D09B2B1B2E920011BE17 /* 5555.swift */,
@@ -721,6 +730,7 @@
 				C68DC8A72B84BCF400355234 /* Postanovlenie59Alg2P1View.swift in Sources */,
 				C6E1C4852B46EDBA0070B0B9 /* Zoom1.swift in Sources */,
 				C6D69FB92B5A5FF100235B09 /* Prikaz1030Alg72View.swift in Sources */,
+				C6C9862E2B8A082800F624B1 /* DopaminCalc.swift in Sources */,
 				C6DB60882B14E5820050DAD6 /* Postanovlenie118Alg8View.swift in Sources */,
 				C6D69FC52B5A7B6B00235B09 /* Prikaz1030Alg78View.swift in Sources */,
 				C641624D2B6BE02B00198A3E /* Prikaz47View.swift in Sources */,
@@ -754,6 +764,7 @@
 				C644C8612B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift in Sources */,
 				C665BE872B5129BE0061CDDF /* Prikaz1030Alg44View.swift in Sources */,
 				C6C2229C2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift in Sources */,
+				C6C986342B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift in Sources */,
 				C6EED7992B65343900E6B5CA /* Postanovlenie99Alg15View.swift in Sources */,
 				C638215A2B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift in Sources */,
 				C6D69FAF2B5A50B700235B09 /* Prikaz1030Alg67View.swift in Sources */,
@@ -762,6 +773,7 @@
 				C6E1C4872B46FB000070B0B9 /* Zoom2.swift in Sources */,
 				C67153E02B78A7CE009F724D /* Postanovlenie59Datas.swift in Sources */,
 				C644C8642B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift in Sources */,
+				C6C986322B8A20CD00F624B1 /* UITextField+Extensions.swift in Sources */,
 				C65F006C2B4FF9F000528DAC /* Prikaz1030Alg138View.swift in Sources */,
 				C6DB605B2B14BBEA0050DAD6 /* BackButton.swift in Sources */,
 				C664F5372B4D064E0044E0E1 /* Prikaz1030Alg112View.swift in Sources */,
@@ -1014,7 +1026,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-button-Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -1049,7 +1061,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-button-Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
