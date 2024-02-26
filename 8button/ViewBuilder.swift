@@ -519,7 +519,8 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayInHiddenText() -> some View {
 
         return content
-            .padding(5)
+            .padding(.vertical, 5)
+            .padding(.horizontal, 10)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 20)
@@ -1135,7 +1136,6 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.subheadline)
                 .bold()
             
-            Spacer()
             Text(LocalizedStringKey(title2))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1143,12 +1143,13 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title3))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
                 .bold()
             
-            Spacer()
             Text(LocalizedStringKey(title4))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1156,12 +1157,12 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title5))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
                 .bold()
-            
-            Spacer()
             Text(LocalizedStringKey(title6))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1169,12 +1170,13 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title7))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
                 .bold()
             
-            Spacer()
             Text(LocalizedStringKey(title8))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1182,12 +1184,12 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title9))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
                 .bold()
-            
-            Spacer()
             Text(LocalizedStringKey(title10))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1195,12 +1197,12 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title11))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
                 .bold()
-            
-            Spacer()
             Text(LocalizedStringKey(title12))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1208,12 +1210,12 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title13))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
                 .bold()
-            
-            Spacer()
             Text(LocalizedStringKey(title14))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1229,40 +1231,224 @@ class MyViewBuilder59: ViewBuilder3 {
     
     func buildTable59AG1() -> some View {
         
-        return HStack {
-            ZStack {
-                Text(LocalizedStringKey(title1))
-                    .padding(.horizontal, 10)
+        return VStack (spacing:1) {
+            HStack {
+                ZStack {
+                    Text(LocalizedStringKey(title1))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .font(.footnote)
+                    
+                }
+                .frame(width: 190)
+                Text(LocalizedStringKey(title2))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .padding(3)
+                Text(LocalizedStringKey(title3))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 40)
+                    .font(.footnote)
+                    .padding(3)
+                Text(LocalizedStringKey(title4))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .font(.footnote)
+                    .padding(3)
                 
+                Spacer()
             }
-            .frame(width: 190)
-            Spacer()
-            Text(LocalizedStringKey(title2))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .frame(maxWidth: 70)
-                .font(.footnote)
-                .padding(3)
+            .padding(2)
+            .background(Color.grayButton)
+            .cornerRadius(10)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            HStack {
+                ZStack {
+                    Text(LocalizedStringKey(title5))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .frame(height: 40)
+                        .font(.footnote)
+                    
+                }
+                .frame(width: 190)
+                Spacer()
+                Text(LocalizedStringKey(title6))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title6))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 40)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title6))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+            }
+            .padding(2)
+            .background(Color.grayButton)
+            .cornerRadius(10)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            HStack {
+                ZStack {
+                    Text(LocalizedStringKey(title7))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .font(.footnote)
+                    
+                }
+                .frame(width: 190)
+                Spacer()
+                Text(LocalizedStringKey(title8))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title9))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 40)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title10))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+            }
+            .padding(2)
+            .background(Color.grayButton)
+            .cornerRadius(10)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            HStack {
+                ZStack {
+                    Text(LocalizedStringKey(title11))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .font(.footnote)
+                    
+                }
+                .frame(width: 190)
+                Spacer()
+                Text(LocalizedStringKey(title12))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title13))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 40)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title14))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+            }
+            .padding(2)
+            .background(Color.grayButton)
+            .cornerRadius(10)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            HStack {
+                ZStack {
+                    Text(LocalizedStringKey(title15))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .font(.footnote)
+                    
+                }
+                .frame(width: 190)
+                Spacer()
+                Text(LocalizedStringKey(title16))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title17))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 40)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title18))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+            }
+            .padding(2)
+            .background(Color.grayButton)
+            .cornerRadius(10)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            HStack {
+                ZStack {
+                    Text(LocalizedStringKey(title19))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .font(.footnote)
+                    
+                }
+                .frame(width: 190)
+                Spacer()
+                Text(LocalizedStringKey(title20))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title21))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 40)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+                Text(LocalizedStringKey(title22))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .font(.footnote)
+                    .padding(3)
+                
+                Spacer()
+            }
+            .padding(2)
+            .background(Color.grayButton)
+            .cornerRadius(10)
             
-            Spacer()
-            Text(LocalizedStringKey(title3))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .font(.footnote)
-                .padding(3)
-            
-            Spacer()
-            Text(LocalizedStringKey(title4))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .font(.footnote)
-                .padding(3)
-            
-            Spacer()
         }
-        .padding(2)
-        .background(Color.grayButton)
-        .cornerRadius(10)
-        
     }
     
     func buildTable59AG2() -> some View {
@@ -1316,6 +1502,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             HStack (alignment: .center) {
                 
                 Text(LocalizedStringKey(title3))
@@ -1344,6 +1532,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 
             }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title7))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
@@ -1357,6 +1547,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title9))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
@@ -1369,6 +1561,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
             Text(LocalizedStringKey(title11))
                 .padding(.horizontal, 7)
@@ -1405,6 +1599,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title3))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
@@ -1416,6 +1612,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
             Text(LocalizedStringKey(title9))
                 .padding(.horizontal, 7)
@@ -1429,6 +1627,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
             Text(LocalizedStringKey(title11))
                 .padding(.horizontal, 7)
@@ -1464,6 +1664,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
             Text(LocalizedStringKey(title3))
                 .padding(.horizontal, 7)
@@ -1477,6 +1679,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
             Text(LocalizedStringKey(title5))
                 .padding(.horizontal, 7)
@@ -1495,6 +1699,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title8))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1506,6 +1712,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title10))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1517,6 +1725,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title12))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1528,6 +1738,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title14))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1539,6 +1751,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title16))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1550,6 +1764,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title18))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1561,6 +1777,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title20))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1572,6 +1790,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title22))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1583,6 +1803,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title24))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1594,6 +1816,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
         }
         .padding(2)
@@ -1616,7 +1840,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
-            
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title3))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
@@ -1629,7 +1854,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
-            
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title5))
                 .padding(.horizontal, 7)
                 .font(.subheadline)
@@ -1647,6 +1873,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title8))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1658,6 +1886,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title10))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1669,6 +1899,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title12))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1680,6 +1912,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title14))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1691,6 +1925,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title16))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1702,6 +1938,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title18))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1713,6 +1951,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title20))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1724,6 +1964,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title22))
                 .padding(.horizontal, 7)
                 .font(.footnote)
@@ -1735,6 +1977,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(7)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             
         }
         .padding(2)
@@ -1752,6 +1996,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title2))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1759,6 +2005,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             HStack (alignment: .bottom){
                 Text(LocalizedStringKey(title3))
                     .frame(minWidth: 0, maxWidth: 100, alignment: .center)
@@ -1777,6 +2025,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     .padding(.vertical, 5)
             }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title5))
                         .frame(width: 110, alignment: .leading)
@@ -1793,6 +2043,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title7))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -1803,6 +2055,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 }
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title8))
                         .frame(width: 110, alignment: .leading)
@@ -1819,6 +2073,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title10))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -1829,6 +2085,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title11))
                         .frame(width: 110, alignment: .leading)
@@ -1845,6 +2103,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title13))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -1855,6 +2115,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title14))
                         .frame(width: 110, alignment: .leading)
@@ -1874,6 +2136,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title16))
                         .frame(width: 110, alignment: .leading)
@@ -1893,6 +2157,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title18))
                         .frame(width: 110, alignment: .leading)
@@ -1925,6 +2191,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title2))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -1932,6 +2200,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             HStack (alignment: .bottom){
                 Text(LocalizedStringKey(title3))
                     .frame(minWidth: 0, maxWidth: 100, alignment: .center)
@@ -1950,6 +2220,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     .padding(.vertical, 5)
             }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title5))
                         .frame(width: 110, alignment: .leading)
@@ -1966,6 +2238,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title7))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -1976,6 +2250,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 }
             
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title8))
                         .frame(width: 110, alignment: .leading)
@@ -1992,6 +2268,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title10))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2002,6 +2280,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title11))
                         .frame(width: 110, alignment: .leading)
@@ -2018,6 +2298,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title13))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2028,6 +2310,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title14))
                         .frame(width: 110, alignment: .leading)
@@ -2044,6 +2328,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title16))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2054,6 +2340,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title17))
                         .frame(width: 110, alignment: .leading)
@@ -2070,6 +2358,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title19))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2080,6 +2370,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title20))
                         .frame(width: 110, alignment: .leading)
@@ -2098,6 +2390,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title22))
                         .frame(width: 110, alignment: .leading)
@@ -2131,6 +2425,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title2))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -2138,6 +2434,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title3))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
@@ -2145,6 +2443,8 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             HStack (alignment: .bottom){
                 Text(LocalizedStringKey(title4))
                     .frame(minWidth: 0, maxWidth: 100, alignment: .center)
@@ -2163,6 +2463,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     .padding(.vertical, 5)
             }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title6))
                         .frame(width: 110, alignment: .leading)
@@ -2179,6 +2481,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title8))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2188,6 +2492,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title9))
                         .frame(width: 110, alignment: .leading)
@@ -2204,6 +2510,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title11))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2213,6 +2521,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
                     Text(LocalizedStringKey(title12))
                         .frame(width: 110, alignment: .leading)
@@ -2229,6 +2539,8 @@ class MyViewBuilder59: ViewBuilder3 {
                             .font(.caption2)
                             .padding(5)
                         Divider()
+                            .background(Color.divider)
+                            .padding(.horizontal, 5)
                         Text(LocalizedStringKey(title14))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
@@ -2238,6 +2550,8 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
             Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
             Text(LocalizedStringKey(title15))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .font(.caption2)
@@ -2250,5 +2564,5 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    Postanovlenie59Alg3P5View()
+    Postanovlenie59Alg1View()
 }

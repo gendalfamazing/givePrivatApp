@@ -161,6 +161,8 @@
 		C6E33E162B540C8F00DEC3A1 /* Prikaz1030Alg48View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E33E152B540C8F00DEC3A1 /* Prikaz1030Alg48View.swift */; };
 		C6E33E182B5412EB00DEC3A1 /* Prikaz1030Alg49View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E33E172B5412EB00DEC3A1 /* Prikaz1030Alg49View.swift */; };
 		C6E33E1A2B54265C00DEC3A1 /* Prikaz1030Alg50View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E33E192B54265C00DEC3A1 /* Prikaz1030Alg50View.swift */; };
+		C6E8D33E2B8C7F5A005ABE2F /* Postanovlenie59Alg3P6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8D33D2B8C7F5A005ABE2F /* Postanovlenie59Alg3P6View.swift */; };
+		C6E8D3402B8CA63B005ABE2F /* Postanovlenie59Alg3P7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E8D33F2B8CA63B005ABE2F /* Postanovlenie59Alg3P7View.swift */; };
 		C6EED78B2B64F9DD00E6B5CA /* Postanovlenie99Alg9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EED78A2B64F9DD00E6B5CA /* Postanovlenie99Alg9View.swift */; };
 		C6EED78D2B64FD9E00E6B5CA /* Postanovlenie99Alg10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EED78C2B64FD9E00E6B5CA /* Postanovlenie99Alg10View.swift */; };
 		C6EED78F2B65048D00E6B5CA /* Postanovlenie99Alg11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EED78E2B65048D00E6B5CA /* Postanovlenie99Alg11View.swift */; };
@@ -332,6 +334,8 @@
 		C6E33E152B540C8F00DEC3A1 /* Prikaz1030Alg48View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg48View.swift; sourceTree = "<group>"; };
 		C6E33E172B5412EB00DEC3A1 /* Prikaz1030Alg49View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg49View.swift; sourceTree = "<group>"; };
 		C6E33E192B54265C00DEC3A1 /* Prikaz1030Alg50View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg50View.swift; sourceTree = "<group>"; };
+		C6E8D33D2B8C7F5A005ABE2F /* Postanovlenie59Alg3P6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P6View.swift; sourceTree = "<group>"; };
+		C6E8D33F2B8CA63B005ABE2F /* Postanovlenie59Alg3P7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P7View.swift; sourceTree = "<group>"; };
 		C6EED78A2B64F9DD00E6B5CA /* Postanovlenie99Alg9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg9View.swift; sourceTree = "<group>"; };
 		C6EED78C2B64FD9E00E6B5CA /* Postanovlenie99Alg10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg10View.swift; sourceTree = "<group>"; };
 		C6EED78E2B65048D00E6B5CA /* Postanovlenie99Alg11View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg11View.swift; sourceTree = "<group>"; };
@@ -584,6 +588,8 @@
 				C69AE7812B87AE6F00B1EADF /* Postanovlenie59Alg3P3View.swift */,
 				C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */,
 				C6C986352B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift */,
+				C6E8D33D2B8C7F5A005ABE2F /* Postanovlenie59Alg3P6View.swift */,
+				C6E8D33F2B8CA63B005ABE2F /* Postanovlenie59Alg3P7View.swift */,
 			);
 			path = Postanovlenie59;
 			sourceTree = "<group>";
@@ -777,6 +783,7 @@
 				C67153E02B78A7CE009F724D /* Postanovlenie59Datas.swift in Sources */,
 				C644C8642B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift in Sources */,
 				C6C986322B8A20CD00F624B1 /* UITextField+Extensions.swift in Sources */,
+				C6E8D33E2B8C7F5A005ABE2F /* Postanovlenie59Alg3P6View.swift in Sources */,
 				C65F006C2B4FF9F000528DAC /* Prikaz1030Alg138View.swift in Sources */,
 				C6DB605B2B14BBEA0050DAD6 /* BackButton.swift in Sources */,
 				C664F5372B4D064E0044E0E1 /* Prikaz1030Alg112View.swift in Sources */,
@@ -821,6 +828,7 @@
 				C6E1C4832B46B17A0070B0B9 /* Zoom.swift in Sources */,
 				C6DB608C2B14E5930050DAD6 /* Postanovlenie118Alg10View.swift in Sources */,
 				C6DB605D2B14BBEA0050DAD6 /* _buttonApp.swift in Sources */,
+				C6E8D3402B8CA63B005ABE2F /* Postanovlenie59Alg3P7View.swift in Sources */,
 				C65FAE572B55279E00628105 /* SearchAdult.swift in Sources */,
 				C6DB607C2B14E5470050DAD6 /* Postanovlenie118Alg2View.swift in Sources */,
 				C6039D252B5FA472009CF504 /* Postanovlenie99Alg4View.swift in Sources */,

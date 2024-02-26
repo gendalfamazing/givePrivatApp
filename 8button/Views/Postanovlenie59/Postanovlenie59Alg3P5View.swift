@@ -11,7 +11,7 @@ struct Postanovlenie59Alg3P5View: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isTextExpanded = false
-    @State private var isTextExpanded1 = true
+    @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
     @State private var isTextExpanded3 = false
     @State private var isTextExpanded4 = false
@@ -44,7 +44,7 @@ struct Postanovlenie59Alg3P5View: View {
                                                   """),
                                               content: Text("""
                                                     Класс I, Класс II
-                                                    """)).buildBlue591Text(isTextExpanded: isTextExpanded2)
+                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded2.toggle()
@@ -74,7 +74,7 @@ struct Postanovlenie59Alg3P5View: View {
                                                       """),
                                                   content: Text("""
                                                         Класс III
-                                                        """)).buildBlue591Text(isTextExpanded: isTextExpanded3)
+                                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded3.toggle()
@@ -105,7 +105,7 @@ struct Postanovlenie59Alg3P5View: View {
                                                       """),
                                                   content: Text("""
                                                         Класс IV
-                                                        """)).buildBlue591Text(isTextExpanded: isTextExpanded4)
+                                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded4)
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded4.toggle()

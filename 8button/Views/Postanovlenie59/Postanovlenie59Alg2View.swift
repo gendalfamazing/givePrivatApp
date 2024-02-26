@@ -58,76 +58,77 @@ struct Postanovlenie59Alg2View: View {
                     Spacer(minLength: 20)
                     
                     VStack (spacing: 5) {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        
-                        VStack  {
-                            MyViewBuilder(title: Text("1"), content: Text("Пороговый уровень АД для выявления АГ при различных методах его измерения (ESH, 2013 г.)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded1.toggle()
-                                    }
-                                }
+                        ZStack {
+                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                             
-                            if isTextExpanded1{
-                                VStack {
-                                    HStack {
-                                        ZStack {
-                                            Text("Способы измерения")
-                                                .padding(.horizontal, 10)
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                                .font(.footnote)
-                                                .bold()
-                                            
+                            VStack  (spacing: 1){
+                                MyViewBuilder(title: Text("1"), content: Text("Пороговый уровень АД для выявления АГ при различных методах его измерения (ESH, 2013 г.)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
+                                    .onTapGesture {
+                                        withAnimation (.snappy) {
+                                            isTextExpanded1.toggle()
                                         }
-                                        .frame(width: 190)
-                                        Spacer()
-                                        Text("""
-                                        САД,
-                                        мм рт.ст.
-                                        """)
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                        .frame(maxWidth: 70)
-                                        .font(.footnote)
-                                        .bold()
-                                        .padding(3)
-                                        
-                                        Spacer()
-                                        Text("")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                        
-                                            .font(.footnote)
-                                            .padding(3)
-                                        
-                                        Spacer()
-                                        Text("""
-                                        ДАД,
-                                        мм рт.ст.
-                                        """)
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                        .font(.footnote)
-                                        .bold()
-                                        .padding(3)
-                                        
-                                        Spacer()
                                     }
-                                    .padding(2)
-                                    .background(Color.grayButton)
-                                    Divider()
-                                    ForEach(Table59AG.getTable59AG13(), id: \.id) { name in
-                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59AG1()
-                                            .onTapGesture {
-                                                withAnimation (.snappy) {
-                                                    isTextExpanded1.toggle()
-                                                }
+                                
+                                if isTextExpanded1{
+                                    VStack (spacing: 1){
+                                        HStack (alignment: .bottom){
+                                            ZStack {
+                                                Text("Способы измерения")
+                                                    .padding(.horizontal, 10)
+                                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                                    .font(.footnote)
+                                                    .bold()
+                                                
                                             }
+                                            .frame(width: 190)
+                                            Spacer()
+                                            Text("""
+                                            САД,
+                                            мм рт.ст.
+                                            """)
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                            .frame(maxWidth: 70)
+                                            .font(.footnote)
+                                            .bold()
+                                            .padding(3)
+                                            
+                                            Spacer()
+                                            Text("")
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                                .frame(width: 40)
+                                                .font(.footnote)
+                                                .padding(3)
+                                            
+                                            Spacer()
+                                            Text("""
+                                            ДАД,
+                                            мм рт.ст.
+                                            """)
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                            .font(.footnote)
+                                            .bold()
+                                            .padding(3)
+                                            
+                                            Spacer()
+                                        }
+                                        .padding(2)
+                                        .background(Color.grayButton)
                                         Divider()
+                                            .background(Color.divider)
+                                            .padding(.horizontal, 5)
+                                        ForEach(Table59AG.getTable59AG13(), id: \.id) { name in
+                                            MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59AG1()
+                                                .onTapGesture {
+                                                    withAnimation (.snappy) {
+                                                        isTextExpanded1.toggle()
+                                                    }
+                                                }
+                                        }
                                     }
                                 }
+                                
                             }
-                            
                         }
-                    }
                     
                         MyViewBuilder(title: Text("Амбулаторные методы контроля АД"), content: Text(LocalizedStringKey("Post59Alg1B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
                             .onTapGesture {
@@ -188,6 +189,8 @@ struct Postanovlenie59Alg2View: View {
                                     }
                                     .padding(2)
                                     Divider()
+                                        .background(Color.divider)
+                                        .padding(.horizontal, 5)
                                     ForEach(Table59AG.getTable59AG14(), id: \.id) { name in
                                         MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59AG2()
                                             .onTapGesture {
@@ -196,6 +199,8 @@ struct Postanovlenie59Alg2View: View {
                                                 }
                                             }
                                         Divider()
+                                            .background(Color.divider)
+                                            .padding(.horizontal, 5)
                                     }
                                     MyViewBuilder(title: Text("3"), content: Text("""
                                             **Примечание**:

@@ -184,6 +184,8 @@ struct Postanovlenie59Alg3View: View {
                                         }
                                     }
                                 Divider()
+                                    .background(Color.divider)
+                                    .padding(.horizontal, 5)
                                 VStack (spacing: 1){
                                     
                                     
@@ -213,6 +215,8 @@ struct Postanovlenie59Alg3View: View {
                                 }
                                 Spacer(minLength: 15)
                                 Divider()
+                                    .background(Color.divider)
+                                    .padding(.horizontal, 5)
                                 MyViewBuilder(title: Text("3"), content: Text("""
                                         * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
                                         """)).buildGrayInHiddenText().onTapGesture {
@@ -246,6 +250,8 @@ struct Postanovlenie59Alg3View: View {
                                         }
                                     }
                                 Divider()
+                                    .background(Color.divider)
+                                    .padding(.horizontal, 5)
                                 VStack (spacing: 1){
                                     
                                     
@@ -275,6 +281,8 @@ struct Postanovlenie59Alg3View: View {
                                 }
                                 Spacer(minLength: 15)
                                 Divider()
+                                    .background(Color.divider)
+                                    .padding(.horizontal, 5)
                                 MyViewBuilder(title: Text("3"), content: Text("""
                                         * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
                                         """)).buildGrayInHiddenText()
@@ -337,6 +345,26 @@ struct Postanovlenie59Alg3View: View {
                             NavigationLink (destination: Postanovlenie59Alg3P5View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("""
                                     Приложение 5. Схема последовательных неотложных мероприятий при острой сердечной недостаточности (класс Киллип)
+                                    """)).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P6View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 6. Схема дифференцированного применения антиаритмических лекарственных средств при ОКС
+                                    """)).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: Postanovlenie59Alg3P7View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("""
+                                    Приложение 7. Особенности ведения пациентов с инфарктом миокарда правого желудочка
                                     """)).buildBlue59NavigationText()
                             }
                         }
