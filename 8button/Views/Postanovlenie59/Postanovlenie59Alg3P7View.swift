@@ -33,7 +33,7 @@ struct Postanovlenie59Alg3P7View: View {
             ScrollView {
                 VStack (spacing: 5) {
                     MyViewBuilder(title: Text("3"), content: Text("""
-                    **Диагностика и лечение заболеваний, характеризующихся повышенным кровяным давлением в амбулаторных условиях**
+                    **Особенности ведения пациентов с инфарктом миокарда правого желудочка**
                     """)).buildGrayTextCenter()
                     VStack (spacing: 1){
                         ForEach(Table59OKS.getTable59OKSRightVentric(), id: \.id) { name in

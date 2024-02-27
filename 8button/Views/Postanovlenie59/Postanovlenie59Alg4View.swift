@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Postanovlenie59Alg3View: View {
+struct Postanovlenie59Alg4View: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isTextExpanded = false
@@ -201,7 +201,22 @@ struct Postanovlenie59Alg3View: View {
                                         isTextExpanded14.toggle()
                                     }
                                 }
-                                
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 2")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 4")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                Spacer(minLength: 15)
+                                Divider()
+                                    .background(Color.divider)
+                                    .padding(.horizontal, 5)
                                 MyViewBuilder(title: Text("3"), content: Text("""
                                         * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
                                         """)).buildGrayInHiddenText().onTapGesture {
@@ -252,7 +267,22 @@ struct Postanovlenie59Alg3View: View {
                                         isTextExpanded15.toggle()
                                     }
                                 }
-                                
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 2")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 4")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                NavigationLink (destination: Prikaz1030Alg2View()) {
+                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
+                                }
+                                Spacer(minLength: 15)
+                                Divider()
+                                    .background(Color.divider)
+                                    .padding(.horizontal, 5)
                                 MyViewBuilder(title: Text("3"), content: Text("""
                                         * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
                                         """)).buildGrayInHiddenText()
@@ -352,12 +382,12 @@ struct Postanovlenie59Alg3View: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Приложение 2")
+                    Text("Приложение 3")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Лечение ИМ, нестабильной стенокардии»
+                    «Диагностика и лечение тахикардии»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)
@@ -369,6 +399,6 @@ struct Postanovlenie59Alg3View: View {
     
 }
 #Preview {
-    Postanovlenie59Alg3View()
+    Postanovlenie59Alg4View()
 }
 
