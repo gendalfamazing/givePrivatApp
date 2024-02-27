@@ -32,343 +32,159 @@ struct Postanovlenie59Alg4View: View {
             ScrollView {
                 VStack (spacing: 5) {
                     MyViewBuilder(title: Text("""
-                                              Последовательность действий на этапах оказания медицинской помощи пациентам с острым коронарным синдромом
+                                              Общие положения
                                               """),
-                                  content: Text(LocalizedStringKey("Post59Alg3B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
+                                  content: Text("""
+                                                **Диагностика и лечение пациентов c тахикардией**
+                                                """)).buildGrayTextCenter()
+                    MyViewBuilder(title: Text("""
+                                              Общие положения
+                                              """),
+                                  content: Text("""
+                                                **Ведущей причиной смерти во всем мире, в том числе и в Беларуси является смертность от ишемической болезни сердца (53,2%)**. Более 60 % летальных исходов в данной группе пациентов вызваны внезапной остановкой сердца в основе которой лежат тахи- и брадиаритмии. Поэтому при работе с нарушениями ритма надо быть готовым к оказанию сердечно-легочной реанимации (далее – СЛР).
+                                                **В соответствии с международными рекомендациями по СЛР при работе с пациентом, имеющим остановку сердечной деятельности необходимо следовать «цепочке выживания»**:
+                                                - **раннее распознавание** ургентного состояния и **вызов скорой** (неотложной) **помощи**;
+                                                - **раннее начало СЛР**;
+                                                - **раннее проведение дефибрилляции** (при наличии показаний);
+                                                - **ранняя расширенная СЛР и постреанимационный уход**.
+                                                
+                                                **В процессе выполнения СЛР необходимо руководствоваться алгоритмом базовой СЛР**.
+                                                
+                                                **Предварительные действия**:
+                                                1. **удостовериться в том, что пострадавший, оказывающий помощь и окружающие находятся в безопасности**;
+                                                2. **проверить, реагирует ли пострадавший на внешние воздействия**;
+                                                3. **повернуть пациента на спину**;
+                                                4. **проверить/обеспечить проходимость дыхательных путей**;
+                                                5. **если пострадавший не отвечает – оказывать СЛР**;
+                                                """)).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    Spacer(minLength: 15)
-                    MyViewBuilder(title: Text("""
-                                              """),
-                                  content: Text("""
-                                                **Этап I. Догоспитальный этап**
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded2)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded2.toggle()
-                            }
-                        }
-                    if isTextExpanded2 {
-                        MyViewBuilder(title: Text("""
-                                              I А. Фельдшерско-акушерский пункт
-                                              """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S2"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded3)
-                            .onTapGesture {
-                                withAnimation (.snappy) {
-                                    isTextExpanded3.toggle()
-                                }
-                            }
+                    if isTextExpanded1 {
                         
-                        MyViewBuilder(title: Text("""
-                                              I Б. Врач общей практики, участковый врач вне амбулаторно-поликлинической организации здравоохранения
-                                              """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S3"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded4)
+                        VStack (spacing:5) {
+                            MyViewBuilder(title: Text("Алгоритм базовой СЛР"),
+                                          content: Text("""
+                                                        1. **Начать СЛР с непрямого массажа сердца компрессией грудной клетки**
+                                                        - обеспечить экскурсию грудной клетки на **4-5 см**
+                                                        - число компрессий должно составлять **не менее 100 в минуту**
+                                                        2. **После проведения цикла из 30 компрессий грудной клетки выполнить 2 вдоха искусственного дыхания** (соотношение 30 : 2 сохраняется на протяжении всех реанимационных мероприятий независимо от количества человек, оказывающих помощь).
+                                                        **При этом компрессия грудной клетки является приоритетной в сравнении с искусственным дыханием**.
+                                                        """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded2)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded2.toggle()
+                                    }
+                                }
+                            MyViewBuilder(title: Text("Алгоритм квалифицированной СЛР"),
+                                          content: Text("""
+                                                            **Условия обеспечения квалифицированной СЛР**:
+                                                            1. Венозный доступ;
+                                                            2. Подача кислорода;
+                                                            3. Подключение электродов ЭКГ и/или электродов кардиовертера-дефибриллятора.
+                                                            
+                                                            **Алгоритм квалифицированной СЛР**:
+                                                            1. **При проведении СЛР исключить потенциально устранимые/вторичные причины**:
+                                                            1.1. гипоксемию;
+                                                            1.2. гиповолемию;
+                                                            1.3. гипо-/гиперкалиемию;
+                                                            1.4. гипотермию,
+                                                            1.5. напряженный пневмоторакс;
+                                                            1.6. тампонаду сердца;
+                                                            1.7. токсические воздействия;
+                                                            1.8. тромбоэмболию;
+                                                            1.9. гипогликемию;
+                                                            1.10. травму.
+                                                            2. **Оценить сердечную деятельность**:
+                                                            2.1. При выявлении фибрилляции желудочков/желудочковой тахикардии (далее ‒ ФЖ/ЖТ) перейти к **протоколу «ФЖ/ЖТ»**;
+                                                            2.2. При выявлении асистолии, электромеханической диссоциации – к **протоколу «Асистолия»**.
+                                                            """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded3)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded3.toggle()
+                                    }
+                                }
+                        }
+                        
+                        MyViewBuilder(title: Text("Протокол «ФЖ/ЖТ»"),
+                                      content: Text("""
+                                                    1. **Нанести несинхронизированный разряд дефибриллятора** (**200 Дж** бифазный и **360 Дж** монофазный дефибриллятор) **и сразу же возобновить СЛР**;
+                                                    2. **Продолжать СЛР после первого разряда в течение 5 циклов** (30 : 2) около 2 минут;
+                                                    3. **Определить ритм**:
+                                                    4. **Если ФЖ/ЖТ** – **нанести очередной разряд дефибриллятора** (**второй и последующие разряды – максимально возможный или 360 Дж для бифазного дефибриллятора**),
+                                                    5. **С этого момента обеспечить введение вазопрессора адреналина (эпинефрин) 0,1% раствор 1 мл (1 мг)** внутривенно болюсно **каждые 3-5 минут СЛР** мероприятий **без ограничения по дозе**;
+                                                    6. **Если асистолия, электромеханическая диссоциация - перейти к протоколу «Асистолия»**;
+                                                    7. **Продолжать СЛР после второго разряда в течение 5 циклов** (30 : 2) около 2 минут;
+                                                    8. **Определить ритм**:
+                                                    9. **Если ФЖ/ЖТ** – **нанести очередной разряд дефибриллятора (все последующие разряды – максимально возможный или 360 Дж для бифазного дефибриллятора**), **данная ФЖ/ЖТ считается резистентной к терапии**.
+                                                    10. **С этого момента кроме введения вазопрессора (адреналина) необходимо использовать только одно из ниже перечисленных антиаритмических средств**:
+                                                    
+                                                    - **Амиодарон 300 мг** (2 ампулы) **внутривенно болюсно однократно** 5% раствор 6 мл. **При необходимости можно повторить** через 5 минут введение еще **150 мг амиодарона** 5% раствор 3 мл (1 ампула).
+                                                    **Как только ФЖ устранена** – налаживают **поддерживающую инфузию амиодарона со скоростью 1 мг/мин** в течение первых **6 часов** (**360 мг за 6 часов**), а **затем 0,5 мг/мин до конца суток** (**540 мг за 18 часов**), при необходимости – дольше.
+                                                    - **Лидокаин** (**при отсутствии амиодарона**) из расчета **1-1,5 мг/кг** (**2% раствор 3-6 мл**), при необходимости можно **повторить** из расчета **0,5 мг/кг до 2 дополнительных введений до суммарной дозы в течение первых 30 минут** из расчета **3 мг/кг** массы тела;
+                                                    - **Прокаинамид (новокаинамид) 10% - 10 мл**.
+                                                    
+                                                    **Дополнительные меры по купированию ФЖ/ЖТ**:
+                                                    1. **При наличии веретенообразной ЖТ (torsade de points)**, **подозрении на недостаток магния** (интенсивная диуретическая терапия в анамнезе) рассмотреть введение раствора **MgSO4 25% раствор 5-10 мл**, **50% раствор 2-4 мл внутривенноено струйно**;
+                                                    2. **При наличии брадизависимой веретенообразной ЖТ наладить временную чрескожную/эндокардиальную стимуляцию желудочков**;
+                                                    3. **При наличии непрерывно рецидивирующей полиморфной желудочковой тахикардии, которую можно квалифицировать как «электрический шторм» показано болюсное введение бета-блокаторов (метопролол 0,1% 5,0 мл.)**
+                                                    """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded4)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded4.toggle()
                                 }
-                            }//  ¹²³⁴⁵
-                        MyViewBuilder(title: Text("""
-                                              I В. Врачи в условиях амбулаторно-поликлинических организаций здравоохранения
-                                              """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S4"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded5)
+                            }
+                        MyViewBuilder(title: Text("Протокол «Асистолия»"),
+                                      content: Text("""
+                                                    4. **Если асистолия, электромеханическая диссоциация – обеспечить введение**:
+                                                    - **Вазопрессора: адреналин 0,1% раствор 1 мл (1 мг)** внутривенно болюсно **каждые 3-5 минут СЛР** мероприятий **без ограничения по дозе**,
+                                                    - **Атропин 0,1% раствор 1 мл** внутривенно болюсно, можно повторить **каждые 3-5 минут до 3 доз**;
+                                                    5. **Если ФЖ/ЖТ - перейти к протоколу «ФЖ/ЖТ»**;
+                                                    6. **При возможности обеспечить временную наружную/эндокардиальную стимуляцию**;
+                                                    7. **Продолжать СЛР в течение 5 циклов (30 : 2) около 2 минут с оценкой ритма после каждых 5 циклов**.
+                                                    
+                                                    **Важно: При наличии любой гемодинамически значимой тахикардии (желудочковой, наджелудочковой, в том числе, и на фоне синдрома WPW) методом выбора является электрическая кардиоверсия. Длительность проведения СЛР не должна быть менее 30 мин от момента последнего эпизода асистолии**.
+                                                    """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded5)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded5.toggle()
                                 }
                             }
-                    }
-                    MyViewBuilder(title: Text("""
-                                              """),
-                                  content: Text("""
-                                                **Этап II. Врач/ фельдшер бригады скорой медицинской помощи**
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded6)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded6.toggle()
-                            }
-                        }
-                    if isTextExpanded6 {
-                        
-                        MyViewBuilder(title: Text("""
-                                                  Общие мероприятия
-                                                  """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S5"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded7)
+                        MyViewBuilder(title: Text("Диагностика, медикаментозная терапия и хирургическое лечение СН»"),
+                                      content: Text("""
+                                                    **Диагностика СН и консультации специалистов** должны осуществляться в соответствии с данным клиническим протоколом **в зависимости от уровня их проведения**: в условиях районных, межрайонных (при наличии необходимого оборудования и специалистов), областных и республиканских организаций здравоохранения.
+                                                    
+                                                    **Медикаментозная терапия СН** должна осуществляться всем пациентам в соответствии с данным клиническим протоколом **вне зависимости от уровня ее проведения**.
+                                                    
+                                                    **Хирургическое лечение СН** должно осуществляться в соответствии с данным клиническим протоколом **в зависимости от уровня его проведения**: в условиях областных (при наличии необходимого оборудования и специалистов) и республиканских организаций здравоохранения.
+                                                    """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded6)
                             .onTapGesture {
                                 withAnimation (.snappy) {
-                                    isTextExpanded7.toggle()
-                                }
-                            }
-                        MyViewBuilder(title: Text("""
-                                                  Острый коронарный синдром со стойким подъемом сегмента ST
-                                                  """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S6"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded8)
-                            .onTapGesture {
-                                withAnimation (.snappy) {
-                                    isTextExpanded8.toggle()
-                                }
-                            }
-                        MyViewBuilder(title: Text("""
-                                                  Острый коронарный синдром без подъема сегмента ST
-                                                  """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S7"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded9)
-                            .onTapGesture {
-                                withAnimation (.snappy) {
-                                    isTextExpanded9.toggle()
+                                    isTextExpanded6.toggle()
                                 }
                             }
                     }
-                    
-                    MyViewBuilder(title: Text("""
-                                              """),
-                                  content: Text("""
-                                                Этап III. Приемное отделение
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded10)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded10.toggle()
-                            }
-                        }
-                    if isTextExpanded10 {
-                        MyViewBuilder(title: Text("""
-                                                  Острый коронарный синдром со стойким подъемом сегмента ST
-                                                  """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S8"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded11)
-                            .onTapGesture {
-                                withAnimation (.snappy) {
-                                    isTextExpanded11.toggle()
-                                }
-                            }
-                        
-                        MyViewBuilder(title: Text("""
-                                                  Острый коронарный синдром без подъема сегмента ST
-                                                  """),
-                                      content: Text(LocalizedStringKey("Post59Alg3B0G0S9"))).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded12)
-                            .onTapGesture {
-                                withAnimation (.snappy) {
-                                    isTextExpanded12.toggle()
-                                }
-                            }
-                    }
-                    
-                    //¹²³⁴⁵
-                    
-                    MyViewBuilder(title: Text("""
-                                              Примечание⁰
-                                              """),
-                                  content: Text(LocalizedStringKey("Post59Alg3B0G0S10"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded13)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded13.toggle()
-                            }
-                        }
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 20)
+                    VStack (spacing: 5) {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом со стойким подъемом сегмента ST")).buildBlue59Text(isTextExpanded: isTextExpanded14)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded14.toggle()
-                                    }
-                                }
-                            
-                            if isTextExpanded14{
-                                MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post59Alg3B0G0S11"))).buildGrayInHiddenText()
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded14.toggle()
-                                        }
-                                    }
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
-                                VStack (spacing: 1){
-                                    
-                                    
-                                    ForEach(Table59OKS.getTable59OKS1(), id: \.id) { name in
-                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59OKS()
-                                    }
-                                    
-                                }
-                                .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded14.toggle()
-                                    }
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 2")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 4")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                Spacer(minLength: 15)
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                        * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
-                                        """)).buildGrayInHiddenText().onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded14.toggle()
-                                    }
-                                }
-                                
-                                
-                            }
-                            
-                        }
-                    }
-                    
-                    
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом без подъема сегмента st")).buildBlue59Text(isTextExpanded: isTextExpanded15)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded15.toggle()
-                                    }
-                                }
-                            
-                            if isTextExpanded15{
-                                MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post59Alg3B0G0S12"))).buildGrayInHiddenText()
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded15.toggle()
-                                        }
-                                    }
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
-                                VStack (spacing: 1){
-                                    
-                                    
-                                    ForEach(Table59OKS.getTable59OKS2(), id: \.id) { name in
-                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59OKS1()
-                                    }
-                                    
-                                }
-                                .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded15.toggle()
-                                    }
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 2")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 4")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 5")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                NavigationLink (destination: Prikaz1030Alg2View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Приложение 6")).buildNavigationText().padding(.horizontal, 5)
-                                }
-                                Spacer(minLength: 15)
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                        * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
-                                        """)).buildGrayInHiddenText()
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded15.toggle()
-                                        }
-                                    }
-                                
-                                
-                            }
-                            
-                        }
-                    }
-                    
-                    Spacer(minLength: 15)
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P1View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 1. Рекомендации по выбору стратегии ведения пациентов с ОКС с подъемом сегмента ST
-                                    """)).buildBlue59NavigationText()
+                            NavigationLink (destination: Postanovlenie59Alg1P1View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Амбулаторный этап")).buildBlue59NavigationText()
                             }
                         }
                     }
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P2View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 2. Протокол выбора и проведения тромболитической терапии при ОКС с подъемом сегмента ST
-                                    """)).buildBlue59NavigationText()
+                            NavigationLink (destination: Postanovlenie59Alg1P2View()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Стационарный этап")).buildBlue59NavigationText()
                             }
                         }
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P3View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 3. Выбор стратегии ведения пациентов при остром коронарном синдроме без подъема сегмента ST
-                                    """)).buildBlue59NavigationText()
-                            }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P4View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 4. Номограмма для коррекции скорости введения гепарина
-                                    """)).buildBlue59NavigationText()
-                            }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P5View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 5. Схема последовательных неотложных мероприятий при острой сердечной недостаточности (класс Киллип)
-                                    """)).buildBlue59NavigationText()
-                            }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P6View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 6. Схема дифференцированного применения антиаритмических лекарственных средств при ОКС
-                                    """)).buildBlue59NavigationText()
-                            }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg3P7View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("""
-                                    Приложение 7. Особенности ведения пациентов с инфарктом миокарда правого желудочка
-                                    """)).buildBlue59NavigationText()
-                            }
-                        }
-                    }
+                }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 95)
