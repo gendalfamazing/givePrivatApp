@@ -301,6 +301,7 @@ class MyViewBuilder: ViewBuilder1 {
             .frame(minWidth: 70)
             Spacer()
             content
+                .textSelection(.enabled)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .font(.footnote)
                 .padding(3)
@@ -323,6 +324,7 @@ class MyViewBuilder: ViewBuilder1 {
             
             Spacer()
             content
+                .textSelection(.enabled)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
                 .font(.caption2)
                 .padding(3)
@@ -346,6 +348,7 @@ class MyViewBuilder: ViewBuilder1 {
             
             Spacer()
             content
+                .textSelection(.enabled)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(maxWidth: 40)
 //                .frame(maxWidth: 70)
@@ -370,6 +373,7 @@ class MyViewBuilder: ViewBuilder1 {
                 .padding(3)
             Spacer()
             content
+                .textSelection(.enabled)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
 //                .frame(maxWidth: 70)
                 .font(.subheadline)
@@ -429,6 +433,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayText() -> some View {
 
         return content
+            .textSelection(.enabled)
             .padding(10)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: false)
@@ -442,6 +447,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayTextCenter() -> some View {
 
         return content
+            .textSelection(.enabled)
             .padding(10)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             .fixedSize(horizontal: false, vertical: false)
@@ -462,6 +468,7 @@ class MyViewBuilder: ViewBuilder1 {
                     .padding(.bottom, 10)
                     
                 content
+                .textSelection(.enabled)
                     
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
@@ -487,6 +494,7 @@ class MyViewBuilder: ViewBuilder1 {
                     .padding(.bottom, 10)
                     
                 content
+                .textSelection(.enabled)
                     
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
@@ -505,6 +513,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayInText() -> some View {
 
         return content
+            .textSelection(.enabled)
             .padding(10)
 //            .padding(.vertical, 3)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
@@ -519,6 +528,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayInHiddenText() -> some View {
 
         return content
+            .textSelection(.enabled)
             .padding(.vertical, 5)
             .padding(.horizontal, 10)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -534,6 +544,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayInHidden1Text() -> some View {
 
         return content
+            .textSelection(.enabled)
             .padding(.top, 0)
             .padding(.horizontal, 10)
             .padding(.bottom, 10)
@@ -550,6 +561,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildGrayInHidden59Text() -> some View {
 
         return content
+            .textSelection(.enabled)
             .padding(10)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
@@ -642,6 +654,7 @@ class MyViewBuilder: ViewBuilder1 {
                 if isTextExpanded{
                     VStack {
                         content
+                            .textSelection(.enabled)
                     }
                     .padding(10)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -690,6 +703,7 @@ class MyViewBuilder: ViewBuilder1 {
                 if isTextExpanded{
                     VStack {
                         content
+                            .textSelection(.enabled)
                     }
                     .padding(10)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -962,6 +976,7 @@ class MyViewBuilderTables: ViewBuilder2 {
             
             Spacer()
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -995,6 +1010,7 @@ class MyViewBuilderTables: ViewBuilder2 {
             
             Spacer()
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1021,6 +1037,7 @@ class MyViewBuilderTables: ViewBuilder2 {
             Spacer()
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1046,6 +1063,7 @@ class MyViewBuilderTables: ViewBuilder2 {
             Spacer()
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1224,6 +1242,7 @@ class MyViewBuilder59: ViewBuilder3 {
             
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1449,6 +1468,7 @@ class MyViewBuilder59: ViewBuilder3 {
             .cornerRadius(10)
             
         }
+        .textSelection(.enabled)
     }
     
     func buildTable59AG2() -> some View {
@@ -1481,6 +1501,7 @@ class MyViewBuilder59: ViewBuilder3 {
             Spacer()
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1577,6 +1598,7 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(7)
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1644,6 +1666,7 @@ class MyViewBuilder59: ViewBuilder3 {
             Spacer(minLength: 1)
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1820,6 +1843,7 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 5)
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -1981,6 +2005,7 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 5)
             
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -2177,6 +2202,7 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -2410,6 +2436,7 @@ class MyViewBuilder59: ViewBuilder3 {
                     }
                 }
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
@@ -2558,6 +2585,7 @@ class MyViewBuilder59: ViewBuilder3 {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
         }
+        .textSelection(.enabled)
         .padding(2)
         .background(Color.grayButton)
         
