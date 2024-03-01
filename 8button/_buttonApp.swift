@@ -12,6 +12,7 @@ struct _buttonApp: App {
     
     var body: some Scene {
         WindowGroup {
+            
             AppTabBarView()
             
         }

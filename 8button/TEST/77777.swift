@@ -1,72 +1,29 @@
-//
-//  77777.swift
-//  8button
-//
-//  Created by Artur Vladymcev on 7.02.24.
-//
-
 import SwiftUI
 
-struct _7777: View {
-    
-    @State private var selection = 0
-    @State private var firstPath = [String]()
-    @State private var secondPath = [String]()
-    
+struct ContentView9: View {
+    @State private var text = "Пример текста для выделения и копирования."
+    @State private var selectedText: String = ""
+
     var body: some View {
-        TabView(selection: $selection) {
-            HomeView()
-            
-            .tag(1)
-            
-            
-            NavigationStack{
-                SearchAdult()
-            }
-                
-            .tag(2)
-        }
-        .overlay(alignment: .bottom) {
-            HStack{
-                Spacer()
-                NavigationLink (destination: HomeView()) {
-                    Image(systemName: "house.circle")
-                    Text("Home")
+        VStack {
+            TextEditor(text: $text)
+                .padding()
+                .textSelection(.enabled)
+                .onTapGesture {
+                    // Ваш код обработки нажатия
+                    // selectedText теперь содержит выделенный текст
                 }
-                Button {
-                    if selection == 1 {
-                        firstPath.removeAll()
-                    } else {
-                        selection = 1
-                    }
-                } label: {
-                    Image(systemName: "house.circle")
-                    Text("Home")
-                }
-                .navigationDestination(for: String.self) { _ in
-                    HomeView()
-                }
-                Spacer()
-                Button {
-                    if selection == 2 {
-                        firstPath.removeAll()
-                    } else {
-                        selection = 2
-                    }
-                } label: {
-                    Image(systemName: "doc.circle")
-                    Text("Adult")
-                }
-                .navigationDestination(for: String.self) { _ in
-                    SearchAdult()
-                }
-                Spacer()
+
+            Button("Копировать") {
+                // Ваш код для копирования текста
+                // Например, можно использовать UIPasteboard
+                UIPasteboard.general.string = selectedText
             }
             .padding()
         }
     }
-    
 }
+
 #Preview {
-    _7777()
+    ContentView9()
 }

@@ -171,7 +171,7 @@ struct Postanovlenie59Alg4View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            NavigationLink (destination: Postanovlenie59Alg1P1View()) {
+                            NavigationLink (destination: Postanovlenie59Alg4P1View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Амбулаторный этап")).buildBlue59NavigationText()
                             }
                         }
