@@ -204,6 +204,7 @@ struct Prikaz1030Alg17View: View {
                                                 """)).buildGrayInAndHiddenBlock()
                     
                 }
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
             }

@@ -139,7 +139,7 @@ struct Prikaz1030Alg53View: View {
                     **Осуществлять в пути монторинг витальных функций: АД, ЧСС, ЧДД, SpO2**.
                     """)).buildGrayText()
                 }
-                
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
             }

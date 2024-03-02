@@ -207,6 +207,7 @@ struct Prikaz1030Alg5View: View {
                     Spacer()
                     
                 }
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
             }

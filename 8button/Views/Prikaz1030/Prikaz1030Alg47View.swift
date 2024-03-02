@@ -251,7 +251,7 @@ struct Prikaz1030Alg47View: View {
                         .padding(5.0)
                     }
                 }
-                
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
             }

@@ -153,39 +153,6 @@ struct HomeView: View {
                     }
                     Spacer()
                     
-                    NavigationLink(destination: ContentView9()) {
-                        HStack {
-                            Image(systemName: "ivfluid.bag") //ivfluid.bag  candybarphone
-                                .resizable()
-                                .frame(width: 16, height: 25)
-//                                .padding(.horizontal)
-                                .font(.caption2)
-                                .padding(.horizontal, 12.0)
-                                .padding(.vertical, 7.5)
-                                .background(Color.titleNumber)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .foregroundColor(Color.titleNumberForeground)
-                            Spacer()
-                            Spacer()
-                            Text("Калькулятор Допамина")
-                                .padding(.horizontal, 3.0)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                            Spacer()
-                            Spacer()
-                            
-                        }
-                        .padding(5.0)
-                //        .lineLimit(2)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(minHeight: 50)
-                        .modifier(ThemeTitleBlueColorModifier())
-                        .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    }
-                    Spacer()
                     
                     
                 }

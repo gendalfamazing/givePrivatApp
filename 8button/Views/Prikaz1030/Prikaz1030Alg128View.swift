@@ -233,6 +233,7 @@ struct Prikaz1030Alg28View: View {
                                 """)).buildGrayText()
                     }
                 }
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
             }

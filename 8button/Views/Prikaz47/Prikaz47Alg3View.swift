@@ -53,6 +53,7 @@ struct Prikaz47Alg3View: View {
                     Spacer()
                     Spacer()
                 }
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 65)
             }

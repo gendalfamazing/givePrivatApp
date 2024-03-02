@@ -88,7 +88,7 @@ struct Prikaz1030Alg70View: View {
                     **Доставка в стационар** по профилю основного заболевания
                     """)).buildGrayText()
                 }
-                
+                .textSelection(.enabled)
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
             }

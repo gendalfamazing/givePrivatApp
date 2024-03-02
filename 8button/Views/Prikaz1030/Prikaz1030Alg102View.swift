@@ -568,6 +568,7 @@ struct Prikaz1030Alg2View: View {
                 Spacer()
                 Spacer()
             }
+            .textSelection(.enabled)
             .padding(.horizontal, 10)
             .padding(.bottom, 65)
         }
