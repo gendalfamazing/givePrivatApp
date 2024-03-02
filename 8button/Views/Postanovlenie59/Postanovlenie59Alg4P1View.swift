@@ -25,6 +25,7 @@ struct Postanovlenie59Alg4P1View: View {
     @State private var isTextExpanded12 = false
     @State private var isTextExpanded13 = false
     @State private var isTextExpanded14 = false
+    @State private var isTextExpanded15 = false
      var body: some View {
         NavigationStack {
             ScrollView {
@@ -390,15 +391,132 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                         }
                     }
-                    Spacer(minLength: 15)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            MyViewBuilder(title: Text("3"), content: Text("""
-                            
-                            """)).buildGrayInHidden59Text()
+                            MyViewBuilder(title: Text("1"), content: Text("Фибрилляция и трепетание желудочков (I49.0)")).buildBlue59Text(isTextExpanded: isTextExpanded10)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded10.toggle()
+                                        isTextExpanded11.toggle()
+                                        if isTextExpanded10 == false {
+                                            isTextExpanded11 = false
+                                            isTextExpanded12 = false
+                                        }
+                                    }
+                                }
+                            if isTextExpanded10{
+                                VStack (spacing: 1){
+                                    ForEach(Table59AG.getTable59Tahi4(), id: \.id) { name in
+                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59AG()
+                                    }
+                                    
+                                }
+                                .cornerRadius(10)
+                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded10.toggle()
+                                        isTextExpanded11.toggle()
+                                        if isTextExpanded10 == false {
+                                            isTextExpanded11 = false
+                                            isTextExpanded12 = false
+                                        }
+                                    }
+                                }
+                                
+                            }
                         }
                     }
+                    if isTextExpanded11 {
+                        VStack {
+                            MyViewBuilder(title: Text("Лечение фибрилляции и трепетания желудочков"),
+                                          content: Text("""
+                                                        **Купирование пароксизма при наличии рефрактерной фибрилляции/трепетания желудочков**:
+                                                        1. **амиодарон 300 мг (5 мг/кг)** внутривенно болюсно, при необходимости **повторно 150 мг** внутривенно болюсно, затем внутривенно капельно из расчета **до 1 мг/мин. 6 часов**, при отсутствии повторных пароксизмов **0,5 мг/мин на протяжении последующих 18 часов – 1000-1200 мг/сут**
+                                                        2. **лидокаин 1,5 мг/кг** массы тела внутривенно струйно медленно (т.е. 2% **до 5-7,5 мл (100-180 мг)** однократно, при необходимости дозу можно повторить через **3-5 минуты до суммарной дозы 3 мг/кг или 300 мг**);
+                                                        3. **прокаинамид 10% 5-10 мл (до 17 мг/кг**) внутривенно медленно.
+                                                        
+                                                        **Другие антифибрилляторные средства**:
+                                                        1. **при «электрическом шторме»** – непрерывно рецидивирующий характер фибрилляции/трепетания желудочков
+                                                        1.1. – **пропранолол внутривенно**, струйно, медленно, пациентам с массой тела **> 60 кг – 1 мг** в течение 1 минуты, при необходимости **повторно с интервалом в 2 минуты** (под контролем ЭКГ и АД **до максимальной дозы – 10 мг**);
+                                                        1.2. – **метопролол 0,1% раствор – первоначально 2,5-5 мл** (**2,5-5,0 мг** со скоростью **1-2 мг/мин**); при необходимости дозу **повторить с 5 минутным интервалом** до достижения терапевтического эффекта или **до 10-15 мг** (**максимальная доза – 20 мг**),
+                                                        2. **при подозрении на дефицит калия и магния: магния сульфат 25% - 10 мл** внутривенно медленно (**препарат выбора при синдроме удлиненного QT**) и восполнение дефицита калия.
+                                                        
+                                                        **Профилактика повторных пароксизмов**:
+                                                        1. **метопролол 25-200 мг/сут** внутрь, **бисопролол 2,5-10 мг/сут**;
+                                                        2. **соталол 80-320 мг/сут под контролем QT**;
+                                                        3. **при неэффективности указанных выше лекарственных средств и/или наличии частых разрядов кардиовертера-дефибриллятора** – **амиодарон в поддерживающей дозе 100-400 мг/сут под контролем QT** (**не выше 500 мсек. или 25% от исходного значения**), функции щитовидной железы, печени и легких (пациент должен быть предупрежден о необходимости регулярного контроля функции щитовидной железы, печени (не реже 1 раза в 6 месяцев), легких (не реже 1 раза/год), осмотр окулиста (не реже 1 раза/год) в связи с высокой токсичностью препарата) либо
+                                                        4. **лекарственные средства 1С класса в сочетании с бета-блокаторами** – **пропафенон** – по **150 мг до 3 раз/сут**, **этацизин по 50 мг до 3 раз/сут** * .
+                                                        
+                                                        * Структурная патология сердца, являющаяся противопоказанием для назначения препаратов класса 1С: перенесенный инфаркт миокарда, стенокардия, гипертрофия миокарда ЛЖ > 14 мм, наличии дилатации ЛЖ и снижения ФВ < 40%).
+                                                        """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded12)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded12.toggle()
+                                    }
+                                }
+                        }
+                    }
+                    
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            MyViewBuilder(title: Text("1"), content: Text("Другая и неуточненная преждевременная деполяризация (экстрасистолия) (I49.4)")).buildBlue59Text(isTextExpanded: isTextExpanded13)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded13.toggle()
+                                        isTextExpanded14.toggle()
+                                        if isTextExpanded13 == false {
+                                            isTextExpanded14 = false
+                                            isTextExpanded15 = false
+                                        }
+                                    }
+                                }
+                            if isTextExpanded13{
+                                VStack (spacing: 1){
+                                    ForEach(Table59AG.getTable59Tahi5(), id: \.id) { name in
+                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59AG()
+                                    }
+                                    
+                                }
+                                .cornerRadius(10)
+                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded13.toggle()
+                                        isTextExpanded14.toggle()
+                                        if isTextExpanded13 == false {
+                                            isTextExpanded14 = false
+                                            isTextExpanded15 = false
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    if isTextExpanded14 {
+                        VStack {
+                            MyViewBuilder(title: Text("Лечение преждевременной деполяризации (экстрасистолии)"),
+                                          content: Text("""
+                                                        1. **метопролол 25-200 мг/сут, бисопролол 2,5-10 мг/сут., бетаксолол 5-40 мг/сут., пропанолол 40-120 мг/сут внутрь** или
+                                                        2. **соталол 80-320 мг/сут под контролем QT**;
+                                                        3. **пропафенон – по 150 мг до 3 раз/сут** (по потребности)*,
+                                                        4. **этацизин по 50 мг до 3 раз/сут** (по потребности)*,
+                                                        5. **при неэффективности указанных выше лекарственные средства 1С класса в сочетании с бета-блокаторами – пропафенон – по 150 мг до 3 раз/сут, этацизин по 50 мг до 3 раз/сут** либо
+                                                        6. **верапамил 80-320 мг/сут внутрь** (при предсердной экстрасистолии и экстрасистолии из выносящего тракта ПЖ, резистентной к указанным выше лекарственным средствам).
+                                                        
+                                                        * Структурная патология сердца, являющаяся противопоказанием для назначения препаратов класса 1С: перенесенный инфаркт миокарда, стенокардия, гипертрофия миокарда ЛЖ > 14 мм, наличии дилатации ЛЖ и снижения ФВ < 40%).
+                                                        """)).buildDualBlockBlueGrayLowLevel(isTextExpanded: isTextExpanded15)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded15.toggle()
+                                    }
+                                }
+                        }
+                    }
+                    
                     
             }
                 .padding(.horizontal, 10)

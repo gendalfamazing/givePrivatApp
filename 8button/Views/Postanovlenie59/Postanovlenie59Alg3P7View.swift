@@ -44,6 +44,7 @@ struct Postanovlenie59Alg3P7View: View {
                     }
                     
                     .cornerRadius(10)
+                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     .onTapGesture {
                         withAnimation (.snappy) {
