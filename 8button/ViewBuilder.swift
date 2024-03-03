@@ -2590,7 +2590,410 @@ class MyViewBuilder59: ViewBuilder3 {
         .background(Color.grayButton)
         
     }
+    
+    func buildTable59CHA2() -> some View {
+        
+        return VStack (spacing:1) {
+            
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title1))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title3))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title4))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title5))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title6))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title7))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title8))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title9))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title10))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title11))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title12))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title13))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title14))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title15))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title16))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title17))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title18))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title19))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title20))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title21))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title22))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title23))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title24))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Spacer(minLength: 3)
+        }
+        .cornerRadius(10)
+        .textSelection(.enabled)
+        
+    }
+    
+    func buildTable59HAS() -> some View {
+        
+        return VStack (spacing:1) {
+            
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title1))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title3))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title4))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title5))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title6))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title7))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title8))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title9))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title10))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title11))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title12))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title13))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title14))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title15))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title16))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title17))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title18))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            .padding(2)
+            .background(Color.grayButton)
+            
+            HStack (alignment: .top){
+                ZStack {
+                    Text(LocalizedStringKey(title19))
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    
+                        .font(.footnote)
+                        .bold()
+                    
+                }
+                .frame(width: 40)
+                Text(LocalizedStringKey(title20))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.footnote)
+                Spacer(minLength: 15)
+                Text(LocalizedStringKey(title21))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .frame(width: 35)
+                .font(.footnote)
+                
+            }
+            Spacer(minLength: 3)
+        }
+        .cornerRadius(10)
+        .textSelection(.enabled)
+        
+    }
 }
 #Preview {
-    Postanovlenie59Alg1View()
+    Postanovlenie59Alg4View()
 }
