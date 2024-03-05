@@ -131,9 +131,8 @@ struct Prikaz1030Alg2View: View {
                                 }
                             
                             
-                        }
+                        }.padding(5)
                     }
-                    .padding(5)
                 }
                 if isTextExpanded2 {
                     Image(systemName: "arrow.down")
@@ -262,9 +261,8 @@ struct Prikaz1030Alg2View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5)
                         }
-                        .padding(5)
                     }
                 }
                 if isTextExpanded5 {
@@ -284,10 +282,9 @@ struct Prikaz1030Alg2View: View {
                                         """)
                             ).buildGrayInHiddenText()
                             NavigationLink(destination: Prikaz1030Alg26View()) {
-                                MyViewBuilder(title: Text("26"), content: Text("Алгоритм 26 «Обструкция дыхательных путей инородным телом»")).buildNavigationText()
+                                MyViewBuilder(title: Text("26"), content: Text("Алгоритм 26 «Обструкция дыхательных путей инородным телом»")).buildNavigationText().padding(5)
                             }
                         }
-                        .padding(5)
                     }
                 }
                 
@@ -384,9 +381,8 @@ struct Prikaz1030Alg2View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5)
                         }
-                        .padding(5.0)
                     }
                 }
                 if isTextExpanded8 {
@@ -402,10 +398,9 @@ struct Prikaz1030Alg2View: View {
                             ).buildGrayInHiddenText()
                             
                             NavigationLink(destination: Prikaz1030Alg4View()) {
-                                MyViewBuilder(title: Text("4"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText()
+                                MyViewBuilder(title: Text("4"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText().padding(5)
                             }
                         }
-                        .padding(5.0)
                     }
                 }
                 
@@ -485,10 +480,9 @@ struct Prikaz1030Alg2View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5)
                             
                         }
-                        .padding(5.0)
                     }
                 }
                 
@@ -533,10 +527,9 @@ struct Prikaz1030Alg2View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5)
                             
                         }
-                        .padding(5.0)
                     }
                     if isTextExpanded14 {
                         Image(systemName: "arrow.down")

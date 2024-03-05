@@ -84,17 +84,16 @@ struct Prikaz1030Alg10View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5.0)
                             
                         }
-                        .padding(5.0)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("10"), content: Text("""
                         **Вагусные пробы**
-                        """)).buildGrayText()
+                        """)).buildGrayTextCenter()
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -139,10 +138,9 @@ struct Prikaz1030Alg10View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {
@@ -158,9 +156,10 @@ struct Prikaz1030Alg10View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
+                                
                                 MyViewBuilder(title: Text("10"), content: Text("""
                         В/в **прокаинамид 5-10 мл 10 %** раствора в **0,9%** растворе **натрия хлорида** медленно под контролем **АД** (возможно **в одном шприце** с **0,1-0,3-0,5 мл 1% раствора фенилэфрина** или **2-4 мл 0,25%** раствора **верапамила**).
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5)
                                 HStack{
                                     MyViewBuilder(title: Text("10"), content: Text("""
                             Эффект **есть**
@@ -184,10 +183,9 @@ struct Prikaz1030Alg10View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {

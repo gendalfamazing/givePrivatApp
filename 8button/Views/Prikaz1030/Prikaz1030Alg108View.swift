@@ -96,9 +96,8 @@ struct Prikaz1030Alg8View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5.0)
                         }
-                        .padding(5.0)
                     }
                     if isTextExpanded {
                         Image(systemName: "arrow.down")

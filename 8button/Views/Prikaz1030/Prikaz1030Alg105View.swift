@@ -73,7 +73,7 @@ struct Prikaz1030Alg5View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5.0)
                             if isTextExpanded1 {
                                 VStack (spacing: 5) {
                                 MyViewBuilder(title: Text("5"), content: Text("""
@@ -112,7 +112,7 @@ struct Prikaz1030Alg5View: View {
                             - **цианоз кожных покровов**.
                             """)).buildGrayInHiddenText()
                                 NavigationLink (destination: Prikaz1030Alg3View()) {
-                                    MyViewBuilder(title: Text("5"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("5"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText().padding(5.0)
                                 }
                                 MyViewBuilder(title: Text("5"), content: Text("""
                             Внутривенно быстро струйно **инфузия кристаллоидных растворов не менее 800 мл за 10 мин** (при неопределяемом уровне САД в **2 вены и более**) под контролем **САД (не менеее 90 мм рт. ст.)**.
@@ -164,9 +164,8 @@ struct Prikaz1030Alg5View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5.0)
                         }
-                        .padding(5.0)
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")

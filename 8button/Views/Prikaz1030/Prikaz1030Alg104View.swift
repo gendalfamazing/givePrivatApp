@@ -129,10 +129,10 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5.0)
                             
                         }
-                        .padding(5.0)
+                        
                     }
                     
                     if isTextExpanded1 {
@@ -218,10 +218,9 @@ struct Prikaz1030Alg4View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5.0)
                         }
                     }
                     if isTextExpanded2 {
@@ -231,9 +230,9 @@ struct Prikaz1030Alg4View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack (spacing: 5){
-                                MyViewBuilder(title: Text("4"), content: Text("**Венозный доступ с внутривенной (далее – в/в) инфузионной терапией 0,9% раствора натрия хлорида.**")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("4"), content: Text("**Венозный доступ с внутривенной (далее – в/в) инфузионной терапией 0,9% раствора натрия хлорида.**")).buildGrayInHiddenText().padding(.horizontal, -5)
                                 
-                                MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText().padding(.horizontal, -5)
                                 MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
@@ -310,9 +309,9 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     }
                                 if isTextExpanded10 {
-                                    MyViewBuilder(title: Text("4"), content: Text("**ИВЛ**")).buildGrayInHiddenText()
+                                    MyViewBuilder(title: Text("4"), content: Text("**ИВЛ**")).buildGrayInHiddenText().padding(.horizontal, -5)
                                     
-                                    MyViewBuilder(title: Text("4"), content: Text("**Доставка в стационар** (ОИТАР)")).buildGrayInHiddenText()
+                                    MyViewBuilder(title: Text("4"), content: Text("**Доставка в стационар** (ОИТАР)")).buildGrayInHiddenText().padding(.horizontal, -5)
                                 }
                                 
                             }
@@ -393,10 +392,10 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     
                                     
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5.0)
+                            
                         }
                     }
                     if isTextExpanded12 {
@@ -473,10 +472,9 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     
                                     
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5.0)
                         }
                     }
                     if isTextExpanded4 {
@@ -486,8 +484,8 @@ struct Prikaz1030Alg4View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                MyViewBuilder(title: Text("4"), content: Text("**Закрытый массаж сердца** по общепринятой схеме.")).buildGrayInHiddenText()
-                                MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("4"), content: Text("**Закрытый массаж сердца** по общепринятой схеме.")).buildGrayInHiddenText().padding(.horizontal, -5.0)
+                                MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                                 MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
@@ -564,9 +562,9 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     }
                                 if isTextExpanded10 {
-                                    MyViewBuilder(title: Text("4"), content: Text("**ИВЛ**")).buildGrayInHiddenText()
+                                    MyViewBuilder(title: Text("4"), content: Text("**ИВЛ**")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                                     
-                                    MyViewBuilder(title: Text("4"), content: Text("**Доставка в стационар** (ОИТАР)")).buildGrayInHiddenText()
+                                    MyViewBuilder(title: Text("4"), content: Text("**Доставка в стационар** (ОИТАР)")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                                 }
                                 
                             }
@@ -583,7 +581,7 @@ struct Prikaz1030Alg4View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("4"), content: Text("**Визуализировать сердечный ритм** через монитор с **электродов дефибриллятора**, или через **ЭКГ-аппарат**, после установки ЭКГ-электродов.")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                                 MyViewBuilder(title: Text("4"), content: Text("**Фибрилляция желудочков или желудочковая тахикардия без пульсации** на крупных артериях.")).buildBlue591Text(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
@@ -660,9 +658,9 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     }
                                 if isTextExpanded10 {
-                                    MyViewBuilder(title: Text("4"), content: Text("**ИВЛ**")).buildGrayInHiddenText()
+                                    MyViewBuilder(title: Text("4"), content: Text("**ИВЛ**")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                                     
-                                    MyViewBuilder(title: Text("4"), content: Text("**Доставка в стационар** (ОИТАР)")).buildGrayInHiddenText()
+                                    MyViewBuilder(title: Text("4"), content: Text("**Доставка в стационар** (ОИТАР)")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                                 }
                                 
                             }

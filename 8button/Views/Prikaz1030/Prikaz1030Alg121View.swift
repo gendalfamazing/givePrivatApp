@@ -35,7 +35,7 @@ struct Prikaz1030Alg21View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("21"), content: Text("""
                     **Анамнез, осмотр, контроль АД, ЭКГ**
                     """)).buildGrayInText()
@@ -87,7 +87,7 @@ struct Prikaz1030Alg21View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("21"), content: Text("""
                         **Осложнённый**:
                         """)).buildGrayInText()
@@ -103,7 +103,6 @@ struct Prikaz1030Alg21View: View {
                                 - ОЛЖН.
                                 """)).buildGrayInHiddenText()
                             }
-                            .padding(5)
                         }
                         Image(systemName: "arrow.down")
                            

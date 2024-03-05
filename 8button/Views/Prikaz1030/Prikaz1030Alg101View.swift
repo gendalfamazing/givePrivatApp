@@ -16,13 +16,9 @@ struct Prikaz1030Alg1View: View {
         ScrollView {
             Spacer()
             VStack {
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    VStack {
-                        MyViewBuilder(title: Text("1"), content: Text("**Убедиться в личной безопасности и безопасности пациента**")).buildGrayInText()
-                    }
+                
+                        MyViewBuilder(title: Text("1"), content: Text("**Убедиться в личной безопасности и безопасности пациента**")).buildGrayTextCenter()
                     
-                }
                 Image(systemName: "arrow.down")
                 
                 ZStack{

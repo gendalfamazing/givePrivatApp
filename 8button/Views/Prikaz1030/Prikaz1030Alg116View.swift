@@ -51,7 +51,7 @@ struct Prikaz1030Alg16View: View {
                             HStack {
                                 MyViewBuilder(title: Text("16"), content: Text("""
                     **Уточнить причину**
-                    """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
+                    """)).buildGreen1Text(isTextExpanded: isTextExpanded1).padding(5)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded1.toggle()
@@ -62,7 +62,7 @@ struct Prikaz1030Alg16View: View {
                                     }
                                 MyViewBuilder(title: Text("16"), content: Text("""
                     **Неотложная помощь**
-                    """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
+                    """)).buildGreen1Text(isTextExpanded: isTextExpanded2).padding(5)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded2.toggle()
@@ -73,7 +73,6 @@ struct Prikaz1030Alg16View: View {
                                     }
                             }
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1 {
@@ -118,10 +117,10 @@ struct Prikaz1030Alg16View: View {
                                                             """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 
                                 NavigationLink (destination: Prikaz1030Alg3View()) {
-                                    MyViewBuilder(title: Text("12"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность».")).buildNavigationText()
+                                    MyViewBuilder(title: Text("12"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность».")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
                            

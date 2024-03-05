@@ -203,9 +203,8 @@ struct Prikaz1030Alg12View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {

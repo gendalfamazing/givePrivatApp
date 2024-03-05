@@ -66,7 +66,7 @@ struct Prikaz1030Alg7View: View {
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 5){
+                        LazyVStack (spacing: 5){
                             MyViewBuilder(title: Text("7"), content: Text("""
                     **Достигнутый эффект**:
                     """)).buildGrayInText()
@@ -87,7 +87,7 @@ struct Prikaz1030Alg7View: View {
                                     }
                                 }
                             if isTextExpanded1 {
-                                MyViewBuilder(title: Text("6"), content: Text("**Констатация биологической смерти** при неэффективности СЛР")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("6"), content: Text("**Констатация биологической смерти** при неэффективности СЛР")).buildGrayInHiddenText().padding(.horizontal, -5.0)
                             }
                             MyViewBuilder(title: Text("7"), content: Text("""
                         Появление эффективного ритма

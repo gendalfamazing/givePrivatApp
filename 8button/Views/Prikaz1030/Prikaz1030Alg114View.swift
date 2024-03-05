@@ -195,9 +195,8 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5.0)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded4 {
@@ -256,10 +255,9 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {
@@ -318,10 +316,9 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded11 {

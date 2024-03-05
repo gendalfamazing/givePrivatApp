@@ -35,7 +35,7 @@ struct Prikaz1030Alg6View: View {
                         VStack (spacing: 1){
                             MyViewBuilder(title: Text("6"), content: Text("**Осуществлять основные реанимационные мероприятия**: алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация». **До регистрации ЭКГ** (в том числе с электродов дефибриллятора) **продолжать основные реанимационные мероприятия**.")).buildGrayInHiddenText()
                             NavigationLink (destination: Prikaz1030Alg4View()) {
-                                MyViewBuilder(title: Text("6"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText()
+                                MyViewBuilder(title: Text("6"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText().padding(5.0)
                             }
                             MyViewBuilder(title: Text("6"), content: Text("При **ФЖ/ЖТ** - дефибриляция **200 Дж**, затем **300**, **360 Дж** или **120 Дж**, затем **150**, **200 Дж бифазным дефибриллятором**")).buildGrayInHiddenText()
                             MyViewBuilder(title: Text("6"), content: Text("**Достигнут определенный эффект**")).buildGrayInText()
@@ -88,10 +88,9 @@ struct Prikaz1030Alg6View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5.0)
                             
                         }
-                        .padding(5.0)
                     }
                     if isTextExpanded {
                         Image(systemName: "arrow.down")
@@ -164,10 +163,9 @@ struct Prikaz1030Alg6View: View {
                         **Венозный доступ** (0,9 % раствор натрия хлорида, ацесоль).
                         """)).buildGrayInHiddenText()
                                 NavigationLink (destination: Prikaz1030Alg4View()) {
-                                    MyViewBuilder(title: Text("6"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("6"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText().padding(5.0)
                                 }
                             }
-                            .padding(5.0)
                         }
                         Image(systemName: "arrow.down")
                             
@@ -225,9 +223,8 @@ struct Prikaz1030Alg6View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5.0)
                         }
                         if isTextExpanded5 {
                             Image(systemName: "arrow.down")
@@ -249,10 +246,9 @@ struct Prikaz1030Alg6View: View {
                                     **Отсутствие электрической активности**:
                                     """)).buildGrayInText()
                                     NavigationLink (destination: Prikaz1030Alg7View()) {
-                                        MyViewBuilder(title: Text("6"), content: Text("Алгоритм 7 «Асистолия»")).buildNavigationText()
+                                        MyViewBuilder(title: Text("6"), content: Text("Алгоритм 7 «Асистолия»")).buildNavigationText().padding(5.0)
                                     }
                                 }
-                                .padding(5.0)
                             }
                         }
                         

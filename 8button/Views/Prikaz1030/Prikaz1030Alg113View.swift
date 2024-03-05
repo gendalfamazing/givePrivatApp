@@ -101,10 +101,9 @@ struct Prikaz1030Alg13View: View {
                                     }
                                 
                                 
-                            }
+                            }.padding(5.0)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")

@@ -37,7 +37,7 @@ struct Prikaz1030Alg9View: View {
                         VStack (spacing: 1){
                             MyViewBuilder(title: Text("9"), content: Text("""
                     **Появилась самостоятельная пульсация на крупных артериях**
-                    """)).buildGrayInHiddenText()
+                    """)).buildGrayInText()
                             MyViewBuilder(title: Text("9"), content: Text("""
                     **Появилось самостоятельное дыхание**:
                     """)).buildGrayInText()
@@ -101,10 +101,9 @@ struct Prikaz1030Alg9View: View {
                                             }
                                         }
                                     }
-                            }//Breath
+                            }.padding(5.0)//Breath
                             
                         }
-                        .padding(5.0)
                     }
                     
                     if isTextExpanded1 {
@@ -170,9 +169,8 @@ struct Prikaz1030Alg9View: View {
                                                 }
                                             }
                                         }
-                                }//Ruthm
+                                }.padding(5.0)//Ruthm
                             }
-                            .padding(5.0)
                         }
                         
                     }
@@ -240,9 +238,8 @@ struct Prikaz1030Alg9View: View {
                                                 }
                                             }
                                         }
-                                }//Ruthm
+                                }.padding(5.0)//Ruthm
                             }
-                            .padding(5.0)
                         }
                         
                     }
@@ -297,10 +294,9 @@ struct Prikaz1030Alg9View: View {
                                                 }
                                             }
                                         }
-                                }//SAD
+                                }.padding(5.0)//SAD
                                 
                             }
-                            .padding(5.0)
                         }
                         
                         
@@ -349,10 +345,9 @@ struct Prikaz1030Alg9View: View {
                                                 }
                                             }
                                         }
-                                }//glucosae
+                                }.padding(5.0)//glucosae
                                 
                             }
-                            .padding(5.0)
                         }
                         
                     }
@@ -399,10 +394,9 @@ struct Prikaz1030Alg9View: View {
                                                 }
                                             }
                                         }
-                                }//glucosae
+                                }.padding(5.0)//glucosae
                                 
                             }
-                            .padding(5.0)
                         }
                         
                         

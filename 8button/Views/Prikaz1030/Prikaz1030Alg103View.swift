@@ -50,14 +50,13 @@ struct Prikaz1030Alg3View: View {
                                 MyViewBuilder(title: Text("3"), content: Text("Алгоритм 77 «Респираторная поддержка»")).buildNavigationText()
                             }
                         }
-                        .padding(5.0)
                     }
                     Image(systemName: "arrow.down")
                         
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 5){
+                        LazyVStack (spacing: 5){
                             MyViewBuilder(title: Text("3"), content: Text("**При возможности установления причины**:")).buildGrayInText()
                             
                             
@@ -84,6 +83,7 @@ struct Prikaz1030Alg3View: View {
                                 }
                             
                             if isTextExpanded3 {
+                                
                                 NavigationLink (destination: Prikaz1030Alg26View()) {
                                     MyViewBuilder(title: Text("3"), content: Text("Алгоритм 26 «Обструкция дыхательных путей инородным телом»")).buildNavigationText()
                                 }
@@ -136,7 +136,7 @@ struct Prikaz1030Alg3View: View {
                                                   content: Text("""
                                                                 - **отсутствие дыхательных шумов и движений грудной клетки** на стороне поражения;
                                                                 – **внезапное начало**.
-                                                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                                                                """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(.horizontal, -5)
                                     NavigationLink (destination: Prikaz1030Alg42View()) {
                                         MyViewBuilder(title: Text("3"), content: Text("Алгоритм 42 «Травмы груди»")).buildNavigationText()
                                     }
@@ -163,7 +163,7 @@ struct Prikaz1030Alg3View: View {
                                                                 - **мелко- и средне- пузырчатые хрипы** над лёгкими;
                                                                 – вынужденное положение **(ортопное)**;
                                                                 – **пенистая мокрота**.
-                                                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                                                                """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(.horizontal, -5)
                                     NavigationLink (destination: Prikaz1030Alg17View()) {
                                         MyViewBuilder(title: Text("3"), content: Text("Алгоритм 17 «Отек легких»")).buildNavigationText()
                                     }
@@ -181,7 +181,7 @@ struct Prikaz1030Alg3View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing:5){
+                        LazyVStack (spacing:5){
                             MyViewBuilder(title: Text("3"), content: Text("**Углубленный анализ ЭКГ в 12 отведениях**")).buildGrayInText()
                             
                             
@@ -193,7 +193,7 @@ struct Prikaz1030Alg3View: View {
                                 }
                             
                             if isTextExpanded9 {
-                                MyViewBuilder(title: Text("3"), content: Text("**Лечение аритмий** по соответствующим алгоритмам")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("3"), content: Text("**Лечение аритмий** по соответствующим алгоритмам")).buildGrayInHiddenText().padding(.horizontal, -5)
                             }
                             MyViewBuilder(title: Text("3"), content: Text("Внезапно возникшая перегрузка правых отделов сердца")).buildBlue591Text(isTextExpanded: isTextExpanded10)
                                 .onTapGesture {
@@ -236,7 +236,7 @@ struct Prikaz1030Alg3View: View {
                                 }
                             
                             if isTextExpanded12 {
-                                MyViewBuilder(title: Text("3"), content: Text("**Перевод пациента на ИВЛ (ВИВЛ) с 50% О2** и **доставка в стационар** с постоянным контролем витальных функций **(минуя приемное отделение, передача в ОИТАР)**")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("3"), content: Text("**Перевод пациента на ИВЛ (ВИВЛ) с 50% О2** и **доставка в стационар** с постоянным контролем витальных функций **(минуя приемное отделение, передача в ОИТАР)**")).buildGrayInHiddenText().padding(.horizontal, -5)
                             }
                             
                         }

@@ -152,10 +152,9 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -250,9 +249,8 @@ struct Prikaz1030Alg15View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded2 {
@@ -265,7 +263,7 @@ struct Prikaz1030Alg15View: View {
                            
                         MyViewBuilder(title: Text("15"), content: Text("""
                                     **Купирован или нет эффекта**
-                                    """)).buildGrayText()
+                                    """)).buildGrayTextCenter()
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("15"), content: Text("""
@@ -311,9 +309,8 @@ struct Prikaz1030Alg15View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -394,10 +391,9 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                     }
                     
@@ -422,7 +418,7 @@ struct Prikaz1030Alg15View: View {
                            
                         MyViewBuilder(title: Text("15"), content: Text("""
                             **Острый коронарный синдром**
-                            """)).buildGrayText()
+                            """)).buildGrayTextCenter()
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("15"), content: Text("""
@@ -437,7 +433,7 @@ struct Prikaz1030Alg15View: View {
                                 MyViewBuilder(title: Text("15"), content: Text("""
                             1) **Обезболивание (морфин 1 мл 1% раствора в 20 мл 0,9% раствора натрия хлорида внутривенно дробно до достижения эффекта или появления побочных эффектов** – гипотензии, рвоты, угнетения дыхания → налоксон 0,5 мл 0,5% раствора).
                             2) **нитроглицерин** (глицерил тринитрат, изосорбит динитрат) **10 мл 0,1% раствора в 200 мл 0,9% раствора натрия хлорида** в/в капельно **от 5 до 20 капель в минуту** под контролем АД **(при САД ≤ 90 мм рт. ст. инфузия прекращается)**.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.top, 5.0)
                                 
                                 HStack {
                                     MyViewBuilder(title: Text("15"), content: Text("""
@@ -479,9 +475,8 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -552,9 +547,8 @@ struct Prikaz1030Alg15View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -630,9 +624,8 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5.0)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded6 {

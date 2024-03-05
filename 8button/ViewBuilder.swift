@@ -514,7 +514,8 @@ class MyViewBuilder: ViewBuilder1 {
 
         return content
             .textSelection(.enabled)
-            .padding(10)
+            .padding(.vertical, 10)
+            .padding(.horizontal, 10)
 //            .padding(.vertical, 3)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             .fixedSize(horizontal: false, vertical: true)

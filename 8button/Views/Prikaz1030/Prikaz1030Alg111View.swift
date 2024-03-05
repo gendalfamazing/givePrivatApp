@@ -38,7 +38,7 @@ struct Prikaz1030Alg11View: View {
                         VStack (spacing: 1){
                             MyViewBuilder(title: Text("11"), content: Text("""
                     **Анамнез, осмотр, установка периферического катера (контроль вены), контроль АД, ритма, ЭКГ, пульсоксиметрия**
-                    """)).buildGrayInHiddenText()
+                    """)).buildGrayInText()
                             MyViewBuilder(title: Text("11"), content: Text("""
                     **Стабильное состояние пациента**:
                     """)).buildGrayInText()
@@ -87,10 +87,9 @@ struct Prikaz1030Alg11View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5.0)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -105,7 +104,7 @@ struct Prikaz1030Alg11View: View {
                             VStack {
                                 MyViewBuilder(title: Text("10"), content: Text("""
                         **Прокаинамид 10 % – 5-10 мл** в **0,9%** растворе **натрия хлорида медленно** под контролем **АД** (возможно **в одном шприце** с **1% раствором фенилэфрина 0,1-0,3-0,5мл**) в/в
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5.0)
                                 HStack{
                                     MyViewBuilder(title: Text("10"), content: Text("""
                             Эффект **есть**
@@ -141,11 +140,9 @@ struct Prikaz1030Alg11View: View {
                                                 }
                                             }
                                         }
-                                }
-                                
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {
@@ -250,10 +247,9 @@ struct Prikaz1030Alg11View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5.0)
                                 
                             }
-                            .padding(5)
                         }
                         if isTextExpanded5 {
                             Image(systemName: "arrow.down")
@@ -263,7 +259,7 @@ struct Prikaz1030Alg11View: View {
                                 VStack (spacing: 5){
                                     MyViewBuilder(title: Text("10"), content: Text("""
                             **Амиодарон 5 % – 6 мл в/в болюсно**, можно **повторно 3 мл через 15 минут** при отсутствии эффекта
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.top, 5.0)
                                     
                                     HStack {
                                         MyViewBuilder(title: Text("10"), content: Text("""
@@ -324,8 +320,8 @@ struct Prikaz1030Alg11View: View {
                             Image(systemName: "arrow.down")
                                
                             MyViewBuilder(title: Text("10"), content: Text("""
-                            Нет эффекта
-                            """)).buildGrayText()
+                            **Нет эффекта**
+                            """)).buildGrayTextCenter()
                             Image(systemName: "arrow.down")
                                
                             MyViewBuilder(title: Text("10"), content: Text("""
