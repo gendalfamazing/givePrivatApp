@@ -140,8 +140,7 @@ struct Prikaz1030Alg14View: View {
                         Image(systemName: "arrow.down")
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1) {
-                            
+                        VStack {
                             
                             MyViewBuilder(title: Text("14"), content: Text("""
                             **Гемодинамика стабильная**:
@@ -195,7 +194,7 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     }
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                         }
                     }
                     
@@ -204,7 +203,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("14"), content: Text("""
                             **Впервые выявленный пароксизм**:
                             """)).buildGrayInText()
@@ -255,7 +254,7 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -277,10 +276,11 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("14"), content: Text("""
                             **Повторный пароксизм**:
                             """)).buildGrayInText()
+                                Spacer(minLength: 1)
                                 MyViewBuilder(title: Text("14"), content: Text("""
                                     **Длительность более 24 часов**:
                                     """)).buildGrayInText()
@@ -316,7 +316,7 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -326,7 +326,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("14"), content: Text("""
                         **ЧСС более 120 уд/мин**
                         """)).buildGrayInText()
@@ -354,8 +354,7 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     
-                                }
-                                .padding(5)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                         
@@ -365,7 +364,7 @@ struct Prikaz1030Alg14View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("14"), content: Text("""
                         **ЧСС более 120 уд/мин**
                         """)).buildGrayInText()
@@ -393,8 +392,7 @@ struct Prikaz1030Alg14View: View {
                                             }
                                         }
                                     
-                                }
-                                .padding(5)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                         

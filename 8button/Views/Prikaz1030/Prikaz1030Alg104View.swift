@@ -41,12 +41,11 @@ struct Prikaz1030Alg4View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("4"), content: Text("""
                       **Констатирована клиническая смерть**.
                       **Смерть в присутствии бригады**:
                       """)).buildGrayInText()
-                            
                             
                             HStack {
                                 MyViewBuilder(title: Text("4"), content: Text("**Да**")).buildGreen1Text(isTextExpanded: isTextExpanded1)
@@ -129,7 +128,7 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     }
                                 
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                         
@@ -141,7 +140,7 @@ struct Prikaz1030Alg4View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("4"), content: Text("""
                                             **Нанести прекардиальный удар**
                                             
@@ -218,7 +217,7 @@ struct Prikaz1030Alg4View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -341,6 +340,7 @@ struct Prikaz1030Alg4View: View {
                                             
                                         }
                                     }
+                                Spacer(minLength: 5)
                                 HStack {
                                     MyViewBuilder(title: Text("4"), content: Text("**Да**")).buildGreen1Text(isTextExpanded: isTextExpanded6)
                                         .onTapGesture {
@@ -392,7 +392,7 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                             
@@ -421,6 +421,7 @@ struct Prikaz1030Alg4View: View {
                                             
                                         }
                                     }
+                                Spacer(minLength: 5)
                                 HStack {
                                     MyViewBuilder(title: Text("4"), content: Text("**Да**")).buildGreen1Text(isTextExpanded: isTextExpanded6)
                                         .onTapGesture {
@@ -472,7 +473,7 @@ struct Prikaz1030Alg4View: View {
                                         }
                                     
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }

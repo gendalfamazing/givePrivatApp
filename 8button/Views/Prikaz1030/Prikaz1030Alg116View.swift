@@ -51,7 +51,7 @@ struct Prikaz1030Alg16View: View {
                             HStack {
                                 MyViewBuilder(title: Text("16"), content: Text("""
                     **Уточнить причину**
-                    """)).buildGreen1Text(isTextExpanded: isTextExpanded1).padding(5)
+                    """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded1.toggle()
@@ -62,7 +62,7 @@ struct Prikaz1030Alg16View: View {
                                     }
                                 MyViewBuilder(title: Text("16"), content: Text("""
                     **Неотложная помощь**
-                    """)).buildGreen1Text(isTextExpanded: isTextExpanded2).padding(5)
+                    """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded2.toggle()
@@ -71,7 +71,7 @@ struct Prikaz1030Alg16View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
                     }
                     

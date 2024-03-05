@@ -35,7 +35,7 @@ struct Prikaz1030Alg21View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing:1){
+                        VStack {
                             MyViewBuilder(title: Text("21"), content: Text("""
                     **Анамнез, осмотр, контроль АД, ЭКГ**
                     """)).buildGrayInText()
@@ -77,21 +77,14 @@ struct Prikaz1030Alg21View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing:1){
-                                MyViewBuilder(title: Text("21"), content: Text("""
-                        **Осложнённый**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("21"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Осложнённый**:"), content: Text("""
                                 - острое расслоение аорты;
                                 - острый ИМ;
                                 - тяжёлое носовое кровотечение;
@@ -101,9 +94,8 @@ struct Prikaz1030Alg21View: View {
                                 - феохромоцитома;
                                 - черепно-мозговая травма;
                                 - ОЛЖН.
-                                """)).buildGrayInHiddenText()
-                            }
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -127,12 +119,12 @@ struct Prikaz1030Alg21View: View {
                         - **Феохромоцитома** : **дроперидол 0,25 % – 2-4 мл** в/в;
                         - **Носовое кровотечение** : **тампонада носа**,
                         в зависимости от цифр АД – **клонидин 0,01 % – 1 мл** в/в, **магния сульфат 25 % – 10 мл** в/в, **фуросемид 1 % – 2мл** в/в, **каптоприл 25-50 мг** (под язык).
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg15View()) {
-                                    MyViewBuilder(title: Text("21"), content: Text("Алгоритм 15 «Острый коронарный синдром»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("21"), content: Text("Алгоритм 15 «Острый коронарный синдром»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
                            

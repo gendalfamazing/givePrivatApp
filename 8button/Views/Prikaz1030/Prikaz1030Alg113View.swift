@@ -42,7 +42,7 @@ struct Prikaz1030Alg13View: View {
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 5){
+                        VStack {
                             MyViewBuilder(title: Text("13"), content: Text("""
                         **Состояние нестабильное**:
                         """)).buildGrayInText()
@@ -52,6 +52,7 @@ struct Prikaz1030Alg13View: View {
                                     }
                                 }
                             if isTextExpanded71 {
+                                Spacer(minLength: 1)
                                 MyViewBuilder(title: Text("13"), content: Text("""
                     - гипотензия,
                     - острая сердечная недостаточность,
@@ -101,7 +102,7 @@ struct Prikaz1030Alg13View: View {
                                     }
                                 
                                 
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }

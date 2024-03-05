@@ -88,10 +88,9 @@ struct Prikaz1030Alg18View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -111,16 +110,15 @@ struct Prikaz1030Alg18View: View {
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("18"), content: Text("""
                         1) **Установка катетера** в периферическую и (или) центральную вену.
-                        
                         2) **ЭКГ мониторинг**:
                         - возможно появление **только блокады правой ножки пучка Гиса**;
                         - патологический **зубец S в I и Q в III** отведениях;
                         - поворот **ЭОС вправо**: глубокий S в I, V1-
                         V6 или по типу **S I – S II – S III**.
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5)
                             
                             HStack {
                                 
@@ -170,7 +168,7 @@ struct Prikaz1030Alg18View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             HStack {
                                 MyViewBuilder(title: Text("18"), content: Text("""
                             **Умеренная и малая эмболия**
@@ -218,10 +216,9 @@ struct Prikaz1030Alg18View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded3 {
@@ -234,10 +231,11 @@ struct Prikaz1030Alg18View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("18"), content: Text("""
                             **При стойкой артериальной гипотензии** (САД **менее 90 мм.рт.ст.**) или **прогрессирующем падении САД** и быстром **прогрессировании симптомов ТЭЛА** при отсутствии противопоказаний **показано проведение тромболизиса** (в условиях реанимобиля)
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.top, 5)
+                                Spacer(minLength: 1)
                                 MyViewBuilder(title: Text("18"), content: Text("""
                                     **САД менее 90 мм.рт.ст.**:
                                     """)).buildGrayInText()
@@ -264,9 +262,8 @@ struct Prikaz1030Alg18View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded4 {
@@ -280,10 +277,11 @@ struct Prikaz1030Alg18View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("18"), content: Text("""
                                     **При стойкой артериальной гипотензии** (САД **менее 90 мм.рт.ст.**) или **прогрессирующем падении САД** и быстром **прогрессировании симптомов ТЭЛА** при отсутствии противопоказаний **показано проведение тромболизиса** (в условиях реанимобиля)
-                                    """)).buildGrayInHiddenText()
+                                    """)).buildGrayInHiddenText().padding(.top, 5)
+                                Spacer(minLength: 1)
                                 MyViewBuilder(title: Text("18"), content: Text("""
                                             **САД менее 90 мм.рт.ст.**:
                                             """)).buildGrayInText()
@@ -310,9 +308,8 @@ struct Prikaz1030Alg18View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {

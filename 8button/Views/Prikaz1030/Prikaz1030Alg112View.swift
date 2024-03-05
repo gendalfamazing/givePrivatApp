@@ -142,7 +142,7 @@ struct Prikaz1030Alg12View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing:5){
+                            VStack {
                                 MyViewBuilder(title: Text("12"), content: Text("""
                         **Признаки кардиогенного шока**:
                         """)).buildGrayInText()
@@ -152,6 +152,7 @@ struct Prikaz1030Alg12View: View {
                                         }
                                     }
                                 if isTextExpanded71 {
+                                    Spacer(minLength: 1)
                                     MyViewBuilder(title: Text("12"), content: Text("""
                                 - нарушение сознания;
                                 - бледность и влажность кожных покровов;
@@ -203,7 +204,7 @@ struct Prikaz1030Alg12View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                     }

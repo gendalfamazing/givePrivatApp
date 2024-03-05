@@ -33,32 +33,22 @@ struct Prikaz1030Alg23View: View {
             ScrollView {
                 Spacer()
                 VStack{
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("23"), content: Text("""
-                    **Симптомы**:
-                    """)).buildGrayInText()
-                            MyViewBuilder(title: Text("23"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Симптомы**:"), content: Text("""
                     - одышка **экспираторного** характера с участием
                     вспомогательной мускулатуры;
                     - кашель **приступообразного** характера, иногда с отхождением вязкой мокроты;
                     - **вынужденное положение** - «сидячее».
-                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                    """)).buildGrayInAndHiddenBlock()
+                       
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
-                            MyViewBuilder(title: Text("23"), content: Text("""
-                    **Оценить физикальные симптомы**.
-                    """)).buildGrayInText()
-                            MyViewBuilder(title: Text("23"), content: Text("""
+                            MyViewBuilder(title: Text("**Оценить физикальные симптомы**."), content: Text("""
                             **При аускультации**: диффузные, **сухие**, **свистящие хрипы**, реже разнокалиберные, влажные хрипы (характерны у детей).
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                             
                             HStack{
                                 MyViewBuilder(title: Text("23"), content: Text("""
@@ -95,7 +85,7 @@ struct Prikaz1030Alg23View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             HStack{
                                 MyViewBuilder(title: Text("23"), content: Text("""
                         **Тяжёлая степень**
@@ -131,10 +121,10 @@ struct Prikaz1030Alg23View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
+                        
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -204,12 +194,11 @@ struct Prikaz1030Alg23View: View {
                             VStack {
                                 MyViewBuilder(title: Text("23"), content: Text("""
                         **Нарушение сознания, тахи- или брадипное, пародоксальное дыхание, «немое легкое», ЧСС менее 60, SpO2 менее 88%**
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg77View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Алгоритм 77 «Респираторная поддержка»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("1"), content: Text("Алгоритм 77 «Респираторная поддержка»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
                         }
                         Image(systemName: "arrow.down")
                            

@@ -68,7 +68,7 @@ struct Prikaz1030Alg8View: View {
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("7"), content: Text("""
                             **Электрическая актиность появилась**:
                             """)).buildGrayInText()
@@ -96,7 +96,7 @@ struct Prikaz1030Alg8View: View {
                                         }
                                     }
                                 
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                         }
                     }
                     if isTextExpanded {

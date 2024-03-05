@@ -38,16 +38,14 @@ struct Prikaz1030Alg24View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
-                            MyViewBuilder(title: Text("24"), content: Text("""
-                    **Симптомы**:
-                    """)).buildGrayInText()
-                            MyViewBuilder(title: Text("24"), content: Text("""
+                            
+                            MyViewBuilder(title: Text("**Симптомы**:"), content: Text("""
                             - появившийся или усилившийся кашель;
                             - одышка;
                             - боль в грудной клетке, связанная с дыханием;
                             - наличие мокроты (слизисто–гнойной или гнойной);
                             - лихорадка более 38°С.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                             HStack{
                                 MyViewBuilder(title: Text("24"), content: Text("""
                         **Менее 3 симптомов**
@@ -114,10 +112,10 @@ struct Prikaz1030Alg24View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
+                        
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
@@ -132,19 +130,17 @@ struct Prikaz1030Alg24View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                MyViewBuilder(title: Text("24"), content: Text("""
-                        **Оценить физикальные симптомы**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("24"), content: Text("""
+                                
+                                MyViewBuilder(title: Text("**Оценить физикальные симптомы**:"), content: Text("""
                                 - влажные хрипы при аускультации легких;
                                 - признаки уплотнения легочной ткани;
                                 - бронхиальное дыхание;
                                 - укорочение перкуторного звука;
                                 - ослабление дыхания на ограниченном участке.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 HStack{
                                     MyViewBuilder(title: Text("24"), content: Text("""
-                            Нет **ни одного симптома**
+                            **Нет ни одного симптома**
                             """)).buildGreen1Text(isTextExpanded: isTextExpanded3)
                                         .onTapGesture {
                                             withAnimation (.snappy) {
@@ -197,9 +193,8 @@ struct Prikaz1030Alg24View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {
@@ -272,32 +267,24 @@ struct Prikaz1030Alg24View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                                 
                             }
-                            .padding(5)
                         }
                         //
                         if isTextExpanded5 {
                             Image(systemName: "arrow.down")
                                
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("24"), content: Text("""
-                                **Симптомы**:
-                                """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("24"), content: Text("""
+                            
+                                    MyViewBuilder(title: Text("**Симптомы**:"), content: Text("""
                                         - **t до 38°С**;
                                         - **ЧДД до 25** в 1 мин;
                                         - **ЧСС до 90** в 1 мин;
                                         - АД норма;
                                         - нет нарушения сознания;
                                         - интоксикация не выражена.
-                                        """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                        """)).buildGrayInAndHiddenBlock()
+                             
                             Image(systemName: "arrow.down")
                                
                             ZStack {
@@ -364,9 +351,8 @@ struct Prikaz1030Alg24View: View {
                                                 }
                                             }
                                         
-                                    }
+                                    }.padding(5).padding(.top, -10)
                                 }
-                                .padding(5)
                             }
                             
                             
@@ -381,24 +367,16 @@ struct Prikaz1030Alg24View: View {
                             }
                             if isTextExpanded9 {
                                 Image(systemName: "arrow.down")
-                                   
-                                ZStack {
-                                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                    VStack {
-                                        MyViewBuilder(title: Text("24"), content: Text("""
-                                    **Медицинская помощь**:
-                                    """)).buildGrayInText()
-                                        MyViewBuilder(title: Text("24"), content: Text("""
+                                
+                                        MyViewBuilder(title: Text("**Медицинская помощь**:"), content: Text("""
                                     - **оксигенотерапия** (4-6 литров в мин);
                                     - **жаропонижающие и обезболивающие** препараты (по показаниям);
                                     - **бронходилятаторы** (по показаниям);
                                     - при сохраняющейся тенденции к снижению АД – **декстран/натрия хлорида 400,0** в/в капельно;
                                     - лечение сопутствующих заболеваний (по показаниям);
                                     - **цефтриаксон 1,0 в/в или в/м (при отсутствии противопоказаний и стабильной гемодинамике)**.
-                                    """)).buildGrayInHiddenText()
-                                    }
-                                    .padding(5)
-                                }
+                                    """)).buildGrayInAndHiddenBlock()
+                                 
                                 Image(systemName: "arrow.down")
                                    
                                 MyViewBuilder(title: Text("24"), content: Text("""
@@ -409,42 +387,27 @@ struct Prikaz1030Alg24View: View {
                         if isTextExpanded6 {
                             Image(systemName: "arrow.down")
                                
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("24"), content: Text("""
-                                **Симптомы**:
-                                """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("24"), content: Text("""
+                                    MyViewBuilder(title: Text("**Симптомы**:"), content: Text("""
                                         - **t до 38°С - 39°С**;
                                         - **ЧД до 25-30** в 1 мин;
                                         - **ЧСС до 90-125** в 1 мин;
                                         - **снижение САД до 100 мм.рт.ст.**;
                                         - нет нарушения сознания;
                                         - **умеренно выражена интоксикация**.
-                                        """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                        """)).buildGrayInAndHiddenBlock()
+                                
                             Image(systemName: "arrow.down")
                                
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("24"), content: Text("""
-                                **Медицинская помощь**:
-                                """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("24"), content: Text("""
+                            
+                                    MyViewBuilder(title: Text("**Медицинская помощь**:"), content: Text("""
                                 - **оксигенотерапия** (4-6 литров в мин);
                                 - **жаропонижающие и обезболивающие** препараты (по показаниям);
                                 - **бронходилятаторы** (по показаниям);
                                 - при сохраняющейся тенденции к снижению АД – **декстран/натрия хлорида 400,0** в/в капельно;
                                 - лечение сопутствующих заболеваний (по показаниям);
                                 - **цефтриаксон 1,0 в/в или в/м (при отсутствии противопоказаний и стабильной гемодинамике)**.
-                                """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                """)).buildGrayInAndHiddenBlock()
+                               
                             Image(systemName: "arrow.down")
                                
                             MyViewBuilder(title: Text("24"), content: Text("""
@@ -453,14 +416,8 @@ struct Prikaz1030Alg24View: View {
                         }
                         if isTextExpanded7 {
                             Image(systemName: "arrow.down")
-                               
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("24"), content: Text("""
-                                **Симптомы**:
-                                """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("24"), content: Text("""
+                            
+                                    MyViewBuilder(title: Text("**Симптомы**:"), content: Text("""
                                         - **t более 39°С**;
                                         - **ЧД более 30** в 1мин;
                                         - **ЧСС более 125** в 1мин;
@@ -468,29 +425,19 @@ struct Prikaz1030Alg24View: View {
                                         - **ДАД менее 60 мм.рт.ст.**;
                                         - **нарушения сознания**;
                                         - **выраженная интоксикация**.
-                                        """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
-                            Image(systemName: "arrow.down")
+                                        """)).buildGrayInAndHiddenBlock()
                                
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("24"), content: Text("""
-                                **Медицинская помощь**:
-                                """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("24"), content: Text("""
+                            Image(systemName: "arrow.down")
+                             
+                                    MyViewBuilder(title: Text("**Медицинская помощь**:"), content: Text("""
                                         - **инфузионная терапия** – **400 мл 0,9 % раствора натрия хлорида** в/в (быстро), затем **400 мл декстран/натрия хлорид** в/в (быстро);
                                         - **вазопрессорные амины до достижения САД 90-100 мм.рт.ст.**– **5мл 4% раствора дофамина в 200,0 мл 0,9% раствора натрия хлорида** (4-10 капель в 1 мин);
                                         - лечение сопутствующих заболеваний (по показаниям);
                                         - постоянный контроль функции дыхания и гемодинамики;
                                         - **транспортировка в стационар бригадой СМП, оснащенной аппаратом ИВЛ**;
                                         - **цефтриаксон 1,0 в/в или в/м (при отсутствии противопоказаний и стабильной гемодинамике)**.
-                                        """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                        """)).buildGrayInAndHiddenBlock()
+                              
                             Image(systemName: "arrow.down")
                                
                             MyViewBuilder(title: Text("24"), content: Text("""

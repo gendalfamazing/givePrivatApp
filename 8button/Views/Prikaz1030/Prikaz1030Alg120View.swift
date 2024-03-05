@@ -35,20 +35,16 @@ struct Prikaz1030Alg20View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("20"), content: Text("""
                     **Провести обследование пациента**
-                    """)).buildGrayInText()
-                        }
-                        .padding(5)
-                    }
+                    """)).buildGrayTextCenter()
+                        
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("19"), content: Text("""
                     **При присоединении клинических признаков гиповолемического шока**:
                     """)).buildGrayInText()
@@ -59,6 +55,7 @@ struct Prikaz1030Alg20View: View {
                                     }
                                 }
                             if isTextExpanded71 {
+                                Spacer(minLength: 1)
                                 MyViewBuilder(title: Text("19"), content: Text("""
                     - холодная, бледная, влажная кожа;
                     - САД менее 90 мм рт. ст.,
@@ -122,10 +119,8 @@ struct Prikaz1030Alg20View: View {
                                             }
                                         }
                                     }
-                            }
-                            
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")

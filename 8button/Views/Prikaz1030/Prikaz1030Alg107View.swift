@@ -52,8 +52,6 @@ struct Prikaz1030Alg7View: View {
                     Image(systemName: "arrow.down")
                         
                     
-                    
-                    
                     MyViewBuilder(title: Text("7"), content: Text("""
                     **Искать устранимую причину и попытаться её купировать**:
                     - **гипоксия** (оксигенотерапия под контролем SpO2);

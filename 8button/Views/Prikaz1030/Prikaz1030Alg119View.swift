@@ -50,7 +50,7 @@ struct Prikaz1030Alg19View: View {
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("""
                                                       **Дифференциальный диагноз**:
                                                       """),
@@ -62,6 +62,7 @@ struct Prikaz1030Alg19View: View {
                                                         - острый инфаркт миокарда;
                                                         - острый коронарный синдром.
                                                         """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                            Spacer(minLength: 1)
                             MyViewBuilder(title: Text("19"), content: Text("""
                             **Признаки гиповолемического шока**:
                             """)).buildGrayInText()
@@ -91,9 +92,8 @@ struct Prikaz1030Alg19View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")

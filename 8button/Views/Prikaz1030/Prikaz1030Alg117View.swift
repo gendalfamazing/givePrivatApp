@@ -83,10 +83,9 @@ struct Prikaz1030Alg17View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -110,7 +109,7 @@ struct Prikaz1030Alg17View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("17"), content: Text("""
                         **САД менее 90 мм.рт.ст.**:
                         """)).buildGrayInText()
@@ -139,9 +138,8 @@ struct Prikaz1030Alg17View: View {
                                         }
                                     
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         if isTextExpanded2{
                             Image(systemName: "arrow.down")

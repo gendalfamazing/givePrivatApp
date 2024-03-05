@@ -35,10 +35,11 @@ struct Prikaz1030Alg11View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("11"), content: Text("""
                     **Анамнез, осмотр, установка периферического катера (контроль вены), контроль АД, ритма, ЭКГ, пульсоксиметрия**
                     """)).buildGrayInText()
+                            Spacer(minLength: 1)
                             MyViewBuilder(title: Text("11"), content: Text("""
                     **Стабильное состояние пациента**:
                     """)).buildGrayInText()
@@ -87,7 +88,7 @@ struct Prikaz1030Alg11View: View {
                                             }
                                         }
                                     }
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }
@@ -140,7 +141,7 @@ struct Prikaz1030Alg11View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -247,7 +248,7 @@ struct Prikaz1030Alg11View: View {
                                             }
                                         }
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -256,7 +257,7 @@ struct Prikaz1030Alg11View: View {
                                
                             ZStack {
                                 MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack (spacing: 5){
+                                VStack {
                                     MyViewBuilder(title: Text("10"), content: Text("""
                             **Амиодарон 5 % – 6 мл в/в болюсно**, можно **повторно 3 мл через 15 минут** при отсутствии эффекта
                             """)).buildGrayInHiddenText().padding(.top, 5.0)
@@ -291,8 +292,7 @@ struct Prikaz1030Alg11View: View {
                                                 }
                                             }
                                         
-                                    }
-                                    .padding(5)
+                                    }.padding(5).padding(.top, -10)
                                 }
                             }
                             

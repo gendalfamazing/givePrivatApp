@@ -95,25 +95,24 @@ struct Prikaz1030Alg22View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("22"), content: Text("""
-                        **Провести оценку**:
                         
+                                MyViewBuilder(title: Text("**Провести оценку**:"), content: Text("""
                         - сознания по шкале Глазго;
                         - АД, ЧСС, ЧДД;
                         - ЭКГ.
                         - Неврологический осмотр
                         - Глюкометрия.
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInAndHiddenBlock()
+                        Image(systemName: "arrow.down")
+                        ZStack {
+                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            VStack {
                                 MyViewBuilder(title: Text("22"), content: Text("""
                                 **Гипогликемия**:
                                 """)).buildGrayInText()
@@ -175,9 +174,8 @@ struct Prikaz1030Alg22View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded2{
@@ -268,9 +266,8 @@ struct Prikaz1030Alg22View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {
@@ -281,7 +278,7 @@ struct Prikaz1030Alg22View: View {
                             VStack {
                                 MyViewBuilder(title: Text("22"), content: Text("""
                         **См. алгоритмы в зависимости от вида нарушения ритма**
-                        """)).buildGrayInText()
+                        """)).buildGrayInText().padding(.horizontal, -5)
                                 NavigationLink (destination: Prikaz1030Alg6View()) {
                                     MyViewBuilder(title: Text("22"), content: Text("Алгоритм 6 «Фибрилляция желудочков (ФЖ), желудочковая тахикардия (ЖТ) с острой сердечной недостаточностью»")).buildNavigationText()
                                 }
@@ -362,10 +359,8 @@ struct Prikaz1030Alg22View: View {
                                                 
                                             }
                                         }
-                                }
-                                
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded7 {

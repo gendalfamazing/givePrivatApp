@@ -39,6 +39,7 @@ struct Prikaz1030Alg6View: View {
                             }
                             MyViewBuilder(title: Text("6"), content: Text("При **ФЖ/ЖТ** - дефибриляция **200 Дж**, затем **300**, **360 Дж** или **120 Дж**, затем **150**, **200 Дж бифазным дефибриллятором**")).buildGrayInHiddenText()
                             MyViewBuilder(title: Text("6"), content: Text("**Достигнут определенный эффект**")).buildGrayInText()
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("6"), content: Text("**Да**")).buildGreen1Text(isTextExpanded: isTextExpanded)
                                     .onTapGesture {
@@ -88,7 +89,7 @@ struct Prikaz1030Alg6View: View {
                                             }
                                         }
                                     }
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }
@@ -196,7 +197,7 @@ struct Prikaz1030Alg6View: View {
                     
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("6"), content: Text("""
                                 **Ритм стабилизирован**:
                                 """)).buildGrayInText()
@@ -223,7 +224,7 @@ struct Prikaz1030Alg6View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                         if isTextExpanded5 {

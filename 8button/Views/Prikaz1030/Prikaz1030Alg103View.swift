@@ -47,7 +47,7 @@ struct Prikaz1030Alg3View: View {
                             MyViewBuilder(title: Text("3"), content: Text("**Катетеризация периферической** (при необходимости центральной) **вены. ЭКГ-мониторинг. Оценка АД. Аускультация лёгких.**")).buildGrayInHiddenText()
                             
                             NavigationLink (destination: Prikaz1030Alg77View()) {
-                                MyViewBuilder(title: Text("3"), content: Text("Алгоритм 77 «Респираторная поддержка»")).buildNavigationText()
+                                MyViewBuilder(title: Text("3"), content: Text("Алгоритм 77 «Респираторная поддержка»")).buildNavigationText().padding(5)
                             }
                         }
                     }

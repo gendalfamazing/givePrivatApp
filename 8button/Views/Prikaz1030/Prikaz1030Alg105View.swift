@@ -143,7 +143,7 @@ struct Prikaz1030Alg5View: View {
                         **Цифры САД больше 90 мм.рт.ст.**
                         """)).buildGrayInText()
                             
-                            
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("5"), content: Text("**Да**")).buildGreen1Text(isTextExpanded: isTextExpanded5)
                                     .onTapGesture {
@@ -164,7 +164,7 @@ struct Prikaz1030Alg5View: View {
                                         }
                                     }
                                 
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                         }
                     }
                     if isTextExpanded4 {

@@ -46,7 +46,7 @@ struct Prikaz1030Alg2View: View {
             VStack {
                 ZStack {
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                    VStack (spacing: 1){
+                    VStack {
                         MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                     **Проходимость дыхательных путей**:
                                     """)
@@ -131,7 +131,7 @@ struct Prikaz1030Alg2View: View {
                                 }
                             
                             
-                        }.padding(5)
+                        }.padding(5).padding(.top, -10)
                     }
                 }
                 if isTextExpanded2 {
@@ -177,7 +177,7 @@ struct Prikaz1030Alg2View: View {
                                         }
                                     }
                             }
-                            
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**Присутствуют**")).buildGreen1Text(isTextExpanded: isTextExpanded5)
                                     .onTapGesture {
@@ -261,7 +261,7 @@ struct Prikaz1030Alg2View: View {
                                             }
                                         }
                                     }
-                            }.padding(5)
+                            }.padding(5).padding(.top, -10)
                         }
                     }
                 }
@@ -316,7 +316,7 @@ struct Prikaz1030Alg2View: View {
                                         }
                                     }
                             }
-                            
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**Присутствуют**")).buildGreen1Text(isTextExpanded: isTextExpanded8)
                                     .onTapGesture {
@@ -381,7 +381,7 @@ struct Prikaz1030Alg2View: View {
                                             
                                         }
                                     }
-                            }.padding(5)
+                            }.padding(5).padding(.top, -10)
                         }
                     }
                 }
@@ -434,7 +434,7 @@ struct Prikaz1030Alg2View: View {
                                         }
                                     }
                             }
-                            
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**Присутствуют**")).buildGreen1Text(isTextExpanded: isTextExpanded11)
                                     .onTapGesture {
@@ -480,7 +480,7 @@ struct Prikaz1030Alg2View: View {
                                             }
                                         }
                                     }
-                            }.padding(5)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }
@@ -501,7 +501,7 @@ struct Prikaz1030Alg2View: View {
                     
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack(spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("dfdfdf"), content: Text("""
                                     **Травмы различного генеза**:
                                     """)
@@ -527,7 +527,7 @@ struct Prikaz1030Alg2View: View {
                                             }
                                         }
                                     }
-                            }.padding(5)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }

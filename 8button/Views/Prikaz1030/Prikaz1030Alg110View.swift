@@ -32,10 +32,11 @@ struct Prikaz1030Alg10View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("10"), content: Text("""
                     **Анамнез, осмотр, контроль АД, ЭКГ**
                     """)).buildGrayInText()
+                            Spacer(minLength: 1)
                             MyViewBuilder(title: Text("10"), content: Text("""
                     **Стабильное состояние пациента**:
                     """)).buildGrayInText()
@@ -84,7 +85,7 @@ struct Prikaz1030Alg10View: View {
                                             }
                                         }
                                     }
-                            }.padding(5.0)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }
@@ -98,7 +99,7 @@ struct Prikaz1030Alg10View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("10"), content: Text("""
                         **Оценка проводимой терапии.**
                         Контроль ЭКГ, пульса и АД.
@@ -138,7 +139,7 @@ struct Prikaz1030Alg10View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -183,7 +184,7 @@ struct Prikaz1030Alg10View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }

@@ -38,11 +38,10 @@ struct Prikaz1030Alg15View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack (spacing: 1){
+                        VStack {
                             MyViewBuilder(title: Text("15"), content: Text("""
                     **Ангинозный приступ**
                     """)).buildGrayInText()
-                            
                             
                             HStack {
                                 MyViewBuilder(title: Text("15"), content: Text("""
@@ -152,7 +151,7 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     }
-                            }.padding(5)
+                            }.padding(5).padding(.top, -10)
                             
                         }
                     }
@@ -161,7 +160,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("15"), content: Text("""
                         **Аналогичные приступы возникали ранее**:
                         """)).buildGrayInText()
@@ -172,6 +171,7 @@ struct Prikaz1030Alg15View: View {
                                         }
                                     }
                                 if isTextExpanded71{
+                                    Spacer(minLength: 1)
                                     MyViewBuilder(title: Text("15"), content: Text("""
                                 - **при физической нагрузке** (быстрой ходьбе, подъеме на этаж),
                                 - **купировались остановкой и (или) приемом нитроглицерина** (до 2-3 минут),
@@ -249,7 +249,7 @@ struct Prikaz1030Alg15View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                     }
@@ -274,7 +274,7 @@ struct Prikaz1030Alg15View: View {
                         
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("15"), content: Text("""
                                 **Норма или отсутствие отрицательной динамики**:
                                 """)).buildGrayInText()
@@ -309,7 +309,7 @@ struct Prikaz1030Alg15View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                         
@@ -319,7 +319,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("15"), content: Text("""
                         **Подъем сегмента ST**, остро возникшая **ПБЛНПГ** или **Депрессия ST, отрицательный зубец Т** и (или) **появление патологического зубца Q**
                         """)).buildGrayInText()
@@ -391,7 +391,7 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                                 
                             }
                         }
@@ -475,7 +475,7 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                         
@@ -485,7 +485,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("15"), content: Text("""
                             **Провести дифференциальную диагностику**:
                             """)).buildGrayInText()
@@ -496,6 +496,7 @@ struct Prikaz1030Alg15View: View {
                                         }
                                     }
                                 if isTextExpanded72 {
+                                    Spacer(minLength: 1)
                                     MyViewBuilder(title: Text("15"), content: Text("""
                                     - расслаивающей аневризмой аорты;
                                     - ТЭЛА;
@@ -547,7 +548,7 @@ struct Prikaz1030Alg15View: View {
                                                 }
                                             }
                                         }
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                         
@@ -557,7 +558,7 @@ struct Prikaz1030Alg15View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack (spacing: 1){
+                            VStack {
                                 MyViewBuilder(title: Text("15"), content: Text("""
                         **Оценить противопоказания к ТЛТ**:
                         """)).buildGrayInText()
@@ -568,6 +569,7 @@ struct Prikaz1030Alg15View: View {
                                         }
                                     }
                                 if isTextExpanded73{
+                                    Spacer(minLength: 1)
                                     MyViewBuilder(title: Text("15"), content: Text("""
                                 - внутренние кровотечения, оперативные вмешательства, травмы **(до 14 дней)**;
                                 - ОНМК, травмы, оперативные вмешательства на головном мозге **(в течение года)**;
@@ -624,7 +626,7 @@ struct Prikaz1030Alg15View: View {
                                             }
                                         }
                                     
-                                }.padding(5.0)
+                                }.padding(5).padding(.top, -10)
                             }
                         }
                     }
