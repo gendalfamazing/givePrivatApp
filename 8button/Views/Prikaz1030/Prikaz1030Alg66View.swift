@@ -137,49 +137,30 @@ struct Prikaz1030Alg66View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("66"), content: Text("""
-                                **Проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("66"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Проявления**:"), content: Text("""
                                 - Дефект тканей и кровотечение
                                 - Гематома без кровотечения
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("66"), content: Text("""
-                                **Проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("66"), content: Text("""
+                          
+                                MyViewBuilder(title: Text("**Проявления**:"), content: Text("""
                                 - Нет признаков кровотечения
                                 - Признаки внутреннего кровотечения
                                 - Признаки наружного кровотечения
                                 
                                 При присоединении признаков **гиповолемического шока**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded3{
                         
@@ -204,23 +185,13 @@ struct Prikaz1030Alg66View: View {
                     }
                     if isTextExpanded10{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("66"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("66"), content: Text("""
+                          
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **При болевом синдроме**:
                                 - в/в **2 мл 50% раствора метамизола** или **1-2 мл 2% раствора тримеперидина**, или **кеторолак 10-30 мг**.
                                 2. **Т-образная повязка** на промежность.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -303,9 +274,8 @@ struct Prikaz1030Alg66View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded11{

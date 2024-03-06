@@ -41,12 +41,10 @@ struct Prikaz1030Alg65View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
-                            
                             MyViewBuilder(title: Text("65"), content: Text("""
                             **Период после родов**:
                             """)).buildGrayInText()
                             HStack {
-                                
                                 MyViewBuilder(title: Text("65"), content: Text("""
                             **Ранний послеродовый период (до 24ч.)**
                             """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
@@ -160,35 +158,23 @@ struct Prikaz1030Alg65View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("65"), content: Text("""
-                                **Кровопотеря более 350 мл**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("65"), content: Text("""
+                                MyViewBuilder(title: Text("**Кровопотеря более 350 мл**:"), content: Text("""
                                 - определение АД,
                                 - пульсометрия.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                
                                 MyViewBuilder(title: Text("65"), content: Text("""
                                 **Послед отделился**:
                                 """)).buildGrayInText()
@@ -298,9 +284,8 @@ struct Prikaz1030Alg65View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -344,9 +329,8 @@ struct Prikaz1030Alg65View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3{
@@ -355,7 +339,6 @@ struct Prikaz1030Alg65View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                
                                 MyViewBuilder(title: Text("65"), content: Text("""
                                 **Матка**:
                                 """)).buildGrayInText()
@@ -460,9 +443,8 @@ struct Prikaz1030Alg65View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded4{
@@ -472,14 +454,10 @@ struct Prikaz1030Alg65View: View {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
                                 
-                                MyViewBuilder(title: Text("65"), content: Text("""
-                                **Есть признаки отделения**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("65"), content: Text("""
+                                MyViewBuilder(title: Text("**Есть признаки отделения**:"), content: Text("""
                                 - при надавливании над лоном **наружный отрезок пуповины не втягивается**.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 HStack {
-                                    
                                     MyViewBuilder(title: Text("65"), content: Text("""
                                 **Да**
                                 """)).buildGreen1Text(isTextExpanded: isTextExpanded7)
@@ -569,9 +547,8 @@ struct Prikaz1030Alg65View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5{
@@ -579,22 +556,12 @@ struct Prikaz1030Alg65View: View {
                     }
                     if isTextExpanded6{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("65"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("65"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - в/в **окситоцин 5-10 ЕД в 5% растворе глюкозы**,
                                 - **0,9% раствор натрия хлорида 250-500 мл**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded7{
                         
@@ -693,9 +660,8 @@ struct Prikaz1030Alg65View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded9{
@@ -709,19 +675,16 @@ struct Prikaz1030Alg65View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("65"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("65"), content: Text("""
+                            VStack (spacing:1){
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Вывести мочу катетером**;
                                 2. В/в **окситоцин 5-10 ЕД в 5% растворе глюкозы**, **0,9% раствор натрия хлорида 250-500 мл**;
                                 3. **Выделить послед наружными приемами**.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 MyViewBuilder(title: Text("65"), content: Text("""
                                 **Эффект от наружных приемов**:
                                 """)).buildGrayInText()
+                                Spacer(minLength: 5)
                                 HStack {
                                     
                                     MyViewBuilder(title: Text("65"), content: Text("""
@@ -789,9 +752,8 @@ struct Prikaz1030Alg65View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded11{

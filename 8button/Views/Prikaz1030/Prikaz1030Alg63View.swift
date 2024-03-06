@@ -73,31 +73,20 @@ struct Prikaz1030Alg63View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("63"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("63"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - скованность
                                 - тремор
                                 - беспокойство
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("63"), content: Text("""
@@ -111,22 +100,12 @@ struct Prikaz1030Alg63View: View {
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("63"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("63"), content: Text("""
+                          
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - заболевания НС
                                 - делирий
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("63"), content: Text("""

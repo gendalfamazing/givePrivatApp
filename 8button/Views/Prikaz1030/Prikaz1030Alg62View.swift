@@ -39,48 +39,26 @@ struct Prikaz1030Alg62View: View {
                 Spacer()
                 VStack {
                     
-                    
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("62"), content: Text("""
-                            **Симптомы психоза**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("62"), content: Text("""
+                            MyViewBuilder(title: Text("**Симптомы психоза**:"), content: Text("""
                             - бред
                             - галлюциинации
                             - возбуждение
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("62"), content: Text("""
-                            **Мероприятия первого этапа**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("62"), content: Text("""
+                      
+                            MyViewBuilder(title: Text("**Мероприятия первого этапа**:"), content: Text("""
                             - обеспечение безопасности больного и окружающих
                             - создание спокойной обстановки
                             - налаживание контакта с пациентом
                             - получение согласия на добровольную госпитализацию
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
-                            
                             MyViewBuilder(title: Text("62"), content: Text("""
                             **Оценка соматического состояния пациента**:
                             """)).buildGrayInText()
@@ -112,10 +90,8 @@ struct Prikaz1030Alg62View: View {
                                         }
                                     }
                                 
-                            }
-                            
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{

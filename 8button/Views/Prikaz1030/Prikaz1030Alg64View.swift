@@ -38,14 +38,8 @@ struct Prikaz1030Alg64View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("64"), content: Text("""
-                            **Клинические признаки**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("64"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                             - слабость и головокружение;
                             - бледность кожных покровов и конъюнктивы глаз;
                             - частый, мягкий пульс, слабого наполнения, снижение АД.
@@ -55,59 +49,28 @@ struct Prikaz1030Alg64View: View {
                             - рвота **«кофейной гущей»**;
                             - **мелена**;
                             - **сгустки крови или ярко-красная кровь в кале**.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("64"), content: Text("""
-                            **Наличие в анамнезе следующих заболеваний**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("64"), content: Text("""
+                      
+                            MyViewBuilder(title: Text("**Наличие в анамнезе следующих заболеваний**:"), content: Text("""
                             - **язвенная болезнь желудка** и двенадцатиперстной кишки;
                             - **острые язвы и эрозии ЖКТ**;
                             - **синдром Маллори — Вейсса**;
                             - **варикозно расширенные вены пищевода**;
                             - **перианальные заболевания** (геморрой, анальные трещины, выпадение ануса), **колоректальные полипы, рак, язвенный колит** или неустановленный источник.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
-                    
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("64"), content: Text("""
-                            **Диагностические мероприятия**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("64"), content: Text("""
+                      
+                            MyViewBuilder(title: Text("**Диагностические мероприятия**:"), content: Text("""
                             - **пальцевое исследование прямой кишки при отсутствии явных объективных признаков кровотечения**;
                             - ЭКГ.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("64"), content: Text("""
-                            **Неотложная помощь**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("64"), content: Text("""
+                      
+                            MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                             1. **В/в инфузия**:
                             - **декстрана/натрия хлорида**, или
                             - **10% раствора гидросиэтилкрахмала**, или
@@ -118,27 +81,17 @@ struct Prikaz1030Alg64View: View {
                             - **оксигенотерапия**;
                             - **«холод» на живот**.
                             3. При пищеводном кровотечении **ввести зонд Блекмора**.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
-                    Image(systemName: "arrow.down")
+                            """)).buildGrayInAndHiddenBlock()
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
+                    Image(systemName: "arrow.down")
+                    
                             MyViewBuilder(title: Text("64"), content: Text("""
                             **Строгий носилочный режим**.
                             **При коллапсе** – транспортировка в положении **Тренделенбурга**.
                             **Запрещается прием пищи и воды**.
                             **Доставка в стационар** по профилю заболевания.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayText()
+                      
                     
                 }
                 .textSelection(.enabled)

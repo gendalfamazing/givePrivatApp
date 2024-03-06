@@ -125,7 +125,7 @@ struct Prikaz1030Alg60View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
                                 MyViewBuilder(title: Text("60"), content: Text("""
                                 **При судородах**:

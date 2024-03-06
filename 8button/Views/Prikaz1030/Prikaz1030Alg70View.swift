@@ -38,38 +38,19 @@ struct Prikaz1030Alg70View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("70"), content: Text("""
-                            **Анамнез и осмотр**:
-                            """)).buildGrayInText()
-                            
-                            MyViewBuilder(title: Text("70"), content: Text("""
+                            MyViewBuilder(title: Text("**Анамнез и осмотр**:"), content: Text("""
                             - боль в области носа и околоносовых пазухах;
                             - кровотечение;
                             - при пальпации крепитация;
                             - затруднение носового дыхания; 
                             - деформация наружного носа;
                             - подкожная эмфизема, гематома.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("70"), content: Text("""
-                            **Неотложная помощь**:
-                            """)).buildGrayInText()
-                            
-                            MyViewBuilder(title: Text("70"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                             1. При **выраженном болевом синдроме**:
                             - **метамизол 50% раствор 2 мл** в/в или
                             - **тримеперидин 1% 1 мл** п/к (или в/м) или
@@ -77,11 +58,8 @@ struct Prikaz1030Alg70View: View {
                             2. **Остановка носового кровотечения путем передней тампонады с 3% раствором перекиси водорода**.
                             3. Местно **«холод»**.
                             4. **При наличии раны наружного носа** (лица) промывание **3% перекисью водорода**, обработка кожи вокруг раны **5% раствором йода**.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
                        
                     MyViewBuilder(title: Text("70"), content: Text("""

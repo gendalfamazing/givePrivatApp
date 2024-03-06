@@ -38,22 +38,12 @@ struct Prikaz1030Alg67View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("67"), content: Text("""
-                            **Срок беременности**:
-                            """)).buildGrayInText()
-                            
-                            MyViewBuilder(title: Text("67"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Срок беременности**:"), content: Text("""
                             - Беременность недоношенная **22-36 недель**
                             - Беременность доношенная **37 недель и более**
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -276,7 +266,7 @@ struct Prikaz1030Alg67View: View {
                                 
                                 MyViewBuilder(title: Text("67"), content: Text("""
                                 **Признаки гиповолемического шока**:
-                                """)).buildGrayInText()
+                                """)).buildGrayInText().padding(-5)
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
                                     MyViewBuilder(title: Text("67"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
                                 }
@@ -286,62 +276,32 @@ struct Prikaz1030Alg67View: View {
                     }
                     if isTextExpanded5{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("67"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("67"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 При **CАД более 140 мм.рт.ст.**, признаках **тяжелого гестоза, преэклампсии, эклампсии** в/в:
                                 – **диазепам 1-2 мл 0,5%** раствора;
                                 – **дроперидол 2 мл 0,25%** раствора;
                                 – **магния сульфат 25% раствор 10 мл медленно**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     
                     if isTextExpanded9{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                         
                                 MyViewBuilder(title: Text("67"), content: Text("""
                                 - **предлежащая часть плода в полости таза, на тазовом дне, врезывается, прорезывается**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayText()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("67"), content: Text("""
-                                **Потуги 1-2 мин через 50-60 секунд**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("67"), content: Text("""
+                                MyViewBuilder(title: Text("**Потуги 1-2 мин через 50-60 секунд**:"), content: Text("""
                                 - завершение родов **на месте прибытия**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("67"), content: Text("""
-                                **Оказание пособия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("67"), content: Text("""
+                                MyViewBuilder(title: Text("**Оказание пособия**:"), content: Text("""
                                 1. **Головное предлежание**:
                                 - выведение головки вне потуги;
                                 - выделение заднего и переднего плечика;
@@ -353,38 +313,22 @@ struct Prikaz1030Alg67View: View {
                                 - выведение одноименной рукой медработника ручки плода, всегда освобождают «заднюю» ручку у промежности;
                                 - наклонить туловище плода вниз, если передняя ручка не родилась: поворот туловища плода на 180° и выведение «задней» ручки;
                                 - выведение головки плода приемом Мориса-Левре, удалить слизь из носоглотки.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                          
                                 MyViewBuilder(title: Text("67"), content: Text("""
                                 При рождении ребенка наложить **два зажима на пуповину** на расстоянии **8-10 см** и **15-20 см** от пупочного кольца. Пуповину пересечь ножницами **между зажимами**, предварительно обработав место пересечения **5% спиртовым раствором иода**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayText()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("67"), content: Text("""
-                                **III период родов**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("67"), content: Text("""
+                                MyViewBuilder(title: Text("**III период родов**:"), content: Text("""
                                 - выведение мочи катетером;
                                 - родившийся послед доставить в акушерский стационар;
                                 - определение АД, пульса.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded10{
                         Image(systemName: "arrow.down")

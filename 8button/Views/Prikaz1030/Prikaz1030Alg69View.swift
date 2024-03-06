@@ -38,25 +38,14 @@ struct Prikaz1030Alg69View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("69"), content: Text("""
-                            **Анамнез**:
-                            """)).buildGrayInText()
-                            
-                            MyViewBuilder(title: Text("69"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Анамнез**:"), content: Text("""
                             - операция на ЛОР-органах
                             - травмы
                             - инородные тела
                             - опухоли
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
-                    
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -91,10 +80,9 @@ struct Prikaz1030Alg69View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")

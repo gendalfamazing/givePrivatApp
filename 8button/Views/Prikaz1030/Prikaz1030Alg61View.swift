@@ -38,16 +38,11 @@ struct Prikaz1030Alg61View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                   
                             MyViewBuilder(title: Text("61"), content: Text("""
                             **Освобождение шеи от петли**
-                            """)).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                        
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -95,9 +90,8 @@ struct Prikaz1030Alg61View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1 {
@@ -113,12 +107,9 @@ struct Prikaz1030Alg61View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
-                                MyViewBuilder(title: Text("61"), content: Text("""
-                                **Неоложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("61"), content: Text("""
+                                MyViewBuilder(title: Text("**Неоложная помощь**:"), content: Text("""
                                 1. **Восстановление и поддержание проходимости дыхательных путей** – **установка воздуховода** (интубационная трубка, ларингиальная маска, пищеводно-трахеальный обтуратор).
                                 2. **ИВЛ со 100% оксигенотерапией**.
                                 3. **Катетеризация периферической** (при необходимости центральной) **вены**.
@@ -128,12 +119,11 @@ struct Prikaz1030Alg61View: View {
                                 5. **Унитиол 5% раствор 1 мл/10 кг** массы тела в/в.
                                 6. **Преднизолон 60-90 мг** в/в;
                                 7. **При судорогах** алгоритм 29 «Судорожный синдром»
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg29View()) {
-                                    MyViewBuilder(title: Text("61"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("61"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
                         }
                         Image(systemName: "arrow.down")
                            

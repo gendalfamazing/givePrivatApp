@@ -38,41 +38,20 @@ struct Prikaz1030Alg68View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("68"), content: Text("""
-                            **Анамнез и осмотр**:
-                            """)).buildGrayInText()
-                            
-                            MyViewBuilder(title: Text("68"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Анамнез и осмотр**:"), content: Text("""
                             - боль при глотании
                             - повышение температуры тела
                             - затруднение дыхания
                             - вынужденное положение головы (у детей до 3-х лет).
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                          
                     Image(systemName: "arrow.down")
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("68"), content: Text("""
-                            **Диагностика**:
-                            """)).buildGrayInText()
-                            
-                            MyViewBuilder(title: Text("68"), content: Text("""
+                            MyViewBuilder(title: Text("**Диагностика**:"), content: Text("""
                             - фарингоскопия (**выпячивание задней стенки ротоглотки**, гиперемия слизистой)
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                          
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -107,10 +86,9 @@ struct Prikaz1030Alg68View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
