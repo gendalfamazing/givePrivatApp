@@ -38,74 +38,48 @@ struct Prikaz1030Alg77View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
                             MyViewBuilder(title: Text("77"), content: Text("""
                             **Анамнез и осмотр**
-                            """)).buildGrayInText()
-                        }
-                        .padding(5)
-                    }
-                    Image(systemName: "arrow.down")
+                            """)).buildGrayTextCenter()
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    Image(systemName: "arrow.down")
+                     
                             MyViewBuilder(title: Text("77"), content: Text("""
                             **Уровень сознания ≤ 8 баллов по шкале Глазго**
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                      
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                      
                             MyViewBuilder(title: Text("77"), content: Text("""
                             **Положение пациента на боку** (при отсутствии противопоказаний) или **на спине**
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                       
                     Image(systemName: "arrow.down")
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
                             MyViewBuilder(title: Text("77"), content: Text("""
                             **Тройной прием Сафара** (при отсутствии травмы шейного отдела позвоночника), **санация верхних дыхательных путей**
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                       
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             
-                            MyViewBuilder(title: Text("77"), content: Text("""
-                            **Клинические признаки неэффективной спонтанной вентиляции**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("77"), content: Text("""
+                            MyViewBuilder(title: Text("**Клинические признаки неэффективной спонтанной вентиляции**:"), content: Text("""
                             - тахипноэ (**более 35 в минуту**),
                             - брадипноэ (**менее 10 в минуту**),
                             - акроцианоз,
                             - апноэ.
-                            """)).buildGrayInHiddenText()
-                            MyViewBuilder(title: Text("77"), content: Text("""
-                            **Патологические состояния и заболевания**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("77"), content: Text("""
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                            MyViewBuilder(title: Text("**Патологические состояния и заболевания**:"), content: Text("""
                             - кома,
                             - черепно-мозговая травма тяжелой степени,
                             - тяжелые травмы грудной клетки,
                             - альвеолярный отек легких,
                             - шок различного генеза.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                            Spacer(minLength: 5)
                             HStack{
                                 MyViewBuilder(title: Text("77"), content: Text("""
                             **Совпадения есть**
@@ -130,26 +104,18 @@ struct Prikaz1030Alg77View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
+
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("77"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("77"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 **Установка воздуховода** (интубационная трубка, ларингиальная маска, пищеводно-трахеальный обтуратор) с последующей **ИВЛ мешком Амбу** (**подключение аппарата ИВЛ**).
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("77"), content: Text("""
@@ -160,18 +126,10 @@ struct Prikaz1030Alg77View: View {
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("77"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("77"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 **Установка воздуховода, ингаляция кислорода** (интубация трахеи для вспомогательной вентиляции легких кислородо-воздушной смесью).
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("77"), content: Text("""

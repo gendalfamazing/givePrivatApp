@@ -38,35 +38,24 @@ struct Prikaz1030Alg76View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("76"), content: Text("""
-                            **Анамнез и осмотр**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("76"), content: Text("""
+                            MyViewBuilder(title: Text("**Анамнез и осмотр**:"), content: Text("""
                             - мучительные позывы на мочеиспускание;
                             - беспокойство пациента, сильные боли в надлобковой области, ощущение распирания внизу живота;
                             - тупой звук над лобковой областью при перкуссии.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             
-                            MyViewBuilder(title: Text("76"), content: Text("""
-                            **Дополнительная информация**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("76"), content: Text("""
+                            MyViewBuilder(title: Text("**Дополнительная информация**:"), content: Text("""
                             - **наличие противопоказаний** к катетеризации мочевого пузыря *.
                             - **отсутствие восстановления самостоятельного мочеиспускания** после повторных катетеризаций мочевого пузыря.
                             - продолжительность острой задержки мочи **более 2 суток**.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                            Spacer(minLength: 5)
                             HStack{
                                 MyViewBuilder(title: Text("76"), content: Text("""
                             **Совпадения есть**
@@ -102,9 +91,8 @@ struct Prikaz1030Alg76View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{
@@ -121,7 +109,6 @@ struct Prikaz1030Alg76View: View {
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                
                                 MyViewBuilder(title: Text("76"), content: Text("""
                                 Катетеризация мочевого пузыря эластическим катетером (**не более двух попыток**)
                                 """)).buildGrayInText()
@@ -150,9 +137,8 @@ struct Prikaz1030Alg76View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -183,21 +169,14 @@ struct Prikaz1030Alg76View: View {
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("1"), content: Text("""
-                            **Примечание**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("1"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     * **Противопоказания к катетеризации**:
                                     - острый уретрит и эпидидимит (орхит),
                                     - острый простатит (абсцесс предстательной железы),
                                     - травма уретры.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                       
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

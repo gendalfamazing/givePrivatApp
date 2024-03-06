@@ -38,18 +38,10 @@ struct Prikaz1030Alg71View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
                             MyViewBuilder(title: Text("71"), content: Text("""
                             **Анамнез и осмотр**
-                            """)).buildGrayInText()
-                            
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                        
                     
                     Image(systemName: "arrow.down")
                        
@@ -85,28 +77,24 @@ struct Prikaz1030Alg71View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("71"), content: Text("""
                                 **Асептическая повязка на ухо**
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg39View()) {
-                                    MyViewBuilder(title: Text("71"), content: Text("Алгоритм 39 «Черепно-мозговая травма»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("71"), content: Text("Алгоритм 39 «Черепно-мозговая травма»")).buildNavigationText().padding(5)
                                 }
                                 
-                                
-                                
                             }
-                            .padding(5)
                         }
                         Image(systemName: "arrow.down")
                            

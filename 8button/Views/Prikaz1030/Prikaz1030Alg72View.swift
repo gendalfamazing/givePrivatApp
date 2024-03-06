@@ -38,18 +38,10 @@ struct Prikaz1030Alg72View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
                             MyViewBuilder(title: Text("72"), content: Text("""
                             **Анамнез и осмотр**
-                            """)).buildGrayInText()
-                            
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                        
                     
                     Image(systemName: "arrow.down")
                        
@@ -143,24 +135,14 @@ struct Prikaz1030Alg72View: View {
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("72"), content: Text("""
-                                **Неотложная помощь**
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("72"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**"), content: Text("""
                                 1. **Удалить поверхностно располагающиеся инородные тела**.
                                 2. **Наложить асептическую повязку**.
                                 3. **При болевом синдроме**:
                                 - **метамизол в/в 1-2 мл 50%** раствора или
                                 - **кеторолак 10-30 мг** в/в (или в/м).
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("72"), content: Text("""
@@ -170,21 +152,11 @@ struct Prikaz1030Alg72View: View {
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("72"), content: Text("""
-                                **Неотложная помощь**
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("72"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**"), content: Text("""
                                 - **инстилляции 2% раствора лидокаина**
                                 - рекомендовать водные примочки.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("72"), content: Text("""
@@ -194,23 +166,13 @@ struct Prikaz1030Alg72View: View {
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("72"), content: Text("""
-                                **Неотложная помощь**
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("72"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**"), content: Text("""
                                 1. **Метамизол в/в 1-2 мл 50% раствора** или **кеторолак 10-30 мг** в/в (или в/м).
                                 2. Конъюнктивальную полость **обильно промыть раствором 0,9% хлорида натрия**.
                                 3. **Инстилляции 0,25% раствора прокаина**.
                                 4. **Наложить асептическую повязку**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("72"), content: Text("""

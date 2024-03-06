@@ -40,18 +40,17 @@ struct Prikaz1030Alg78View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
+                        VStack (spacing:1){
                             
                             MyViewBuilder(title: Text("78"), content: Text("""
                             **Определяются патологические изменения в психической сфере и поведении**, вегето-сосудистой регуляции, имеются ли двигательные нарушения, **запах алкоголя изо рта**.
                             Определяются пары алкоголя в выдыхаемом воздухе (**при использовании приборов**) в концентрации соответствующей алкогольному опьянению (при несоответствии – алгоритм 49).
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.top, 5)
                             NavigationLink (destination: Prikaz1030Alg49View()) {
-                                MyViewBuilder(title: Text("78"), content: Text("Алгоритм 49 «Отравление неизвестным ядом»")).buildNavigationText()
+                                MyViewBuilder(title: Text("78"), content: Text("Алгоритм 49 «Отравление неизвестным ядом»")).buildNavigationText().padding(5)
                             }
                         }
-                        .padding(5)
+                        
                     }
                     Image(systemName: "arrow.down")
                        
@@ -61,7 +60,7 @@ struct Prikaz1030Alg78View: View {
                             
                             MyViewBuilder(title: Text("78"), content: Text("""
                             **Степень тяжести**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             HStack{
                                 MyViewBuilder(title: Text("78"), content: Text("""
                             **Легкая**
@@ -113,22 +112,13 @@ struct Prikaz1030Alg78View: View {
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("78"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("78"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - незначительные изменения в психостатусе.
                                 - гиперемия кожи и слизистых, усиление потливости.
                                 - тахикардия.
                                 - изменения походки, неустойчивость в позе Ромберга.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         
@@ -142,24 +132,15 @@ struct Prikaz1030Alg78View: View {
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("78"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("78"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - выраженные изменения психостатуса (неадекватность поведения и ориентации).
                                 - усиленная потливость, слюнотечение.
                                 - расширение зрачков.
                                 - тахикардия, учащение дыхания.
                                 - выраженная дизартрия,
                                 - отчетливые нарушения координации движения.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("78"), content: Text("""
@@ -178,16 +159,13 @@ struct Prikaz1030Alg78View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
-                                MyViewBuilder(title: Text("78"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("78"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - **выраженные нарушения сознания или его отсутствие** (при необходимости использовать алгоритм 27 «Кома неясного генеза»).
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg27View()) {
-                                    MyViewBuilder(title: Text("78"), content: Text("Алгоритм 27 «Кома неясного генеза»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("78"), content: Text("Алгоритм 27 «Кома неясного генеза»")).buildNavigationText().padding(5)
                                 }
                                 MyViewBuilder(title: Text("78"), content: Text("""
                                 - **артериальная гипотония**.
@@ -198,28 +176,19 @@ struct Prikaz1030Alg78View: View {
                                 """)).buildGrayInHiddenText()
                                 
                             }
-                            .padding(5)
+                            
                         }
                         
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("78"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("78"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - обеспечение проходимости верхних дыхательных путей.
                                 - контроль вены.
                                 - инфузионная терапия – **250-500 мл раствора натрия хлорида** или **5% раствора глюкозы в/вено**.
                                 - **симптоматическая терапия**.
                                 - при необходимости **налоксон 1-2 мл 0,5%** раствора в/вено.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         

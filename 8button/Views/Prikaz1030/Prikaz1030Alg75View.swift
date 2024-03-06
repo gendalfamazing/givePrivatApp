@@ -38,22 +38,13 @@ struct Prikaz1030Alg75View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            
-                            MyViewBuilder(title: Text("75"), content: Text("""
-                            **Осмотр**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("75"), content: Text("""
+                            MyViewBuilder(title: Text("**Осмотр**:"), content: Text("""
                             1. Оценка сознания.
                             2. АД, ЧСС, ЧДД.
                             3. ЭКГ.
                             4. Неврологический осмотр.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -62,7 +53,7 @@ struct Prikaz1030Alg75View: View {
                             
                             MyViewBuilder(title: Text("75"), content: Text("""
                             **Степень тяжести**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             HStack{
                                 MyViewBuilder(title: Text("75"), content: Text("""
                             **Легкая**
@@ -114,67 +105,33 @@ struct Prikaz1030Alg75View: View {
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - тремор языка, век, рук;
                                 - головная боль; бессонница;
                                 - небольшая артериальная гипертензия;
                                 - синусовая тахикардия, без патологических изменений ЭКГ
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Магния сульфат 25% - 5-10 мл** в/м.
                                 2. **Пропранолол 20-40 мг** внутрь.
                                 3. **Карбамазепин 400 мг** внутрь.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Рекомендовать**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                                MyViewBuilder(title: Text("**Рекомендовать**:"), content: Text("""
                                 - пероральную регидратацию;
                                 - обратиться к наркологу.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - значительное увеличение ЧСС,
                                 - снижение тургора кожи,
                                 - повышение температуры тела,
@@ -182,43 +139,32 @@ struct Prikaz1030Alg75View: View {
                                 - нистагм,
                                 - возможны судорожные припадки,
                                 - дисметаболические изменения ЭКГ
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
                                 MyViewBuilder(title: Text("75"), content: Text("""
                                 **При развитии судорожного синдрома** см. алгоритм 29 «Судорожный синдром»
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg29View()) {
-                                    MyViewBuilder(title: Text("75"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("75"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Тиамин до 100 мг**, ввести в/венно.
                                 2. **Диазепам 10-40 мг** в/м (0,5% р-р 2-8 мл) **по 2 мл через 30 мин до достижения седации** под контролем дыхания и АД.
                                 3. **Магния сульфат 5-10 мл 25%** раствора в/в капельно **в 400 мл 5% раствора глюкозы**.
                                 4. **Пероральная регидратация** при отсутствии рвоты, **при рвоте – глюкоза 200 мл 5% раствора** в/в, **растворы электролитов 250 мл** в/венно.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         
@@ -231,14 +177,7 @@ struct Prikaz1030Alg75View: View {
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - угнетение сознания вплоть до делирия,
                                 - многократная рвота,
                                 - снижение на 20% АД от адаптационного,
@@ -246,35 +185,30 @@ struct Prikaz1030Alg75View: View {
                                 - возможны судорожные припадки,
                                 - дисметаболические изменения ЭКГ,
                                 - нарушения ритма
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
                                 MyViewBuilder(title: Text("75"), content: Text("""
                                 **При развитии судорожного синдрома** см. алгоритм 29 «Судорожный синдром»
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg29View()) {
-                                    MyViewBuilder(title: Text("75"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("75"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
-                                MyViewBuilder(title: Text("75"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("75"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Тиамин до 100 мг**, ввести в/венно.
                                 2. **Диазепам 10-40 мг** (0,5% раствор 2-8 мл) в **10 мл 40% раствора глюкозы в/в медленно до достижения седации** под контролем дыхания и АД.
                                 3. **Магния сульфат 5-10 мл 25%** раствора в/в капельно в **400 мл 5% раствора глюкозы**.
@@ -283,12 +217,12 @@ struct Prikaz1030Alg75View: View {
                                 
                                 **При развитии алкогольного психоза** – алгоритм 62.
                                 **При опасных для жизни нарушениях ритма** см. соответсвующие алгоритмы.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg62View()) {
-                                    MyViewBuilder(title: Text("75"), content: Text("Алгоритм 62 «Острые психотические расстройства при употреблении психоактивных веществ (ПАВ)»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("75"), content: Text("Алгоритм 62 «Острые психотические расстройства при употреблении психоактивных веществ (ПАВ)»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
                            
@@ -304,24 +238,17 @@ struct Prikaz1030Alg75View: View {
                     
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("1"), content: Text("""
-                            **Примечание**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("1"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     **При наличии малейших подозрений (данные анамнеза) на ЧМТ – доставка в стационар по профилю**.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                      
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

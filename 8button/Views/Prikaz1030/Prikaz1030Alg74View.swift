@@ -44,7 +44,7 @@ struct Prikaz1030Alg74View: View {
                             
                             MyViewBuilder(title: Text("74"), content: Text("""
                             **Анамнез и осмотр**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             
                             VStack{
                                 HStack{
@@ -173,30 +173,22 @@ struct Prikaz1030Alg74View: View {
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("74"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("74"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Затруднение дыхания, отделяемое из одной половины носа, при остроконечных инородных тела может быть носовое кровотечение, анамнез (указание на попадание инородного тела в нос)
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("74"), content: Text("""
                         Сильное высмаркивание этой половины носа (**нельзя рекомендовать втягивание воздуха в себя через нос**)
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5)
                                 MyViewBuilder(title: Text("74"), content: Text("""
                                 **Инородное тело удалено**:
                                 """)).buildGrayInText()
+                                Spacer(minLength: 5)
                                 HStack{
                                     MyViewBuilder(title: Text("74"), content: Text("""
                                 **Да**
@@ -257,35 +249,26 @@ struct Prikaz1030Alg74View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
+                            
                         }
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("74"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("74"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Боль, чувство инородного тела, шум в ухе, снижение слуха, анамнез (указание на наличие попадания инородного тела в ухо)
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("74"), content: Text("""
                                 Наиболее часто встречающиеся инородные тела: спички, вата, бусины, горошины и т.д.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.top, 5)
                                 MyViewBuilder(title: Text("74"), content: Text("""
                                 **Наличие в ухе живого насекомого**:
                                 """)).buildGrayInText()
@@ -337,27 +320,18 @@ struct Prikaz1030Alg74View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("74"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("74"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Ощущение инородного тела, боль при глотании, наличие признаков удушья вплоть до асфиксии, осиплость, судорожный кашель, анамнез (указание на попадание инородного тела)
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -404,9 +378,8 @@ struct Prikaz1030Alg74View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded4{
@@ -448,17 +421,17 @@ struct Prikaz1030Alg74View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 
                                 MyViewBuilder(title: Text("74"), content: Text("""
                                 При **хорошей видимости захватить инородное тело зажимом** (анатомическим пинцетом) и **извлечь**.
                                 При **стенозе 3-4 степени** и невозможности удаления инородного тела алгоритм 25 «Стеноз гортани».
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg25View()) {
-                                    MyViewBuilder(title: Text("74"), content: Text("Алгоритм 25 «Стеноз гортани»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("74"), content: Text("Алгоритм 25 «Стеноз гортани»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                     }
                     if isTextExpanded10{

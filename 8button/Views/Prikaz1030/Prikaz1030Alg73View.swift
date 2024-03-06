@@ -44,7 +44,7 @@ struct Prikaz1030Alg73View: View {
                             
                             MyViewBuilder(title: Text("73"), content: Text("""
                             **Анамнез и осмотр**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                         
                             
                             VStack {
@@ -256,185 +256,86 @@ struct Prikaz1030Alg73View: View {
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Боль и отек, гиперемия в области слезной железы, возможно смещение глазного яблока, ограничение его подвижности
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **глюкоза 40% раствор по 20 мл** в/в;
                                 - **фуросемид 1% 1-2 мл** в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Боль в глазу, слезотечение, светобоязнь, снижение зрения, перикорнеальная инъекция, изменение цвета радужки, сужение зрачка, зрачок может иметь неправильную форму
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Светобоязнь, слезотечение, боль в глазу, покраснение конъюнктивы вокруг роговицы, инфильтраты роговицы, язва роговицы
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Инстилляции 0,5% раствора прокаина**;
                                 - **при выраженных болях метамизол 50% 1-2 мл** в/в или **кеторолак 10-30 мг** в/в (или в/м).
                                 2. **Промывание конъюнктивальной полости 0,9% раствором хлорида натрия**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Резкая боль в глазу, тошнота (иногда рвота), отек век, застойная инъекция глазного яблока, отек роговицы, зрачок широкий, реакция на свет отсутствует, зрение резко снижено, глазное яблоко при пальпации болезненное, твердое
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Фуросемид 1% 2-4 мл** в/в.
                                 2. **При выраженном болевом синдроме**:
                                 – **трамадол 5% - 1 мл** или **тримепередин 2% - 1 мл** в/в или в/м **с дифенгидрамином 1% - 1 мл**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded5{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Ограниченная припухлость красно-фиолетового цвета на склере, чаще с 2 сторон
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **метамизол 50% раствор 1 - 2 мл** в/в или **кеторолак 10-30 мг** в/в (в/м);
                                 - **преднизолон 30 мг** или **дексаметазон 4 мг** в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded6{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 Резь в глазах, светобоязнь, слезотечение, отек век, отек и гиперемия конъюнктивы, слизисто-гнойное или гнойное отделяемое
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("73"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("73"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 Пациенту **рекомендовать частые** (через каждые 2 ч) **инстилляции 20-30% раствора сульфацетамида**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                     }
                     
                     if isTextExpanded7{
