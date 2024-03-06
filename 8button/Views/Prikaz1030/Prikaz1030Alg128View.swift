@@ -35,15 +35,11 @@ struct Prikaz1030Alg28View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("28"), content: Text("""
                             **Сахарный диабет в анамнезе**
-                            """)).buildGrayInText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                        
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -51,7 +47,7 @@ struct Prikaz1030Alg28View: View {
                         VStack {
                             MyViewBuilder(title: Text("28"), content: Text("""
                             Оценка сознания по **шкале Глазго**. Оценка **витальных функций**. Определение уровня **гликемии**.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.top, 5)
                             HStack {
                                 MyViewBuilder(title: Text("27"), content: Text("""
                             **Гипогликемическая** кома
@@ -90,30 +86,21 @@ struct Prikaz1030Alg28View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("28"), content: Text("""
-                                **Клинические признаки**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("28"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                         - **влажные кожные покровы**;
                                         - повышенный тонус мышц;
                                         - **клонико-тонические судороги**;
                                         - тургор тканей не изменён;
                                         - уровень гликемии **менее 3,5 ммоль/л**;
                                         - **быстрое развитие симптомов**.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("28"), content: Text("""
@@ -155,46 +142,29 @@ struct Prikaz1030Alg28View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("28"), content: Text("""
-                                **Клинические признаки**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("28"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                 - **сухость кожных покровов**;
                                 - **дыхание Куссмауля с запахом ацетона**;
                                 - тонус мышц снижен;
                                 - **медленное развитие симптомов** (от нескольких часов до нескольких суток).
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("28"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("28"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                         - **постановка воздуховода**;
                                         - **оксигенотерапия**, при неадекватном дыхании – **ИВЛ через ларингеальную маску** (интубационную трубку);
                                         - обеспечить **венозный доступ**,
                                         - **0,9% раствор натрия хлорида 500 мл в/в**.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("28"), content: Text("""
@@ -210,22 +180,14 @@ struct Prikaz1030Alg28View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("28"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("28"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                         - **постановка воздуховода**;
                                         - **оксигенотерапия**, при неадекватном дыхании – **ИВЛ через ларингеальную маску** (интубационную трубку);
                                         - обеспечить **венозный доступ**,
                                         - **0,9% раствор натрия хлорида 500 мл в/в**.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("28"), content: Text("""

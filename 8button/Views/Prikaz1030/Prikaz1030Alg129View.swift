@@ -47,7 +47,7 @@ struct Prikaz1030Alg29View: View {
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("29"), content: Text("""
                             **Провести дифференциальную диагностику**:
                             """)).buildGrayInText()
@@ -75,6 +75,8 @@ struct Prikaz1030Alg29View: View {
                                         }
                                     }
                             }
+                            
+                                Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("27"), content: Text("""
                             Совпадения **есть**
@@ -156,9 +158,8 @@ struct Prikaz1030Alg29View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded9 {
                         Image(systemName: "arrow.down")
@@ -172,7 +173,7 @@ struct Prikaz1030Alg29View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("29"), content: Text("""
                                 **Клинические признаки ОДН**:
                                 """)).buildGrayInText()
@@ -191,6 +192,7 @@ struct Prikaz1030Alg29View: View {
                                             }
                                         }
                                 }
+                                Spacer(minLength: 5)
                                 HStack {
                                     MyViewBuilder(title: Text("27"), content: Text("""
                                 **Есть**
@@ -265,9 +267,8 @@ struct Prikaz1030Alg29View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         if isTextExpanded1 {
                             Image(systemName: "arrow.down")
@@ -279,21 +280,13 @@ struct Prikaz1030Alg29View: View {
                         if isTextExpanded2 {
                             Image(systemName: "arrow.down")
                                
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("29"), content: Text("""
-                                    **Купирование судорожного синдрома**:
-                                    """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("29"), content: Text("""
+                                    MyViewBuilder(title: Text("**Купирование судорожного синдрома**:"), content: Text("""
                                             - **диазепам 0,5%–2-4 мл в/в**,
                                             При **некупировавшемся** судорожном синдроме в течение 15 минут **повторное введение диазепама в той же дозе**;
                                             
                                             -при **повышенном АД**– **25% раствор магния сульфата 5-10 мл** в/в.
-                                            """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                            """)).buildGrayInAndHiddenBlock()
+                               
                             Image(systemName: "arrow.down")
                                
                             ZStack {
@@ -424,14 +417,12 @@ struct Prikaz1030Alg29View: View {
                             ZStack {
                                 MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                                 VStack {
-                                    MyViewBuilder(title: Text("29"), content: Text("""
-                                    **Достигнут эффект**:
-                                    """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("29"), content: Text("""
+                                    
+                                    MyViewBuilder(title: Text("**Достигнут эффект**:"), content: Text("""
                                             - судорожный синдром купирован,
                                             - САД ≥ 90 мм рт. ст.,
                                             - SpO2 ≥ 90%
-                                            """)).buildGrayInHiddenText()
+                                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                     HStack {
                                         MyViewBuilder(title: Text("27"), content: Text("""
                                     Да
@@ -460,9 +451,8 @@ struct Prikaz1030Alg29View: View {
                                                     
                                                 }
                                             }
-                                    }
+                                    }.padding(5).padding(.top, -10)
                                 }
-                                .padding(5)
                             }
                             if isTextExpanded7 {
                                 Image(systemName: "arrow.down")
@@ -494,18 +484,11 @@ struct Prikaz1030Alg29View: View {
                         if isTextExpanded5 {
                             Image(systemName: "arrow.down")
                                
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("29"), content: Text("""
-                                    **Отек головного мозга**:
-                                    """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("29"), content: Text("""
+                            
+                                    MyViewBuilder(title: Text("**Отек головного мозга**:"), content: Text("""
                                             наличие рвоты, патологических рефлексов, гиперэстезия, гипертермия, коллапс, брадикардия, нарушения дыхания
-                                            """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                            """)).buildGrayInAndHiddenBlock()
+                                
                             Image(systemName: "arrow.down")
                                
                             MyViewBuilder(title: Text("29"), content: Text("""
@@ -520,19 +503,11 @@ struct Prikaz1030Alg29View: View {
                         }
                         if isTextExpanded6 {
                             Image(systemName: "arrow.down")
-                               
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                                VStack {
-                                    MyViewBuilder(title: Text("29"), content: Text("""
-                                    **Эпилептический статус**:
-                                    """)).buildGrayInText()
-                                    MyViewBuilder(title: Text("29"), content: Text("""
+                            
+                                    MyViewBuilder(title: Text("**Эпилептический статус**:"), content: Text("""
                                             эпилептический припадок продолжается более 30 минут или отмечаются повторные припадки, между которыми больной не приходит в сознание
-                                            """)).buildGrayInHiddenText()
-                                }
-                                .padding(5)
-                            }
+                                            """)).buildGrayInAndHiddenBlock()
+                              
                             Image(systemName: "arrow.down")
                                
                             MyViewBuilder(title: Text("29"), content: Text("""

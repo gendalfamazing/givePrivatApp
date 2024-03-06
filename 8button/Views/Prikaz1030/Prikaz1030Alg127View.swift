@@ -37,13 +37,14 @@ struct Prikaz1030Alg27View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("27"), content: Text("""
                         **Состояние пациента в результате травмы?**
                         """)).buildGrayInText()
                             MyViewBuilder(title: Text("27"), content: Text("""
                                 **Черепно-мозговая травма**:
                                 """)).buildGrayInText()
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("27"), content: Text("""
                             **Да**
@@ -146,9 +147,8 @@ struct Prikaz1030Alg27View: View {
                                             }
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -162,7 +162,7 @@ struct Prikaz1030Alg27View: View {
                            
                         MyViewBuilder(title: Text("27"), content: Text("""
                             **Оценка уровня сознания по шкале Глазго**
-                            """)).buildGrayText()
+                            """)).buildGrayInText()
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -256,9 +256,8 @@ struct Prikaz1030Alg27View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {
@@ -270,14 +269,8 @@ struct Prikaz1030Alg27View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("27"), content: Text("""
-                            **Выполнить следующие мероприятия**.
-                            """)).buildGrayInText()
-                                MyViewBuilder(title: Text("27"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Выполнить следующие мероприятия**."), content: Text("""
                             1. Обеспечить проходимость дыхательных путей.
                             2. Постановка воздуховода.
                             3. Ингаляция кислорода.
@@ -286,10 +279,8 @@ struct Prikaz1030Alg27View: View {
                             6. ЭКГ.
                             7. Контроль вены, 0,9% раствор натрия хлорида в/в.
                             8. АД.
-                            """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                            """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -416,9 +407,8 @@ struct Prikaz1030Alg27View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {
@@ -506,9 +496,8 @@ struct Prikaz1030Alg27View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded7 {
@@ -583,9 +572,8 @@ struct Prikaz1030Alg27View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded10{
@@ -645,9 +633,8 @@ struct Prikaz1030Alg27View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded12 {
@@ -691,9 +678,8 @@ struct Prikaz1030Alg27View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded14 {

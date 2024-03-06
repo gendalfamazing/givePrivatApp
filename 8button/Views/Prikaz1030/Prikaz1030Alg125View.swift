@@ -119,18 +119,11 @@ struct Prikaz1030Alg25View: View {
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("25"), content: Text("""
-                            **Клиническая картина**:
-                            """)).buildGrayInText()
-                                MyViewBuilder(title: Text("25"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                             **Поперхивание и кашель** (при приёме пищи, во время игры), **посинение, остановка дыхания, периодический кашель при перемене положения туловища, шумное дыхание**
-                            """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                            """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("25"), content: Text("""
@@ -144,19 +137,11 @@ struct Prikaz1030Alg25View: View {
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("25"), content: Text("""
-                            **Клиническая картина**:
-                            """)).buildGrayInText()
-                                MyViewBuilder(title: Text("25"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                             **Небольшая одышка, незначительный цианоз во время беспокойства, АД – нормальное или повышено**
-                            """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                            """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("25"), content: Text("""
@@ -178,18 +163,11 @@ struct Prikaz1030Alg25View: View {
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("25"), content: Text("""
-                            **Клиническая картина**:
-                            """)).buildGrayInText()
-                                MyViewBuilder(title: Text("25"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                     **Одышка в состоянии покоя, в дыхании участвуют вспомогательные мышцы, цианоз слизистых полости рта, ушей, пальцев, кожи носогубного треугольника, пульс учащён, АД повышено**
-                                    """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                    """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("25"), content: Text("""
@@ -210,19 +188,11 @@ struct Prikaz1030Alg25View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("25"), content: Text("""
-                            **Клиническая картина**:
-                            """)).buildGrayInText()
-                                MyViewBuilder(title: Text("25"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                     **Резкая одышка, иногда патологическое дыхание, в акте дыхания участвуют вспомогательные мышцы, резко учащён пульс, АД снижено, тотальный цианоз, может быть нарушено сознание и судороги**
-                                    """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                    """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("25"), content: Text("""

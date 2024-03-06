@@ -100,9 +100,9 @@ struct Prikaz1030Alg26View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
+                        
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -144,9 +144,8 @@ struct Prikaz1030Alg26View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -203,9 +202,8 @@ struct Prikaz1030Alg26View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -264,9 +262,8 @@ struct Prikaz1030Alg26View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -322,9 +319,8 @@ struct Prikaz1030Alg26View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }

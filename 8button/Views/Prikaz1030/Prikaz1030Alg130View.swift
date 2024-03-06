@@ -139,9 +139,8 @@ struct Prikaz1030Alg30View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1 {
@@ -226,9 +225,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -336,9 +334,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     
@@ -424,9 +421,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                     }
@@ -521,9 +517,8 @@ struct Prikaz1030Alg30View: View {
                                                 }
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     
@@ -626,9 +621,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     
@@ -697,9 +691,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     
@@ -759,9 +752,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded7 {
@@ -813,9 +805,8 @@ struct Prikaz1030Alg30View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded9 {
