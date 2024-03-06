@@ -43,7 +43,7 @@ struct Prikaz1030Alg40View: View {
                         VStack {
                             MyViewBuilder(title: Text("40"), content: Text("""
                             **Изучение механизма травмы. Обследование позвоночника**.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInText().padding(-5)
                             HStack {
                                 MyViewBuilder(title: Text("40"), content: Text("""
                                 **Признаки ОДН**
@@ -75,35 +75,31 @@ struct Prikaz1030Alg40View: View {
                             }
                             
                             if isTextExpanded1{
-                                
-                                MyViewBuilder(title: Text("40"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("40"), content: Text("""
+                                VStack (spacing:1) {
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                         - частота дыхания более 40 или менее 8 в 1 мин;
                                         - **SpО2 менее 90%** при дыхании атмосферным воздухом.
-                                        """)).buildGrayInHiddenText()
+                                        """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg3View()) {
                                     MyViewBuilder(title: Text("40"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText()
                                 }
+                            }
                                 
                             }
                             if isTextExpanded2{
                                 
-                                MyViewBuilder(title: Text("40"), content: Text("""
-                                **Клиническая картина**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("40"), content: Text("""
+                                VStack (spacing:1) {
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                         - холодная, бледная, влажная кожа;
                                         - **САД менее 90 мм.рт.ст.**,
                                         - **ЧСС более 100** в 1 мин.,
                                         - шоковый индекс **более 0,7**,
                                         - **SpО2 менее 90%**.
-                                        """)).buildGrayInHiddenText()
+                                        """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
                                     MyViewBuilder(title: Text("40"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
                                 }
-                                
+                            }
                             }
                         }
                         .padding(5)
@@ -155,20 +151,13 @@ struct Prikaz1030Alg40View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("40"), content: Text("""
-                        **Клинические признаки**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("40"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                 - **боль в спине** (не всегда), которая может сопровождаться отеком и кровоизлиянием;
                                 - **деформация** (особенно при взрывных переломах);
                                 - возможно **выпячивание остистого отростка** (видимое на глаз или на ощупь);
@@ -178,21 +167,13 @@ struct Prikaz1030Alg40View: View {
                                     - **ниже Th10** – чувствительность выше пупка сохранена;
                                     - **выше L2** – невозможность движения в бедренном суставе;
                                     - **выше L5** – невозможность приподнять стопу.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("40"), content: Text("""
-                        **Клинические признаки**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("40"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                 - **боль в шее или появление мышечных спазмов**;
                                 - **признаки поперечного паралича** (обездвиженность, потеря чувствительности, отсутствие защитных реакций даже при воздействии очень сильных болевых раздражителей, в некоторых случаях нарушение сознания, непроизвольное мочеиспускание, дефекация, снижение артериального давления);
                                 - **при повреждении позвоночника**:
@@ -200,10 +181,8 @@ struct Prikaz1030Alg40View: View {
                                     - **выше С5** – невозможность поднять плечи;
                                     - **выше С6** – невозможность движения в локтях;
                                     - **выше С8/С9** – невозможность движения в пальце.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("40"), content: Text("""
@@ -213,13 +192,8 @@ struct Prikaz1030Alg40View: View {
                     if isTextExpanded5{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("40"), content: Text("""
-                        **Неотложная помощь**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("40"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1.**Обезболивание (ненаркотические или наркотические анальгетики)**:
                                 
                                 – **метамизол натрия 50% раствор 2-4 мл** в/в в 0,9% растворе натрия хлорида или,
@@ -230,10 +204,8 @@ struct Prikaz1030Alg40View: View {
                                 3.**Обеспечение венозного доступа**, **инфузионная терапия**.
                                 4.**Пульсоксиметрия**, оксигенотерапия при **SpO2≤ 90%**.
                                 5.**Преднизолон 60-120 мг** или **метилпреднизолон в дозе 30мг/кг** в/в.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("40"), content: Text("""

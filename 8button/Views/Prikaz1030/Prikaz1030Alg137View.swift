@@ -112,9 +112,8 @@ struct Prikaz1030Alg37View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{
@@ -122,7 +121,7 @@ struct Prikaz1030Alg37View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("37"), content: Text("""
                                 **Установить причину**:
                                 """)).buildGrayInText()
@@ -145,7 +144,7 @@ struct Prikaz1030Alg37View: View {
                                             }
                                         }
                                 }
-                                
+                                Spacer(minLength: 5)
                                 HStack {
                                     MyViewBuilder(title: Text("37"), content: Text("""
                                     **Установлена**
@@ -213,9 +212,8 @@ struct Prikaz1030Alg37View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded7 {
@@ -241,7 +239,7 @@ struct Prikaz1030Alg37View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("37"), content: Text("""
                                 **Клинические признаки гиповолемического шока**:
                                 """)).buildGrayInText()
@@ -264,7 +262,7 @@ struct Prikaz1030Alg37View: View {
                                             }
                                         }
                                 }
-                                
+                                Spacer(minLength: 5)
                                 HStack {
                                     MyViewBuilder(title: Text("37"), content: Text("""
                                     **Есть**
@@ -331,9 +329,8 @@ struct Prikaz1030Alg37View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                         
                         
@@ -358,20 +355,13 @@ struct Prikaz1030Alg37View: View {
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("37"), content: Text("""
-                                **Провести**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("37"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Провести**:"), content: Text("""
                                 - установку **периферического катетера**, **пульсоксиметрию**;
                                 - **инфузионную терапию** под контролем АД;
                                 - **оксигенотерапию** под контролем SpО2.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("37"), content: Text("""
@@ -380,22 +370,14 @@ struct Prikaz1030Alg37View: View {
                     }
                     if isTextExpanded8 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("37"), content: Text("""
-                                **Неотложная медицинская помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("37"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная медицинская помощь**:"), content: Text("""
                                 - **ввести в нос тампон, смоченный 3% перекисью водорода** и **прижать крыло носа к носовой перегородке** с одной или с обеих сторон **на 4-10 минут**;
                                 - местно **«холод»**;
                                 - при отсутствии эффекта **передняя тампонада**;
                                 - **этамзилат 2 мл 12,5% раствора в/в в 20 мл 0,9% раствора натрия хлорида**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -430,9 +412,8 @@ struct Prikaz1030Alg37View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {

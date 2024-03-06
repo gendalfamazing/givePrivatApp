@@ -41,7 +41,7 @@ struct Prikaz1030Alg38View: View {
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("38"), content: Text("""
                             **Дифференциальный диагноз**:
                             """)).buildGrayInText()
@@ -65,6 +65,7 @@ struct Prikaz1030Alg38View: View {
                                     }
                                 
                             }
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("38"), content: Text("""
                                 **Совпадения есть**
@@ -139,10 +140,9 @@ struct Prikaz1030Alg38View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{
@@ -161,7 +161,7 @@ struct Prikaz1030Alg38View: View {
                             VStack {
                                 MyViewBuilder(title: Text("38"), content: Text("""
                                 **Возможные причины боли в животе**:
-                                """)).buildGrayInText()
+                                """)).buildGrayInText().padding(-5)
                                 VStack {
                                     MyViewBuilder(title: Text("38"), content: Text("""
                                     **Воспалительные заболевания: аппендицит, холецистит, панкреатит, дивертикулит**
@@ -325,259 +325,126 @@ struct Prikaz1030Alg38View: View {
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Анамнез**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Анамнез**:"), content: Text("""
                                 - нарастание боли, связь с приемом пищи,
                                 - изменение характера боли, постепенное нарастание,
                                 - рвота,
                                 - понос
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Объективный статус**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Объективный статус**:"), content: Text("""
                                 - повышение температуры тела,
                                 - симптомы раздражения брюшины,
                                 - специфические симптомы
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlock()
                                 
-                            }
-                            .padding(5)
-                        }
+                            
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 **Доставка в стационар** по профилю заболевания,
                                 **при перитоните – контроль вены**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
-                        
+                                """)).buildGrayInAndHiddenBlock()
+                             
                     }
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Анамнез**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Анамнез**:"), content: Text("""
                                 - внезапная боль,
                                 - **язвенная болезнь в анамнезе**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Объективный статус**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Объективный статус**:"), content: Text("""
                                  - ↑ЧСС, ↓АД,
                                 - дефанс,
                                 - исчезновение печеночной тупости,
                                 - бледность
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                              
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 **Доставка в стационар** по профилю основного заболевания, **контроль вены**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         
                     }
                     if isTextExpanded5{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Анамнез**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Анамнез**:"), content: Text("""
                                 - диффузная блуждающая боль, эпизоды сильной кратковременной,
                                 - эпизоды потери сознания.
                                 - в анамнезе **ИБС, ХРБС, МА, АГ**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Объективный статус**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Объективный статус**:"), content: Text("""
                                 - **исчезновение перистальтики**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 **Доставка в стационар** по профилю основного заболевания
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         
                     }
                     if isTextExpanded6{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Анамнез**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Анамнез**:"), content: Text("""
                                 - травма
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                              
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Объективный статус**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                       
+                                MyViewBuilder(title: Text("**Объективный статус**:"), content: Text("""
                                 - ↑ЧСС, ↓АД,
                                 - бледность, пот,
                                 - симптом **«Ваньки-встаньки»**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 **Оксигенотерапия, в/в инфузия**.
                                 **Доставка в стационар** по профилю заболевания
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         
                     }
                     if isTextExpanded7{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Анамнез**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Анамнез**:"), content: Text("""
                                 - приступообразная внезапная боль.
                                 - в анамнезе **ЖКБ, МКБ, колит**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Объективный статус**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                                MyViewBuilder(title: Text("**Объективный статус**:"), content: Text("""
                                 - **нет симптомов раздражения брюшины**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 **Дротаверин 2-4 мл** в/в.
                                 **Доставка в стационар** для исключения острой хирургической патологии.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                              
                         
                     }
                     if isTextExpanded8{
@@ -585,40 +452,33 @@ struct Prikaz1030Alg38View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("38"), content: Text("""
                         **При тяжелом состоянии, нестабильной гемодинамике** см. алгоритм 5 «Гиповолемический шок»,
                         **симптоматическое лечение**
                         **(при выраженном болевом синдроме обезболивание вплоть до наркотических анальгетиков)**
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayInHiddenText().padding(.top, 5)
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
-                                    MyViewBuilder(title: Text("38"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("38"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                     }
                     
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("14"), content: Text("""
-                            **Примечание**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("14"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     ЭКГ-диагностика обязательна.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                        
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

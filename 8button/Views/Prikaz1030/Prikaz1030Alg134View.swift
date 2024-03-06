@@ -29,49 +29,35 @@ struct Prikaz1030Alg34View: View {
     @State private var isTextExpanded15 = false
     @State private var isTextExpanded16 = false
     @State private var isTextExpanded17 = false
-    
+    //.padding(5).padding(.top, -10)
     @State private var isTextExpanded71 = true
     var body: some View {
         NavigationStack {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("34"), content: Text("""
-                            **Эпидемиологический анамнез**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("34"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Эпидемиологический анамнез**:"), content: Text("""
                             - распирающая головная боль;
                             - многократная рвота;
                             - лихорадка.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     Image(systemName: "arrow.down")
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("34"), content: Text("""
-                            **Клинические признаки**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("34"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                             - интоксикация с первых часов заболевания;
                             - диспепсические проявления (тошнота, рвота, жидкий стул);
                             - болевой синдром.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                       
                     Image(systemName: "arrow.down")
                        
                     
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("34"), content: Text("""
                             **Определение степени обезвоживания**:
                             """)).buildGrayInText()
@@ -198,34 +184,19 @@ struct Prikaz1030Alg34View: View {
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **1 степень**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**1 степень**:"), content: Text("""
                                 Жажда, сухость во рту, **стул 3-10 раз** в сутки, **рвота 1-2 раза**. **Потеря веса тела до 3%**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 **Промывание желудка** при повторяющейся рвоте (зондом или самостоятельно пациентом).
                                 **Оральная регидратация** (растворы электролитов с добавлением 20-40 мл 40% глюкозы).
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("34"), content: Text("""
@@ -234,34 +205,19 @@ struct Prikaz1030Alg34View: View {
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **2 степень**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**2 степень**:"), content: Text("""
                                 **1 степень** + сухость кожных покровов, **акроцианоз**, **уменьшение диуреза**, **стул 11-20 раз**, **рвота 3-10 раз**. **Потеря веса тела 4-6%**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 **Промывание желудка** при повторяющейся рвоте (зондовое),
                                 **парентеральная регидратация** (растворы электролитов в/в капельно) в соответствии с дефицитом **ОЦК**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("34"), content: Text("""
@@ -270,57 +226,39 @@ struct Prikaz1030Alg34View: View {
                     }
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **3 степень**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**3 степень**:"), content: Text("""
                                 **2 степень** + **снижение тургора тканей, олиго- или анурия, тахикардия, гипотензия, одышка**. **Потеря веса тела 7-9%**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **4 степень**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**4 степень**:"), content: Text("""
                                 **3 степень** + **гипотермия, тотальный цианоз, судороги, возможно прекращение рвоты и отсутствие стула. Потеря веса тела 10% и более**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded7 {
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **Клинические признаки гиповолемического шока**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                            VStack (spacing:1){
+                                
+                                MyViewBuilder(title: Text("**Клинические признаки гиповолемического шока**:"), content: Text("""
                                 - холодная, бледная, влажная кожа;
                                 - **САД менее 90 мм.рт.ст.**,
                                 - **ЧСС более 100** в 1 мин,
                                 - шоковый индекс **более 0,7**;
                                 - **SpО2 менее 90%**.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
-                                    MyViewBuilder(title: Text("34"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("34"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
                            
@@ -369,27 +307,19 @@ struct Prikaz1030Alg34View: View {
                                                 
                                             }
                                         }
-                                }
-                                .padding(5)
+                                }.padding(5).padding(.top, -10)
+                                
                             }
                         }
                     }
                     if isTextExpanded5 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("34"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("34"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 **Промывание желудка** при повторяющейся рвоте (зондовое),
                                 **парентеральная регидратация** (растворы электролитов в/в капельно) в соответствии с дефицитом **ОЦК**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("34"), content: Text("""
@@ -407,26 +337,19 @@ struct Prikaz1030Alg34View: View {
                     
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("14"), content: Text("""
-                            **Примечание**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("14"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     **Расчет парентеральной регидратации проводится по формуле**:
                                     
                                     х (мл) = вес больного (кг) × % потери веса × 10.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                       
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

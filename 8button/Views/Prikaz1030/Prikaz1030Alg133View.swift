@@ -29,27 +29,20 @@ struct Prikaz1030Alg33View: View {
     @State private var isTextExpanded15 = false
     @State private var isTextExpanded16 = false
     @State private var isTextExpanded17 = false
-    
+    //.padding(5).padding(.top, -10)
     @State private var isTextExpanded71 = true
     var body: some View {
         NavigationStack {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("33"), content: Text("""
-                            **Клинические симптомы**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("33"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Клинические симптомы**:"), content: Text("""
                             - распирающая головная боль;
                             - многократная рвота;
                             - лихорадка.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                       
                     HStack {
                         Spacer()
                         Image(systemName: "arrow.down")
@@ -63,7 +56,7 @@ struct Prikaz1030Alg33View: View {
                     HStack{
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("33"), content: Text("""
                                 **Менингиальные симптомы**:
                                 """)).buildGrayInText()
@@ -149,7 +142,7 @@ struct Prikaz1030Alg33View: View {
                         }
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("33"), content: Text("""
                                 **Сыпь на коже и слизистых
                                 от розеолезной до геморрагической**:
@@ -315,27 +308,19 @@ struct Prikaz1030Alg33View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                **Симптоматическая терапия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Симптоматическая терапия**:"), content: Text("""
                                 - при гипертермии **50% раствор метамизола 2 мл** или **кеторолак 10-30 мг** в/в;
                                 - **диазепам 0,5% - 2 мл** при возбуждении и судорогах в/в.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("33"), content: Text("""
@@ -427,9 +412,8 @@ struct Prikaz1030Alg33View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded4 {
@@ -517,48 +501,32 @@ struct Prikaz1030Alg33View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded5 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                **Отек головного мозга**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Отек головного мозга**:"), content: Text("""
                                 - распирающая головная боль;
                                 - угнетение сознания;
                                 - брадикардия;
                                 - судороги.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
-                        Image(systemName: "arrow.down")
+                                """)).buildGrayInAndHiddenBlock()
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                        **Неотложная помощь**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                        Image(systemName: "arrow.down")
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                         1. Обеспечить **внутривенный доступ** через периферический **катетер наибольшего диаметра**.
                         2. **Антибактериальная терапия** (цефтриаксон или хлорамфеникол).
                         3. **Дексаметазон 8-16 мг** (преднизолон 60-120 мг) в/в струйно.
                         4. **Фуросемид 1% раствор до 4 мл** в/в.
                         5. Симптоматическая терапия.
                         6. **Оксигенотерапия**.
-                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                        """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("33"), content: Text("""
@@ -580,19 +548,12 @@ struct Prikaz1030Alg33View: View {
                     if isTextExpanded7 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                **Симптоматическая терапия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Симптоматическая терапия**:"), content: Text("""
                                 - при гипертермии **50% раствор метамизола 2 мл** или **кеторолак 10-30 мг** в/в;
                                 - **диазепам 0,5% - 2 мл** при возбуждении и судорогах в/в.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("33"), content: Text("""
@@ -672,26 +633,17 @@ struct Prikaz1030Alg33View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded9 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                **Симптоматическая терапия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Симптоматическая терапия**:"), content: Text("""
                                 Антибактериальная терапия – **цефтриаксон 1,0 в/в**, **хлорамфеникол 25 мг/кг** веса в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("33"), content: Text("""
@@ -700,31 +652,17 @@ struct Prikaz1030Alg33View: View {
                     }
                     if isTextExpanded10 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                **Инфекционно-токсический шок**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Инфекционно-токсический шок**:"), content: Text("""
                                 - холодная, бледная, влажная кожа;
                                 - **САД менее 90 мм.рт.ст.**,
                                 - **ЧСС более 100** в 1 мин;
                                 - **SpО2 менее 90%**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("33"), content: Text("""
-                                        **Неотложная помощь**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("33"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                         1. Обеспечить **внутривенный доступ** через периферический **катетер наибольшего диаметра**.
                         2.В/в быстро струйно **инфузия кристаллоидных растворов до стабилизации АД и пульса** с последующим переходом на капельную инфузию.
                         **(при неопределяемом уровне АД в 2 вены и более)**.
@@ -732,10 +670,8 @@ struct Prikaz1030Alg33View: View {
                         4. Симтоматическая терапия.
                         5. **Оксигенотерапия**.
                         6. **Дексаметазон 8-16 мг** (преднизолон 60-120 мг) в/в струйно.
-                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                        """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("33"), content: Text("""

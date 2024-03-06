@@ -57,7 +57,7 @@ struct Prikaz1030Alg39View: View {
                         VStack {
                             MyViewBuilder(title: Text("38"), content: Text("""
                             **Определение степени тяжести ЧМТ**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             
                             HStack {
                                 MyViewBuilder(title: Text("38"), content: Text("""
@@ -128,21 +128,13 @@ struct Prikaz1030Alg39View: View {
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                        **Клиническая картина**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - **кратовременная потеря сознания**.
                                 - **ретроградная амнезия**.
                                 - головная боль, тошнота, рвота.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("38"), content: Text("""
@@ -156,39 +148,23 @@ struct Prikaz1030Alg39View: View {
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                        **Клиническая картина**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - **сопор**.
                                 - **анизокория**.
                                 - **кровотечение из наружного слухового прохода**.
                                 - **гемипарез**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                        **Клиническая картина**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                                 - **кома**.
                                 - **нарушение дыхания**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("38"), content: Text("""
@@ -197,14 +173,8 @@ struct Prikaz1030Alg39View: View {
                     }
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("38"), content: Text("""
-                        **Неотложная медицинская помощь**:
-                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("38"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная медицинская помощь**:"), content: Text("""
                                 – **положение тела на боку**;
                                 – **оксигенотерапия** под контролем SpO2 (**не менее 90%**);
                                 – **венозный доступ с инфузионной терапией** под контролем АД (**САД не менее 90 мм.рт.ст.**).
@@ -213,10 +183,8 @@ struct Prikaz1030Alg39View: View {
                                 
                                 - **гипотензивная** (5-10 мл 25% раствора **магния сульфата** в/в);
                                 - **противосудорожная** (20-40 мг (0,5% - 4-8 мл) **диазепама** в/в).
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("38"), content: Text("""

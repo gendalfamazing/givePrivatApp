@@ -38,15 +38,13 @@ struct Prikaz1030Alg35View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("35"), content: Text("""
-                            **Эпидемиологический анамнез**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("35"), content: Text("""
+                        VStack (spacing:1){
+                            
+                            MyViewBuilder(title: Text("**Эпидемиологический анамнез**:"), content: Text("""
                             - проведение оперативных вмешательств, парентеральное введение препаратов и
                             др. вмешательства за последние **180 дней**;
                             - контакт с больным.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                             HStack {
                                 MyViewBuilder(title: Text("35"), content: Text("""
                                 **Совпадения есть**
@@ -88,30 +86,21 @@ struct Prikaz1030Alg35View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("35"), content: Text("""
-                                **Дифференциальные признаки острого инфекционного гепатита**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("35"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Дифференциальные признаки острого инфекционного гепатита**:"), content: Text("""
                                 - желтуха имеет **красноватый оттенок**;
                                 - может быть **кожный зуд** и следы расчесов на коже;
                                 - **увеличение печени и селезенки**;
                                 - **темная** моча, **обесцвеченный** кал;
                                 - болевой синдром **слабо** выражен.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("35"), content: Text("""
@@ -134,7 +123,7 @@ struct Prikaz1030Alg35View: View {
                                 
                                 HStack {
                                     MyViewBuilder(title: Text("35"), content: Text("""
-                                **Обструкция желчных путей**
+                                **Обструкция желчных путей (камнями ЖП или др.)**
                                 """)).buildGreen1Text(isTextExpanded: isTextExpanded3)
                                         .onTapGesture {
                                             withAnimation (.snappy) {
@@ -177,13 +166,7 @@ struct Prikaz1030Alg35View: View {
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("35"), content: Text("""
-                                **Дифференциальные признаки обструкции желчных путей**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("35"), content: Text("""
+                                MyViewBuilder(title: Text("**Дифференциальные признаки обструкции желчных путей**:"), content: Text("""
                                 - желтуха имеет **зеленоватый оттенок**;
                                 - чаще встречается у лиц **старше 40 лет**;
                                 - **в анамнезе** может быть **желчнокаменная болезнь**;
@@ -192,11 +175,8 @@ struct Prikaz1030Alg35View: View {
                                 - **диспепсические расстройства** (тошнота, рвота);
                                 - **повышение температуры**;
                                 - кожный зуд.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("35"), content: Text("""
@@ -211,14 +191,8 @@ struct Prikaz1030Alg35View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("35"), content: Text("""
-                                **Дифференциальные признаки гемолитической желтухи (кроме малярии)**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("35"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Дифференциальные признаки гемолитической желтухи (кроме малярии)**:"), content: Text("""
                                 - желтушность склер и кожи умеренная, имеет **лимонно-желтый оттенок**;
                                 - одновременно имеется **бледность кожи** (из-за анемии);
                                 - кожный зуд и расчесы тела **отсутствуют**;
@@ -226,11 +200,8 @@ struct Prikaz1030Alg35View: View {
                                 - увеличение печени **незначительное**;
                                 - **значительное увеличение селезенки**;
                                 - **резкое окрашивание в темный цвет кала**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         
                         Image(systemName: "arrow.down")
                            

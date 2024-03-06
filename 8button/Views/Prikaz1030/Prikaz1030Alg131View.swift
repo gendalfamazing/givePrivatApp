@@ -37,7 +37,7 @@ struct Prikaz1030Alg31View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing: 1){
                             MyViewBuilder(title: Text("31"), content: Text("""
                             **Гипертермия ≥ 38,5°С**:
                             """)).buildGrayInText()
@@ -149,20 +149,12 @@ struct Prikaz1030Alg31View: View {
                                 Инфекционные и неинфекционные заболевания
                                 """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                **Симптоматическая терапия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("31"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Симптоматическая терапия**:"), content: Text("""
                                         **2 мл 50% раствора метамизола с 2 мл дротаверина** или **1 мл 3% раствора кеторолака** в/в;
                                         **диазепам 0,5% 2 мл** при возбуждении и судорогах.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("31"), content: Text("""
@@ -173,18 +165,10 @@ struct Prikaz1030Alg31View: View {
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                **«Лихорадка неясной этиологии»**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("31"), content: Text("""
+                                MyViewBuilder(title: Text("**«Лихорадка неясной этиологии»**:"), content: Text("""
                                         - повышение температуры **до 38,5°С и выше не менее 3-х дней** при отсутствии явной этиологической причины
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("31"), content: Text("""
@@ -291,32 +275,17 @@ struct Prikaz1030Alg31View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                        **Клинические признаки**:
-                                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("31"), content: Text("""
+                        
+                        MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                 - распирающая головная боль;
                                 - угнетение сознания;
                                 - брадикардия;
                                 - судороги.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
-                           
-                        
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                        **Неотложная помощь**:
-                                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("31"), content: Text("""
+                         
+                        MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **Дексаметазон 8-32 мг (преднизолон 90- 120 мг), фуросемид до 4 мл 1% раствора в/в**
                                 
                                 - положение на боку,
@@ -325,10 +294,8 @@ struct Prikaz1030Alg31View: View {
                                 - **оксигенотерапия** (под контролем SpО2 – **не менее 90%**).
                                 - **инфузионная терапия** под контролем АД (**САД ≥ 90 мм.рт.ст.**).
                                 - симптоматическая терапия.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("31"), content: Text("""
@@ -340,39 +307,29 @@ struct Prikaz1030Alg31View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                        **Клинические признаки**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("31"), content: Text("""
+                            VStack (spacing:1){
+                                
+                                MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                 - ЧДД **более 40** или **менее 8** в 1 мин,
                                 - **SpО2 ≤ 90%** при дыхании атмосферным воздухом.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg3View()) {
-                                    MyViewBuilder(title: Text("31"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("31"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                        **Неотложная помощь**:
-                                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("31"), content: Text("""
+                        
+                        MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - положение на боку,
                                 - **при необходимости – установка воздуховода**, интубация трахеи;
                                 - пульсоксиметрия.
                                 - **оксигенотерапия** (под контролем SpО2 – **не менее 90%**).
                                 - **инфузионная терапия** под контролем АД (**САД ≥ 90 мм.рт.ст.**).
                                 - симптоматическая терапия.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("31"), content: Text("""
@@ -384,40 +341,30 @@ struct Prikaz1030Alg31View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                        **Клинические признаки**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("31"), content: Text("""
+                            VStack (spacing:1){
+                                
+                                MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                                 - холодная, бледная, влажная кожа;
                                 - САД **менее 90 мм.рт.ст.**,
                                 - ЧСС **более 100 в 1 мин**.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
-                                    MyViewBuilder(title: Text("31"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("31"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText().padding(5)
                                 }
                             }
-                            .padding(5)
                         }
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("31"), content: Text("""
-                                        **Неотложная помощь**:
-                                        """)).buildGrayInText()
-                        MyViewBuilder(title: Text("31"), content: Text("""
+                        
+                        MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - положение на боку,
                                 - **при необходимости – установка воздуховода**, интубация трахеи;
                                 - пульсоксиметрия.
                                 - **оксигенотерапия** (под контролем SpО2 – **не менее 90%**).
                                 - **инфузионная терапия** под контролем АД (**САД ≥ 90 мм.рт.ст.**).
                                 - симптоматическая терапия.
-                                """)).buildGrayInHiddenText()
-                    }
-                    .padding(5)
-                }
+                                """)).buildGrayInAndHiddenBlock()
+                    
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("31"), content: Text("""

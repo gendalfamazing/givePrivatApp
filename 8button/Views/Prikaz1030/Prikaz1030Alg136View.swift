@@ -83,9 +83,8 @@ struct Prikaz1030Alg36View: View {
                                             
                                         }
                                     }
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -135,28 +134,19 @@ struct Prikaz1030Alg36View: View {
                                                 
                                             }
                                         }
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("36"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("36"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 В/в **дротаверин 2% раствор 2-4 мл**, в/в **метамизол 50% раствор 2 мл**
                                 (при отсутствии эффекта **атропин 0,1% – 0,5 мл п/к**)
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("36"), content: Text("""
