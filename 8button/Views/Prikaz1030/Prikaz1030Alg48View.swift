@@ -50,7 +50,7 @@ struct Prikaz1030Alg48View: View {
                         VStack {
                             MyViewBuilder(title: Text("48"), content: Text("""
                             **Оценка уровня сознания**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             VStack {
                                 MyViewBuilder(title: Text("48"), content: Text("""
                                 **Признаки клинической смерти**
@@ -137,14 +137,8 @@ struct Prikaz1030Alg48View: View {
                     }
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("48"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("48"), content: Text("""
+                       
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **ингаляция кислорода**,
                                 - **согревание**.
                                 
@@ -154,11 +148,8 @@ struct Prikaz1030Alg48View: View {
                                 - при возбуждении – **диазепам 0,5% - 2-4 мл** (далее **по 2 мл** в/в **до получения эффекта**).
                                 - **преднизолон 120 - 300 мг** (дексаметазон 12 - 20 мг) в/в.
                                 - **фуросемид 20-40 мг** в/в.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("48"), content: Text("""
@@ -167,14 +158,8 @@ struct Prikaz1030Alg48View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("48"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("48"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **ингаляция кислорода**.
                                 
                                 - при необходимости – **интубация трахеи** или комбитюб (ларингиальная маска) и **ВВЛ 50% О2**.
@@ -185,11 +170,8 @@ struct Prikaz1030Alg48View: View {
                                 - при возбуждении: **диазепам 0,5% - 2-4 мл** в/в (далее **по 2 мл** в/в **до получения эффекта**), **натрия оксибутират 20% - 10-20 мл** в/в капельно в **5% растворе глюкозы**.
                                 - **преднизолон 120 - 300 мг** (дексаметазон – 12-20 мг) в/в.
                                 - **фуросемид 20-40 мг** (1% - 2-4 мл) в/в.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("48"), content: Text("""

@@ -45,41 +45,23 @@ struct Prikaz1030Alg49View: View {
                     
                     
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("49"), content: Text("""
-                            **Прекратить дальнейшее поступление яда в организм**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("49"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Прекратить дальнейшее поступление яда в организм**:"), content: Text("""
                             - **при ингаляционных отравлениях** – удалить пострадавшего из заражённой атмосферы (сотрудник МЧС);
                             - **при пероральном** – промыть желудок через зонд, ввести энтеросорбент;
                             - **при накожном** – обмывание поражённых участков кожи водой (температура не выше 18°С).
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("49"), content: Text("""
-                            **Неотложная помощь**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("49"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                             - **положение** – в зависимости от уровня сознания
                             - **контроль вены, 0,9% р-р натрия хлорида 250-500 мл** в/в,
                             - **пульсоксиметрия**
                             - **ингаляция кислорода – 4-6 л/мин**
                             - **симптоматическая терапия**
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
                        
                     MyViewBuilder(title: Text("49"), content: Text("""
@@ -87,28 +69,21 @@ struct Prikaz1030Alg49View: View {
                     """)).buildGrayText()
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("49"), content: Text("""
-                            **Примечание.**
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("49"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание.**"), content: Text("""
                                     1. **Помнить о самозащите** (работать в перчатках и маске).
                                     2. **При подозрении на отравление** – немедленное решение вопроса об **интубации** трахеи или комбитьюб (ларингиальная маска).
                                     3. При необходимости – **СЛР**.
                                     4. **Активированный уголь – противопоказан при отравлении кислотами и щелочами**.
                                     5. Чётко **собрать токсикологический анамнез**, проанализировать токсикологическую ситуацию, **при возможности собрать и сохранить остатки ядовитого вещества**.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                       
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

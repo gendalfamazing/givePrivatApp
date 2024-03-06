@@ -47,7 +47,7 @@ struct Prikaz1030Alg45View: View {
                         VStack{
                             MyViewBuilder(title: Text("45"), content: Text("""
                             **Степень и этиология**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             VStack{
                                 HStack{
                                     
@@ -371,85 +371,47 @@ struct Prikaz1030Alg45View: View {
                                             }
                                         }
                                 }
-                            } // stepeti
-                            
-                            
+                            } // stepeni
                             
                         }
                         .padding(5.0)
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - покраснение, отёк, боль
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 **IIa** - покраснение, образование **пузырьков**, боль (повреждение **поверхностных слоёв кожи**)
                                 **IIб** - образование **пузырей**, боль, кожа анемична (повреждение **глубоких слоёв кожи**)
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - **некроз**, серая, белая или чёрная кожа, **боль отсутствует**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     
                     if isTextExpanded6{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Проводимые мероприятия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Проводимые мероприятия**:"), content: Text("""
                                 - **прекращение воздействия повреждающих агентов**
                                 - быстрое и продолжительное (до исчезновения боли) **охлаждение поражённых тканей проточной холодной водой 12-18°С** (помнить об опасности переохлаждения) в течение **10-15 мин**.
                                 - **удаление** всех не соприкасающихся с участком ожога частей одежды
                                 - **стерильная сухая повязка** (накладка) на открытые раны
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded7{
                         Image(systemName: "arrow.down")
@@ -465,61 +427,34 @@ struct Prikaz1030Alg45View: View {
                     }
                     if isTextExpanded8{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Положение**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Положение**:"), content: Text("""
                                 - на спине;
                                 - при **потере сознания** – стабильное положение **на боку**;
                                 - при **ингаляционной травме** – **с возвышением головным концом**;
                                 - во всех остальных случаях – **с приподнятым ножным концом**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded9{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Шок**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Шок**:"), content: Text("""
                                 (при площади ожога **около 15 %** возникает угроза шока)
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded10{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **обеспечение жизненно важных функций организма**
                                 - **санация верхних дыхательных путей**
                                 - **оксигенотерапия** – **4-6 литров** О2/мин – 100 % кислородом
                                 - при необходимости своевременная **интубация и ИВЛ**
                                 - постоянный контроль **ЧСС и АД**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded11{
                         Image(systemName: "arrow.down")
@@ -554,7 +489,7 @@ struct Prikaz1030Alg45View: View {
                             VStack {
                                 MyViewBuilder(title: Text("45"), content: Text("""
                                 **Противошоковая терапия**:
-                                """)).buildGrayInText()
+                                """)).buildGrayInText().padding(-5)
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
                                     MyViewBuilder(title: Text("45"), content: Text("Алгоритм 5 «Гиповолемический шок».")).buildNavigationText()
                                 }
@@ -572,14 +507,8 @@ struct Prikaz1030Alg45View: View {
                     }
                     if isTextExpanded16{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("45"), content: Text("""
-                                **Доставка в стационар по профилю основного заболевания**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("45"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Доставка в стационар по профилю основного заболевания**:"), content: Text("""
                                 - больные с ожогами **II-III степени** поражения **более 10%** поверхности тела,
                                 **дети или пожилые пациенты с поражением 5-10% поверхности тела**;
                                 - ожоги лица, кистей, стоп и гениталий;
@@ -588,35 +517,25 @@ struct Prikaz1030Alg45View: View {
                                 - химические ожоги;
                                 - больные с дополнительными травмами;
                                 - пациенты без сознания.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     
                     
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("45"), content: Text("""
-                            **Примечание.**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("45"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание.**"), content: Text("""
                                     1. **Не производить реакцию нейтрализации химического вещества на поверхности кожи**.
                                     2. В острой фазе **противопоказаны**: **коллоидные растворы, диуретики, кортизон, катехоламины, антибиотики**.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                        
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

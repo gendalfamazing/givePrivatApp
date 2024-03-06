@@ -40,13 +40,13 @@ struct Prikaz1030Alg47View: View {
                 VStack {
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack {
                             
                             MyViewBuilder(title: Text("47"), content: Text("""
                                     **Первичный осмотр (ABCD)**, оценка уровня сознания.
                                     """)).buildGrayInHiddenText()
                             NavigationLink (destination: Prikaz1030Alg2View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Алгоритм 2 «Первичный осмотр пациента (ABCD)».")).buildNavigationText()
+                                MyViewBuilder(title: Text("1"), content: Text("Алгоритм 2 «Первичный осмотр пациента (ABCD)».")).buildNavigationText().padding(5.0)
                             }
                             MyViewBuilder(title: Text("47"), content: Text("""
                                     **Пациент в сознании**:
@@ -101,30 +101,20 @@ struct Prikaz1030Alg47View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10).padding(.bottom, -3)
                         }
-                        .padding(5.0)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("47"), content: Text("""
-                                **Медицинская помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("47"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Медицинская помощь**:"), content: Text("""
                                 - ингаляция **кислорода**;
                                 - **снять мокрую одежду**;
                                 - **укутать в одеяло**;
                                 - в/в **подогретый 0,9% раствор натрия хлорида**, растворы электролитов;
                                 - **ЭКГ контроль**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("47"), content: Text("""
@@ -183,10 +173,10 @@ struct Prikaz1030Alg47View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                                 
                             }
-                            .padding(5)
+                            
                         }
                     }
                     if isTextExpanded3 {
@@ -202,14 +192,8 @@ struct Prikaz1030Alg47View: View {
                     }
                     if isTextExpanded5 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("47"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("47"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - поддержание **проходимости дыхательных путей**;
                                 - ингаляция **кислорода**;
                                 - **интубация трахеи** или комбитюб (ларингиальная маска);
@@ -218,11 +202,8 @@ struct Prikaz1030Alg47View: View {
                                 - в/в **подогретый 0,9% раствор натрия хлорида**, растворы электролитов;
                                 - **ЭКГ** контроль;
                                 - **готовность к СЛР**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("47"), content: Text("""
@@ -231,25 +212,18 @@ struct Prikaz1030Alg47View: View {
                     }
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("47"), content: Text("""
-                            **Примечание.**
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("47"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание.**"), content: Text("""
                                     1. Применять **пассивное согревание**.
                                     2. **Резкие движения, любая стимуляция (гипервентиляция, интубация) могут быть причиной фибрилляции**.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                        
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

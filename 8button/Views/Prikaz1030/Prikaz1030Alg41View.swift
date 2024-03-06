@@ -38,20 +38,16 @@ struct Prikaz1030Alg41View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("41"), content: Text("""
                             **Провести обследование**.
-                            """)).buildGrayInText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                       
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("41"), content: Text("""
                             **Клинические признаки гиповолемического шока**:
                             """)).buildGrayInText()
@@ -74,6 +70,7 @@ struct Prikaz1030Alg41View: View {
                                         }
                                     }
                             }
+                            Spacer(minLength: 5)
                             HStack {
                                 MyViewBuilder(title: Text("41"), content: Text("""
                                 **Есть**
@@ -160,9 +157,8 @@ struct Prikaz1030Alg41View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
@@ -176,7 +172,7 @@ struct Prikaz1030Alg41View: View {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
                                 
-                                HStack {
+                                VStack {
                                     MyViewBuilder(title: Text("41"), content: Text("""
                                     **Наружное кровотечение**
                                     """)).buildGreen1Text(isTextExpanded: isTextExpanded3)
@@ -264,12 +260,9 @@ struct Prikaz1030Alg41View: View {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
                                 
-                                HStack {
+                                VStack {
                                     MyViewBuilder(title: Text("41"), content: Text("""
-                                    
                                     **Наружное кровотечение**
-                                    
-                                    
                                     """)).buildGreen1Text(isTextExpanded: isTextExpanded3)
                                         .onTapGesture {
                                             withAnimation (.snappy) {
@@ -418,9 +411,8 @@ struct Prikaz1030Alg41View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded4{
@@ -428,13 +420,13 @@ struct Prikaz1030Alg41View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            VStack (spacing:1){
                                 MyViewBuilder(title: Text("41"), content: Text("""
                                 **Обезболивание ненаркотическими**
                                 **(1 мл 3% раствора кеторолака, 1-2 мл 5% раствора трамадола)**
                                 и **наркотическими**
                                 **(1 мл 0,005% раствора фентанила, 1 мл 2% раствора тримеперидина)** анальгетиками в/в
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(-5).padding(.vertical, 5)
                                 HStack {
                                     MyViewBuilder(title: Text("41"), content: Text("""
                                     **Вывих**
@@ -569,19 +561,14 @@ struct Prikaz1030Alg41View: View {
                     
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("41"), content: Text("""
-                            **Справочно**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("41"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Справочно**."), content: Text("""
                                     **дефицит ОЦК при переломах**:
                                     
                                     - костей таза **500-5000 мл**;
@@ -589,10 +576,8 @@ struct Prikaz1030Alg41View: View {
                                     - обеих костей голени **100-1000 мл**;
                                     - плеча **100-800 мл**;
                                     - обеих костей предплечья **50-400 мл**.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                        
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

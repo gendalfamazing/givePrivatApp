@@ -40,7 +40,7 @@ struct Prikaz1030Alg44View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("44"), content: Text("""
                                     **Политравма всегда предполагается**:
                                     """)).buildGrayInText()
@@ -68,7 +68,6 @@ struct Prikaz1030Alg44View: View {
                                     }
                             }
                         }
-                        .padding(5)
                     }
                     Image(systemName: "arrow.down")
                        
@@ -82,7 +81,7 @@ struct Prikaz1030Alg44View: View {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
                             HStack {
-                                MyViewBuilder(title: Text("44"), content: Text("""
+                                MyViewBuilder(title: Text("42"), content: Text("""
                                 **Признаки ОДН**
                                 """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
                                     .onTapGesture {
@@ -95,7 +94,7 @@ struct Prikaz1030Alg44View: View {
                                             
                                         }
                                     }
-                                MyViewBuilder(title: Text("44"), content: Text("""
+                                MyViewBuilder(title: Text("42"), content: Text("""
                                 **Признаки ГШ**
                                 """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
                                     .onTapGesture {
@@ -109,46 +108,37 @@ struct Prikaz1030Alg44View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5)
                             if isTextExpanded1{
-                                Image(systemName: "arrow.down")
-                                   
+                                VStack (spacing:1) {
                                 
-                                MyViewBuilder(title: Text("44"), content: Text("""
-                                        **Клинические признаки острой дыхательной недостаточности**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("44"), content: Text("""
+                                MyViewBuilder(title: Text("**Клинические признаки острой дыхательной недостаточности**:"), content: Text("""
                                         - ЧДД **более 40 или менее 8** в 1 мин;
                                         - **SpО2 менее 90%** при дыхании атмосферным воздухом.
-                                        """)).buildGrayInHiddenText()
+                                        """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(.top, -5)
                                 
                                 NavigationLink (destination: Prikaz1030Alg3View()) {
-                                    MyViewBuilder(title: Text("44"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("42"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText().padding(5)
                                 }
-                                
+                            }
                             }
                             if isTextExpanded2{
-                                Image(systemName: "arrow.down")
-                                   
-                                
-                                MyViewBuilder(title: Text("44"), content: Text("""
-                                    **Клинические признаки гиповолемического шока**:
-                                    """)).buildGrayInText()
-                                MyViewBuilder(title: Text("44"), content: Text("""
+                                VStack (spacing:1){
+                                    MyViewBuilder(title: Text("**Клинические признаки гиповолемического шока**:"), content: Text("""
                                     - холодная, бледная, влажная кожа;
                                     - **САД менее 90 мм.рт.ст.**,
                                     - **ЧСС более 100** в 1 мин,
                                     - шоковый индекс **более 0,7**;
                                     - **SpО2 менее 90%**.
-                                    """)).buildGrayInHiddenText()
-                                
-                                NavigationLink (destination: Prikaz1030Alg5View()) {
-                                    MyViewBuilder(title: Text("44"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
+                                    """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(.top, -5)
+                                    
+                                    NavigationLink (destination: Prikaz1030Alg5View()) {
+                                        MyViewBuilder(title: Text("42"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText().padding(5)
+                                    }
                                 }
-                                
                             }
                         }
-                        .padding(5)
+                        
                     }
                     Image(systemName: "arrow.down")
                        
@@ -165,14 +155,8 @@ struct Prikaz1030Alg44View: View {
                             """)).buildGrayText()
                     
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("44"), content: Text("""
-                            **Неотложная помощь**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("44"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                             1.**Инфузионная терапия** под контролем АД (**САД ≥ 90 мм.рт.ст.**).
                             2.**Оксигенотерапия** (под контролем SpО2 – **не менее 90%**).
                             3.**Обезболивание** анальгетиками в/в :
@@ -180,25 +164,20 @@ struct Prikaz1030Alg44View: View {
                             - наркотическими (**1 мл 0,005% раствора фентанила**, **1 мл 2% раствора тримеперидина**)
                             4.**При судорожном синдроме и возбуждении – диазепам 2-4 мл 0,5%** раствора в/в.
                             5.**Преднизолон 60-120 мг или метилпреднизолон в дозе 30 мг/кг в/в**.
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                         
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
-                            MyViewBuilder(title: Text("44"), content: Text("""
-                            **Состояние стабилизировалось**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("44"), content: Text("""
+                            
+                            MyViewBuilder(title: Text("**Состояние стабилизировалось**:"), content: Text("""
                             - отсутствие нарушений сознания;
                             - отсутствие нарушений дыхания;
                             - **САД более 90 мм.рт.ст.**,
                             - **SpО2 ≥90%**.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                             HStack{
                                 
                                     MyViewBuilder(title: Text("44"), content: Text("""
@@ -229,9 +208,9 @@ struct Prikaz1030Alg44View: View {
                                         }
                                     
                                
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
+                        
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")

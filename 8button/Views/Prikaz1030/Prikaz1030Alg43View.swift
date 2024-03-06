@@ -53,7 +53,7 @@ struct Prikaz1030Alg43View: View {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
                             HStack {
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                                MyViewBuilder(title: Text("42"), content: Text("""
                                 **Признаки ОДН**
                                 """)).buildGreen1Text(isTextExpanded: isTextExpanded1)
                                     .onTapGesture {
@@ -66,7 +66,7 @@ struct Prikaz1030Alg43View: View {
                                             
                                         }
                                     }
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                                MyViewBuilder(title: Text("42"), content: Text("""
                                 **Признаки ГШ**
                                 """)).buildGreen1Text(isTextExpanded: isTextExpanded2)
                                     .onTapGesture {
@@ -80,46 +80,37 @@ struct Prikaz1030Alg43View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5)
                             if isTextExpanded1{
-                                Image(systemName: "arrow.down")
-                                   
+                                VStack (spacing:1) {
                                 
-                                MyViewBuilder(title: Text("43"), content: Text("""
-                                        **Клинические признаки острой дыхательной недостаточности**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                                MyViewBuilder(title: Text("**Клинические признаки острой дыхательной недостаточности**:"), content: Text("""
                                         - ЧДД **более 40 или менее 8** в 1 мин;
                                         - **SpО2 менее 90%** при дыхании атмосферным воздухом.
-                                        """)).buildGrayInHiddenText()
+                                        """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(.top, -5)
                                 
                                 NavigationLink (destination: Prikaz1030Alg3View()) {
-                                    MyViewBuilder(title: Text("43"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("42"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText().padding(5)
                                 }
-                                
+                            }
                             }
                             if isTextExpanded2{
-                                Image(systemName: "arrow.down")
-                                   
-                                
-                                MyViewBuilder(title: Text("43"), content: Text("""
-                                    **Клинические признаки гиповолемического шока**:
-                                    """)).buildGrayInText()
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                                VStack (spacing:1){
+                                    MyViewBuilder(title: Text("**Клинические признаки гиповолемического шока**:"), content: Text("""
                                     - холодная, бледная, влажная кожа;
                                     - **САД менее 90 мм.рт.ст.**,
                                     - **ЧСС более 100** в 1 мин,
                                     - шоковый индекс **более 0,7**;
                                     - **SpО2 менее 90%**.
-                                    """)).buildGrayInHiddenText()
-                                
-                                NavigationLink (destination: Prikaz1030Alg5View()) {
-                                    MyViewBuilder(title: Text("43"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText()
+                                    """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(.top, -5)
+                                    
+                                    NavigationLink (destination: Prikaz1030Alg5View()) {
+                                        MyViewBuilder(title: Text("42"), content: Text("Алгоритм 5 «Гиповолемический шок»")).buildNavigationText().padding(5)
+                                    }
                                 }
-                                
                             }
                         }
-                        .padding(5)
+                        
                     }
                     Image(systemName: "arrow.down")
                        
@@ -128,7 +119,7 @@ struct Prikaz1030Alg43View: View {
                         VStack {
                             MyViewBuilder(title: Text("43"), content: Text("""
                             **Уточнить характер травмы живота**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             VStack {
                                 MyViewBuilder(title: Text("43"), content: Text("""
                                 **Повреждение полого органа**
@@ -204,40 +195,24 @@ struct Prikaz1030Alg43View: View {
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("43"), content: Text("""
-                                        **Объективные данные**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Объективные данные**:"), content: Text("""
                                         - **симптомы раздражения брюшины положительные**;
                                         - **живот не участвует в акте дыхания**;
                                         - болезненность и выраженное напряжение при поверхностной пальпации.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                            
                         
                     }
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("43"), content: Text("""
-                                        **Объективные данные**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Объективные данные**:"), content: Text("""
                                         - бледные, влажные кожные покровы;
                                         - **выраженная тахикардия**;
                                         - **артериальная гипотензия**.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                           
                         
                     }
                     if isTextExpanded5{
@@ -259,14 +234,8 @@ struct Prikaz1030Alg43View: View {
                                 Установка периферического **катетера наибольшего диаметра** (при необходимости 2-х и более).
                                 """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("43"), content: Text("""
-                                        **Неотложная помощь**:
-                                        """)).buildGrayInText()
-                                MyViewBuilder(title: Text("43"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                         1.**Инфузионная терапия** под контролем АД (**САД ≥ 90 мм.рт.ст.**).
                                         2.**Оксигенотерапия** (под контролем SpО2 – **не менее 90%**).
                                         3.**Обезболивание** анальгетиками в/в :
@@ -274,10 +243,8 @@ struct Prikaz1030Alg43View: View {
                                         - наркотическими (**1 мл 0,005% раствора фентанила**, **1 мл 2% раствора тримеперидина**)
                                         4.**При судорожном синдроме и возбуждении – диазепам 2-4 мл 0,5%** раствора в/в.
                                         5.**Асептическая повязка на рану** после обработки краев раны антисептиком (**3% раствор перекиси водорода**) при открытой травме.
-                                        """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                        """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("43"), content: Text("""
@@ -286,24 +253,17 @@ struct Prikaz1030Alg43View: View {
                     }
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("43"), content: Text("""
-                            **Примечание.**.
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("43"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание.**"), content: Text("""
                                     **Любую колото-резаную рану живота считать проникающей**, ранящие предметы (нож, шило, заточка), находящиеся в ране **не извлекать**, а **дополнительно фиксировать** (пластырем) или **удерживать рукой**.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                       
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

@@ -40,22 +40,18 @@ struct Prikaz1030Alg50View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("50"), content: Text("""
-                            **Клинические признаки**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("50"), content: Text("""
+                        VStack (spacing:1){
+                            
+                            MyViewBuilder(title: Text("**Клинические признаки**:"), content: Text("""
                             - внезапное появление;
                             - сыпи, гиперемии;
                             - отек кожи, слизистых;
                             - кожный зуд, жжение слизистых.
-                            """)).buildGrayInHiddenText()
-                            MyViewBuilder(title: Text("50"), content: Text("""
-                            **При выявлении аллергена**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("50"), content: Text("""
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(-5)
+                            
+                            MyViewBuilder(title: Text("**При выявлении аллергена**:"), content: Text("""
                             **Немедленное устранение контакта с аллергеном!**
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons().padding(-5)
                             VStack {
                                 MyViewBuilder(title: Text("50"), content: Text("""
                                 **Анафилактический шок**
@@ -140,34 +136,22 @@ struct Prikaz1030Alg50View: View {
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("50"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("50"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - аллергический ринит,
                                 - конюнктивит,
                                 - локальная крапивница
-                                """)).buildGrayInHiddenText()
-                                
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                MyViewBuilder(title: Text("50"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("50"), content: Text("""
+                                
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **хлоропирамин 1-2 мл 2%** раствора или **клемастин 1-2 мл 1%** раствора в 20 мл 0,9% раствора натрия хлорида в/в
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 HStack {
                                     
                                     MyViewBuilder(title: Text("50"), content: Text("""
@@ -196,32 +180,22 @@ struct Prikaz1030Alg50View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                                 
                             }
-                            .padding(5)
+                            
                         }
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("50"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("50"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - генерализованная сыпь,
                                 - отек подкожной клетчатки,
                                 - кашель, осиплость голоса, удушье,
                                 - тошнота, рвота, диарея
-                                """)).buildGrayInHiddenText()
-                                
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("50"), content: Text("""
@@ -230,24 +204,14 @@ struct Prikaz1030Alg50View: View {
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("50"), content: Text("""
-                                **Клинические проявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("50"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Клинические проявления**:"), content: Text("""
                                 - нарастающая слабость,
                                 - прогрессирующая гипотензия,
                                 - бледные, холодные и влажные кожные покровы,
                                 - другие клинические признаки шока
-                                """)).buildGrayInHiddenText()
-                                
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("50"), content: Text("""
@@ -257,24 +221,22 @@ struct Prikaz1030Alg50View: View {
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("50"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("50"), content: Text("""
+                            VStack (spacing:1){
+                                
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1) **Эпинефрин 0,18% - 0,5-1 мл** в/в в 20 мл 0,9% натрия хлорида (при необходимости повторить);
                                 - **при распространении отека на область гортани эпинефрин 0,18% эндотрахеально 2-3 мл** в 20 мл 0,9% раствора натрия хлорида.
                                 2) **При возникновении шока при в/в инъекции – максимально забрать кровь из вены**.
                                 3) **Инфузионная терапия** (при необходимости дополнительно пункция центральной вены) по алгоритму 5 «Гиповолемический шок».
                                 4) **Допамин 10 мл 4% раствора** в 0,9% растворе натрия хлорида (после массивной инфузионной терапии) в/в капельно.
                                 5) **Преднизолон 120 мг** и более или **метилпреднизолон (30 мг/кг веса)** в/в.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
                                 NavigationLink (destination: Prikaz1030Alg5View()) {
-                                    MyViewBuilder(title: Text("50"), content: Text("Алгоритм 5 «Гиповолемический шок».")).buildNavigationText()
+                                    MyViewBuilder(title: Text("50"), content: Text("Алгоритм 5 «Гиповолемический шок».")).buildNavigationText().padding(5)
                                 }
                                 
                             }
-                            .padding(5)
+                            
                         }
                         Image(systemName: "arrow.down")
                            
@@ -285,21 +247,12 @@ struct Prikaz1030Alg50View: View {
                     if isTextExpanded4{
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("50"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("50"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 1. **Преднизолон 120 мг** и более или **метилпреднизолон (30 мг/кг веса)** в/в.
                                 **Симптоматическая терапия**:
                                 - **при бронхоспазме сальбутамол 2,55 мг** (небулайзер) или **аминофиллин 2,4% раствор 5-10 мл** в 20 мл 0,9% раствора натрия хлорида в/в.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("50"), content: Text("""

@@ -40,14 +40,14 @@ struct Prikaz1030Alg46View: View {
                 VStack {
                     ZStack{
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
+                        VStack {
                             
                             MyViewBuilder(title: Text("46"), content: Text("""
                                     **Перенести пациента в прохладное место**.
                                     Первичный осмотр (ABCD), оценка уровня сознания.
                                     """)).buildGrayInHiddenText()
                             NavigationLink (destination: Prikaz1030Alg2View()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Алгоритм 2 «Первичный осмотр пациента (ABCD)».")).buildNavigationText()
+                                MyViewBuilder(title: Text("1"), content: Text("Алгоритм 2 «Первичный осмотр пациента (ABCD)».")).buildNavigationText().padding(5.0)
                             }
                             MyViewBuilder(title: Text("46"), content: Text("""
                                     **Пациент в сознании**:
@@ -90,70 +90,43 @@ struct Prikaz1030Alg46View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10).padding(.bottom, -3)
                         }
-                        .padding(5.0)
+                        
                     }
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("46"), content: Text("""
-                                **Медицинская помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("46"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Медицинская помощь**:"), content: Text("""
                                 - **ингаляция кислорода** при необходимости;
                                 - **охлаждение пациента**;
                                 - **солевой раствор** внутрь или в/в при тошноте, рвоте (**0,9% раствор натрия хлорида, растворы электоролитов**);
                                 - **ЭКГ контроль**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("46"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("46"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - поддержание **проходимости дыхательных путей**;
                                 - **кислород** в высокой концентрации;
                                 - **интубация трахеи**;
                                 - в/в **0,9% раствор натрия хлорида, растворы электоролитов**;
                                 - **быстрое охлаждение**;
                                 - ЭКГ контроль.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
-                        Image(systemName: "arrow.down")
+                                """)).buildGrayInAndHiddenBlock()
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("46"), content: Text("""
-                                **Медицинская помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("46"), content: Text("""
+                        Image(systemName: "arrow.down")
+                        
+                                MyViewBuilder(title: Text("**Медицинская помощь**:"), content: Text("""
                                 - **ингаляция кислорода** при необходимости;
                                 - **охлаждение пациента**;
                                 - **солевой раствор** внутрь или в/в при тошноте, рвоте (**0,9% раствор натрия хлорида, растворы электоролитов**);
                                 - **ЭКГ контроль**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
