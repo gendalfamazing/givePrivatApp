@@ -84,45 +84,28 @@ struct Prikaz1030Alg55View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("55"), content: Text("""
-                                **Оценка психического статуса**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("55"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Оценка психического статуса**:"), content: Text("""
                                 1. **Строгий надзор** (ни на минуту не оставлять больного одного в помещении и машине СНМП).
                                 2. **Открытое обсуждение суицидальных планов и идей** больного, с привлечением родных, близких и авторитетных лиц.
                                 3. **Консультация психиатра** или замещающего его специалиста.
                                 4. **Рекомендация добровольной госпитализации**.
                                 5. **Тщательный осмотр вещей - профилактика самоубийства или нападения на окружающих при транспортировке**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("55"), content: Text("""
-                                **При выраженной ажитированной депрессии или меланхолическом раптусе**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("55"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**При выраженной ажитированной депрессии или меланхолическом раптусе**:"), content: Text("""
                                 - **диазепам 0,5% раствор 2-4 мл** в/м.
                                 
                                 **Препараты со стимулирующим эффектом при психомоторном возбуждении не назначать**!
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("55"), content: Text("""
@@ -131,23 +114,14 @@ struct Prikaz1030Alg55View: View {
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("55"), content: Text("""
-                                **Оценка соматического состояния пациента**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("55"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Оценка соматического состояния пациента**:"), content: Text("""
                                 - отравления,
                                 - повешение,
                                 - ранения,
                                 - травматические повреждения
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("55"), content: Text("""

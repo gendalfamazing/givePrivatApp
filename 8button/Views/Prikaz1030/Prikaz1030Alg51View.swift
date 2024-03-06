@@ -51,7 +51,7 @@ struct Prikaz1030Alg51View: View {
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("51"), content: Text("""
                             **Выраженная кровопотеря**:
                             """)).buildGrayInText()
@@ -74,6 +74,7 @@ struct Prikaz1030Alg51View: View {
                                         }
                                     }
                             }
+                            Spacer(minLength: 5)
                             HStack {
                                 
                                 MyViewBuilder(title: Text("51"), content: Text("""
@@ -131,10 +132,9 @@ struct Prikaz1030Alg51View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -219,115 +219,61 @@ struct Prikaz1030Alg51View: View {
                     }
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("51"), content: Text("""
-                                **Диагностика**:
-                                """)).buildGrayInText()
-                                
-                                MyViewBuilder(title: Text("51"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Диагностика**:"), content: Text("""
                                 - **данные УЗИ**,
                                 - **снижение АД, увеличение ЧСС**,
                                 - пульсоксиметрия,
                                 - **наличие кровянистых выделений**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("51"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                
-                                MyViewBuilder(title: Text("51"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 - **до начала схваток доставка на носилках в стационар**,
                                 - установка **периферического катетера**,
                                 - **инфузионная терапия** (**400 мл** 0,9 % раствора **натрия хлорида**),
                                 - кислородотерапия при **SpO2 менее 90%**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("51"), content: Text("""
-                                **Диагностика**:
-                                """)).buildGrayInText()
-                                
-                                MyViewBuilder(title: Text("51"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Диагностика**:"), content: Text("""
                                 - **в анамнезе беременность**,
                                 - **кровотечение**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("51"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                
-                                MyViewBuilder(title: Text("51"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 - **спазмолитики (дротаверин 2%- 2 мл в/в)**,
                                 - **доставка в стационар** по профилю основного заболевания
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                     }
                     if isTextExpanded5 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("51"), content: Text("""
-                                **Диагностика**:
-                                """)).buildGrayInText()
-                                
-                                MyViewBuilder(title: Text("51"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Диагностика**:"), content: Text("""
                                 - **повышение АД**,
                                 - **отеки**, протеинурия,
                                 - боли в эпигастрии,
                                 - **судороги**
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                          
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("51"), content: Text("""
-                                **Тактика**:
-                                """)).buildGrayInText()
-                                
-                                MyViewBuilder(title: Text("51"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Тактика**:"), content: Text("""
                                 - установка **периферического катетера**,
                                 - **инфузионная терапия** (**400 мл** 0,9 % раствора **натрия хлорида**),
                                 - кислородотерапия при **SpO2 менее 90%**,
                                 - **20-40 мг (0,5% - 4-8 мл) диазепама** в/в,
                                 - **20 мл 25% раствора магния сульфата** в/в,
                                 - **доставка в стационар** по профилю основного заболевания **на носилках**.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                     }
                     
                 }

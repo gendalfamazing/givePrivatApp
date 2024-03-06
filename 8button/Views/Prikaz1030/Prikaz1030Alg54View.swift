@@ -38,33 +38,19 @@ struct Prikaz1030Alg54View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("54"), content: Text("""
                             **Психомоторное возбуждение**
-                            """)).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                        
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("54"), content: Text("""
-                            **Обеспечение безопасности больного и окружающих**
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("54"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Обеспечение безопасности больного и окружающих**"), content: Text("""
                             - cоздание **спокойной обстановки**,
                             - налаживание контакта с пациентом,
                             - **получение согласия на добровольную госпитализацию**
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                       
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -112,25 +98,16 @@ struct Prikaz1030Alg54View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("54"), content: Text("""
-                                **Декомпенсация психического заболевания**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("54"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Декомпенсация психического заболевания**:"), content: Text("""
                                 - **хлорпромазин 100–150 мг** в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("54"), content: Text("""
@@ -182,9 +159,8 @@ struct Prikaz1030Alg54View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {
@@ -201,19 +177,11 @@ struct Prikaz1030Alg54View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("54"), content: Text("""
-                                **Панические атаки, глубокие метаболические расстройства, неясный диагноз**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("54"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Панические атаки, глубокие метаболические расстройства, неясный диагноз**:"), content: Text("""
                                 - **диазепам 10–30 мг (0,5% - 2-6 мл)** в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("54"), content: Text("""

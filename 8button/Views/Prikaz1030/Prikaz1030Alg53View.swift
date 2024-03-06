@@ -55,20 +55,12 @@ struct Prikaz1030Alg53View: View {
                     2. **Возглавить и организовать оказание медицинской помощи на месте ДТП**.
                     """)).buildGrayText()
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("53"), content: Text("""
-                            **По прибытию на место вызова быстро оценить ситуацию**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("53"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**По прибытию на место вызова быстро оценить ситуацию**:"), content: Text("""
                             - определить **число пострадавших**;
                             - **произвести первичную сортировку** по тяжести состояния.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     Image(systemName: "arrow.down")
                        
                     
@@ -79,11 +71,9 @@ struct Prikaz1030Alg53View: View {
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("53"), content: Text("""
-                            **Обследование пострадавшего**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("53"), content: Text("""
+                        VStack (spacing:1){
+                            
+                            MyViewBuilder(title: Text("**Обследование пострадавшего**:"), content: Text("""
                             1. **первичный осмотр** для оценки нарушения витальных функций;
                             2. **углубленный осмотр проводится в салоне автомобиля СНМП**:
                             - **оценить состояние** пострадавшего,
@@ -95,11 +85,9 @@ struct Prikaz1030Alg53View: View {
                             4. сбор **анамнеза жизни** (при возможности);
                             5. **провести осмотр, аускультацию, пальпацию, пульсоксиметрию**;
                             6. **установить предварительный диагноз**, **оценить тяжесть функциональных нарушений**.
-                            """)).buildGrayInHiddenText()
-                            MyViewBuilder(title: Text("53"), content: Text("""
-                            **Предполагать наличие политравмы в следующих случаях**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("53"), content: Text("""
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                            
+                            MyViewBuilder(title: Text("**Предполагать наличие политравмы в следующих случаях**:"), content: Text("""
                             - **смерть пассажиров или водителя** транспортного средства;
                             - если пострадавшего **выбросило из машины**;
                             - деформация транспортного средства **превышает 50%**;
@@ -109,28 +97,20 @@ struct Prikaz1030Alg53View: View {
                             - **падении с высоты более 3 метров**;
                             - **взрыве**;
                             - **завале сыпучими материалами**.
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                         }
-                        .padding(5)
                     }
                     Image(systemName: "arrow.down")
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("53"), content: Text("""
-                            **Выполнить все необходимые мероприятия по подготовке пострадавшего к транспортировке**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("53"), content: Text("""
+                            MyViewBuilder(title: Text("""
+                                                        **Выполнить все необходимые мероприятия по подготовке пострадавшего к транспортировке**:
+                                                        """), content: Text("""
                             - обеспечить **респираторную поддержку** (**SpO2 более 90%**),
                             - **венозный доступ и инфузионную терапию** (**САД ≥ 90 мм.рт.ст.**),
                             - адекватное **обезболивание**,
                             - **симптоматическую терапию**
-                            """)).buildGrayInHiddenText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                       
                     Image(systemName: "arrow.down")
                        
                     MyViewBuilder(title: Text("53"), content: Text("""

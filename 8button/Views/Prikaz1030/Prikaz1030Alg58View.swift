@@ -82,44 +82,25 @@ struct Prikaz1030Alg58View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     
                     if isTextExpanded1{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("58"), content: Text("""
-                                **До извлечения**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("58"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**До извлечения**:"), content: Text("""
                                 - **наложить жгут**.
                                 - ввести: **тримеперидин 1% раствор 1 мл** в/в.
                                 - в/в **инфузия растворов электролитов** в объеме достаточном для поддержание уровня артериального давления **не ниже 90-100 мм.рт.ст.**
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlock()
                                 
-                            }
-                            .padding(5)
-                        }
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("58"), content: Text("""
-                                **После извлечения**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("58"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**После извлечения**:"), content: Text("""
                                 - **оценить степень повреждения**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -156,47 +137,27 @@ struct Prikaz1030Alg58View: View {
                                             }
                                         }
                                     
-                                }
-                                
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("58"), content: Text("""
-                                **До извлечения**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("58"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**До извлечения**:"), content: Text("""
                                 - **жгут не накладывать**.
                                 - ввести **тримеперидин 1% раствор 1 мл** в/в.
                                 - в/в **инфузия растворов электролитов** в объеме достаточном для поддержания уровня артериального давления **не ниже 90-100 мм.рт.ст.**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("58"), content: Text("""
-                                **После извлечения**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("58"), content: Text("""
+                                MyViewBuilder(title: Text("**После извлечения**:"), content: Text("""
                                 - **тугое бинтование конечности снизу вверх**.
                                 - **транспортная иммобилизация**.
                                 - **местная гипотермия**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("58"), content: Text("""

@@ -40,7 +40,7 @@ struct Prikaz1030Alg56View: View {
                 VStack {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             MyViewBuilder(title: Text("56"), content: Text("""
                             **Исключить**:
                             """)).buildGrayInText()
@@ -65,6 +65,7 @@ struct Prikaz1030Alg56View: View {
                                         }
                                     }
                             }
+                            Spacer(minLength: 5)
                             HStack {
                                 
                                 MyViewBuilder(title: Text("56"), content: Text("""
@@ -115,19 +116,18 @@ struct Prikaz1030Alg56View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
+                            LazyVStack {
                                 MyViewBuilder(title: Text("56"), content: Text("""
                                 **См. алгоритмы**:
-                                """)).buildGrayInText()
+                                """)).buildGrayInText().padding(-5)
                                 NavigationLink (destination: Prikaz1030Alg15View()) {
                                     MyViewBuilder(title: Text("56"), content: Text("Алгоритм 15 «Острый коронарный синдром»")).buildNavigationText()
                                 }
@@ -149,14 +149,8 @@ struct Prikaz1030Alg56View: View {
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("56"), content: Text("""
-                                **Мероприятия**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("56"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Мероприятия**:"), content: Text("""
                                 - сбор анамнеза;
                                 - осмотр и пальпация позвоночника;
                                 - определение подвижности позвоночника;
@@ -164,37 +158,26 @@ struct Prikaz1030Alg56View: View {
                                 - оценка силы мышц;
                                 - оценка функции тазовых органов;
                                 - оценка очаговых симптомов.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
-                        Image(systemName: "arrow.down")
+                                """)).buildGrayInAndHiddenBlock()
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("56"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("56"), content: Text("""
+                        Image(systemName: "arrow.down")
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **метамизол 50% – 2-4 мл** в/в с 1 мл **1% раствора дифенгидрамина** или **кеторолак 30 мг (3% - 1 мл)** в/м или в/в, или **трамадол 50-100 мг** (1-2 мл 5% раствора) в/м или в/в;
                                 - **при интенсивной боли** дополнительно **диазепам 5-10 мг** (1-2 мл 0,5% раствора) в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
-                                MyViewBuilder(title: Text("56"), content: Text("""
-                                **Выраженный болевой синдром**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("56"), content: Text("""
+                                
+                                MyViewBuilder(title: Text("**Выраженный болевой синдром**:"), content: Text("""
                                 - нарушение функции тазовых органов.
                                 - компрессия спино-мозговых корешков (пара- или тетрапарезы).
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInAndHiddenBlockWithBlueButtons()
+                                
                                 HStack {
                                     
                                     MyViewBuilder(title: Text("56"), content: Text("""
@@ -222,9 +205,8 @@ struct Prikaz1030Alg56View: View {
                                             }
                                         }
                                     
-                                }
+                                }.padding(5).padding(.top, -10)
                             }
-                            .padding(5)
                         }
                     }
                     if isTextExpanded3 {

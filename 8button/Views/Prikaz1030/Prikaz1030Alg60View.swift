@@ -38,28 +38,24 @@ struct Prikaz1030Alg60View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    
                             MyViewBuilder(title: Text("60"), content: Text("""
                             **Организовать освобождение пострадавшего от поражающего фактора**
-                            """)).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                         
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                        VStack (spacing:1){
                             
                             MyViewBuilder(title: Text("60"), content: Text("""
                             - оценка **сознания, дыхания, пульса** на центральных и периферических артериях, **ЭКГ**
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.horizontal, -5)
                             MyViewBuilder(title: Text("60"), content: Text("""
                             **Сознание ясное**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
+                            Spacer(minLength: 5)
                             HStack {
                                 
                                 MyViewBuilder(title: Text("60"), content: Text("""
@@ -117,7 +113,7 @@ struct Prikaz1030Alg60View: View {
                                 - отсутствие сознания,
                                 - отсутствие спонтанного дыхания,
                                 - отсутствие пульса на сонной артерии
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.horizontal, -5)
                                 NavigationLink (destination: Prikaz1030Alg4View()) {
                                     MyViewBuilder(title: Text("1"), content: Text("Алгоритм 4 «Внезапная смерть, сердечно-легочная реанимация»")).buildNavigationText()
                                 }
@@ -135,63 +131,31 @@ struct Prikaz1030Alg60View: View {
                                 **При судородах**:
                                 """)).buildGrayInText()
                                 NavigationLink (destination: Prikaz1030Alg29View()) {
-                                    MyViewBuilder(title: Text("1"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText()
+                                    MyViewBuilder(title: Text("1"), content: Text("Алгоритм 29 «Судорожный синдром»")).buildNavigationText().padding(5)
                                 }
                                 
                             }
-                            .padding(5)
                         }
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("60"), content: Text("""
-                                **При аритмии**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("60"), content: Text("""
-                                См. соответствующий алгоритм
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
-                        Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("60"), content: Text("""
-                                **Нестабильная гемодинамика**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("60"), content: Text("""
-                                - **(САД менее 80 мм рт. ст.)**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
-                        Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                
-                                MyViewBuilder(title: Text("60"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("60"), content: Text("""
-                                 - д**опамин 5 мл 4%** раствора (200 мг) в **400 мл 0,9% раствора натрия хлорида** в/в со скоростью, достаточной для поддержания систолического **АД на уровне 80-100 м.рт.ст.**
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
-                        Image(systemName: "arrow.down")
-                           
                         
+                                MyViewBuilder(title: Text("**При аритмии**:"), content: Text("""
+                                См. соответствующий алгоритм
+                                """)).buildGrayInAndHiddenBlock()
+                           
+                        Image(systemName: "arrow.down")
+                        
+                                MyViewBuilder(title: Text("**Нестабильная гемодинамика**:"), content: Text("""
+                                - **(САД менее 80 мм рт. ст.)**
+                                """)).buildGrayInAndHiddenBlock()
+                           
+                        Image(systemName: "arrow.down")
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
+                                 - д**опамин 5 мл 4%** раствора (200 мг) в **400 мл 0,9% раствора натрия хлорида** в/в со скоростью, достаточной для поддержания систолического **АД на уровне 80-100 м.рт.ст.**
+                                """)).buildGrayInAndHiddenBlock()
+                            
+                        Image(systemName: "arrow.down")
+                           
                         MyViewBuilder(title: Text("60"), content: Text("""
                                 **Доставка в ОИТАР** стационара
                                 """)).buildGrayText()

@@ -39,30 +39,23 @@ struct Prikaz1030Alg52View: View {
                 Spacer()
                 VStack {
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
                             MyViewBuilder(title: Text("52"), content: Text("""
                             **Неадекватное поведение в связи с возможным психическим расстройством**
-                            """)).buildGrayInText()
-                            
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayTextCenter()
+                       
                     Image(systemName: "arrow.down")
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
-                            MyViewBuilder(title: Text("52"), content: Text("""
-                            **Подозрение на острый психоз.
-                            Оценка степени тяжести.**
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("52"), content: Text("""
+                            
+                            MyViewBuilder(title: Text("""
+                                                        **Подозрение на острый психоз. Оценка степени тяжести.**
+                                                        """), content: Text("""
                             1. **Непосредственная опасность для самого пациента или окружающих**
                             2. **Возможен существенный вред здоровью пациента вследствие ухудшения психического состояния** если больной не получит психиатрической помощи
                             3. **Беспомощность пациента**, т.е. неспособность самостоятельно удовлетворять основные жизненные потребности
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInAndHiddenBlockWithBlueButtons()
                             HStack {
                                 
                                 MyViewBuilder(title: Text("52"), content: Text("""
@@ -104,10 +97,9 @@ struct Prikaz1030Alg52View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                             
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
@@ -135,25 +127,18 @@ struct Prikaz1030Alg52View: View {
                     }
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<13) { _ in
+                        ForEach(0..<14) { _ in
                             Image(systemName: "minus")
                         }
                     }
                     
                     Image(systemName: "minus")
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack{
-                            MyViewBuilder(title: Text("52"), content: Text("""
-                            **Примечание.**
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("52"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Примечание.**"), content: Text("""
                                     1. По показаниям **симптоматическая терапия**.
                                     2. **Использование психотропных средств** на догоспитальном этапе **может затруднить диагностику и принятие адекватного решения о необходимости госпитализации** в приемном отделении стационара.
-                                    """)).buildGrayInHiddenText()
-                        }
-                        .padding(5.0)
-                    }
+                                    """)).buildGrayInAndHiddenBlock()
+                        
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)

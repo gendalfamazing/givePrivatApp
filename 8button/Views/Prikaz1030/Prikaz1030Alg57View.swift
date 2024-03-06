@@ -38,30 +38,17 @@ struct Prikaz1030Alg57View: View {
             ScrollView {
                 Spacer()
                 VStack {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("57"), content: Text("""
-                            **Клиническая картина**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("57"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Клиническая картина**:"), content: Text("""
                             - **головная боль** (чаще односторонней локализации).
                             - **фото- и фонофобия**.
                             - **тошнота, рвота**.
                             - озноб, повышенная потливость.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                        
                     Image(systemName: "arrow.down")
-                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
-                            MyViewBuilder(title: Text("57"), content: Text("""
-                            **Дифференциальная диагностика**:
-                            """)).buildGrayInText()
-                            MyViewBuilder(title: Text("57"), content: Text("""
+                    
+                            MyViewBuilder(title: Text("**Дифференциальная диагностика**:"), content: Text("""
                             - ОНМК, субарахноидальное кровоизлияние;
                             - менингит;
                             - энцефалит;
@@ -69,10 +56,8 @@ struct Prikaz1030Alg57View: View {
                             - острая гипертоническая энцефалопатия;
                             - внутричерепная гематома;
                             - объемный процесс.
-                            """)).buildGrayInHiddenText()
-                        }
-                        .padding(5)
-                    }
+                            """)).buildGrayInAndHiddenBlock()
+                       
                     Image(systemName: "arrow.down")
                        
                     ZStack {
@@ -82,10 +67,10 @@ struct Prikaz1030Alg57View: View {
                             - АД, ЧСС, ЧД,
                             - ЭКГ,
                             - термометрия,
-                            """)).buildGrayInHiddenText()
+                            """)).buildGrayInHiddenText().padding(.horizontal, -5)
                             MyViewBuilder(title: Text("57"), content: Text("""
                             **Наличие очаговой симтоматики**:
-                            """)).buildGrayInText()
+                            """)).buildGrayInText().padding(-5)
                             HStack {
                                 
                                 MyViewBuilder(title: Text("57"), content: Text("""
@@ -137,23 +122,15 @@ struct Prikaz1030Alg57View: View {
                     }
                     if isTextExpanded2{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("57"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("57"), content: Text("""
+                       
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **метамизол 50% – 2-4 мл** в/в или **кеторолак 3% - 1 мл**, в/в (в/м).
                                 
                                 По показаниям:
                                 - **диазепам 5-10 мг** (1-2 мл 0,5% раствора) в/м;
                                 - **метоклопрамид 0,5% - 2 мл** в/м.
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                           
                         Image(systemName: "arrow.down")
                            
                         ZStack {
@@ -163,7 +140,7 @@ struct Prikaz1030Alg57View: View {
                                 MyViewBuilder(title: Text("57"), content: Text("""
                                 - **Серия тяжелых, следующих друг за другом приступов** (с интервалом **менее 4 часов**), сопровождающихся **многократной рвотой**.
                                 - **Один тяжелый**, продолжающийся **более 72 часов**, приступ, который **не купируется** с помощью ранее применявшихся болеутоляющих лекарственных средств.
-                                """)).buildGrayInHiddenText()
+                                """)).buildGrayInHiddenText().padding(.horizontal, -5)
                                 HStack {
                                     
                                     MyViewBuilder(title: Text("57"), content: Text("""
@@ -199,19 +176,11 @@ struct Prikaz1030Alg57View: View {
                     }
                     if isTextExpanded3{
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("57"), content: Text("""
-                                **Мигренозный статус**
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("57"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Мигренозный статус**"), content: Text("""
                                 - **преднизолон 60-75 мг** в/в струйно
-                                """)).buildGrayInHiddenText()
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("57"), content: Text("""

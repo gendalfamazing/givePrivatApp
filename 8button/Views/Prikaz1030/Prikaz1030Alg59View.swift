@@ -72,43 +72,24 @@ struct Prikaz1030Alg59View: View {
                                         }
                                     }
                                 
-                            }
+                            }.padding(5).padding(.top, -10)
                         }
-                        .padding(5)
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("59"), content: Text("""
-                                **Клинические приявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("59"), content: Text("""
+                        
+                                MyViewBuilder(title: Text("**Клинические приявления**:"), content: Text("""
                                 - локальное побеление кожи
                                 - отсутствие капиллярного пульса и чувствительности
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("59"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("59"), content: Text("""
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **теплоизолирующая повязка**.
                                 - **транспортная иммобилизация**.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("59"), content: Text("""
@@ -117,39 +98,21 @@ struct Prikaz1030Alg59View: View {
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("59"), content: Text("""
-                                **Клинические приявления**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("59"), content: Text("""
+                          
+                                MyViewBuilder(title: Text("**Клинические приявления**:"), content: Text("""
                                 - боль,
                                 - отек,
                                 - гиперемия с цианотичным оттенком,
                                 - появление пузырей
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                             
                         Image(systemName: "arrow.down")
-                           
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                            VStack {
-                                MyViewBuilder(title: Text("59"), content: Text("""
-                                **Неотложная помощь**:
-                                """)).buildGrayInText()
-                                MyViewBuilder(title: Text("59"), content: Text("""
+                         
+                                MyViewBuilder(title: Text("**Неотложная помощь**:"), content: Text("""
                                 - **асептическая повязка**.
                                 - ввести **тримеперидин 1% раствор 1 мл** в/в.
-                                """)).buildGrayInHiddenText()
-                                
-                            }
-                            .padding(5)
-                        }
+                                """)).buildGrayInAndHiddenBlock()
+                            
                         Image(systemName: "arrow.down")
                            
                         MyViewBuilder(title: Text("59"), content: Text("""
