@@ -26,6 +26,9 @@ struct Postanovlenie59View: View {
                     NavigationLink(destination: Postanovlenie59Alg4View()) {
                         MyViewBuilder(title: Text("04"), content:Text("«Клинический протокол диагностики и лечения тахикардии»")).buildTitleBlueText()
                     }
+                    NavigationLink(destination: Postanovlenie59Alg5View()) {
+                        MyViewBuilder(title: Text("05"), content:Text("«Клинический протокол диагностики и лечения нарушений проводимости»")).buildTitleBlueText()
+                    }
                     
                 }
                 .navigationBarTitle("Постановление № 59", displayMode: .inline)
