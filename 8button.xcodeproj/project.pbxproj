@@ -22,6 +22,7 @@
 		C61EC9342B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */; };
 		C61EC9362B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */; };
 		C61F18D62B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */; };
+		C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D92B9E065200D04496 /* PamyatkiMain.swift */; };
 		C620D09C2B1B2E920011BE17 /* 5555.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620D09B2B1B2E920011BE17 /* 5555.swift */; };
 		C62C574A2B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */; };
 		C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */; };
@@ -199,6 +200,7 @@
 		C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P1View.swift; sourceTree = "<group>"; };
 		C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P2View.swift; sourceTree = "<group>"; };
 		C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg6View.swift; sourceTree = "<group>"; };
+		C61F18D92B9E065200D04496 /* PamyatkiMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiMain.swift; sourceTree = "<group>"; };
 		C620D09B2B1B2E920011BE17 /* 5555.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5555.swift; sourceTree = "<group>"; };
 		C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg102View.swift; sourceTree = "<group>"; };
 		C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg101View.swift; sourceTree = "<group>"; };
@@ -396,6 +398,27 @@
 				C6EED79A2B65344000E6B5CA /* Postanovlenie99Alg16View.swift */,
 			);
 			path = Postanovlenie99;
+			sourceTree = "<group>";
+		};
+		C61F18D72B9E05DA00D04496 /* Prik&Post */ = {
+			isa = PBXGroup;
+			children = (
+				C63821562B6A99CD009E0AC8 /* Postanovlenie2 */,
+				C641624B2B6BDF0800198A3E /* Prikaz47 */,
+				C6039D1B2B5FA203009CF504 /* Postanovlenie99 */,
+				C6DB60782B14E4C50050DAD6 /* Postanovlenie118 */,
+				C62C574B2B4BF81F008E7A8F /* Prikaz1030 */,
+				C67153DC2B78A79C009F724D /* Postanovlenie59 */,
+			);
+			path = "Prik&Post";
+			sourceTree = "<group>";
+		};
+		C61F18D82B9E062800D04496 /* Pamyatki */ = {
+			isa = PBXGroup;
+			children = (
+				C61F18D92B9E065200D04496 /* PamyatkiMain.swift */,
+			);
+			path = Pamyatki;
 			sourceTree = "<group>";
 		};
 		C62C574B2B4BF81F008E7A8F /* Prikaz1030 */ = {
@@ -674,12 +697,8 @@
 			children = (
 				C67BA8F42B276EF500470B55 /* HomeView.swift */,
 				C6DB60582B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift */,
-				C67153DC2B78A79C009F724D /* Postanovlenie59 */,
-				C62C574B2B4BF81F008E7A8F /* Prikaz1030 */,
-				C6DB60782B14E4C50050DAD6 /* Postanovlenie118 */,
-				C6039D1B2B5FA203009CF504 /* Postanovlenie99 */,
-				C641624B2B6BDF0800198A3E /* Prikaz47 */,
-				C63821562B6A99CD009E0AC8 /* Postanovlenie2 */,
+				C61F18D82B9E062800D04496 /* Pamyatki */,
+				C61F18D72B9E05DA00D04496 /* Prik&Post */,
 				C6445A642B6F87EA001CEF35 /* ScalesTables */,
 				C644C8622B5ED43700DBC6EB /* MKB */,
 			);
@@ -776,6 +795,7 @@
 				C666A57A2B29CDC4002C2FB2 /* TabBarItemsPreferenceKey.swift in Sources */,
 				C6DB607E2B14E5500050DAD6 /* Postanovlenie118Alg3View.swift in Sources */,
 				C69A4DF22B272AF200D5C703 /* SearchBeta.swift in Sources */,
+				C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */,
 				C61EC9322B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift in Sources */,
 				C65484942B4EB1FC00847504 /* Prikaz1030Alg126View.swift in Sources */,
 				C6039D2B2B5FA737009CF504 /* Postanovlenie99Alg7View.swift in Sources */,
@@ -1067,6 +1087,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-button-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = AmbulanceDoc;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1102,6 +1123,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-button-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = AmbulanceDoc;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
