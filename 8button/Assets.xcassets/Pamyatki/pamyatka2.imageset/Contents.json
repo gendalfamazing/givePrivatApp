@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "opredelenie-ploshchadi-ozhogov-u-detej-min.jpg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "opredelenie_ploshchadi_ozhogov_u_detej_min_negate.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

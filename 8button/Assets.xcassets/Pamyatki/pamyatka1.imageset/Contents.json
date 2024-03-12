@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "patologicheskie-tipy-dyhaniya-min.jpg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "patologicheskie_tipy_dyhaniya_min_negate.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

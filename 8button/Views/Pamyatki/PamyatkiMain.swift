@@ -749,6 +749,9 @@ struct PamyatkiMain: View {
                                 }
                             }
                     }
+                }
+                .padding(.horizontal, 10)
+                VStack (spacing:5) {
                     MyViewBuilder(title: Text("Принудительная госпитализация в психиатрический стационар"),
                                   content: Text("""
                                             **Госпитализации в психиатрический стационар без согласия пациента или его законного представителя допускается, если его обследование и лечение возможны только в условиях стационара, а психическое расстройство обусловливает:**
@@ -782,6 +785,89 @@ struct PamyatkiMain: View {
                                 isTextExpanded23.toggle()
                             }
                         }
+                    MyViewBuilder(title: Text("Патологические типы дыхания"),
+                                  content: Text("""
+                                            **Дыхание Куссмауля**
+                                            Глубокое, редкое, шумное дыхание с усиленным выдохом.
+                                            **Возможные причины**: диабетическая кома (диабетический кетоацидоз), ОПН, метаболический ацидоз, печеночная кома, отравлением спиртами.
+
+                                            **Дыхание Биота**
+                                            Дыхательные движения с постоянной амплитудой, внезапно прерывающиеся периодами апноэ до 30 сек.
+                                            **Возможные причины**: поражение головного мозга (особенно продолговатого), повышение внутричерепного давления, шоковые состояния, менингит, энцефалит.
+
+                                            **Дыхание Чейн-Стокса**
+                                            Нарастание амплитуды дыхания с последующим ее снижением, после чего следует период апноэ (до 25-60 сек.), затем цикл повторяется.
+                                            **Возможные причины:** гипоксия во сне, отравления, уремия, кровоизлияния в головной мозг, различные травмы.
+                                            """)).buildDualBlockBlueGray(isTextExpanded: isTextExpanded24)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded24.toggle()
+                            }
+                        }
+                    if isTextExpanded24{
+                        VStack {
+                            Image("pamyatka1")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Rectangle())
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        }
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded24.toggle()
+                            }
+                        }
+                    }
+                    MyViewBuilder(title: Text("Определение площади ожогов у детей"),
+                                  content: Text("""
+                                            У детей до 15 лет применяется таблица Ланда-Браудера (для обширных повреждений) и правило "ладони" (для локальных повреждений) – площадь ладони пациента составляет 1% от поверхности его тела.
+                                            """)).buildDualBlockBlueGray(isTextExpanded: isTextExpanded25)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded25.toggle()
+                            }
+                        }
+                    if isTextExpanded25{
+                        VStack {
+                            Image("pamyatka2")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Rectangle())
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        }
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded25.toggle()
+                            }
+                        }
+                    }
+                    MyViewBuilder(title: Text(""),
+                                  content: Text("""
+                                            Размеры перифиреческих катетеров
+                                            """)).buildBlue591Text(isTextExpanded: isTextExpanded26)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded26.toggle()
+                            }
+                        }
+                    if isTextExpanded26{
+                        VStack {
+                            Image("pamyatka3")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Rectangle())
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        }
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded26.toggle()
+                            }
+                        }
+                    }
+                        
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
