@@ -313,6 +313,28 @@ class MyViewBuilder: ViewBuilder1 {
         .background(Color.grayButton)
         
     }
+    // scale Wells
+    func buildTableWells() -> some View {
+        
+        return HStack(alignment: .top) {
+            
+                title
+                .frame(minWidth: 270, maxWidth: .infinity, alignment: .topLeading)
+                .font(.caption2)
+                .padding(3)
+            
+            Spacer()
+            content
+                .textSelection(.enabled)
+                .frame(minWidth: 50, maxWidth: .infinity, alignment: .topLeading)
+                .font(.caption2)
+                .padding(3)
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
     func buildTable59OKSSmall() -> some View {
         
         return HStack(alignment: .top) {
@@ -354,6 +376,27 @@ class MyViewBuilder: ViewBuilder1 {
                 .padding(3)
             
         Spacer()
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    func buildTablePhafmacologyVasopressors() -> some View {
+        
+        return HStack(alignment: .top) {
+            
+                title
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                .frame(maxWidth: 150)
+                .font(.caption2)
+                .padding(3)
+            
+            content
+                .textSelection(.enabled)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                .font(.caption2)
+                .padding(3)
+            
         }
         .padding(2)
         .background(Color.grayButton)
@@ -1170,6 +1213,50 @@ class MyViewBuilder59: ViewBuilder3 {
         self.title27 = title27
         self.title28 = title28
     }
+    // Шкалы детские параметры в норме
+    func buildTableParametersChild() -> some View {
+        
+        return HStack(alignment: .center) {
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .bold()
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title2))
+                .textSelection(.enabled)
+                .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title3))
+                .textSelection(.enabled)
+                .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title4))
+                .textSelection(.enabled)
+                .frame(minWidth: 45, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title5))
+                .textSelection(.enabled)
+                .frame(minWidth: 40, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
+            Spacer()
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    
+    
     //памятки таблицы
     func buildTablePamyatka1() -> some View {
         
@@ -3388,5 +3475,5 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    Postanovlenie59Alg4View()
+    ScalesTables()
 }

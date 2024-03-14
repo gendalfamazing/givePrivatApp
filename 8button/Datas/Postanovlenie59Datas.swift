@@ -2801,7 +2801,7 @@ struct Table59AG: Identifiable {
                                 D
                                 """,
                       content20:"""
-                                Drugs/alcohol concomitantly (Прием некоторых лекарств/алкоголя — по 1 баллу)а
+                                Drugs/alcohol concomitantly (Прием некоторых лекарств/алкоголя — по 1 баллу)
                                 """,
                       content21:"""
                                 1 

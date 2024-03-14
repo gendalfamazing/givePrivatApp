@@ -55,6 +55,14 @@ struct Pharmacology: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: MedicinesChild()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение лекарственных средств у детей")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                     Spacer(minLength: 15)
                     MyViewBuilder(title: Text("Противопоказания антиаритмиков"),
                                   content: Text("""
@@ -114,7 +122,42 @@ struct Pharmacology: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    
+                    MyViewBuilder(title: Text(""),
+                                  content: Text("""
+                                            Сравнение вазопрессоров и кардиотоников
+                                            """)).buildBlue591Text(isTextExpanded: isTextExpanded2)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded2.toggle()
+                            }
+                        }
+                    if isTextExpanded2 {
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
+                                                **Вазопрессоры** — препараты, основной задачей которых является повышение среднего артериального давления за счет сосудосуживающего эффекта. Примеры: адреналин, норадреналин, мезатон.
+                                                
+                                                **Кардиотоники (инотропы)** — препараты, обладающие положительным инотропным эффектом, т.е. способные увеличивать силу сокращения миокарда и тем самым повышать среднее артериальное давление. Примеры: дигоксин, добутамин, допамин.
+                                                """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded2.toggle()
+                                }
+                            }
+                        VStack(spacing: 1) {
+                            
+                            ForEach(TablePharmacology.getTablePharmacologyVasopressors(), id: \.id) { name in
+                                MyViewBuilder(title: Text(LocalizedStringKey(name.name)), content: Text(LocalizedStringKey(name.code))).buildTablePhafmacologyVasopressors()
+                            }
+                        }
+                        .background(Color.back)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.easeInOut) {
+                                isTextExpanded2.toggle()
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

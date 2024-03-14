@@ -363,8 +363,98 @@ struct PamyatkiMain: View {
                                     isTextExpanded13.toggle()
                                 }
                             }
+                        
                     }
-                    
+                    MyViewBuilder(title: Text("""
+                                              ----
+                                              """),
+                                  content: Text("""
+                                                Физиологические возрастные нормы у детей
+                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded14)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded14.toggle()
+                            }
+                        }
+                    if isTextExpanded14 {
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Возрастные нормы у детей в покое**.
+                                                    """)).buildGrayText()
+                        VStack(spacing: 1) {
+                            HStack {
+                                Text("Возраст")
+                                    .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("""
+                                    Масса тела
+                                            (кг)
+                                    """)
+                                    .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("ЧДД")
+                                    .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("ЧСС")
+                                    .frame(minWidth: 45, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("АД")
+                                    .frame(minWidth: 40, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TablePamyatki.getTableParametersChild(), id: \.id) { name in
+                                MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableParametersChild()
+                            }
+                        }
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded14.toggle()
+                            }
+                        }
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Среднее возрастное АД для детей от 1 года до 10 лет**:
+                                                    Систолическое = 90 + (возраст в годах) х 2
+                                                    Диастолическое = 60 + (возраст в годах)
+                                                    
+                                                    **Верхнее пограничное**:
+                                                    Систолическое = 105 + (возраст в годах) х 2
+                                                    Диастолическое - 75 + (возраст в годах)
+                                                    
+                                                    **Нижнее пограничное**:
+                                                    Систолическое = 75 + (возраст в годах) х 2
+                                                    Диастолическое = 45 + (возраст в годах)
+                                                    """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded14.toggle()
+                                }
+                            }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

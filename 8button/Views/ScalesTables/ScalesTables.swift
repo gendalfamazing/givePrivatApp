@@ -17,6 +17,11 @@ struct ScalesTables: View {
     @State private var isTextExpanded3 = false
     @State private var isTextExpanded4 = false
     @State private var isTextExpanded5 = false
+    @State private var isTextExpanded6 = false
+    @State private var isTextExpanded7 = false
+    @State private var isTextExpanded8 = false
+    @State private var isTextExpanded9 = false
+    @State private var isTextExpanded10 = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -30,6 +35,14 @@ struct ScalesTables: View {
                         }
                     }
                 if isTextExpanded1{
+                    MyViewBuilder(title: Text(""), content: Text("""
+                                                    **Шкала комы Глазго (GCS)** - шкала для оценки степени нарушения сознания и комы
+                                                    """)).buildGrayText()
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded1.toggle()
+                            }
+                        }
                     VStack {
                         
                         VStack (spacing: 1){
@@ -84,7 +97,6 @@ struct ScalesTables: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                        Spacer(minLength: 20)
                         MyViewBuilder(title: Text(""), content: Text("""
                                                         **Результаты по количеству баллов**:
                                                         
@@ -113,6 +125,14 @@ struct ScalesTables: View {
                             }
                         }
                     if isTextExpanded2{
+                        MyViewBuilder(title: Text(""), content: Text("""
+                                                        **Шкала комы Глазго (GCS)** - шкала для оценки степени нарушения сознания и комы
+                                                        """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded2.toggle()
+                                }
+                            }
                         VStack {
                             
                             VStack (spacing: 1){
@@ -242,7 +262,6 @@ struct ScalesTables: View {
                                     isTextExpanded2.toggle()
                                 }
                             }
-                            Spacer(minLength: 20)
                             MyViewBuilder(title: Text(""), content: Text("""
                                                             **Результаты по количеству баллов**:
                                                             
@@ -271,6 +290,15 @@ struct ScalesTables: View {
                             }
                         }
                     if isTextExpanded3{
+                        MyViewBuilder(title: Text(""), content: Text("""
+                                                        **Шкала GRACE (Global Registry of Acute Coronary Events) для расчета риска у больных с ОКС БП ST.**
+                                                        С помощью данной шкалы можно оценить риск внутрибольничной летальности, смертности и развития ИМ, а также смерти и развития ИМ в течение полугода (в том числе после выписки из больницы); определить наиболее подходящий для данного пациента с ОКС способ лечения и его интенсивность.
+                                                        """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
+                                }
+                            }
                         VStack {
                             
                             VStack (spacing: 1){
@@ -409,7 +437,6 @@ struct ScalesTables: View {
                                     isTextExpanded3.toggle()
                                 }
                             }
-                            Spacer(minLength: 10)
                             ZStack {
                                 MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                                 VStack (spacing: 1) {
@@ -446,7 +473,7 @@ struct ScalesTables: View {
                                               ----
                                               """),
                                   content: Text("""
-                                                Шкала стратификации риска тромбоэмболических осложнений CHA2DS2-VASc
+                                                Шкала CHA2DS2-VASc
                                                 """)).buildBlue591Text(isTextExpanded: isTextExpanded4)
                         .onTapGesture {
                             withAnimation (.snappy) {
@@ -454,6 +481,12 @@ struct ScalesTables: View {
                             }
                         }
                     if isTextExpanded4 {
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Стратификация риска тромбоэмболических осложнений**.
+                                                    """)).buildGrayTextCenter()
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                             VStack  (spacing: 1){
@@ -512,7 +545,6 @@ struct ScalesTables: View {
                         }
                             }
                         }
-                        Spacer(minLength: 5)
                         MyViewBuilder(title: Text("""
                                                   ----
                                                   """),
@@ -535,7 +567,7 @@ struct ScalesTables: View {
                                               ----
                                               """),
                                   content: Text("""
-                                                Шкала стратификации риска кровотечения HAS-BLED
+                                                Шкала HAS-BLED
                                                 """)).buildBlue591Text(isTextExpanded: isTextExpanded5)
                         .onTapGesture {
                             withAnimation (.snappy) {
@@ -543,6 +575,12 @@ struct ScalesTables: View {
                             }
                         }
                     if isTextExpanded5 {
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Стратификация риска кровотечеия**.
+                                                    """)).buildGrayTextCenter()
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                             VStack  (spacing: 1){
@@ -601,7 +639,6 @@ struct ScalesTables: View {
                         }
                             }
                         }
-                        Spacer(minLength: 5)
                         MyViewBuilder(title: Text("""
                                                   ----
                                                   """),
@@ -613,6 +650,298 @@ struct ScalesTables: View {
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded5.toggle()
+                                }
+                            }
+                    }
+                    MyViewBuilder(title: Text("""
+                                              ----
+                                              """),
+                                  content: Text("""
+                                                Шкала оценки степения тяжести ОДН
+                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded6)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded6.toggle()
+                            }
+                        }
+                    if isTextExpanded6{
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Диагностировать ОДН и ее степень можно только на основании совокупности признаков**.
+                                                    """)).buildGrayText()
+                        VStack(spacing: 1) {
+                            HStack {
+                                    Text("Норма (ДН 0)")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                
+                            Spacer()
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableODN.getTableODN0(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                            HStack {
+                                    Text("ОДН I ст.")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                
+                            Spacer()
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableODN.getTableODN1(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                            HStack {
+                                    Text("ОДН II ст.")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                
+                            Spacer()
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableODN.getTableODN2(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                            HStack {
+                                    Text("ОДН III ст.")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                
+                            Spacer()
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableODN.getTableODN3(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                            HStack {
+                                    Text("ОДН IV ст.")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                
+                            Spacer()
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableODN.getTableODN4(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                        }
+                        .background(Color.back)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.easeInOut) {
+                                isTextExpanded6.toggle()
+                            }
+                        }
+                    }
+                    MyViewBuilder(title: Text("""
+                                              ----
+                                              """),
+                                  content: Text("""
+                                                Шкала Wells
+                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded7)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded7.toggle()
+                            }
+                        }
+                    if isTextExpanded7{
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Шкала для оценки клинической вероятности ТЭЛА**.
+                                                    """)).buildGrayTextCenter()
+                        VStack(spacing: 1) {
+                            HStack {
+                                    Text("Симптомы")
+                                    .frame(minWidth: 250, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                    Text("Баллы")
+                                    .frame(minWidth: 50, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableWells.getTableWells(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableWells()
+                            }
+                            
+                        }
+                        .background(Color.back)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.easeInOut) {
+                                isTextExpanded7.toggle()
+                            }
+                        }
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Интерпретация полученных результатов**
+                                                    0-1 балл — низкая
+                                                    2-6 баллов — умеренная
+                                                    более 6 баллов — высокая
+                                                    """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.easeInOut) {
+                                    isTextExpanded7.toggle()
+                                }
+                            }
+                    }
+                    MyViewBuilder(title: Text("""
+                                              ----
+                                              """),
+                                  content: Text("""
+                                                Шкала оценки ХСН
+                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded8)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded8.toggle()
+                            }
+                        }
+                    if isTextExpanded8{
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Шкала оценки клинического состояния при ХСН (модификация Матвеева В.Ю., 2000).**
+                                                    """)).buildGrayTextCenter()
+                        VStack(spacing: 1) {
+                            HStack {
+                                    Text("Симптомы")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Spacer()
+                                    Text("Баллы")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableHSN.getTableHSN(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                            
+                        }
+                        .background(Color.back)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.easeInOut) {
+                                isTextExpanded8.toggle()
+                            }
+                        }
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Интерпретация полученных результатов**
+                                                    0 баллов — отсутствие клинических признаков СН
+                                                    <3 баллов — пациенты с 1 ФК СН
+                                                    4-6 баллов — пациенты со 2 ФК СН
+                                                    7-8 баллов — пациенты с 3 ФК СН
+                                                    >9 баллов — пациенты с 4 ФК СН
+
+                                                    Максимальное количество 20 баллов — соответствует терминальной стадии сердечной недостаточности.
+                                                    """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.easeInOut) {
+                                    isTextExpanded8.toggle()
+                                }
+                            }
+                    }
+                    MyViewBuilder(title: Text("""
+                                              ----
+                                              """),
+                                  content: Text("""
+                                                Шкала оценки риска суицида
+                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded9)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded9.toggle()
+                            }
+                        }
+                    if isTextExpanded9{
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Шкала оценки риска суицида (ШОРС, The SAD PERSONS Scale, 1983)** — предназначена для экспресс-диагностики суицидального риска. Шкала содержит 10 пунктов, характеризующих факторы риска суицида и оцениваемых клиницистом как 0 (отсутствует), либо 1 (присутствует)
+                                                    """)).buildGrayText()
+                        VStack(spacing: 1) {
+                            HStack {
+                                    Text("Фактор")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Spacer()
+                                    Text("Значение")
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TableSuicide.getTableSuicide(), id: \.id) { name in
+                                MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
+                            }
+                            
+                        }
+                        .background(Color.back)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.easeInOut) {
+                                isTextExpanded9.toggle()
+                            }
+                        }
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Интерпретация полученных результатов**
+                                                    0-2 балла — низкий риск, амбулаторное наблюдение
+                                                    3-4 балла — средний риск, амбулаторное наблюдение с частыми встречами (1-3 р/неделю); дневной стационар; рассмотреть возможность госпитализации
+                                                    5-6 баллов — высокий риск, рекомендовать госпитализацию, если нет уверенности в качественном амбулаторном наблюдении (психиатрическая и социальная служба, родственники)
+                                                    7-10 баллов — очень высокий риск, госпитализация (в том числе принудительная)
+                                                    """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.easeInOut) {
+                                    isTextExpanded9.toggle()
                                 }
                             }
                     }
