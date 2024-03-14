@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "vysota-stoyaniya-dna-matki-min.jpg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "vysota_stoyaniya_dna_matki_min_negate.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

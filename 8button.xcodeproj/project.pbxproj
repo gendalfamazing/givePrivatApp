@@ -50,6 +50,8 @@
 		C644C8612B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */; };
 		C644C8642B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */; };
 		C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817822BA2D91F009B330F /* MedicinesChild.swift */; };
+		C64817862BA337AE009B330F /* StatusLocalis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817852BA337AE009B330F /* StatusLocalis.swift */; };
+		C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */; };
 		C65484942B4EB1FC00847504 /* Prikaz1030Alg126View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484932B4EB1FC00847504 /* Prikaz1030Alg126View.swift */; };
 		C65484962B4EB69200847504 /* Prikaz1030Alg127View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484952B4EB69200847504 /* Prikaz1030Alg127View.swift */; };
 		C65484982B4EBB0F00847504 /* Prikaz1030Alg128View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484972B4EBB0F00847504 /* Prikaz1030Alg128View.swift */; };
@@ -238,6 +240,8 @@
 		C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesMkb10Alphabet.swift; sourceTree = "<group>"; };
 		C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodesMkb10Alphabet.swift; sourceTree = "<group>"; };
 		C64817822BA2D91F009B330F /* MedicinesChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesChild.swift; sourceTree = "<group>"; };
+		C64817852BA337AE009B330F /* StatusLocalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalis.swift; sourceTree = "<group>"; };
+		C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalisTrauma.swift; sourceTree = "<group>"; };
 		C65484932B4EB1FC00847504 /* Prikaz1030Alg126View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg126View.swift; sourceTree = "<group>"; };
 		C65484952B4EB69200847504 /* Prikaz1030Alg127View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg127View.swift; sourceTree = "<group>"; };
 		C65484972B4EBB0F00847504 /* Prikaz1030Alg128View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg128View.swift; sourceTree = "<group>"; };
@@ -629,6 +633,15 @@
 			path = MKB;
 			sourceTree = "<group>";
 		};
+		C64817842BA33754009B330F /* StatusLocalis */ = {
+			isa = PBXGroup;
+			children = (
+				C64817852BA337AE009B330F /* StatusLocalis.swift */,
+				C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */,
+			);
+			path = StatusLocalis;
+			sourceTree = "<group>";
+		};
 		C67153DC2B78A79C009F724D /* Postanovlenie59 */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +675,7 @@
 			isa = PBXGroup;
 			children = (
 				C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */,
+				C64817842BA33754009B330F /* StatusLocalis */,
 				C69B629A2BA1D774009FB0CD /* Pharmacology */,
 				C61F18D82B9E062800D04496 /* Pamyatki */,
 			);
@@ -828,6 +842,7 @@
 				C6DB60802B14E5580050DAD6 /* Postanovlenie118Alg4View.swift in Sources */,
 				C65FAE512B55169D00628105 /* Prikaz1030Alg52View.swift in Sources */,
 				C654849C2B4EC1D800847504 /* Prikaz1030Alg130View.swift in Sources */,
+				C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */,
 				C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */,
 				C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */,
 				C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */,
@@ -924,6 +939,7 @@
 				C6DB607C2B14E5470050DAD6 /* Postanovlenie118Alg2View.swift in Sources */,
 				C6039D252B5FA472009CF504 /* Postanovlenie99Alg4View.swift in Sources */,
 				C6E33E102B51641C00DEC3A1 /* Prikaz1030Alg46View.swift in Sources */,
+				C64817862BA337AE009B330F /* StatusLocalis.swift in Sources */,
 				C65F00682B4FEB1C00528DAC /* Prikaz1030Alg136View.swift in Sources */,
 				C6039D292B5FA730009CF504 /* Postanovlenie99Alg6View.swift in Sources */,
 				C65FAE5B2B556FA200628105 /* Prikaz1030Alg56View.swift in Sources */,
