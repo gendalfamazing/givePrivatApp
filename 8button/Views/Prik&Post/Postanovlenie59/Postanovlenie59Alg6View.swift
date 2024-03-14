@@ -373,12 +373,12 @@ struct Postanovlenie59Alg6View: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Приложение 1")
+                    Text("Приложение 4")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Артериальная гипертензия»
+                    «Сердечная недостаточность»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

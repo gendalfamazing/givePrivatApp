@@ -70,7 +70,7 @@ struct Postanovlenie59Alg3P1View: View {
                             }
                         }
                     MyViewBuilder(title: Text("""
-                                              Выбор реперфузионной терапии:
+                                              
                                               """),
                                   content: Text("""
                                                 Рекомендуемые временные интервалы на этапах оказания помощи пациентам с ОКС с подъемом сегмента ST

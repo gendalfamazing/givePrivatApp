@@ -49,6 +49,7 @@
 		C644C85F2B5EC9EC00DBC6EB /* CodeMkbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C85E2B5EC9EC00DBC6EB /* CodeMkbData.swift */; };
 		C644C8612B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */; };
 		C644C8642B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */; };
+		C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817822BA2D91F009B330F /* MedicinesChild.swift */; };
 		C65484942B4EB1FC00847504 /* Prikaz1030Alg126View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484932B4EB1FC00847504 /* Prikaz1030Alg126View.swift */; };
 		C65484962B4EB69200847504 /* Prikaz1030Alg127View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484952B4EB69200847504 /* Prikaz1030Alg127View.swift */; };
 		C65484982B4EBB0F00847504 /* Prikaz1030Alg128View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484972B4EBB0F00847504 /* Prikaz1030Alg128View.swift */; };
@@ -118,6 +119,13 @@
 		C69AE77E2B8761C100B1EADF /* Postanovlenie59Alg3P1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AE77D2B8761C100B1EADF /* Postanovlenie59Alg3P1View.swift */; };
 		C69AE7802B87A57C00B1EADF /* Postanovlenie59Alg3P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AE77F2B87A57C00B1EADF /* Postanovlenie59Alg3P2View.swift */; };
 		C69AE7822B87AE6F00B1EADF /* Postanovlenie59Alg3P3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AE7812B87AE6F00B1EADF /* Postanovlenie59Alg3P3View.swift */; };
+		C69B62902BA1BD07009FB0CD /* StudMaterialsDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B628F2BA1BD07009FB0CD /* StudMaterialsDatas.swift */; };
+		C69B62922BA1C19D009FB0CD /* PamyatkiMedSortirovka.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B62912BA1C19D009FB0CD /* PamyatkiMedSortirovka.swift */; };
+		C69B62942BA1C297009FB0CD /* PamyatkiTaktikaSMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B62932BA1C297009FB0CD /* PamyatkiTaktikaSMP.swift */; };
+		C69B62962BA1C872009FB0CD /* PamyatkiAvarContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B62952BA1C872009FB0CD /* PamyatkiAvarContact.swift */; };
+		C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */; };
+		C69B629C2BA1D793009FB0CD /* Pharmacology.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B629B2BA1D793009FB0CD /* Pharmacology.swift */; };
+		C69B629E2BA1DAA9009FB0CD /* MedicinesAdult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B629D2BA1DAA9009FB0CD /* MedicinesAdult.swift */; };
 		C69F13E52B1C793700FBD117 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69F13E42B1C793700FBD117 /* ViewBuilder.swift */; };
 		C6C2229C2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229B2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift */; };
 		C6C2229E2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229D2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift */; };
@@ -229,6 +237,7 @@
 		C644C85E2B5EC9EC00DBC6EB /* CodeMkbData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeMkbData.swift; sourceTree = "<group>"; };
 		C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesMkb10Alphabet.swift; sourceTree = "<group>"; };
 		C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodesMkb10Alphabet.swift; sourceTree = "<group>"; };
+		C64817822BA2D91F009B330F /* MedicinesChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesChild.swift; sourceTree = "<group>"; };
 		C65484932B4EB1FC00847504 /* Prikaz1030Alg126View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg126View.swift; sourceTree = "<group>"; };
 		C65484952B4EB69200847504 /* Prikaz1030Alg127View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg127View.swift; sourceTree = "<group>"; };
 		C65484972B4EBB0F00847504 /* Prikaz1030Alg128View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg128View.swift; sourceTree = "<group>"; };
@@ -299,6 +308,13 @@
 		C69AE77D2B8761C100B1EADF /* Postanovlenie59Alg3P1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P1View.swift; sourceTree = "<group>"; };
 		C69AE77F2B87A57C00B1EADF /* Postanovlenie59Alg3P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P2View.swift; sourceTree = "<group>"; };
 		C69AE7812B87AE6F00B1EADF /* Postanovlenie59Alg3P3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P3View.swift; sourceTree = "<group>"; };
+		C69B628F2BA1BD07009FB0CD /* StudMaterialsDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudMaterialsDatas.swift; sourceTree = "<group>"; };
+		C69B62912BA1C19D009FB0CD /* PamyatkiMedSortirovka.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiMedSortirovka.swift; sourceTree = "<group>"; };
+		C69B62932BA1C297009FB0CD /* PamyatkiTaktikaSMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiTaktikaSMP.swift; sourceTree = "<group>"; };
+		C69B62952BA1C872009FB0CD /* PamyatkiAvarContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiAvarContact.swift; sourceTree = "<group>"; };
+		C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudMaterials.swift; sourceTree = "<group>"; };
+		C69B629B2BA1D793009FB0CD /* Pharmacology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pharmacology.swift; sourceTree = "<group>"; };
+		C69B629D2BA1DAA9009FB0CD /* MedicinesAdult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesAdult.swift; sourceTree = "<group>"; };
 		C69F13E42B1C793700FBD117 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		C6C2229B2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg107View.swift; sourceTree = "<group>"; };
 		C6C2229D2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg108View.swift; sourceTree = "<group>"; };
@@ -403,11 +419,11 @@
 		C61F18D72B9E05DA00D04496 /* Prik&Post */ = {
 			isa = PBXGroup;
 			children = (
+				C62C574B2B4BF81F008E7A8F /* Prikaz1030 */,
 				C63821562B6A99CD009E0AC8 /* Postanovlenie2 */,
 				C641624B2B6BDF0800198A3E /* Prikaz47 */,
 				C6039D1B2B5FA203009CF504 /* Postanovlenie99 */,
 				C6DB60782B14E4C50050DAD6 /* Postanovlenie118 */,
-				C62C574B2B4BF81F008E7A8F /* Prikaz1030 */,
 				C67153DC2B78A79C009F724D /* Postanovlenie59 */,
 			);
 			path = "Prik&Post";
@@ -417,6 +433,9 @@
 			isa = PBXGroup;
 			children = (
 				C61F18D92B9E065200D04496 /* PamyatkiMain.swift */,
+				C69B62912BA1C19D009FB0CD /* PamyatkiMedSortirovka.swift */,
+				C69B62932BA1C297009FB0CD /* PamyatkiTaktikaSMP.swift */,
+				C69B62952BA1C872009FB0CD /* PamyatkiAvarContact.swift */,
 			);
 			path = Pamyatki;
 			sourceTree = "<group>";
@@ -595,6 +614,7 @@
 				C6EED7922B65112C00E6B5CA /* Post99Datas.swift */,
 				C6445A622B6F8456001CEF35 /* ScalesTablesDatas.swift */,
 				C67153DF2B78A7CE009F724D /* Postanovlenie59Datas.swift */,
+				C69B628F2BA1BD07009FB0CD /* StudMaterialsDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -636,6 +656,26 @@
 				C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */,
 			);
 			path = Postanovlenie59;
+			sourceTree = "<group>";
+		};
+		C69B62972BA1D5B9009FB0CD /* StudMaterials */ = {
+			isa = PBXGroup;
+			children = (
+				C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */,
+				C69B629A2BA1D774009FB0CD /* Pharmacology */,
+				C61F18D82B9E062800D04496 /* Pamyatki */,
+			);
+			path = StudMaterials;
+			sourceTree = "<group>";
+		};
+		C69B629A2BA1D774009FB0CD /* Pharmacology */ = {
+			isa = PBXGroup;
+			children = (
+				C69B629B2BA1D793009FB0CD /* Pharmacology.swift */,
+				C69B629D2BA1DAA9009FB0CD /* MedicinesAdult.swift */,
+				C64817822BA2D91F009B330F /* MedicinesChild.swift */,
+			);
+			path = Pharmacology;
 			sourceTree = "<group>";
 		};
 		C6C2B4A22B20AC550068852F /* TEST */ = {
@@ -697,7 +737,7 @@
 			children = (
 				C67BA8F42B276EF500470B55 /* HomeView.swift */,
 				C6DB60582B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift */,
-				C61F18D82B9E062800D04496 /* Pamyatki */,
+				C69B62972BA1D5B9009FB0CD /* StudMaterials */,
 				C61F18D72B9E05DA00D04496 /* Prik&Post */,
 				C6445A642B6F87EA001CEF35 /* ScalesTables */,
 				C644C8622B5ED43700DBC6EB /* MKB */,
@@ -791,6 +831,7 @@
 				C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */,
 				C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */,
 				C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */,
+				C69B62942BA1C297009FB0CD /* PamyatkiTaktikaSMP.swift in Sources */,
 				C6D69FBF2B5A716200235B09 /* Prikaz1030Alg75View.swift in Sources */,
 				C666A57A2B29CDC4002C2FB2 /* TabBarItemsPreferenceKey.swift in Sources */,
 				C6DB607E2B14E5500050DAD6 /* Postanovlenie118Alg3View.swift in Sources */,
@@ -807,7 +848,9 @@
 				C6445A632B6F8456001CEF35 /* ScalesTablesDatas.swift in Sources */,
 				C68DC8A52B84BC8300355234 /* Postanovlenie59Alg2View.swift in Sources */,
 				C65FAE532B55195700628105 /* Prikaz1030Alg53View.swift in Sources */,
+				C69B62902BA1BD07009FB0CD /* StudMaterialsDatas.swift in Sources */,
 				C641624F2B6BE07600198A3E /* Prikaz47Alg1View.swift in Sources */,
+				C69B62922BA1C19D009FB0CD /* PamyatkiMedSortirovka.swift in Sources */,
 				C664F54B2B4D6B090044E0E1 /* Prikaz1030Alg121View.swift in Sources */,
 				C65484A22B4ED3F900847504 /* Prikaz1030Alg133View.swift in Sources */,
 				C65484A42B4EDD0800847504 /* Prikaz1030Alg134View.swift in Sources */,
@@ -822,6 +865,7 @@
 				C6EED7992B65343900E6B5CA /* Postanovlenie99Alg15View.swift in Sources */,
 				C638215A2B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift in Sources */,
 				C6D69FAF2B5A50B700235B09 /* Prikaz1030Alg67View.swift in Sources */,
+				C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */,
 				C6EED7952B651F0900E6B5CA /* Postanovlenie99Alg13View.swift in Sources */,
 				C69AE77C2B861DA600B1EADF /* Postanovlenie59Alg3View.swift in Sources */,
 				C6E1C4872B46FB000070B0B9 /* Zoom2.swift in Sources */,
@@ -838,6 +882,7 @@
 				C6D69FB32B5A5C8C00235B09 /* Prikaz1030Alg69View.swift in Sources */,
 				C65FAE552B551E0F00628105 /* Prikaz1030Alg54View.swift in Sources */,
 				C620D09C2B1B2E920011BE17 /* 5555.swift in Sources */,
+				C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */,
 				C63821642B6A9C46009E0AC8 /* Postanovlenie2Alg6View.swift in Sources */,
 				C65FAE612B55850F00628105 /* Prikaz1030Alg59View.swift in Sources */,
 				C62C574F2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift in Sources */,
@@ -890,9 +935,11 @@
 				C62C57532B4C1864008E7A8F /* Prikaz1030Alg105View.swift in Sources */,
 				C6D69FB52B5A5D5600235B09 /* Prikaz1030Alg70View.swift in Sources */,
 				C67153DE2B78A7BA009F724D /* Postanovlenie59View.swift in Sources */,
+				C69B629C2BA1D793009FB0CD /* Pharmacology.swift in Sources */,
 				C6DB608A2B14E58A0050DAD6 /* Postanovlenie118Alg9View.swift in Sources */,
 				C6E8D3442B8E22FE005ABE2F /* Postanovlenie59Alg4P1View.swift in Sources */,
 				C65F00702B50134200528DAC /* Prikaz1030Alg40View.swift in Sources */,
+				C69B629E2BA1DAA9009FB0CD /* MedicinesAdult.swift in Sources */,
 				C6039D1D2B5FA25F009CF504 /* Postanovlenie99View.swift in Sources */,
 				C65FAE5D2B55742A00628105 /* Prikaz1030Alg57View.swift in Sources */,
 				C6C986362B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift in Sources */,
@@ -944,6 +991,7 @@
 				C6EED78B2B64F9DD00E6B5CA /* Postanovlenie99Alg9View.swift in Sources */,
 				C6DB605E2B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift in Sources */,
 				C6039D232B5FA468009CF504 /* Postanovlenie99Alg3View.swift in Sources */,
+				C69B62962BA1C872009FB0CD /* PamyatkiAvarContact.swift in Sources */,
 				C6EED78F2B65048D00E6B5CA /* Postanovlenie99Alg11View.swift in Sources */,
 				C654849A2B4EBD0300847504 /* Prikaz1030Alg129View.swift in Sources */,
 				C69F13E52B1C793700FBD117 /* ViewBuilder.swift in Sources */,

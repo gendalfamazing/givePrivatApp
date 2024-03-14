@@ -22,13 +22,13 @@ struct HomeView: View {
                     NavigationLink(destination: PrikazyPostanovleniya()) {
                         HStack {
                             
-                            Image(systemName: "doc.on.doc")
+                            Image(systemName: "character.book.closed")
                                 .resizable()
-                                .frame(width: 18, height: 20)
+                                .frame(width: 20, height: 25)
 //                                .padding(.horizontal)
                                 .font(.caption2)
-                                .padding(.horizontal, 11.0)
-                                .padding(.vertical, 10.0)
+                                .padding(.horizontal, 10.0)
+                                .padding(.vertical, 7.5)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
                                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
@@ -119,7 +119,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     }
-                    NavigationLink(destination: PamyatkiMain()) {
+                    NavigationLink(destination: StudMaterials()) {
                         HStack {
                             Image(systemName: "book.pages") //ivfluid.bag  candybarphone
                                 .resizable()
@@ -134,7 +134,7 @@ struct HomeView: View {
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
-                            Text("Памятки")
+                            Text("Учебные материалы")
                                 .padding(.horizontal, 3.0)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
