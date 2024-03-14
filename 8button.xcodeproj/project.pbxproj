@@ -52,6 +52,7 @@
 		C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817822BA2D91F009B330F /* MedicinesChild.swift */; };
 		C64817862BA337AE009B330F /* StatusLocalis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817852BA337AE009B330F /* StatusLocalis.swift */; };
 		C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */; };
+		C648178B2BA34710009B330F /* Diagnosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648178A2BA34710009B330F /* Diagnosis.swift */; };
 		C65484942B4EB1FC00847504 /* Prikaz1030Alg126View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484932B4EB1FC00847504 /* Prikaz1030Alg126View.swift */; };
 		C65484962B4EB69200847504 /* Prikaz1030Alg127View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484952B4EB69200847504 /* Prikaz1030Alg127View.swift */; };
 		C65484982B4EBB0F00847504 /* Prikaz1030Alg128View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484972B4EBB0F00847504 /* Prikaz1030Alg128View.swift */; };
@@ -242,6 +243,7 @@
 		C64817822BA2D91F009B330F /* MedicinesChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesChild.swift; sourceTree = "<group>"; };
 		C64817852BA337AE009B330F /* StatusLocalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalis.swift; sourceTree = "<group>"; };
 		C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalisTrauma.swift; sourceTree = "<group>"; };
+		C648178A2BA34710009B330F /* Diagnosis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnosis.swift; sourceTree = "<group>"; };
 		C65484932B4EB1FC00847504 /* Prikaz1030Alg126View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg126View.swift; sourceTree = "<group>"; };
 		C65484952B4EB69200847504 /* Prikaz1030Alg127View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg127View.swift; sourceTree = "<group>"; };
 		C65484972B4EBB0F00847504 /* Prikaz1030Alg128View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg128View.swift; sourceTree = "<group>"; };
@@ -642,6 +644,14 @@
 			path = StatusLocalis;
 			sourceTree = "<group>";
 		};
+		C64817892BA346FD009B330F /* Diagnosis */ = {
+			isa = PBXGroup;
+			children = (
+				C648178A2BA34710009B330F /* Diagnosis.swift */,
+			);
+			path = Diagnosis;
+			sourceTree = "<group>";
+		};
 		C67153DC2B78A79C009F724D /* Postanovlenie59 */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +685,7 @@
 			isa = PBXGroup;
 			children = (
 				C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */,
+				C64817892BA346FD009B330F /* Diagnosis */,
 				C64817842BA33754009B330F /* StatusLocalis */,
 				C69B629A2BA1D774009FB0CD /* Pharmacology */,
 				C61F18D82B9E062800D04496 /* Pamyatki */,
@@ -1008,6 +1019,7 @@
 				C6DB605E2B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift in Sources */,
 				C6039D232B5FA468009CF504 /* Postanovlenie99Alg3View.swift in Sources */,
 				C69B62962BA1C872009FB0CD /* PamyatkiAvarContact.swift in Sources */,
+				C648178B2BA34710009B330F /* Diagnosis.swift in Sources */,
 				C6EED78F2B65048D00E6B5CA /* Postanovlenie99Alg11View.swift in Sources */,
 				C654849A2B4EBD0300847504 /* Prikaz1030Alg129View.swift in Sources */,
 				C69F13E52B1C793700FBD117 /* ViewBuilder.swift in Sources */,

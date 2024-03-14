@@ -57,6 +57,9 @@ struct StudMaterials: View {
                     NavigationLink(destination: StatusLocalis()) {
                         MyViewBuilder(title: Text("03"), content:Text("«Локальный статус»")).buildTitleBlueText()
                     }
+                    NavigationLink(destination: Diagnosis()) {
+                        MyViewBuilder(title: Text("04"), content:Text("«Диагнозы»")).buildTitleBlueText()
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)
