@@ -26,6 +26,12 @@
 		C60E0D5D2BA7127F00C1088E /* AtlasECG-Pericardit05.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D5C2BA7127F00C1088E /* AtlasECG-Pericardit05.swift */; };
 		C60E0D5F2BA712FA00C1088E /* AtlasECG-Electriliti06.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D5E2BA712FA00C1088E /* AtlasECG-Electriliti06.swift */; };
 		C60E0D612BA7136900C1088E /* AtlasECG-IVR07.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D602BA7136900C1088E /* AtlasECG-IVR07.swift */; };
+		C60E0D632BA7150F00C1088E /* AtlasECG-Provodimost08.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D622BA7150F00C1088E /* AtlasECG-Provodimost08.swift */; };
+		C60E0D652BA721B700C1088E /* AtlasECG-Infarkt09.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D642BA721B700C1088E /* AtlasECG-Infarkt09.swift */; };
+		C60E0D672BA739C000C1088E /* AtlasECG-Aritmii101.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D662BA739C000C1088E /* AtlasECG-Aritmii101.swift */; };
+		C60E0D692BA73D7D00C1088E /* AtlasECG-Aritmii201.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D682BA73D7D00C1088E /* AtlasECG-Aritmii201.swift */; };
+		C60E0D6B2BA7431600C1088E /* AtlasECG-Aritmii301.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D6A2BA7431600C1088E /* AtlasECG-Aritmii301.swift */; };
+		C60E0D6D2BA746BF00C1088E /* AtlasECG-Aritmii401.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D6C2BA746BF00C1088E /* AtlasECG-Aritmii401.swift */; };
 		C61EC9322B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9312B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift */; };
 		C61EC9342B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */; };
 		C61EC9362B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */; };
@@ -223,6 +229,12 @@
 		C60E0D5C2BA7127F00C1088E /* AtlasECG-Pericardit05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Pericardit05.swift"; sourceTree = "<group>"; };
 		C60E0D5E2BA712FA00C1088E /* AtlasECG-Electriliti06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Electriliti06.swift"; sourceTree = "<group>"; };
 		C60E0D602BA7136900C1088E /* AtlasECG-IVR07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-IVR07.swift"; sourceTree = "<group>"; };
+		C60E0D622BA7150F00C1088E /* AtlasECG-Provodimost08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Provodimost08.swift"; sourceTree = "<group>"; };
+		C60E0D642BA721B700C1088E /* AtlasECG-Infarkt09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Infarkt09.swift"; sourceTree = "<group>"; };
+		C60E0D662BA739C000C1088E /* AtlasECG-Aritmii101.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii101.swift"; sourceTree = "<group>"; };
+		C60E0D682BA73D7D00C1088E /* AtlasECG-Aritmii201.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii201.swift"; sourceTree = "<group>"; };
+		C60E0D6A2BA7431600C1088E /* AtlasECG-Aritmii301.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii301.swift"; sourceTree = "<group>"; };
+		C60E0D6C2BA746BF00C1088E /* AtlasECG-Aritmii401.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii401.swift"; sourceTree = "<group>"; };
 		C61EC9312B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5View.swift; sourceTree = "<group>"; };
 		C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P1View.swift; sourceTree = "<group>"; };
 		C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P2View.swift; sourceTree = "<group>"; };
@@ -449,6 +461,12 @@
 				C60E0D5C2BA7127F00C1088E /* AtlasECG-Pericardit05.swift */,
 				C60E0D5E2BA712FA00C1088E /* AtlasECG-Electriliti06.swift */,
 				C60E0D602BA7136900C1088E /* AtlasECG-IVR07.swift */,
+				C60E0D622BA7150F00C1088E /* AtlasECG-Provodimost08.swift */,
+				C60E0D642BA721B700C1088E /* AtlasECG-Infarkt09.swift */,
+				C60E0D662BA739C000C1088E /* AtlasECG-Aritmii101.swift */,
+				C60E0D682BA73D7D00C1088E /* AtlasECG-Aritmii201.swift */,
+				C60E0D6A2BA7431600C1088E /* AtlasECG-Aritmii301.swift */,
+				C60E0D6C2BA746BF00C1088E /* AtlasECG-Aritmii401.swift */,
 			);
 			path = ECG;
 			sourceTree = "<group>";
@@ -880,6 +898,7 @@
 				C6C9862E2B8A082800F624B1 /* DopaminCalc.swift in Sources */,
 				C6DB60882B14E5820050DAD6 /* Postanovlenie118Alg8View.swift in Sources */,
 				C61EC9342B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift in Sources */,
+				C60E0D692BA73D7D00C1088E /* AtlasECG-Aritmii201.swift in Sources */,
 				C6D69FC52B5A7B6B00235B09 /* Prikaz1030Alg78View.swift in Sources */,
 				C641624D2B6BE02B00198A3E /* Prikaz47View.swift in Sources */,
 				C60E0D612BA7136900C1088E /* AtlasECG-IVR07.swift in Sources */,
@@ -928,6 +947,7 @@
 				C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */,
 				C6EED7952B651F0900E6B5CA /* Postanovlenie99Alg13View.swift in Sources */,
 				C69AE77C2B861DA600B1EADF /* Postanovlenie59Alg3View.swift in Sources */,
+				C60E0D632BA7150F00C1088E /* AtlasECG-Provodimost08.swift in Sources */,
 				C6E1C4872B46FB000070B0B9 /* Zoom2.swift in Sources */,
 				C67153E02B78A7CE009F724D /* Postanovlenie59Datas.swift in Sources */,
 				C644C8642B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift in Sources */,
@@ -974,6 +994,7 @@
 				C67FCAC72B597E5B0087F44B /* Prikaz1030Alg64View.swift in Sources */,
 				C63821582B6A9BB8009E0AC8 /* Postanovlenie2View.swift in Sources */,
 				C6445A662B6F8806001CEF35 /* ScalesTables.swift in Sources */,
+				C60E0D652BA721B700C1088E /* AtlasECG-Infarkt09.swift in Sources */,
 				C65484A02B4ECAC900847504 /* Prikaz1030Alg132View.swift in Sources */,
 				C65FAE4F2B550FF700628105 /* Prikaz1030Alg51View.swift in Sources */,
 				C664F53B2B4D0C100044E0E1 /* Prikaz1030Alg114View.swift in Sources */,
@@ -982,6 +1003,7 @@
 				C6DB608C2B14E5930050DAD6 /* Postanovlenie118Alg10View.swift in Sources */,
 				C6DB605D2B14BBEA0050DAD6 /* _buttonApp.swift in Sources */,
 				C6E8D3402B8CA63B005ABE2F /* Postanovlenie59Alg3P7View.swift in Sources */,
+				C60E0D672BA739C000C1088E /* AtlasECG-Aritmii101.swift in Sources */,
 				C65FAE572B55279E00628105 /* SearchAdult.swift in Sources */,
 				C6DB607C2B14E5470050DAD6 /* Postanovlenie118Alg2View.swift in Sources */,
 				C6039D252B5FA472009CF504 /* Postanovlenie99Alg4View.swift in Sources */,
@@ -1004,6 +1026,7 @@
 				C65F00702B50134200528DAC /* Prikaz1030Alg40View.swift in Sources */,
 				C69B629E2BA1DAA9009FB0CD /* MedicinesAdult.swift in Sources */,
 				C6039D1D2B5FA25F009CF504 /* Postanovlenie99View.swift in Sources */,
+				C60E0D6D2BA746BF00C1088E /* AtlasECG-Aritmii401.swift in Sources */,
 				C65FAE5D2B55742A00628105 /* Prikaz1030Alg57View.swift in Sources */,
 				C6C986362B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift in Sources */,
 				C65484982B4EBB0F00847504 /* Prikaz1030Alg128View.swift in Sources */,
@@ -1038,6 +1061,7 @@
 				C6E8D3422B8E1749005ABE2F /* Postanovlenie59Alg4View.swift in Sources */,
 				C6EED79B2B65344000E6B5CA /* Postanovlenie99Alg16View.swift in Sources */,
 				C65F006E2B50070C00528DAC /* Prikaz1030Alg139View.swift in Sources */,
+				C60E0D6B2BA7431600C1088E /* AtlasECG-Aritmii301.swift in Sources */,
 				C666A5782B29CDB1002C2FB2 /* TabBarItem.swift in Sources */,
 				C664F54D2B4D6DD40044E0E1 /* Prikaz1030Alg122View.swift in Sources */,
 				C67153E82B790518009F724D /* Postanovlenie59Alg1P2View.swift in Sources */,
