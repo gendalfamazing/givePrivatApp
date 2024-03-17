@@ -158,6 +158,45 @@ struct Pharmacology: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
+                                            Выбор анальгетика при травмах
+                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded3.toggle()
+                                    }
+                                }
+                            if isTextExpanded3 {
+                                VStack (spacing:1){
+                                    
+                                    Image("pharmacology1")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
+                                    
+                                    Image("pharmacology2")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded3.toggle()
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 85)

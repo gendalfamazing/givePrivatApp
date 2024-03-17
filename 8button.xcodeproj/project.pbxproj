@@ -18,6 +18,14 @@
 		C6039D2D2B5FA73F009CF504 /* Postanovlenie99Alg8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6039D2C2B5FA73F009CF504 /* Postanovlenie99Alg8View.swift */; };
 		C605763B2B1FB6C200C5BAC9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C605763A2B1FB6C200C5BAC9 /* Localizable.xcstrings */; };
 		C60C9A812B933DDA00CBA63F /* Postanovlenie59Alg4P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C9A802B933DDA00CBA63F /* Postanovlenie59Alg4P2View.swift */; };
+		C60E0D532BA6E55700C1088E /* AtlasECG.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D522BA6E55700C1088E /* AtlasECG.swift */; };
+		C60E0D552BA70DDA00C1088E /* AtlasECG-Norma01.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D542BA70DDA00C1088E /* AtlasECG-Norma01.swift */; };
+		C60E0D572BA710AA00C1088E /* AtlasECG-Poroki02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D562BA710AA00C1088E /* AtlasECG-Poroki02.swift */; };
+		C60E0D592BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D582BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift */; };
+		C60E0D5B2BA7120200C1088E /* AtlasECG-TELA04.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D5A2BA7120200C1088E /* AtlasECG-TELA04.swift */; };
+		C60E0D5D2BA7127F00C1088E /* AtlasECG-Pericardit05.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D5C2BA7127F00C1088E /* AtlasECG-Pericardit05.swift */; };
+		C60E0D5F2BA712FA00C1088E /* AtlasECG-Electriliti06.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D5E2BA712FA00C1088E /* AtlasECG-Electriliti06.swift */; };
+		C60E0D612BA7136900C1088E /* AtlasECG-IVR07.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D602BA7136900C1088E /* AtlasECG-IVR07.swift */; };
 		C61EC9322B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9312B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift */; };
 		C61EC9342B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */; };
 		C61EC9362B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */; };
@@ -207,6 +215,14 @@
 		C6039D2C2B5FA73F009CF504 /* Postanovlenie99Alg8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg8View.swift; sourceTree = "<group>"; };
 		C605763A2B1FB6C200C5BAC9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C60C9A802B933DDA00CBA63F /* Postanovlenie59Alg4P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg4P2View.swift; sourceTree = "<group>"; };
+		C60E0D522BA6E55700C1088E /* AtlasECG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasECG.swift; sourceTree = "<group>"; };
+		C60E0D542BA70DDA00C1088E /* AtlasECG-Norma01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Norma01.swift"; sourceTree = "<group>"; };
+		C60E0D562BA710AA00C1088E /* AtlasECG-Poroki02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Poroki02.swift"; sourceTree = "<group>"; };
+		C60E0D582BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Cardiomiopatii03.swift"; sourceTree = "<group>"; };
+		C60E0D5A2BA7120200C1088E /* AtlasECG-TELA04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-TELA04.swift"; sourceTree = "<group>"; };
+		C60E0D5C2BA7127F00C1088E /* AtlasECG-Pericardit05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Pericardit05.swift"; sourceTree = "<group>"; };
+		C60E0D5E2BA712FA00C1088E /* AtlasECG-Electriliti06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Electriliti06.swift"; sourceTree = "<group>"; };
+		C60E0D602BA7136900C1088E /* AtlasECG-IVR07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-IVR07.swift"; sourceTree = "<group>"; };
 		C61EC9312B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5View.swift; sourceTree = "<group>"; };
 		C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P1View.swift; sourceTree = "<group>"; };
 		C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P2View.swift; sourceTree = "<group>"; };
@@ -420,6 +436,21 @@
 				C6EED79A2B65344000E6B5CA /* Postanovlenie99Alg16View.swift */,
 			);
 			path = Postanovlenie99;
+			sourceTree = "<group>";
+		};
+		C60E0D512BA6E53E00C1088E /* ECG */ = {
+			isa = PBXGroup;
+			children = (
+				C60E0D522BA6E55700C1088E /* AtlasECG.swift */,
+				C60E0D542BA70DDA00C1088E /* AtlasECG-Norma01.swift */,
+				C60E0D562BA710AA00C1088E /* AtlasECG-Poroki02.swift */,
+				C60E0D582BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift */,
+				C60E0D5A2BA7120200C1088E /* AtlasECG-TELA04.swift */,
+				C60E0D5C2BA7127F00C1088E /* AtlasECG-Pericardit05.swift */,
+				C60E0D5E2BA712FA00C1088E /* AtlasECG-Electriliti06.swift */,
+				C60E0D602BA7136900C1088E /* AtlasECG-IVR07.swift */,
+			);
+			path = ECG;
 			sourceTree = "<group>";
 		};
 		C61F18D72B9E05DA00D04496 /* Prik&Post */ = {
@@ -762,6 +793,7 @@
 			children = (
 				C67BA8F42B276EF500470B55 /* HomeView.swift */,
 				C6DB60582B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift */,
+				C60E0D512BA6E53E00C1088E /* ECG */,
 				C69B62972BA1D5B9009FB0CD /* StudMaterials */,
 				C61F18D72B9E05DA00D04496 /* Prik&Post */,
 				C6445A642B6F87EA001CEF35 /* ScalesTables */,
@@ -807,7 +839,7 @@
 			};
 			buildConfigurationList = C63E75AC2B14BA9400524502 /* Build configuration list for PBXProject "8button" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -850,6 +882,7 @@
 				C61EC9342B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift in Sources */,
 				C6D69FC52B5A7B6B00235B09 /* Prikaz1030Alg78View.swift in Sources */,
 				C641624D2B6BE02B00198A3E /* Prikaz47View.swift in Sources */,
+				C60E0D612BA7136900C1088E /* AtlasECG-IVR07.swift in Sources */,
 				C6DB60802B14E5580050DAD6 /* Postanovlenie118Alg4View.swift in Sources */,
 				C65FAE512B55169D00628105 /* Prikaz1030Alg52View.swift in Sources */,
 				C654849C2B4EC1D800847504 /* Prikaz1030Alg130View.swift in Sources */,
@@ -857,6 +890,7 @@
 				C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */,
 				C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */,
 				C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */,
+				C60E0D5B2BA7120200C1088E /* AtlasECG-TELA04.swift in Sources */,
 				C69B62942BA1C297009FB0CD /* PamyatkiTaktikaSMP.swift in Sources */,
 				C6D69FBF2B5A716200235B09 /* Prikaz1030Alg75View.swift in Sources */,
 				C666A57A2B29CDC4002C2FB2 /* TabBarItemsPreferenceKey.swift in Sources */,
@@ -920,6 +954,7 @@
 				C6EED7972B6525A300E6B5CA /* Postanovlenie99Alg14View.swift in Sources */,
 				C664F5392B4D0A600044E0E1 /* Prikaz1030Alg113View.swift in Sources */,
 				C67FCAC32B597A770087F44B /* Prikaz1030Alg62View.swift in Sources */,
+				C60E0D5D2BA7127F00C1088E /* AtlasECG-Pericardit05.swift in Sources */,
 				C65F00662B4FE63000528DAC /* Prikaz1030Alg135View.swift in Sources */,
 				C666A5762B29CD9C002C2FB2 /* CustomTabBarView.swift in Sources */,
 				C63E75B72B14BA9400524502 /* ContentView.swift in Sources */,
@@ -927,6 +962,7 @@
 				C664F5412B4D61670044E0E1 /* Prikaz1030Alg116View.swift in Sources */,
 				C6DB608E2B14E5A10050DAD6 /* Postanovlenie118Alg11View.swift in Sources */,
 				C6DB60842B14E56E0050DAD6 /* Postanovlenie118Alg6View.swift in Sources */,
+				C60E0D532BA6E55700C1088E /* AtlasECG.swift in Sources */,
 				C65FAE592B556C7200628105 /* Prikaz1030Alg55View.swift in Sources */,
 				C6FC70722B739886004FA876 /* 77777.swift in Sources */,
 				C6F2FAAF2B25B47400AC023A /* SearchableBootcamp.swift in Sources */,
@@ -992,6 +1028,7 @@
 				C6DB60602B14BC590050DAD6 /* Prikaz1030View.swift in Sources */,
 				C6EED78D2B64FD9E00E6B5CA /* Postanovlenie99Alg10View.swift in Sources */,
 				C664F5432B4D630F0044E0E1 /* Prikaz1030Alg117View.swift in Sources */,
+				C60E0D572BA710AA00C1088E /* AtlasECG-Poroki02.swift in Sources */,
 				C664F53F2B4D174F0044E0E1 /* Prikaz1030Alg115View.swift in Sources */,
 				C6D69FB72B5A5E8C00235B09 /* Prikaz1030Alg71View.swift in Sources */,
 				C6DB60862B14E5770050DAD6 /* Postanovlenie118Alg7View.swift in Sources */,
@@ -1004,14 +1041,17 @@
 				C666A5782B29CDB1002C2FB2 /* TabBarItem.swift in Sources */,
 				C664F54D2B4D6DD40044E0E1 /* Prikaz1030Alg122View.swift in Sources */,
 				C67153E82B790518009F724D /* Postanovlenie59Alg1P2View.swift in Sources */,
+				C60E0D592BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift in Sources */,
 				C666A5742B29CD79002C2FB2 /* CustomTabBarContainerView.swift in Sources */,
 				C64162512B6BE07F00198A3E /* Prikaz47Alg2View.swift in Sources */,
 				C6EED7932B65112C00E6B5CA /* Post99Datas.swift in Sources */,
+				C60E0D5F2BA712FA00C1088E /* AtlasECG-Electriliti06.swift in Sources */,
 				C6D69FAB2B5A3C5000235B09 /* Prikaz1030Alg65View.swift in Sources */,
 				C64162532B6BE08700198A3E /* Prikaz47Alg3View.swift in Sources */,
 				C69A544D2B31C81600832B2A /* SearchData.swift in Sources */,
 				C6039D212B5FA460009CF504 /* Postanovlenie99Alg2View.swift in Sources */,
 				C664F5532B4D77400044E0E1 /* Prikaz1030Alg125View.swift in Sources */,
+				C60E0D552BA70DDA00C1088E /* AtlasECG-Norma01.swift in Sources */,
 				C6C222A02B4C40E2006CE154 /* Prikaz1030Alg109View.swift in Sources */,
 				C69AE77E2B8761C100B1EADF /* Postanovlenie59Alg3P1View.swift in Sources */,
 				C6DB607A2B14E50A0050DAD6 /* Postanovlenie118Alg1View.swift in Sources */,

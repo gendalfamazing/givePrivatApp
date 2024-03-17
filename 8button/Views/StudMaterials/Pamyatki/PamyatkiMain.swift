@@ -109,88 +109,111 @@ struct PamyatkiMain: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    MyViewBuilder(title: Text("Патологические типы дыхания"),
-                                  content: Text("""
-                                            **Дыхание Куссмауля**
-                                            Глубокое, редкое, шумное дыхание с усиленным выдохом.
-                                            **Возможные причины**: диабетическая кома (диабетический кетоацидоз), ОПН, метаболический ацидоз, печеночная кома, отравлением спиртами.
-                                            
-                                            **Дыхание Биота**
-                                            Дыхательные движения с постоянной амплитудой, внезапно прерывающиеся периодами апноэ до 30 сек.
-                                            **Возможные причины**: поражение головного мозга (особенно продолговатого), повышение внутричерепного давления, шоковые состояния, менингит, энцефалит.
-                                            
-                                            **Дыхание Чейн-Стокса**
-                                            Нарастание амплитуды дыхания с последующим ее снижением, после чего следует период апноэ (до 25-60 сек.), затем цикл повторяется.
-                                            **Возможные причины:** гипоксия во сне, отравления, уремия, кровоизлияния в головной мозг, различные травмы.
-                                            """)).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded2.toggle()
-                            }
-                        }
-                    if isTextExpanded2{
-                        VStack {
-                            Image("pamyatka1")
-                                .resizable()
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                        }
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded2.toggle()
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
+                                            Патологические типы дыхания
+                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded2.toggle()
+                                    }
+                                }
+                            if isTextExpanded2{
+                                VStack (spacing:1){
+                                    MyViewBuilder(title: Text(""),
+                                                  content: Text("""
+                                                    **Дыхание Куссмауля**
+                                                    Глубокое, редкое, шумное дыхание с усиленным выдохом.
+                                                    **Возможные причины**: диабетическая кома (диабетический кетоацидоз), ОПН, метаболический ацидоз, печеночная кома, отравлением спиртами.
+                                                    
+                                                    **Дыхание Биота**
+                                                    Дыхательные движения с постоянной амплитудой, внезапно прерывающиеся периодами апноэ до 30 сек.
+                                                    **Возможные причины**: поражение головного мозга (особенно продолговатого), повышение внутричерепного давления, шоковые состояния, менингит, энцефалит.
+                                                    
+                                                    **Дыхание Чейн-Стокса**
+                                                    Нарастание амплитуды дыхания с последующим ее снижением, после чего следует период апноэ (до 25-60 сек.), затем цикл повторяется.
+                                                    **Возможные причины:** гипоксия во сне, отравления, уремия, кровоизлияния в головной мозг, различные травмы.
+                                                    """)).buildGrayInHiddenText()
+                                    
+                                    Image("pamyatka1")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded2.toggle()
+                                    }
+                                }
                             }
                         }
                     }
-                    MyViewBuilder(title: Text("Определение площади ожогов у детей"),
-                                  content: Text("""
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            MyViewBuilder(title: Text("Определение площади ожогов у детей"),
+                                          content: Text("""
+                                            Определение площади ожогов у детей
+                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded3.toggle()
+                                    }
+                                }
+                            if isTextExpanded3{
+                                VStack (spacing:1){
+                                    MyViewBuilder(title: Text(""),
+                                                  content: Text("""
                                             У детей до 15 лет применяется таблица Ланда-Браудера (для обширных повреждений) и правило "ладони" (для локальных повреждений) – площадь ладони пациента составляет 1% от поверхности его тела.
-                                            """)).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded3.toggle()
-                            }
-                        }
-                    if isTextExpanded3{
-                        VStack {
-                            Image("pamyatka2")
-                                .resizable()
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                        }
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded3.toggle()
+                                            """)).buildGrayInHiddenText()
+                                    
+                                    Image("pamyatka2")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded3.toggle()
+                                    }
+                                }
                             }
                         }
                     }
-                    MyViewBuilder(title: Text(""),
-                                  content: Text("""
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
                                             Размеры перифиреческих катетеров
                                             """)).buildBlue591Text(isTextExpanded: isTextExpanded4)
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded4.toggle()
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded4.toggle()
+                                    }
+                                }
+                            if isTextExpanded4{
+                                VStack {
+                                    Image("pamyatka3")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded4.toggle()
+                                    }
+                                }
                             }
-                        }
-                    if isTextExpanded4{
-                        VStack {
-                            Image("pamyatka3")
-                                .resizable()
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                        }
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded4.toggle()
-                            }
-                        }
-                    }
+                        
                     MyViewBuilder(title: Text(""),
                                   content: Text("""
                                             Причины и характеристика болей в грудной клетке

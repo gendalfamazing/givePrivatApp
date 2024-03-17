@@ -27,8 +27,7 @@ struct ScalesTables: View {
             ScrollView {
                 VStack (spacing: 5){
                 Spacer()
-                MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Взрослые)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Взрослые)")).buildBlue591Text(isTextExpanded: isTextExpanded1)
                     .onTapGesture {
                         withAnimation (.snappy) {
                             isTextExpanded1.toggle()
