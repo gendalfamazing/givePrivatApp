@@ -4,7 +4,7 @@ import UIKit
 struct ImageModifier: ViewModifier {
     private var contentSize: CGSize
     private var min: CGFloat = 1.0
-    private var max: CGFloat = 1.5
+    private var max: CGFloat = 2.5
     @State var currentScale: CGFloat = 1.0
 
     init(contentSize: CGSize) {
@@ -25,15 +25,18 @@ struct ImageModifier: ViewModifier {
             content
                 .frame(width: contentSize.width * currentScale, height: contentSize.height * currentScale, alignment: .center)
                 .modifier(PinchToZoom(minScale: min, maxScale: max, scale: $currentScale))
+                
+                
         }
         .gesture(doubleTapGesture)
         .animation(.easeInOut, value: currentScale)
+        
     }
 }
 struct ImageModifierECG: ViewModifier {
     private var contentSize: CGSize
     private var min: CGFloat = 1.0
-    private var max: CGFloat = 2.5
+    private var max: CGFloat = 1.0
     @State var currentScale: CGFloat = 1.0
 
     init(contentSize: CGSize) {
@@ -41,7 +44,7 @@ struct ImageModifierECG: ViewModifier {
     }
     
     var doubleTapGesture: some Gesture {
-        TapGesture(count: 2).onEnded {
+        TapGesture(count: 3).onEnded {
             if currentScale <= min { currentScale = max } else
             if currentScale >= max { currentScale = min } else {
                 currentScale = ((max - min) * 0.5 + min) < currentScale ? max : min

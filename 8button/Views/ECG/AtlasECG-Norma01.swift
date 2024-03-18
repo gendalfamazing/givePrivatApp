@@ -12,8 +12,8 @@ struct AtlasECGNorma01: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     
-    @State private var isTextExpanded1 = false
-    @State private var isTextExpanded2 = false
+    @State private var isTextExpanded1 = true
+    @State private var isTextExpanded2 = true
     @State private var isTextExpanded3 = false
     @State private var isTextExpanded4 = false
     @State private var isTextExpanded5 = false
@@ -22,6 +22,7 @@ struct AtlasECGNorma01: View {
     @State private var isTextExpanded8 = false
     @State private var isTextExpanded9 = false
     @State private var isTextExpanded10 = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -32,41 +33,63 @@ struct AtlasECGNorma01: View {
                            
                                MyViewBuilder(title: Text("1"), content: Text("Нормальный синусовый ритм; артефакты, заметные хорошо в отведениях от конечностей, связаны с тремором при болезни Паркинсона.")).buildGrayInHiddenText()
                                       
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGNormal1")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
+                            VStack (spacing:1) {
+                                
+                                GeometryReader { proxy in
+                                    ScrollView {
+                                        Image("AtlasECGNormal1")
+                                            .resizable()
+                                            .padding(1)
+                                            .cornerRadius(10)
+                                            .frame(maxWidth: (isTextExpanded1 ? proxy.size.width : proxy.size.width * 2 ))
+                                            .frame(maxHeight: (isTextExpanded1 ? proxy.size.height : proxy.size.height))
+                                            .scaledToFit()
+//                                            .clipShape(Rectangle())
+                                            .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded1 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded1 ? proxy.size.height : proxy.size.height ))))
+                                            .onTapGesture (count: 1, perform: {
+                                                withAnimation(.easeInOut){
+                                                    isTextExpanded1.toggle()
+                                                }
+                                            })
                                             
-                                        }
+                                        
                                     }
                                 }
-                                .frame(minHeight: 240)
+                            
+                                
+                                }
+                            
+                                .frame(minHeight: (isTextExpanded1 ? 240 : 480))
                                 .cornerRadius(10)
                                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                 .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"), content: Text("Это - нормальная кардиограмма в 11-летнего подростка. Инверсии зубцов T в V1-V3 - нормальное явление у детей. В том числе, вертикальная ЭОС (приблизительно +90 град.).")).buildGrayInHiddenText()
                                       
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGNormal2")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
-                                        }
+                            VStack (spacing:1) {
+                                
+                                GeometryReader { proxy in
+                                    ScrollView {
+                                        Image("AtlasECGNormal2")
+                                            .resizable()
+                                            .frame(maxWidth: (isTextExpanded2 ? proxy.size.width : proxy.size.width * 2.5))
+                                            .frame(maxHeight: (isTextExpanded2 ? proxy.size.height : proxy.size.height * 2.5))
+                                            .scaledToFit()
+//                                            .clipShape(Rectangle())
+                                            .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded2 ? proxy.size.width : proxy.size.width * 1.9), height: (isTextExpanded2 ? proxy.size.height : proxy.size.height))))
+                                            .onTapGesture (count: 1, perform: {
+                                                withAnimation(.easeInOut){
+                                                    isTextExpanded2.toggle()
+                                                }
+                                            })
+                                        
                                     }
                                 }
-                                .frame(minHeight: 240)
+                            
+                                
+                                }
+                            
+                                .frame(minHeight: (isTextExpanded2 ? 240 : 450))
                                 .cornerRadius(10)
                                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                 .padding(5)
@@ -81,7 +104,7 @@ struct AtlasECGNorma01: View {
                                                 .frame(maxHeight: proxy.size.height)
                                                 .scaledToFit()
                                                 .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
+                                                .modifier(ImageModifier(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
                                             
                                         }
                                     }
