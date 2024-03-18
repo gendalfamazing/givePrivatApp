@@ -42,9 +42,7 @@ struct AtlasECG: View {
                     NavigationLink (destination: AtlasECGAritmii301()) {
                         MyViewBuilder(title: Text("1"), content: Text("Аритмии. Часть 3")).buildBlue591NavigationText()
                     }
-                    NavigationLink (destination: AtlasECGAritmii301()) {
-                        MyViewBuilder(title: Text("1"), content: Text("Аритмии. Часть 3")).buildBlue591NavigationText()
-                    }
+                    
                     NavigationLink (destination: AtlasECGAritmii401()) {
                         MyViewBuilder(title: Text("1"), content: Text("Аритмии. Часть 4")).buildBlue591NavigationText()
                     }

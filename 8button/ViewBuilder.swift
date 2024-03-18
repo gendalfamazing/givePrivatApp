@@ -45,6 +45,7 @@ class MyViewBuilder: ViewBuilder1 {
         
     }
     
+    
     func buildBlue1Text(isTextExpanded: Bool) -> some View {
         
         return content
@@ -1012,6 +1013,23 @@ struct ImagePDF: View {
             
         }
     }
+    func buildECG(isTextExpanded: Bool) -> some View {
+    VStack (spacing:1) {
+        GeometryReader { proxy in
+            ScrollView {
+                image
+                    .resizable()
+                    .padding(1)
+                    .cornerRadius(10)
+                    .frame(maxWidth: (isTextExpanded ? proxy.size.width : proxy.size.width * 2 ))
+                    .frame(maxHeight: (isTextExpanded ? proxy.size.height : proxy.size.height))
+                    .scaledToFit()
+                    .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded ? proxy.size.height : proxy.size.height ))))
+                    
+            }
+        }
+    }
+}
     
 }
 
