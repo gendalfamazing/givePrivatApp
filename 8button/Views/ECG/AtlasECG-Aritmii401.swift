@@ -11,17 +11,27 @@ struct AtlasECGAritmii401: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @State private var isTextExpanded1 = true
+    @State private var isTextExpanded2 = true
+    @State private var isTextExpanded3 = true
+    @State private var isTextExpanded4 = true
+    @State private var isTextExpanded5 = true
+    @State private var isTextExpanded6 = true
+    @State private var isTextExpanded7 = true
+    @State private var isTextExpanded8 = true
+    @State private var isTextExpanded9 = true
+    @State private var isTextExpanded10 = true
+    @State private var isTextExpanded11 = true
+    @State private var isTextExpanded12 = true
+    @State private var isTextExpanded13 = true
+    @State private var isTextExpanded14 = true
+    @State private var isTextExpanded15 = true
+    @State private var isTextExpanded16 = true
+    @State private var isTextExpanded17 = true
+    @State private var isTextExpanded18 = true
+    @State private var isTextExpanded19 = true
+    @State private var isTextExpanded20 = true
     
-    @State private var isTextExpanded1 = false
-    @State private var isTextExpanded2 = false
-    @State private var isTextExpanded3 = false
-    @State private var isTextExpanded4 = false
-    @State private var isTextExpanded5 = false
-    @State private var isTextExpanded6 = false
-    @State private var isTextExpanded7 = false
-    @State private var isTextExpanded8 = false
-    @State private var isTextExpanded9 = false
-    @State private var isTextExpanded10 = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -35,433 +45,289 @@ struct AtlasECGAritmii401: View {
                                                         Синусовый ритм с единичной **предсердной экстрасистолой**.
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii401")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii401"), title: "").buildECG(isTextExpanded: isTextExpanded1)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded1.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded1 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Предсердная тахикардия с блокадой проведения 2:1** с блокадой ПНПГ. Частота сокращений предсердий 200/мин, частота сокращений желудочков 100/мин. Если пристально посмотреть на V1, Вы увидите два зубца P перед каждым QRS (один из них накладывается на зубец T).
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii402")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii402"), title: "").buildECG(isTextExpanded: isTextExpanded2)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded2.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded2 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Синусовый ритм с предсердными экстрасистолами.** Предсердные экстрасистолы - сокращения №№ 3, 7 и 10.
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii403")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii403"), title: "").buildECG(isTextExpanded: isTextExpanded3)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded3.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded3 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         27-летняя женщина с переменным пульсом. **Физиологическая (дыхательная) синусовая аритмия.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii404")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii404"), title: "").buildECG(isTextExpanded: isTextExpanded4)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded4.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded4 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Эктопический предсердный ритм.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii405")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii405"), title: "").buildECG(isTextExpanded: isTextExpanded5)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded5.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded5 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         ХОБЛ. Обращает внимание **миграция водителя ритма**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii406")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii406"), title: "").buildECG(isTextExpanded: isTextExpanded6)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded6.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded6 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         21-летняя женщина с жалобой на сердцебиения. **Синдром WPW.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii407")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii407"), title: "").buildECG(isTextExpanded: isTextExpanded7)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded7.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded7 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Предсердная ЭКС** с нормальным желудочковым ответом. (см. артефакты в отведении II перед каждым зубцом P)
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii408")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii408"), title: "").buildECG(isTextExpanded: isTextExpanded8)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded8.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded8 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         24-летняя женщина с анамнезом астмы, сердцебиениями и  головокружением. **Синдром WPW.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii409")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii409"), title: "").buildECG(isTextExpanded: isTextExpanded9)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded9.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded9 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         24-летний мужчина с жалобами на сердцебиения. **Дыхательная синусовая аритмия.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii410")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii410"), title: "").buildECG(isTextExpanded: isTextExpanded10)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded10.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded10 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         62-летний человек, принимающий метопролол, с периодическими сердцебиениями. **Синусовая брадикардия** с артефактами из-за тремора (б-нь Паркинсона). (см. наличие зубцов P в отведениях V2-V4).
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii411")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii411"), title: "").buildECG(isTextExpanded: isTextExpanded11)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded11.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded11 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         59-летняя женщина. **Синдром WPW.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii412")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii412"), title: "").buildECG(isTextExpanded: isTextExpanded12)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded12.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded12 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Трепетание предсердий с проведением 2:1.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii413")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii413"), title: "").buildECG(isTextExpanded: isTextExpanded13)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded13.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 110)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded13 ? 110 : 220))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Суправентрикулярная тахикардия.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii414")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii414"), title: "").buildECG(isTextExpanded: isTextExpanded14)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded14.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 165)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded14 ? 165 : 330))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Синусовая брадикардия.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii415")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii415"), title: "").buildECG(isTextExpanded: isTextExpanded15)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded15.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 115)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded15 ? 115 : 230))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Мультифокальная предсердная тахикардия.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii416")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii416"), title: "").buildECG(isTextExpanded: isTextExpanded16)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded16.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 180)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded16 ? 180 : 360))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Мультифокальная предсердная тахикардия.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii417")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii417"), title: "").buildECG(isTextExpanded: isTextExpanded17)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded17.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 240)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded17 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 MyViewBuilder(title: Text("1"),
                                               content: Text("""
                                                         **Фибрилляция желудочков.**
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGAritmii418")
-                                                .resizable()
-                                                .frame(maxWidth: proxy.size.width)
-                                                .frame(maxHeight: proxy.size.height)
-                                                .scaledToFit()
-                                                .clipShape(Rectangle())
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: proxy.size.width, height: proxy.size.height)))
-                                            
+                                ImagePDF(image: Image("AtlasECGAritmii418"), title: "").buildECG(isTextExpanded: isTextExpanded18)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            isTextExpanded18.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: 100)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: (isTextExpanded18 ? 100 : 200))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                             }
                         }
