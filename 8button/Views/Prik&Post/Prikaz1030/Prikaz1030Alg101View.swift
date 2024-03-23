@@ -77,7 +77,7 @@ struct Prikaz1030Alg1View: View {
                 
                 Spacer(minLength: 30)
                 HStack {
-                    ForEach(0..<14) { _ in
+                    ForEach(0..<13) { _ in
                         Image(systemName: "minus")
                     }
                 }

@@ -34,7 +34,6 @@ struct Prikaz1030Alg45View: View {
     @State private var isTextExpanded72 = true
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack {
@@ -524,7 +523,7 @@ struct Prikaz1030Alg45View: View {
                     
                     Spacer(minLength: 30)
                     HStack {
-                        ForEach(0..<14) { _ in
+                        ForEach(0..<13) { _ in
                             Image(systemName: "minus")
                         }
                     }
@@ -539,12 +538,12 @@ struct Prikaz1030Alg45View: View {
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)
-                .padding(.bottom, 85)
+                .padding(.bottom, 55)
             }
             //            .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .automatic)
         

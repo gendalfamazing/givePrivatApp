@@ -29,15 +29,14 @@ struct Prikaz1030Alg18View: View {
     @State private var isTextExpanded15 = false
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack{
                     
-                            MyViewBuilder(title: Text("""
+                    MyViewBuilder(title: Text("""
                                                       **Факторы риска**:
                                                       """),
-                                          content: Text("""
+                                  content: Text("""
                                                         - тромбофлебит;
                                                         - длительная иммобилизация;
                                                         - послеоперационный период;
@@ -47,7 +46,7 @@ struct Prikaz1030Alg18View: View {
                                                         - пожилой возраст;
                                                         - «лежачие» больные.
                                                         """)).buildGrayInAndHiddenBlock()
-                           
+                    
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack (spacing: 1){
@@ -94,20 +93,20 @@ struct Prikaz1030Alg18View: View {
                     }
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         NavigationLink (destination: Prikaz1030Alg3View()) {
                             MyViewBuilder(title: Text("18"), content: Text("Алгоритм 3 «Острая дыхательная недостаточность»")).buildNavigationText()
                         }
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         NavigationLink (destination: Prikaz1030Alg16View()) {
                             MyViewBuilder(title: Text("18"), content: Text("Алгоритм 16 «Кардиогенный шок»")).buildNavigationText()
                         }
                     }
                     Image(systemName: "arrow.down")
-                       
+                    
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
@@ -223,12 +222,12 @@ struct Prikaz1030Alg18View: View {
                     
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Быстро прогрессирующий цианоз верхней половины тела с выраженной гипотензией**, часто – синкопе, набухание шейных вен
                             """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
@@ -268,13 +267,13 @@ struct Prikaz1030Alg18View: View {
                     }
                     if isTextExpanded4 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Характерны боли плеврального характера, кашель с кровохарканьем,
                             аускультативно – хрипы, шум трения плевры**
                             """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         ZStack {
                             MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
@@ -314,7 +313,7 @@ struct Prikaz1030Alg18View: View {
                     }
                     if isTextExpanded5 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Тахикардия в покое, может быть стабильная гемодинамика**
                             """)).buildGrayText()
@@ -330,7 +329,7 @@ struct Prikaz1030Alg18View: View {
                                                     """)).buildGrayInAndHiddenBlock()
                         
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Доставка в стационар** по профилю основного заболевания
                             """)).buildGrayText()
@@ -338,12 +337,12 @@ struct Prikaz1030Alg18View: View {
                     }
                     if isTextExpanded6 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Повторные внезапные приступы удушья, синкопе, «атипичная» стенокардия**
                             """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("""
                                                   **Неотложная помощь**:
                                                   """),
@@ -354,7 +353,7 @@ struct Prikaz1030Alg18View: View {
                                                     4) **гепарин 5 000-10 000 ЕД в/в в 20 мл 0,9% раствора хлорида натрия**.
                                                     """)).buildGrayInAndHiddenBlock()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Доставка в стационар** по профилю основного заболевания
                             """)).buildGrayText()
@@ -362,12 +361,12 @@ struct Prikaz1030Alg18View: View {
                     }
                     if isTextExpanded7 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **250 000 ЕД стрептокиназы на 200 мл 0,9% раствора натрия хлорида** в/в капельно **за 30 минут** под контролем АД (**параллельно проводить коррекцию гемодинамики допамином**)
                             """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Доставка в стационар** по профилю основного заболевания
                             (в ОИТАР, минуя приемное отделение)
@@ -375,7 +374,7 @@ struct Prikaz1030Alg18View: View {
                     }
                     if isTextExpanded8 {
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("""
                                                   **Неотложная помощь**:
                                                   """),
@@ -386,7 +385,7 @@ struct Prikaz1030Alg18View: View {
                                                     4) **гепарин 5 000-10 000 ЕД в/в в 20 мл 0,9% раствора хлорида натрия**.
                                                     """)).buildGrayInAndHiddenBlock()
                         Image(systemName: "arrow.down")
-                           
+                        
                         MyViewBuilder(title: Text("18"), content: Text("""
                             **Доставка в стационар** по профилю основного заболевания
                             """)).buildGrayText()
@@ -395,12 +394,12 @@ struct Prikaz1030Alg18View: View {
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)
-                .padding(.bottom, 85)
+                .padding(.bottom, 55)
             }
             //            .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .automatic)
         
