@@ -20,7 +20,6 @@ struct Postanovlenie118Alg3View: View {
     @State private var isTextExpanded7 = false
     @State private var isTextExpanded8 = false
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
@@ -61,16 +60,14 @@ struct Postanovlenie118Alg3View: View {
                             }
                         }
                     
-                    Spacer()
-                    Spacer()
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
             //            .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

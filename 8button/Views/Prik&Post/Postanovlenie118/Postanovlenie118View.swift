@@ -10,7 +10,6 @@ import SwiftUI
 struct Postanovlenie118View: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
@@ -59,6 +58,8 @@ struct Postanovlenie118View: View {
                     }
                     
                 }
+                .padding(.horizontal, 10)
+                .padding(.bottom, 55)
                 .navigationBarTitle("", displayMode: .inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
@@ -76,13 +77,12 @@ struct Postanovlenie118View: View {
                     }
                     
                 }
-                .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                
             }
 //            .padding(.horizontal, 200)
 //            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
     }
 }
 
