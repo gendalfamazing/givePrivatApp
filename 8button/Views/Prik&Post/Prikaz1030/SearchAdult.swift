@@ -184,7 +184,23 @@ struct SearchAdult: View {
         
         .background(Color.back)
         .searchable(text: $viewModel.searchText, placement: .automatic, prompt: Text("Поиск..."))
-        .navigationBarTitle("Приказ МЗ РБ № 1030", displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Приказ МЗ РБ № 1030")
+                        .font(.headline)
+                        .foregroundStyle(Color.toolBar)
+                        .bold()
+                    Text("""
+                    «Взрослые протоколы»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
+                }
+            }
+            
+        }
         
         .task {
             await viewModel.loadAdult()

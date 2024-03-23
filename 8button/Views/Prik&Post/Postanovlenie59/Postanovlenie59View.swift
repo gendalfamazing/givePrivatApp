@@ -33,7 +33,23 @@ struct Postanovlenie59View: View {
                         MyViewBuilder(title: Text("06"), content:Text("«Клинический протокол диагностики и лечения сердечной недостаточности»")).buildTitleBlueText()
                     }
                 }
-                .navigationBarTitle("Постановление № 59", displayMode: .inline)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Постановление № 59")
+                                .font(.headline)
+                                .foregroundStyle(Color.toolBar)
+                                .bold()
+                            Text("""
+                            «Заболевания системы кровообращения»
+                            """)
+                            .font(.caption2)
+                            .foregroundStyle(Color.toolBar)
+                        }
+                    }
+                    
+                }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 65)
             }

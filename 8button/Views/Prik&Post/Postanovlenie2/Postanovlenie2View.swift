@@ -41,7 +41,23 @@ struct Postanovlenie2View: View {
                     
                     
                 }
-                .navigationBarTitle("Постановление № 2", displayMode: .inline)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Постановление № 2")
+                                .font(.headline)
+                                .foregroundStyle(Color.toolBar)
+                                .bold()
+                            Text("""
+                            «Организация деятельности службы СМП»
+                            """)
+                            .font(.caption2)
+                            .foregroundStyle(Color.toolBar)
+                        }
+                    }
+                    
+                }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 65)
             }

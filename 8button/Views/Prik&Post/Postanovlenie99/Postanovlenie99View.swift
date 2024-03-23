@@ -71,7 +71,23 @@ struct Postanovlenie99View: View {
                     }
                     
                 }
-                .navigationBarTitle("Постановление № 99", displayMode: .inline)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Постановление № 99")
+                                .font(.headline)
+                                .foregroundStyle(Color.toolBar)
+                                .bold()
+                            Text("""
+                            «Помощь в критических состояниях»
+                            """)
+                            .font(.caption2)
+                            .foregroundStyle(Color.toolBar)
+                        }
+                    }
+                    
+                }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 65)
             }

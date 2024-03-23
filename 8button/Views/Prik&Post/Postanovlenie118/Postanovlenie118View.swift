@@ -59,7 +59,23 @@ struct Postanovlenie118View: View {
                     }
                     
                 }
-                .navigationBarTitle("Постановление № 118", displayMode: .inline)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Постановление № 118")
+                                .font(.headline)
+                                .foregroundStyle(Color.toolBar)
+                                .bold()
+                            Text("""
+                            «Детские протоколы»
+                            """)
+                            .font(.caption2)
+                            .foregroundStyle(Color.toolBar)
+                        }
+                    }
+                    
+                }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 65)
             }
