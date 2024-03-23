@@ -90,7 +90,7 @@ struct SearchCode: View {
                     .cornerRadius(10)
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     .padding(.horizontal, 10)
-                    .padding(.bottom, 65)
+                    .padding(.bottom, 55)
                     
                     
                     //

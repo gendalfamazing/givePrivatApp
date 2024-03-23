@@ -44,7 +44,6 @@ struct PamyatkiMedSortirovka: View {
     @State private var isTextExpanded30 = false
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack (spacing: 5) {
                     
@@ -187,12 +186,12 @@ struct PamyatkiMedSortirovka: View {
                     
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 85)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

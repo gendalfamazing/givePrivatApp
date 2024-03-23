@@ -159,11 +159,11 @@ struct InfusionRateCalculatorView: View {
                                             """)).buildGrayText()
             }
             .padding(.horizontal, 10)
-            .padding(.bottom, 85)
+            .padding(.bottom, 55)
         }
         
         //        .onTapGesture { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil) }
-        .edgesIgnoringSafeArea(.bottom)
+//        .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
         
         .navigationBarTitle("Калькулятор дозировки Допамина")

@@ -60,7 +60,7 @@ struct CodesMkb10: View {
                         }
                     }
                 }
-                 
+                
                 MyViewBuilder(title: Text("C80-D48"), content: Text("**Новообразования**")).buildTitleCodes(isTextExpanded: isTextExpanded2)
                     .onTapGesture {
                         withAnimation (.easeInOut) {
@@ -478,14 +478,12 @@ struct CodesMkb10: View {
                         }
                     }
                 }
-                Spacer()
+                
             }
             .padding(.horizontal, 10)
-            Spacer()
-            Spacer()
-                .navigationBarTitle("", displayMode: .inline)
-                .padding(.horizontal, 10)
-                .padding(.bottom, 85)
+            .padding(.bottom, 55)
+            .navigationBarTitle("", displayMode: .inline)
+            
             
             
         }
@@ -495,7 +493,7 @@ struct CodesMkb10: View {
         //            .padding(.horizontal, 200)
         .background(colorScheme == .dark ? Color(red: 0, green: 0, blue: 0) : Color(red: 0.9568627450980393, green: 0.9529411764705882, blue: 0.9764705882352941))
         .foregroundColor(colorScheme == .dark ? Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9490196078431372) : Color.black)
-        .edgesIgnoringSafeArea(.bottom)
+        //        .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
         .navigationBarBackButtonHidden(false)
         .toolbar {
