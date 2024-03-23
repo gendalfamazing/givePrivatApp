@@ -26,7 +26,6 @@ struct Postanovlenie59Alg1P2View: View {
     @State private var isTextExpanded13 = false
     @State private var isTextExpanded14 = false
      var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack (spacing: 5){
                 Spacer()
@@ -248,12 +247,12 @@ struct Postanovlenie59Alg1P2View: View {
                     
             }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 95)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

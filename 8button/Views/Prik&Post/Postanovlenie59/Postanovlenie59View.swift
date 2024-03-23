@@ -10,7 +10,6 @@ import SwiftUI
 struct Postanovlenie59View: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5){
@@ -51,14 +50,14 @@ struct Postanovlenie59View: View {
                     
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
 //            .padding(.horizontal, 200)
 //            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
         }
     }
-}
+
 
 #Preview {
     Postanovlenie59View()

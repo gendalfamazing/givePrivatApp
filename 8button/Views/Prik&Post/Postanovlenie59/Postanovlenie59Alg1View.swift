@@ -26,7 +26,6 @@ struct Postanovlenie59Alg1View: View {
     @State private var isTextExpanded13 = false
     @State private var isTextExpanded14 = false
      var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack (spacing: 5){
                     MyViewBuilder(title: Text("Общие положения"), content: Text(LocalizedStringKey("Post59Alg1B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded)
@@ -229,12 +228,12 @@ struct Postanovlenie59Alg1View: View {
                 }
             }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 95)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

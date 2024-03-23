@@ -28,7 +28,6 @@ struct Postanovlenie59Alg4View: View {
     @State private var isTextExpanded15 = false
     //  ¹²³⁴⁵
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack (spacing: 5) {
                     MyViewBuilder(title: Text("""
@@ -422,12 +421,12 @@ struct Postanovlenie59Alg4View: View {
                 }
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 95)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {
