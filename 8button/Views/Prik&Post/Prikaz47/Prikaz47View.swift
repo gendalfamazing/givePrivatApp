@@ -10,7 +10,6 @@ import SwiftUI
 struct Prikaz47View: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
@@ -25,11 +24,10 @@ struct Prikaz47View: View {
                     NavigationLink(destination: Prikaz47Alg3View()) {
                         MyViewBuilder(title: Text("03"), content:Text("«Индикаторы качества оказания медицинской помощи пациетам с ОНМК региона»")).buildTitleBlueText()
                     }
-                    
-                    
-                    
-                    
+                  
                 }
+                .padding(.horizontal, 10)
+                .padding(.bottom, 55)
                 .navigationBarTitle("", displayMode: .inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
@@ -47,13 +45,12 @@ struct Prikaz47View: View {
                     }
                     
                 }
-                .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                
             }
 //            .padding(.horizontal, 200)
 //            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
     }
 }
 

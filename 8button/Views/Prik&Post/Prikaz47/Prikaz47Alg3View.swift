@@ -17,7 +17,6 @@ struct Prikaz47Alg3View: View {
     @State private var isTextExpanded4 = false
     // Text(LocalizedStringKey("Prikaz47Alg3B0G0S1"))).buildGrayText()
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
@@ -49,18 +48,15 @@ struct Prikaz47Alg3View: View {
                                     }
                                 }
                     
-                    
-                    Spacer()
-                    Spacer()
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

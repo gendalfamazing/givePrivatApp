@@ -23,7 +23,6 @@ struct Postanovlenie2Alg2View: View {
     @State private var isTextExpanded10 = false
     //MyViewBuilder(title: Text("2"), content: Text(LocalizedStringKey("Post99Alg2B0G0S1"))).buildGrayText()
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
@@ -88,17 +87,14 @@ struct Postanovlenie2Alg2View: View {
                             }
                         }
                     
-                    
-                    Spacer()
-                    Spacer()
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {
