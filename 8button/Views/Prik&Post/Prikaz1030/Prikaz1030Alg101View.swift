@@ -91,17 +91,15 @@ struct Prikaz1030Alg1View: View {
                                             2. Соблюдать **установленную форму одежды**, иметь опрятный внешний вид.
                                             3.Использовать при оказании медицинской помощи **принципы рациональной психотерапии** для успокоения больного.
                                             """)).buildGrayInAndHiddenBlock()
-                Spacer()
-                Spacer()
+                
             }
             .textSelection(.enabled)
             .padding(.horizontal, 10)
-            .padding(.bottom, 65)
+            .padding(.bottom, 55)
         }
-        
-        .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
         
+//        .edgesIgnoringSafeArea(.bottom)
         .navigationBarBackButtonHidden(false)
         .toolbar {
             ToolbarItem(placement: .principal) {
@@ -131,6 +129,6 @@ struct Prikaz1030Alg1View: View {
     
 }
 #Preview {
-    Prikaz1030Alg1View()
+    AppTabBarView()
 }
 

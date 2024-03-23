@@ -59,11 +59,26 @@ struct PrikazyPostanovleniya: View {
                         № 2
                         """), content: Text("«О вопросах организации деятельности службы скорой медицинской помощи»")).buildTitle1BlueText()
                     }
-                    Spacer()
                 }
-                .navigationBarTitle("Приказы и постановления", displayMode: .inline)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Приказы и постановления")
+                                .font(.headline)
+                                .foregroundStyle(Color.toolBar)
+                                .bold()
+                            Text("""
+                            «Медицинская документация»
+                            """)
+                            .font(.caption2)
+                            .foregroundStyle(Color.toolBar)
+                        }
+                    }
+                    
+                }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
 //            .padding(.horizontal, 200)
             .background(colorScheme == .dark ? Color(red: 0, green: 0, blue: 0) : Color(red: 0.9568627450980393, green: 0.9529411764705882, blue: 0.9764705882352941))

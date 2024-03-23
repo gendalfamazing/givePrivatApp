@@ -25,14 +25,17 @@ struct CustomTabBarContainerView<Content:View>: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             content
-                .ignoresSafeArea()
+//                .ignoresSafeArea()
             CustomTabBarView(tabs: tabs, selection: $selection)
                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                .padding(.bottom, 5)
         }
+        
         
         .onPreferenceChange(TabBarItemsPreferenceKey.self, perform: { value in
             self.tabs = value
         })
+        
         
     }
 }

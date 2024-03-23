@@ -26,7 +26,6 @@ struct Prikaz1030Alg3View: View {
     @State private var isTextExpanded12 = false
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack {
@@ -242,17 +241,15 @@ struct Prikaz1030Alg3View: View {
                         }
                         .padding(5.0)
                     }
-                    Spacer()
-                    Spacer()
                 }
                 .textSelection(.enabled)
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
-            //            .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            //            .padding(.horizontal, 200)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .automatic)
         .toolbar {

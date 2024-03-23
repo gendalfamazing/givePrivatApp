@@ -140,7 +140,7 @@ struct SearchableBootcamp: View {
                 }
             })
             
-            .navigationBarTitle("Поиск по протоколам")
+            .navigationBarTitle("Поиск по протоколам", displayMode: .inline)
             
             .task {
                 await viewModel.loadUserData()

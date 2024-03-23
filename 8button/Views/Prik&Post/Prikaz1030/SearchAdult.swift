@@ -171,7 +171,7 @@ struct SearchAdult: View {
                                     .padding(.horizontal, 10)
                             }
                         }
-                        .padding(.bottom, 65)
+                        .padding(.bottom, 55)
                         .background(Color.back)
                         //
                     }

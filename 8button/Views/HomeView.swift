@@ -238,16 +238,28 @@ struct HomeView: View {
                     
                     
                 }
-                .navigationBarTitle("СМП", displayMode: .inline)
-                .padding()
+                .padding(.horizontal, 10)
+                .padding(.bottom, 55)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("AmbulanceDocs")
+                                .font(.headline)
+                                .foregroundStyle(Color.toolBar)
+                                .bold()
+                            Text("""
+                            «Справочник для работников СМП»
+                            """)
+                            .font(.caption2)
+                            .foregroundStyle(Color.toolBar)
+                        }
+                    }
+                    
+                }
+                
             }
-            
-            
-//            .padding(.horizontal, 300)
-            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-            .foregroundColor(colorScheme == .dark ? Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9490196078431372) : Color.black)
-            .navigationBarTitleDisplayMode(.inline)
             
             //        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ResetNavigationForTab"))) { notification in
             //            if let tab = notification.object as? TabBarItem {
