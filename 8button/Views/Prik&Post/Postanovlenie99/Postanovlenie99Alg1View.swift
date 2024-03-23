@@ -15,23 +15,21 @@ struct Postanovlenie99Alg1View: View {
     @State private var isTextExpanded2 = false
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5){
                     MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post99Alg1B0G0S1"))).buildGrayText()
                     MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post99Alg1B0G0S2"))).buildGrayText()
                     MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post99Alg1B0G0S3"))).buildGrayText()
-                    Spacer()
-                    Spacer()
+                    
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

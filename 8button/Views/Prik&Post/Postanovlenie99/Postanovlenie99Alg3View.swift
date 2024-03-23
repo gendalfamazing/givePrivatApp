@@ -39,7 +39,6 @@ struct Postanovlenie99Alg3View: View {
     @State private var isTextExpanded26 = false
     @State private var isTextExpanded27 = false
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5) {
@@ -239,16 +238,15 @@ struct Postanovlenie99Alg3View: View {
                     
                     
                     MyViewBuilder(title: Text("3"), content: Text(LocalizedStringKey("Post99Alg3B0G0S41"))).buildGrayText()
-                    Spacer()
-                    Spacer()
+                    
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 65)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

@@ -13,7 +13,6 @@ struct Postanovlenie99Alg12View: View {
     
    
     var body: some View {
-        NavigationStack {
             ScrollView {
                 Spacer()
                 VStack {
@@ -57,12 +56,12 @@ struct Postanovlenie99Alg12View: View {
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 }
                 .padding(.horizontal, 10)
-                .padding(.bottom, 85)
+                .padding(.bottom, 55)
             }
             //        .padding(.horizontal, 200)
-            .edgesIgnoringSafeArea(.bottom)
+//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-        }
+        
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
         .toolbar {

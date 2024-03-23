@@ -38,9 +38,9 @@ struct Postanovlenie99Alg9View: View {
             //
         }
 //        .padding(.horizontal, 10)
-        .padding(.bottom, 80)
+        .padding(.bottom, 55)
         //        .padding(.horizontal, 200)
-        .edgesIgnoringSafeArea(.bottom)
+//        .edgesIgnoringSafeArea(.bottom)
         //            .background(Color.back)
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
