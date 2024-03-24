@@ -186,7 +186,7 @@ struct Prikaz47Alg2View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Этапы оказания медицинской помощи пациентам с ОНМК»")
+                    Text("«Этапы оказания помощи пациентам с ОНМК»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

@@ -40,7 +40,7 @@ struct Prikaz47Alg1View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Цели оказания медицинской помощи пациентам с ОНМК»")
+                    Text("«Цели оказания помощи пациентам с ОНМК»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

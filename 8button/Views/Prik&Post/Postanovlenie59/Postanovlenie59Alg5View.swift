@@ -37,6 +37,7 @@ struct Postanovlenie59Alg5View: View {
                                                 **Диагностика и лечение пациентов
                                                 с нарушениями проводимости**
                                                 """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                     MyViewBuilder(title: Text("""
                                               Общие положения
                                               """),
@@ -166,7 +167,7 @@ struct Postanovlenie59Alg5View: View {
                                 }
                             }
                     }
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     VStack (spacing: 5) {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()

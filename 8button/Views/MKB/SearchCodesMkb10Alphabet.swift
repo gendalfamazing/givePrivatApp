@@ -113,7 +113,7 @@ struct SearchCode: View {
                             .foregroundStyle(Color.toolBar)
                             .bold()
                         Text("""
-                        «Список по алфавиту»
+                        «Список по алфавиту с возможностью поиска»
                         """)
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)

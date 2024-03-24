@@ -21,8 +21,8 @@ struct AboutApp: View {
                 VStack (alignment: .center){
                     Image("LaunchImage1")
                         .resizable()
-                        .frame(maxWidth: 200)
-                        .frame(maxHeight: 200)
+                        .frame(maxWidth: 180)
+                        .frame(maxHeight: 180)
                         .scaledToFit()
                         .clipShape(Rectangle())
                 }
@@ -119,7 +119,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("Version: 1.0.0 (4)")
+                        Text("Version: 1.0.0 (5)")
                         Spacer()
                     }
                     Divider()

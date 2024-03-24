@@ -31,6 +31,7 @@ struct Postanovlenie59Alg3P1View: View {
                     MyViewBuilder(title: Text("3"), content: Text("""
                     **Рекомендации по выбору стратегии ведения пациентов с ОКС с подъемом сегмента ST**
                     """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                     MyViewBuilder(title: Text("""
                                               Реперфузионная терапия должна быть проведена при наличии следующих показаний:
                                               """),
@@ -132,7 +133,7 @@ struct Postanovlenie59Alg3P1View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Рекомендации по выбору стратегии ведения пациентов с ОКС с подъемом сегмента ST»
+                    «Выбор стратегии ведения пациентов при ОКС»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

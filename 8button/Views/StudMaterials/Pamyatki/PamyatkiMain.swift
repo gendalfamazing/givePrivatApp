@@ -501,7 +501,6 @@ struct PamyatkiMain: View {
                     .foregroundStyle(Color.toolBar)
                 }
             }
-            
         }
     }
     

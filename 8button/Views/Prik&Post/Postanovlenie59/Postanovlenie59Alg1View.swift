@@ -28,6 +28,14 @@ struct Postanovlenie59Alg1View: View {
      var body: some View {
             ScrollView {
                 VStack (spacing: 5){
+                    MyViewBuilder(title: Text("""
+                                              ---
+                                              """),
+                                  content: Text("""
+                                                **Диагностика и лечение пациентов
+                                                c артериальной гипертензией**
+                                                """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                     MyViewBuilder(title: Text("Общие положения"), content: Text(LocalizedStringKey("Post59Alg1B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded)
                         .onTapGesture {
                             withAnimation (.snappy) {
@@ -35,7 +43,7 @@ struct Postanovlenie59Alg1View: View {
                             }
                         }
                     
-                    Spacer(minLength: 20)
+                    Spacer(minLength: 10)
                     VStack (spacing: 5) {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
@@ -54,7 +62,7 @@ struct Postanovlenie59Alg1View: View {
                         }
                     }
                 }
-                    Spacer(minLength: 20)
+                    Spacer(minLength: 10)
                     
                     VStack (spacing: 5) {
                     ZStack {

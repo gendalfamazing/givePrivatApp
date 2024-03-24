@@ -31,8 +31,11 @@ struct Postanovlenie59Alg2P2View: View {
                 Spacer()
                    
                             MyViewBuilder(title: Text("3"), content: Text("""
-                            **Диагностика и лечение артериальной гипертензии у беременных в стационарных условиях (при отсутствии акушерской патологии)**
+                            **Диагностика и лечение артериальной гипертензии у беременных 
+                            в стационарных условиях
+                            (при отсутствии акушерской патологии)**
                             """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                       
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
@@ -228,7 +231,7 @@ struct Postanovlenie59Alg2P2View: View {
                         }
                     }
                     
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     
                             MyViewBuilder(title: Text("3"), content: Text("""
                             * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.

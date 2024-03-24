@@ -603,18 +603,21 @@ struct PamyatkiTaktikaSMP: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Тактика выездных бригад СМП")
+                    Text("Памятки")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-//
+                    Text("""
+                    «Тактика выездных бригад СМП»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
-            
         }
     }
     

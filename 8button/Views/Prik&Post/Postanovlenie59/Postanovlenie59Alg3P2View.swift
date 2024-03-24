@@ -51,7 +51,7 @@ struct Postanovlenie59Alg3P2View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Протокол выбора и проведения тромболитической терапии при ОКС с подъемом сегмента ST»")
+                    Text("«Выбор тромболитической терапии при ОКС»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

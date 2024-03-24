@@ -77,7 +77,7 @@ struct StudMaterials: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Сборник полезной информации для работников СМП»
+                    «Сборник полезной информации для СМП»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

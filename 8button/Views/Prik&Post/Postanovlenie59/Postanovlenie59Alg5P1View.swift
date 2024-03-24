@@ -31,8 +31,11 @@ struct Postanovlenie59Alg5P1View: View {
                 VStack (spacing: 5){
                 
                             MyViewBuilder(title: Text("3"), content: Text("""
-                            **Диагностика и лечение пациентов c нарушениями проводимости в амбулаторных условиях**
+                            **Диагностика и лечение пациентов 
+                            c нарушениями проводимости
+                            в амбулаторных условиях**
                             """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
@@ -275,7 +278,7 @@ struct Postanovlenie59Alg5P1View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Диагностика и лечение пациентов c нарушениями проводимости»
+                    «Нарушения проводимости»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

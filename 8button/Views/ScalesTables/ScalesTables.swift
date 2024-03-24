@@ -115,7 +115,6 @@ struct ScalesTables: View {
                     }
                 }
                     MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Дети)")).buildBlue591Text(isTextExpanded: isTextExpanded2)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
@@ -280,7 +279,6 @@ struct ScalesTables: View {
                         }
                     }
                     MyViewBuilder(title: Text("1"), content: Text("Шкала GRACE")).buildBlue591Text(isTextExpanded: isTextExpanded3)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded3.toggle()

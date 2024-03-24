@@ -31,8 +31,10 @@ struct Postanovlenie59Alg4P2View: View {
                 VStack (spacing: 5){
                 
                             MyViewBuilder(title: Text("3"), content: Text("""
-                            **Диагностика и лечение пациентов c тахикардией в стационарных условиях**
+                            **Диагностика и лечение пациентов c 
+                            тахикардией в стационарных условиях**
                             """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()

@@ -31,7 +31,14 @@ struct Postanovlenie59Alg3View: View {
             ScrollView {
                 VStack (spacing: 5) {
                     MyViewBuilder(title: Text("""
-                                              Последовательность действий на этапах оказания медицинской помощи пациентам с острым коронарным синдромом
+                                              ---
+                                              """),
+                                  content: Text("""
+                                                **Диагностика и лечение пациентов c инфарктом миокарда и нестабильной стенокардией**
+                                                """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
+                    MyViewBuilder(title: Text("""
+                                              Последовательность оказания медицинской помощи пациентам с ОКС
                                               """),
                                   content: Text(LocalizedStringKey("Post59Alg3B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
@@ -39,7 +46,7 @@ struct Postanovlenie59Alg3View: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     MyViewBuilder(title: Text("""
                                               """),
                                   content: Text("""
@@ -164,7 +171,7 @@ struct Postanovlenie59Alg3View: View {
                                 isTextExpanded13.toggle()
                             }
                         }
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
@@ -267,7 +274,7 @@ struct Postanovlenie59Alg3View: View {
                         }
                     }
                     
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {

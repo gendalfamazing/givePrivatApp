@@ -34,8 +34,10 @@ struct Postanovlenie59Alg4View: View {
                                               ---
                                               """),
                                   content: Text("""
-                                                **Диагностика и лечение пациентов c тахикардией**
+                                                **Диагностика и лечение 
+                                                пациентов c тахикардией**
                                                 """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                     MyViewBuilder(title: Text("""
                                               Общие положения
                                               """),
@@ -165,7 +167,7 @@ struct Postanovlenie59Alg4View: View {
                                 }
                             }
                     }
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     VStack (spacing: 5) {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
@@ -183,7 +185,7 @@ struct Postanovlenie59Alg4View: View {
                             }
                         }
                     }
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                         
                         MyViewBuilder(title: Text("""
                                                   ----

@@ -34,8 +34,10 @@ struct Postanovlenie59Alg3P6View: View {
                     MyViewBuilder(title: Text("""
                                               """),
                                   content: Text("""
-                                                **Схема дифференцированного применения антиаритмических лекарственных средств при ОКС**:
+                                                **Схема дифференцированного применения антиаритмических лекарственных 
+                                                средств при ОКС**
                                                 """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                         
                     MyViewBuilder(title: Text("Пароксизмальная наджелудочковая тахикардия"), 
                                   content: Text("""

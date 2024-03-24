@@ -104,7 +104,7 @@ struct Postanovlenie2Alg2View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Структура, система управления и обеспечение службы СМП»")
+                    Text("«Структура службы СМП»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

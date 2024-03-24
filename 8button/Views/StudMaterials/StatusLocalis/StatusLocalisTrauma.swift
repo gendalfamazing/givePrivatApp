@@ -472,12 +472,12 @@ struct StatusLocalisTrauma: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Локальный статус при травмах")
+                    Text("Локальный статус")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Варианты описания локальных статусов при травмах»
+                    «Локальный статус при травмах»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

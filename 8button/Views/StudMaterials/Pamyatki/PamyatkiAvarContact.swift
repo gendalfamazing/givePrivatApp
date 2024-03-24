@@ -226,18 +226,21 @@ struct PamyatkiAvarContact: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Контакт с биологическим материалом")
+                    Text("Памятки")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    //
+                    Text("""
+                    «Действия при аварийном контакте»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
-            
         }
     }
     

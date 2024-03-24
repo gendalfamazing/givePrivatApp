@@ -33,6 +33,7 @@ struct Postanovlenie59Alg1P1View: View {
                             MyViewBuilder(title: Text("3"), content: Text("""
                             **Диагностика и лечение заболеваний, характеризующихся повышенным кровяным давлением в амбулаторных условиях**
                             """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                        
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
@@ -228,7 +229,7 @@ struct Postanovlenie59Alg1P1View: View {
                         }
                     }
                     
-                    Spacer(minLength: 15)
+                    Spacer(minLength: 10)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {

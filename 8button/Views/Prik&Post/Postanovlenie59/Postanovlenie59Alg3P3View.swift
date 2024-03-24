@@ -28,8 +28,12 @@ struct Postanovlenie59Alg3P3View: View {
     var body: some View {
             ScrollView {
                 VStack (spacing: 5) {
+                    MyViewBuilder(title: Text("3"), content: Text("""
+                    **Рекомендации по выбору стратегии ведения пациентов с ОКС с подъемом сегмента ST**
+                    """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                     MyViewBuilder(title: Text("""
-                                              Выбор стратегии ведения пациентов при остром коронарном синдроме без подъема сегмента ST
+                                              Варианты стратегии ведения пациентов при ОКС без подъема сегмента ST
                                               """),
                                   content: Text("""
                                                 **Инвазивная стратегия показана у пациентов с**:
@@ -315,7 +319,7 @@ struct Postanovlenie59Alg3P3View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Выбор стратегии ведения пациентов при остром коронарном синдроме без подъема сегмента ST»
+                    «Выбор стратегии ведения пациентов при ОКС»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

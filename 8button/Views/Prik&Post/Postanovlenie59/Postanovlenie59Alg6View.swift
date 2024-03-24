@@ -28,7 +28,15 @@ struct Postanovlenie59Alg6View: View {
      var body: some View {
             ScrollView {
                 VStack (spacing: 5){
-                    MyViewBuilder(title: Text("Общие положения"), 
+                    MyViewBuilder(title: Text("""
+                                              ---
+                                              """),
+                                  content: Text("""
+                                                **Диагностика и лечение пациентов c
+                                                сердечной недостаточностью**
+                                                """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
+                    MyViewBuilder(title: Text("Общие положения"),
                                   content: Text("""
                                                 **Хроническая сердечная недостаточность** (далее-СН) представляет собой синдром с комплексом характерных симптомов (одышка, утомляемость, снижение физической активности, отеки и др.), которые связаны с неадекватной перфузией органов и тканей в покое или при нагрузке и часто с задержкой жидкости в организме.
                                                 
@@ -50,7 +58,7 @@ struct Postanovlenie59Alg6View: View {
                             }
                         }
                     
-                    Spacer(minLength: 20)
+                    Spacer(minLength: 10)
                     VStack (spacing: 5) {
                     
                         MyViewBuilder(title: Text(""), content: Text("Амбулаторный этап")).buildBlue591Text(isTextExpanded: isTextExpanded1)
@@ -183,7 +191,7 @@ struct Postanovlenie59Alg6View: View {
                             }
                         }
                 }
-                    Spacer(minLength: 20)
+                    Spacer(minLength: 10)
                     MyViewBuilder(title: Text("""
                                               ----
                                               """),

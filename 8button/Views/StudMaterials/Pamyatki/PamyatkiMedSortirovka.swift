@@ -193,18 +193,21 @@ struct PamyatkiMedSortirovka: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Медицинская сортировка")
+                    Text("Памятки")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-//
+                    Text("""
+                    «Медицинская сортировка»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
-            
         }
     }
     

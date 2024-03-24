@@ -33,6 +33,7 @@ struct Postanovlenie59Alg3P5View: View {
                                   content: Text("""
                                                 **Схема последовательных неотложных мероприятий при острой сердечной недостаточности (класс Киллип)**:
                                                 """)).buildGrayTextCenter()
+                        .multilineTextAlignment(.center)
                         
                     
                         VStack (spacing: 5) {

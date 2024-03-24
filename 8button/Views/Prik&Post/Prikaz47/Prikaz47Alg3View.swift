@@ -66,7 +66,7 @@ struct Prikaz47Alg3View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Индикаторы качества оказания медицинской помощи пациетам с ОНМК региона»")
+                    Text("«Индикаторы качества помощи пациетам с ОНМК»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

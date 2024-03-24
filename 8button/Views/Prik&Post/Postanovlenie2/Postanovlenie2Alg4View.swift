@@ -98,7 +98,7 @@ struct Postanovlenie2Alg4View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Порядок поступления обращений, приема, регистрации и передачи вызовов бригадам СМП»")
+                    Text("«Порядок поступления обращений в службу СМП»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }
