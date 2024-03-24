@@ -157,17 +157,10 @@ struct Prikaz1030Alg76View: View {
                                 """)).buildGrayText()
                         
                     }
-                    
-                    
-                    
                     Spacer(minLength: 30)
-                    HStack {
-                        ForEach(0..<13) { _ in
-                            Image(systemName: "minus")
-                        }
-                    }
-                    
-                    Image(systemName: "minus")
+                    Divider()
+                        .background(Color.divider)
+                    Spacer(minLength: 15)
                     
                             MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     * **Противопоказания к катетеризации**:

@@ -43,11 +43,23 @@ struct InfusionRateCalculatorView: View {
            let weight = Double(patientWeight) {
             let totalVolume = volume + solvent
             let dose = ((dosage * weight ) / ((concentration * volume * convertMG) / (totalVolume)))
-            return dose * 20
+            if textIsCount() {
+                return dose * 20
+            }
         }
         return 0
     }
-    
+    func textIsCount() -> Bool {
+        if drugConcentration.count >= 3 ||
+            drugVolume.count >= 3 ||
+            solventVolume.count >= 4 ||
+            drugDosage.count >= 3 ||
+            patientWeight.count >= 4
+        {
+            return false
+        }
+        return true
+    }
     
     var body: some View {
         ScrollView {
@@ -84,53 +96,61 @@ struct InfusionRateCalculatorView: View {
                         .background(Color.back)
                         .cornerRadius(10)
                         Spacer(minLength: 5)
-                        MyViewBuilder(title: Text(""), content: Text("**Рассчитать**")).buildBlue591Text(isTextExpanded: isTextExpanded1)
-                            .onTapGesture {
+                        MyViewBuilder(title: Text(""), content: Text(isTextExpanded1 ? "**Сбросить**" : "**Сбросить**")).buildGreen1Text(isTextExpanded: isTextExpanded1)
+                            .asButton(.press) {
                                 hideKeyboard()
                                 withAnimation (.snappy) {
-                                    isTextExpanded1.toggle()
-                                    if isTextExpanded1 == false {
                                         drugConcentration = ""
                                         drugVolume = ""
                                         solventVolume = ""
                                         drugDosage = ""
                                         patientWeight = ""
-                                    }
+                                    
                                     
                                 }
                             }
-                        if isTextExpanded1 {
+                        
                             VStack (alignment: .leading, spacing:1) {
                                 MyViewBuilder(title: Text(""), content: Text("**Доза препарата:**")).buildGrayInText()
                                 HStack (spacing: 1){
                                     Spacer()
-                                Text("""
+                                Text(textIsCount() ? """
                                     **\(calculatedDose, specifier: "%.2f")**
+                                    мл/мин
+                                    """ : """
+                                    **ошибка**
                                     мл/мин
                                     """)
                                     .padding(5)
                                     .multilineTextAlignment(.center)
                                     .font(.subheadline)
                                     Spacer()
-                                Text("""
+                                Text(textIsCount() ? """
                                     **\(calculatedDoseHour, specifier: "%.2f")**
+                                    мл/час
+                                    """ : """
+                                    **ошибка**
                                     мл/час
                                     """)
                                     .padding(5)
                                     .multilineTextAlignment(.center)
                                     .font(.subheadline)
                                     Spacer()
-                                Text("""
-                                    **≈ \(calculatedDrops, specifier: "%.2f")**
-                                    кап/мин
-                                    """)
+                                Text(textIsCount() ? """
+                                        **≈\(calculatedDrops, specifier: "%.2f")**
+                                        кап/мин
+                                        """ : """
+                                        **ошибка**
+                                        кап/мин
+                                        """)
                                     .padding(5)
                                     .multilineTextAlignment(.center)
                                     .font(.subheadline)
                                     Spacer()
                             }
                         }
-                        }
+                            .onTapGesture { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil) }
+                        
                         
                         
                     }
@@ -159,12 +179,13 @@ struct InfusionRateCalculatorView: View {
                                             - постепенно уменьшать скорость внутривенной инфузии препарата во избежание развития артериальной гипотензии;
                                             - уменьшить скорость инфузии при непропорциональном повышении диастолического артериального давления (т.е. при выраженном снижении пульсового давления) и/или уменьшении диуреза. При этом необходимо тщательное наблюдение за пациентами.
                                             """)).buildGrayText()
+                    .onTapGesture { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil) }
             }
             .padding(.horizontal, 10)
             .padding(.bottom, 55)
         }
         
-        //        .onTapGesture { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil) }
+                
 //        .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
         
@@ -195,6 +216,7 @@ struct InfusionRateCalculatorView: View {
         // Валидация имени
         return name.count <= 3
     }
+    
 }
 extension UIApplication {
     func endEditing() {

@@ -557,15 +557,10 @@ struct Prikaz1030Alg41View: View {
                         **Доставка под контролем жизненноважных функций в стационар** по профилю основного заболевания
                         """)).buildGrayText()
                     }
-                    
                     Spacer(minLength: 30)
-                    HStack {
-                        ForEach(0..<13) { _ in
-                            Image(systemName: "minus")
-                        }
-                    }
-                    
-                    Image(systemName: "minus")
+                    Divider()
+                        .background(Color.divider)
+                    Spacer(minLength: 15)
                     
                             MyViewBuilder(title: Text("**Справочно**."), content: Text("""
                                     **дефицит ОЦК при переломах**:

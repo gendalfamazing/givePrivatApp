@@ -236,14 +236,9 @@ struct Prikaz1030Alg75View: View {
                     
                     
                     Spacer(minLength: 30)
-                    HStack {
-                        ForEach(0..<13) { _ in
-                            Image(systemName: "minus")
-                        }
-                    }
-                    
-                    Image(systemName: "minus")
-                    
+                    Divider()
+                        .background(Color.divider)
+                    Spacer(minLength: 15)
                             MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     **При наличии малейших подозрений (данные анамнеза) на ЧМТ – доставка в стационар по профилю**.
                                     """)).buildGrayInAndHiddenBlock()

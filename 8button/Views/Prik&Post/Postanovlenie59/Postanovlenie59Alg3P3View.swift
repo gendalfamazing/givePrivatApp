@@ -132,9 +132,9 @@ struct Postanovlenie59Alg3P3View: View {
                             VStack (spacing: 1){
                                 HStack (spacing: 1){
                                     VStack (spacing: 1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("Возраст (годы)")
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -154,9 +154,9 @@ struct Postanovlenie59Alg3P3View: View {
                                         }
                                     }
                                     VStack (spacing: 1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("ЧСС (уд/мин)")
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -178,12 +178,12 @@ struct Postanovlenie59Alg3P3View: View {
                                 }
                                 HStack (spacing:1){
                                     VStack (spacing:1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("""
-                                                САД 
+                                                САД
                                                 (мм рт.ст.)
                                                 """)
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -203,9 +203,9 @@ struct Postanovlenie59Alg3P3View: View {
                                         }
                                     }
                                     VStack (spacing:1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("Креатинин (мкмоль/л)")
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -228,9 +228,9 @@ struct Postanovlenie59Alg3P3View: View {
                                 
                                 HStack (spacing:1){
                                 VStack (spacing:1){
-                                HStack (alignment: .bottom){
+                                HStack (alignment: .center){
                                     Text("Класс тяжести Killip")
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                         .font(.footnote)
                                         .bold()
                                         .padding(.horizontal, 3)

@@ -114,7 +114,7 @@ struct ScalesTables: View {
                             }
                     }
                 }
-                    MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Дети)")).buildBlue59Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Дети)")).buildBlue591Text(isTextExpanded: isTextExpanded2)
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                         .onTapGesture {
                             withAnimation (.snappy) {
@@ -279,7 +279,7 @@ struct ScalesTables: View {
                                 }
                         }
                     }
-                    MyViewBuilder(title: Text("1"), content: Text("Шкала GRACE")).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                    MyViewBuilder(title: Text("1"), content: Text("Шкала GRACE")).buildBlue591Text(isTextExpanded: isTextExpanded3)
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                         .onTapGesture {
                             withAnimation (.snappy) {
@@ -301,9 +301,9 @@ struct ScalesTables: View {
                             VStack (spacing: 1){
                                 HStack (spacing: 1){
                                     VStack (spacing: 1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("Возраст (годы)")
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -323,9 +323,9 @@ struct ScalesTables: View {
                                         }
                                     }
                                     VStack (spacing: 1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("ЧСС (уд/мин)")
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -347,12 +347,12 @@ struct ScalesTables: View {
                                 }
                                 HStack (spacing:1){
                                     VStack (spacing:1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("""
                                                 САД
                                                 (мм рт.ст.)
                                                 """)
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -372,9 +372,9 @@ struct ScalesTables: View {
                                         }
                                     }
                                     VStack (spacing:1){
-                                        HStack (alignment: .bottom){
+                                        HStack (alignment: .center){
                                             Text("Креатинин (мкмоль/л)")
-                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()
                                                 .padding(3)
@@ -397,9 +397,9 @@ struct ScalesTables: View {
                                 
                                 HStack (spacing:1){
                                 VStack (spacing:1){
-                                HStack (alignment: .bottom){
+                                HStack (alignment: .center){
                                     Text("Класс тяжести Killip")
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                         .font(.footnote)
                                         .bold()
                                         .padding(.horizontal, 3)

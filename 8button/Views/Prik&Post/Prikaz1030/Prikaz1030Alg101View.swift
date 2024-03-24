@@ -76,15 +76,10 @@ struct Prikaz1030Alg1View: View {
                 
                 
                 Spacer(minLength: 30)
-                HStack {
-                    ForEach(0..<13) { _ in
-                        Image(systemName: "minus")
-                    }
-                }
-                
-                Image(systemName: "minus")
-                
-                MyViewBuilder(title: Text("**Примечание**."), 
+                Divider()
+                    .background(Color.divider)
+                Spacer(minLength: 15)
+                MyViewBuilder(title: Text("**Примечание**."),
                               content: Text("""
                                             **Соблюдать следующие принципы**:
                                             1. Сохранять **спокойное**, внимательное отношение ко всем пациентам без исключения.

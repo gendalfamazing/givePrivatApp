@@ -251,13 +251,9 @@ struct Prikaz1030Alg43View: View {
                                 """)).buildGrayText()
                     }
                     Spacer(minLength: 30)
-                    HStack {
-                        ForEach(0..<13) { _ in
-                            Image(systemName: "minus")
-                        }
-                    }
-                    
-                    Image(systemName: "minus")
+                    Divider()
+                        .background(Color.divider)
+                    Spacer(minLength: 15)
                     
                             MyViewBuilder(title: Text("**Примечание.**"), content: Text("""
                                     **Любую колото-резаную рану живота считать проникающей**, ранящие предметы (нож, шило, заточка), находящиеся в ране **не извлекать**, а **дополнительно фиксировать** (пластырем) или **удерживать рукой**.

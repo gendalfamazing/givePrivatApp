@@ -4721,7 +4721,11 @@ struct Table59OKSSmall: Identifiable {
     static func getTable59GRACE6() -> [Table59OKSSmall] {
         [
             Table59OKSSmall(name: "Остановка сердца", code: "43", id: 1),
-            Table59OKSSmall(name: "Повышение TnT или МВ-КФК", code: "15", id: 2),
+            Table59OKSSmall(name: """
+                                    Повышение
+                                    TnT или
+                                    МВ-КФК
+                                    """, code: "15", id: 2),
             Table59OKSSmall(name: "Девиация сегмента ST", code: "30", id: 3),
             
         ]

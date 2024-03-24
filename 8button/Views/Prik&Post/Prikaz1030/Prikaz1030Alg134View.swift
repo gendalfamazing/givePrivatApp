@@ -333,15 +333,10 @@ struct Prikaz1030Alg34View: View {
                                 **Доставка в ближайший стационар** (ОИТАР, минуя приемное отделение)
                                 """)).buildGrayText()
                     }
-                    
                     Spacer(minLength: 30)
-                    HStack {
-                        ForEach(0..<13) { _ in
-                            Image(systemName: "minus")
-                        }
-                    }
-                    
-                    Image(systemName: "minus")
+                    Divider()
+                        .background(Color.divider)
+                    Spacer(minLength: 15)
                     
                             MyViewBuilder(title: Text("**Примечание**."), content: Text("""
                                     **Расчет парентеральной регидратации проводится по формуле**:

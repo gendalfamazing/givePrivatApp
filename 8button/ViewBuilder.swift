@@ -156,7 +156,8 @@ class MyViewBuilder: ViewBuilder1 {
                 
                 .modifier(ThemeBlueColorModifier())
 //                .background(Color.blueButton)
-                        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+                .background(isTextExpanded ? Color.toggle : Color.blueButton)
+                .background(Color.grayButton)
                 .font(.subheadline)
                 .cornerRadius(10)
                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
@@ -282,7 +283,7 @@ class MyViewBuilder: ViewBuilder1 {
                     .background(Color.titleNumber)
                     .cornerRadius(10)
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground.opacity(0.5))
+                    .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground)
                     .bold()
                 //                    .lineLimit(1)
             
@@ -295,27 +296,20 @@ class MyViewBuilder: ViewBuilder1 {
             }
             Spacer()
         }
-        .padding(5.0)
-//        .lineLimit(2)
-//        .padding(7.0)
-        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+        .padding(7.0)
+//                .lineLimit(2)
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
         .fixedSize(horizontal: false, vertical: true)
+        .fontWeight(.semibold)
         .frame(minHeight: 49)
         .frame(minWidth: 49)
-        .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground.opacity(0.5))
-//            .foregroundColor(Color.titleNumberForeground)
-        .background(isTextExpanded ? LinearGradient(gradient: Gradient(colors: [Color.toggle4, Color.toggle1]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.greenButton, Color.greenButton]), startPoint: .leading, endPoint: .trailing))
-//            .background(isTextExpanded ? Color.toggle1 : Color.greenButton)
-//        .cornerRadius(10)
-//        .padding(3.0)
-//        .shadow(color: .white.opacity(0.2),radius: 2)
-        .background(isTextExpanded ? LinearGradient(gradient: Gradient(colors: [Color.toggle4, Color.toggle1]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.greenButton, Color.greenButton]), startPoint: .leading, endPoint: .trailing))
-        .background(isTextExpanded ? LinearGradient(gradient: Gradient(colors: [Color.toggle4, Color.toggle1]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.greenButton, Color.greenButton]), startPoint: .leading, endPoint: .trailing))
-//            .background(isTextExpanded ? Color.toggle1 : Color.greenButton)
+        .modifier(ThemeBlueColorModifier())
+//                .background(Color.blueButton)
+        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+        .background(Color.grayButton)
         .font(.subheadline)
         .cornerRadius(10)
         .shadow(color: .shadowGrayRectangle, radius: 0.5)
-        
     }
     
     func buildTableCodes() -> some View {
@@ -433,7 +427,7 @@ class MyViewBuilder: ViewBuilder1 {
     }
     func buildTableGRACE() -> some View {
         
-        return HStack (alignment: .bottom){
+        return HStack (alignment: .center){
             ZStack {
                 title
                 .padding(.horizontal, 10)
@@ -487,16 +481,12 @@ class MyViewBuilder: ViewBuilder1 {
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 49)
             .frame(minWidth: 49)
-            .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground.opacity(0.5))
+            .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground.opacity(0.7))
 //            .foregroundColor(Color.titleNumberForeground)
+            .modifier(ThemeBlueColorModifier())
+    //                .background(Color.blueButton)
             .background(isTextExpanded ? Color.toggle : Color.blueButton)
-//            .background(isTextExpanded ? LinearGradient(gradient: Gradient(colors: [Color.toggle4, Color.toggle1]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.greenButton, Color.greenButton]), startPoint: .leading, endPoint: .trailing))
-//            .background(isTextExpanded ? Color.toggle1 : Color.greenButton)
-//            .cornerRadius(10)
-//            .padding(3.0)
-//            .shadow(color: .white.opacity(0.2),radius: 2)
-            .background(isTextExpanded ? LinearGradient(gradient: Gradient(colors: [Color.toggle4, Color.toggle1]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.greenButton, Color.greenButton]), startPoint: .leading, endPoint: .trailing))
-            .background(isTextExpanded ? LinearGradient(gradient: Gradient(colors: [Color.toggle4, Color.toggle1]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.greenButton, Color.greenButton]), startPoint: .leading, endPoint: .trailing))
+            .background(Color.grayButton)
 //            .background(isTextExpanded ? Color.toggle1 : Color.greenButton)
             .font(.subheadline)
             .cornerRadius(10)
@@ -524,6 +514,7 @@ class MyViewBuilder: ViewBuilder1 {
             .font(.subheadline)
             .cornerRadius(10)
             .shadow(radius: 2)
+            
             
     }
     
@@ -3521,5 +3512,5 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    ScalesTables()
+    CodesMkb10()
 }
