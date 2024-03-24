@@ -79,7 +79,7 @@ struct AtlasECG: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
@@ -87,7 +87,11 @@ struct AtlasECG: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    //
+                    Text("""
+                    «Большой сборник ЭКГ»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
             

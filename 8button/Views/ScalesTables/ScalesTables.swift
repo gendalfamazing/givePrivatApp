@@ -25,7 +25,6 @@ struct ScalesTables: View {
     var body: some View {
             ScrollView {
                 VStack (spacing: 5){
-                Spacer()
                 MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Взрослые)")).buildBlue591Text(isTextExpanded: isTextExpanded1)
                     .onTapGesture {
                         withAnimation (.snappy) {
@@ -952,7 +951,7 @@ struct ScalesTables: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
@@ -960,7 +959,11 @@ struct ScalesTables: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-//                    
+                    Text("""
+                    «Различные шкалы, полезные для СМП»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
             

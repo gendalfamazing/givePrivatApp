@@ -482,7 +482,6 @@ struct CodesMkb10: View {
             }
             .padding(.horizontal, 10)
             .padding(.bottom, 55)
-            .navigationBarTitle("", displayMode: .inline)
             
             
             
@@ -496,6 +495,7 @@ struct CodesMkb10: View {
         //        .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
         .navigationBarBackButtonHidden(false)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
@@ -503,8 +503,15 @@ struct CodesMkb10: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
+                    Text("""
+                    «Краткий справочник заболеваний»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
+            
+        
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: SearchCode()) {
                     Image(systemName: "textformat.abc")

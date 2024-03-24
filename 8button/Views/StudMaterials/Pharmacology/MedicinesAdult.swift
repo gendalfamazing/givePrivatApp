@@ -88,7 +88,7 @@ struct MedicinesAdult: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
@@ -96,7 +96,11 @@ struct MedicinesAdult: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    //
+                    Text("""
+                    «Применении лекарственных препаратов у взрослых»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
             

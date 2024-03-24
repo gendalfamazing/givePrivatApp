@@ -205,7 +205,7 @@ struct Pharmacology: View {
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
-        .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
@@ -213,7 +213,11 @@ struct Pharmacology: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    //
+                    Text("""
+                    «Применении лекарственных препаратов»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
             

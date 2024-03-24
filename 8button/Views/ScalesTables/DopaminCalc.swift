@@ -1,6 +1,7 @@
 
 
 import SwiftUI
+import Foundation
 
 struct InfusionRateCalculatorView: View {
     @State private var isTextExpanded1 = false
@@ -59,6 +60,7 @@ struct InfusionRateCalculatorView: View {
                             TextField("Лекарственная форма (мг/мл)", text: $drugConcentration)
                                 .keyboardType(.numberPad)
                                 .frame(minHeight: 30)
+                            
                             Divider()
                             TextField("Объем лекарственной формы (мл)", text: $drugVolume)
                                 .keyboardType(.numberPad)
@@ -166,9 +168,9 @@ struct InfusionRateCalculatorView: View {
 //        .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
         
-        .navigationBarTitle("Калькулятор дозировки Допамина")
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("",displayMode: .inline)
+        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
@@ -176,7 +178,11 @@ struct InfusionRateCalculatorView: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    //
+                    Text("""
+                    «Возможность быстрого и точного рассчета»
+                    """)
+                    .font(.caption2)
+                    .foregroundStyle(Color.toolBar)
                 }
             }
             
@@ -185,7 +191,10 @@ struct InfusionRateCalculatorView: View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
-    
+    func isValidName(_ name: String) -> Bool {
+        // Валидация имени
+        return name.count <= 3
+    }
 }
 extension UIApplication {
     func endEditing() {

@@ -104,8 +104,23 @@ struct SearchCode: View {
             
             .background(Color.back)
             .searchable(text: $viewModel.searchText, placement: .automatic, prompt: Text("Поиск..."))
-            .navigationBarTitle("МКБ-10", displayMode: .inline)
-            
+            .navigationBarTitle("", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("МКБ-10")
+                            .font(.headline)
+                            .foregroundStyle(Color.toolBar)
+                            .bold()
+                        Text("""
+                        «Список по алфавиту»
+                        """)
+                        .font(.caption2)
+                        .foregroundStyle(Color.toolBar)
+                    }
+                }
+                
+            }
             .task {
                 await viewModel.loadCode()
             }
