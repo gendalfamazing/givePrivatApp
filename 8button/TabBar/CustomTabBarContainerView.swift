@@ -26,9 +26,19 @@ struct CustomTabBarContainerView<Content:View>: View {
         ZStack(alignment: .bottom) {
             content
 //                .ignoresSafeArea()
-            CustomTabBarView(tabs: tabs, selection: $selection)
-                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                .padding(.bottom, 5)
+            
+            ZStack (alignment: .bottom){
+                Text("")
+                    .frame(height: 47)
+                    .frame(maxWidth: .infinity)
+                    .background(.back)
+                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                CustomTabBarView(tabs: tabs, selection: $selection)
+//                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                
+                
+            }
+                
         }
         
         
@@ -53,3 +63,6 @@ struct CustomTabBarContainerView_Previews: PreviewProvider {
         }
     }
 }
+#Preview {
+        AppTabBarView()
+    }

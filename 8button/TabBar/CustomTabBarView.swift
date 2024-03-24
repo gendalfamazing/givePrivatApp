@@ -43,16 +43,17 @@ extension CustomTabBarView {
             VStack {
                 Image(systemName: tab.iconName)
                     .resizable()
-                    .frame(maxWidth: 15, maxHeight: 15)
+                    .frame(maxWidth: 25, maxHeight: 25)
                     .font(.subheadline)
                 
                 Text(tab.title)
                     .font(.system(size: 10, weight: .semibold, design: .rounded))
                 
             }
-            .foregroundColor(selection == tab ? tab.color : Color.gray)
-            .padding(.vertical, 6)
+            .foregroundColor(selection == tab ? Color.tabbar : tab.color)
+            .padding(.top, 5)
             .frame(maxWidth: .infinity)
+            .frame(height: 45)
 //            .background(
 //                ZStack{
 //                    if selection == tab {
@@ -62,35 +63,36 @@ extension CustomTabBarView {
 //                    }
 //                }
 //            )
-            .background(
-                ZStack{
-                    if selection == tab && selection == .home {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(tab.color.opacity(0.2))
-                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
-                    } else if selection == tab && selection == .adult {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(tab.color.opacity(0.2))
-                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
-                    }else if selection == tab && selection == .child {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(tab.color.opacity(0.2))
-                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
-                    } else if selection == tab && selection == .search {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(tab.color.opacity(0.2))
-                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
-                    } else {
-                    }
-                }
-            )
+//            .background(
+//                ZStack{
+//                    if selection == tab && selection == .home {
+//                        RoundedRectangle(cornerRadius: 0)
+//                            .fill(tab.color.opacity(0.2))
+//                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+//                    } else if selection == tab && selection == .adult {
+//                        RoundedRectangle(cornerRadius: 0)
+//                            .fill(tab.color.opacity(0.2))
+//                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+//                    }else if selection == tab && selection == .child {
+//                        RoundedRectangle(cornerRadius: 0)
+//                            .fill(tab.color.opacity(0.2))
+//                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+//                    } else if selection == tab && selection == .search {
+//                        RoundedRectangle(cornerRadius: 0)
+//                            .fill(tab.color.opacity(0.2))
+//                            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+//                    } else {
+//                    }
+//                }
+//            )
+        
             
         
     
     }
     
     private var tabBarVersion2: some View {
-        HStack {
+        HStack (alignment: .bottom){
             ForEach (tabs, id: \.self) { tab in
                 tabView2(tab: tab)
                 
@@ -104,9 +106,9 @@ extension CustomTabBarView {
         
         .background(colorScheme == .dark ? Color(red: 0, green: 0, blue: 0) : Color(red: 0.9568627450980393, green: 0.9529411764705882, blue: 0.9764705882352941))
         .ignoresSafeArea(edges: .bottom)
-        .cornerRadius(10)
+        .cornerRadius(0)
 //        .shadow(color: .shadowGrayRectangle, radius: 0.5)
-        .padding(.horizontal)
+//        .padding(.horizontal)
         
     }
     private func switchToTab(tab: TabBarItem) {
@@ -115,28 +117,28 @@ extension CustomTabBarView {
                 withAnimation() {
                     selection = .adult
                 }
-                withAnimation (.easeInOut(duration: 0.3)) {
+                withAnimation (.easeInOut(duration: 0)) {
                     selection = .home
                 }
             } else if selection == tab && selection == .adult{
                 withAnimation() {
                     selection = .child
                 }
-                withAnimation (.easeInOut(duration: 0.3)) {
+                withAnimation (.easeInOut(duration: 0)) {
                     selection = .adult
                 }
             } else if selection == tab && selection == .child{
                 withAnimation() {
                     selection = .adult
                 }
-                withAnimation (.easeInOut(duration: 0.3)) {
+                withAnimation (.easeInOut(duration: 0)) {
                     selection = .child
                 }
             }else if selection == tab && selection == .search{
                 withAnimation() {
                     selection = .child
                 }
-                withAnimation (.easeInOut(duration: 0.3)) {
+                withAnimation (.easeInOut(duration: 0)) {
                     selection = .search
                 }
             } else {

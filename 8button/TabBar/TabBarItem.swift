@@ -20,10 +20,10 @@ enum TabBarItem: Hashable {
     
     var iconName: String {
         switch self {
-        case .home: return "house"
-        case .adult: return "heart.text.square"
-        case .child: return "heart.text.square"
-        case .search: return "doc.text.magnifyingglass"
+        case .home: return "house.fill"
+        case .adult: return "person.fill"
+        case .child: return "person"
+        case .search: return "questionmark.app"
         }
     }
     
@@ -32,7 +32,7 @@ enum TabBarItem: Hashable {
         case .home: return "Главная"
         case .adult: return "Взрослые"
         case .child: return "Дети"
-        case .search: return "Поиск"
+        case .search: return "Инфо"
         }
     }
     

@@ -36,7 +36,7 @@ struct AppTabBarView: View {
                 .id(childPath)
                 .tabBarItem(tab: .child, selection: $tabSelection)
             
-            SearchableBootcamp()
+            AboutApp()
                 .id(searchPath)
                 .tabBarItem(tab: .search, selection: $tabSelection)
         }
