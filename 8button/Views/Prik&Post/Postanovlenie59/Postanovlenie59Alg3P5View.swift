@@ -148,7 +148,7 @@ struct Postanovlenie59Alg3P5View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Схема последовательных неотложных мероприятий при острой сердечной недостаточности»
+                    «Мероприятий при острой сердечной недостаточности»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

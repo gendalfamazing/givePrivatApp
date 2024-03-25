@@ -26,7 +26,7 @@ struct AboutApp: View {
                         .scaledToFit()
                         .clipShape(Rectangle())
                 }
-                Text("текст будет переработан, так как он спизжен :)")
+                Text("текст будет переработан, так как он частично спизжен :)")
                     .font(.caption)
                     .foregroundStyle(Color.red)
                 ZStack{
@@ -45,9 +45,11 @@ struct AboutApp: View {
                         MyViewBuilder(title: Text("1"),
                                       content: Text("""
                                                         Приложение содержит клинические протоколы (стандарты диагностики и лечения), приказы и постановления разработанные МЗ РБ.
+                                                        Внешний вид содержащихся данных переработан для лучшего понимания изложенной информации.
                                                         Так же в приложении присутствуют шпаргалки, шкалы, различные тексты и таблицы для облегчения работы на СМП.
                                                         Приложение работает в режиме оффлайн (без интернета) и доступно для использования в любой момент времени.
                                                         """)).buildGrayInHiddenText()
+                            .multilineTextAlignment(.leading)
                     }
                     
                 }
@@ -92,7 +94,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("artur.vladymcev@mail.com")
+                        Text("artur.vladymcev@gmail.com")
                             .textSelection(.enabled)
                         Spacer()
                     }
@@ -119,7 +121,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("Version: 1.0.0 (5)")
+                        Text("Version: 1.0.0 (7)")
                         Spacer()
                     }
                     Divider()

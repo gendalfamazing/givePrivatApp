@@ -453,7 +453,7 @@ struct Postanovlenie59Alg3P6View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Схема дифференцированного применения антиаритмических лекарственных средств при ОКС»
+                    «Применение антиаритмиков при ОКС»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

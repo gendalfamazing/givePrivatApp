@@ -38,7 +38,7 @@ struct Postanovlenie59Alg3P4View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Номограмма для коррекции скорости введения гепарина»")
+                    Text("«Коррекция скорости введения гепарина»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

@@ -236,15 +236,6 @@ struct Postanovlenie59Alg1P2View: View {
                         }
                     }
                     
-                    Spacer(minLength: 10)
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            MyViewBuilder(title: Text("3"), content: Text("""
-                            * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
-                            """)).buildGrayInHidden59Text()
-                        }
-                    }
                     
                     
             }

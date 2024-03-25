@@ -38,7 +38,7 @@ struct Postanovlenie59Alg3View: View {
                                                 """)).buildGrayTextCenter()
                         .multilineTextAlignment(.center)
                     MyViewBuilder(title: Text("""
-                                              Последовательность оказания медицинской помощи пациентам с ОКС
+                                              Использование диагноза Острый Коронарный Синдром
                                               """),
                                   content: Text(LocalizedStringKey("Post59Alg3B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
                         .onTapGesture {
@@ -208,15 +208,6 @@ struct Postanovlenie59Alg3View: View {
                                     }
                                 }
                                 
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                        * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
-                                        """)).buildGrayInHiddenText().onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded14.toggle()
-                                    }
-                                }
-                                
-                                
                             }
                             
                         }
@@ -226,7 +217,7 @@ struct Postanovlenie59Alg3View: View {
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
-                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом без подъема сегмента st")).buildBlue59Text(isTextExpanded: isTextExpanded15)
+                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом без подъема сегмента ST")).buildBlue59Text(isTextExpanded: isTextExpanded15)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded15.toggle()
@@ -258,16 +249,6 @@ struct Postanovlenie59Alg3View: View {
                                         isTextExpanded15.toggle()
                                     }
                                 }
-                                
-                                MyViewBuilder(title: Text("3"), content: Text("""
-                                        * Данный вид диагностики (лечения), консультация врачей-специалистов осуществляется в условиях межрайонных (при наличии необходимого оборудования и врачей-специалистов), областных и республиканских организаций здравоохранения.
-                                        """)).buildGrayInHiddenText()
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded15.toggle()
-                                        }
-                                    }
-                                
                                 
                             }
                             

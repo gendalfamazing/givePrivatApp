@@ -78,7 +78,7 @@ struct Postanovlenie99Alg2View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Принципы интенсивной терапии критических состояний»")
+                    Text("«Интенсивная терапия критических состояний»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

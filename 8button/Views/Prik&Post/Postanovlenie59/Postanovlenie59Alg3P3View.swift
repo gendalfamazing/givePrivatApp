@@ -208,7 +208,10 @@ struct Postanovlenie59Alg3P3View: View {
                                     }
                                     VStack (spacing:1){
                                         HStack (alignment: .center){
-                                            Text("Креатинин (мкмоль/л)")
+                                            Text("""
+                                                Креатинин
+                                                (мкмоль/л)
+                                                """)
                                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                                 .font(.footnote)
                                                 .bold()

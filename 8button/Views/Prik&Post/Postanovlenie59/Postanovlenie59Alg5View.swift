@@ -207,7 +207,7 @@ struct Postanovlenie59Alg5View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Диагностика и лечение тахикардии»
+                    «Диагностика и лечение нарушений проводимости»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

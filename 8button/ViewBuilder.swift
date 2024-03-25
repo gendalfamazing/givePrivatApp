@@ -1642,7 +1642,14 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title15))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
             
         }
         .textSelection(.enabled)
@@ -1999,6 +2006,13 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title13))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(7)
             
         }
         .textSelection(.enabled)
@@ -2064,6 +2078,13 @@ class MyViewBuilder59: ViewBuilder3 {
             Text(LocalizedStringKey(title12))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title13))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .font(.caption2)
                 .padding(7)
             Spacer(minLength: 1)
@@ -2244,6 +2265,10 @@ class MyViewBuilder59: ViewBuilder3 {
             Divider()
                 .background(Color.divider)
                 .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title26))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(7)
             
         }
         .textSelection(.enabled)
@@ -2406,6 +2431,10 @@ class MyViewBuilder59: ViewBuilder3 {
             Divider()
                 .background(Color.divider)
                 .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title24))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.caption2)
+                .padding(7)
             
         }
         .textSelection(.enabled)
@@ -3495,14 +3524,11 @@ class MyViewBuilder59: ViewBuilder3 {
                 .background(Color.divider)
                 .padding(.horizontal, 5)
             Text(LocalizedStringKey(title15))
-                .padding(.horizontal, 7)
-                .font(.subheadline)
-                .bold()
-            Text(LocalizedStringKey(title16))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
+            
             
         }
         .textSelection(.enabled)
