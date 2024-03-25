@@ -2096,6 +2096,119 @@ class MyViewBuilder59: ViewBuilder3 {
         
     }
     
+    func buildTable59OKSRightVentrick() -> some View {
+        
+        return VStack (spacing: 1){
+            
+            Text(LocalizedStringKey(title1))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            Text(LocalizedStringKey(title2))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title3))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            Text(LocalizedStringKey(title4))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title5))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Text(LocalizedStringKey(title6))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title7))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            
+            Text(LocalizedStringKey(title8))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title9))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Text(LocalizedStringKey(title10))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title11))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Text(LocalizedStringKey(title12))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title13))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Text(LocalizedStringKey(title14))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            Text(LocalizedStringKey(title15))
+                .padding(.horizontal, 7)
+                .font(.subheadline)
+                .bold()
+            Text(LocalizedStringKey(title16))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            //                .frame(maxWidth: 70)
+                .font(.caption2)
+                .padding(7)
+            
+        }
+        .textSelection(.enabled)
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
     func buildTable59OKS() -> some View {
         
         return VStack (spacing: 1){
