@@ -148,7 +148,7 @@ struct Postanovlenie59Alg3P5View: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Мероприятий при острой сердечной недостаточности»
+                    «Killip classes»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)
