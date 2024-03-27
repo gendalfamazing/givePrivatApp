@@ -47,6 +47,11 @@
 		C6353CDE2BB432ED000AE30A /* Manipulations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CDD2BB432ED000AE30A /* Manipulations.swift */; };
 		C6353CE02BB433EE000AE30A /* 01Vnutrikostniy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */; };
 		C6353CE22BB4403A000AE30A /* 02Oksigenoterapiya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */; };
+<<<<<<< HEAD
+=======
+		C6353CE62BB4579D000AE30A /* 03Pulseoxymetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CE52BB4579D000AE30A /* 03Pulseoxymetry.swift */; };
+		C6353CE82BB459EF000AE30A /* 04MetodikaDefibrillation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CE72BB459EF000AE30A /* 04MetodikaDefibrillation.swift */; };
+>>>>>>> 0e05da6 (add manipulations)
 		C63821582B6A9BB8009E0AC8 /* Postanovlenie2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63821572B6A9BB8009E0AC8 /* Postanovlenie2View.swift */; };
 		C638215A2B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63821592B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift */; };
 		C638215C2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638215B2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift */; };
@@ -258,6 +263,11 @@
 		C6353CDD2BB432ED000AE30A /* Manipulations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manipulations.swift; sourceTree = "<group>"; };
 		C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01Vnutrikostniy.swift; sourceTree = "<group>"; };
 		C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02Oksigenoterapiya.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		C6353CE52BB4579D000AE30A /* 03Pulseoxymetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03Pulseoxymetry.swift; sourceTree = "<group>"; };
+		C6353CE72BB459EF000AE30A /* 04MetodikaDefibrillation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04MetodikaDefibrillation.swift; sourceTree = "<group>"; };
+>>>>>>> 0e05da6 (add manipulations)
 		C63821572B6A9BB8009E0AC8 /* Postanovlenie2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie2View.swift; sourceTree = "<group>"; };
 		C63821592B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie2Alg1View.swift; sourceTree = "<group>"; };
 		C638215B2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie2Alg2View.swift; sourceTree = "<group>"; };
@@ -605,6 +615,11 @@
 				C6353CDD2BB432ED000AE30A /* Manipulations.swift */,
 				C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */,
 				C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */,
+<<<<<<< HEAD
+=======
+				C6353CE52BB4579D000AE30A /* 03Pulseoxymetry.swift */,
+				C6353CE72BB459EF000AE30A /* 04MetodikaDefibrillation.swift */,
+>>>>>>> 0e05da6 (add manipulations)
 			);
 			path = Manipulatii;
 			sourceTree = "<group>";
@@ -950,6 +965,10 @@
 				C654849C2B4EC1D800847504 /* Prikaz1030Alg130View.swift in Sources */,
 				C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */,
 				C6353CE22BB4403A000AE30A /* 02Oksigenoterapiya.swift in Sources */,
+<<<<<<< HEAD
+=======
+				C6353CE62BB4579D000AE30A /* 03Pulseoxymetry.swift in Sources */,
+>>>>>>> 0e05da6 (add manipulations)
 				C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */,
 				C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */,
 				C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */,
@@ -1087,6 +1106,7 @@
 				C644C85C2B5E99C200DBC6EB /* CodesMkb10.swift in Sources */,
 				C6039D2D2B5FA73F009CF504 /* Postanovlenie99Alg8View.swift in Sources */,
 				C65F00722B502E5600528DAC /* Prikaz1030Alg41View.swift in Sources */,
+				C6353CE82BB459EF000AE30A /* 04MetodikaDefibrillation.swift in Sources */,
 				C638215C2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift in Sources */,
 				C6C2229E2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift in Sources */,
 				C6E33E1A2B54265C00DEC3A1 /* Prikaz1030Alg50View.swift in Sources */,

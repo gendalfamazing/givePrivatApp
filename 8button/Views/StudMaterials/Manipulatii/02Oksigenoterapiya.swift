@@ -70,7 +70,11 @@ struct _2Oksigenoterapiya: View {
                 //                    ZStack {
                 //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                 //                        VStack (spacing: 1) {
+<<<<<<< HEAD
                
+=======
+                
+>>>>>>> 0e05da6 (add manipulations)
                 
                 ZStack {
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
@@ -129,11 +133,16 @@ struct _2Oksigenoterapiya: View {
                                         HStack (alignment: .bottom){
                                             Text("1 л/мин")
                                                 .font(.footnote)
+<<<<<<< HEAD
                                             .bold()
+=======
+                                                .bold()
+>>>>>>> 0e05da6 (add manipulations)
                                             Text("24% O2")
                                                 .font(.footnote)
                                         }
                                         HStack (alignment: .bottom){
+<<<<<<< HEAD
                                         Text("2 л/мин")
                                             .font(.footnote)
                                             .bold()
@@ -146,6 +155,20 @@ struct _2Oksigenoterapiya: View {
                                             .bold()
                                         Text("32% O2")
                                             .font(.footnote)
+=======
+                                            Text("2 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("28% O2")
+                                                .font(.footnote)
+                                        }
+                                        HStack (alignment: .bottom){
+                                            Text("3 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("32% O2")
+                                                .font(.footnote)
+>>>>>>> 0e05da6 (add manipulations)
                                         }
                                         HStack (alignment: .bottom){
                                             Text("4 л/мин")
@@ -155,6 +178,7 @@ struct _2Oksigenoterapiya: View {
                                                 .font(.footnote)
                                         }
                                     }
+<<<<<<< HEAD
                                 Spacer(minLength: 30)
                                 VStack (spacing: 1){
                                     HStack (alignment: .bottom){
@@ -186,6 +210,39 @@ struct _2Oksigenoterapiya: View {
                                             .font(.footnote)
                                     }
                                 }
+=======
+                                    Spacer(minLength: 30)
+                                    VStack (spacing: 1){
+                                        HStack (alignment: .bottom){
+                                            Text("5 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("40% O2")
+                                                .font(.footnote)
+                                        }
+                                        HStack (alignment: .bottom){
+                                            Text("6 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("44% O2")
+                                                .font(.footnote)
+                                        }
+                                        HStack (alignment: .bottom){
+                                            Text("7 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("48% O2")
+                                                .font(.footnote)
+                                        }
+                                        HStack (alignment: .bottom){
+                                            Text("8 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("52% O2")
+                                                .font(.footnote)
+                                        }
+                                    }
+>>>>>>> 0e05da6 (add manipulations)
                                     Spacer()
                                 }
                                 MyViewBuilder(title: Text(""),
@@ -239,11 +296,16 @@ struct _2Oksigenoterapiya: View {
                                         HStack (alignment: .bottom){
                                             Text("5-6 л/мин")
                                                 .font(.footnote)
+<<<<<<< HEAD
                                             .bold()
+=======
+                                                .bold()
+>>>>>>> 0e05da6 (add manipulations)
                                             Text("40% O2")
                                                 .font(.footnote)
                                         }
                                         HStack (alignment: .bottom){
+<<<<<<< HEAD
                                         Text("6-7 л/мин")
                                             .font(.footnote)
                                             .bold()
@@ -260,6 +322,24 @@ struct _2Oksigenoterapiya: View {
                                         
                                     }
                                 
+=======
+                                            Text("6-7 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("50% O2")
+                                                .font(.footnote)
+                                        }
+                                        HStack (alignment: .bottom){
+                                            Text("7-8 л/мин")
+                                                .font(.footnote)
+                                                .bold()
+                                            Text("60% O2")
+                                                .font(.footnote)
+                                        }
+                                        
+                                    }
+                                    
+>>>>>>> 0e05da6 (add manipulations)
                                     Spacer()
                                 }
                                 MyViewBuilder(title: Text(""),
@@ -354,7 +434,11 @@ struct _2Oksigenoterapiya: View {
                                                 – **абсорбционный ателектаз** (при дыхании 100% кислородом происходит вымывание азота, который, среди прочего предотвращает спадание альвеол, а кислород, замещающий азот, подлежит быстрой абсорбции)
                                                 – **острое повреждение легких** (невозможно дифференцировать патологические изменения, которые принуждают к терапевтическому применению кислорода в высоких концентрациях)
                                                 – **бронхолёгочная дисплазия** (у новорождённых).
+<<<<<<< HEAD
 
+=======
+                                                
+>>>>>>> 0e05da6 (add manipulations)
                                                 2. **Последствия дыхания сухой и холодной газовой смесью** (особенно длительного): высыхание и изъязвление слизистых оболочек, замедление мукоцилиарного клиренса, задержка секрета и увеличение его вязкости (что приводит к образованию очагов ателектаза), спазм бронхов, инфекция.
                                                 """
                                            )).buildDualBlockBlueGray(isTextExpanded: isTextExpanded5)

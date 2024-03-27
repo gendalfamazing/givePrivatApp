@@ -46,6 +46,16 @@ struct _1Vnutrikostniy: View {
     var body: some View {
         ScrollView {
             VStack (spacing:5) {
+<<<<<<< HEAD
+=======
+                MyViewBuilder(title: Text("Факты"),
+                              content: Text("""
+                                            **Внутрикостный доступ**
+                                            с использованием системы B.I.G.
+                                            """
+                                           )).buildGrayTextCenter()
+                    .multilineTextAlignment(.center)
+>>>>>>> 0e05da6 (add manipulations)
                 VStack {
                     Image("Vnutricostniy1")
                         .resizable()

@@ -54,7 +54,26 @@ struct Manipulations: View {
                             }
                         }
                     }
+<<<<<<< HEAD
                     
+=======
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _2Oksigenoterapiya()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Оксигенотерапия")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _3Pulseoxymetry()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Пульсоксиметрия")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+>>>>>>> 0e05da6 (add manipulations)
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
