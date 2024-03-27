@@ -44,6 +44,9 @@
 		C62C57512B4BFD6D008E7A8F /* Prikaz1030Alg104View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57502B4BFD6D008E7A8F /* Prikaz1030Alg104View.swift */; };
 		C62C57532B4C1864008E7A8F /* Prikaz1030Alg105View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57522B4C1864008E7A8F /* Prikaz1030Alg105View.swift */; };
 		C62C57552B4C1B83008E7A8F /* Prikaz1030Alg106View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57542B4C1B83008E7A8F /* Prikaz1030Alg106View.swift */; };
+		C6353CDE2BB432ED000AE30A /* Manipulations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CDD2BB432ED000AE30A /* Manipulations.swift */; };
+		C6353CE02BB433EE000AE30A /* 01Vnutrikostniy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */; };
+		C6353CE22BB4403A000AE30A /* 02Oksigenoterapiya.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */; };
 		C63821582B6A9BB8009E0AC8 /* Postanovlenie2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63821572B6A9BB8009E0AC8 /* Postanovlenie2View.swift */; };
 		C638215A2B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63821592B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift */; };
 		C638215C2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638215B2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift */; };
@@ -252,6 +255,9 @@
 		C62C57502B4BFD6D008E7A8F /* Prikaz1030Alg104View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg104View.swift; sourceTree = "<group>"; };
 		C62C57522B4C1864008E7A8F /* Prikaz1030Alg105View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg105View.swift; sourceTree = "<group>"; };
 		C62C57542B4C1B83008E7A8F /* Prikaz1030Alg106View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg106View.swift; sourceTree = "<group>"; };
+		C6353CDD2BB432ED000AE30A /* Manipulations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manipulations.swift; sourceTree = "<group>"; };
+		C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01Vnutrikostniy.swift; sourceTree = "<group>"; };
+		C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02Oksigenoterapiya.swift; sourceTree = "<group>"; };
 		C63821572B6A9BB8009E0AC8 /* Postanovlenie2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie2View.swift; sourceTree = "<group>"; };
 		C63821592B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie2Alg1View.swift; sourceTree = "<group>"; };
 		C638215B2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie2Alg2View.swift; sourceTree = "<group>"; };
@@ -593,6 +599,16 @@
 			path = Prikaz1030;
 			sourceTree = "<group>";
 		};
+		C6353CDC2BB432CA000AE30A /* Manipulatii */ = {
+			isa = PBXGroup;
+			children = (
+				C6353CDD2BB432ED000AE30A /* Manipulations.swift */,
+				C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */,
+				C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */,
+			);
+			path = Manipulatii;
+			sourceTree = "<group>";
+		};
 		C63821562B6A99CD009E0AC8 /* Postanovlenie2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +762,7 @@
 			isa = PBXGroup;
 			children = (
 				C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */,
+				C6353CDC2BB432CA000AE30A /* Manipulatii */,
 				C64817892BA346FD009B330F /* Diagnosis */,
 				C64817842BA33754009B330F /* StatusLocalis */,
 				C69B629A2BA1D774009FB0CD /* Pharmacology */,
@@ -932,6 +949,7 @@
 				C65FAE512B55169D00628105 /* Prikaz1030Alg52View.swift in Sources */,
 				C654849C2B4EC1D800847504 /* Prikaz1030Alg130View.swift in Sources */,
 				C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */,
+				C6353CE22BB4403A000AE30A /* 02Oksigenoterapiya.swift in Sources */,
 				C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */,
 				C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */,
 				C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */,
@@ -972,6 +990,7 @@
 				C638215A2B6A9C12009E0AC8 /* Postanovlenie2Alg1View.swift in Sources */,
 				C6D69FAF2B5A50B700235B09 /* Prikaz1030Alg67View.swift in Sources */,
 				C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */,
+				C6353CDE2BB432ED000AE30A /* Manipulations.swift in Sources */,
 				C6EED7952B651F0900E6B5CA /* Postanovlenie99Alg13View.swift in Sources */,
 				C69AE77C2B861DA600B1EADF /* Postanovlenie59Alg3View.swift in Sources */,
 				C60E0D632BA7150F00C1088E /* AtlasECG-Provodimost08.swift in Sources */,
@@ -1012,6 +1031,7 @@
 				C6DB60842B14E56E0050DAD6 /* Postanovlenie118Alg6View.swift in Sources */,
 				C60E0D532BA6E55700C1088E /* AtlasECG.swift in Sources */,
 				C65FAE592B556C7200628105 /* Prikaz1030Alg55View.swift in Sources */,
+				C6353CE02BB433EE000AE30A /* 01Vnutrikostniy.swift in Sources */,
 				C6FC70722B739886004FA876 /* 77777.swift in Sources */,
 				C6F2FAAF2B25B47400AC023A /* SearchableBootcamp.swift in Sources */,
 				C6C222A22B4C47FA006CE154 /* Prikaz1030Alg110View.swift in Sources */,

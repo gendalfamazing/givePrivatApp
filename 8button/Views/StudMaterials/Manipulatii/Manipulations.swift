@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StudMaterials: View {
+struct Manipulations: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -45,23 +45,16 @@ struct StudMaterials: View {
     
     var body: some View {
             ScrollView {
-                
                 VStack (spacing:5) {
-                    NavigationLink(destination: PamyatkiMain()) {
-                        MyViewBuilder(title: Text("01"), content:Text("«Памятки»")).buildTitleBlueText()
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _1Vnutrikostniy()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Внутрикостный доступ")).buildBlue59NavigationText()
+                            }
+                        }
                     }
-                    NavigationLink(destination: Pharmacology()) {
-                        MyViewBuilder(title: Text("02"), content:Text("«Фармакология»")).buildTitleBlueText()
-                    }
-                    NavigationLink(destination: StatusLocalis()) {
-                        MyViewBuilder(title: Text("03"), content:Text("«Локальный статус»")).buildTitleBlueText()
-                    }
-                    NavigationLink(destination: Diagnosis()) {
-                        MyViewBuilder(title: Text("04"), content:Text("«Диагнозы»")).buildTitleBlueText()
-                    }
-                    NavigationLink(destination: Manipulations()) {
-                        MyViewBuilder(title: Text("05"), content:Text("«Манипуляции»")).buildTitleBlueText()
-                    }
+                    
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
@@ -75,12 +68,12 @@ struct StudMaterials: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Учебные материалы")
+                    Text("Манипуляции")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Сборник полезной информации для СМП»
+                    «Различные манипуляции на этапе СМП»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)
@@ -92,6 +85,7 @@ struct StudMaterials: View {
     
 }
 #Preview {
-    StudMaterials()
+    Manipulations()
 }
+
 
