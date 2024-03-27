@@ -44,160 +44,87 @@ struct AtlasECGIVR07: View {
                                                         **Ритм искусственного водителя ритма**. ОИМ задне-диафрагмальной области.
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGIVR1")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded1 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded1 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded1 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded1 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded1.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGIVR1"), title: "").buildECGPad(isTextExpanded: isTextExpanded1)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded1.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded1 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded1 ? 520 : 520) : (isTextExpanded1 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("**Ритм искусственного водителя ритма**.")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGIVR2")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded2 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded2 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded2 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded2 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded2.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGIVR2"), title: "").buildECGPad(isTextExpanded: isTextExpanded2)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded2.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded2 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded2 ? 520 : 520) : (isTextExpanded2 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("**Ритм двойного искусственного водителя ритма**. Метки хорошо заметны в отведении II перед каждым зубцом P и комплексом QRS.")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGIVR3")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded3 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded3 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded3 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded3 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded3.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGIVR3"), title: "").buildECGPad(isTextExpanded: isTextExpanded3)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded3.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded3 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded3 ? 520 : 520) : (isTextExpanded3 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("84-летняя женщина с **искусственным водителем ритма**. Жалобы на головокружения. Нормальная желудочковая функция ЭКС")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGIVR4")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded4 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded4 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded4 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded4 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded4.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGIVR4"), title: "").buildECGPad(isTextExpanded: isTextExpanded4)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded4.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded4 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded4 ? 520 : 520) : (isTextExpanded4 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("**Предсердная ЭКС** с нормальной проводимостью АВ-узла.")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGIVR5")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded5 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded5 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded5 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded5 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded5.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGIVR5"), title: "").buildECGPad(isTextExpanded: isTextExpanded5)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded5.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded5 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded5 ? 520 : 520) : (isTextExpanded5 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("78-летний мужчина. **ЭКС АВ-узла**.")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGIVR6")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded6 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded6 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded6 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded6 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded6.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGIVR6"), title: "").buildECGPad(isTextExpanded: isTextExpanded6)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded6.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded6 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded6 ? 520 : 520) : (isTextExpanded6 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 
                             }

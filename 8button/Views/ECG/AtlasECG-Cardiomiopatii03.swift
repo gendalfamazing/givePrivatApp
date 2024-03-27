@@ -44,82 +44,43 @@ struct AtlasECGCardiomiopatii03: View {
                                                         Мужчина 36 лет с развитием боли в груди в покое, поступивший после предполагаемого инфаркта миокарда. **Гипертрофическая кардиомиопатия, апикальный вариант (Синдром Ямагучи)**. Кардиограмма демонстрирует левожелудочковую гипертрофию с глубокими отрицательными зубцами T в грудных и отведениях от конечностей. Кардиомиопатия Ямагучи характеризуется изолированной верхушечной гипертрофией. ЭКГ показывает ГЛЖ и отрицательные T в V3-V5. Верхушечная гипертрофическая кардиомиопатия так же, как и более общие формы гипертрофической кардиомиопатии - важные причины образцов псевдоинфаркта.
                                                         """)).buildGrayInHiddenText()
                                 
-                                
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGCardiomiopatii1")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded1 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded1 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded1 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded1 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded1.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGCardiomiopatii1"), title: "").buildECGPad(isTextExpanded: isTextExpanded1)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded1.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded1 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded1 ? 520 : 520) : (isTextExpanded1 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
+                                
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("52-летний мужчина с историей «кардиомиопатии» с частыми обмороками. ЭКГ показывает синусовый ритм, **гипертрофию ЛЖ** с его перегрузкой, ПБПНПГ с блокадой передней ветви ЛНПГ (передний гемиблок). Диагноз - **гипертрофическая кардиомиопатия с асимметричной гипертрофией перегородки** . Обморок пациента, возможно, произошел из-за бради- или тахиаритмий, или из-за гемодинамических последствий гипертрофии.")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGCardiomiopatii2")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded2 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded2 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded2 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded2 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded2.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGCardiomiopatii2"), title: "").buildECGPad(isTextExpanded: isTextExpanded2)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded2.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded2 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded2 ? 520 : 520) : (isTextExpanded2 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
                                 
                                 MyViewBuilder(title: Text("1"), content: Text("33-летний мужчина с систолическим шумом. Пациент имеет **гипертрофическую кардиомиопатию.**")).buildGrayInHiddenText()
                                 
-                                VStack (spacing:1) {
-                                    GeometryReader { proxy in
-                                        ScrollView {
-                                            Image("AtlasECGCardiomiopatii3")
-                                                .resizable()
-                                                .padding(1)
-                                                .cornerRadius(10)
-                                                .frame(maxWidth: (isTextExpanded3 ? proxy.size.width : proxy.size.width * 2 ))
-                                                .frame(maxHeight: (isTextExpanded3 ? proxy.size.height : proxy.size.height))
-                                                .scaledToFit()
-                                                .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded3 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded3 ? proxy.size.height : proxy.size.height ))))
-                                                .onTapGesture (count: 1, perform: {
-                                                    withAnimation(.easeInOut){
-                                                        isTextExpanded3.toggle()
-                                                    }
-                                                })
+                                ImagePDF(image: Image("AtlasECGCardiomiopatii3"), title: "").buildECGPad(isTextExpanded: isTextExpanded3)
+                                    .onTapGesture (count: 1, perform: {
+                                        withAnimation(.easeInOut){
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded3.toggle()
                                         }
-                                    }
-                                }
-                                .frame(minHeight: (isTextExpanded3 ? 240 : 480))
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(5)
+                                    })
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded3 ? 520 : 520) : (isTextExpanded3 ? 240 : 480))
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .padding(5)
                                 
                             }
                         }

@@ -171,52 +171,28 @@ struct Pharmacology: View {
                                 }
                             if isTextExpanded3 {
                                 VStack (spacing:1){
-                                    VStack (spacing:1) {
-                                        GeometryReader { proxy in
-                                            ScrollView {
-                                                Image("pharmacology1")
-                                                    .resizable()
-                                                    .padding(1)
-                                                    .cornerRadius(10)
-                                                    .frame(maxWidth: (isTextExpanded20 ? proxy.size.width : proxy.size.width * 2 ))
-                                                    .frame(maxHeight: (isTextExpanded20 ? proxy.size.height : proxy.size.height))
-                                                    .scaledToFit()
-                                                    .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded20 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded20 ? proxy.size.height : proxy.size.height ))))
-                                                    .onTapGesture (count: 1, perform: {
-                                                        withAnimation(.easeInOut){
-                                                            isTextExpanded20.toggle()
-                                                        }
-                                                    })
+                                    ImagePDF(image: Image("pharmacology1"), title: "").buildECGPad(isTextExpanded: isTextExpanded20)
+                                        .onTapGesture (count: 1, perform: {
+                                            withAnimation(.easeInOut){
+                                                isTextExpanded20.toggle()
                                             }
-                                        }
-                                    }
-                                    .frame(minHeight: (isTextExpanded20 ? 180 : 360))
-                                    .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                    .padding(5)
-                                    VStack (spacing:1) {
-                                        GeometryReader { proxy in
-                                            ScrollView {
-                                                Image("pharmacology2")
-                                                    .resizable()
-                                                    .padding(1)
-                                                    .cornerRadius(10)
-                                                    .frame(maxWidth: (isTextExpanded21 ? proxy.size.width : proxy.size.width * 2 ))
-                                                    .frame(maxHeight: (isTextExpanded21 ? proxy.size.height : proxy.size.height))
-                                                    .scaledToFit()
-                                                    .modifier(ImageModifierECG(contentSize: CGSize(width: (isTextExpanded21 ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded21 ? proxy.size.height : proxy.size.height ))))
-                                                    .onTapGesture (count: 1, perform: {
-                                                        withAnimation(.easeInOut){
-                                                            isTextExpanded21.toggle()
-                                                        }
-                                                    })
+                                        })
+                                        .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded20 ? 390 : 390) : (isTextExpanded20 ? 180 : 360))
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
+                                    
+                                    ImagePDF(image: Image("pharmacology2"), title: "").buildECGPad(isTextExpanded: isTextExpanded21)
+                                        .onTapGesture (count: 1, perform: {
+                                            withAnimation(.easeInOut){
+                                                UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded21.toggle()
                                             }
-                                        }
-                                    }
-                                    .frame(minHeight: (isTextExpanded21 ? 160 : 320))
-                                    .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                    .padding(5)
+                                        })
+                                        .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded21 ? 350 : 350) : (isTextExpanded21 ? 160 : 320))
+                                        .cornerRadius(10)
+                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
+                                    
                                 }
                                 
                             }

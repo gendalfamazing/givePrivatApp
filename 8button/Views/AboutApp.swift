@@ -94,7 +94,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("artur.vladymcev@gmail.com")
+                        Text("ambulance.docs@gmail.com")
                             .textSelection(.enabled)
                         Spacer()
                     }
@@ -121,7 +121,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("Version: 1.0.0 (7)")
+                        Text("Version: 1.0.0 (8)")
                         Spacer()
                     }
                     Divider()

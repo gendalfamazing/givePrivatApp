@@ -44,13 +44,13 @@ struct AtlasECGProvodimost08: View {
                                                         Пациент - 47-летняя женщина, которая не предъявляет жалоб. Данная ЭКГ без изменений с детского возраста. Рассмотренный пример показывает **полную АВ-блокаду**.
                                                         """)).buildGrayInHiddenText()
                                 
-                                ImagePDF(image: Image("AtlasECGProvodimost1"), title: "").buildECG(isTextExpanded: isTextExpanded1)
+                                ImagePDF(image: Image("AtlasECGProvodimost1"), title: "").buildECGPad(isTextExpanded: isTextExpanded1)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded1.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded1.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded1 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded1 ? 520 : 520) : (isTextExpanded1 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -64,10 +64,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost2"), title: "").buildECG(isTextExpanded: isTextExpanded2)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded2.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded2.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded2 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded2 ? 520 : 520) : (isTextExpanded2 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -80,10 +80,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost3"), title: "").buildECG(isTextExpanded: isTextExpanded3)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded3.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded3.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded3 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded3 ? 520 : 520) : (isTextExpanded3 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -96,10 +96,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost4"), title: "").buildECG(isTextExpanded: isTextExpanded4)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded4.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded4.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded4 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded4 ? 520 : 520) : (isTextExpanded4 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -112,10 +112,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost5"), title: "").buildECG(isTextExpanded: isTextExpanded5)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded5.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded5.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded5 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded5 ? 520 : 520) : (isTextExpanded5 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -128,10 +128,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost6"), title: "").buildECG(isTextExpanded: isTextExpanded6)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded6.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded6.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded6 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded6 ? 520 : 520) : (isTextExpanded6 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -144,10 +144,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost7"), title: "").buildECG(isTextExpanded: isTextExpanded7)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded7.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded7.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded7 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded7 ? 520 : 520) : (isTextExpanded7 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -160,10 +160,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost8"), title: "").buildECG(isTextExpanded: isTextExpanded8)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded8.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded8.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded8 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded8 ? 520 : 520) : (isTextExpanded8 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -176,10 +176,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost9"), title: "").buildECG(isTextExpanded: isTextExpanded9)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded9.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded9.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded9 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded9 ? 520 : 520) : (isTextExpanded9 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -192,10 +192,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost10"), title: "").buildECG(isTextExpanded: isTextExpanded10)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded10.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded10.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded10 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded10 ? 520 : 520) : (isTextExpanded10 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -208,10 +208,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost11"), title: "").buildECG(isTextExpanded: isTextExpanded11)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded11.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded11.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded11 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded11 ? 520 : 520) : (isTextExpanded11 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -224,10 +224,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost12"), title: "").buildECG(isTextExpanded: isTextExpanded12)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded12.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded12.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded12 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded12 ? 520 : 520) : (isTextExpanded12 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -240,10 +240,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost13"), title: "").buildECG(isTextExpanded: isTextExpanded13)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded13.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded13.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded13 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded13 ? 520 : 520) : (isTextExpanded13 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -256,10 +256,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost14"), title: "").buildECG(isTextExpanded: isTextExpanded14)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded14.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded14.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded14 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded14 ? 520 : 520) : (isTextExpanded14 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -272,10 +272,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost15"), title: "").buildECG(isTextExpanded: isTextExpanded15)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded15.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded15.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded15 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded15 ? 520 : 520) : (isTextExpanded15 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -288,10 +288,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost16"), title: "").buildECG(isTextExpanded: isTextExpanded16)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded16.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded16.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded16 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded16 ? 520 : 520) : (isTextExpanded16 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -304,10 +304,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost17"), title: "").buildECG(isTextExpanded: isTextExpanded17)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded17.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded17.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded17 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded17 ? 520 : 520) : (isTextExpanded17 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -320,10 +320,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost18"), title: "").buildECG(isTextExpanded: isTextExpanded18)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded18.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded18.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded18 ? 240 : 480))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded18 ? 520 : 520) : (isTextExpanded18 ? 240 : 480))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -336,10 +336,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost19"), title: "").buildECG(isTextExpanded: isTextExpanded19)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded19.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded19.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded19 ? 130 : 260))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded19 ? 280 : 280) : (isTextExpanded19 ? 130 : 260))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
@@ -352,10 +352,10 @@ struct AtlasECGProvodimost08: View {
                                 ImagePDF(image: Image("AtlasECGProvodimost20"), title: "").buildECG(isTextExpanded: isTextExpanded20)
                                     .onTapGesture (count: 1, perform: {
                                         withAnimation(.easeInOut){
-                                            isTextExpanded20.toggle()
+                                            UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded20.toggle()
                                         }
                                     })
-                                    .frame(minHeight: (isTextExpanded20 ? 180 : 360))
+                                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded20 ? 390 : 390) : (isTextExpanded20 ? 180 : 360))
                                     .cornerRadius(10)
                                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)

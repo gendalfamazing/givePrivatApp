@@ -12,7 +12,7 @@ struct ImageModifier: ViewModifier {
     }
     
     var doubleTapGesture: some Gesture {
-        TapGesture(count: 2).onEnded {
+        TapGesture(count: 1).onEnded {
             if currentScale <= min { currentScale = max } else
             if currentScale >= max { currentScale = min } else {
                 currentScale = ((max - min) * 0.5 + min) < currentScale ? max : min
@@ -28,7 +28,8 @@ struct ImageModifier: ViewModifier {
                 
                 
         }
-        .gesture(doubleTapGesture)
+        
+        .gesture(UIDevice.current.userInterfaceIdiom == .pad ? nil : doubleTapGesture)
         .animation(.easeInOut, value: currentScale)
         
     }
@@ -44,7 +45,7 @@ struct ImageModifierECG: ViewModifier {
     }
     
     var doubleTapGesture: some Gesture {
-        TapGesture(count: 3).onEnded {
+        TapGesture(count: 2).onEnded {
             if currentScale <= min { currentScale = max } else
             if currentScale >= max { currentScale = min } else {
                 currentScale = ((max - min) * 0.5 + min) < currentScale ? max : min
@@ -58,7 +59,7 @@ struct ImageModifierECG: ViewModifier {
                 .frame(width: contentSize.width * currentScale, height: contentSize.height * currentScale, alignment: .center)
                 .modifier(PinchToZoom(minScale: min, maxScale: max, scale: $currentScale))
         }
-        .gesture(doubleTapGesture)
+        .gesture(UIDevice.current.userInterfaceIdiom == .pad ? nil : doubleTapGesture)
         .animation(.easeInOut, value: currentScale)
     }
 }
@@ -154,5 +155,5 @@ struct ContentView33: View {
 }
 
 #Preview {
-    ContentView33()
+    AppTabBarView()
 }

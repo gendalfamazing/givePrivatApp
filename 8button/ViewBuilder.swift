@@ -1021,7 +1021,23 @@ struct ImagePDF: View {
         }
     }
 }
-    
+    func buildECGPad(isTextExpanded: Bool) -> some View {
+    VStack (spacing:1) {
+        GeometryReader { proxy in
+            ScrollView {
+                image
+                    .resizable()
+                    .padding(1)
+                    .cornerRadius(10)
+                    .frame(maxWidth: (isTextExpanded ? proxy.size.width : proxy.size.width * 2 ))
+                    .frame(maxHeight: (isTextExpanded ? proxy.size.height : proxy.size.height))
+                    .scaledToFit()
+                    .modifier(ImageModifierECG(contentSize: CGSize(width: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded ? proxy.size.width : proxy.size.width): (isTextExpanded ? proxy.size.width : proxy.size.width * 2), height: (isTextExpanded ? proxy.size.height : proxy.size.height ))))
+                    
+            }
+        }
+    }
+}
 }
 
 ///////////////////////////////////////////////////
