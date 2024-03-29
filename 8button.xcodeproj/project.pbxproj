@@ -174,6 +174,8 @@
 		C6D69FC12B5A75DA00235B09 /* Prikaz1030Alg76View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FC02B5A75DA00235B09 /* Prikaz1030Alg76View.swift */; };
 		C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FC22B5A795D00235B09 /* Prikaz1030Alg77View.swift */; };
 		C6D69FC52B5A7B6B00235B09 /* Prikaz1030Alg78View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FC42B5A7B6B00235B09 /* Prikaz1030Alg78View.swift */; };
+		C6DA83FE2BB6CDF200142010 /* 03Pulseoxymetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */; };
+		C6DA84002BB6CE4200142010 /* 04MetodikaDefibrillation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */; };
 		C6DB604C2B14BB910050DAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6DB604B2B14BB910050DAD6 /* Assets.xcassets */; };
 		C6DB605B2B14BBEA0050DAD6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB60552B14BBEA0050DAD6 /* BackButton.swift */; };
 		C6DB605C2B14BBEA0050DAD6 /* Postanovlenie118View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB60562B14BBEA0050DAD6 /* Postanovlenie118View.swift */; };
@@ -389,6 +391,8 @@
 		C6D69FC02B5A75DA00235B09 /* Prikaz1030Alg76View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg76View.swift; sourceTree = "<group>"; };
 		C6D69FC22B5A795D00235B09 /* Prikaz1030Alg77View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg77View.swift; sourceTree = "<group>"; };
 		C6D69FC42B5A7B6B00235B09 /* Prikaz1030Alg78View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg78View.swift; sourceTree = "<group>"; };
+		C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03Pulseoxymetry.swift; sourceTree = "<group>"; };
+		C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04MetodikaDefibrillation.swift; sourceTree = "<group>"; };
 		C6DB604B2B14BB910050DAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = 8button/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C6DB60552B14BBEA0050DAD6 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		C6DB60562B14BBEA0050DAD6 /* Postanovlenie118View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postanovlenie118View.swift; sourceTree = "<group>"; };
@@ -605,6 +609,8 @@
 				C6353CDD2BB432ED000AE30A /* Manipulations.swift */,
 				C6353CDF2BB433EE000AE30A /* 01Vnutrikostniy.swift */,
 				C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */,
+				C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */,
+				C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */,
 			);
 			path = Manipulatii;
 			sourceTree = "<group>";
@@ -950,6 +956,7 @@
 				C654849C2B4EC1D800847504 /* Prikaz1030Alg130View.swift in Sources */,
 				C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */,
 				C6353CE22BB4403A000AE30A /* 02Oksigenoterapiya.swift in Sources */,
+				C6DA83FE2BB6CDF200142010 /* 03Pulseoxymetry.swift in Sources */,
 				C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */,
 				C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */,
 				C6D69FC32B5A795D00235B09 /* Prikaz1030Alg77View.swift in Sources */,
@@ -1087,6 +1094,7 @@
 				C644C85C2B5E99C200DBC6EB /* CodesMkb10.swift in Sources */,
 				C6039D2D2B5FA73F009CF504 /* Postanovlenie99Alg8View.swift in Sources */,
 				C65F00722B502E5600528DAC /* Prikaz1030Alg41View.swift in Sources */,
+				C6DA84002BB6CE4200142010 /* 04MetodikaDefibrillation.swift in Sources */,
 				C638215C2B6A9C1D009E0AC8 /* Postanovlenie2Alg2View.swift in Sources */,
 				C6C2229E2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift in Sources */,
 				C6E33E1A2B54265C00DEC3A1 /* Prikaz1030Alg50View.swift in Sources */,
