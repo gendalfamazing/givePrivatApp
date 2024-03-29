@@ -176,6 +176,8 @@
 		C6D69FC52B5A7B6B00235B09 /* Prikaz1030Alg78View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FC42B5A7B6B00235B09 /* Prikaz1030Alg78View.swift */; };
 		C6DA83FE2BB6CDF200142010 /* 03Pulseoxymetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */; };
 		C6DA84002BB6CE4200142010 /* 04MetodikaDefibrillation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */; };
+		C6DA84022BB6E02F00142010 /* 05Kardioversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84012BB6E02F00142010 /* 05Kardioversion.swift */; };
+		C6DA84042BB6E5B400142010 /* 06Kardiostimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84032BB6E5B400142010 /* 06Kardiostimulation.swift */; };
 		C6DB604C2B14BB910050DAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6DB604B2B14BB910050DAD6 /* Assets.xcassets */; };
 		C6DB605B2B14BBEA0050DAD6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB60552B14BBEA0050DAD6 /* BackButton.swift */; };
 		C6DB605C2B14BBEA0050DAD6 /* Postanovlenie118View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB60562B14BBEA0050DAD6 /* Postanovlenie118View.swift */; };
@@ -393,6 +395,8 @@
 		C6D69FC42B5A7B6B00235B09 /* Prikaz1030Alg78View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg78View.swift; sourceTree = "<group>"; };
 		C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03Pulseoxymetry.swift; sourceTree = "<group>"; };
 		C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04MetodikaDefibrillation.swift; sourceTree = "<group>"; };
+		C6DA84012BB6E02F00142010 /* 05Kardioversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 05Kardioversion.swift; sourceTree = "<group>"; };
+		C6DA84032BB6E5B400142010 /* 06Kardiostimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06Kardiostimulation.swift; sourceTree = "<group>"; };
 		C6DB604B2B14BB910050DAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = 8button/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C6DB60552B14BBEA0050DAD6 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		C6DB60562B14BBEA0050DAD6 /* Postanovlenie118View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postanovlenie118View.swift; sourceTree = "<group>"; };
@@ -611,6 +615,8 @@
 				C6353CE12BB4403A000AE30A /* 02Oksigenoterapiya.swift */,
 				C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */,
 				C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */,
+				C6DA84012BB6E02F00142010 /* 05Kardioversion.swift */,
+				C6DA84032BB6E5B400142010 /* 06Kardiostimulation.swift */,
 			);
 			path = Manipulatii;
 			sourceTree = "<group>";
@@ -1013,10 +1019,12 @@
 				C6D69FAD2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift in Sources */,
 				C6DB605C2B14BBEA0050DAD6 /* Postanovlenie118View.swift in Sources */,
 				C6D69FB32B5A5C8C00235B09 /* Prikaz1030Alg69View.swift in Sources */,
+				C6DA84022BB6E02F00142010 /* 05Kardioversion.swift in Sources */,
 				C65FAE552B551E0F00628105 /* Prikaz1030Alg54View.swift in Sources */,
 				C620D09C2B1B2E920011BE17 /* 5555.swift in Sources */,
 				C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */,
 				C63821642B6A9C46009E0AC8 /* Postanovlenie2Alg6View.swift in Sources */,
+				C6DA84042BB6E5B400142010 /* 06Kardiostimulation.swift in Sources */,
 				C65FAE612B55850F00628105 /* Prikaz1030Alg59View.swift in Sources */,
 				C62C574F2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift in Sources */,
 				C664F5452B4D64FE0044E0E1 /* Prikaz1030Alg118View.swift in Sources */,
