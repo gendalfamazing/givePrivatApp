@@ -891,7 +891,6 @@ struct TablePharmacology: Identifiable {
                               id: 5),
             TablePharmacology(name: """
                                     **Атропин**
-                                    
                                     *3 мг - это доза, обеспечивающая максимальнуюблокаду блуждающего нерва*
                                     """,
                               code: """

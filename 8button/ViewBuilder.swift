@@ -3674,5 +3674,5 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    _7Infusomat()
+    AppTabBarView()
 }

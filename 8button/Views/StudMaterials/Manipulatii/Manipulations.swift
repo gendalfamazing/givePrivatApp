@@ -102,6 +102,30 @@ struct Manipulations: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _7Infusomat()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение инфузомата")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _8Nebulaiser()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение небулайзера")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _9Zond()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Промывание желудка зондом")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
