@@ -54,7 +54,7 @@ struct _8Nebulaiser: View {
                                            )).buildGrayTextCenter()
                     .multilineTextAlignment(.center)
                 VStack {
-                    Image("nebulaiser1")
+                    Image("nebulaiser2")
                         .resizable()
                         .scaledToFit()
                         .clipShape(Rectangle())

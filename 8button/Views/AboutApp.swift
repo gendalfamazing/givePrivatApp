@@ -13,7 +13,8 @@ struct AboutApp: View {
     
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
-    
+    let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+    let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
     var body: some View {
         NavigationStack {
         ScrollView {
@@ -121,7 +122,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("Version: 1.0.0 (8)")
+                        Text("Version: \(version) (\(buildNumber))")
                         Spacer()
                     }
                     Divider()

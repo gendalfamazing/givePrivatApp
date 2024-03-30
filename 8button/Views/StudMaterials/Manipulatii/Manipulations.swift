@@ -102,14 +102,7 @@ struct Manipulations: View {
                             }
                         }
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
-                            NavigationLink (destination: _7Infusomat()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Применение инфузомата")).buildBlue59NavigationText()
-                            }
-                        }
-                    }
+                    
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                         VStack  {
