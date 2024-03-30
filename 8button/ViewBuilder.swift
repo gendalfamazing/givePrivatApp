@@ -74,6 +74,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -103,6 +104,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -136,6 +138,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -170,6 +173,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 10)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -203,6 +207,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack  {
                     content
+                        .padding(.leading, 7)
                         .multilineTextAlignment(.leading)
                     Spacer()
                     Spacer()
@@ -718,6 +723,7 @@ class MyViewBuilder: ViewBuilder1 {
             VStack (spacing: 1) {
                 HStack {
                     title
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -767,6 +773,7 @@ class MyViewBuilder: ViewBuilder1 {
             VStack (spacing: 1) {
                 HStack {
                     title
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -3667,5 +3674,5 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    CodesMkb10()
+    _7Infusomat()
 }

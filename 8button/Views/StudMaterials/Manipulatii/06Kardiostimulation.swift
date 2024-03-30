@@ -168,6 +168,7 @@ struct _6Kardiostimulation: View {
                             isTextExpanded2.toggle()
                         }
                     }
+                    
                 MyViewBuilder(title: Text("При переходе в асистолию во время проведения ЭКС"),
                               content: Text("""
                                                 1. **Sol. Adrenalini 0,1% – 1 ml в разведении на 10 ml 0,9% NaCl внутривенно.**
