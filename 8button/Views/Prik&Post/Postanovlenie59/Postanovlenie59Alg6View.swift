@@ -380,7 +380,7 @@ struct Postanovlenie59Alg6View: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Приложение 4")
+                    Text("Постановление № 59")
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()

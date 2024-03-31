@@ -151,6 +151,8 @@
 		C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */; };
 		C69B629C2BA1D793009FB0CD /* Pharmacology.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B629B2BA1D793009FB0CD /* Pharmacology.swift */; };
 		C69B629E2BA1DAA9009FB0CD /* MedicinesAdult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B629D2BA1DAA9009FB0CD /* MedicinesAdult.swift */; };
+		C69D75BE2BB9956700274F64 /* 10IVL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D75BD2BB9956700274F64 /* 10IVL.swift */; };
+		C69D75C12BB9A62D00274F64 /* Desmurgia.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D75C02BB9A62D00274F64 /* Desmurgia.swift */; };
 		C69F13E52B1C793700FBD117 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69F13E42B1C793700FBD117 /* ViewBuilder.swift */; };
 		C6A557AC2BAEE13E0014590C /* PropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6A557AB2BAEE13E0014590C /* PropertyList.plist */; };
 		C6A557AF2BAEE1790014590C /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A557AE2BAEE1790014590C /* StoreKitManager.swift */; };
@@ -372,6 +374,8 @@
 		C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudMaterials.swift; sourceTree = "<group>"; };
 		C69B629B2BA1D793009FB0CD /* Pharmacology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pharmacology.swift; sourceTree = "<group>"; };
 		C69B629D2BA1DAA9009FB0CD /* MedicinesAdult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesAdult.swift; sourceTree = "<group>"; };
+		C69D75BD2BB9956700274F64 /* 10IVL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10IVL.swift; sourceTree = "<group>"; };
+		C69D75C02BB9A62D00274F64 /* Desmurgia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desmurgia.swift; sourceTree = "<group>"; };
 		C69F13E42B1C793700FBD117 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		C6A557AA2BAEDFD60014590C /* Product.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Product.storekit; sourceTree = "<group>"; };
 		C6A557AB2BAEE13E0014590C /* PropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PropertyList.plist; sourceTree = "<group>"; };
@@ -626,6 +630,7 @@
 				C67333782BB80C3C00D52677 /* 07Infusomat.swift */,
 				C673337A2BB81F5F00D52677 /* 08Nebulaiser.swift */,
 				C673337C2BB824D300D52677 /* 09Zond.swift */,
+				C69D75BD2BB9956700274F64 /* 10IVL.swift */,
 			);
 			path = Manipulatii;
 			sourceTree = "<group>";
@@ -783,6 +788,7 @@
 			isa = PBXGroup;
 			children = (
 				C69B62982BA1D5EE009FB0CD /* StudMaterials.swift */,
+				C69D75BF2BB9A60D00274F64 /* Desmurgia */,
 				C6353CDC2BB432CA000AE30A /* Manipulatii */,
 				C64817892BA346FD009B330F /* Diagnosis */,
 				C64817842BA33754009B330F /* StatusLocalis */,
@@ -800,6 +806,14 @@
 				C64817822BA2D91F009B330F /* MedicinesChild.swift */,
 			);
 			path = Pharmacology;
+			sourceTree = "<group>";
+		};
+		C69D75BF2BB9A60D00274F64 /* Desmurgia */ = {
+			isa = PBXGroup;
+			children = (
+				C69D75C02BB9A62D00274F64 /* Desmurgia.swift */,
+			);
+			path = Desmurgia;
 			sourceTree = "<group>";
 		};
 		C6A557AD2BAEE1640014590C /* StoreKit */ = {
@@ -1106,6 +1120,7 @@
 				C644C85F2B5EC9EC00DBC6EB /* CodeMkbData.swift in Sources */,
 				C6E33E0E2B514BED00DEC3A1 /* Prikaz1030Alg45View.swift in Sources */,
 				C67333792BB80C3C00D52677 /* 07Infusomat.swift in Sources */,
+				C69D75BE2BB9956700274F64 /* 10IVL.swift in Sources */,
 				C65FAE632B55920500628105 /* Prikaz1030Alg60View.swift in Sources */,
 				C65484962B4EB69200847504 /* Prikaz1030Alg127View.swift in Sources */,
 				C6DB60822B14E55F0050DAD6 /* Postanovlenie118Alg5View.swift in Sources */,
@@ -1160,6 +1175,7 @@
 				C6EED78B2B64F9DD00E6B5CA /* Postanovlenie99Alg9View.swift in Sources */,
 				C6DB605E2B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift in Sources */,
 				C6039D232B5FA468009CF504 /* Postanovlenie99Alg3View.swift in Sources */,
+				C69D75C12BB9A62D00274F64 /* Desmurgia.swift in Sources */,
 				C69B62962BA1C872009FB0CD /* PamyatkiAvarContact.swift in Sources */,
 				C648178B2BA34710009B330F /* Diagnosis.swift in Sources */,
 				C6EED78F2B65048D00E6B5CA /* Postanovlenie99Alg11View.swift in Sources */,
@@ -1301,7 +1317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;
@@ -1338,7 +1354,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;

@@ -119,6 +119,14 @@ struct Manipulations: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _0IVL()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение ИВЛ")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
