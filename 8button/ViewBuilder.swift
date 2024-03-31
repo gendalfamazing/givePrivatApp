@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 
 // Протокол для объектов, которые могут создавать представление
@@ -1000,6 +1001,11 @@ struct ImagePDF: View {
         .padding(.bottom, 50)
         .navigationBarBackButtonHidden(false)
         .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ShareLink(item: image, preview: SharePreview(Text("\(title), Приказ № 1030"), image: image)){
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
             ToolbarItem(placement: .principal) {
                 VStack {
                     Text(title)
@@ -1008,8 +1014,8 @@ struct ImagePDF: View {
                         .bold()
                 }
             }
-            
         }
+        
     }
     func buildECG(isTextExpanded: Bool) -> some View {
     VStack (spacing:1) {
@@ -1045,6 +1051,7 @@ struct ImagePDF: View {
         }
     }
 }
+    
 }
 
 ///////////////////////////////////////////////////
@@ -3676,3 +3683,4 @@ class MyViewBuilder59: ViewBuilder3 {
 #Preview {
     AppTabBarView()
 }
+
