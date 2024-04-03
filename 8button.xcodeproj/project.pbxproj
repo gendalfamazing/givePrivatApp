@@ -66,6 +66,7 @@
 		C644C85F2B5EC9EC00DBC6EB /* CodeMkbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C85E2B5EC9EC00DBC6EB /* CodeMkbData.swift */; };
 		C644C8612B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */; };
 		C644C8642B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */; };
+		C647A63F2BBD742E002E5D95 /* AtlasECG-Analisis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C647A63E2BBD742E002E5D95 /* AtlasECG-Analisis.swift */; };
 		C64817832BA2D91F009B330F /* MedicinesChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817822BA2D91F009B330F /* MedicinesChild.swift */; };
 		C64817862BA337AE009B330F /* StatusLocalis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817852BA337AE009B330F /* StatusLocalis.swift */; };
 		C64817882BA337EC009B330F /* StatusLocalisTrauma.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */; };
@@ -288,6 +289,7 @@
 		C644C85E2B5EC9EC00DBC6EB /* CodeMkbData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeMkbData.swift; sourceTree = "<group>"; };
 		C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesMkb10Alphabet.swift; sourceTree = "<group>"; };
 		C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodesMkb10Alphabet.swift; sourceTree = "<group>"; };
+		C647A63E2BBD742E002E5D95 /* AtlasECG-Analisis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Analisis.swift"; sourceTree = "<group>"; };
 		C64817822BA2D91F009B330F /* MedicinesChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesChild.swift; sourceTree = "<group>"; };
 		C64817852BA337AE009B330F /* StatusLocalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalis.swift; sourceTree = "<group>"; };
 		C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalisTrauma.swift; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				C60E0D522BA6E55700C1088E /* AtlasECG.swift */,
+				C647A63E2BBD742E002E5D95 /* AtlasECG-Analisis.swift */,
 				C60E0D542BA70DDA00C1088E /* AtlasECG-Norma01.swift */,
 				C60E0D562BA710AA00C1088E /* AtlasECG-Poroki02.swift */,
 				C60E0D582BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift */,
@@ -1147,6 +1150,7 @@
 				C6D69FB72B5A5E8C00235B09 /* Prikaz1030Alg71View.swift in Sources */,
 				C6DB60862B14E5770050DAD6 /* Postanovlenie118Alg7View.swift in Sources */,
 				C67153E22B78AD22009F724D /* Postanovlenie59Alg1View.swift in Sources */,
+				C647A63F2BBD742E002E5D95 /* AtlasECG-Analisis.swift in Sources */,
 				C63821602B6A9C35009E0AC8 /* Postanovlenie2Alg4View.swift in Sources */,
 				C61F18D62B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift in Sources */,
 				C6E8D3422B8E1749005ABE2F /* Postanovlenie59Alg4View.swift in Sources */,
@@ -1317,7 +1321,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;
@@ -1354,7 +1358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;

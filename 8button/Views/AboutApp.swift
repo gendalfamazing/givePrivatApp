@@ -51,9 +51,15 @@ struct AboutApp: View {
                                                         Приложение работает в режиме оффлайн (без интернета) и доступно для использования в любой момент времени.
                                                         """)).buildGrayInHiddenText()
                             .multilineTextAlignment(.leading)
+                        
                     }
                     
                 }
+                MyViewBuilder(title: Text("1"),
+                              content: Text("""
+                                                Если вы нашли ошибки в тексте либо у вас есть предложения по добавлению информации или функций - пишите на указанный ниже e-mail адрес.
+                                                """)).buildGrayText()
+                    .multilineTextAlignment(.leading)
                 //                    ZStack{
                 //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                 //                        VStack (spacing: 1){
