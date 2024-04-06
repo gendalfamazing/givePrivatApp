@@ -69,6 +69,13 @@ struct PrikazyPostanovleniya: View {
                         № 45
                         """), content: Text("Об утверждении клинического протокола «Оказание медицинской помощи пациентам до 18 лет с инородными телами дыхательных путей»")).buildTitle1BlueText()
                     }
+                    NavigationLink(destination: Prikaz155()) {
+                        MyViewBuilder(title: Text("""
+                        Приказ МЗ РБ
+                        от 09.02.12
+                        № 155
+                        """), content: Text("Об утверждении алгоритма оказания медицинской помощи пациентам с острым нарушением мозгового кровообращения на амбулаторном этапе (приложение 3)")).buildTitle1BlueText()
+                    }
                     VStack (alignment: .leading, spacing: 1){
                         Text("""
                             Организация службы СМП:

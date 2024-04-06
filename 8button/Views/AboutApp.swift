@@ -33,33 +33,62 @@ struct AboutApp: View {
                 ZStack{
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                     VStack (spacing: 1){
-                        MyViewBuilder(title: Text("1"),
-                                      content: Text("""
-                                                        **Приложение для работников скорой (неотложной) медицинской помощи Республики Беларусь**
-                                                        """)).buildGrayInText()
+                        Text("""
+                            **Приложение для работников скорой (неотложной) медицинской помощи Республики Беларусь**
+                            """)
                             .multilineTextAlignment(.center)
+                            .textSelection(.enabled)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(minHeight: 20)
+                            .modifier(ThemeGrayColorModifier())
+                            .font(.caption2)
+                            .cornerRadius(10)
                         
                         Divider()
                             .background(Color.divider)
                             .padding(.horizontal, 5)
-                        
-                        MyViewBuilder(title: Text("1"),
-                                      content: Text("""
-                                                        Приложение содержит клинические протоколы (стандарты диагностики и лечения), приказы и постановления разработанные МЗ РБ.
-                                                        Внешний вид содержащихся данных переработан для лучшего понимания изложенной информации.
-                                                        Так же в приложении присутствуют шпаргалки, шкалы, различные тексты и таблицы для облегчения работы на СМП.
-                                                        Приложение работает в режиме оффлайн (без интернета) и доступно для использования в любой момент времени.
-                                                        """)).buildGrayInHiddenText()
+                        Text("""
+                            Приложение содержит клинические протоколы (стандарты диагностики и лечения), приказы и постановления разработанные МЗ РБ.
+                            Внешний вид содержащихся данных переработан для лучшего понимания изложенной информации.
+                            Так же в приложении присутствуют шпаргалки, шкалы, различные тексты и таблицы для облегчения работы на СМП.
+                            Приложение работает в режиме оффлайн (без интернета) и доступно для использования в любой момент времени.
+                            """)
                             .multilineTextAlignment(.leading)
+                            .textSelection(.enabled)
+                            .padding(.vertical, 5)
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(minHeight: 20)
+                            .modifier(ThemeGrayColorModifier())
+                            .font(.caption2)
+                            .cornerRadius(10)
                         
                     }
                     
                 }
-                MyViewBuilder(title: Text("1"),
-                              content: Text("""
-                                                Если вы нашли ошибки в тексте либо у вас есть предложения по добавлению информации или функций - пишите на указанный ниже e-mail адрес.
-                                                """)).buildGrayText()
-                    .multilineTextAlignment(.leading)
+                ZStack{
+                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    VStack (spacing: 1){
+                        Text("""
+                            Если вы нашли ошибки в тексте либо у вас есть предложения по добавлению информации или функций - пишите на указанный ниже e-mail адрес.
+                            """)
+                            .multilineTextAlignment(.leading)
+                            .textSelection(.enabled)
+                            .padding(.vertical, 5)
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(minHeight: 20)
+                            .modifier(ThemeGrayColorModifier())
+                            .font(.caption2)
+                            .cornerRadius(10)
+                    }
+                }
+                
                 //                    ZStack{
                 //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                 //                        VStack (spacing: 1){
