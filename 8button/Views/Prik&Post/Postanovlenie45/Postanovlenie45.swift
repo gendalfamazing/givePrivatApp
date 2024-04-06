@@ -34,7 +34,7 @@ struct Postanovlenie45: View {
     var body: some View {
             ScrollView {
                 Spacer()
-                LazyVStack (spacing: 5){
+                VStack (spacing: 5){
                     
                             MyViewBuilder(title: Text("1-4. Общие положения"),
                                           content: Text("""

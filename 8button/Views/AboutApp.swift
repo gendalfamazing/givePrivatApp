@@ -20,7 +20,7 @@ struct AboutApp: View {
         ScrollView {
             VStack (spacing: 5) {
                 VStack (alignment: .center){
-                    Image("LaunchImage1")
+                    Image("About")
                         .resizable()
                         .frame(maxWidth: 180)
                         .frame(maxHeight: 180)
