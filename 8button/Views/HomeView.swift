@@ -21,7 +21,7 @@ struct HomeView: View {
                     // яды cross.vial
                     NavigationLink(destination: PrikazyPostanovleniya()) {
                         HStack {
-                            Image(systemName: "book.pages") //ivfluid.bag  candybarphone
+                            Image(systemName: "list.bullet.clipboard")
                                 .resizable()
                                 .frame(width: 18, height: 28)
 //                                .padding(.horizontal)
@@ -59,13 +59,13 @@ struct HomeView: View {
                     
                     NavigationLink(destination: CodesMkb10()) {
                         HStack {
-                            Image(systemName: "list.bullet.clipboard")
+                            Image(systemName: "doc.append") //ivfluid.bag  candybarphone
                                 .resizable()
-                                .frame(width: 18, height: 28)
+                                .frame(width: 18, height: 26)
 //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
-                                .padding(.vertical, 6.0)
+                                .padding(.vertical, 7.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
                                 .shadow(color: .shadowGrayRectangle, radius: 0.5)

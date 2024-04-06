@@ -14,7 +14,17 @@ struct PrikazyPostanovleniya: View {
         
             ScrollView {
                 Spacer()
-                VStack (spacing: 5){
+                VStack (alignment: .leading, spacing: 5){
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Оказание помощи на догоспитальном этапе:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                    }
+                    
                     NavigationLink(destination: SearchAdult()) {
                         MyViewBuilder(title: Text("""
                         Приказ МЗ РБ 
@@ -51,6 +61,23 @@ struct PrikazyPostanovleniya: View {
                         от 24.01.18
                         № 47
                         """), content: Text("Об утверждении Инструкции по оказанию медицинской помощи пациентам с острым нарушением мозгового кровообращения («Дорожная карта»)")).buildTitle1BlueText()
+                    }
+                    NavigationLink(destination: Postanovlenie45()) {
+                        MyViewBuilder(title: Text("""
+                        Постановление
+                        МЗ РБ от 01.06.17
+                        № 45
+                        """), content: Text("Об утверждении клинического протокола «Оказание медицинской помощи пациентам до 18 лет с инородными телами дыхательных путей»")).buildTitle1BlueText()
+                    }
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Организация службы СМП:
+                            """)
+                            .frame(alignment: .leading)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
                     }
                     NavigationLink(destination: Postanovlenie2View()) {
                         MyViewBuilder(title: Text("""

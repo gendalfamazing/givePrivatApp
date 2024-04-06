@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 
 // Протокол для объектов, которые могут создавать представление
@@ -74,6 +75,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -103,6 +105,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -136,6 +139,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -170,6 +174,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
+                        .padding(.leading, 10)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -203,6 +208,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack  {
                     content
+                        .padding(.leading, 7)
                         .multilineTextAlignment(.leading)
                     Spacer()
                     Spacer()
@@ -718,6 +724,7 @@ class MyViewBuilder: ViewBuilder1 {
             VStack (spacing: 1) {
                 HStack {
                     title
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -767,6 +774,7 @@ class MyViewBuilder: ViewBuilder1 {
             VStack (spacing: 1) {
                 HStack {
                     title
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: (isTextExpanded ? "chevron.up" : "chevron.down"))
@@ -993,6 +1001,11 @@ struct ImagePDF: View {
         .padding(.bottom, 50)
         .navigationBarBackButtonHidden(false)
         .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ShareLink(item: image, preview: SharePreview(Text("\(title), Приказ № 1030"), image: image)){
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
             ToolbarItem(placement: .principal) {
                 VStack {
                     Text(title)
@@ -1001,8 +1014,8 @@ struct ImagePDF: View {
                         .bold()
                 }
             }
-            
         }
+        
     }
     func buildECG(isTextExpanded: Bool) -> some View {
     VStack (spacing:1) {
@@ -1038,6 +1051,7 @@ struct ImagePDF: View {
         }
     }
 }
+    
 }
 
 ///////////////////////////////////////////////////
@@ -3667,5 +3681,6 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    CodesMkb10()
+    AppTabBarView()
 }
+

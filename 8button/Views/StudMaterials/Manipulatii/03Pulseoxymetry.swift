@@ -46,6 +46,19 @@ struct _3Pulseoxymetry: View {
     var body: some View {
         ScrollView {
             VStack (spacing:5) {
+                MyViewBuilder(title: Text("Факты"),
+                              content: Text("""
+                                            **Пульсоксиметрия**
+                                            """
+                                           )).buildGrayTextCenter()
+                    .multilineTextAlignment(.center)
+                Image("pulse1")
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+                    .cornerRadius(10)
+                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .padding(10)
                 MyViewBuilder(title: Text("Общие положения"),
                               content: Text("""
                                                 1. **Сатурация (англ. saturation) (SpO2)** – это процентное отношение количества О2, реально связанного с гемоглобином, к кислородной емкости крови (процентное соотношение оксигемоглобина ко всему гемоглобину).

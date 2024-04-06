@@ -191,7 +191,7 @@ struct _4MetodikaDefibrillation: View {
                         .foregroundStyle(Color.toolBar)
                         .bold()
                     Text("""
-                    «Оксигенотерапия»
+                    «Дефибрилляция»
                     """)
                     .font(.caption2)
                     .foregroundStyle(Color.toolBar)

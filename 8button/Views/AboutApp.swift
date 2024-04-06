@@ -13,13 +13,14 @@ struct AboutApp: View {
     
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
-    
+    let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+    let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
     var body: some View {
         NavigationStack {
         ScrollView {
             VStack (spacing: 5) {
                 VStack (alignment: .center){
-                    Image("LaunchImage1")
+                    Image("About")
                         .resizable()
                         .frame(maxWidth: 180)
                         .frame(maxHeight: 180)
@@ -50,9 +51,15 @@ struct AboutApp: View {
                                                         Приложение работает в режиме оффлайн (без интернета) и доступно для использования в любой момент времени.
                                                         """)).buildGrayInHiddenText()
                             .multilineTextAlignment(.leading)
+                        
                     }
                     
                 }
+                MyViewBuilder(title: Text("1"),
+                              content: Text("""
+                                                Если вы нашли ошибки в тексте либо у вас есть предложения по добавлению информации или функций - пишите на указанный ниже e-mail адрес.
+                                                """)).buildGrayText()
+                    .multilineTextAlignment(.leading)
                 //                    ZStack{
                 //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                 //                        VStack (spacing: 1){
@@ -121,7 +128,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("Version: 1.0.0 (8)")
+                        Text("Version: \(version) (\(buildNumber))")
                         Spacer()
                     }
                     Divider()

@@ -54,7 +54,79 @@ struct Manipulations: View {
                             }
                         }
                     }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _2Oksigenoterapiya()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Оксигенотерапия")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _3Pulseoxymetry()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Пульсоксиметрия")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _4MetodikaDefibrillation()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Дефибрилляция")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _5Kardioversion()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Кардиоверсия")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _6Kardiostimulation()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Наружная чрезкожная кардиостимуляция")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _7Infusomat()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение инфузомата")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                     
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _8Nebulaiser()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение небулайзера")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _9Zond()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Промывание желудка зондом")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
+                    ZStack {
+                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        VStack  {
+                            NavigationLink (destination: _0IVL()) {
+                                MyViewBuilder(title: Text("1"), content: Text("Применение ИВЛ")).buildBlue59NavigationText()
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)

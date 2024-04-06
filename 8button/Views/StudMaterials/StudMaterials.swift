@@ -62,6 +62,9 @@ struct StudMaterials: View {
                     NavigationLink(destination: Manipulations()) {
                         MyViewBuilder(title: Text("05"), content:Text("«Манипуляции»")).buildTitleBlueText()
                     }
+                    NavigationLink(destination: Desmurgia()) {
+                        MyViewBuilder(title: Text("06"), content:Text("«Десмургия»")).buildTitleBlueText()
+                    }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)

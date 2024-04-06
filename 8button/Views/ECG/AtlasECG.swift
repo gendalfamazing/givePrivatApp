@@ -25,7 +25,9 @@ struct AtlasECG: View {
     var body: some View {
             ScrollView {
                 VStack (spacing: 5) {
-                    
+                    NavigationLink (destination: AtlasECG_Analisis()) {
+                        MyViewBuilder(title: Text("1"), content: Text("Анализ ЭКГ")).buildBlue591NavigationText()
+                    }
                     NavigationLink (destination: AtlasECGNorma01()) {
                         MyViewBuilder(title: Text("1"), content: Text("Варианты нормы")).buildBlue591NavigationText()
                     }
