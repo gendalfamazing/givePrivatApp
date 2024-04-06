@@ -184,6 +184,7 @@ struct Prikaz155: View {
                                         .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded5 ? 1160 : 1160) : (isTextExpanded5 ? 537 : 1074))
                                         .cornerRadius(10)
                                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .padding(5)
                                 }
                                 
                             }
