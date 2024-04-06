@@ -42,7 +42,7 @@ struct AtlasECG_Analisis: View {
                             UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded1.toggle()
                         }
                     })
-                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded1 ? 1112 : 1112) : (isTextExpanded1 ? 515 : 1030))
+                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded1 ? 1110 : 1110) : (isTextExpanded1 ? 515 : 1030))
                     .cornerRadius(10)
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
@@ -52,7 +52,7 @@ struct AtlasECG_Analisis: View {
                             UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded2.toggle()
                         }
                     })
-                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded2 ? 1165 : 1165) : (isTextExpanded2 ? 540 : 1080))
+                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded2 ? 1163 : 1163) : (isTextExpanded2 ? 540 : 1080))
                     .cornerRadius(10)
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
@@ -62,7 +62,7 @@ struct AtlasECG_Analisis: View {
                             UIDevice.current.userInterfaceIdiom == .pad ? nil : isTextExpanded3.toggle()
                         }
                     })
-                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded3 ? 1090 : 1090) : (isTextExpanded3 ? 505 : 1010))
+                    .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded3 ? 1088 : 1088) : (isTextExpanded3 ? 505 : 1010))
                     .cornerRadius(10)
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
