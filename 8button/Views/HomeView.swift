@@ -213,7 +213,7 @@ struct HomeView: View {
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
-                            Text("Алтас ЭКГ")
+                            Text("Атлас ЭКГ")
                                 .padding(.horizontal, 3.0)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)

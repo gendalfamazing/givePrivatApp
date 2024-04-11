@@ -1,0 +1,178 @@
+{
+  "identifier" : "C8BB99FB",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "19.99",
+      "familyShareable" : false,
+      "internalID" : "6484269780",
+      "localizations" : [
+        {
+          "description" : "Одноразовая покупка приложения навсегда",
+          "displayName" : "Купить Премиум навсегда",
+          "locale" : "ru"
+        },
+        {
+          "description" : "Одноразовая покупка приложения навсегда",
+          "displayName" : "Купить Премиум навсегда",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "Premium_Forever",
+      "referenceName" : "Купить Премиум навсегда",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6479942469",
+    "_billingGracePeriodEnabled" : true,
+    "_developerTeamID" : "29R8F9VULL",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 734524018.05628896,
+    "_locale" : "ru",
+    "_storefront" : "BLR",
+    "_storeKitErrors" : [
+      {
+        "current" : {
+          "index" : 2,
+          "type" : "generic"
+        },
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : {
+          "index" : 1,
+          "type" : "purchase"
+        },
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : {
+          "index" : 3,
+          "type" : "generic"
+        },
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21473205",
+      "localizations" : [
+
+      ],
+      "name" : "Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "7.99",
+          "familyShareable" : false,
+          "groupNumber" : 3,
+          "internalID" : "6483809054",
+          "introductoryOffer" : {
+            "internalID" : "278222CD",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1M"
+          },
+          "localizations" : [
+            {
+              "description" : "Годовая подписка с автоматическим продлением",
+              "displayName" : "Премиум подписка 1 год",
+              "locale" : "ru"
+            },
+            {
+              "description" : "Годовая подписка с автоматическим продлением",
+              "displayName" : "Премиум подписка 1 год",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "Premium_Year",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Премиум подписка 1 год",
+          "subscriptionGroupID" : "21473205",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6483808418",
+          "introductoryOffer" : {
+            "internalID" : "DC4C1BA6",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1M"
+          },
+          "localizations" : [
+            {
+              "description" : "Месячная подписка с автоматическим продлением",
+              "displayName" : "Премиум подписка 1 месяц",
+              "locale" : "ru"
+            },
+            {
+              "description" : "Месячная подписка с автоматическим продлением",
+              "displayName" : "Премиум подписка 1 месяц",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "PremiumMonth",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Премиум подписка 1 месяц",
+          "subscriptionGroupID" : "21473205",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

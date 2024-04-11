@@ -86,6 +86,9 @@ struct AboutApp: View {
                             .modifier(ThemeGrayColorModifier())
                             .font(.caption2)
                             .cornerRadius(10)
+                        NavigationLink(destination: StoreKit8()){
+                            Text("подписки")
+                        }
                     }
                 }
                 
