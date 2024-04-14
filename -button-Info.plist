@@ -6,8 +6,8 @@
 	<string></string>
 	<key>CFBundleLocalizations</key>
 	<array>
-		<string>Russian</string>
 		<string>en</string>
+		<string>Russian</string>
 	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>

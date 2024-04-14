@@ -1009,7 +1009,7 @@
 			};
 			buildConfigurationList = C63E75AC2B14BA9400524502 /* Build configuration list for PBXProject "8button" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
