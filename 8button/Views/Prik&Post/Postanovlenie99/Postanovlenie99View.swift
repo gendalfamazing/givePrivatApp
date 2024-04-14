@@ -50,7 +50,7 @@ struct Postanovlenie99View: View {
                     NavigationLink(destination: Postanovlenie99Alg10View()) {
                         MyViewBuilder(title: Text("10"), content:Text("«Приложение 2. Алгоритм базовой СЛР»")).buildTitleBlueText()
                     }
-                    NavigationLink(destination: Postanovlenie99Alg11View()) {
+                    NavigationLink(destination: ImagePDF(image: Image("Post99Pril3"), title: "Алгоритм расшиенной СЛР")) {
                         MyViewBuilder(title: Text("11"), content:Text("«Приложение 3. Алгоритм расширеной СЛР»")).buildTitleBlueText()
                     }
                     NavigationLink(destination: Postanovlenie99Alg12View()) {

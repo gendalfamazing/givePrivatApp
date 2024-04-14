@@ -55,7 +55,7 @@ struct AtlasECGTELA04: View {
                                     .padding(5)
                                 
                                 
-                                MyViewBuilder(title: Text("1"), content: Text("69-летняя женщина с одышкой. Синусовая тахикардия с синдромом QIIIS1 и пеполной блокадой ПНПГ. Эти данные предполагают **тромбоэмболию ветвей ЛА (ТЭВЛА)**.")).buildGrayInHiddenText()
+                                MyViewBuilder(title: Text("1"), content: Text("69-летняя женщина с одышкой. Синусовая тахикардия с синдромом QIIIS1 и неполной блокадой ПНПГ. Эти данные предполагают **тромбоэмболию ветвей ЛА (ТЭВЛА)**.")).buildGrayInHiddenText()
                                 
                                 ImagePDF(image: Image("AtlasECGTELA2"), title: "").buildECGPad(isTextExpanded: isTextExpanded2)
                                     .onTapGesture (count: 1, perform: {
