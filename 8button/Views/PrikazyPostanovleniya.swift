@@ -93,6 +93,13 @@ struct PrikazyPostanovleniya: View {
                         № 2
                         """), content: Text("«О вопросах организации деятельности службы скорой медицинской помощи»")).buildTitle1BlueText()
                     }
+                    NavigationLink(destination: ZakonOZdravoohranenii()) {
+                        MyViewBuilder(title: Text("""
+                        Закон РБ
+                        18 июня 1993 г.
+                        № 2435-XII
+                        """), content: Text("«О здравоохранении»")).buildTitle1BlueText()
+                    }
                 }
                 .navigationBarTitle("", displayMode: .inline)
                 .toolbar {

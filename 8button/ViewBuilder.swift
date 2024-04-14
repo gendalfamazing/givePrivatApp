@@ -317,7 +317,47 @@ class MyViewBuilder: ViewBuilder1 {
         .cornerRadius(10)
         .shadow(color: .shadowGrayRectangle, radius: 0.5)
     }
-    
+    func buildTitleZakon(isTextExpanded: Bool) -> some View {
+        
+        return HStack {
+            HStack (alignment: .center) {
+               
+                title
+                    .padding(.horizontal, 2)
+                    .frame(maxWidth: 80)
+                    .frame(minHeight: 20)
+                    .font(.footnote)
+                    .padding(5.0)
+                    .background(Color.titleNumber)
+                    .cornerRadius(10)
+                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground)
+                    .bold()
+                //                    .lineLimit(1)
+            
+                content
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal, 3.0)
+                    .font(.footnote)
+                
+                
+            }
+            Spacer()
+        }
+        .padding(7.0)
+//                .lineLimit(2)
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+        .fixedSize(horizontal: false, vertical: true)
+        .fontWeight(.semibold)
+        .frame(minHeight: 49)
+        .frame(minWidth: 49)
+        .modifier(ThemeBlueColorModifier())
+//                .background(Color.blueButton)
+        .background(isTextExpanded ? Color.toggle : Color.blueButton)
+        .background(Color.grayButton)
+        .font(.subheadline)
+        .cornerRadius(10)
+    }
     func buildTableCodes() -> some View {
         
         return HStack {

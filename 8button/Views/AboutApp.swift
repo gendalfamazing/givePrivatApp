@@ -27,9 +27,7 @@ struct AboutApp: View {
                         .scaledToFit()
                         .clipShape(Rectangle())
                 }
-                Text("текст будет переработан, так как он частично спизжен :)")
-                    .font(.caption)
-                    .foregroundStyle(Color.red)
+                
                 ZStack{
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                     VStack (spacing: 1){
@@ -54,7 +52,7 @@ struct AboutApp: View {
                             Приложение содержит клинические протоколы (стандарты диагностики и лечения), приказы и постановления разработанные МЗ РБ.
                             Внешний вид содержащихся данных переработан для лучшего понимания изложенной информации.
                             Так же в приложении присутствуют шпаргалки, шкалы, различные тексты и таблицы для облегчения работы на СМП.
-                            Приложение работает в режиме оффлайн (без интернета) и доступно для использования в любой момент времени.
+                            Приложение работает без интернета и доступно для использования в любой момент времени.
                             """)
                             .multilineTextAlignment(.leading)
                             .textSelection(.enabled)
@@ -69,6 +67,29 @@ struct AboutApp: View {
                         
                     }
                     
+                }
+                ZStack{
+                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    VStack (spacing: 1){
+                        Text("""
+                            Приложение предназначено для использования медицинскими работниками.
+                            Лица, использующие эти данные для медицинских целей, не должны полностью полагаться на точность представленных здесь данных
+                            """)
+                            .multilineTextAlignment(.leading)
+                            .textSelection(.enabled)
+                            .padding(.vertical, 5)
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(minHeight: 20)
+                            .foregroundColor(.red)
+                            .modifier(ThemeGrayColorModifier())
+                            .font(.caption2)
+                            .bold()
+                            
+                            .cornerRadius(10)
+                        
+                    }
                 }
                 ZStack{
                     MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()

@@ -113,10 +113,27 @@ struct StoreKit8: View {
                             
                         }
                         .padding(.horizontal, 10)
+                        .padding(.bottom, 10)
                     }
                         .background(.back)
                         .background(ignoresSafeAreaEdges: .all)
-                        
+                        .navigationBarBackButtonHidden(false)
+                        .navigationBarTitle("",displayMode: .inline)
+                        .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                VStack {
+                                    Text("AmbulanceDocs")
+                                        .font(.headline)
+                                        .foregroundStyle(Color.toolBar)
+                                        .bold()
+                                    Text("Встроенные покупки")
+                                        .font(.caption2)
+                                        .foregroundStyle(Color.toolBar)
+                                    //
+                                }
+                            }
+                            
+                        }
                         
                     }
                 }
