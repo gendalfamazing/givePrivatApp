@@ -96,6 +96,7 @@ struct PosobiePlechiki: View {
                                             .cornerRadius(10)
                                             .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                             .padding(.horizontal, 5)
+                                            .padding(.bottom, 5)
                                         
                                        
                                     }

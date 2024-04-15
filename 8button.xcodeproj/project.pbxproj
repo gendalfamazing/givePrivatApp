@@ -198,6 +198,7 @@
 		C6D6BD9A2BCD486100D87B36 /* AkusherskoePosobie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6BD992BCD486100D87B36 /* AkusherskoePosobie.swift */; };
 		C6D6BD9C2BCD496200D87B36 /* PosobieGolovnoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6BD9B2BCD496200D87B36 /* PosobieGolovnoe.swift */; };
 		C6D6BD9E2BCD56F000D87B36 /* PosobiePlechiki.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6BD9D2BCD56F000D87B36 /* PosobiePlechiki.swift */; };
+		C6D6BDA02BCD633700D87B36 /* PosobieTaz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D6BD9F2BCD633700D87B36 /* PosobieTaz.swift */; };
 		C6DA83FE2BB6CDF200142010 /* 03Pulseoxymetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */; };
 		C6DA84002BB6CE4200142010 /* 04MetodikaDefibrillation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */; };
 		C6DA84022BB6E02F00142010 /* 05Kardioversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84012BB6E02F00142010 /* 05Kardioversion.swift */; };
@@ -441,6 +442,7 @@
 		C6D6BD992BCD486100D87B36 /* AkusherskoePosobie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkusherskoePosobie.swift; sourceTree = "<group>"; };
 		C6D6BD9B2BCD496200D87B36 /* PosobieGolovnoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosobieGolovnoe.swift; sourceTree = "<group>"; };
 		C6D6BD9D2BCD56F000D87B36 /* PosobiePlechiki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosobiePlechiki.swift; sourceTree = "<group>"; };
+		C6D6BD9F2BCD633700D87B36 /* PosobieTaz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosobieTaz.swift; sourceTree = "<group>"; };
 		C6DA83FD2BB6CDF200142010 /* 03Pulseoxymetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03Pulseoxymetry.swift; sourceTree = "<group>"; };
 		C6DA83FF2BB6CE4200142010 /* 04MetodikaDefibrillation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04MetodikaDefibrillation.swift; sourceTree = "<group>"; };
 		C6DA84012BB6E02F00142010 /* 05Kardioversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 05Kardioversion.swift; sourceTree = "<group>"; };
@@ -941,6 +943,7 @@
 				C6D6BD992BCD486100D87B36 /* AkusherskoePosobie.swift */,
 				C6D6BD9B2BCD496200D87B36 /* PosobieGolovnoe.swift */,
 				C6D6BD9D2BCD56F000D87B36 /* PosobiePlechiki.swift */,
+				C6D6BD9F2BCD633700D87B36 /* PosobieTaz.swift */,
 			);
 			path = Gynecology;
 			sourceTree = "<group>";
@@ -1146,6 +1149,7 @@
 				C63821642B6A9C46009E0AC8 /* Postanovlenie2Alg6View.swift in Sources */,
 				C6E1A5612BC53CC800594FDF /* StoreKit.swift in Sources */,
 				C692823B2BCBC6B200E699DA /* ZakonOZdravoohranenii-11.swift in Sources */,
+				C6D6BDA02BCD633700D87B36 /* PosobieTaz.swift in Sources */,
 				C6DA84042BB6E5B400142010 /* 06Kardiostimulation.swift in Sources */,
 				C65FAE612B55850F00628105 /* Prikaz1030Alg59View.swift in Sources */,
 				C62C574F2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift in Sources */,

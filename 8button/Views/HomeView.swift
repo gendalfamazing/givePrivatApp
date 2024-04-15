@@ -202,10 +202,10 @@ struct HomeView: View {
                         HStack {
                             Image(systemName: "square.text.square")
                                 .resizable()
-                                .frame(width: 16, height: 24)
+                                .frame(width: 18, height: 24)
 //                                .padding(.horizontal)
                                 .font(.caption2)
-                                .padding(.horizontal, 12.0)
+                                .padding(.horizontal, 11.0)
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)

@@ -28,12 +28,14 @@ struct AkusherskoePosobie: View {
                     
                     MyViewBuilder(title: Text("1"), content: Text("**Акушерские пособия** – это ручные манипуляции, которые выполняются во время родов без помощи инструментов с целью защиты промежности, профилактики плодового травматизма и ускорения окончания родов. Акушерские ручные пособия оказывают при головных и тазовых вставлениях.")).buildGrayText()
                     NavigationLink (destination: PosobieGolovnoe()) {
-                        MyViewBuilder(title: Text("1"), content: Text("Ручное пособие при головном вставлении")).buildBlue591NavigationText()
+                        MyViewBuilder(title: Text("1"), content: Text("Ручное пособие при головном предлежании")).buildBlue591NavigationText()
                     }
                     NavigationLink (destination: PosobiePlechiki()) {
                         MyViewBuilder(title: Text("1"), content: Text("Ручное пособие при дистоции плечиков")).buildBlue591NavigationText()
                     }
-                    
+                    NavigationLink (destination: PosobieTaz()) {
+                        MyViewBuilder(title: Text("1"), content: Text("Ручное пособие при тазовом предлежании")).buildBlue591NavigationText()
+                    }
                     
                     
                     
