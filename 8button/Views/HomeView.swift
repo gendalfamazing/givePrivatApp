@@ -198,6 +198,41 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     }
+                    NavigationLink(destination: AkusherskoePosobie()) {
+                        HStack {
+                            Image(systemName: "square.text.square")
+                                .resizable()
+                                .frame(width: 16, height: 24)
+//                                .padding(.horizontal)
+                                .font(.caption2)
+                                .padding(.horizontal, 12.0)
+                                .padding(.vertical, 8.0)
+                                .background(Color.titleNumber)
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .foregroundColor(Color.titleNumberForeground)
+                            Spacer()
+                            Spacer()
+                            Text("Акушерское пособие")
+                                .padding(.horizontal, 3.0)
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            Spacer()
+                            Spacer()
+                            Image(systemName: ("chevron.right"))
+                                .opacity(0.3)
+                                .padding(.trailing, 15)
+                                .padding(.leading, 10)
+                        }
+                        .padding(5.0)
+                //        .lineLimit(2)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minHeight: 50)
+                        .modifier(ThemeTitleBlueColorModifier())
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    }
                     NavigationLink(destination: AtlasECG()) {
                         HStack {
                             Image(systemName: "doc.text.below.ecg")
@@ -233,6 +268,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     }
+                    
                     Spacer()
                     
                     
