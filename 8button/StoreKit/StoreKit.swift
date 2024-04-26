@@ -74,7 +74,7 @@ struct StoreKit8: View {
                                     HStack {
                                         HStack (alignment: .center) {
                                             
-                                            Text("\(product.displayPrice)")
+                                            Text(product.displayName.contains("Premium") ? "\(product.displayPrice)" : product.displayName.contains("год") ? "\(product.displayPrice) / 1 год" : "\(product.displayPrice) / 1 мес.")
                                                 .padding(.horizontal, 2)
                                                 .frame(maxWidth: 100)
                                                 .frame(minHeight: 20)

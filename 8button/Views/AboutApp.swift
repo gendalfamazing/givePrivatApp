@@ -184,6 +184,7 @@ struct AboutApp: View {
                     }
                     Divider()
                         .background(Color.divider)
+                    
                     Text("Лицензионное соглашение (EULA)")
                         .padding(7.0)
                     //                .lineLimit(2)

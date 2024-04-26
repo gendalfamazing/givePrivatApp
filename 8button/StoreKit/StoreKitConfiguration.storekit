@@ -30,7 +30,7 @@
     "_billingGracePeriodEnabled" : true,
     "_developerTeamID" : "29R8F9VULL",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 735802420.40847397,
+    "_lastSynchronizedDate" : 735813265.61632502,
     "_locale" : "ru",
     "_storefront" : "BLR",
     "_storeKitErrors" : [
@@ -110,7 +110,7 @@
           "groupNumber" : 3,
           "internalID" : "6483809054",
           "introductoryOffer" : {
-            "internalID" : "A48166FF",
+            "internalID" : "B432171A",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P2W"
@@ -145,7 +145,7 @@
           "groupNumber" : 2,
           "internalID" : "6483808418",
           "introductoryOffer" : {
-            "internalID" : "6D78E2E7",
+            "internalID" : "0BD943B3",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P2W"
