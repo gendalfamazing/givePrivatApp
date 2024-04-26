@@ -30,7 +30,7 @@
     "_billingGracePeriodEnabled" : true,
     "_developerTeamID" : "29R8F9VULL",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 735813265.61632502,
+    "_lastSynchronizedDate" : 735836297.94523501,
     "_locale" : "ru",
     "_storefront" : "BLR",
     "_storeKitErrors" : [
@@ -96,7 +96,7 @@
       "localizations" : [
 
       ],
-      "name" : "Premium",
+      "name" : "Subscriptions",
       "subscriptions" : [
         {
           "adHocOffers" : [
@@ -110,7 +110,7 @@
           "groupNumber" : 3,
           "internalID" : "6483809054",
           "introductoryOffer" : {
-            "internalID" : "B432171A",
+            "internalID" : "9B2BD2BF",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P2W"
@@ -145,7 +145,7 @@
           "groupNumber" : 2,
           "internalID" : "6483808418",
           "introductoryOffer" : {
-            "internalID" : "0BD943B3",
+            "internalID" : "6B355045",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P2W"

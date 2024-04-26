@@ -5943,9 +5943,6 @@
     "Favorites" : {
 
     },
-    "First" : {
-
-    },
     "G00-G95" : {
       "localizations" : {
         "ru" : {
@@ -12820,6 +12817,7 @@
       }
     },
     "Pushed 2" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -12952,6 +12950,7 @@
       }
     },
     "Second" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -12962,6 +12961,7 @@
       }
     },
     "Tap me 2" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -14024,9 +14024,6 @@
 
     },
     "Когда используется 100% кислород" : {
-
-    },
-    "Кодификатор МКБ-10" : {
 
     },
     "Колосовидная повязка на плечевой сустав" : {

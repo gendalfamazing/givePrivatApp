@@ -190,7 +190,7 @@ struct StoreKit8: View {
                                 .cornerRadius(10)
                                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                 .onTapGesture {
-                                    guard let url = URL(string: "https://www.privacypolicytemplate.net/live.php?token=a4nJMQKuRQ4vXe4LFA4nUBgBc2PNfD6Q") else { return }
+                                    guard let url = URL(string: "http://ambulance-docs.site/privacy.html") else { return }
                                     UIApplication.shared.open(url)
                                 }
                             Spacer()

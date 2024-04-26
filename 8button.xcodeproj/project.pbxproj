@@ -38,7 +38,6 @@
 		C61EC9362B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */; };
 		C61F18D62B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */; };
 		C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D92B9E065200D04496 /* PamyatkiMain.swift */; };
-		C620D09C2B1B2E920011BE17 /* 5555.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620D09B2B1B2E920011BE17 /* 5555.swift */; };
 		C62C574A2B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */; };
 		C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */; };
 		C62C574F2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574E2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift */; };
@@ -225,8 +224,6 @@
 		C6DB608E2B14E5A10050DAD6 /* Postanovlenie118Alg11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB608D2B14E5A10050DAD6 /* Postanovlenie118Alg11View.swift */; };
 		C6E1A5612BC53CC800594FDF /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1A5602BC53CC800594FDF /* StoreKit.swift */; };
 		C6E1C4832B46B17A0070B0B9 /* Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1C4822B46B17A0070B0B9 /* Zoom.swift */; };
-		C6E1C4852B46EDBA0070B0B9 /* Zoom1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1C4842B46EDBA0070B0B9 /* Zoom1.swift */; };
-		C6E1C4872B46FB000070B0B9 /* Zoom2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1C4862B46FB000070B0B9 /* Zoom2.swift */; };
 		C6E33E0E2B514BED00DEC3A1 /* Prikaz1030Alg45View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E33E0D2B514BED00DEC3A1 /* Prikaz1030Alg45View.swift */; };
 		C6E33E102B51641C00DEC3A1 /* Prikaz1030Alg46View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E33E0F2B51641C00DEC3A1 /* Prikaz1030Alg46View.swift */; };
 		C6E33E142B54072D00DEC3A1 /* Prikaz1030Alg47View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E33E132B54072D00DEC3A1 /* Prikaz1030Alg47View.swift */; };
@@ -282,7 +279,6 @@
 		C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P2View.swift; sourceTree = "<group>"; };
 		C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg6View.swift; sourceTree = "<group>"; };
 		C61F18D92B9E065200D04496 /* PamyatkiMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiMain.swift; sourceTree = "<group>"; };
-		C620D09B2B1B2E920011BE17 /* 5555.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5555.swift; sourceTree = "<group>"; };
 		C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg102View.swift; sourceTree = "<group>"; };
 		C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg101View.swift; sourceTree = "<group>"; };
 		C62C574E2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg103View.swift; sourceTree = "<group>"; };
@@ -473,8 +469,6 @@
 		C6E1A55F2BC53A7600594FDF /* StoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfiguration.storekit; sourceTree = "<group>"; };
 		C6E1A5602BC53CC800594FDF /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
 		C6E1C4822B46B17A0070B0B9 /* Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Zoom.swift; path = TEST/Zoom.swift; sourceTree = "<group>"; };
-		C6E1C4842B46EDBA0070B0B9 /* Zoom1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom1.swift; sourceTree = "<group>"; };
-		C6E1C4862B46FB000070B0B9 /* Zoom2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom2.swift; sourceTree = "<group>"; };
 		C6E33E0D2B514BED00DEC3A1 /* Prikaz1030Alg45View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg45View.swift; sourceTree = "<group>"; };
 		C6E33E0F2B51641C00DEC3A1 /* Prikaz1030Alg46View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg46View.swift; sourceTree = "<group>"; };
 		C6E33E132B54072D00DEC3A1 /* Prikaz1030Alg47View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg47View.swift; sourceTree = "<group>"; };
@@ -727,6 +721,7 @@
 				C6DB60572B14BBEA0050DAD6 /* _buttonApp.swift */,
 				C6E1C4822B46B17A0070B0B9 /* Zoom.swift */,
 				C69F13E42B1C793700FBD117 /* ViewBuilder.swift */,
+				C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */,
 				C605763A2B1FB6C200C5BAC9 /* Localizable.xcstrings */,
 				C6A557AD2BAEE1640014590C /* StoreKit */,
 				C6C3FEA12B29CCC400FF44BC /* TabBar */,
@@ -925,12 +920,8 @@
 				C63E75B62B14BA9400524502 /* ContentView.swift */,
 				C6DB60552B14BBEA0050DAD6 /* BackButton.swift */,
 				C6C986312B8A20CD00F624B1 /* UITextField+Extensions.swift */,
-				C6E1C4842B46EDBA0070B0B9 /* Zoom1.swift */,
-				C6E1C4862B46FB000070B0B9 /* Zoom2.swift */,
-				C620D09B2B1B2E920011BE17 /* 5555.swift */,
 				C6FC70712B739886004FA876 /* 77777.swift */,
 				C68DAF622BCE736F0001EB58 /* 9999.swift */,
-				C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */,
 			);
 			path = TEST;
 			sourceTree = "<group>";
@@ -1083,7 +1074,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C68DC8A72B84BCF400355234 /* Postanovlenie59Alg2P1View.swift in Sources */,
-				C6E1C4852B46EDBA0070B0B9 /* Zoom1.swift in Sources */,
 				C6D69FB92B5A5FF100235B09 /* Prikaz1030Alg72View.swift in Sources */,
 				C6C9862E2B8A082800F624B1 /* DopaminCalc.swift in Sources */,
 				C6DB60882B14E5820050DAD6 /* Postanovlenie118Alg8View.swift in Sources */,
@@ -1144,7 +1134,6 @@
 				C6EED7952B651F0900E6B5CA /* Postanovlenie99Alg13View.swift in Sources */,
 				C69AE77C2B861DA600B1EADF /* Postanovlenie59Alg3View.swift in Sources */,
 				C60E0D632BA7150F00C1088E /* AtlasECG-Provodimost08.swift in Sources */,
-				C6E1C4872B46FB000070B0B9 /* Zoom2.swift in Sources */,
 				C692823F2BCBCA9100E699DA /* ZakonOZdravoohranenii-13.swift in Sources */,
 				C65997D12BC11A08001F27D7 /* Prikaz155.swift in Sources */,
 				C67153E02B78A7CE009F724D /* Postanovlenie59Datas.swift in Sources */,
@@ -1162,7 +1151,6 @@
 				C6D69FB32B5A5C8C00235B09 /* Prikaz1030Alg69View.swift in Sources */,
 				C6DA84022BB6E02F00142010 /* 05Kardioversion.swift in Sources */,
 				C65FAE552B551E0F00628105 /* Prikaz1030Alg54View.swift in Sources */,
-				C620D09C2B1B2E920011BE17 /* 5555.swift in Sources */,
 				C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */,
 				C63821642B6A9C46009E0AC8 /* Postanovlenie2Alg6View.swift in Sources */,
 				C6E1A5612BC53CC800594FDF /* StoreKit.swift in Sources */,
@@ -1453,7 +1441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;
@@ -1491,7 +1479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;
