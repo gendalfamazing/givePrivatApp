@@ -6,18 +6,18 @@ import StoreKit
 struct StoreKit8: View {
     @EnvironmentObject
     private var entitlementManager: EntitlementManager
-
+    
     @EnvironmentObject
     private var purchaseManager: PurchaseManager
-
+    
     var body: some View {
         
-            NavigationView {
-                VStack(spacing: 5) {
-                    if entitlementManager.hasPro {
-                        AppTabBarView()
-                    } else {
-                        ScrollView {
+        VStack {
+            VStack(spacing: 5) {
+                if entitlementManager.hasPro {
+                    AppTabBarView()
+                } else {
+                    ScrollView {
                         VStack {
                             Image("LaunchImage1")
                                 .resizable()
@@ -25,15 +25,40 @@ struct StoreKit8: View {
                                 .frame(maxHeight: 200)
                                 .scaledToFit()
                                 .clipShape(Rectangle())
-                            MyViewBuilder(title: Text("""
-                                          **Купить доступ**:
-                                          """),
-                                          content: Text("""
-                                            - **При выборе подписки** Вам будет предоставлен **бесплатный пробный период (30 дней)**. Денежные средства сразу **не будут списаны** с Вашей карты, они **автоматически спишутся через 30 дней, если вы не отмените подписку**.
-                                            
-                                            - При покупке **Премиума навсегда** денежные средства **сразу спишутся с вашей карты** (без бесплатного пробного периода), однако Вы получите **неограниченный во времени доступ к приложению**.
-                                            (рекомендуется для тех, кто уже пользовался приложением).
-                                            """)).buildGrayInAndHiddenBlock()
+                            ZStack{
+                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                                VStack (spacing: 1){
+                                    Text("""
+                                        **AmbulanceDocs** - медицинский справочник для работников СМП Республики Беларусь.
+                                        
+                                        **При оформление подписки, Вы получите**:
+                                        
+                                        -Полный доступ БЕЗ ОГРАНИЧЕНИЯ.
+                                        -Удобный интерфейс с поддержкой темной темы.
+                                        -Большой объем медицинской документации, учебных материалов, шпаргалок и таблиц.
+                                        -Регулярные обновления и улучшения, основанные на Ваших отзывах.
+                                        
+                                        **Подписка имеет 14-дневный бесплатный период, для ознакомления**.
+                                        
+                                        **При покупке Premium Вы получите**:
+                                        - Тот же полный функционал приложения, что и при выборе подписки, но неограниченный во времени (одноразовая покупка НАВСЕГДА)
+                                        
+                                        Покупка **Premium** рекомендуется для тех, кто уже пользовался приложением
+                                        """)
+                                    .multilineTextAlignment(.leading)
+                                    .textSelection(.enabled)
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal, 10)
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .frame(minHeight: 20)
+                                    .modifier(ThemeGrayColorModifier())
+                                    .font(.caption2)
+                                    .cornerRadius(10)
+                                    
+                                }
+                            }
+                            
                             
                             
                             ForEach(purchaseManager.products ) { product in
@@ -51,7 +76,7 @@ struct StoreKit8: View {
                                             
                                             Text("\(product.displayPrice)")
                                                 .padding(.horizontal, 2)
-                                                .frame(maxWidth: 80)
+                                                .frame(maxWidth: 100)
                                                 .frame(minHeight: 20)
                                                 .font(.footnote)
                                                 .padding(5.0)
@@ -66,10 +91,10 @@ struct StoreKit8: View {
                                                     .multilineTextAlignment(.leading)
                                                     .padding(.horizontal, 3.0)
                                                     .font(.footnote)
-                                                if product.displayName.contains("навсегда") {
+                                                if product.displayName.contains("Premium") {
                                                     
                                                 } else {
-                                                    Text("(первый месяц бесплатно)")
+                                                    Text("(первые 14 дней бесплатно)")
                                                         .multilineTextAlignment(.leading)
                                                         .padding(.horizontal, 3.0)
                                                         .font(.footnote)
@@ -109,48 +134,126 @@ struct StoreKit8: View {
                                 }
                             } label: {
                                 Text("Восстановить покупки")
+                                    .padding(7.0)
+                                //                .lineLimit(2)
+                                
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .fontWeight(.semibold)
+                                    .frame(minHeight: 49)
+                                    .frame(minWidth: 49)
+                                
+                                    .foregroundColor(.blue)
+                                //                .background(Color.blueButton)
+                                    .background(Color.grayButton)
+                                    .font(.subheadline)
+                                    .cornerRadius(10)
+                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                             }
+                            Spacer()
                             
+                            Text("Лицензионное соглашение (EULA)")
+                                .padding(7.0)
+                            //                .lineLimit(2)
+                            
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .fontWeight(.semibold)
+                                .frame(minHeight: 49)
+                                .frame(minWidth: 49)
+                            
+                                .foregroundColor(.blue)
+                            //                .background(Color.blueButton)
+                                .background(Color.grayButton)
+                                .font(.subheadline)
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    guard let url = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/") else { return }
+                                    UIApplication.shared.open(url)
+                                }
+                            Spacer()
+                            Text("Политика конфиденциальности")
+                                .padding(7.0)
+                            //                .lineLimit(2)
+                            
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .fontWeight(.semibold)
+                                .frame(minHeight: 49)
+                                .frame(minWidth: 49)
+                            
+                                .foregroundColor(.blue)
+                            //                .background(Color.blueButton)
+                                .background(Color.grayButton)
+                                .font(.subheadline)
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    guard let url = URL(string: "https://www.privacypolicytemplate.net/live.php?token=a4nJMQKuRQ4vXe4LFA4nUBgBc2PNfD6Q") else { return }
+                                    UIApplication.shared.open(url)
+                                }
+                            Spacer()
+                            Text("Обзор приложения")
+                                .padding(7.0)
+                            //                .lineLimit(2)
+                            
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .fontWeight(.semibold)
+                                .frame(minHeight: 49)
+                                .frame(minWidth: 49)
+                            
+                                .foregroundColor(.blue)
+                            //                .background(Color.blueButton)
+                                .background(Color.grayButton)
+                                .font(.subheadline)
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    guard let url = URL(string: "http://ambulance-docs.site") else { return }
+                                    UIApplication.shared.open(url)
+                                }
                         }
                         .padding(.horizontal, 10)
                         .padding(.bottom, 10)
                     }
-                        .background(.back)
-                        .background(ignoresSafeAreaEdges: .all)
-                        .navigationBarBackButtonHidden(false)
-                        .navigationBarTitle("",displayMode: .inline)
-                        .toolbar {
-                            ToolbarItem(placement: .principal) {
-                                VStack {
-                                    Text("AmbulanceDocs")
-                                        .font(.headline)
-                                        .foregroundStyle(Color.toolBar)
-                                        .bold()
-                                    Text("Встроенные покупки")
-                                        .font(.caption2)
-                                        .foregroundStyle(Color.toolBar)
-                                    //
-                                }
+                    .background(.back)
+                    .background(ignoresSafeAreaEdges: .all)
+                    .navigationBarBackButtonHidden(false)
+                    .navigationBarTitle("",displayMode: .inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack {
+                                Text("AmbulanceDocs")
+                                    .font(.headline)
+                                    .foregroundStyle(Color.toolBar)
+                                    .bold()
+                                Text("Встроенные покупки")
+                                    .font(.caption2)
+                                    .foregroundStyle(Color.toolBar)
+                                //
                             }
-                            
                         }
                         
                     }
+                    
                 }
-                .background(ignoresSafeAreaEdges: .all)
-                
-                .task {
-                    _ = Task<Void, Never> {
-                        do {
-                            try await purchaseManager.loadProducts()
-                        } catch {
-                            print(error)
-                        }
+            }
+            .background(ignoresSafeAreaEdges: .all)
+            
+            .task {
+                _ = Task<Void, Never> {
+                    do {
+                        try await purchaseManager.loadProducts()
+                    } catch {
+                        print(error)
                     }
                 }
-                
-                
             }
+            
+            
+        }
         
         
         
@@ -159,4 +262,12 @@ struct StoreKit8: View {
 }
 #Preview {
     StoreKit8()
+}
+
+struct WebView: View {
+    let url: URL
+    
+    var body: some View {
+        WebView(url: url)
+    }
 }

@@ -24,7 +24,7 @@ struct HomeView: View {
                             Image(systemName: "list.bullet.clipboard")
                                 .resizable()
                                 .frame(width: 18, height: 28)
-//                                .padding(.horizontal)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
                                 .padding(.vertical, 6.0)
@@ -47,7 +47,7 @@ struct HomeView: View {
                             
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -61,11 +61,11 @@ struct HomeView: View {
                         HStack {
                             Image(systemName: "doc.append") //ivfluid.bag  candybarphone
                                 .resizable()
-                                .frame(width: 18, height: 26)
-//                                .padding(.horizontal)
+                                .frame(width: 18, height: 24)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
-                                .padding(.vertical, 7.0)
+                                .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
                                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
@@ -84,7 +84,7 @@ struct HomeView: View {
                                 .padding(.leading, 10)
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -98,7 +98,7 @@ struct HomeView: View {
                             Image(systemName: "chart.bar.doc.horizontal")
                                 .resizable()
                                 .frame(width: 18, height: 24)
-//                                .padding(.horizontal)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
                                 .padding(.vertical, 8.0)
@@ -120,7 +120,7 @@ struct HomeView: View {
                                 .padding(.leading, 10)
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -133,7 +133,7 @@ struct HomeView: View {
                             Image(systemName: "doc.richtext")
                                 .resizable()
                                 .frame(width: 18, height: 24)
-//                                .padding(.horizontal)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
                                 .padding(.vertical, 8.0)
@@ -155,7 +155,7 @@ struct HomeView: View {
                                 .padding(.leading, 10)
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -168,7 +168,7 @@ struct HomeView: View {
                             Image(systemName: "ivfluid.bag") //ivfluid.bag  candybarphone
                                 .resizable()
                                 .frame(width: 16, height: 25)
-//                                .padding(.horizontal)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 12.0)
                                 .padding(.vertical, 7.5)
@@ -190,7 +190,7 @@ struct HomeView: View {
                                 .padding(.leading, 10)
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -203,7 +203,7 @@ struct HomeView: View {
                             Image(systemName: "square.text.square")
                                 .resizable()
                                 .frame(width: 18, height: 24)
-//                                .padding(.horizontal)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
                                 .padding(.vertical, 8.0)
@@ -225,7 +225,7 @@ struct HomeView: View {
                                 .padding(.leading, 10)
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -238,7 +238,7 @@ struct HomeView: View {
                             Image(systemName: "doc.text.below.ecg")
                                 .resizable()
                                 .frame(width: 18, height: 24)
-//                                .padding(.horizontal)
+                            //                                .padding(.horizontal)
                                 .font(.caption2)
                                 .padding(.horizontal, 11.0)
                                 .padding(.vertical, 8.0)
@@ -260,7 +260,7 @@ struct HomeView: View {
                                 .padding(.leading, 10)
                         }
                         .padding(5.0)
-                //        .lineLimit(2)
+                        //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(minHeight: 50)
@@ -268,10 +268,83 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     }
-                    
-                    Spacer()
-                    
-                    
+//                    Spacer(minLength: 30)
+//                    ZStack{
+//                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+//                        VStack (spacing: 1){
+//                            Text("""
+//                                **Тестовая версия приложения**
+//                                """)
+//                                .multilineTextAlignment(.center)
+//                                .padding(.top, 5)
+//                                .padding(.horizontal, 10)
+//                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .frame(minHeight: 20)
+//                                .modifier(ThemeGrayColorModifier())
+//                                .font(.caption2)
+//                                .cornerRadius(10)
+//                            Text("""
+//                                Так как приложение разрабатывается одним разработчиком, запускаю **донатную** систему для помощи в открытии **юр.лица**.
+//                                Ваша посильная помощь поможет ускорить **релиз приложения в AppStore.**
+//                                """)
+//                                .multilineTextAlignment(.leading)
+//                                .padding(.horizontal, 10)
+//                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .frame(minHeight: 20)
+//                                .modifier(ThemeGrayColorModifier())
+//                                .font(.caption2)
+//                                .cornerRadius(10)
+//                            Text("""
+//                                **БНБ-банк. Номер карты:**
+//                                """)
+//                                .multilineTextAlignment(.leading)
+//                                .padding(.horizontal, 10)
+//                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .frame(minHeight: 20)
+//                                .modifier(ThemeGrayColorModifier())
+//                                .font(.caption2)
+//                                .cornerRadius(10)
+//                            Text("""
+//                                5265520005677683
+//                                """)
+//                                .multilineTextAlignment(.leading)
+//                                .textSelection(.enabled)
+//                                .padding(.horizontal, 10)
+//                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .frame(minHeight: 20)
+//                                .modifier(ThemeGrayColorModifier())
+//                                .font(.subheadline)
+//                                .cornerRadius(10)
+//                            Text("""
+//                                **БНБ-банк. Реквизиты пополнения через ЕРИП:**
+//                                """)
+//                                .multilineTextAlignment(.leading)
+//                                .padding(.horizontal, 10)
+//                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .frame(minHeight: 20)
+//                                .modifier(ThemeGrayColorModifier())
+//                                .font(.caption2)
+//                                .cornerRadius(10)
+//                            Text("""
+//                                3001779330262551/7683
+//                                """)
+//                                .multilineTextAlignment(.leading)
+//                                .textSelection(.enabled)
+//                                .padding(.bottom, 10)
+//                                .padding(.horizontal, 10)
+//                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+//                                .fixedSize(horizontal: false, vertical: true)
+//                                .frame(minHeight: 20)
+//                                .modifier(ThemeGrayColorModifier())
+//                                .font(.subheadline)
+//                                .cornerRadius(10)
+//                        }
+//                    }
                     
                 }
                 .padding(.horizontal, 10)

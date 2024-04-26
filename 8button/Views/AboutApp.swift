@@ -184,6 +184,66 @@ struct AboutApp: View {
                     }
                     Divider()
                         .background(Color.divider)
+                    Text("Лицензионное соглашение (EULA)")
+                        .padding(7.0)
+                    //                .lineLimit(2)
+                    
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .frame(minWidth: 49)
+                    
+                        .foregroundColor(.blue)
+                    //                .background(Color.blueButton)
+                        .background(Color.grayButton)
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            guard let url = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/") else { return }
+                            UIApplication.shared.open(url)
+                        }
+                    Text("Политика конфиденциальности")
+                        .padding(7.0)
+                    //                .lineLimit(2)
+                    
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .frame(minWidth: 49)
+                    
+                        .foregroundColor(.blue)
+                    //                .background(Color.blueButton)
+                        .background(Color.grayButton)
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            guard let url = URL(string: "https://www.privacypolicytemplate.net/live.php?token=a4nJMQKuRQ4vXe4LFA4nUBgBc2PNfD6Q") else { return }
+                            UIApplication.shared.open(url)
+                        }
+                    Text("Обзор приложения")
+                        .padding(7.0)
+                    //                .lineLimit(2)
+                    
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .frame(minWidth: 49)
+                    
+                        .foregroundColor(.blue)
+                    //                .background(Color.blueButton)
+                        .background(Color.grayButton)
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            guard let url = URL(string: "http://ambulance-docs.site") else { return }
+                            UIApplication.shared.open(url)
+                        }
                 }
                 .padding(.horizontal, 10)
             }

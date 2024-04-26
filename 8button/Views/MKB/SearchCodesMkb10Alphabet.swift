@@ -44,7 +44,7 @@ final class SearchableViewModelCode: ObservableObject {
         
         let search = searchText.lowercased()
         filteredCode = allCode.filter({ code in
-            let titleContainsSearch = code.name.lowercased().contains(search)
+            let titleContainsSearch = code.name.lowercased().contains(search) || code.code.lowercased().contains(search)
             return titleContainsSearch
         })
     }
