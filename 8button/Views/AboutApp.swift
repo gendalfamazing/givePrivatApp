@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct AboutApp: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+   
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
     let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
@@ -184,6 +185,32 @@ struct AboutApp: View {
                     }
                     Divider()
                         .background(Color.divider)
+                    Button {
+                        _ = Task<Void, Never> {
+                            do {
+                                try await AppStore.sync()
+                            } catch {
+                                print(error)
+                            }
+                        }
+                    } label: {
+                        Text("Восстановить покупки")
+                            .padding(7.0)
+                        //                .lineLimit(2)
+                        
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .fontWeight(.semibold)
+                            .frame(minHeight: 49)
+                            .frame(minWidth: 49)
+                        
+                            .foregroundColor(.blue)
+                        //                .background(Color.blueButton)
+                            .background(Color.grayButton)
+                            .font(.subheadline)
+                            .cornerRadius(10)
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    }
                     
                     Text("Лицензионное соглашение (EULA)")
                         .padding(7.0)

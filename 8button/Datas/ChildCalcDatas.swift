@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftData
 
 
-struct ChildCalcDatas: Identifiable {
+struct ChildCalcDatas: Identifiable, Hashable {
     let mainContent: String
     let diagnosis: String
     let medicines: String

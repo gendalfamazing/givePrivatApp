@@ -10,12 +10,7 @@
       "internalID" : "6484269780",
       "localizations" : [
         {
-          "description" : "Покупка приложения навсегда за 14.99$",
-          "displayName" : "Premium",
-          "locale" : "en_US"
-        },
-        {
-          "description" : "Покупка приложения навсегда за 14.99$",
+          "description" : "Полный доступ к приложению навсегда",
           "displayName" : "Premium",
           "locale" : "ru"
         }
@@ -27,10 +22,12 @@
   ],
   "settings" : {
     "_applicationInternalID" : "6479942469",
+    "_askToBuyEnabled" : false,
     "_billingGracePeriodEnabled" : true,
     "_developerTeamID" : "29R8F9VULL",
+    "_disableDialogs" : false,
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 735836297.94523501,
+    "_lastSynchronizedDate" : 736181341.50583398,
     "_locale" : "ru",
     "_storefront" : "BLR",
     "_storeKitErrors" : [
@@ -44,14 +41,17 @@
       },
       {
         "current" : {
-          "index" : 1,
+          "index" : 2,
           "type" : "purchase"
         },
         "enabled" : false,
         "name" : "Purchase"
       },
       {
-        "current" : null,
+        "current" : {
+          "index" : 0,
+          "type" : "verification"
+        },
         "enabled" : false,
         "name" : "Verification"
       },
@@ -61,7 +61,10 @@
         "name" : "App Store Sync"
       },
       {
-        "current" : null,
+        "current" : {
+          "index" : 2,
+          "type" : "generic"
+        },
         "enabled" : false,
         "name" : "Subscription Status"
       },
@@ -88,7 +91,8 @@
         "enabled" : false,
         "name" : "Offer Code Redeem Sheet"
       }
-    ]
+    ],
+    "_timeRate" : 0
   },
   "subscriptionGroups" : [
     {
@@ -110,20 +114,15 @@
           "groupNumber" : 3,
           "internalID" : "6483809054",
           "introductoryOffer" : {
-            "internalID" : "9B2BD2BF",
+            "internalID" : "89CDF994",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P2W"
           },
           "localizations" : [
             {
-              "description" : "Полный доступ в течение 1 года за 7.99$",
-              "displayName" : "Подписка (1 год)",
-              "locale" : "en_US"
-            },
-            {
-              "description" : "Полный доступ в течение 1 года за 7.99$",
-              "displayName" : "Подписка (1 год)",
+              "description" : "Полный доступ к приложению на 1 год",
+              "displayName" : "Подписка на 1 год",
               "locale" : "ru"
             }
           ],
@@ -145,20 +144,15 @@
           "groupNumber" : 2,
           "internalID" : "6483808418",
           "introductoryOffer" : {
-            "internalID" : "6B355045",
+            "internalID" : "2243B674",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P2W"
           },
           "localizations" : [
             {
-              "description" : "Полный доступ в течение 1 месяца за 0.99$",
-              "displayName" : "Подписка (1 месяц)",
-              "locale" : "en_US"
-            },
-            {
-              "description" : "Полный доступ в течение 1 месяца за 0.99$",
-              "displayName" : "Подписка (1 месяц)",
+              "description" : "Полный доступ к приложению на 1 месяц",
+              "displayName" : "Подписка на 1 месяц",
               "locale" : "ru"
             }
           ],

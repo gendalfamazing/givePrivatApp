@@ -71,6 +71,11 @@ class PurchaseManager: NSObject, ObservableObject {
         }
 
         self.entitlementManager.hasPro = !self.purchasedProductIDs.isEmpty
+        
+        // Если подписка отменена или пробный период истек, устанавливаем hasPro в false
+        if self.purchasedProductIDs.isEmpty {
+            self.entitlementManager.hasPro = false
+        }
     }
 
     private func observeTransactionUpdates() -> Task<Void, Never> {
@@ -86,9 +91,23 @@ class PurchaseManager: NSObject, ObservableObject {
 
 extension PurchaseManager: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-
+        for transaction in transactions {
+            if transaction.transactionState == .purchased {
+                //User payment successful
+                print("Transaction successful!")
+                SKPaymentQueue.default().finishTransaction(transaction)
+            } else if transaction.transactionState == .failed {
+                //Payment failed
+                
+                if let error = transaction.error {
+                    let errorDescription = error.localizedDescription
+                    print("Transaction failed! \(errorDescription)")
+                }
+                
+                SKPaymentQueue.default().finishTransaction(transaction)
+            }
+        }
     }
-
     func paymentQueue(_ queue: SKPaymentQueue, shouldAddStorePayment payment: SKPayment, for product: SKProduct) -> Bool {
         return true
     }
