@@ -141,6 +141,8 @@
 		C6740B852BCAE92B005F28E6 /* ZakonOZdravoohranenii-06.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6740B842BCAE92B005F28E6 /* ZakonOZdravoohranenii-06.swift */; };
 		C6740B872BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6740B862BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift */; };
 		C67445FD2BA9906D0067FAEF /* ButtonStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */; };
+		C6783B402BFDDC8B00AE43A5 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6783B3F2BFDDC8B00AE43A5 /* test.swift */; };
+		C6783B422BFDEBD500AE43A5 /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6783B412BFDEBD500AE43A5 /* test1.swift */; };
 		C67BA8F52B276EF500470B55 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BA8F42B276EF500470B55 /* HomeView.swift */; };
 		C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67FCAC02B5977220087F44B /* Prikaz1030Alg61View.swift */; };
 		C67FCAC32B597A770087F44B /* Prikaz1030Alg62View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67FCAC22B597A770087F44B /* Prikaz1030Alg62View.swift */; };
@@ -380,6 +382,8 @@
 		C6740B842BCAE92B005F28E6 /* ZakonOZdravoohranenii-06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZakonOZdravoohranenii-06.swift"; sourceTree = "<group>"; };
 		C6740B862BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZakonOZdravoohranenii-07.swift"; sourceTree = "<group>"; };
 		C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleViewModifier.swift; sourceTree = "<group>"; };
+		C6783B3F2BFDDC8B00AE43A5 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		C6783B412BFDEBD500AE43A5 /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
 		C67BA8F42B276EF500470B55 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C67FCAC02B5977220087F44B /* Prikaz1030Alg61View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg61View.swift; sourceTree = "<group>"; };
 		C67FCAC22B597A770087F44B /* Prikaz1030Alg62View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg62View.swift; sourceTree = "<group>"; };
@@ -692,6 +696,7 @@
 			isa = PBXGroup;
 			children = (
 				C63E75B32B14BA9400524502 /* 8button */,
+				C6783B3E2BFDDC6A00AE43A5 /* TEST */,
 				C63E75B22B14BA9400524502 /* Products */,
 				C681BFA22BD545E300C7B66A /* Frameworks */,
 			);
@@ -852,6 +857,15 @@
 				C692823E2BCBCA9100E699DA /* ZakonOZdravoohranenii-13.swift */,
 			);
 			path = ZakonOZdravoohranenii;
+			sourceTree = "<group>";
+		};
+		C6783B3E2BFDDC6A00AE43A5 /* TEST */ = {
+			isa = PBXGroup;
+			children = (
+				C6783B3F2BFDDC8B00AE43A5 /* test.swift */,
+				C6783B412BFDEBD500AE43A5 /* test1.swift */,
+			);
+			path = TEST;
 			sourceTree = "<group>";
 		};
 		C681BFA22BD545E300C7B66A /* Frameworks */ = {
@@ -1123,11 +1137,13 @@
 				C65F006C2B4FF9F000528DAC /* Prikaz1030Alg138View.swift in Sources */,
 				C664F5372B4D064E0044E0E1 /* Prikaz1030Alg112View.swift in Sources */,
 				C63821622B6A9C3F009E0AC8 /* Postanovlenie2Alg5View.swift in Sources */,
+				C6783B422BFDEBD500AE43A5 /* test1.swift in Sources */,
 				C6D69FAD2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift in Sources */,
 				C6DB605C2B14BBEA0050DAD6 /* Postanovlenie118View.swift in Sources */,
 				C6D69FB32B5A5C8C00235B09 /* Prikaz1030Alg69View.swift in Sources */,
 				C6DA84022BB6E02F00142010 /* 05Kardioversion.swift in Sources */,
 				C65FAE552B551E0F00628105 /* Prikaz1030Alg54View.swift in Sources */,
+				C6783B402BFDDC8B00AE43A5 /* test.swift in Sources */,
 				C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */,
 				C63821642B6A9C46009E0AC8 /* Postanovlenie2Alg6View.swift in Sources */,
 				C6E1A5612BC53CC800594FDF /* StoreKit.swift in Sources */,

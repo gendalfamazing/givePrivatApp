@@ -180,7 +180,7 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                         Spacer()
-                        Text("Version: \(version) (\(buildNumber))")
+                        Text("Version: \(version)")
                         Spacer()
                     }
                     Divider()

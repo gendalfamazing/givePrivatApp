@@ -45,24 +45,34 @@ struct Pharmacology: View {
     
     var body: some View {
             ScrollView {
-                VStack (spacing:5) {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                VStack (alignment: .leading, spacing:5) {
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Основное:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                    }
                             NavigationLink (destination: MedicinesAdult()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Применение лекарственных средств у взрослых")).buildBlue59NavigationText()
+                                MyViewBuilder(title: Text("01"), content: Text("Применение лекарственных средств у взрослых")).buildTitleBlueText()
                             }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
+                    
                             NavigationLink (destination: MedicinesChild()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Применение лекарственных средств у детей")).buildBlue59NavigationText()
+                                MyViewBuilder(title: Text("02"), content: Text("Применение лекарственных средств у детей")).buildTitleBlueText()
                             }
-                        }
+                     
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Дополнительно:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
                     }
-                    Spacer(minLength: 15)
                     MyViewBuilder(title: Text("Противопоказания антиаритмиков"),
                                   content: Text("""
                                             **Амиодарон**

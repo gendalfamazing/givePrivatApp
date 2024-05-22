@@ -45,36 +45,45 @@ struct PamyatkiMain: View {
     
     var body: some View {
             ScrollView {
-                VStack (spacing: 5) {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                VStack (alignment: .leading, spacing: 5) {
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Основное:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                    }
+                    
                             NavigationLink (destination: PamyatkiMedSortirovka()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Медицинская сортировка")).buildBlue59NavigationText()
+                                MyViewBuilder(title: Text("01"), content: Text("Медицинская сортировка")).buildTitleBlueText()
                             }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
+                    
                             NavigationLink (destination: PamyatkiTaktikaSMP()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Тактика выездных бригад СМП на догоспитальном этапе")).buildBlue59NavigationText()
+                                MyViewBuilder(title: Text("02"), content: Text("Тактика выездных бригад СМП на догоспитальном этапе")).buildTitleBlueText()
                             }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
+                    
                             NavigationLink (destination: PamyatkiAvarContact()) {
-                                MyViewBuilder(title: Text("1"), content: Text("Действия при аварийных контактах с биологическим материалом")).buildBlue59NavigationText()
+                                MyViewBuilder(title: Text("03"), content: Text("Действия при аварийных контактах с биологическим материалом")).buildTitleBlueText()
                             }
-                        }
-                    }
+                     
                     
                 }
                 .padding(.horizontal, 10)
-                Spacer(minLength: 15)
-                VStack (spacing:5) {
+                
+                VStack (alignment: .leading, spacing:5) {
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Дополнительно:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                    }
                     MyViewBuilder(title: Text("Принудительная госпитализация в психиатрический стационар"),
                                   content: Text("""
                                             **Госпитализации в психиатрический стационар без согласия пациента или его законного представителя допускается, если его обследование и лечение возможны только в условиях стационара, а психическое расстройство обусловливает:**

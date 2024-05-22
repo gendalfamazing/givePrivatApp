@@ -124,6 +124,6 @@ struct Prikaz1030Alg1View: View {
     
 }
 #Preview {
-    AppTabBarView()
+    Prikaz1030Alg1View()
 }
 
