@@ -76,7 +76,6 @@ struct PamyatkiAvarContact: View {
                                 isTextExpanded2.toggle()
                             }
                         }
-                    Spacer(minLength: 15)
                     MyViewBuilder(title: Text(""),
                                   content: Text("""
                                             Алгоритмы действий при аварийных контактах
@@ -188,7 +187,6 @@ struct PamyatkiAvarContact: View {
                                 }
                             }
                     }
-                    Spacer(minLength: 15)
                     MyViewBuilder(title: Text("Дальнейшие действия при аварийной ситуации"),
                                   content: Text("""
                                             • Во всех лечебно-профилактических учреждениях необходимо вести **«ЖУРНАЛ регистрации аварийных контактов работников организаций здравоохранения с биологическим материалом пациентов»**.
