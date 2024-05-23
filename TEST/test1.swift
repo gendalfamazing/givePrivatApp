@@ -412,45 +412,19 @@ struct test2: View {
         @State private var showDiseasePicker = false
         @State private var showTreatmentPicker = false
         @State private var showTreatmentDescription = false
-        
+        @State private var isRotated1 = false
+        @State private var isRotated2 = false
+        @State private var isRotated3 = false
         var body: some View {
             
             ScrollView {
                 Spacer()
                 VStack (spacing: 5){
-                    Picker("Выберите главу", selection: $selectedChapter) {
-                        Text("Выберите главу").tag(Chapter?.none)
-                        ForEach(DataProvider.chapters) { chapter in
-                            Text(chapter.name).tag(chapter as Chapter?)
-                        }
-                    }
-                    .padding(7.0)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .fontWeight(.semibold)
-                    .frame(minHeight: 49)
-                    .frame(minWidth: 49)
-                    .modifier(ThemeBlueColorModifier())
-                    .background(selectedChapter == nil ? Color.grayButton : Color.blueButton)
-                    .font(.subheadline)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .pickerStyle(MenuPickerStyle())
-                    .onChange(of: selectedChapter) { newChapter in
-                        withAnimation {
-                            selectedDisease = nil
-                            selectedTreatment = nil
-                            showDiseasePicker = newChapter != nil
-                            showTreatmentPicker = false
-                            showTreatmentDescription = false
-                        }
-                    }
-                    .zIndex(3)
-                    if showDiseasePicker, let chapter = selectedChapter {
-                        Picker("Выберите заболевание", selection: $selectedDisease) {
-                            Text("Выберите заболевание").tag(Disease?.none)
-                            ForEach(chapter.diseases) { disease in
-                                Text(disease.name).tag(disease as Disease?)
+                    ZStack {
+                        Picker("Выберите главу", selection: $selectedChapter) {
+                            Text("Выберите главу").tag(Chapter?.none)
+                            ForEach(DataProvider.chapters) { chapter in
+                                Text(chapter.name).tag(chapter as Chapter?)
                             }
                         }
                         .padding(7.0)
@@ -460,48 +434,174 @@ struct test2: View {
                         .frame(minHeight: 49)
                         .frame(minWidth: 49)
                         .modifier(ThemeBlueColorModifier())
-                        .background(selectedDisease == nil ? Color.grayButton : Color.blueButton)
                         .font(.subheadline)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
                         .pickerStyle(MenuPickerStyle())
-                        .onChange(of: selectedDisease) { newDisease in
-                            withAnimation {
+                        .opacity(0.011)
+                        .onChange(of: selectedChapter) { newChapter in
+                            withAnimation (.snappy) {
+                                selectedDisease = nil
                                 selectedTreatment = nil
-                                showTreatmentPicker = newDisease != nil
+                                showDiseasePicker = newChapter != nil
+                                showTreatmentPicker = false
                                 showTreatmentDescription = false
+                                isRotated1 = true
+                                if selectedChapter == nil {
+                                    isRotated1 = false
+                                }
                             }
                         }
-                        .transition(.move(edge: .top))
-                        .zIndex(2)
+                        HStack {
+                            Spacer()
+                            Text(selectedChapter?.name ?? "Выберите главу")
+                                .padding(.leading, 7)
+                            Spacer()
+                            Image(systemName: ("chevron.down"))
+                                .rotationEffect(.degrees(isRotated1 ? -180 : 0))
+        //                        .resizable()
+        //                        .frame(width: 20, height: 20)
+                                .opacity(0.3)
+        //                        .multilineTextAlignment(.center)
+                                .padding(.trailing, 7)
+                        }
+                        
+                            .padding(7.0)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .fontWeight(.semibold)
+                            .frame(minHeight: 49)
+                            .frame(minWidth: 49)
+                            
+                            .modifier(ThemeBlueColorModifier())
+                            .background(selectedChapter == nil ? Color.blueButton : Color.toggle)
+                            .font(.subheadline)
+                            .cornerRadius(10)
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .allowsHitTesting(false)
+                            
+                    }.zIndex(3)
+                    if showDiseasePicker, let chapter = selectedChapter {
+                        ZStack {
+                            Picker("Выберите заболевание", selection: $selectedDisease) {
+                                Text("Выберите заболевание").tag(Disease?.none)
+                                ForEach(chapter.diseases) { disease in
+                                    Text(disease.name).tag(disease as Disease?)
+                                }
+                            }
+                            .padding(7.0)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .fontWeight(.semibold)
+                            .frame(minHeight: 49)
+                            .frame(minWidth: 49)
+                            .modifier(ThemeBlueColorModifier())
+                            .background(selectedDisease == nil ? Color.blueButton : Color.toggle)
+                            .font(.subheadline)
+                            .cornerRadius(10)
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .pickerStyle(MenuPickerStyle())
+                            .opacity(0.011)
+                            .onChange(of: selectedDisease) { newDisease in
+                                withAnimation {
+                                    selectedTreatment = nil
+                                    showTreatmentPicker = newDisease != nil
+                                    showTreatmentDescription = false
+                                    isRotated2 = true
+                                    if selectedDisease == nil {
+                                        isRotated2 = false
+                                    }
+                                }
+                            }
+                            .transition(.move(edge: .top))
+                            HStack {
+                                Spacer()
+                                Text(selectedDisease?.name ?? "Выберите заболевание")
+                                    .padding(.leading, 7)
+                                Spacer()
+                                Image(systemName: ("chevron.down"))
+                                    .rotationEffect(.degrees(isRotated2 ? -180 : 0))
+            //                        .resizable()
+            //                        .frame(width: 20, height: 20)
+                                    .opacity(0.3)
+            //                        .multilineTextAlignment(.center)
+                                    .padding(.trailing, 7)
+                            }
+                            
+                                .padding(7.0)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .fontWeight(.semibold)
+                                .frame(minHeight: 49)
+                                .frame(minWidth: 49)
+                                .modifier(ThemeBlueColorModifier())
+                                .background(selectedDisease == nil ? Color.blueButton : Color.toggle)
+                                .font(.subheadline)
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .allowsHitTesting(false)
+                        
+                        }.zIndex(2).transition(.move(edge: .top))
                     }
                     
                     if showTreatmentPicker, let disease = selectedDisease {
-                        Picker("Выберите препарат", selection: $selectedTreatment) {
-                            Text("Выберите препарат").tag(Treatment?.none)
-                            ForEach(disease.treatments) { treatment in
-                                Text(treatment.name).tag(treatment as Treatment?)
+                        ZStack {
+                            Picker("Выберите препарат", selection: $selectedTreatment) {
+                                Text("Выберите препарат").tag(Treatment?.none)
+                                ForEach(disease.treatments) { treatment in
+                                    Text(treatment.name).tag(treatment as Treatment?)
+                                }
                             }
-                        }
-                        .padding(7.0)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .fontWeight(.semibold)
-                        .frame(minHeight: 49)
-                        .frame(minWidth: 49)
-                        .modifier(ThemeBlueColorModifier())
-                        .background(selectedTreatment == nil ? Color.grayButton : Color.blueButton)
-                        .font(.subheadline)
-                        .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                        .pickerStyle(MenuPickerStyle())
-                        .onChange(of: selectedTreatment) { newTreatment in
-                            withAnimation {
-                                showTreatmentDescription = newTreatment != nil
+                            .padding(7.0)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .fontWeight(.semibold)
+                            .frame(minHeight: 49)
+                            .frame(minWidth: 49)
+                            .modifier(ThemeBlueColorModifier())
+                            .background(selectedTreatment == nil ? Color.blueButton : Color.toggle)
+                            .font(.subheadline)
+                            .cornerRadius(10)
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .pickerStyle(MenuPickerStyle())
+                            .opacity(0.011)
+                            .onChange(of: selectedTreatment) { newTreatment in
+                                withAnimation {
+                                    showTreatmentDescription = newTreatment != nil
+                                    isRotated3 = true
+                                    if selectedTreatment == nil {
+                                        isRotated3 = false
+                                    }
+                                }
                             }
-                        }
-                        .transition(.move(edge: .top))
-                        .zIndex(1)
+                            
+                            HStack {
+                                Spacer()
+                                Text(selectedTreatment?.name ?? "Выберите препарат")
+                                    .padding(.leading, 7)
+                                Spacer()
+                                Image(systemName: ("chevron.down"))
+                                    .rotationEffect(.degrees(isRotated3 ? -180 : 0))
+            //                        .resizable()
+            //                        .frame(width: 20, height: 20)
+                                    .opacity(0.3)
+            //                        .multilineTextAlignment(.center)
+                                    .padding(.trailing, 7)
+                            }
+                            
+                                .padding(7.0)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .fontWeight(.semibold)
+                                .frame(minHeight: 49)
+                                .frame(minWidth: 49)
+                                .modifier(ThemeBlueColorModifier())
+                                .background(selectedTreatment == nil ? Color.blueButton : Color.toggle)
+                                .font(.subheadline)
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .allowsHitTesting(false)
+                        
+                        }.zIndex(1).transition(.move(edge: .top))
                         if showTreatmentDescription, let treatment = selectedTreatment {
                             
                             Text(LocalizedStringKey(treatment.description))
@@ -543,103 +643,7 @@ struct test2: View {
         }
     }
 
-struct test1: View {
-    @State private var selectedChapter: Chapter? = nil
-        @State private var selectedDisease: Disease? = nil
-        @State private var selectedTreatment: Treatment? = nil
-        
-        var body: some View {
-            VStack (spacing: 5){
-                Picker("Выберите главу", selection: $selectedChapter) {
-                    Text("Выберите главу").tag(Chapter?.none)
-                    ForEach(DataProvider.chapters) { chapter in
-                        Text(chapter.name).tag(chapter as Chapter?)
-                    }
-                }
-                .padding(7.0)
-//                .lineLimit(2)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                .fixedSize(horizontal: false, vertical: true)
-                .fontWeight(.semibold)
-                .frame(minHeight: 49)
-                .frame(minWidth: 49)
-                .modifier(ThemeBlueColorModifier())
-                .background(selectedChapter == nil ? Color.grayButton : Color.blueButton)
-                .font(.subheadline)
-                .cornerRadius(10)
-                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                .pickerStyle(MenuPickerStyle())
-                .onChange(of: selectedChapter) { newChapter in
-                    selectedDisease = nil
-                    selectedTreatment = nil
-                }
-                
-                if let chapter = selectedChapter {
-                    Picker("Выберите заболевание", selection: $selectedDisease) {
-                        Text("Выберите заболевание").tag(Disease?.none)
-                        ForEach(chapter.diseases) { disease in
-                            Text(disease.name).tag(disease as Disease?)
-                        }
-                    }
-                    .padding(7.0)
-    //                .lineLimit(2)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .fontWeight(.semibold)
-                    .frame(minHeight: 49)
-                    .frame(minWidth: 49)
-                    .modifier(ThemeBlueColorModifier())
-                    .background(selectedDisease == nil ? Color.grayButton : Color.blueButton)
-                    .font(.subheadline)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .pickerStyle(MenuPickerStyle())
-                    .onChange(of: selectedDisease) { newDisease in
-                        selectedTreatment = nil
-                    }
-                    
-                    if let disease = selectedDisease {
-                        Picker("Выберите препарат", selection: $selectedTreatment) {
-                            Text("Выберите препарат").tag(Treatment?.none)
-                            ForEach(disease.treatments) { treatment in
-                                Text(treatment.name).tag(treatment as Treatment?)
-                            }
-                        }
-                        .padding(7.0)
-        //                .lineLimit(2)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .fontWeight(.semibold)
-                        .frame(minHeight: 49)
-                        .frame(minWidth: 49)
-                        .modifier(ThemeBlueColorModifier())
-                        .background(selectedTreatment == nil ? Color.grayButton : Color.blueButton)
-                        .font(.subheadline)
-                        .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                        .pickerStyle(MenuPickerStyle())
-                        
-                        if let treatment = selectedTreatment {
-                            
-                            Text("**Описание**: \(treatment.description)")
-                                .textSelection(.enabled)
-                                .padding(10)
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                .fixedSize(horizontal: false, vertical: false)
-                                .frame(minHeight: 50)
-                                .modifier(ThemeGrayColorModifier())
-                                .font(.subheadline)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                        }
-                    }
-                }
-                
-                Spacer()
-            }
-            .padding()
-        }
-    }
+
 #Preview {
     test2()
 }
