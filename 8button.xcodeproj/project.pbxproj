@@ -182,6 +182,7 @@
 		C6C9862E2B8A082800F624B1 /* DopaminCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */; };
 		C6C986342B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */; };
 		C6C986362B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C986352B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift */; };
+		C6CFD8F02C04DC970031CFB1 /* test3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFD8EF2C04DC970031CFB1 /* test3.swift */; };
 		C6D69FAB2B5A3C5000235B09 /* Prikaz1030Alg65View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAA2B5A3C5000235B09 /* Prikaz1030Alg65View.swift */; };
 		C6D69FAD2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAC2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift */; };
 		C6D69FAF2B5A50B700235B09 /* Prikaz1030Alg67View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAE2B5A50B700235B09 /* Prikaz1030Alg67View.swift */; };
@@ -424,6 +425,7 @@
 		C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopaminCalc.swift; sourceTree = "<group>"; };
 		C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P4View.swift; sourceTree = "<group>"; };
 		C6C986352B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P5View.swift; sourceTree = "<group>"; };
+		C6CFD8EF2C04DC970031CFB1 /* test3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test3.swift; sourceTree = "<group>"; };
 		C6D69FAA2B5A3C5000235B09 /* Prikaz1030Alg65View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg65View.swift; sourceTree = "<group>"; };
 		C6D69FAC2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg66View.swift; sourceTree = "<group>"; };
 		C6D69FAE2B5A50B700235B09 /* Prikaz1030Alg67View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg67View.swift; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 			children = (
 				C6783B3F2BFDDC8B00AE43A5 /* test.swift */,
 				C6783B412BFDEBD500AE43A5 /* test1.swift */,
+				C6CFD8EF2C04DC970031CFB1 /* test3.swift */,
 			);
 			path = TEST;
 			sourceTree = "<group>";
@@ -1268,6 +1271,7 @@
 				C60E0D6B2BA7431600C1088E /* AtlasECG-Aritmii301.swift in Sources */,
 				C666A5782B29CDB1002C2FB2 /* TabBarItem.swift in Sources */,
 				C664F54D2B4D6DD40044E0E1 /* Prikaz1030Alg122View.swift in Sources */,
+				C6CFD8F02C04DC970031CFB1 /* test3.swift in Sources */,
 				C67153E82B790518009F724D /* Postanovlenie59Alg1P2View.swift in Sources */,
 				C60E0D592BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift in Sources */,
 				C666A5742B29CD79002C2FB2 /* CustomTabBarContainerView.swift in Sources */,
