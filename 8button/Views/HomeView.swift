@@ -269,9 +269,9 @@ struct HomeView: View {
                         .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     }
 //                    
-                    NavigationLink(destination: test2()) {
+                    NavigationLink(destination: FastChildDoses()) {
                         HStack {
-                            Image(systemName: "doc.text.below.ecg")
+                            Image(systemName: "doc.text.magnifyingglass")
                                 .resizable()
                                 .frame(width: 18, height: 24)
                             //                                .padding(.horizontal)
@@ -284,7 +284,7 @@ struct HomeView: View {
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
-                            Text("тест детские дозировки")
+                            Text("Поиск детских дозировок")
                                 .padding(.horizontal, 3.0)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)

@@ -141,8 +141,7 @@
 		C6740B852BCAE92B005F28E6 /* ZakonOZdravoohranenii-06.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6740B842BCAE92B005F28E6 /* ZakonOZdravoohranenii-06.swift */; };
 		C6740B872BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6740B862BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift */; };
 		C67445FD2BA9906D0067FAEF /* ButtonStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */; };
-		C6783B402BFDDC8B00AE43A5 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6783B3F2BFDDC8B00AE43A5 /* test.swift */; };
-		C6783B422BFDEBD500AE43A5 /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6783B412BFDEBD500AE43A5 /* test1.swift */; };
+		C6783B422BFDEBD500AE43A5 /* FastChildDoses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6783B412BFDEBD500AE43A5 /* FastChildDoses.swift */; };
 		C67BA8F52B276EF500470B55 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BA8F42B276EF500470B55 /* HomeView.swift */; };
 		C67FCAC12B5977220087F44B /* Prikaz1030Alg61View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67FCAC02B5977220087F44B /* Prikaz1030Alg61View.swift */; };
 		C67FCAC32B597A770087F44B /* Prikaz1030Alg62View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67FCAC22B597A770087F44B /* Prikaz1030Alg62View.swift */; };
@@ -182,7 +181,6 @@
 		C6C9862E2B8A082800F624B1 /* DopaminCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */; };
 		C6C986342B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */; };
 		C6C986362B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C986352B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift */; };
-		C6CFD8F02C04DC970031CFB1 /* test3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFD8EF2C04DC970031CFB1 /* test3.swift */; };
 		C6D69FAB2B5A3C5000235B09 /* Prikaz1030Alg65View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAA2B5A3C5000235B09 /* Prikaz1030Alg65View.swift */; };
 		C6D69FAD2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAC2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift */; };
 		C6D69FAF2B5A50B700235B09 /* Prikaz1030Alg67View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D69FAE2B5A50B700235B09 /* Prikaz1030Alg67View.swift */; };
@@ -383,8 +381,7 @@
 		C6740B842BCAE92B005F28E6 /* ZakonOZdravoohranenii-06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZakonOZdravoohranenii-06.swift"; sourceTree = "<group>"; };
 		C6740B862BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZakonOZdravoohranenii-07.swift"; sourceTree = "<group>"; };
 		C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleViewModifier.swift; sourceTree = "<group>"; };
-		C6783B3F2BFDDC8B00AE43A5 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		C6783B412BFDEBD500AE43A5 /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
+		C6783B412BFDEBD500AE43A5 /* FastChildDoses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastChildDoses.swift; sourceTree = "<group>"; };
 		C67BA8F42B276EF500470B55 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C67FCAC02B5977220087F44B /* Prikaz1030Alg61View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg61View.swift; sourceTree = "<group>"; };
 		C67FCAC22B597A770087F44B /* Prikaz1030Alg62View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg62View.swift; sourceTree = "<group>"; };
@@ -425,7 +422,6 @@
 		C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopaminCalc.swift; sourceTree = "<group>"; };
 		C6C986332B8B3A9100F624B1 /* Postanovlenie59Alg3P4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P4View.swift; sourceTree = "<group>"; };
 		C6C986352B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg3P5View.swift; sourceTree = "<group>"; };
-		C6CFD8EF2C04DC970031CFB1 /* test3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test3.swift; sourceTree = "<group>"; };
 		C6D69FAA2B5A3C5000235B09 /* Prikaz1030Alg65View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg65View.swift; sourceTree = "<group>"; };
 		C6D69FAC2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg66View.swift; sourceTree = "<group>"; };
 		C6D69FAE2B5A50B700235B09 /* Prikaz1030Alg67View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg67View.swift; sourceTree = "<group>"; };
@@ -698,7 +694,6 @@
 			isa = PBXGroup;
 			children = (
 				C63E75B32B14BA9400524502 /* 8button */,
-				C6783B3E2BFDDC6A00AE43A5 /* TEST */,
 				C63E75B22B14BA9400524502 /* Products */,
 				C681BFA22BD545E300C7B66A /* Frameworks */,
 			);
@@ -861,16 +856,6 @@
 			path = ZakonOZdravoohranenii;
 			sourceTree = "<group>";
 		};
-		C6783B3E2BFDDC6A00AE43A5 /* TEST */ = {
-			isa = PBXGroup;
-			children = (
-				C6783B3F2BFDDC8B00AE43A5 /* test.swift */,
-				C6783B412BFDEBD500AE43A5 /* test1.swift */,
-				C6CFD8EF2C04DC970031CFB1 /* test3.swift */,
-			);
-			path = TEST;
-			sourceTree = "<group>";
-		};
 		C681BFA22BD545E300C7B66A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,6 +906,14 @@
 				C6E834DB2BE2337A0043ADBD /* TestFlightHomeScreen.swift */,
 			);
 			path = StoreKit;
+			sourceTree = "<group>";
+		};
+		C6AF99962C0762DB00B9B798 /* FastChildDoses */ = {
+			isa = PBXGroup;
+			children = (
+				C6783B412BFDEBD500AE43A5 /* FastChildDoses.swift */,
+			);
+			path = FastChildDoses;
 			sourceTree = "<group>";
 		};
 		C6C3FEA12B29CCC400FF44BC /* TabBar */ = {
@@ -988,6 +981,7 @@
 				C67BA8F42B276EF500470B55 /* HomeView.swift */,
 				C69188012BB0363200414266 /* AboutApp.swift */,
 				C6DB60582B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift */,
+				C6AF99962C0762DB00B9B798 /* FastChildDoses */,
 				C60E0D512BA6E53E00C1088E /* ECG */,
 				C69B62972BA1D5B9009FB0CD /* StudMaterials */,
 				C61F18D72B9E05DA00D04496 /* Prik&Post */,
@@ -1140,13 +1134,12 @@
 				C65F006C2B4FF9F000528DAC /* Prikaz1030Alg138View.swift in Sources */,
 				C664F5372B4D064E0044E0E1 /* Prikaz1030Alg112View.swift in Sources */,
 				C63821622B6A9C3F009E0AC8 /* Postanovlenie2Alg5View.swift in Sources */,
-				C6783B422BFDEBD500AE43A5 /* test1.swift in Sources */,
+				C6783B422BFDEBD500AE43A5 /* FastChildDoses.swift in Sources */,
 				C6D69FAD2B5A4A7E00235B09 /* Prikaz1030Alg66View.swift in Sources */,
 				C6DB605C2B14BBEA0050DAD6 /* Postanovlenie118View.swift in Sources */,
 				C6D69FB32B5A5C8C00235B09 /* Prikaz1030Alg69View.swift in Sources */,
 				C6DA84022BB6E02F00142010 /* 05Kardioversion.swift in Sources */,
 				C65FAE552B551E0F00628105 /* Prikaz1030Alg54View.swift in Sources */,
-				C6783B402BFDDC8B00AE43A5 /* test.swift in Sources */,
 				C69B62992BA1D5EE009FB0CD /* StudMaterials.swift in Sources */,
 				C63821642B6A9C46009E0AC8 /* Postanovlenie2Alg6View.swift in Sources */,
 				C6E1A5612BC53CC800594FDF /* StoreKit.swift in Sources */,
@@ -1271,7 +1264,6 @@
 				C60E0D6B2BA7431600C1088E /* AtlasECG-Aritmii301.swift in Sources */,
 				C666A5782B29CDB1002C2FB2 /* TabBarItem.swift in Sources */,
 				C664F54D2B4D6DD40044E0E1 /* Prikaz1030Alg122View.swift in Sources */,
-				C6CFD8F02C04DC970031CFB1 /* test3.swift in Sources */,
 				C67153E82B790518009F724D /* Postanovlenie59Alg1P2View.swift in Sources */,
 				C60E0D592BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift in Sources */,
 				C666A5742B29CD79002C2FB2 /* CustomTabBarContainerView.swift in Sources */,
@@ -1442,7 +1434,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = 8button/8button.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;
@@ -1481,7 +1473,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = 8button/8button.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"8button/Preview Content\"";
 				DEVELOPMENT_TEAM = 29R8F9VULL;
 				ENABLE_PREVIEWS = YES;
