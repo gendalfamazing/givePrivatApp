@@ -11,7 +11,9 @@ class PurchaseManager: NSObject, ObservableObject {
     private(set) var products: [Product] = []
     @Published
     private(set) var purchasedProductIDs = Set<String>()
-
+    @Published private(set) var subscriptionInfo: [String: Date] = [:]
+    
+    private var productDisplayNames: [String: String] = [:]
     private let entitlementManager: EntitlementManager
     private var productsLoaded = false
     private var updates: Task<Void, Never>? = nil
@@ -28,10 +30,13 @@ class PurchaseManager: NSObject, ObservableObject {
     }
 
     func loadProducts() async throws {
-        guard !self.productsLoaded else { return }
-        self.products = try await Product.products(for: productIds)
-        self.productsLoaded = true
-    }
+            guard !self.productsLoaded else { return }
+            self.products = try await Product.products(for: productIds)
+            for product in products {
+                productDisplayNames[product.id] = product.displayName
+            }
+            self.productsLoaded = true
+        }
 
     func purchase(_ product: Product) async throws {
         let result = try await product.purchase()
@@ -58,25 +63,55 @@ class PurchaseManager: NSObject, ObservableObject {
     }
 
     func updatePurchasedProducts() async {
-        for await result in Transaction.currentEntitlements {
-            guard case .verified(let transaction) = result else {
-                continue
+            for await result in Transaction.currentEntitlements {
+                guard case .verified(let transaction) = result else {
+                    continue
+                }
+
+                if transaction.revocationDate == nil {
+                    self.purchasedProductIDs.insert(transaction.productID)
+                    if let expirationDate = transaction.expirationDate {
+                        self.subscriptionInfo[transaction.productID] = expirationDate
+                    } else {
+                        self.subscriptionInfo.removeValue(forKey: transaction.productID)
+                    }
+                } else {
+                    self.purchasedProductIDs.remove(transaction.productID)
+                    self.subscriptionInfo.removeValue(forKey: transaction.productID)
+                }
             }
 
-            if transaction.revocationDate == nil {
-                self.purchasedProductIDs.insert(transaction.productID)
-            } else {
-                self.purchasedProductIDs.remove(transaction.productID)
+            self.entitlementManager.hasPro = !self.purchasedProductIDs.isEmpty
+            
+            if self.purchasedProductIDs.isEmpty {
+                self.entitlementManager.hasPro = false
             }
         }
+    
+    func getSubscriptionDetails() -> String {
+            var details = ""
+            
+            for productID in purchasedProductIDs {
+                if let displayName = productDisplayNames[productID] {
+                    details += "• \(displayName)"
+                } else {
+                    details += "• \(productID)"
+                }
+                
+                if let expirationDate = subscriptionInfo[productID] {
+                    let formatter = DateFormatter()
+                    formatter.dateStyle = .short
+                    details += " (истекает \(formatter.string(from: expirationDate)))"
+                }
+                details += ""
+            }
+            
+            if purchasedProductIDs.isEmpty {
+                details += "Нет активных подписок или покупок."
+            }
 
-        self.entitlementManager.hasPro = !self.purchasedProductIDs.isEmpty
-        
-        // Если подписка отменена или пробный период истек, устанавливаем hasPro в false
-        if self.purchasedProductIDs.isEmpty {
-            self.entitlementManager.hasPro = false
+            return details
         }
-    }
 
     private func observeTransactionUpdates() -> Task<Void, Never> {
         Task(priority: .background) { [unowned self] in
