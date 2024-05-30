@@ -171,7 +171,50 @@ class MyViewBuilder: ViewBuilder1 {
 //
                 
     }
-    
+    func buildBlue591TextScales(isTextExpanded: Bool) -> some View {
+        
+        return
+                HStack {
+                    VStack (alignment: .leading){
+                        title
+                            .padding(.leading, 7)
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        content
+                            .padding(.leading, 7)
+                            .font(.caption2)
+                            .opacity(0.65)
+                    }
+                    Spacer()
+                    Spacer()
+                    Image(systemName: ("chevron.down"))
+                        .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
+//                        .resizable()
+//                        .frame(width: 20, height: 20)
+                        .opacity(0.3)
+//                        .multilineTextAlignment(.center)
+                        .padding(.trailing, 7)
+                }
+                .padding(7.0)
+//                .lineLimit(2)
+                
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                
+                .frame(minHeight: 49)
+                .frame(minWidth: 49)
+                
+                .modifier(ThemeBlueColorModifier())
+//                .background(Color.blueButton)
+                .background(isTextExpanded ? Color.toggle : Color.blueButton)
+                .background(Color.grayButton)
+                
+                .cornerRadius(10)
+                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+//
+                
+    }
     func buildBlue591TextLowLevel(isTextExpanded: Bool) -> some View {
         
         return
@@ -1367,8 +1410,36 @@ class MyViewBuilder59: ViewBuilder3 {
         .background(Color.grayButton)
         
     }
-    
-    
+    //Объемы зондового промывания у детей
+    func buildTableZondPromivanieChild() -> some View {
+        
+        return HStack(alignment: .center) {
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .bold()
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title2))
+                .textSelection(.enabled)
+                .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title3))
+                .textSelection(.enabled)
+                .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
+            
+            Spacer()
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
     
     //памятки таблицы
     func buildTablePamyatka1() -> some View {

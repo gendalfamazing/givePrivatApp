@@ -22,10 +22,24 @@ struct ScalesTables: View {
     @State private var isTextExpanded8 = false
     @State private var isTextExpanded9 = false
     @State private var isTextExpanded10 = false
+    @State private var isTextExpanded11 = false
+    @State private var isTextExpanded12 = false
+    @State private var isTextExpanded13 = true
+    @State private var isTextExpanded14 = false
     var body: some View {
             ScrollView {
-                VStack (spacing: 5){
-                MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Взрослые)")).buildBlue591Text(isTextExpanded: isTextExpanded1)
+                
+                VStack (alignment: .leading, spacing: 5){
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Шкалы:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                    }
+                MyViewBuilder(title: Text("Глазго (Взрослые)"), content: Text("Шкала для оценки степени нарушения сознания и комы")).buildBlue591TextScales(isTextExpanded: isTextExpanded1)
                     .onTapGesture {
                         withAnimation (.snappy) {
                             isTextExpanded1.toggle()
@@ -114,7 +128,7 @@ struct ScalesTables: View {
                             }
                     }
                 }
-                    MyViewBuilder(title: Text("1"), content: Text("Шкала комы Глазго (Дети)")).buildBlue591Text(isTextExpanded: isTextExpanded2)
+                    MyViewBuilder(title: Text("Глазго (Дети)"), content: Text("Шкала для оценки степени нарушения сознания и комы")).buildBlue591TextScales(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()
@@ -278,7 +292,7 @@ struct ScalesTables: View {
                                 }
                         }
                     }
-                    MyViewBuilder(title: Text("1"), content: Text("Шкала GRACE")).buildBlue591Text(isTextExpanded: isTextExpanded3)
+                    MyViewBuilder(title: Text("GRACE"), content: Text("Расчет риска у больных с ОКС без подъема ST")).buildBlue591TextScales(isTextExpanded: isTextExpanded3)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded3.toggle()
@@ -468,11 +482,11 @@ struct ScalesTables: View {
                     }
                     
                     MyViewBuilder(title: Text("""
-                                              ----
+                                              CHA2DS2-VASc
                                               """),
                                   content: Text("""
-                                                Шкала CHA2DS2-VASc
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded4)
+                                                Расчет риска тромбоэмболических осложнений
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded4)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded4.toggle()
@@ -562,11 +576,11 @@ struct ScalesTables: View {
                     }
                     
                     MyViewBuilder(title: Text("""
-                                              ----
+                                              HAS-BLED
                                               """),
                                   content: Text("""
-                                                Шкала HAS-BLED
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded5)
+                                                Стратификация риска кровотечеия
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded5)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded5.toggle()
@@ -652,11 +666,11 @@ struct ScalesTables: View {
                             }
                     }
                     MyViewBuilder(title: Text("""
-                                              ----
+                                              Острая дыхательная недостаточность
                                               """),
                                   content: Text("""
-                                                Шкала оценки степения тяжести ОДН
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded6)
+                                                Оценка степени тяжести ОДН
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded6)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded6.toggle()
@@ -751,11 +765,11 @@ struct ScalesTables: View {
                         }
                     }
                     MyViewBuilder(title: Text("""
-                                              ----
+                                              Wells
                                               """),
                                   content: Text("""
-                                                Шкала Wells
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded7)
+                                                Оценка клинической вероятности ТЭЛА
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded7)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded7.toggle()
@@ -813,11 +827,11 @@ struct ScalesTables: View {
                             }
                     }
                     MyViewBuilder(title: Text("""
-                                              ----
+                                              Хр. сердечная недостаточность
                                               """),
                                   content: Text("""
-                                                Шкала оценки ХСН
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded8)
+                                                Оценка клинического состояния при ХСН
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded8)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded8.toggle()
@@ -880,11 +894,11 @@ struct ScalesTables: View {
                             }
                     }
                     MyViewBuilder(title: Text("""
-                                              ----
+                                              ШОРС
                                               """),
                                   content: Text("""
-                                                Шкала оценки риска суицида
-                                                """)).buildBlue591Text(isTextExpanded: isTextExpanded9)
+                                                Оценка риска суицида
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded9)
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded9.toggle()
@@ -944,6 +958,159 @@ struct ScalesTables: View {
                             }
                     }
             }
+                .padding(.horizontal, 10)
+                
+                VStack (alignment: .leading, spacing: 5) {
+                    VStack (alignment: .leading, spacing: 1){
+                        Text("""
+                            Таблицы:
+                            """)
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                    }
+                    MyViewBuilder(title: Text("""
+                                              Физиологические нормы у детей
+                                              """),
+                                  content: Text("""
+                                                Таблица возрастных норм у детей в покое
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded11)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded11.toggle()
+                            }
+                        }
+                    if isTextExpanded11 {
+                        VStack(spacing: 1) {
+                            HStack {
+                                Text("Возраст")
+                                    .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("""
+                                    Масса (кг)
+                                    """)
+                                    .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("ЧДД")
+                                    .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("ЧСС")
+                                    .frame(minWidth: 45, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("АД")
+                                    .frame(minWidth: 40, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TablePamyatki.getTableParametersChild(), id: \.id) { name in
+                                MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableParametersChild()
+                            }
+                        }
+                        .cornerRadius(10)
+                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded11.toggle()
+                            }
+                        }
+                        MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                      content: Text("""
+                                                    **Среднее возрастное АД для детей от 1 года до 10 лет**:
+                                                    Систолическое = 90 + (возраст в годах) х 2
+                                                    Диастолическое = 60 + (возраст в годах)
+                                                    
+                                                    **Верхнее пограничное**:
+                                                    Систолическое = 105 + (возраст в годах) х 2
+                                                    Диастолическое - 75 + (возраст в годах)
+                                                    
+                                                    **Нижнее пограничное**:
+                                                    Систолическое = 75 + (возраст в годах) х 2
+                                                    Диастолическое = 45 + (возраст в годах)
+                                                    """)).buildGrayText()
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded11.toggle()
+                                }
+                            }
+                    }
+                    
+                    
+                            MyViewBuilder(title: Text("Промывание желудка"),
+                                          content: Text("""
+                                            Таблица объемов для промывания желудка у детей
+                                            """)).buildBlue591TextScales(isTextExpanded: isTextExpanded12)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded12.toggle()
+                                    }
+                                }
+                            if isTextExpanded12{
+                                VStack(alignment: .center ,spacing: 1) {
+                                    HStack (alignment: .bottom){
+                                        Text("Возраст")
+                                            .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                                            .font(.caption)
+                                            .bold()
+                                            .padding(3)
+                                        Spacer()
+                                        Text("""
+                                            Разовый 
+                                            объем (мл)
+                                            """)
+                                            .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                                            .font(.caption)
+                                            .bold()
+                                            .padding(3)
+                                        Spacer()
+                                        Text("""
+                                            Максимальный
+                                            объем (мл)
+                                            """)
+                                            .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                                            .font(.caption)
+                                            .bold()
+                                            .padding(3)
+                                        
+                                        Spacer()
+                                        
+                                    }
+                                    .padding(2)
+                                    .background(Color.grayButton)
+                                    ForEach(TablePamyatki.getTableZondPromivanieChild(), id: \.id) { name in
+                                        MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableZondPromivanieChild()
+                                    }
+                                }
+                                .cornerRadius(10)
+                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded12.toggle()
+                                    }
+                                }
+                                
+                            }
+                      
+                }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
             }
