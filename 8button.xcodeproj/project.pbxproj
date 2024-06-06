@@ -38,6 +38,7 @@
 		C61EC9362B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */; };
 		C61F18D62B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */; };
 		C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D92B9E065200D04496 /* PamyatkiMain.swift */; };
+		C625AE3B2C0A208A00FD852B /* test3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AE3A2C0A208A00FD852B /* test3.swift */; };
 		C62C574A2B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */; };
 		C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */; };
 		C62C574F2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574E2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift */; };
@@ -82,6 +83,8 @@
 		C65484A02B4ECAC900847504 /* Prikaz1030Alg132View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654849F2B4ECAC900847504 /* Prikaz1030Alg132View.swift */; };
 		C65484A22B4ED3F900847504 /* Prikaz1030Alg133View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484A12B4ED3F900847504 /* Prikaz1030Alg133View.swift */; };
 		C65484A42B4EDD0800847504 /* Prikaz1030Alg134View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65484A32B4EDD0800847504 /* Prikaz1030Alg134View.swift */; };
+		C656D7502C0CCE060004EB85 /* test4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C656D74F2C0CCE060004EB85 /* test4.swift */; };
+		C656D75B2C0E1C900004EB85 /* test5.swift in Sources */ = {isa = PBXBuildFile; fileRef = C656D75A2C0E1C900004EB85 /* test5.swift */; };
 		C65997D12BC11A08001F27D7 /* Prikaz155.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65997D02BC11A08001F27D7 /* Prikaz155.swift */; };
 		C65F00662B4FE63000528DAC /* Prikaz1030Alg135View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F00652B4FE63000528DAC /* Prikaz1030Alg135View.swift */; };
 		C65F00682B4FEB1C00528DAC /* Prikaz1030Alg136View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F00672B4FEB1C00528DAC /* Prikaz1030Alg136View.swift */; };
@@ -245,6 +248,19 @@
 		C6F2FAAF2B25B47400AC023A /* SearchableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F2FAAE2B25B47400AC023A /* SearchableBootcamp.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C656D7592C0DAF770004EB85 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C6039D1C2B5FA25F009CF504 /* Postanovlenie99View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99View.swift; sourceTree = "<group>"; };
 		C6039D1E2B5FA404009CF504 /* Postanovlenie99Alg1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg1View.swift; sourceTree = "<group>"; };
@@ -277,6 +293,7 @@
 		C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P2View.swift; sourceTree = "<group>"; };
 		C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg6View.swift; sourceTree = "<group>"; };
 		C61F18D92B9E065200D04496 /* PamyatkiMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiMain.swift; sourceTree = "<group>"; };
+		C625AE3A2C0A208A00FD852B /* test3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test3.swift; sourceTree = "<group>"; };
 		C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg102View.swift; sourceTree = "<group>"; };
 		C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg101View.swift; sourceTree = "<group>"; };
 		C62C574E2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg103View.swift; sourceTree = "<group>"; };
@@ -323,6 +340,8 @@
 		C654849F2B4ECAC900847504 /* Prikaz1030Alg132View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg132View.swift; sourceTree = "<group>"; };
 		C65484A12B4ED3F900847504 /* Prikaz1030Alg133View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg133View.swift; sourceTree = "<group>"; };
 		C65484A32B4EDD0800847504 /* Prikaz1030Alg134View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg134View.swift; sourceTree = "<group>"; };
+		C656D74F2C0CCE060004EB85 /* test4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test4.swift; sourceTree = "<group>"; };
+		C656D75A2C0E1C900004EB85 /* test5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test5.swift; sourceTree = "<group>"; };
 		C65997D02BC11A08001F27D7 /* Prikaz155.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz155.swift; sourceTree = "<group>"; };
 		C65F00652B4FE63000528DAC /* Prikaz1030Alg135View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg135View.swift; sourceTree = "<group>"; };
 		C65F00672B4FEB1C00528DAC /* Prikaz1030Alg136View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg136View.swift; sourceTree = "<group>"; };
@@ -999,6 +1018,9 @@
 			isa = PBXGroup;
 			children = (
 				C6EC47E02C08B59500B5F616 /* test.swift */,
+				C625AE3A2C0A208A00FD852B /* test3.swift */,
+				C656D74F2C0CCE060004EB85 /* test4.swift */,
+				C656D75A2C0E1C900004EB85 /* test5.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -1013,12 +1035,15 @@
 				C63E75AD2B14BA9400524502 /* Sources */,
 				C63E75AE2B14BA9400524502 /* Frameworks */,
 				C63E75AF2B14BA9400524502 /* Resources */,
+				C656D7592C0DAF770004EB85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = 8button;
+			packageProductDependencies = (
+			);
 			productName = 8button;
 			productReference = C63E75B12B14BA9400524502 /* 8button.app */;
 			productType = "com.apple.product-type.application";
@@ -1047,6 +1072,9 @@
 				ru,
 			);
 			mainGroup = C63E75A82B14BA9400524502;
+			packageReferences = (
+				C656D7512C0DA8F20004EB85 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = C63E75B22B14BA9400524502 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1186,6 +1214,7 @@
 				C69AE7802B87A57C00B1EADF /* Postanovlenie59Alg3P2View.swift in Sources */,
 				C664F5492B4D68C30044E0E1 /* Prikaz1030Alg120View.swift in Sources */,
 				C6740B7B2BCABE78005F28E6 /* ZakonOZdravoohranenii-01.swift in Sources */,
+				C656D7502C0CCE060004EB85 /* test4.swift in Sources */,
 				C665BE852B51226E0061CDDF /* Prikaz1030Alg43View.swift in Sources */,
 				C60713302BD3AC1700362554 /* ChildCalcDatas.swift in Sources */,
 				C67FCAC72B597E5B0087F44B /* Prikaz1030Alg64View.swift in Sources */,
@@ -1194,6 +1223,7 @@
 				C60E0D652BA721B700C1088E /* AtlasECG-Infarkt09.swift in Sources */,
 				C65484A02B4ECAC900847504 /* Prikaz1030Alg132View.swift in Sources */,
 				C65FAE4F2B550FF700628105 /* Prikaz1030Alg51View.swift in Sources */,
+				C656D75B2C0E1C900004EB85 /* test5.swift in Sources */,
 				C664F53B2B4D0C100044E0E1 /* Prikaz1030Alg114View.swift in Sources */,
 				C6740B7F2BCAE013005F28E6 /* ZakonOZdravoohranenii-03.swift in Sources */,
 				C67153E62B790473009F724D /* Postanovlenie59Alg1P1View.swift in Sources */,
@@ -1276,6 +1306,7 @@
 				C666A5782B29CDB1002C2FB2 /* TabBarItem.swift in Sources */,
 				C664F54D2B4D6DD40044E0E1 /* Prikaz1030Alg122View.swift in Sources */,
 				C67153E82B790518009F724D /* Postanovlenie59Alg1P2View.swift in Sources */,
+				C625AE3B2C0A208A00FD852B /* test3.swift in Sources */,
 				C60E0D592BA7117F00C1088E /* AtlasECG-Cardiomiopatii03.swift in Sources */,
 				C666A5742B29CD79002C2FB2 /* CustomTabBarContainerView.swift in Sources */,
 				C64162512B6BE07F00198A3E /* Prikaz47Alg2View.swift in Sources */,
@@ -1538,6 +1569,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C656D7512C0DA8F20004EB85 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = C63E75A92B14BA9400524502 /* Project object */;
 }

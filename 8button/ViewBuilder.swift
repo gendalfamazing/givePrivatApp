@@ -553,6 +553,7 @@ class MyViewBuilder: ViewBuilder1 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
 //                .frame(maxWidth: 70)
                 .font(.subheadline)
+                .bold()
                 .padding(3)
             Spacer()
             content
@@ -1433,6 +1434,30 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(3)
             
+            Spacer()
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    //Шкала CHA2DS2
+    func buildTableScaleCHA2DS2() -> some View {
+        
+        return HStack(alignment: .center) {
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .bold()
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title2))
+                .textSelection(.enabled)
+                .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                .font(.caption2)
+                .padding(3)
             Spacer()
             
         }
@@ -3801,3 +3826,44 @@ class MyViewBuilder59: ViewBuilder3 {
     Postanovlenie118Alg4View()
 }
 
+class FirstResponderController: ObservableObject {
+    @Published var isActive: Bool = false
+}
+import UIKit
+import SwiftUI
+
+struct FirstResponderTextField: UIViewRepresentable {
+    class Coordinator: NSObject, UITextFieldDelegate {
+        @Binding var text: String
+        @ObservedObject var responder: FirstResponderController
+
+        init(text: Binding<String>, responder: FirstResponderController) {
+            _text = text
+            self.responder = responder
+        }
+
+        func textFieldDidChangeSelection(_ textField: UITextField) {
+            text = textField.text ?? ""
+        }
+    }
+
+    @Binding var text: String
+    @ObservedObject var responder: FirstResponderController
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(text: $text, responder: responder)
+    }
+
+    func makeUIView(context: Context) -> UITextField {
+        let textField = UITextField(frame: .zero)
+        textField.delegate = context.coordinator
+        return textField
+    }
+
+    func updateUIView(_ uiView: UITextField, context: Context) {
+        uiView.text = text
+        if responder.isActive {
+            uiView.becomeFirstResponder()
+        }
+    }
+}
