@@ -134,6 +134,13 @@ extension CustomTabBarView {
                 withAnimation (.easeInOut(duration: 0)) {
                     selection = .child
                 }
+            } else if selection == tab && selection == .organizer{
+                withAnimation() {
+                    selection = .child
+                }
+                withAnimation (.easeInOut(duration: 0)) {
+                    selection = .organizer
+                }
             }else if selection == tab && selection == .search{
                 withAnimation() {
                     selection = .child

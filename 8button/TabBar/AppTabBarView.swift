@@ -17,6 +17,7 @@ struct AppTabBarView: View {
     @State private var homePath: UUID = UUID()
     @State private var adultPath: UUID = UUID()
     @State private var childPath: UUID = UUID()
+    @State private var organizerPath: UUID = UUID()
     @State private var searchPath: UUID = UUID()
     var body: some View {
         
@@ -29,13 +30,19 @@ struct AppTabBarView: View {
             NavigationStack(){
                 SearchAdult()
             }
-                .id(adultPath)
-                .tabBarItem(tab: .adult, selection: $tabSelection)
+            .id(adultPath)
+            .tabBarItem(tab: .adult, selection: $tabSelection)
             
             Postanovlenie118View()
                 .id(childPath)
                 .tabBarItem(tab: .child, selection: $tabSelection)
             
+            
+                CalendarView()
+            
+                .id(organizerPath)
+                .tabBarItem(tab: .organizer, selection: $tabSelection)
+                
             AboutApp()
                 .id(searchPath)
                 .tabBarItem(tab: .search, selection: $tabSelection)
@@ -58,10 +65,16 @@ struct AppTabBarView: View {
                     childPath = UUID()
                 }
                 
+            case .organizer:
+                withAnimation (.easeInOut(duration: 0.3)) {
+                    organizerPath = UUID()
+                }
+                
             case .search:
                 withAnimation (.easeInOut(duration: 0.3)) {
                     searchPath = UUID()
                 }
+            
                 
             }
         }

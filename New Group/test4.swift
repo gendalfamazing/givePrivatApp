@@ -178,6 +178,7 @@ struct DayView: View {
                             .frame(width: 40, height: 40)
                             .cornerRadius(6)
                             .zIndex(2)
+                        
                         RoundedRectangle(cornerRadius: 6)
                             .fill(Color.grayButton)
                             .frame(width: 40, height: 40)
@@ -186,6 +187,8 @@ struct DayView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .fill(Color.green.opacity(0.5))
                             .frame(width: 45, height: 45)
+                        
+                        
                     }
                     .animation(.easeInOut(duration: 0.3), value: isSelected)
                 }
@@ -206,10 +209,22 @@ struct DayView: View {
                             .frame(width: 45, height: 45)
                     }
                 } else if !events.isEmpty {
+                    ZStack {
                     RoundedRectangle(cornerRadius: 6)
                         .fill(events.first!.type.color.opacity(0.5))
                         .frame(width: 40, height: 40)
                         .cornerRadius(6)
+                        .zIndex(2)
+                        RoundedRectangle(cornerRadius: 6)
+                            .fill(Color.grayButton)
+                            .frame(width: 40, height: 40)
+                            .cornerRadius(6)
+                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .zIndex(1)
+                }
+                    
+                        
+                    
                     
                 }
                 VStack {
@@ -304,90 +319,65 @@ struct CalendarView: View {
     @State private var showDeleteEventsView = false
     
     var body: some View {
-        NavigationView {
-        VStack {
-            VStack (spacing: 5) {
-                HStack {
-                    Button(action: {
-                            viewModel.previousMonth()
-                        
-                    }) {
-                        Image(systemName: "chevron.left")
-                    }
-                    Spacer()
-                    Text(currentMonthYear)
-                        .textCase(.uppercase)
-                        .font(.title3)
-                        .bold()
-                    Spacer()
-                    Button(action: {
-                            viewModel.nextMonth()
-                        
-                    }) {
-                        Image(systemName: "chevron.right")
+        NavigationStack {
+            VStack {
+                
+                CalendarGrid(viewModel: viewModel)
+                
+                Spacer()
+                
+                LazyVStack {
+                    if let selectedDate = viewModel.selectedDate {
+                        EventsView(date: selectedDate, events: viewModel.events(for: selectedDate), viewModel: viewModel)
+                            .transition(.move(edge: .bottom))
+                            .animation(.easeInOut, value: viewModel.selectedDate)
                     }
                 }
                 
                 
-                DaysOfWeekView()
+                
             }
-            .padding()
-            .background(Color.blueButton) // Прямоугольник с серым фоном
-            .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-            CalendarGrid(viewModel: viewModel)
-            
-            Spacer()
-            
-            if let selectedDate = viewModel.selectedDate {
-                EventsView(date: selectedDate, events: viewModel.events(for: selectedDate), viewModel: viewModel)
-                    .transition(.move(edge: .bottom))
-                    .animation(.easeInOut, value: viewModel.selectedDate)
-            }
-            
-            
-            
-            
-        }
-        .padding(.horizontal)
-        .padding(.bottom, 55)
-        .gesture(
-            DragGesture()
-                .onEnded { value in
-                    if value.translation.width < 0 {
+            .padding(.horizontal)
+            .padding(.bottom, 55)
+            .gesture(
+                DragGesture()
+                    .onEnded { value in
+                        if value.translation.width < 0 {
                             viewModel.nextMonth()
-                        
-                    } else if value.translation.width > 0 {
+                            
+                        } else if value.translation.width > 0 {
                             viewModel.previousMonth()
-                        
+                            
+                        }
+                    }
+            )
+            .sheet(isPresented: $showDeleteEventsView) {
+                DeleteEventsView(viewModel: viewModel, isPresented: $showDeleteEventsView)
+            }
+            .onAppear {
+                viewModel.selectedDate = Date()
+            }
+            .background(Color.back)
+            .navigationBarBackButtonHidden(false)
+            .navigationBarTitle("",displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("График работы")
+                            .font(.headline)
+                            .bold()
+                        Text("«Удобный календарь для записи смен»")
+                            .font(.caption2)
                     }
                 }
-        )
-        .sheet(isPresented: $showDeleteEventsView) {
-            DeleteEventsView(viewModel: viewModel, isPresented: $showDeleteEventsView)
-        }
-        .onAppear {
-            viewModel.selectedDate = Date()
-        }
-        .background(Color.back)
-            
-    }
-        .navigationBarBackButtonHidden(false)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                VStack {
-                    Text("График работы")
-                        .font(.headline)
-                        .foregroundStyle(Color.toolBar)
-                        .bold()
-                    Text("""
-                    «Удобный календарь для записи смен»
-                    """)
-                    .font(.caption2)
-                    .foregroundStyle(Color.toolBar)
-                }
+                
             }
+            //        .padding(.horizontal, 200)
+            //            .edgesIgnoringSafeArea(.bottom)
+            .background(Color.back)
+            
         }
+    
     }
     
     var currentMonthYear: String {
@@ -405,7 +395,40 @@ struct CalendarGrid: View {
         let days = generateDays()
         
         return VStack (spacing: 1){
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 15) {
+            HStack {
+                Button(action: {
+                    viewModel.previousMonth()
+                    
+                }) {
+                    Image(systemName: "chevron.left")
+                        .resizable()
+                        .frame(width: 10, height: 20)
+                        .bold()
+                        .foregroundColor(.gray).opacity(0.5)
+                }
+                Spacer()
+                Text(currentMonthYear)
+                    .font(.title)
+                Spacer()
+                Button(action: {
+                        viewModel.nextMonth()
+                    
+                }) {
+                    Image(systemName: "chevron.right")
+                        .resizable()
+                        .frame(width: 10, height: 20)
+                        .bold()
+                        .foregroundColor(.gray).opacity(0.5)
+                }
+            }
+            .padding(.bottom, 15)
+            
+            DaysOfWeekView()
+                .padding(.bottom, 5)
+            Divider()
+                .background(Color.divider)
+                .padding(.horizontal, 5)
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 5) {
                 ForEach(days, id: \.self) { date in
                     DayView(date: date, events: viewModel.events(for: date), viewModel: viewModel)
                         .onTapGesture {
@@ -413,13 +436,15 @@ struct CalendarGrid: View {
                         }
                     
                 }
+            
                 
             }
-            .padding()
-            .background(Color.grayButton) // Прямоугольник с серым фоном
-            .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            
         }
+        .padding()
+        .background(Color.grayButton) // Прямоугольник с серым фоном
+        .cornerRadius(10)
+        .shadow(color: .shadowGrayRectangle, radius: 0.5)
         .sheet(isPresented: $viewModel.showEventSheet) {
             EventCreationSheet(viewModel: viewModel)
         }
@@ -464,13 +489,18 @@ struct CalendarGrid: View {
         
         return days
     }
+    var currentMonthYear: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "LLLL yyyy"
+        return formatter.string(from: viewModel.currentDate).capitalized
+    }
 }
 
 struct DaysOfWeekView: View {
     let daysOfWeek = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
     
     var body: some View {
-        HStack {
+        HStack (alignment: .bottom){
             ForEach(daysOfWeek, id: \.self) { day in
                 if day.contains("Вс") || day.contains("Сб"){
                     Text(day)
