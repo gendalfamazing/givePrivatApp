@@ -63,7 +63,7 @@ struct Pharmacology: View {
                             NavigationLink (destination: MedicinesChild()) {
                                 MyViewBuilder(title: Text("02"), content: Text("Применение лекарственных средств у детей")).buildTitleBlueText()
                             }
-                     
+                    Spacer(minLength: 10)
                     VStack (alignment: .leading, spacing: 1){
                         Text("""
                             Дополнительно:

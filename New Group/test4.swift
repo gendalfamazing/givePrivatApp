@@ -343,11 +343,13 @@ struct CalendarView: View {
                 DragGesture()
                     .onEnded { value in
                         if value.translation.width < 0 {
-                            viewModel.nextMonth()
-                            
+                            withAnimation (.interactiveSpring(duration: 0.3)){
+                                viewModel.nextMonth()
+                            }
                         } else if value.translation.width > 0 {
-                            viewModel.previousMonth()
-                            
+                            withAnimation (.interactiveSpring(duration: 0.3)){
+                                viewModel.previousMonth()
+                            }
                         }
                     }
             )
@@ -397,7 +399,9 @@ struct CalendarGrid: View {
         return VStack (spacing: 1){
             HStack {
                 Button(action: {
-                    viewModel.previousMonth()
+                    withAnimation (.interactiveSpring(duration: 0.3)){
+                        viewModel.previousMonth()
+                    }
                     
                 }) {
                     Image(systemName: "chevron.left")
@@ -408,10 +412,13 @@ struct CalendarGrid: View {
                 }
                 Spacer()
                 Text(currentMonthYear)
-                    .font(.title)
+                    .font(.title2)
+                    .bold()
                 Spacer()
                 Button(action: {
+                    withAnimation (.interactiveSpring(duration: 0.3)){
                         viewModel.nextMonth()
+                    }
                     
                 }) {
                     Image(systemName: "chevron.right")
@@ -428,7 +435,8 @@ struct CalendarGrid: View {
             Divider()
                 .background(Color.divider)
                 .padding(.horizontal, 5)
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 5) {
+                .padding(.bottom, 5)
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 1) {
                 ForEach(days, id: \.self) { date in
                     DayView(date: date, events: viewModel.events(for: date), viewModel: viewModel)
                         .onTapGesture {
@@ -524,14 +532,20 @@ struct EventsView: View {
     @State private var showDeleteEventsView = false
     var body: some View {
         VStack {
-            Text("Смена на \(formattedDate)")
-                .font(.headline)
-            ForEach(events) { event in
-                Text("\(event.type.rawValue) - \(formattedTime(for: event.startTime))")
-                    .padding()
-                    .background(event.type.color.opacity(0.5))
-                    .cornerRadius(8)
+            if events.isEmpty {
+                Text("\(formattedDate)")
+                    .font(.headline)
+            } else {
+                Text("\(formattedDate):")
+                    .font(.headline)
+                ForEach(events) { event in
+                    Text("\(event.type.rawValue) - \(formattedTime(for: event.startTime))")
+                        .padding()
+                        .background(event.type.color.opacity(0.5))
+                        .cornerRadius(8)
+                }
             }
+            
         }
         .padding()
         .background(Color.grayButton)

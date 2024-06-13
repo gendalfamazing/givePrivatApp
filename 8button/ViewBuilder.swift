@@ -220,7 +220,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack {
                     content
-                        .padding(.leading, 10)
+                        .padding(.leading, 7)
                     Spacer()
                     Spacer()
                     Image(systemName: ("chevron.down"))
@@ -285,6 +285,7 @@ class MyViewBuilder: ViewBuilder1 {
         return
                 HStack  {
                     content
+                        .padding(.leading, 7)
                         .multilineTextAlignment(.leading)
                     Spacer()
                     Spacer()
