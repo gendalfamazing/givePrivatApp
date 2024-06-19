@@ -43,6 +43,7 @@ class CalendarViewModel: ObservableObject {
     @Published var selectedDate: Date? = Date() // Изначально выбранная текущая дата
     @Published var selectedEvent: CalendarEvent?
     @Published var showEventSheet = false
+    @Published var animationFlag = false
 
     init() {
         loadEvents()
@@ -102,13 +103,15 @@ class CalendarViewModel: ObservableObject {
         return events.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
     }
     
-    func previousMonth() {
-        currentDate = Calendar.current.date(byAdding: .month, value: -1, to: currentDate)!
-    }
-    
     func nextMonth() {
-        currentDate = Calendar.current.date(byAdding: .month, value: 1, to: currentDate)!
-    }
+            guard let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: currentDate) else { return }
+            currentDate = nextMonth
+        }
+        
+        func previousMonth() {
+            guard let previousMonth = Calendar.current.date(byAdding: .month, value: -1, to: currentDate) else { return }
+            currentDate = previousMonth
+        }
 
     // MARK: - History Management
     
@@ -317,13 +320,19 @@ struct DayView: View {
 struct CalendarView: View {
     @ObservedObject var viewModel = CalendarViewModel()
     @State private var showDeleteEventsView = false
-    
+    @State private var transitionDirection: Edge = .trailing
+
     var body: some View {
         NavigationStack {
             VStack {
-                
-                CalendarGrid(viewModel: viewModel)
-                
+                ZStack {
+                    CalendarGrid(viewModel: viewModel, transitionDirection: $transitionDirection)
+                        .id(viewModel.currentDate) // Уникальный идентификатор для анимации
+                        .transition(.asymmetric(insertion: .move(edge: transitionDirection), removal: .move(edge: transitionDirection == .trailing ? .leading : .trailing)))
+                        .animation(.easeInOut(duration: 0.5), value: viewModel.currentDate)
+                        
+                }
+
                 Spacer()
                 
                 LazyVStack {
@@ -333,9 +342,6 @@ struct CalendarView: View {
                             .animation(.easeInOut, value: viewModel.selectedDate)
                     }
                 }
-                
-                
-                
             }
             .padding(.horizontal)
             .padding(.bottom, 55)
@@ -343,11 +349,13 @@ struct CalendarView: View {
                 DragGesture()
                     .onEnded { value in
                         if value.translation.width < 0 {
-                            withAnimation (.interactiveSpring(duration: 0.3)){
+                            transitionDirection = .trailing
+                            withAnimation(.easeInOut(duration: 0.5)) {
                                 viewModel.nextMonth()
                             }
                         } else if value.translation.width > 0 {
-                            withAnimation (.interactiveSpring(duration: 0.3)){
+                            transitionDirection = .leading
+                            withAnimation(.easeInOut(duration: 0.5)) {
                                 viewModel.previousMonth()
                             }
                         }
@@ -361,7 +369,7 @@ struct CalendarView: View {
             }
             .background(Color.back)
             .navigationBarBackButtonHidden(false)
-            .navigationBarTitle("",displayMode: .inline)
+            .navigationBarTitle("", displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     VStack {
@@ -372,14 +380,9 @@ struct CalendarView: View {
                             .font(.caption2)
                     }
                 }
-                
             }
-            //        .padding(.horizontal, 200)
-            //            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
-            
         }
-    
     }
     
     var currentMonthYear: String {
@@ -392,6 +395,7 @@ struct CalendarView: View {
 
 struct CalendarGrid: View {
     @ObservedObject var viewModel: CalendarViewModel
+    @Binding var transitionDirection: Edge
     
     var body: some View {
         let days = generateDays()
@@ -399,10 +403,12 @@ struct CalendarGrid: View {
         return VStack (spacing: 1){
             HStack {
                 Button(action: {
-                    withAnimation (.interactiveSpring(duration: 0.3)){
+                    transitionDirection = .leading
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        
                         viewModel.previousMonth()
+                        
                     }
-                    
                 }) {
                     Image(systemName: "chevron.left")
                         .resizable()
@@ -416,10 +422,11 @@ struct CalendarGrid: View {
                     .bold()
                 Spacer()
                 Button(action: {
-                    withAnimation (.interactiveSpring(duration: 0.3)){
+                    transitionDirection = .trailing
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        
                         viewModel.nextMonth()
                     }
-                    
                 }) {
                     Image(systemName: "chevron.right")
                         .resizable()
@@ -442,15 +449,11 @@ struct CalendarGrid: View {
                         .onTapGesture {
                             viewModel.selectedDate = date
                         }
-                    
                 }
-            
-                
             }
-            
         }
         .padding()
-        .background(Color.grayButton) // Прямоугольник с серым фоном
+        .background(Color.grayButton)
         .cornerRadius(10)
         .shadow(color: .shadowGrayRectangle, radius: 0.5)
         .sheet(isPresented: $viewModel.showEventSheet) {
