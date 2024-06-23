@@ -172,8 +172,7 @@ struct Postanovlenie59Alg3View: View {
                             }
                         }
                     Spacer(minLength: 10)
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
                         VStack  {
                             MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом со стойким подъемом сегмента ST")).buildBlue59Text(isTextExpanded: isTextExpanded14)
                                 .onTapGesture {
@@ -211,11 +210,16 @@ struct Postanovlenie59Alg3View: View {
                             }
                             
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
+                    
                         VStack  {
                             MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом без подъема сегмента ST")).buildBlue59Text(isTextExpanded: isTextExpanded15)
                                 .onTapGesture {
@@ -253,7 +257,13 @@ struct Postanovlenie59Alg3View: View {
                             }
                             
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                    
                     
                     Spacer(minLength: 10)
                     ZStack {

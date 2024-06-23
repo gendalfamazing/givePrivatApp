@@ -798,7 +798,10 @@ class MyViewBuilder: ViewBuilder1 {
             .background(Color.grayButton)
             .font(.subheadline)
             .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+            )
             
 //            .shadow(color: .shadow, radius: 2)
             
@@ -807,61 +810,61 @@ class MyViewBuilder: ViewBuilder1 {
     func buildDualBlockBlueGray(isTextExpanded: Bool ) -> some View {
         
 //        var isTextExpanded1: Bool = isTextExpanded
-        return ZStack {
-            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+        return VStack (spacing: 1) {
+            HStack {
+                title
+                    .padding(.leading, 7)
+                Spacer()
+                Spacer()
+                Image(systemName: ("chevron.down"))
+                    .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
+                //                        .resizable()
+                //                        .frame(width: 20, height: 20)
+                    .opacity(0.3)
+                //                        .multilineTextAlignment(.center)
+                    .padding(.trailing, 7)
+            }
+            .padding(7.0)
+            //                .lineLimit(2)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .fontWeight(.semibold)
+            .frame(minHeight: 49)
+            .frame(minWidth: 49)
+            .modifier(ThemeBlueColorModifier())
+            //                .background(Color.blueButton)
+            .background(isTextExpanded ? Color.toggle : Color.blueButton)
+            .font(.subheadline)
+            .cornerRadius(10)
             
-            VStack (spacing: 1) {
-                HStack {
-                    title
-                        .padding(.leading, 7)
-                    Spacer()
-                    Spacer()
-                    Image(systemName: ("chevron.down"))
-                        .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
-//                        .resizable()
-//                        .frame(width: 20, height: 20)
-                        .opacity(0.3)
-//                        .multilineTextAlignment(.center)
-                        .padding(.trailing, 7)
+            if isTextExpanded{
+                VStack {
+                    content
+                        .textSelection(.enabled)
                 }
-                .padding(7.0)
-//                .lineLimit(2)
+                .padding(10)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
-                .fontWeight(.semibold)
-                .frame(minHeight: 49)
-                .frame(minWidth: 49)
-                .modifier(ThemeBlueColorModifier())
-//                .background(Color.blueButton)
-                .background(isTextExpanded ? Color.toggle : Color.blueButton)
+                .frame(minHeight: 20)
+                .modifier(ThemeGrayColorModifier())
                 .font(.subheadline)
                 .cornerRadius(10)
-                    
-                if isTextExpanded{
-                    VStack {
-                        content
-                            .textSelection(.enabled)
-                    }
-                    .padding(10)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(minHeight: 20)
-                    .modifier(ThemeGrayColorModifier())
-                    .font(.subheadline)
-                    .cornerRadius(10)
-                }
             }
         }
+        .background(Color.grayButton)
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+        )
+        
         
     }
     
     func buildDualBlockBlueGrayLowLevel(isTextExpanded: Bool ) -> some View {
         
 //        var isTextExpanded1: Bool = isTextExpanded
-        return ZStack {
-            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-            
-            VStack (spacing: 1) {
+        return VStack (spacing: 1) {
                 HStack {
                     title
                         .padding(.leading, 7)
@@ -902,7 +905,13 @@ class MyViewBuilder: ViewBuilder1 {
                     .cornerRadius(10)
                 }
             }
-        }
+            .background(Color.grayButton)
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+            )
+        
         
     }
     

@@ -44,6 +44,8 @@ class CalendarViewModel: ObservableObject {
     @Published var selectedEvent: CalendarEvent?
     @Published var showEventSheet = false
     @Published var animationFlag = false
+    @Published var isShowingCurrentMonth: Bool = true
+    @Published var transition: AnyTransition = .opacity
 
     init() {
         loadEvents()
@@ -103,14 +105,16 @@ class CalendarViewModel: ObservableObject {
         return events.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
     }
     
-    func nextMonth() {
-            guard let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: currentDate) else { return }
-            currentDate = nextMonth
+    func previousMonth() {
+            guard let newDate = Calendar.current.date(byAdding: .month, value: -1, to: currentDate) else { return }
+            currentDate = newDate
+            isShowingCurrentMonth.toggle()
         }
         
-        func previousMonth() {
-            guard let previousMonth = Calendar.current.date(byAdding: .month, value: -1, to: currentDate) else { return }
-            currentDate = previousMonth
+        func nextMonth() {
+            guard let newDate = Calendar.current.date(byAdding: .month, value: 1, to: currentDate) else { return }
+            currentDate = newDate
+            isShowingCurrentMonth.toggle()
         }
 
     // MARK: - History Management
@@ -222,7 +226,10 @@ struct DayView: View {
                             .fill(Color.grayButton)
                             .frame(width: 40, height: 40)
                             .cornerRadius(6)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 6)
+                                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                            )
                             .zIndex(1)
                 }
                     
@@ -320,16 +327,14 @@ struct DayView: View {
 struct CalendarView: View {
     @ObservedObject var viewModel = CalendarViewModel()
     @State private var showDeleteEventsView = false
-    @State private var transitionDirection: Edge = .trailing
-
+    @State private var previousMonth: Bool = true
+    
     var body: some View {
         NavigationStack {
             VStack {
                 ZStack {
-                    CalendarGrid(viewModel: viewModel, transitionDirection: $transitionDirection)
-                        .id(viewModel.currentDate) // Уникальный идентификатор для анимации
-                        .transition(.asymmetric(insertion: .move(edge: transitionDirection), removal: .move(edge: transitionDirection == .trailing ? .leading : .trailing)))
-                        .animation(.easeInOut(duration: 0.5), value: viewModel.currentDate)
+                    CalendarGrid(viewModel: viewModel)
+                        
                         
                 }
 
@@ -345,22 +350,7 @@ struct CalendarView: View {
             }
             .padding(.horizontal)
             .padding(.bottom, 55)
-            .gesture(
-                DragGesture()
-                    .onEnded { value in
-                        if value.translation.width < 0 {
-                            transitionDirection = .trailing
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                viewModel.nextMonth()
-                            }
-                        } else if value.translation.width > 0 {
-                            transitionDirection = .leading
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                viewModel.previousMonth()
-                            }
-                        }
-                    }
-            )
+            
             .sheet(isPresented: $showDeleteEventsView) {
                 DeleteEventsView(viewModel: viewModel, isPresented: $showDeleteEventsView)
             }
@@ -395,7 +385,7 @@ struct CalendarView: View {
 
 struct CalendarGrid: View {
     @ObservedObject var viewModel: CalendarViewModel
-    @Binding var transitionDirection: Edge
+    @State private var previousMonth: Bool = true
     
     var body: some View {
         let days = generateDays()
@@ -403,11 +393,9 @@ struct CalendarGrid: View {
         return VStack (spacing: 1){
             HStack {
                 Button(action: {
-                    transitionDirection = .leading
+                    previousMonth = false
                     withAnimation(.easeInOut(duration: 0.5)) {
-                        
                         viewModel.previousMonth()
-                        
                     }
                 }) {
                     Image(systemName: "chevron.left")
@@ -422,9 +410,8 @@ struct CalendarGrid: View {
                     .bold()
                 Spacer()
                 Button(action: {
-                    transitionDirection = .trailing
+                    previousMonth = true
                     withAnimation(.easeInOut(duration: 0.5)) {
-                        
                         viewModel.nextMonth()
                     }
                 }) {
@@ -443,21 +430,56 @@ struct CalendarGrid: View {
                 .background(Color.divider)
                 .padding(.horizontal, 5)
                 .padding(.bottom, 5)
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 1) {
-                ForEach(days, id: \.self) { date in
-                    DayView(date: date, events: viewModel.events(for: date), viewModel: viewModel)
-                        .onTapGesture {
-                            viewModel.selectedDate = date
-                        }
+            
+            ZStack {
+                if viewModel.isShowingCurrentMonth{
+                    monthView(days: days)
+                        .transition(.opacity.combined(with: .move(edge: previousMonth == false ? .trailing : .leading)))
+                } else {
+                    monthView(days: days)
+                        .transition(.opacity.combined(with: .move(edge: previousMonth == true ? .leading : .trailing)))
                 }
             }
+            .gesture(
+                DragGesture()
+                    .onEnded { value in
+                        if value.translation.width < 0 {
+                            previousMonth = true
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                viewModel.nextMonth()
+                            }
+                                
+                            
+                        } else if value.translation.width > 0 {
+                            previousMonth = false
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                viewModel.previousMonth()
+                            }
+                            
+                        }
+                    }
+            )
         }
         .padding()
         .background(Color.grayButton)
         .cornerRadius(10)
-        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+        )
         .sheet(isPresented: $viewModel.showEventSheet) {
             EventCreationSheet(viewModel: viewModel)
+        }
+    }
+    
+    func monthView(days: [Date]) -> some View {
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 1) {
+            ForEach(days, id: \.self) { date in
+                DayView(date: date, events: viewModel.events(for: date), viewModel: viewModel)
+                    .onTapGesture {
+                        viewModel.selectedDate = date
+                    }
+            }
         }
     }
     
@@ -476,7 +498,7 @@ struct CalendarGrid: View {
                     days.append(date)
                 }
             }
-            days.reverse() // Исправление порядка дней предыдущего месяца
+            days.reverse()
         }
         
         // Добавление дней текущего месяца
@@ -500,6 +522,7 @@ struct CalendarGrid: View {
         
         return days
     }
+    
     var currentMonthYear: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "LLLL yyyy"

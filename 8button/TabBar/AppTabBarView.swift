@@ -38,7 +38,7 @@ struct AppTabBarView: View {
                 .tabBarItem(tab: .child, selection: $tabSelection)
             
             
-                CalendarView()
+            CalendarView()
             
                 .id(organizerPath)
                 .tabBarItem(tab: .organizer, selection: $tabSelection)

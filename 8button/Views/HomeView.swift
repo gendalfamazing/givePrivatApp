@@ -30,7 +30,10 @@ struct HomeView: View {
                                 .padding(.vertical, 6.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             
                             Spacer()
@@ -53,7 +56,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     
                     
@@ -68,7 +74,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -90,7 +99,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     
                     NavigationLink(destination: ScalesTables()) {
@@ -104,7 +116,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -126,7 +141,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     NavigationLink(destination: StudMaterials()) {
                         HStack {
@@ -139,7 +157,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -161,7 +182,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     NavigationLink(destination: InfusionRateCalculatorView()) {
                         HStack {
@@ -174,7 +198,10 @@ struct HomeView: View {
                                 .padding(.vertical, 7.5)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -196,7 +223,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     NavigationLink(destination: AkusherskoePosobie()) {
                         HStack {
@@ -209,7 +239,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -231,7 +264,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     NavigationLink(destination: AtlasECG()) {
                         HStack {
@@ -244,7 +280,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -266,7 +305,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
 //                    
                     NavigationLink(destination: FastChildDoses()) {
@@ -280,7 +322,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -302,7 +347,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     
                     NavigationLink(destination: ShockIndexTable()) {
@@ -316,7 +364,10 @@ struct HomeView: View {
                                 .padding(.vertical, 8.0)
                                 .background(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
                             Spacer()
@@ -338,7 +389,10 @@ struct HomeView: View {
                         .frame(minHeight: 50)
                         .modifier(ThemeTitleBlueColorModifier())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                     }
                     
                     

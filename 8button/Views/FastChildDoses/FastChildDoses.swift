@@ -2027,27 +2027,139 @@ struct DataProvider {
 
 struct FastChildDoses: View {
     @Environment(\.colorScheme) var colorScheme
-        @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-        @State private var selectedChapter: Chapter? = nil
-        @State private var selectedDisease: Disease? = nil
-        @State private var selectedTreatment: Treatment? = nil
-        @State private var showDiseasePicker = false
-        @State private var showTreatmentPicker = false
-        @State private var showTreatmentDescription = false
-        @State private var isRotated1 = false
-        @State private var isRotated2 = false
-        @State private var isRotated3 = false
-        var body: some View {
-            
-            ScrollView {
-                Spacer()
-                LazyVStack (spacing: 1){
-                    ZStack {
-                        Picker("Выберите главу", selection: $selectedChapter) {
-                            Text(UIDevice.current.userInterfaceIdiom == .pad ?  "Выберите главу                                                                                                                                                                                                                " : "Выберите главу                                                    ").tag(Chapter?.none)
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var selectedChapter: Chapter? = nil
+    @State private var selectedDisease: Disease? = nil
+    @State private var selectedTreatment: Treatment? = nil
+    @State private var showDiseasePicker = false
+    @State private var showTreatmentPicker = false
+    @State private var showTreatmentDescription = false
+    @State private var isRotated1 = false
+    @State private var isRotated2 = false
+    @State private var isRotated3 = false
+    var body: some View {
+        
+        ScrollView {
+            Spacer()
+            FastChildView()
+            .textSelection(.enabled)
+            .padding(.horizontal, 10)
+            .padding(.bottom, 55)
+        }
+        .background(Color.back)
+        .navigationBarBackButtonHidden(false)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Детские дозировки")
+                        .font(.headline)
+                        .bold()
+                    Text("""
+                            «Быстрый поиск дозировки за несколько кликов»
+                            """)
+                    .font(.caption2)
+                }
+            }
+        }
+    }
+ 
+}
+
+
+#Preview {
+    FastChildDoses()
+}
+
+struct FastChildView: View {
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var selectedChapter: Chapter? = nil
+    @State private var selectedDisease: Disease? = nil
+    @State private var selectedTreatment: Treatment? = nil
+    @State private var showDiseasePicker = false
+    @State private var showTreatmentPicker = false
+    @State private var showTreatmentDescription = false
+    @State private var isRotated1 = false
+    @State private var isRotated2 = false
+    @State private var isRotated3 = false
+    var body: some View {
+       
+            LazyVStack (spacing: 1){
+                ZStack {
+                    Picker("Выберите главу", selection: $selectedChapter) {
+                        Text(UIDevice.current.userInterfaceIdiom == .pad ?  "Выберите главу                                                                                                                                                                                                                " : "Выберите главу                                                    ").tag(Chapter?.none)
+                            .lineLimit(2)
+                        ForEach(DataProvider.chapters) { chapter in
+                            Text(UIDevice.current.userInterfaceIdiom == .pad ? "\(chapter.name)                                                                                                                                                                                                                " : "\(chapter.name)                                                    ").tag(chapter as Chapter?)
                                 .lineLimit(2)
-                            ForEach(DataProvider.chapters) { chapter in
-                                Text(UIDevice.current.userInterfaceIdiom == .pad ? "\(chapter.name)                                                                                                                                                                                                                " : "\(chapter.name)                                                    ").tag(chapter as Chapter?)
+                        }
+                    }
+                    .padding(7.0)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .fontWeight(.semibold)
+                    .frame(minHeight: 49)
+                    .frame(minWidth: 49)
+                    .modifier(ThemeBlueColorModifier())
+                    .font(.subheadline)
+                    .cornerRadius(10)
+                    .pickerStyle(MenuPickerStyle())
+                    .opacity(0.011)
+                    .onChange(of: selectedChapter) { newChapter in
+                        withAnimation (.easeInOut) {
+                            selectedDisease = nil
+                            selectedTreatment = nil
+                            showDiseasePicker = newChapter != nil
+                            showTreatmentPicker = false
+                            showTreatmentDescription = false
+                            isRotated1 = true
+                            if selectedChapter == nil {
+                                isRotated1 = false
+                                isRotated2 = false
+                                isRotated3 = false
+                            }
+                        }
+                    }
+                    HStack {
+                        Spacer()
+                        Text(selectedChapter?.name ?? "Выберите главу")
+                            .padding(.leading, 7)
+                        Spacer()
+                        Image(systemName: (isRotated1 ? "chevron.up.chevron.down" : "chevron.up.chevron.down"))
+                            .rotationEffect(.degrees(isRotated1 ? -180 : 0))
+                        //                        .resizable()
+                        //                        .frame(width: 20, height: 20)
+                            .opacity(0.3)
+                        //                        .multilineTextAlignment(.center)
+                            .padding(.trailing, 7)
+                    }
+                    
+                    .padding(7.0)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .fontWeight(.semibold)
+                    .frame(minHeight: 49)
+                    .frame(minWidth: 49)
+                    
+                    .modifier(ThemeBlueColorModifier())
+                    .background(selectedChapter == nil ? Color.blueButton : Color.toggleChild)
+                    .font(.subheadline)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                    )
+                    .allowsHitTesting(false)
+                    
+                }.zIndex(3)
+                Spacer(minLength: selectedChapter == nil ? -6 : 3 )
+                if showDiseasePicker, let chapter = selectedChapter {
+                    ZStack {
+                        Picker("Выберите заболевание", selection: $selectedDisease) {
+                            Text(UIDevice.current.userInterfaceIdiom == .pad ?  "Выберите заболевание                                                                                                                                                                                                                " : "Выберите заболевание                                                    ").tag(Disease?.none)
+                                .lineLimit(2)
+                            ForEach(chapter.diseases) { disease in
+                                Text(UIDevice.current.userInterfaceIdiom == .pad ? "\(disease.name)                                                                                                                                                                                                                " : "\(disease.name)                                                    ").tag(disease as Disease?)
                                     .lineLimit(2)
                             }
                         }
@@ -2058,229 +2170,155 @@ struct FastChildDoses: View {
                         .frame(minHeight: 49)
                         .frame(minWidth: 49)
                         .modifier(ThemeBlueColorModifier())
+                        .background(selectedDisease == nil ? Color.blueButton : Color.toggleChild)
                         .font(.subheadline)
                         .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                         .pickerStyle(MenuPickerStyle())
                         .opacity(0.011)
-                        .onChange(of: selectedChapter) { newChapter in
-                            withAnimation (.easeInOut) {
-                                selectedDisease = nil
+                        .onChange(of: selectedDisease) { newDisease in
+                            withAnimation (.easeInOut){
                                 selectedTreatment = nil
-                                showDiseasePicker = newChapter != nil
-                                showTreatmentPicker = false
+                                showTreatmentPicker = newDisease != nil
                                 showTreatmentDescription = false
-                                isRotated1 = true
-                                if selectedChapter == nil {
-                                    isRotated1 = false
+                                isRotated2 = true
+                                if selectedDisease == nil {
                                     isRotated2 = false
                                     isRotated3 = false
                                 }
                             }
                         }
+                        .transition(.move(edge: .top))
                         HStack {
                             Spacer()
-                            Text(selectedChapter?.name ?? "Выберите главу")
+                            Text(selectedDisease?.name ?? "Выберите заболевание")
                                 .padding(.leading, 7)
                             Spacer()
-                            Image(systemName: (isRotated1 ? "chevron.up.chevron.down" : "chevron.up.chevron.down"))
-                                .rotationEffect(.degrees(isRotated1 ? -180 : 0))
-        //                        .resizable()
-        //                        .frame(width: 20, height: 20)
+                            Image(systemName: (isRotated2 ? "chevron.up.chevron.down" : "chevron.up.chevron.down"))
+                                .rotationEffect(.degrees(isRotated2 ? -180 : 0))
+                            //                        .resizable()
+                            //                        .frame(width: 20, height: 20)
                                 .opacity(0.3)
-        //                        .multilineTextAlignment(.center)
+                            //                        .multilineTextAlignment(.center)
                                 .padding(.trailing, 7)
                         }
                         
-                            .padding(7.0)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .fontWeight(.semibold)
-                            .frame(minHeight: 49)
-                            .frame(minWidth: 49)
-                            
-                            .modifier(ThemeBlueColorModifier())
-                            .background(selectedChapter == nil ? Color.blueButton : Color.toggle)
-                            .font(.subheadline)
-                            .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                            .allowsHitTesting(false)
-                            
-                    }.zIndex(3)
-                    Spacer(minLength: selectedChapter == nil ? -6 : 3 )
-                    if showDiseasePicker, let chapter = selectedChapter {
-                        ZStack {
-                            Picker("Выберите заболевание", selection: $selectedDisease) {
-                                Text(UIDevice.current.userInterfaceIdiom == .pad ?  "Выберите заболевание                                                                                                                                                                                                                " : "Выберите заболевание                                                    ").tag(Disease?.none)
-                                    .lineLimit(2)
-                                ForEach(chapter.diseases) { disease in
-                                    Text(UIDevice.current.userInterfaceIdiom == .pad ? "\(disease.name)                                                                                                                                                                                                                " : "\(disease.name)                                                    ").tag(disease as Disease?)
-                                        .lineLimit(2)
-                                }
-                            }
-                            .padding(7.0)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .fontWeight(.semibold)
-                            .frame(minHeight: 49)
-                            .frame(minWidth: 49)
-                            .modifier(ThemeBlueColorModifier())
-                            .background(selectedDisease == nil ? Color.blueButton : Color.toggle)
-                            .font(.subheadline)
-                            .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                            .pickerStyle(MenuPickerStyle())
-                            .opacity(0.011)
-                            .onChange(of: selectedDisease) { newDisease in
-                                withAnimation (.easeInOut){
-                                    selectedTreatment = nil
-                                    showTreatmentPicker = newDisease != nil
-                                    showTreatmentDescription = false
-                                    isRotated2 = true
-                                    if selectedDisease == nil {
-                                        isRotated2 = false
-                                        isRotated3 = false
-                                    }
-                                }
-                            }
-                            .transition(.move(edge: .top))
-                            HStack {
-                                Spacer()
-                                Text(selectedDisease?.name ?? "Выберите заболевание")
-                                    .padding(.leading, 7)
-                                Spacer()
-                                Image(systemName: (isRotated2 ? "chevron.up.chevron.down" : "chevron.up.chevron.down"))
-                                    .rotationEffect(.degrees(isRotated2 ? -180 : 0))
-            //                        .resizable()
-            //                        .frame(width: 20, height: 20)
-                                    .opacity(0.3)
-            //                        .multilineTextAlignment(.center)
-                                    .padding(.trailing, 7)
-                            }
-                            
-                                .padding(7.0)
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .fontWeight(.semibold)
-                                .frame(minHeight: 49)
-                                .frame(minWidth: 49)
-                                .modifier(ThemeBlueColorModifier())
-                                .background(selectedDisease == nil ? Color.blueButton : Color.toggle)
-                                .font(.subheadline)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: selectedChapter == nil ? 0 : 0.5)
-                                .allowsHitTesting(false)
+                        .padding(7.0)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .frame(minWidth: 49)
+                        .modifier(ThemeBlueColorModifier())
+                        .background(selectedDisease == nil ? Color.blueButton : Color.toggleChild)
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: selectedChapter == nil ? 0 : 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .allowsHitTesting(false)
                         
-                        }.zIndex(2).transition(.move(edge: .top))
-                    }
-                    Spacer(minLength: selectedDisease == nil ? -6 : 3 )
-                    if showTreatmentPicker, let disease = selectedDisease {
-                        ZStack {
-                            Picker("Выберите препарат", selection: $selectedTreatment) {
-                                Text(UIDevice.current.userInterfaceIdiom == .pad ?  "Выберите препарат                                                                                                                                                                                                                " : "Выберите препарат                                                    ").tag(Treatment?.none)
+                    }.zIndex(2).transition(.move(edge: .top))
+                }
+                Spacer(minLength: selectedDisease == nil ? -6 : 3 )
+                if showTreatmentPicker, let disease = selectedDisease {
+                    ZStack {
+                        Picker("Выберите препарат", selection: $selectedTreatment) {
+                            Text(UIDevice.current.userInterfaceIdiom == .pad ?  "Выберите препарат                                                                                                                                                                                                                " : "Выберите препарат                                                    ").tag(Treatment?.none)
+                                .lineLimit(2)
+                            ForEach(disease.treatments) { treatment in
+                                Text(UIDevice.current.userInterfaceIdiom == .pad ? "\(treatment.name)                                                                                                                                                                                                                " : "\(treatment.name)                                                                      ").tag(treatment as Treatment?)
                                     .lineLimit(2)
-                                ForEach(disease.treatments) { treatment in
-                                    Text(UIDevice.current.userInterfaceIdiom == .pad ? "\(treatment.name)                                                                                                                                                                                                                " : "\(treatment.name)                                                                      ").tag(treatment as Treatment?)
-                                        .lineLimit(2)
-                                }
                             }
-                            .padding(7.0)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .fontWeight(.semibold)
-                            .frame(minHeight: 49)
-                            .frame(minWidth: 49)
-                            .modifier(ThemeBlueColorModifier())
-                            .background(selectedTreatment == nil ? Color.blueButton : Color.toggle)
-                            .font(.subheadline)
-                            .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                            .pickerStyle(MenuPickerStyle())
-                            .opacity(0.011)
-                            .onChange(of: selectedTreatment) { newTreatment in
-                                withAnimation {
-                                    showTreatmentDescription = newTreatment != nil
-                                    isRotated3 = true
-                                    if selectedTreatment == nil {
-                                        isRotated3 = false
-                                    }
-                                }
-                            }
-                            
-                            HStack {
-                                Spacer()
-                                Text(selectedTreatment?.name ?? "Выберите препарат")
-                                    .padding(.leading, 7)
-                                Spacer()
-                                Image(systemName: (isRotated3 ? "chevron.up.chevron.down" : "chevron.up.chevron.down"))
-                                    .rotationEffect(.degrees(isRotated3 ? -180 : 0))
-            //                        .resizable()
-            //                        .frame(width: 20, height: 20)
-                                    .opacity(0.3)
-            //                        .multilineTextAlignment(.center)
-                                    .padding(.trailing, 7)
-                            }
-                            
-                                .padding(7.0)
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .fontWeight(.semibold)
-                                .frame(minHeight: 49)
-                                .frame(minWidth: 49)
-                                .modifier(ThemeBlueColorModifier())
-                                .background(selectedTreatment == nil ? Color.blueButton : Color.toggle)
-                                .font(.subheadline)
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: selectedDisease == nil ? 0 : 0.5)
-                                .allowsHitTesting(false)
-                        
-                        }.zIndex(1).transition(.move(edge: .top))
-                        Spacer(minLength: selectedTreatment == nil ? -6 : 3 )
-                        if showTreatmentDescription, let treatment = selectedTreatment {
-                            
-                            VStack {
-                                Text(LocalizedStringKey(treatment.description))
-                                    .textSelection(.enabled)
-                                    .padding(10)
-                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    .fixedSize(horizontal: false, vertical: false)
-                                    .frame(minHeight: 50)
-                                    .modifier(ThemeGrayColorModifier())
-                                    .font(.subheadline)
-                                    .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: selectedDisease == nil ? 0 : 0.5)
-                                    .transition(.opacity)
-                                    
-                            }.zIndex(0)
-                                
                         }
+                        .padding(7.0)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .frame(minWidth: 49)
+                        .modifier(ThemeBlueColorModifier())
+                        .background(selectedTreatment == nil ? Color.blueButton : Color.toggleChild)
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .pickerStyle(MenuPickerStyle())
+                        .opacity(0.011)
+                        .onChange(of: selectedTreatment) { newTreatment in
+                            withAnimation {
+                                showTreatmentDescription = newTreatment != nil
+                                isRotated3 = true
+                                if selectedTreatment == nil {
+                                    isRotated3 = false
+                                }
+                            }
+                        }
+                        
+                        HStack {
+                            Spacer()
+                            Text(selectedTreatment?.name ?? "Выберите препарат")
+                                .padding(.leading, 7)
+                            Spacer()
+                            Image(systemName: (isRotated3 ? "chevron.up.chevron.down" : "chevron.up.chevron.down"))
+                                .rotationEffect(.degrees(isRotated3 ? -180 : 0))
+                            //                        .resizable()
+                            //                        .frame(width: 20, height: 20)
+                                .opacity(0.3)
+                            //                        .multilineTextAlignment(.center)
+                                .padding(.trailing, 7)
+                        }
+                        
+                        .padding(7.0)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .frame(minWidth: 49)
+                        .modifier(ThemeBlueColorModifier())
+                        .background(selectedTreatment == nil ? Color.blueButton : Color.toggleChild)
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: selectedChapter == nil ? 0 : 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .allowsHitTesting(false)
+                        
+                    }.zIndex(1).transition(.move(edge: .top))
+                    Spacer(minLength: selectedTreatment == nil ? -6 : 3 )
+                    if showTreatmentDescription, let treatment = selectedTreatment {
+                        
+                        VStack {
+                            Text(LocalizedStringKey(treatment.description))
+                                .textSelection(.enabled)
+                                .padding(10)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .fixedSize(horizontal: false, vertical: false)
+                                .frame(minHeight: 50)
+                                .modifier(ThemeGrayColorModifier())
+                                .font(.subheadline)
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: selectedChapter == nil ? 0 : 0.2) // Устанавливаем цвет и ширину границы
+                                )
+                                .transition(.opacity)
                             
+                        }.zIndex(0)
+                        
                     }
                     
-                    Spacer()
                 }
-                .textSelection(.enabled)
-                .padding(.horizontal, 10)
-                .padding(.bottom, 55)
-            }
-            .background(Color.back)
-            .navigationBarBackButtonHidden(false)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack {
-                        Text("Детские дозировки")
-                            .font(.headline)
-                            .bold()
-                        Text("""
-                            «Быстрый поиск дозировки за несколько кликов»
-                            """)
-                        .font(.caption2)
-                    }
-                }
+                
+                Spacer()
             }
         }
     }
 
-
-#Preview {
-    FastChildDoses()
-}
