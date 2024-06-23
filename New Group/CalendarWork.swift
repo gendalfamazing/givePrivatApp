@@ -738,7 +738,7 @@ struct EventCreationSheet: View {
                             Picker("Повторять каждые", selection: $repeatInterval) {
                                 Text("Без повторения").tag(1)
                                 ForEach(availableIntervals, id: \.self) { interval in
-                                    Text(interval == 1 ? "Каждый день" : "Каждый \(interval) день").tag(interval)
+                                    Text(interval == 1 ? "Каждый день" : interval == 2 ? "Смена через сутки" : interval == 3 ? "Смена через двое" : interval == 4 ? "Смена через трое" : "").tag(interval)
                                 }
                             }
                             .pickerStyle(WheelPickerStyle())
@@ -849,30 +849,29 @@ struct EventCreationSheet: View {
                             HStack (alignment: .center){
                                 Text(template.type.rawValue)
                                     .frame(width: 50)
+                                    .padding(.leading, 10)
                                 Text("\(String(format: "%02d", Calendar.current.component(.hour, from: template.startTime))):\(String(format: "%02d", Calendar.current.component(.minute, from: template.startTime)))")
                                     .frame(width: 50)
                                 if template.repeatInterval! == 1 {
                                     Text("Каждый день")
-                                        .frame(width: 150)
                                 } else {
-                                    Text("\(template.repeatInterval! == 0 ? "Без повторения" : "Каждый \(template.repeatInterval!) день")")
-                                        .frame(width: 150)
+                                    Text("\(template.repeatInterval! == 0 ? "Без повторения" : template.repeatInterval! == 2 ? "Смена через сутки" : template.repeatInterval! == 3 ? "Смена через двое" : template.repeatInterval! == 4 ? "Смена через трое" : "")")
                                 }
-                                
                             }
-                            .padding()
+                            .padding(.vertical, 15)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .fixedSize(horizontal: false, vertical: true)
                             .background(selectedTemplateIndex == index ? Color.gray.opacity(0.2) : Color.clear)
                             .cornerRadius(8)
                         }
                         .buttonStyle(PlainButtonStyle())
-                        Spacer()
                         Button(action: {
                             viewModel.removeEventFromHistory(template)
                         }) {
                             Image(systemName: "trash")
                                 .foregroundColor(.red)
                         }
-                        Spacer()
+                        .padding(.horizontal, 10)
                     }
                     .background(
                         template.type.rawValue.contains("День") ? .yellow.opacity(0.5) :

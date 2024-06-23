@@ -353,47 +353,6 @@ struct HomeView: View {
                         )
                     }
                     
-                    NavigationLink(destination: ShockIndexTable()) {
-                        HStack {
-                            Image(systemName: "doc.text.magnifyingglass")
-                                .resizable()
-                                .frame(width: 18, height: 24)
-                            //                                .padding(.horizontal)
-                                .font(.caption2)
-                                .padding(.horizontal, 11.0)
-                                .padding(.vertical, 8.0)
-                                .background(Color.titleNumber)
-                                .cornerRadius(10)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
-                                )
-                                .foregroundColor(Color.titleNumberForeground)
-                            Spacer()
-                            Spacer()
-                            Text("Тест проверка оборудования")
-                                .padding(.horizontal, 3.0)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                            Spacer()
-                            Spacer()
-                            Image(systemName: ("chevron.right"))
-                                .opacity(0.3)
-                                .padding(.trailing, 15)
-                                .padding(.leading, 10)
-                        }
-                        .padding(5.0)
-                        //        .lineLimit(2)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(minHeight: 50)
-                        .modifier(ThemeTitleBlueColorModifier())
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
-                        )
-                    }
                     
                     
                 }
