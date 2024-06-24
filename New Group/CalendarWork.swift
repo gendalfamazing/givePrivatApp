@@ -192,7 +192,7 @@ struct DayView: View {
                             .cornerRadius(6)
                             .zIndex(1)
                         RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.green.opacity(0.5))
+                            .fill(Color.gray.opacity(0.5))
                             .frame(width: 45, height: 45)
                         
                         
@@ -212,7 +212,7 @@ struct DayView: View {
                             .cornerRadius(6)
                             .zIndex(1)
                         RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.gray.opacity(0.5))
+                            .fill(Color.green.opacity(0.5))
                             .frame(width: 45, height: 45)
                     }
                 } else if !events.isEmpty {
@@ -554,61 +554,71 @@ struct EventsView: View {
     let date: Date
     let events: [CalendarEvent]
     @ObservedObject var viewModel: CalendarViewModel
-    @State private var showContextMenu = false
+    @State private var showActionSheet = false
     @State private var showDeleteEventsView = false
+    
     var body: some View {
         VStack {
             if events.isEmpty {
-                Text("\(formattedDate)")
+                Text("\(formattedDate):")
                     .font(.headline)
+                HStack {
+                    Text("Добавить смену")
+                    Image(systemName: "plus")
+                }
+                .frame(minWidth: 160)
+                .padding(15)
+                .background(Color.gray.opacity(0.25))
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+                )
             } else {
                 Text("\(formattedDate):")
                     .font(.headline)
                 ForEach(events) { event in
-                    Text("\(event.type.rawValue) - \(formattedTime(for: event.startTime))")
-                        .padding()
+                    HStack {
+                        Text("\(event.type.rawValue) - \(formattedTime(for: event.startTime))")
+                            .padding(15)
+                            .padding(.trailing, -15)
+                        Image(systemName: "square.and.pencil")
+                            .padding(.trailing, 15)
+                            .padding(.bottom, 3)
+                        }
+                        .frame(minWidth: 190)
                         .background(event.type.color.opacity(0.5))
                         .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+                        )
                 }
             }
-            
         }
         .padding()
         .background(Color.grayButton)
         .cornerRadius(10)
-        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+        )
         .padding(1)
         .cornerRadius(10)
-        .contextMenu{
+        .onTapGesture {
             if events.isEmpty {
-                            Button(action: {
-                                viewModel.selectedDate = date
-                                viewModel.selectedEvent = nil
-                                viewModel.showEventSheet = true
-                            }) {
-                                Text("Добавить смену")
-                            }
+                viewModel.selectedDate = date
+                viewModel.selectedEvent = nil
+                viewModel.showEventSheet = true
             } else {
-                ForEach(events) { event in
-                    Button(action: {
-                        viewModel.selectedEvent = event
-                        viewModel.showEventSheet = true
-                    }) {
-                        Text("Редактировать смену")
-                    }
-                    
-                    Button(action: {
-                        viewModel.deleteEvent(event: event)
-                    }) {
-                        Text("Удалить смену")
-                    }
-                    Button(action: {
-                        showDeleteEventsView = true
-                    }) {
-                        Text("Удалить группу смен")
-                    }
-                }
+                showActionSheet = true
             }
+        }
+        .actionSheet(isPresented: $showActionSheet) {
+            createActionSheet()
+        }
+        .sheet(isPresented: $showDeleteEventsView) {
+            DeleteEventsView(viewModel: viewModel, isPresented: $showDeleteEventsView)
         }
     }
     
@@ -623,6 +633,27 @@ struct EventsView: View {
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
     }
+    
+    func createActionSheet() -> ActionSheet {
+            var buttons: [ActionSheet.Button] = events.flatMap { event in
+                [
+                    ActionSheet.Button.default(Text("Редактировать смену")) {
+                        viewModel.selectedEvent = event
+                        viewModel.showEventSheet = true
+                    },
+                    ActionSheet.Button.destructive(Text("Удалить смену")) {
+                        viewModel.deleteEvent(event: event)
+                    }
+                ]
+            }
+            
+            buttons.append(.destructive(Text("Удалить группу смен")) {
+                showDeleteEventsView = true
+            })
+            
+            buttons.append(.cancel())
+            return ActionSheet(title: Text("Действия"), buttons: buttons)
+        }
 }
 
 struct EventCreationSheet: View {
