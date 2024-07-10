@@ -900,7 +900,7 @@ struct EventCreationSheet: View {
                             viewModel.removeEventFromHistory(template)
                         }) {
                             Image(systemName: "trash")
-                                .foregroundColor(.red)
+                                .foregroundColor(.toolBar)
                         }
                         .padding(.horizontal, 10)
                     }

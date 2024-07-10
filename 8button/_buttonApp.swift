@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 @main
 struct _buttonApp: App {
     @StateObject
@@ -25,7 +26,7 @@ struct _buttonApp: App {
 
     var body: some Scene {
         WindowGroup {
-             StoreKit8()
+             AppTabBarView()
                 .environmentObject(entitlementManager)
                 .environmentObject(purchaseManager)
                 .task {
@@ -34,3 +35,4 @@ struct _buttonApp: App {
         }
     }
 }
+

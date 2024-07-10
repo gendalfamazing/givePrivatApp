@@ -247,6 +247,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C647C7342C2C280C00D0609B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C656D7592C0DAF770004EB85 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +332,8 @@
 		C644C8602B5ECE0E00DBC6EB /* CodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesMkb10Alphabet.swift; sourceTree = "<group>"; };
 		C644C8632B5ED46E00DBC6EB /* SearchCodesMkb10Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodesMkb10Alphabet.swift; sourceTree = "<group>"; };
 		C647A63E2BBD742E002E5D95 /* AtlasECG-Analisis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Analisis.swift"; sourceTree = "<group>"; };
+		C647C71E2C2C280A00D0609B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C647C7202C2C280A00D0609B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		C64817822BA2D91F009B330F /* MedicinesChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesChild.swift; sourceTree = "<group>"; };
 		C64817852BA337AE009B330F /* StatusLocalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalis.swift; sourceTree = "<group>"; };
 		C64817872BA337EC009B330F /* StatusLocalisTrauma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLocalisTrauma.swift; sourceTree = "<group>"; };
@@ -878,6 +890,8 @@
 			isa = PBXGroup;
 			children = (
 				C64F56612BE03E5E009A12C4 /* StoreKit.framework */,
+				C647C71E2C2C280A00D0609B /* WidgetKit.framework */,
+				C647C7202C2C280A00D0609B /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1030,6 +1044,7 @@
 				C63E75AE2B14BA9400524502 /* Frameworks */,
 				C63E75AF2B14BA9400524502 /* Resources */,
 				C656D7592C0DAF770004EB85 /* Embed Frameworks */,
+				C647C7342C2C280C00D0609B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -1049,7 +1064,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					C63E75B02B14BA9400524502 = {
@@ -1464,6 +1479,7 @@
 		C63E75C02B14BA9500524502 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
@@ -1503,6 +1519,7 @@
 		C63E75C12B14BA9500524502 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;

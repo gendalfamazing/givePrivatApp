@@ -24,7 +24,7 @@ struct ScalesTables: View {
     @State private var isTextExpanded10 = false
     @State private var isTextExpanded11 = false
     @State private var isTextExpanded12 = false
-    @State private var isTextExpanded13 = true
+    @State private var isTextExpanded13 = false
     @State private var isTextExpanded14 = false
     var body: some View {
             ScrollView {
@@ -1153,6 +1153,128 @@ struct ScalesTables: View {
                                 }
                                 
                             }
+                    MyViewBuilder(title: Text("""
+                                              Расчеты кислорода
+                                              """),
+                                  content: Text("""
+                                                Остаточный объем кислорода в баллоне и расчет МОД
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded13)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded13.toggle()
+                            }
+                        }
+                    if isTextExpanded13 {
+                        VStack (spacing: 1) {
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        **Расчет количества кислорода в баллоне**:
+                                                        """)).buildGrayInHidden59Text()
+                            MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                          content: Text("""
+                                                    Объем                       показания
+                                                    баллона         **Х**        манометра       **Х**       **10**
+                                                    в **Литрах**                     в **МПа**
+                                                    """)).buildGrayInHidden59TextCenter()
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        Например:
+                                                        Баллон объемом **2 литра** с показанием манометра **10 МПа** содержит **200 литров 100% кислорода**
+                                                        """)).buildGrayInHidden59Text()
+                        }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded13.toggle()
+                            }
+                        }
+                        VStack (spacing: 1) {
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        **Формула Дарбиняна**:
+                                                        Используется для расчета минутного объема дыхания (**МОД**)
+                                                        """)).buildGrayInHidden59Text()
+                            
+                            MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                          content: Text("""
+                                                    Масса тела в **Кг**        **/**        **10**       **+**       **2**
+                                                    """)).buildGrayInHidden59TextCenter()
+                                
+                            
+                            
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        Например:
+                                                        Пациент **80 кг** / 10 + 2 = **10 литров в минуту**
+                                                        """)).buildGrayInHidden59Text()
+                        }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded13.toggle()
+                            }
+                        }
+                        VStack (spacing: 1) {
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        **На сколько минут хватит кислорода**:
+                                                        """)).buildGrayInHidden59Text()
+                            MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                          content: Text("""
+                                                                    Количество
+                                                    оставшегося кислорода         **/**       **МОД**
+                                                                    в **Литрах**
+                                                    """)).buildGrayInHidden59TextCenter()
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        Например:
+                                                        - Баллон объемом **2 литра** с показанием манометра **15 МПа** содержит **300 литров 100% кислорода**.
+                                                        - Масса тела пациента **80 кг**.
+                                                        - **МОД** пациента (исходя из формулы Дарбиняна) равен **10 литрам в минуту**
+                                                        
+                                                        **300 л / 10 л в мин. = 30 минут**
+                                                        """)).buildGrayInHidden59Text()
+                        }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded13.toggle()
+                            }
+                        }
+                    }
                       
                 }
                 .padding(.horizontal, 10)

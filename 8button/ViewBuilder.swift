@@ -624,7 +624,10 @@ class MyViewBuilder: ViewBuilder1 {
             .modifier(ThemeGrayColorModifier())
             .font(.subheadline)
             .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+            )
         
     }
     func buildGrayTextCenter() -> some View {
@@ -756,7 +759,20 @@ class MyViewBuilder: ViewBuilder1 {
 //            .shadow(radius: 2)
         
     }
-    
+    func buildGrayInHidden59TextCenter() -> some View {
+
+        return content
+            .textSelection(.enabled)
+            .padding(10)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(minHeight: 20)
+            .modifier(ThemeGrayColorModifier())
+            .font(.subheadline)
+            .cornerRadius(10)
+//            .shadow(radius: 2)
+        
+    }
     func buildNavigationText() -> some View {
 
         return content
