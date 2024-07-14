@@ -641,7 +641,10 @@ class MyViewBuilder: ViewBuilder1 {
             .modifier(ThemeGrayColorModifier())
             .font(.subheadline)
             .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+            )
         
     }
     
@@ -1458,6 +1461,37 @@ class MyViewBuilder59: ViewBuilder3 {
                 .textSelection(.enabled)
                 .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
                 .font(.caption2)
+                .padding(3)
+            
+            Spacer()
+            
+        }
+        .padding(2)
+        .background(Color.grayButton)
+        
+    }
+    
+    //Шоковый индекс
+    func buildTableShockIndex() -> some View {
+        
+        return HStack(alignment: .center) {
+            
+            Text(LocalizedStringKey(title1))
+                .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                .font(.subheadline)
+                .bold()
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title2))
+                .textSelection(.enabled)
+                .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                .font(.subheadline)
+                .padding(3)
+            Spacer()
+            Text(LocalizedStringKey(title3))
+                .textSelection(.enabled)
+                .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                .font(.subheadline)
                 .padding(3)
             
             Spacer()

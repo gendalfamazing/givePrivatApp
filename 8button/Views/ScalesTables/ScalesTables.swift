@@ -1145,7 +1145,10 @@ struct ScalesTables: View {
                                     }
                                 }
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded12.toggle()
@@ -1153,6 +1156,100 @@ struct ScalesTables: View {
                                 }
                                 
                             }
+                    MyViewBuilder(title: Text("""
+                                              Шоковый индекс
+                                              """),
+                                  content: Text("""
+                                                Формула расчета шокового индекса и объема необходимой инфузии
+                                                """)).buildBlue591TextScales(isTextExpanded: isTextExpanded14)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded14.toggle()
+                            }
+                        }
+                    if isTextExpanded14 {
+                        VStack (spacing: 1) {
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        **Формула расчета шокового индекса (ШИ)**:
+                                                        """)).buildGrayInHidden59Text()
+                            MyViewBuilder(title: Text("""
+                                                  ----
+                                                  """),
+                                          content: Text("""
+                                                    **ЧСС**     **/**   **систолическое АД**    **=**   **ШИ**
+                                                    """)).buildGrayInHidden59TextCenter()
+                            MyViewBuilder(title: Text("""
+                                                      ----
+                                                      """),
+                                          content: Text("""
+                                                        **Нормальная величина ШИ** = 60/120 = **0,5**
+                                                        """)).buildGrayInHidden59Text()
+                        }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded14.toggle()
+                            }
+                        }
+                        VStack(alignment: .center ,spacing: 1) {
+                            HStack (alignment: .bottom){
+                                Text("""
+                                    Шоковый
+                                      индекс
+                                    """)
+                                    .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("""
+                                    Дефицит
+                                      ОЦК %
+                                    """)
+                                    .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("""
+                                        Объем
+                                    инфузии (л)
+                                    """)
+                                    .frame(minWidth: 38, maxWidth: .infinity, alignment: .center)
+                                    .font(.subheadline)
+                                    .bold()
+                                    .padding(3)
+                                
+                                Spacer()
+                                
+                            }
+                            .padding(2)
+                            .background(Color.grayButton)
+                            ForEach(TablePamyatki.getTableShockIndex(), id: \.id) { name in
+                                MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableShockIndex()
+                            }
+                        }
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded14.toggle()
+                            }
+                        }
+                        
+                        
+                    }
                     MyViewBuilder(title: Text("""
                                               Расчеты кислорода
                                               """),
@@ -1247,9 +1344,9 @@ struct ScalesTables: View {
                                                   ----
                                                   """),
                                           content: Text("""
-                                                                    Количество
+                                                                Количество
                                                     оставшегося кислорода         **/**       **МОД**
-                                                                    в **Литрах**
+                                                                  в **Литрах**
                                                     """)).buildGrayInHidden59TextCenter()
                             MyViewBuilder(title: Text("""
                                                       ----
@@ -1275,6 +1372,7 @@ struct ScalesTables: View {
                             }
                         }
                     }
+                    
                       
                 }
                 .padding(.horizontal, 10)

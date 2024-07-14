@@ -21,28 +21,27 @@ struct StoreKit8: View {
                         VStack {
                             Image("LaunchImage1")
                                 .resizable()
-                                .frame(maxWidth: 37)
-                                .frame(maxHeight: 50)
+                                .frame(maxWidth: 111)
+                                .frame(maxHeight: 150)
                                 .scaledToFit()
                                 .clipShape(Rectangle())
-                            ZStack{
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                            
                                 VStack (spacing: 1){
                                     Text("""
-                                        **AmbulanceDocs** - медицинский справочник для работников СМП Республики Беларусь.
-                                                                                
-                                        **При оформление подписки, Вы получите**:
-                                                                                
-                                        - Доступ к медицинским протоколам, приказам и постановлениям; - Кодификатор МКБ-10; - Более 50 учебных материалов, шпаргалок, таблиц; - Атлас ЭКГ - более 170 примеров ЭКГ при различных патологиях;
-                                        - Медицинские калькуляторы;
-                                        - Регулярные обновления и улучшения, основанные на Ваших отзывах; - Удобный и интуитивно понятный интерфейс с поддержкой **темной темы**
-                                                                                
-                                        **Подписка имеет 14-дневный бесплатный период для ознакомления**.
-                                                                                
-                                        **При покупке Premium Вы получите**:
-                                        - Тот же полный функционал приложения, что и при выборе подписки, но неограниченный во времени (одноразовая покупка НАВСЕГДА)
-                                                                                
-                                        Покупка **Premium** рекомендуется для тех, кто уже пользовался приложением
+                                        **AmbulanceDocs - справочник для работников СМП Республики Беларусь**.
+
+                                        **Подписка включает**:
+                                            •    Документация МЗ РБ
+                                            •    Кодификатор МКБ-10
+                                            •    Учебные материалы и таблицы
+                                            •    Атлас ЭКГ (170+ примеров)
+                                            •    Медицинские калькуляторы
+                                            •    Календарь для записи графика работы
+                                            •    Быстрый поиск детских дозировок
+                                            •    14-дневный бесплатный период.
+
+                                        **Premium**:
+                                            •    **Полный функционал навсегда**
                                         """)
                                     .multilineTextAlignment(.leading)
                                     .textSelection(.enabled)
@@ -52,11 +51,14 @@ struct StoreKit8: View {
                                     .fixedSize(horizontal: false, vertical: true)
                                     .frame(minHeight: 20)
                                     .modifier(ThemeGrayColorModifier())
-                                    .font(.caption2)
+                                    .font(.subheadline)
                                     .cornerRadius(10)
                                     
                                 }
-                            }
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                )
                             
                             
                             
@@ -91,19 +93,24 @@ struct StoreKit8: View {
                                                     .padding(.horizontal, 3.0)
                                                     .font(.footnote)
                                                 if product.displayName.contains("Premium") {
-                                                    
+                                                    Text("(одноразовая покупка)")
+                                                        .multilineTextAlignment(.leading)
+                                                        .padding(.horizontal, 3.0)
+                                                        .font(.caption)
+                                                        .bold()
+                                                        .foregroundColor(product.displayName.contains("навсегда") ? .blue : .red)
                                                 } else if product.displayName.contains("year") || product.displayName.contains("month"){
                                                     Text("(first 14 days free)")
                                                         .multilineTextAlignment(.leading)
                                                         .padding(.horizontal, 3.0)
-                                                        .font(.footnote)
+                                                        .font(.caption)
                                                         .bold()
                                                         .foregroundColor(product.displayName.contains("навсегда") ? .blue : .red)
                                                 } else {
                                                     Text("(первые 14 дней бесплатно)")
                                                         .multilineTextAlignment(.leading)
                                                         .padding(.horizontal, 3.0)
-                                                        .font(.footnote)
+                                                        .font(.caption)
                                                         .bold()
                                                         .foregroundColor(product.displayName.contains("навсегда") ? .clear : .red)
                                                 }
@@ -122,10 +129,12 @@ struct StoreKit8: View {
                                     .modifier(ThemeBlueColorModifier())
                                     //                .background(Color.blueButton)
                                     .background(Color.blueButton)
-                                    .background(Color.grayButton)
                                     .font(.subheadline)
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                    )
                                     
                                 }
                             }

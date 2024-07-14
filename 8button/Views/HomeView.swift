@@ -17,6 +17,7 @@ struct HomeView: View {
         
         NavigationStack {
             ScrollView {
+                Spacer(minLength: 5)
                 VStack(spacing: 5) {
                     // яды cross.vial
                     NavigationLink(destination: PrikazyPostanovleniya()) {

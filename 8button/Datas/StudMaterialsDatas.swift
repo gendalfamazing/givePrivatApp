@@ -1385,6 +1385,126 @@ struct TablePamyatki: Identifiable {
         ]
     }
     
+    
+        //Шоковый индекс
+    
+    static func getTableShockIndex() -> [TablePamyatki] {
+        [
+            TablePamyatki(content1:"""
+                                 0,6-0,9
+                                 """,
+                        content2:"""
+                                 До 20%
+                                 """,
+                        content3:"""
+                                 0,5-1,0 л
+                                 """,
+                        content4:"""
+                                 """,
+                        content5:"""
+                                 """,
+                        content6:"",
+                        content7:"",
+                        content8:"",
+                        content9:"",
+                        content10:"",
+                        content11:"",
+                        content12:"",
+                        content13:"",
+                        content14:"",
+                        content15:"",
+                        content16:"",
+                        content17:"",
+                        content18:"",
+                        content19:"",
+                        content20:"",
+                        content21:"",
+                        content22:"",
+                        content23:"",
+                        content24:"",
+                        content25:"",
+                        content26:"",
+                        content27:"",
+                        content28:"",
+                        id: 1),
+            TablePamyatki(content1:"""
+                                 1,0-1,4
+                                 """,
+                          content2:"""
+                                   20-40%
+                                   """,
+                          content3:"""
+                                   1,1-1,5 л
+                                   """,
+                        content4:"""
+                                 """,
+                        content5:"""
+                                  """,
+                        content6:"",
+                        content7:"",
+                        content8:"",
+                        content9:"",
+                        content10:"",
+                        content11:"",
+                        content12:"",
+                        content13:"",
+                        content14:"",
+                        content15:"",
+                        content16:"",
+                        content17:"",
+                        content18:"",
+                        content19:"",
+                        content20:"",
+                        content21:"",
+                        content22:"",
+                        content23:"",
+                        content24:"",
+                        content25:"",
+                        content26:"",
+                        content27:"",
+                        content28:"",
+                        id: 2),
+            TablePamyatki(content1:"""
+                                 Более 1,5
+                                 """,
+                          content2:"""
+                                   40-70%
+                                   """,
+                          content3:"""
+                                   Более 1,5 л
+                                   """,
+                        content4:"""
+                                 """,
+                        content5:"""
+                                  """,
+                        content6:"",
+                        content7:"",
+                        content8:"",
+                        content9:"",
+                        content10:"",
+                        content11:"",
+                        content12:"",
+                        content13:"",
+                        content14:"",
+                        content15:"",
+                        content16:"",
+                        content17:"",
+                        content18:"",
+                        content19:"",
+                        content20:"",
+                        content21:"",
+                        content22:"",
+                        content23:"",
+                        content24:"",
+                        content25:"",
+                        content26:"",
+                        content27:"",
+                        content28:"",
+                        id: 3),
+            
+        ]
+    }
+    
         // **Использование шкалы CHA2DS2-VASc**
     static func getTableScaleCHA2DS2() -> [TablePamyatki] {
         [

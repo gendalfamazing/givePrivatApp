@@ -30,11 +30,10 @@ struct AboutApp: View {
                             .scaledToFit()
                             .clipShape(Rectangle())
                     }
-                                        ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        
                         VStack (spacing: 1){
                             Text("""
-                            **Приложение для работников скорой (неотложной) медицинской помощи Республики Беларусь**
+                            **Приложение для работников скорой медицинской помощи и студентов-медиков Республики Беларусь**
                             """)
                             .multilineTextAlignment(.center)
                             .textSelection(.enabled)
@@ -44,17 +43,16 @@ struct AboutApp: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(minHeight: 20)
                             .modifier(ThemeGrayColorModifier())
-                            .font(.caption2)
+                            .font(.subheadline)
                             .cornerRadius(10)
                             
                             Divider()
                                 .background(Color.divider)
                                 .padding(.horizontal, 5)
                             Text("""
-                            Приложение содержит клинические протоколы (стандарты диагностики и лечения), приказы и постановления разработанные МЗ РБ.
-                            Внешний вид содержащихся данных переработан для лучшего понимания изложенной информации.
-                            Так же в приложении присутствуют шпаргалки, шкалы, различные тексты и таблицы для облегчения работы на СМП.
-                            Приложение работает без интернета и доступно для использования в любой момент времени.
+                            • Содержит клинические протоколы (стандарты диагностики и лечения), приказы и постановления разработанные МЗ РБ.
+                            • Присутствуют шпаргалки, шкалы, различные тексты и таблицы для облегчения работы на СМП.
+                            • **Приложение работает без интернета и доступно для использования в любой момент времени**.
                             """)
                             .multilineTextAlignment(.leading)
                             .textSelection(.enabled)
@@ -64,14 +62,20 @@ struct AboutApp: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(minHeight: 20)
                             .modifier(ThemeGrayColorModifier())
-                            .font(.caption2)
+                            .font(.subheadline)
                             .cornerRadius(10)
                             
                         }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
                         
-                    }
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
+                    
+                        
                         VStack (spacing: 1){
                             Text("""
                             Приложение предназначено для использования медицинскими работниками.
@@ -86,35 +90,21 @@ struct AboutApp: View {
                             .frame(minHeight: 20)
                             .foregroundColor(.red)
                             .modifier(ThemeGrayColorModifier())
-                            .font(.caption2)
+                            .font(.subheadline)
                             .bold()
                             
                             .cornerRadius(10)
                             
                         }
-                    }
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1){
-                            Text("""
-                            Если вы нашли ошибки в тексте либо у вас есть предложения по добавлению информации или функций - пишите на указанный ниже e-mail адрес.
-                            """)
-                            .multilineTextAlignment(.leading)
-                            .textSelection(.enabled)
-                            .padding(.vertical, 5)
-                            .padding(.horizontal, 10)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .frame(minHeight: 20)
-                            .modifier(ThemeGrayColorModifier())
-                            .font(.caption2)
-                            .cornerRadius(10)
-                            
-                        }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        )
+                    
                     VStack {
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        
                             VStack (spacing: 1){
                                 Text("""
                                 **Активные подписки и покупки:**
@@ -127,7 +117,7 @@ struct AboutApp: View {
                                 .fixedSize(horizontal: false, vertical: true)
                                 .frame(minHeight: 20)
                                 .modifier(ThemeGrayColorModifier())
-                                .font(.caption2)
+                                .font(.subheadline)
                                 .cornerRadius(10)
                                 Divider()
                                     .background(Color.divider)
@@ -142,7 +132,7 @@ struct AboutApp: View {
                                     .fixedSize(horizontal: false, vertical: true)
                                     .frame(minHeight: 20)
                                     .modifier(ThemeGrayColorModifier())
-                                    .font(.caption2)
+                                    .font(.subheadline)
                                     .cornerRadius(10)
                             }
                             .onAppear {
@@ -155,7 +145,13 @@ struct AboutApp: View {
                                     }
                                 }
                             }
-                        }
+                            .background(Color.grayButton)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                            )
+                        
                     }
 
                     //                    ZStack{
