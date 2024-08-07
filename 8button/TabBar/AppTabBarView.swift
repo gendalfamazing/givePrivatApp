@@ -23,7 +23,7 @@ struct AppTabBarView: View {
         
         CustomTabBarContainerView(selection: $tabSelection) {
             
-            HomeView()
+            ContentView()
                 .id(homePath)
                 .tabBarItem(tab: .home, selection: $tabSelection)
             

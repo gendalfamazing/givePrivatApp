@@ -26,7 +26,7 @@ struct _buttonApp: App {
 
     var body: some Scene {
         WindowGroup {
-             StoreKit8()
+             AppTabBarView()
                 .environmentObject(entitlementManager)
                 .environmentObject(purchaseManager)
                 .task {

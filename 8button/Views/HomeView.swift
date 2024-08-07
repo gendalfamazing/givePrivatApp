@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
     
     
     @Environment(\.colorScheme) var colorScheme
@@ -374,6 +375,28 @@ struct HomeView: View {
                             .foregroundStyle(Color.toolBar)
                         }
                     }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                                            Menu {
+                                                Button(action: {
+                                                    selectedTheme = Theme.light.rawValue
+                                                }) {
+                                                    Label("Светлая тема", systemImage: "sun.max")
+                                                        
+                                                }
+                                                Button(action: {
+                                                    selectedTheme = Theme.dark.rawValue
+                                                }) {
+                                                    Label("Темная тема", systemImage: "moon")
+                                                }
+                                                Button(action: {
+                                                    selectedTheme = Theme.system.rawValue
+                                                }) {
+                                                    Label("Системная тема", systemImage: "circle.righthalf.filled")
+                                                }
+                                            } label: {
+                                                Image(systemName: "gear")
+                                            }
+                                        }
                 }
                 
             }

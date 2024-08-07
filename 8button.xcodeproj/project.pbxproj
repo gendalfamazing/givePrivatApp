@@ -152,6 +152,7 @@
 		C68DC8A52B84BC8300355234 /* Postanovlenie59Alg2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68DC8A42B84BC8300355234 /* Postanovlenie59Alg2View.swift */; };
 		C68DC8A72B84BCF400355234 /* Postanovlenie59Alg2P1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68DC8A62B84BCF400355234 /* Postanovlenie59Alg2P1View.swift */; };
 		C68DC8A92B84BCFD00355234 /* Postanovlenie59Alg2P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68DC8A82B84BCFD00355234 /* Postanovlenie59Alg2P2View.swift */; };
+		C68F89B12C62B0B90071CAD7 /* theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F89B02C62B0B90071CAD7 /* theme.swift */; };
 		C69188022BB0363200414266 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69188012BB0363200414266 /* AboutApp.swift */; };
 		C69282352BCBBD1100E699DA /* ZakonOZdravoohranenii-08.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69282342BCBBD1100E699DA /* ZakonOZdravoohranenii-08.swift */; };
 		C69282372BCBC08900E699DA /* ZakonOZdravoohranenii-09.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69282362BCBC08900E699DA /* ZakonOZdravoohranenii-09.swift */; };
@@ -420,6 +421,7 @@
 		C68DC8A42B84BC8300355234 /* Postanovlenie59Alg2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg2View.swift; sourceTree = "<group>"; };
 		C68DC8A62B84BCF400355234 /* Postanovlenie59Alg2P1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg2P1View.swift; sourceTree = "<group>"; };
 		C68DC8A82B84BCFD00355234 /* Postanovlenie59Alg2P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg2P2View.swift; sourceTree = "<group>"; };
+		C68F89B02C62B0B90071CAD7 /* theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theme.swift; sourceTree = "<group>"; };
 		C69188012BB0363200414266 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
 		C69282342BCBBD1100E699DA /* ZakonOZdravoohranenii-08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZakonOZdravoohranenii-08.swift"; sourceTree = "<group>"; };
 		C69282362BCBC08900E699DA /* ZakonOZdravoohranenii-09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZakonOZdravoohranenii-09.swift"; sourceTree = "<group>"; };
@@ -1010,6 +1012,7 @@
 		C6E72AC72B2A206C00611FDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C68F89B02C62B0B90071CAD7 /* theme.swift */,
 				C67BA8F42B276EF500470B55 /* HomeView.swift */,
 				C69188012BB0363200414266 /* AboutApp.swift */,
 				C6DB60582B14BBEA0050DAD6 /* PrikazyPostanovleniya.swift */,
@@ -1298,6 +1301,7 @@
 				C6EED78D2B64FD9E00E6B5CA /* Postanovlenie99Alg10View.swift in Sources */,
 				C664F5432B4D630F0044E0E1 /* Prikaz1030Alg117View.swift in Sources */,
 				C6740B872BCAEB40005F28E6 /* ZakonOZdravoohranenii-07.swift in Sources */,
+				C68F89B12C62B0B90071CAD7 /* theme.swift in Sources */,
 				C60E0D572BA710AA00C1088E /* AtlasECG-Poroki02.swift in Sources */,
 				C664F53F2B4D174F0044E0E1 /* Prikaz1030Alg115View.swift in Sources */,
 				C6D69FB72B5A5E8C00235B09 /* Prikaz1030Alg71View.swift in Sources */,
