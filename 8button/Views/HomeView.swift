@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
-    
+    @AppStorage("fontSize") var fontSize: Double = 14.0
     
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         
@@ -376,31 +377,52 @@ struct HomeView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                                            Menu {
-                                                Button(action: {
-                                                    selectedTheme = Theme.light.rawValue
-                                                }) {
-                                                    Label("Светлая тема", systemImage: "sun.max")
-                                                        
-                                                }
-                                                Button(action: {
-                                                    selectedTheme = Theme.dark.rawValue
-                                                }) {
-                                                    Label("Темная тема", systemImage: "moon")
-                                                }
-                                                Button(action: {
-                                                    selectedTheme = Theme.system.rawValue
-                                                }) {
-                                                    Label("Системная тема", systemImage: "circle.righthalf.filled")
-                                                }
-                                            } label: {
-                                                Image(systemName: "gear")
-                                            }
-                                        }
+                        Menu {
+                            Menu {
+                                VStack {
+                                    Button(action: {
+                                        selectedTheme = Theme.light.rawValue
+                                    }) {
+                                        Label("Светлая тема", systemImage: "sun.max")
+                                            
+                                    }
+                                    Button(action: {
+                                        selectedTheme = Theme.dark.rawValue
+                                    }) {
+                                        Label("Темная тема", systemImage: "moon")
+                                    }
+                                    Button(action: {
+                                        selectedTheme = Theme.system.rawValue
+                                    }) {
+                                        Label("Системная тема", systemImage: "circle.righthalf.filled")
+                                    }
+                                }
+                            } label: {
+                                Label("Выбор темы", systemImage: "moonphase.last.quarter")
+                            } //moonphase.last.quarter.inverse
+                            
+                            Menu {
+                                VStack {
+                                    Slider(value: $fontSize, in: 12...20, step: 2) {
+                                        
+                                    }
+                                    .padding()
+                                    Text("Текущий размер: \(Int(fontSize))")
+                                        .font(.system(size: CGFloat(fontSize)))
+                                }
+                            } label: {
+                                Label("Размер шрифта", systemImage: "textformat.size")
+                            }
+                        } label: {
+                            Image(systemName: "gear")
+                                .foregroundColor(.titleNumberForeground)
+                        }
+                    }
                 }
                 
             }
             .background(Color.back)
+            .environment(\.sizeCategory, fontSizeCategory)
             
             //        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ResetNavigationForTab"))) { notification in
             //            if let tab = notification.object as? TabBarItem {
@@ -411,6 +433,17 @@ struct HomeView: View {
         }
         
     }
+    var fontSizeCategory: ContentSizeCategory {
+            switch fontSize {
+            case ..<14: return .small
+            case 14..<16: return .medium
+            case 16..<18: return .large
+            case 18..<20: return .extraLarge
+            case 20..<22: return .extraExtraLarge
+            default: return .extraExtraExtraLarge
+            }
+        }
+    
 }
 #Preview {
     HomeView()

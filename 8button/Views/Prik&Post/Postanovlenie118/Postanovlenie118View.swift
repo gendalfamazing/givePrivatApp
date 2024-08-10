@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct Postanovlenie118View: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.sizeCategory) var sizeCategory
+    
     var body: some View {
         NavigationStack {
         ScrollView {
@@ -83,7 +86,18 @@ struct Postanovlenie118View: View {
         //            .padding(.horizontal, 200)
         //            .edgesIgnoringSafeArea(.bottom)
         .background(Color.back)
+        .environment(\.sizeCategory, fontSizeCategory)
     }
+        var fontSizeCategory: ContentSizeCategory {
+                switch fontSize {
+                case ..<14: return .small
+                case 14..<16: return .medium
+                case 16..<18: return .large
+                case 18..<20: return .extraLarge
+                case 20..<22: return .extraExtraLarge
+                default: return .extraExtraExtraLarge
+                }
+            }
     }
 }
 

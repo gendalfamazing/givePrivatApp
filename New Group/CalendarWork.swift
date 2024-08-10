@@ -325,6 +325,9 @@ struct DayView: View {
 
 
 struct CalendarView: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.sizeCategory) var sizeCategory
     @ObservedObject var viewModel = CalendarViewModel()
     @State private var showDeleteEventsView = false
     @State private var previousMonth: Bool = true
@@ -372,7 +375,16 @@ struct CalendarView: View {
                 }
             }
             .background(Color.back)
+            .environment(\.sizeCategory, fontSizeCategory)
         }
+        var fontSizeCategory: ContentSizeCategory {
+                switch fontSize {
+                case ..<14: return .small
+                case 14..<16: return .medium
+                case 16..<18: return .large
+                default: return .extraLarge
+                }
+            }
     }
     
     var currentMonthYear: String {

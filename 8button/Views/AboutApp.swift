@@ -9,7 +9,9 @@ import SwiftUI
 import StoreKit
 
 struct AboutApp: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.sizeCategory) var sizeCategory
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject private var purchaseManager: PurchaseManager
     
@@ -338,8 +340,18 @@ struct AboutApp: View {
             //        .padding(.horizontal, 200)
             //            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
+            .environment(\.sizeCategory, fontSizeCategory)
         }
-        
+        var fontSizeCategory: ContentSizeCategory {
+                switch fontSize {
+                case ..<14: return .small
+                case 14..<16: return .medium
+                case 16..<18: return .large
+                case 18..<20: return .extraLarge
+                case 20..<22: return .extraExtraLarge
+                default: return .extraExtraExtraLarge
+                }
+            }
     }
     
 }

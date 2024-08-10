@@ -149,8 +149,12 @@ final class SearchableViewModelAdult: ObservableObject {
 }
 
 struct SearchAdult: View {
+    @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.sizeCategory) var sizeCategory
     
     @StateObject private var viewModel = SearchableViewModelAdult()
     
@@ -173,6 +177,7 @@ struct SearchAdult: View {
                         }
                         .padding(.bottom, 55)
                         .background(Color.back)
+                        .environment(\.sizeCategory, fontSizeCategory)
                         //
                     }
                 
@@ -201,11 +206,11 @@ struct SearchAdult: View {
             }
             
         }
-        
         .task {
             await viewModel.loadAdult()
         }
     }
+        
     }
     
     private struct HighlightedText: View {
@@ -284,11 +289,22 @@ struct SearchAdult: View {
                 .modifier(ThemeTitleBlueColorModifier())
                 .cornerRadius(10)
                 .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                
             }
             .background(Color.back)
         }
         .background(Color.back)
     }
+    var fontSizeCategory: ContentSizeCategory {
+            switch fontSize {
+            case ..<14: return .small
+            case 14..<16: return .medium
+            case 16..<18: return .large
+            case 18..<20: return .extraLarge
+            case 20..<22: return .extraExtraLarge
+            default: return .extraExtraExtraLarge
+            }
+        }
 }
 
 

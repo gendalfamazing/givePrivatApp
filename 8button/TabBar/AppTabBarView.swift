@@ -11,7 +11,8 @@ import UIKit
 
 
 struct AppTabBarView: View {
-    
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @Environment(\.sizeCategory) var sizeCategory
     @State private var selection: String = "home"
     @State private var tabSelection: TabBarItem = .home
     @State private var homePath: UUID = UUID()
@@ -23,27 +24,28 @@ struct AppTabBarView: View {
         
         CustomTabBarContainerView(selection: $tabSelection) {
             
-            ContentView()
+            HomeViewGear()
                 .id(homePath)
                 .tabBarItem(tab: .home, selection: $tabSelection)
             
             NavigationStack(){
-                SearchAdult()
+                SearchAdultGear()
             }
+            .environment(\.sizeCategory, fontSizeCategory)
             .id(adultPath)
             .tabBarItem(tab: .adult, selection: $tabSelection)
             
-            Postanovlenie118View()
+            Postanovlenie118ViewGear()
                 .id(childPath)
                 .tabBarItem(tab: .child, selection: $tabSelection)
             
             
-            CalendarView()
+            CalendarViewGear()
             
                 .id(organizerPath)
                 .tabBarItem(tab: .organizer, selection: $tabSelection)
                 
-            AboutApp()
+            AboutAppGear()
                 .id(searchPath)
                 .tabBarItem(tab: .search, selection: $tabSelection)
         }
@@ -81,7 +83,16 @@ struct AppTabBarView: View {
         
         .ignoresSafeArea(.keyboard)
     }
-    
+    var fontSizeCategory: ContentSizeCategory {
+            switch fontSize {
+            case ..<14: return .small
+            case 14..<16: return .medium
+            case 16..<18: return .large
+            case 18..<20: return .extraLarge
+            case 20..<22: return .extraExtraLarge
+            default: return .extraExtraExtraLarge
+            }
+        }
     
 }
 
