@@ -9,6 +9,8 @@ struct CalendarEvent: Identifiable, Codable {
     var type: EventType
     var startTime: Date
     var repeatInterval: Int? // Интервал повторения в днях
+    var note: String = ""
+    
 }
 
 enum EventType: String, Codable {
@@ -52,19 +54,19 @@ class CalendarViewModel: ObservableObject {
         loadEventHistory()
     }
 
-    func addEvent(on date: Date, type: EventType, startTime: Date, repeatInterval: Int) {
+    func addEvent(on date: Date, type: EventType, startTime: Date, repeatInterval: Int, note: String) {
         var eventsToAdd = [CalendarEvent]()
         let calendar = Calendar.current
         var currentDate = date
 
         if repeatInterval == 0 {
             // Если интервал равен 1, добавляем событие только один раз
-            let event = CalendarEvent(date: date, type: type, startTime: startTime, repeatInterval: nil)
+            let event = CalendarEvent(date: date, type: type, startTime: startTime, repeatInterval: nil, note: note)
             eventsToAdd.append(event)
         } else {
             // Если интервал больше 1, добавляем повторяющиеся события
             while currentDate <= calendar.date(byAdding: .month, value: 1, to: date)! {
-                let event = CalendarEvent(date: currentDate, type: type, startTime: startTime, repeatInterval: repeatInterval)
+                let event = CalendarEvent(date: currentDate, type: type, startTime: startTime, repeatInterval: repeatInterval, note: note)
                 eventsToAdd.append(event)
                 currentDate = calendar.date(byAdding: .day, value: repeatInterval, to: currentDate)!
             }
@@ -168,12 +170,13 @@ class CalendarViewModel: ObservableObject {
 }
 
 struct DayView: View {
-    @Environment(\.colorScheme) private var colorScheme
+    
     let date: Date
     let events: [CalendarEvent]
     @ObservedObject var viewModel: CalendarViewModel
     @State private var showContextMenu = false
     @State private var showDeleteEventsView = false
+    @Environment(\.colorScheme) private var colorScheme
     var body: some View {
         VStack {
             ZStack {
@@ -543,6 +546,7 @@ struct CalendarGrid: View {
 }
 
 struct DaysOfWeekView: View {
+    @Environment(\.colorScheme) var colorScheme
     let daysOfWeek = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
     
     var body: some View {
@@ -563,12 +567,13 @@ struct DaysOfWeekView: View {
 }
 
 struct EventsView: View {
+    @Environment(\.colorScheme) var colorScheme
     let date: Date
     let events: [CalendarEvent]
     @ObservedObject var viewModel: CalendarViewModel
     @State private var showActionSheet = false
     @State private var showDeleteEventsView = false
-    
+
     var body: some View {
         VStack {
             if events.isEmpty {
@@ -578,7 +583,7 @@ struct EventsView: View {
                     Text("Добавить смену")
                     Image(systemName: "plus")
                 }
-                .frame(minWidth: 160)
+                .frame(maxWidth: .infinity)
                 .padding(15)
                 .background(Color.gray.opacity(0.25))
                 .cornerRadius(8)
@@ -590,33 +595,37 @@ struct EventsView: View {
                 Text("\(formattedDate):")
                     .font(.headline)
                 ForEach(events) { event in
-                    HStack {
-                        Text("\(event.type.rawValue) - \(formattedTime(for: event.startTime))")
-                            .padding(15)
-                            .padding(.trailing, -15)
-                        Image(systemName: "square.and.pencil")
-                            .padding(.trailing, 15)
-                            .padding(.bottom, 3)
+                    VStack(alignment: .center) {
+                        HStack {
+                            Text("\(event.type.rawValue) - \(formattedTime(for: event.startTime))")
+                                .padding(15)
+                                .padding(.trailing, -15)
+                            Image(systemName: "square.and.pencil")
+                                .padding(.trailing, 15)
+                                .padding(.bottom, 3)
                         }
-                        .frame(minWidth: 190)
-                        .background(event.type.color.opacity(0.5))
-                        .cornerRadius(8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
-                        )
+                        if !event.note.isEmpty {
+                            Text(event.note)
+                                .frame(maxWidth: .infinity)
+                                .font(.caption)
+                                .padding(.top, -15)
+                                .padding(.bottom, 10)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(event.type.color.opacity(0.5))
+                    .cornerRadius(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+                    )
                 }
             }
         }
-        .padding()
-        .background(Color.grayButton)
+        .padding(.horizontal, 10)
+        .padding(.bottom, 2)
         .cornerRadius(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
-        )
         .padding(1)
-        .cornerRadius(10)
         .onTapGesture {
             if events.isEmpty {
                 viewModel.selectedDate = date
@@ -633,39 +642,39 @@ struct EventsView: View {
             DeleteEventsView(viewModel: viewModel, isPresented: $showDeleteEventsView)
         }
     }
-    
+
     var formattedDate: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMMM yyyy"
         return formatter.string(from: date)
     }
-    
+
     func formattedTime(for date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
     }
-    
+
     func createActionSheet() -> ActionSheet {
-            var buttons: [ActionSheet.Button] = events.flatMap { event in
-                [
-                    ActionSheet.Button.default(Text("Редактировать смену")) {
-                        viewModel.selectedEvent = event
-                        viewModel.showEventSheet = true
-                    },
-                    ActionSheet.Button.destructive(Text("Удалить смену")) {
-                        viewModel.deleteEvent(event: event)
-                    }
-                ]
-            }
-            
-            buttons.append(.destructive(Text("Удалить группу смен")) {
-                showDeleteEventsView = true
-            })
-            
-            buttons.append(.cancel())
-            return ActionSheet(title: Text("Действия"), buttons: buttons)
+        var buttons: [ActionSheet.Button] = events.flatMap { event in
+            [
+                ActionSheet.Button.default(Text("Редактировать смену")) {
+                    viewModel.selectedEvent = event
+                    viewModel.showEventSheet = true
+                },
+                ActionSheet.Button.destructive(Text("Удалить смену")) {
+                    viewModel.deleteEvent(event: event)
+                }
+            ]
         }
+
+        buttons.append(.destructive(Text("Удалить группу смен")) {
+            showDeleteEventsView = true
+        })
+
+        buttons.append(.cancel())
+        return ActionSheet(title: Text("Действия"), buttons: buttons)
+    }
 }
 
 struct EventCreationSheet: View {
@@ -676,11 +685,13 @@ struct EventCreationSheet: View {
     @State private var selectedMinute: Int = 0
     @State private var repeatInterval: Int = 0 // Интервал повторения, 0 означает без повторения
     @State private var selectedTemplateIndex: Int? = nil
+    @State private var note: String = "" // Поле для заметки
+    private let characterLimit = 50
     
     let availableHours = Array(0...23)
     let availableMinutes = [0, 15, 30, 45]
     let availableIntervals = [1, 2, 3, 4] // Интервалы повторения
-    
+
     var sortedEventHistory: [CalendarEvent] {
         viewModel.eventHistory.sorted { first, second in
             if first.type == second.type {
@@ -695,20 +706,17 @@ struct EventCreationSheet: View {
             }
         }
     }
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack (alignment: .leading, spacing: 1) {
-                    
-                    VStack (alignment: .leading, spacing: 1){
-                        Text("""
-                            Тип смены:
-                            """)
-                        .font(.footnote)
-                        .bold()
-                        .padding(.leading, 10)
-                        .opacity(0.5)
+                VStack(alignment: .leading, spacing: 1) {
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Тип смены:")
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
                     }
                     Spacer(minLength: 5)
                     Picker("Тип события", selection: $eventType) {
@@ -720,23 +728,20 @@ struct EventCreationSheet: View {
                     .cornerRadius(10)
                     .shadow(color: .shadowGrayRectangle, radius: 0.5)
                     .pickerStyle(SegmentedPickerStyle())
-                    
+
                     Spacer(minLength: 10)
-                    
-                    
-                    VStack (alignment: .leading, spacing: 1){
-                        Text("""
-                            Время начала:
-                            """)
-                        .font(.footnote)
-                        .bold()
-                        .padding(.leading, 10)
-                        .opacity(0.5)
+
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Время начала:")
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
                     }
                     Spacer(minLength: 5)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1) {
+                        VStack(spacing: 1) {
                             HStack {
                                 Spacer()
                                 Picker("Часы", selection: $selectedHour) {
@@ -744,11 +749,10 @@ struct EventCreationSheet: View {
                                         Text(String(format: "%02d", hour)).tag(hour)
                                     }
                                 }
-                                
                                 .pickerStyle(WheelPickerStyle())
                                 .frame(width: 80, height: 80)
                                 .clipped()
-                                
+
                                 Picker("Минуты", selection: $selectedMinute) {
                                     ForEach(availableMinutes, id: \.self) { minute in
                                         Text(String(format: "%02d", minute)).tag(minute)
@@ -759,25 +763,21 @@ struct EventCreationSheet: View {
                                 .clipped()
                                 Spacer()
                             }
-                            
                         }
                     }
                     Spacer(minLength: 10)
-                    
-                    
-                    VStack (alignment: .leading, spacing: 1){
-                        Text("""
-                            Интервал повторения:
-                            """)
-                        .font(.footnote)
-                        .bold()
-                        .padding(.leading, 10)
-                        .opacity(0.5)
+
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Интервал повторения:")
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
                     }
                     Spacer(minLength: 5)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1) {
+                        VStack(spacing: 1) {
                             Picker("Повторять каждые", selection: $repeatInterval) {
                                 Text("Без повторения").tag(1)
                                 ForEach(availableIntervals, id: \.self) { interval in
@@ -790,10 +790,47 @@ struct EventCreationSheet: View {
                         }
                     }
                     Spacer(minLength: 10)
-                    if !viewModel.eventHistory.isEmpty {
-                                            historySection
+
+                    // Новое текстовое поле для заметки
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Заметка:")
+                            .font(.footnote)
+                            .bold()
+                            .padding(.leading, 10)
+                            .opacity(0.5)
+                        ZStack {
+                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                            TextField("Введите заметку", text: $note)
+                                .textFieldStyle(PlainTextFieldStyle())
+                                .padding(.leading, 15)
+                                .padding(.trailing, 25)
+                                .frame(height: 40)
+                                .onChange(of: note) { newValue in
+                                    if newValue.count > characterLimit {
+                                        note = String(newValue.prefix(characterLimit)) // Ограничиваем количество символов
+                                    }
+                                }
+                            if !note.isEmpty {
+                                        HStack {
+                                            Spacer()
+                                            Button(action: {
+                                                note = "" // Очищаем текстовое поле
+                                            }) {
+                                                Image(systemName: "xmark.circle.fill")
+                                                    .foregroundColor(.gray)
+                                            }
+                                            .padding(.trailing, 5) // Отступ, чтобы кнопка не перекрывала текст
                                         }
-                    
+                                    }
+                        }
+                    }
+
+                    Spacer(minLength: 10)
+
+                    if !viewModel.eventHistory.isEmpty {
+                        historySection
+                    }
+
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -806,45 +843,45 @@ struct EventCreationSheet: View {
                                 .font(.subheadline)
                                 .foregroundStyle(Color.toolBar)
                                 .bold()
-                            Text("""
-                            \(formattedDate(viewModel.selectedDate))
-                            """)
-                            .font(.caption)
-                            .foregroundStyle(Color.toolBar)
+                            Text("\(formattedDate(viewModel.selectedDate))")
+                                .font(.caption)
+                                .foregroundStyle(Color.toolBar)
                         }
                     }
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button("Закрыть") {
                             viewModel.showEventSheet = false
                         }
-                        
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(viewModel.selectedEvent == nil ? "Добавить" : "Обновить") {
                             if let selectedDate = viewModel.selectedDate {
-                                            let calendar = Calendar.current
-                                            var components = calendar.dateComponents([.year, .month, .day], from: selectedDate)
-                                            components.hour = selectedHour
-                                            components.minute = selectedMinute
-                                            let startTime = calendar.date(from: components) ?? selectedDate
-                                            
-                                            if let event = viewModel.selectedEvent {
-                                                viewModel.updateEvent(event: event, type: eventType, startTime: startTime, repeatInterval: repeatInterval)
-                                            } else {
-                                                viewModel.addEvent(on: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval)
-                                                viewModel.addEventToHistory(type: eventType, startTime: startTime, repeatInterval: repeatInterval)
-                                            }
-                                            viewModel.showEventSheet = false
+                                let calendar = Calendar.current
+                                var components = calendar.dateComponents([.year, .month, .day], from: selectedDate)
+                                components.hour = selectedHour
+                                components.minute = selectedMinute
+                                let startTime = calendar.date(from: components) ?? selectedDate
+
+                                if let event = viewModel.selectedEvent {
+                                    // Создаем новое событие с обновленными данными
+                                    let updatedEvent = CalendarEvent(id: event.id, date: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval, note: note)
+                                    if let index = viewModel.events.firstIndex(where: { $0.id == event.id }) {
+                                        viewModel.events[index] = updatedEvent
+                                    }
+                                } else {
+                                    let newEvent = CalendarEvent(date: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval, note: note)
+                                    viewModel.events.append(newEvent)
+                                    viewModel.addEventToHistory(type: eventType, startTime: startTime, repeatInterval: repeatInterval)
+                                }
+
+                                viewModel.showEventSheet = false
                             }
                         }
-                        
                     }
                 }
             }
             .background(.back)
         }
-        
-        
         .onAppear {
             if let event = viewModel.selectedEvent {
                 eventType = event.type
@@ -853,6 +890,7 @@ struct EventCreationSheet: View {
                 selectedHour = components.hour ?? 0
                 selectedMinute = components.minute ?? 0
                 repeatInterval = event.repeatInterval ?? 1
+                note = event.note // Загрузка заметки для редактирования
             }
         }
     }
@@ -884,7 +922,7 @@ struct EventCreationSheet: View {
                                 if let event = viewModel.selectedEvent {
                                     viewModel.updateEvent(event: event, type: eventType, startTime: startTime, repeatInterval: repeatInterval)
                                 } else {
-                                    viewModel.addEvent(on: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval)
+                                    viewModel.addEvent(on: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval, note: note)
                                 }
                                 viewModel.showEventSheet = false
                             }
