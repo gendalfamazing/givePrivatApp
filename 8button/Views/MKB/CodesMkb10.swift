@@ -53,7 +53,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded1.toggle()
@@ -75,7 +77,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded2.toggle()
@@ -97,7 +101,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded3.toggle()
@@ -119,7 +125,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded4.toggle()
@@ -141,7 +149,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded5.toggle()
@@ -163,7 +173,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded6.toggle()
@@ -185,7 +197,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded7.toggle()
@@ -207,7 +221,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded8.toggle()
@@ -229,7 +245,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded9.toggle()
@@ -251,7 +269,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded10.toggle()
@@ -273,7 +293,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded11.toggle()
@@ -295,7 +317,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded12.toggle()
@@ -317,7 +341,9 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded13.toggle()
@@ -339,145 +365,18 @@ struct CodesMkb10: View {
                     }
                     .background(Color.back)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                     .onTapGesture {
                         withAnimation (.easeInOut) {
                             isTextExpanded14.toggle()
                         }
                     }
                 }
+                CodesMkb10Part2()
                 
-                MyViewBuilder(title: Text("O00-O80"), content: Text("**Беременность, роды и послеродовой период**")).buildTitleCodes(isTextExpanded: isTextExpanded15)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded15.toggle()
-                        }
-                    }
-                if isTextExpanded15{
-                    VStack(spacing: 1) {
-                        ForEach(CodeMkb.getCodeMkb15(), id: \.id) { name in
-                            MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
-                        }
-                    }
-                    .background(Color.back)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded15.toggle()
-                        }
-                    }
-                }
                 
-                MyViewBuilder(title: Text("P38-P38"), content: Text("**Отдельные состояния (перинатальный период)**")).buildTitleCodes(isTextExpanded: isTextExpanded16)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded16.toggle()
-                        }
-                    }
-                if isTextExpanded16{
-                    VStack(spacing: 1) {
-                        ForEach(CodeMkb.getCodeMkb16(), id: \.id) { name in
-                            MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
-                        }
-                    }
-                    .background(Color.back)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded16.toggle()
-                        }
-                    }
-                }
-                
-                MyViewBuilder(title: Text("P95-Q90"), content: Text("**Врожденные аномалии (пороки развития)**")).buildTitleCodes(isTextExpanded: isTextExpanded17)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded17.toggle()
-                        }
-                    }
-                if isTextExpanded17{
-                    VStack(spacing: 1) {
-                        ForEach(CodeMkb.getCodeMkb17(), id: \.id) { name in
-                            MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
-                        }
-                    }
-                    .background(Color.back)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded17.toggle()
-                        }
-                    }
-                }
-                
-                MyViewBuilder(title: Text("R04-R99"), content: Text("**Симптомы, признаки и отклонения от нормы**")).buildTitleCodes(isTextExpanded: isTextExpanded18)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded18.toggle()
-                        }
-                    }
-                if isTextExpanded18{
-                    VStack(spacing: 1) {
-                        ForEach(CodeMkb.getCodeMkb18(), id: \.id) { name in
-                            MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
-                        }
-                    }
-                    .background(Color.back)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded18.toggle()
-                        }
-                    }
-                }
-                
-                MyViewBuilder(title: Text("S00-T94"), content: Text("**Травмы, отравления и др.**")).buildTitleCodes(isTextExpanded: isTextExpanded19)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded19.toggle()
-                        }
-                    }
-                if isTextExpanded19{
-                    VStack(spacing: 1) {
-                        ForEach(CodeMkb.getCodeMkb19(), id: \.id) { name in
-                            MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
-                        }
-                    }
-                    .background(Color.back)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded19.toggle()
-                        }
-                    }
-                }
-                
-                MyViewBuilder(title: Text("Z51-Z99"), content: Text("**Факторы, влияющие на состояние здоровья**")).buildTitleCodes(isTextExpanded: isTextExpanded20)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded20.toggle()
-                        }
-                    }
-                if isTextExpanded20{
-                    VStack(spacing: 1) {
-                        ForEach(CodeMkb.getCodeMkb20(), id: \.id) { name in
-                            MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
-                        }
-                    }
-                    .background(Color.back)
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    .onTapGesture {
-                        withAnimation (.easeInOut) {
-                            isTextExpanded20.toggle()
-                        }
-                    }
-                }
                 
             }
             .padding(.horizontal, 10)
@@ -527,4 +426,167 @@ struct CodesMkb10: View {
 
 #Preview {
     CodesMkb10()
+}
+
+
+struct CodesMkb10Part2: View {
+    @State private var isTextExpanded10 = false
+    @State private var isTextExpanded11 = false
+    @State private var isTextExpanded12 = false
+    @State private var isTextExpanded13 = false
+    @State private var isTextExpanded14 = false
+    @State private var isTextExpanded15 = false
+    @State private var isTextExpanded16 = false
+    @State private var isTextExpanded17 = false
+    @State private var isTextExpanded18 = false
+    @State private var isTextExpanded19 = false
+    @State private var isTextExpanded20 = false
+    @State private var isTextExpanded21 = false
+    
+    var body: some View {
+        MyViewBuilder(title: Text("O00-O80"), content: Text("**Беременность, роды и послеродовой период**")).buildTitleCodes(isTextExpanded: isTextExpanded15)
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded15.toggle()
+                }
+            }
+        if isTextExpanded15{
+            VStack(spacing: 1) {
+                ForEach(CodeMkb.getCodeMkb15(), id: \.id) { name in
+                    MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
+                }
+            }
+            .background(Color.back)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded15.toggle()
+                }
+            }
+        }
+        
+        MyViewBuilder(title: Text("P38-P38"), content: Text("**Отдельные состояния (перинатальный период)**")).buildTitleCodes(isTextExpanded: isTextExpanded16)
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded16.toggle()
+                }
+            }
+        if isTextExpanded16{
+            VStack(spacing: 1) {
+                ForEach(CodeMkb.getCodeMkb16(), id: \.id) { name in
+                    MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
+                }
+            }
+            .background(Color.back)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded16.toggle()
+                }
+            }
+        }
+        
+        MyViewBuilder(title: Text("P95-Q90"), content: Text("**Врожденные аномалии (пороки развития)**")).buildTitleCodes(isTextExpanded: isTextExpanded17)
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded17.toggle()
+                }
+            }
+        if isTextExpanded17{
+            VStack(spacing: 1) {
+                ForEach(CodeMkb.getCodeMkb17(), id: \.id) { name in
+                    MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
+                }
+            }
+            .background(Color.back)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded17.toggle()
+                }
+            }
+        }
+        
+        MyViewBuilder(title: Text("R04-R99"), content: Text("**Симптомы, признаки и отклонения от нормы**")).buildTitleCodes(isTextExpanded: isTextExpanded18)
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded18.toggle()
+                }
+            }
+        if isTextExpanded18{
+            VStack(spacing: 1) {
+                ForEach(CodeMkb.getCodeMkb18(), id: \.id) { name in
+                    MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
+                }
+            }
+            .background(Color.back)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded18.toggle()
+                }
+            }
+        }
+        
+        MyViewBuilder(title: Text("S00-T94"), content: Text("**Травмы, отравления и др.**")).buildTitleCodes(isTextExpanded: isTextExpanded19)
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded19.toggle()
+                }
+            }
+        if isTextExpanded19{
+            VStack(spacing: 1) {
+                ForEach(CodeMkb.getCodeMkb19(), id: \.id) { name in
+                    MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
+                }
+            }
+            .background(Color.back)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded19.toggle()
+                }
+            }
+        }
+        
+        MyViewBuilder(title: Text("Z51-Z99"), content: Text("**Факторы, влияющие на состояние здоровья**")).buildTitleCodes(isTextExpanded: isTextExpanded20)
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded20.toggle()
+                }
+            }
+        if isTextExpanded20{
+            VStack(spacing: 1) {
+                ForEach(CodeMkb.getCodeMkb20(), id: \.id) { name in
+                    MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
+                }
+            }
+            .background(Color.back)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+            .onTapGesture {
+                withAnimation (.easeInOut) {
+                    isTextExpanded20.toggle()
+                }
+            }
+        }
+        
+    }
 }

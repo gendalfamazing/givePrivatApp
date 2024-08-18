@@ -337,7 +337,9 @@ class MyViewBuilder: ViewBuilder1 {
                     .padding(5.0)
                     .background(Color.titleNumber)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
                     .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground)
                     .bold()
                 //                    .lineLimit(1)
@@ -364,7 +366,9 @@ class MyViewBuilder: ViewBuilder1 {
         .background(Color.grayButton)
         .font(.subheadline)
         .cornerRadius(10)
-        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        .overlay(RoundedRectangle(cornerRadius: 10)
+            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+        )
     }
     func buildTitleZakon(isTextExpanded: Bool) -> some View {
         
@@ -414,7 +418,6 @@ class MyViewBuilder: ViewBuilder1 {
                 title
                     .padding(.horizontal, 10)
                     .font(.headline)
-                
             }
             .frame(minWidth: 70)
             Spacer()
@@ -426,7 +429,6 @@ class MyViewBuilder: ViewBuilder1 {
             
         Spacer()
         }
-        
         .padding(2)
         .background(Color.grayButton)
         
