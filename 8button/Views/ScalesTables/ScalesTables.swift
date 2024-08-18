@@ -102,7 +102,9 @@ struct ScalesTables: View {
                             }
                         }
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) 
+                        )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
@@ -202,7 +204,9 @@ struct ScalesTables: View {
                                 }
                             }
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) 
+        )
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded2.toggle()
@@ -266,7 +270,9 @@ struct ScalesTables: View {
                                 }
                             }
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) 
+        )
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded2.toggle()
@@ -443,7 +449,9 @@ struct ScalesTables: View {
                             }
                             }
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded3.toggle()
@@ -474,7 +482,9 @@ struct ScalesTables: View {
                                 }
                             }
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded3.toggle()
@@ -501,19 +511,15 @@ struct ScalesTables: View {
                                       content: Text("""
                                                     **Стратификация риска тромбоэмболических осложнений**.
                                                     """)).buildGrayTextCenter()
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack  (spacing: 1){
+                        
                         VStack (spacing: 1){
                             HStack (alignment: .bottom){
                                 ZStack {
                                     Text(" ")
                                         .padding(.horizontal, 10)
                                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    
                                         .font(.footnote)
                                         .bold()
-                                    
                                 }
                                 .frame(width: 40)
                                 Spacer()
@@ -537,11 +543,8 @@ struct ScalesTables: View {
                                 .padding(3)
                                 
                             }
-                            Divider()
-                                .background(Color.divider)
-                                .padding(.horizontal, 5)
-                            .padding(2)
                             .background(Color.grayButton)
+                            
                             
                             ForEach(Table59AG.getTable59Tahi11(), id: \.id) { name in
                                 MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59CHA2()
@@ -552,13 +555,16 @@ struct ScalesTables: View {
                                     }
                             }
                         }
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded4.toggle()
                             }
                         }
-                            }
-                        }
+                         
                         
                         MyViewBuilder(title: Text("""
                                                   ----
@@ -584,7 +590,6 @@ struct ScalesTables: View {
                                     .bold()
                                     .padding(10)
                             }
-                            .padding(2)
                             .background(Color.grayButton)
                             HStack (alignment: .bottom){
                                 Text("Баллы")
@@ -604,14 +609,15 @@ struct ScalesTables: View {
                                 Spacer()
                                 
                             }
-                            .padding(2)
                             .background(Color.grayButton)
                             ForEach(TablePamyatki.getTableScaleCHA2DS2(), id: \.id) { name in
                                 MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableScaleCHA2DS2()
                             }
                         }
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded4.toggle()
@@ -637,8 +643,7 @@ struct ScalesTables: View {
                                       content: Text("""
                                                     **Стратификация риска кровотечеия**.
                                                     """)).buildGrayTextCenter()
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        
                             VStack  (spacing: 1){
                         VStack (spacing: 1){
                             HStack (alignment: .bottom){
@@ -646,10 +651,8 @@ struct ScalesTables: View {
                                     Text(" ")
                                         .padding(.horizontal, 10)
                                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    
                                         .font(.footnote)
                                         .bold()
-                                    
                                 }
                                 .frame(width: 40)
                                 Spacer()
@@ -673,10 +676,6 @@ struct ScalesTables: View {
                                 .padding(3)
                                 
                             }
-                            Divider()
-                                .background(Color.divider)
-                                .padding(.horizontal, 5)
-                            .padding(2)
                             .background(Color.grayButton)
                             
                             ForEach(Table59AG.getTable59Tahi12(), id: \.id) { name in
@@ -688,13 +687,17 @@ struct ScalesTables: View {
                                     }
                             }
                         }
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded5.toggle()
                             }
                         }
                             }
-                        }
+                        
                         MyViewBuilder(title: Text("""
                                                   ----
                                                   """),
@@ -799,9 +802,10 @@ struct ScalesTables: View {
                                 MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
                             }
                         }
-                        .background(Color.back)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded6.toggle()
@@ -847,9 +851,10 @@ struct ScalesTables: View {
                             }
                             
                         }
-                        .background(Color.back)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded7.toggle()
@@ -910,9 +915,10 @@ struct ScalesTables: View {
                             }
                             
                         }
-                        .background(Color.back)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded8.toggle()
@@ -977,9 +983,10 @@ struct ScalesTables: View {
                             }
                             
                         }
-                        .background(Color.back)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded9.toggle()
@@ -1069,7 +1076,9 @@ struct ScalesTables: View {
                             }
                         }
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) 
+                            )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded11.toggle()

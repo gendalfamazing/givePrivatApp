@@ -312,6 +312,7 @@ struct Prikaz1030Alg11View: View {
                             }
                         }
                         if isTextExpanded6 {
+                            Image(systemName: "arrow.down")
                             MyViewBuilder(title: Text("10"), content: Text("""
                             **Экстренная кардиоверсия,
                             в/в седация (диазепам 0,5 % - 4-6 мл), 50-100-200-300-360 Дж**

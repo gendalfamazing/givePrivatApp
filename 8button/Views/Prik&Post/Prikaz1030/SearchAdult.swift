@@ -256,7 +256,10 @@ struct SearchAdult: View {
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(Color.titleNumber)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                                )
                             Text(adult.title)
 //                                .padding(.horizontal)
                                 .font(.headline)
@@ -288,7 +291,10 @@ struct SearchAdult: View {
                 .frame(minHeight: 50)
                 .modifier(ThemeTitleBlueColorModifier())
                 .cornerRadius(10)
-                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                )
                 
             }
             .background(Color.back)

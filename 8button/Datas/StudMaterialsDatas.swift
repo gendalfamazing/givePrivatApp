@@ -1380,7 +1380,7 @@ struct TablePamyatki: Identifiable {
                         content26:"",
                         content27:"",
                         content28:"",
-                        id: 14),
+                        id: 15),
             
         ]
     }

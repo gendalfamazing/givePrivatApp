@@ -160,14 +160,16 @@ class MyViewBuilder: ViewBuilder1 {
                 .fontWeight(.semibold)
                 .frame(minHeight: 49)
                 .frame(minWidth: 49)
-                
                 .modifier(ThemeBlueColorModifier())
 //                .background(Color.blueButton)
                 .background(isTextExpanded ? Color.toggle : Color.blueButton)
                 .background(Color.grayButton)
                 .font(.subheadline)
                 .cornerRadius(10)
-                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                )
 //
                 
     }
@@ -198,20 +200,19 @@ class MyViewBuilder: ViewBuilder1 {
                 }
                 .padding(7.0)
 //                .lineLimit(2)
-                
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
-                
                 .frame(minHeight: 49)
                 .frame(minWidth: 49)
-                
                 .modifier(ThemeBlueColorModifier())
 //                .background(Color.blueButton)
                 .background(isTextExpanded ? Color.toggle : Color.blueButton)
                 .background(Color.grayButton)
-                
                 .cornerRadius(10)
-                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                )
 //
                 
     }
@@ -565,7 +566,6 @@ class MyViewBuilder: ViewBuilder1 {
                 .padding(3)
         }
         .padding(2)
-        .background(Color.grayButton)
         
     }
     func buildGreen1Text(isTextExpanded: Bool) -> some View {
@@ -585,7 +585,10 @@ class MyViewBuilder: ViewBuilder1 {
 //            .background(isTextExpanded ? Color.toggle1 : Color.greenButton)
             .font(.subheadline)
             .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+            )
             
     }
     
@@ -626,7 +629,7 @@ class MyViewBuilder: ViewBuilder1 {
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
             )
         
     }
@@ -643,7 +646,7 @@ class MyViewBuilder: ViewBuilder1 {
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
             )
         
     }
@@ -670,7 +673,10 @@ class MyViewBuilder: ViewBuilder1 {
         .modifier(ThemeGrayColorModifier())
         .font(.subheadline)
         .cornerRadius(10)
-        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+        )
         
     }
     
@@ -709,7 +715,7 @@ class MyViewBuilder: ViewBuilder1 {
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 20)
-            .modifier(ThemeGrayColorModifier())
+            .modifier(ThemeGrayColorModifierWithOutBackground())
             .font(.subheadline)
             .cornerRadius(10)
 //            .shadow(radius: 2)
@@ -724,7 +730,7 @@ class MyViewBuilder: ViewBuilder1 {
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 20)
-            .modifier(ThemeGrayColorModifier())
+            .modifier(ThemeGrayColorModifierWithOutBackground())
             .font(.subheadline)
             .cornerRadius(10)
 //            .shadow(radius: 2)
@@ -756,7 +762,7 @@ class MyViewBuilder: ViewBuilder1 {
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 20)
-            .modifier(ThemeGrayColorModifier())
+            .modifier(ThemeGrayColorModifierWithOutBackground())
             .font(.subheadline)
             .cornerRadius(10)
 //            .shadow(radius: 2)
@@ -770,7 +776,7 @@ class MyViewBuilder: ViewBuilder1 {
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             .fixedSize(horizontal: false, vertical: true)
             .frame(minHeight: 20)
-            .modifier(ThemeGrayColorModifier())
+            .modifier(ThemeGrayColorModifierWithOutBackground())
             .font(.subheadline)
             .cornerRadius(10)
 //            .shadow(radius: 2)
@@ -787,7 +793,10 @@ class MyViewBuilder: ViewBuilder1 {
             .modifier(ThemeNavigationColorModifier())
             .font(.subheadline)
             .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+            )
         
         
     }
@@ -803,7 +812,10 @@ class MyViewBuilder: ViewBuilder1 {
             .background(Color.grayButton)
             .font(.subheadline)
             .cornerRadius(10)
-            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+            )
             
     }
     func grayRectangle1() -> some View {
@@ -819,7 +831,7 @@ class MyViewBuilder: ViewBuilder1 {
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
             )
             
 //            .shadow(color: .shadow, radius: 2)
@@ -874,7 +886,7 @@ class MyViewBuilder: ViewBuilder1 {
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
         )
         
         
@@ -928,7 +940,7 @@ class MyViewBuilder: ViewBuilder1 {
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
             )
         
         
@@ -943,7 +955,10 @@ class MyViewBuilder: ViewBuilder1 {
                         .frame(width: 40, height: 40)
                         .foregroundColor(Color.titleNumber)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
                     title
 //                        .padding(.horizontal)
                         .font(.headline)
@@ -975,7 +990,10 @@ class MyViewBuilder: ViewBuilder1 {
         .frame(minHeight: 50)
         .modifier(ThemeTitleBlueColorModifier())
         .cornerRadius(10)
-        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+        )
         
     }
     func buildTitle1BlueText() -> some View {
@@ -991,7 +1009,10 @@ class MyViewBuilder: ViewBuilder1 {
                     .padding(5.0)
                     .background(Color.titleNumber)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                    )
                     .foregroundColor(Color.titleNumberForeground)
                     .bold()
                 //                    .lineLimit(1)
@@ -1021,7 +1042,10 @@ class MyViewBuilder: ViewBuilder1 {
         .frame(minHeight: 50)
         .modifier(ThemeTitleBlueColorModifier())
         .cornerRadius(10)
-        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+        )
         
     }
     
@@ -1075,7 +1099,15 @@ struct ThemeGrayColorModifier: ViewModifier {
 
     }
 }
+struct ThemeGrayColorModifierWithOutBackground: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
 
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .dark ? Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9490196078431372) : Color.black)
+
+    }
+}
 struct ThemeNavigationColorModifier: ViewModifier {
     @Environment(\.colorScheme) private var colorScheme
 
@@ -1505,7 +1537,8 @@ class MyViewBuilder59: ViewBuilder3 {
     //Шкала CHA2DS2
     func buildTableScaleCHA2DS2() -> some View {
         
-        return HStack(alignment: .center) {
+        return VStack (spacing: 1) {
+        HStack(alignment: .center) {
             
             Text(LocalizedStringKey(title1))
                 .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
@@ -1521,9 +1554,10 @@ class MyViewBuilder59: ViewBuilder3 {
             Spacer()
             
         }
-        .padding(2)
         .background(Color.grayButton)
-        
+        .padding(2)
+    }
+        .background(Color.grayButton)
     }
     
     //памятки таблицы
@@ -3372,7 +3406,7 @@ class MyViewBuilder59: ViewBuilder3 {
         
         return VStack (spacing:1) {
             
-            HStack (alignment: .top){
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title1))
                         .padding(.horizontal, 10)
@@ -3391,22 +3425,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title4))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title5))
@@ -3417,22 +3445,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title7))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title8))
@@ -3443,22 +3465,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title10))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title11))
@@ -3469,22 +3485,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title13))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title14))
@@ -3495,22 +3505,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title16))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title17))
@@ -3521,22 +3525,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title19))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title20))
@@ -3547,22 +3545,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title22))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title23))
@@ -3573,11 +3565,9 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Spacer(minLength: 3)
+            .background(Color.grayButton)
         }
-        .cornerRadius(10)
         .textSelection(.enabled)
         
     }
@@ -3586,15 +3576,13 @@ class MyViewBuilder59: ViewBuilder3 {
         
         return VStack (spacing:1) {
             
-            HStack (alignment: .top){
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title1))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title2))
@@ -3605,22 +3593,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title4))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title5))
@@ -3631,22 +3613,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title7))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title8))
@@ -3657,22 +3633,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title10))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title11))
@@ -3683,22 +3653,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title13))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title14))
@@ -3709,22 +3673,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
-            HStack (alignment: .top){
+            
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title16))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title17))
@@ -3735,23 +3693,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
-            .padding(2)
             .background(Color.grayButton)
             
-            HStack (alignment: .top){
+            HStack (alignment: .center){
                 ZStack {
                     Text(LocalizedStringKey(title19))
                         .padding(.horizontal, 10)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
                         .font(.footnote)
                         .bold()
-                    
                 }
                 .frame(width: 40)
                 Text(LocalizedStringKey(title20))
@@ -3762,11 +3713,10 @@ class MyViewBuilder59: ViewBuilder3 {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .frame(width: 35)
                 .font(.footnote)
-                
             }
-            Spacer(minLength: 3)
+            .background(Color.grayButton)
         }
-        .cornerRadius(10)
+        
         .textSelection(.enabled)
         
     }

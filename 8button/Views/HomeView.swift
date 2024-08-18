@@ -35,7 +35,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             
@@ -61,7 +61,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     
@@ -79,7 +79,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -104,7 +104,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     
@@ -121,7 +121,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -146,7 +146,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     NavigationLink(destination: StudMaterials()) {
@@ -162,7 +162,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -187,7 +187,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     NavigationLink(destination: InfusionRateCalculatorView()) {
@@ -203,7 +203,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -228,7 +228,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     NavigationLink(destination: AkusherskoePosobie()) {
@@ -244,7 +244,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -269,7 +269,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     NavigationLink(destination: AtlasECG()) {
@@ -285,7 +285,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -310,7 +310,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
 //                    
@@ -327,7 +327,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .foregroundColor(Color.titleNumberForeground)
                             Spacer()
@@ -352,7 +352,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
                     }
                     
