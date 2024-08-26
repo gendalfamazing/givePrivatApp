@@ -44,7 +44,7 @@ struct PrikazyPostanovleniya: View {
                     NavigationLink(destination: Postanovlenie99View()) {
                         MyViewBuilder(title: Text("""
                         Постановление 
-                        МЗ РБ от 21.08.21
+                        МЗ РБ от 23.08.21
                         № 99
                         """), content: Text("Клинический протокол «Оказание медицинской помощи пациентам в критических для жизни состояниях»")).buildTitle1BlueText()
                     }

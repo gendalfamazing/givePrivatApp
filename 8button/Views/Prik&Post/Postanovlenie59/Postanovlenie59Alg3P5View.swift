@@ -37,9 +37,8 @@ struct Postanovlenie59Alg3P5View: View {
                         
                     
                         VStack (spacing: 5) {
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1) {
+                        
+                            VStack (spacing: 5) {
                                 MyViewBuilder(title: Text("""
                                                   """),
                                               content: Text("""
@@ -57,7 +56,9 @@ struct Postanovlenie59Alg3P5View: View {
                                         }
                                     }
                                     .cornerRadius(10)
-                                    //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                            )
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded2.toggle()
@@ -66,7 +67,7 @@ struct Postanovlenie59Alg3P5View: View {
                                     Spacer(minLength: 1)
                                 }
                             }
-                        }
+                            
                             ZStack {
                                 MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                                 VStack (spacing: 1) {

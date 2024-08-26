@@ -229,9 +229,8 @@ struct DayView: View {
                             .fill(Color.grayButton)
                             .frame(width: 40, height: 40)
                             .cornerRadius(6)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 6)
-                                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                            .overlay(RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                             )
                             .zIndex(1)
                 }
@@ -478,9 +477,8 @@ struct CalendarGrid: View {
         .padding()
         .background(Color.grayButton)
         .cornerRadius(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+        .overlay(RoundedRectangle(cornerRadius: 10)
+            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
         )
         .sheet(isPresented: $viewModel.showEventSheet) {
             EventCreationSheet(viewModel: viewModel)
@@ -586,10 +584,10 @@ struct EventsView: View {
                 .frame(maxWidth: .infinity)
                 .padding(15)
                 .background(Color.gray.opacity(0.25))
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+                .background(Color.grayButton)
+                .cornerRadius(10)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                 )
             } else {
                 Text("\(formattedDate):")
@@ -614,10 +612,10 @@ struct EventsView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .background(event.type.color.opacity(0.5))
-                    .cornerRadius(8)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.shadowGrayRectangle, lineWidth: 0.2)
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                     )
                 }
             }
@@ -724,11 +722,14 @@ struct EventCreationSheet: View {
                         Text("Ночь").tag(EventType.night)
                         Text("Сутки").tag(EventType.twentyFourHours)
                     }
+                    .padding(.bottom, 1)
                     .background(colorScheme == .dark ? Color.white.opacity(0) : Color.white.opacity(0.95))
-                    .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .cornerRadius(8)
+                    .overlay(RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
                     .pickerStyle(SegmentedPickerStyle())
-
+                    
                     Spacer(minLength: 10)
 
                     VStack(alignment: .leading, spacing: 1) {
@@ -961,7 +962,9 @@ struct EventCreationSheet: View {
                 }
                 .background(.grayButton)
                 .cornerRadius(10)
-                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                )
                 
             }
             

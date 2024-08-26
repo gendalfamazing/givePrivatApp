@@ -457,10 +457,11 @@ struct ScalesTables: View {
                                     isTextExpanded3.toggle()
                                 }
                             }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                            
+                                
                                 VStack (spacing: 1) {
                                     MyViewBuilder(title: Text(""), content: Text("**Определение риска по шкале GRACE**")).buildGrayInText()
+                                        .background(Color.grayButton)
                                     HStack (alignment: .bottom){
                                         Text("Риск по шкале GRACE")
                                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
@@ -476,11 +477,12 @@ struct ScalesTables: View {
                                             .padding(3)
                                         
                                     }
+                                    .background(Color.grayButton)
                                     ForEach(Table59OKSSmall.getTable59GRACE7(), id: \.id) { name in
                                         MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTableGRACEKey()
                                     }
                                 }
-                            }
+                            
                             .cornerRadius(10)
                             .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)

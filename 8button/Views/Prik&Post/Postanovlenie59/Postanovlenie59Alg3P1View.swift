@@ -105,7 +105,9 @@ struct Postanovlenie59Alg3P1View: View {
                         }
                         .background(Color.back)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded3.toggle()

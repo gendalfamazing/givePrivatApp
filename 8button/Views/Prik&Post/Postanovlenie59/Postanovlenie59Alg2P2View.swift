@@ -36,10 +36,7 @@ struct Postanovlenie59Alg2P2View: View {
                             (при отсутствии акушерской патологии)**
                             """)).buildGrayTextCenter()
                         .multilineTextAlignment(.center)
-                      
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
                             MyViewBuilder(title: Text("1"), content: Text("Существовавшая ранее эссенциальная (**О10.0**), кардиоваскулярная (**О10.1**), почечная (**О10.2**), вторичная (**О10.4**)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -59,7 +56,10 @@ struct Postanovlenie59Alg2P2View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )                                 
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -67,12 +67,7 @@ struct Postanovlenie59Alg2P2View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Гипертензия, осложняющая беременность, роды и после родовой период")).buildBlue59Text(isTextExpanded: isTextExpanded2)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -91,7 +86,10 @@ struct Postanovlenie59Alg2P2View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )                                 
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded2.toggle()
@@ -99,12 +97,7 @@ struct Postanovlenie59Alg2P2View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Существовавшая ранее гипертензия с присоединившейся протеинурией (**О11**)")).buildBlue59Text(isTextExpanded: isTextExpanded3)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -123,7 +116,10 @@ struct Postanovlenie59Alg2P2View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )                                 
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded3.toggle()
@@ -131,12 +127,7 @@ struct Postanovlenie59Alg2P2View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
                             MyViewBuilder(title: Text("1"), content: Text("Вызванная беременностью гипертензия без значительной протеинурии (**О13**)")).buildBlue59Text(isTextExpanded: isTextExpanded4)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -155,7 +146,10 @@ struct Postanovlenie59Alg2P2View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )                                 
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded4.toggle()
@@ -163,12 +157,7 @@ struct Postanovlenie59Alg2P2View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Вызванная беременностью гипертензия со значительной протеинурией (**О14**) (**преэклампсия**)")).buildBlue59Text(isTextExpanded: isTextExpanded5)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -187,7 +176,10 @@ struct Postanovlenie59Alg2P2View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )                                 
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded5.toggle()
@@ -196,11 +188,7 @@ struct Postanovlenie59Alg2P2View: View {
                                 
                             }
                             
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                 
                             MyViewBuilder(title: Text("1"), content: Text("Эклампсия (**О15**)")).buildBlue59Text(isTextExpanded: isTextExpanded6)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -219,7 +207,10 @@ struct Postanovlenie59Alg2P2View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )                                 
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded6.toggle()
@@ -227,9 +218,7 @@ struct Postanovlenie59Alg2P2View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                   
                     
                     
             }

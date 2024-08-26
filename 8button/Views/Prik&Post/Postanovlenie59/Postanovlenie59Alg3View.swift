@@ -173,24 +173,25 @@ struct Postanovlenie59Alg3View: View {
                         }
                     Spacer(minLength: 10)
                     
-                        VStack  {
-                            MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом со стойким подъемом сегмента ST")).buildBlue59Text(isTextExpanded: isTextExpanded14)
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded14.toggle()
-                                    }
+                    
+                        
+                        MyViewBuilder(title: Text("1"), content: Text("Оказание медицинской помощи пациентам с острым коронарным синдромом со стойким подъемом сегмента ST")).buildBlue591Text(isTextExpanded: isTextExpanded14)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded14.toggle()
                                 }
+                            }
                             
+                    
                             if isTextExpanded14{
+                                VStack (spacing: 1) {
                                 MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post59Alg3B0G0S11"))).buildGrayInHiddenText()
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded14.toggle()
                                         }
                                     }
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
+                                    .background(Color.grayButton)
                                 VStack (spacing: 1){
                                     
                                     
@@ -199,23 +200,19 @@ struct Postanovlenie59Alg3View: View {
                                     }
                                     
                                 }
-                                .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded14.toggle()
                                     }
                                 }
-                                
+                            }
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             }
                             
-                        }
-                        .background(Color.grayButton)
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
-                        )
+                        
                     
                     
                     
@@ -227,17 +224,16 @@ struct Postanovlenie59Alg3View: View {
                                         isTextExpanded15.toggle()
                                     }
                                 }
-                            
+                                
                             if isTextExpanded15{
+                                VStack (spacing: 1) {
                                 MyViewBuilder(title: Text("1"), content: Text(LocalizedStringKey("Post59Alg3B0G0S12"))).buildGrayInHiddenText()
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded15.toggle()
                                         }
                                     }
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
+                                    .background(Color.grayButton)
                                 VStack (spacing: 1){
                                     
                                     
@@ -246,23 +242,20 @@ struct Postanovlenie59Alg3View: View {
                                     }
                                     
                                 }
-                                .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded15.toggle()
                                     }
                                 }
-                                
+                                }
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                             }
                             
                         }
-                        .background(Color.grayButton)
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
-                        )
+                        
                     
                     
                     Spacer(minLength: 10)

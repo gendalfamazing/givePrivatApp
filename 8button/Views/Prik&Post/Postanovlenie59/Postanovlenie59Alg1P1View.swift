@@ -35,9 +35,7 @@ struct Postanovlenie59Alg1P1View: View {
                             """)).buildGrayTextCenter()
                         .multilineTextAlignment(.center)
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Эссенциальная (первичная) гипертензия Артериальная гипертензия I-III ст. (I10.0)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -57,7 +55,9 @@ struct Postanovlenie59Alg1P1View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -65,12 +65,8 @@ struct Postanovlenie59Alg1P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                       
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Артериальная гипертензия (АГ) с преимущественным поражением сердца с (застойной) сердечной недостаточностью (I11.0)")).buildBlue59Text(isTextExpanded: isTextExpanded2)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -89,7 +85,9 @@ struct Postanovlenie59Alg1P1View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded2.toggle()
@@ -97,12 +95,8 @@ struct Postanovlenie59Alg1P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
+                   
                             MyViewBuilder(title: Text("1"), content: Text("Артериальная гипертензия с преимущественным поражением почек с почечной недостаточностью (I12.0)")).buildBlue59Text(isTextExpanded: isTextExpanded3)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -121,7 +115,9 @@ struct Postanovlenie59Alg1P1View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded3.toggle()
@@ -129,12 +125,7 @@ struct Postanovlenie59Alg1P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Артериальная гипертензия с преимущественным поражением сердца и почек с застойной сердечной недостаточностью (I13.0)")).buildBlue59Text(isTextExpanded: isTextExpanded4)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -153,7 +144,9 @@ struct Postanovlenie59Alg1P1View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded4.toggle()
@@ -161,12 +154,8 @@ struct Postanovlenie59Alg1P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
+                   
                             MyViewBuilder(title: Text("1"), content: Text("Артериальная гипертензия с преимущественным поражением сердца и почек с застойной сердечной недостаточностью и почечной недостаточностью (I13.2)")).buildBlue59Text(isTextExpanded: isTextExpanded5)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -185,7 +174,9 @@ struct Postanovlenie59Alg1P1View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded5.toggle()
@@ -193,12 +184,8 @@ struct Postanovlenie59Alg1P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                       
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Реноваскулярная гипертензия (фибромускулярная дисплазия, неспецифический аортоартериит) (I15.0)")).buildBlue59Text(isTextExpanded: isTextExpanded6)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -217,7 +204,9 @@ struct Postanovlenie59Alg1P1View: View {
                                     
                                 }
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded6.toggle()
@@ -225,9 +214,7 @@ struct Postanovlenie59Alg1P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                      
                     
                     
             }
