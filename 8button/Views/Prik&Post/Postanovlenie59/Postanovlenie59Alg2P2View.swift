@@ -55,6 +55,7 @@ struct Postanovlenie59Alg2P2View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -85,6 +86,7 @@ struct Postanovlenie59Alg2P2View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -115,6 +117,7 @@ struct Postanovlenie59Alg2P2View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -145,6 +148,7 @@ struct Postanovlenie59Alg2P2View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -175,6 +179,7 @@ struct Postanovlenie59Alg2P2View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -206,6 +211,7 @@ struct Postanovlenie59Alg2P2View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)

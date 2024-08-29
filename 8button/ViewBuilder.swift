@@ -497,24 +497,26 @@ class MyViewBuilder: ViewBuilder1 {
     }
     func buildTable59OKSSmall() -> some View {
         
-        return HStack(alignment: .top) {
-            
+        return HStack(alignment: .top, spacing: 1) {
+            VStack(spacing: 1) {
                 title
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
-                .font(.caption2)
-                .padding(3)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                    .font(.caption2)
+                    .padding(3)
+            }
+            .frame(maxHeight: .infinity, alignment: .topLeading)
+            .background(Color.grayButton)
+            VStack (spacing:1) {
+                content
+                    .textSelection(.enabled)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                    .font(.caption2)
+                    .padding(3)
+            }
+            .frame(maxHeight: .infinity, alignment: .topLeading)
+            .background(Color.grayButton)
             
-            Spacer()
-            content
-                .textSelection(.enabled)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
-                .font(.caption2)
-                .padding(3)
-            
-        Spacer()
         }
-        .padding(2)
-        .background(Color.grayButton)
         
     }
     
@@ -565,29 +567,25 @@ class MyViewBuilder: ViewBuilder1 {
     func buildTableGRACE() -> some View {
         
         return HStack (alignment: .center){
-            ZStack {
+            VStack (spacing:1){
                 title
                 .padding(.horizontal, 10)
                 .font(.subheadline)
-                
-                
+            }
+            Spacer()
+            VStack (spacing:1) {
+                content
+                    .textSelection(.enabled)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: 40)
+                //                .frame(maxWidth: 70)
+                    .font(.footnote)
+                    .bold()
+                    .padding(3)
             }
             
-            Spacer()
-            content
-                .textSelection(.enabled)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .frame(maxWidth: 40)
-//                .frame(maxWidth: 70)
-                .font(.footnote)
-                .bold()
-                .padding(3)
-            
-            
         }
-        .padding(2)
         .background(Color.grayButton)
-        
     }
     func buildTableGRACEKey() -> some View {
         
@@ -2384,23 +2382,24 @@ class MyViewBuilder59: ViewBuilder3 {
     func buildTable59OKSRightVentrick() -> some View {
         
         return VStack (spacing: 1){
-            
-            Text(LocalizedStringKey(title1))
-                .padding(.horizontal, 7)
-                .font(.subheadline)
-                .bold()
-            
-            Text(LocalizedStringKey(title2))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-            //                .frame(maxWidth: 70)
-                .font(.caption2)
-                .padding(7)
-            
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            VStack (spacing:1) {
+                Text(LocalizedStringKey(title1))
+                    .padding(.horizontal, 7)
+                    .padding(.top, 2)
+                    .font(.subheadline)
+                    .bold()
+                
+                Text(LocalizedStringKey(title2))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                //                .frame(maxWidth: 70)
+                    .font(.caption2)
+                    .padding(7)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title3))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             
@@ -2409,12 +2408,12 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title5))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             Text(LocalizedStringKey(title6))
@@ -2422,12 +2421,12 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title7))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             
@@ -2436,12 +2435,12 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title9))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             Text(LocalizedStringKey(title10))
@@ -2449,12 +2448,12 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title11))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             Text(LocalizedStringKey(title12))
@@ -2462,12 +2461,12 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title13))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             Text(LocalizedStringKey(title14))
@@ -2475,11 +2474,12 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            }
+            .background(Color.grayButton)
+            VStack (spacing:1) {
             Text(LocalizedStringKey(title15))
                 .padding(.horizontal, 7)
+                .padding(.top, 2)
                 .font(.subheadline)
                 .bold()
             Text(LocalizedStringKey(title16))
@@ -2487,11 +2487,11 @@ class MyViewBuilder59: ViewBuilder3 {
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(7)
+            }
+            .background(Color.grayButton)
             
         }
         .textSelection(.enabled)
-        .padding(2)
-        .background(Color.grayButton)
         
     }
     func buildTable59OKS() -> some View {
@@ -2892,7 +2892,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1) {
                         Text(LocalizedStringKey(title5))
                             .frame(width: 110, alignment: .leading)
-                            .frame(height: .infinity)
                             .font(.caption)
                             .bold()
                             .padding(5)
@@ -2902,26 +2901,22 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title6))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
                             .background(Color.grayButton)
                         Text(LocalizedStringKey(title7))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
                             .background(Color.grayButton)
                     }
                 }
-                .frame(height: .infinity)
                 HStack (alignment: .top, spacing: 1){
                     VStack (spacing:1) {
                         Text(LocalizedStringKey(title8))
                             .frame(width: 110, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption)
                             .bold()
@@ -2932,14 +2927,12 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title9))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
                             .background(Color.grayButton)
                         Text(LocalizedStringKey(title10))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                             .font(.caption2)
                             .padding(5)
                             .background(Color.grayButton)
@@ -2949,7 +2942,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1) {
                         Text(LocalizedStringKey(title11))
                             .frame(width: 110, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption)
                             .bold()
@@ -2960,13 +2952,11 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title12))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                             .font(.caption2)
                             .padding(5)
                             .background(Color.grayButton)
                         Text(LocalizedStringKey(title13))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                             .font(.caption2)
                             .padding(5)
                             .background(Color.grayButton)
@@ -2976,7 +2966,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1) {
                         Text(LocalizedStringKey(title14))
                             .frame(width: 110, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption)
                             .bold()
@@ -2987,7 +2976,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title15))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
@@ -3000,7 +2988,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1) {
                         Text(LocalizedStringKey(title16))
                             .frame(width: 110, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption)
                             .bold()
@@ -3011,7 +2998,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title17))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
@@ -3024,7 +3010,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1) {
                         Text(LocalizedStringKey(title18))
                             .frame(width: 110, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption)
                             .bold()
@@ -3034,7 +3019,6 @@ class MyViewBuilder59: ViewBuilder3 {
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title19))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
@@ -3054,18 +3038,16 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+                .background(Color.grayButton)
+            
             Text(LocalizedStringKey(title2))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+                .background(Color.grayButton)
+            
             HStack (alignment: .bottom){
                 Text(LocalizedStringKey(title3))
                     .frame(minWidth: 0, maxWidth: 100, alignment: .center)
@@ -3083,17 +3065,20 @@ class MyViewBuilder59: ViewBuilder3 {
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            .background(Color.grayButton)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title5))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing:1) {
+                        Text(LocalizedStringKey(title5))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title6))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -3101,29 +3086,29 @@ class MyViewBuilder59: ViewBuilder3 {
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
+                        
                         Text(LocalizedStringKey(title7))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
             
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title8))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing:1) {
+                        Text(LocalizedStringKey(title8))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title9))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -3131,29 +3116,28 @@ class MyViewBuilder59: ViewBuilder3 {
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
+                        
                         Text(LocalizedStringKey(title10))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
-                        //                        .truncationMode(.head)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title11))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing:1) {
+                        Text(LocalizedStringKey(title11))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title12))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -3161,29 +3145,27 @@ class MyViewBuilder59: ViewBuilder3 {
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
                         Text(LocalizedStringKey(title13))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
-                        //                        .truncationMode(.head)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title14))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing:1) {
+                        Text(LocalizedStringKey(title14))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title15))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -3191,29 +3173,28 @@ class MyViewBuilder59: ViewBuilder3 {
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
+                        
                         Text(LocalizedStringKey(title16))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
-                        //                        .truncationMode(.head)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title17))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing:1) {
+                        Text(LocalizedStringKey(title17))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title18))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -3221,49 +3202,50 @@ class MyViewBuilder59: ViewBuilder3 {
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
+                        
                         Text(LocalizedStringKey(title19))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
-                        //                        .truncationMode(.head)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title20))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing: 1) {
+                        Text(LocalizedStringKey(title20))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }.background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title21))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title22))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing:1) {
+                        Text(LocalizedStringKey(title22))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                        .background(Color.grayButton)
+                    
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title23))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -3271,12 +3253,12 @@ class MyViewBuilder59: ViewBuilder3 {
                         //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
+                            
                     }
+                    .background(Color.grayButton)
                 }
         }
         .textSelection(.enabled)
-        .padding(2)
-        .background(Color.grayButton)
         
     }
     
@@ -3289,27 +3271,23 @@ class MyViewBuilder59: ViewBuilder3 {
                 .font(.caption2)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+                .background(Color.grayButton)
+            
             Text(LocalizedStringKey(title2))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-            //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+                .background(Color.grayButton)
+            
             Text(LocalizedStringKey(title3))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             //                .frame(maxWidth: 70)
                 .font(.caption2)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+                .background(Color.grayButton)
+            
             HStack (alignment: .bottom){
                 Text(LocalizedStringKey(title4))
                     .frame(minWidth: 0, maxWidth: 100, alignment: .center)
@@ -3327,105 +3305,104 @@ class MyViewBuilder59: ViewBuilder3 {
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
             }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            .background(Color.grayButton)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title6))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing: 1) {
+                        Text(LocalizedStringKey(title6))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                        //                .frame(maxWidth: 70)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
+                    
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title7))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
+                        
                         Text(LocalizedStringKey(title8))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title9))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing: 1) {
+                        Text(LocalizedStringKey(title9))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title10))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
-                        Text(LocalizedStringKey(title11))
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
-                            .font(.caption2)
-                            .padding(5)
+                            .background(Color.grayButton)
+                        VStack (spacing:1) {
+                            Text(LocalizedStringKey(title11))
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .frame(height: .infinity)
+                                .font(.caption2)
+                                .padding(5)
+                            Spacer()
+                        }
+                        .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
                 HStack (alignment: .top, spacing: 1){
-                    Text(LocalizedStringKey(title12))
-                        .frame(width: 110, alignment: .leading)
-                        .frame(height: .infinity)
-                    //                .frame(maxWidth: 70)
-                        .font(.caption)
-                        .bold()
-                        .padding(5)
+                    VStack (spacing: 1) {
+                        Text(LocalizedStringKey(title12))
+                            .frame(width: 110, alignment: .leading)
+                            .frame(height: .infinity)
+                            .font(.caption)
+                            .bold()
+                            .padding(5)
+                        Spacer()
+                    }
+                    .background(Color.grayButton)
                     VStack (spacing:1){
                         Text(LocalizedStringKey(title13))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
-                        Divider()
-                            .background(Color.divider)
-                            .padding(.horizontal, 5)
+                            .background(Color.grayButton)
+                        
                         Text(LocalizedStringKey(title14))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .frame(height: .infinity)
-                        //                .frame(maxWidth: 70)
                             .font(.caption2)
                             .padding(5)
+                            .background(Color.grayButton)
                     }
                 }
-            Divider()
-                .background(Color.divider)
-                .padding(.horizontal, 5)
+            
             Text(LocalizedStringKey(title15))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .font(.caption2)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
+                .background(Color.grayButton)
         }
         .textSelection(.enabled)
-        .padding(2)
-        .background(Color.grayButton)
         
     }
     
@@ -3860,7 +3837,7 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    Postanovlenie59Alg3P5View()
+    Postanovlenie59Alg3P3View()
 }
 
 class FirstResponderController: ObservableObject {

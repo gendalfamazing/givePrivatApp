@@ -311,9 +311,8 @@ struct Postanovlenie59Alg3P6View: View {
                                 isTextExpanded16.toggle()
                             }
                         }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1) {
+                    
+                        VStack (spacing: 5) {
                             MyViewBuilder(title: Text(""),
                                           content: Text("""
                                                 Начальная энергия электрического разряда при устранении аритмий, не связанных с остановкой кровообращения (ВНОК, 2007)
@@ -324,108 +323,113 @@ struct Postanovlenie59Alg3P6View: View {
                                     }
                                 }
                             if isTextExpanded17 {
+
                                 VStack (spacing:1){
-                                    HStack (alignment: .bottom){
+                                    HStack (alignment: .bottom, spacing: 1){
+                                        VStack (spacing:1) {
+                                            Spacer()
                                         Text("Аритмия")
                                             .frame(minWidth: 150, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
-                                            .font(.caption2)
-                                            .bold()
-                                            .padding(.horizontal, 5)
-                                            .padding(.vertical, 5)
-                                        Divider()
-                                            .background(Color.divider)
-                                            .padding(.top,5)
-                                        Text("Бифазный разряд")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
-                                            .font(.caption2)
-                                            .bold()
-                                            .padding(.horizontal, 5)
-                                            .padding(.vertical, 5)
-                                        Divider()
-                                            .background(Color.divider)
-                                            .padding(.top,5)
-                                        Text("Монофазный разряд")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
                                             .font(.caption2)
                                             .bold()
                                             .padding(.horizontal, 5)
                                             .padding(.vertical, 5)
                                     }
-                                    Divider()
-                                        .background(Color.divider)
-                                        .padding(.horizontal,5)
-                                    HStack (alignment: .top){
+                                            .background(Color.grayButton)
+                                        VStack (spacing:1) {
+                                            Spacer()
+                                            Text("Бифазный разряд")
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                                .font(.caption2)
+                                                .bold()
+                                                .padding(.horizontal, 5)
+                                                .padding(.vertical, 5)
+                                        }.background(Color.grayButton)
+                                        VStack (spacing:1) {
+                                            Spacer()
+                                            Text("Монофазный разряд")
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                                .font(.caption2)
+                                                .bold()
+                                                .padding(.horizontal, 5)
+                                                .padding(.vertical, 5)
+                                        }
+                                            .background(Color.grayButton)
+                                    }
+                                    
+                                    HStack (alignment: .top, spacing:1){
                                         Text("""
                                     - Фибрилляция предсердий
                                     - Тахикардия с широкими комплексами QRS
                                     """)
                                         .frame(minWidth: 150, maxWidth: .infinity, alignment: .leading)
-                                        .frame(height: 55)
-                                        
-                                        //                .frame(maxWidth: 70)
                                         .font(.caption2)
                                         .bold()
                                         .padding(.horizontal, 5)
                                         .padding(.vertical, 5)
-                                        Divider()
-                                            .background(Color.divider)
-                                            .frame(height: 65)
-                                        Text("120-150 Дж")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
-                                            .font(.caption2)
-                                            .padding(.horizontal, 5)
-                                            .padding(.vertical, 5)
-                                        Divider()
-                                            .background(Color.divider)
-                                            .frame(height: 65)
-                                        Text("200 Дж")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
-                                            .font(.caption2)
-                                            .padding(.horizontal, 5)
-                                            .padding(.vertical, 5)
+                                        .background(Color.grayButton)
+                                        VStack (spacing:1) {
+                                            Spacer()
+                                            Text("120-150 Дж")
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                                .font(.caption2)
+                                                .padding(.horizontal, 5)
+                                                .padding(.vertical, 5)
+                                            Spacer()
+                                        }
+                                            .background(Color.grayButton)
+                                        VStack (spacing:1) {
+                                            Spacer()
+                                            Text("200 Дж")
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                                .font(.caption2)
+                                                .padding(.horizontal, 5)
+                                                .padding(.vertical, 5)
+                                            Spacer()
+                                        }
+                                            .background(Color.grayButton)
                                     }
-                                    Divider()
-                                        .background(Color.divider)
-                                        .padding(.horizontal,5)
-                                    HStack (alignment: .top){
+                                    
+                                    HStack (alignment: .top, spacing:1) {
                                         Text("""
                                     - Трепетание предсердий
                                     - Пароксизмальная суправентрикулярная тахикардия
                                     """)
                                         .frame(minWidth: 150, maxWidth: .infinity, alignment: .center)
-                                        .frame(height: 55)
-                                        //                .frame(maxWidth: 70)
                                         .font(.caption2)
                                         .bold()
                                         .padding(.horizontal, 5)
                                         .padding(.vertical, 5)
-                                        Divider()
-                                            .background(Color.divider)
-                                            .frame(height: 65)
-                                            .padding(.bottom,5)
-                                        Text("70-120 Дж")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
-                                            .font(.caption2)
-                                            .padding(.horizontal, 5)
-                                            .padding(.vertical, 5)
-                                        Divider()
-                                            .background(Color.divider)
-                                            .frame(height: 65)
-                                            .padding(.bottom,5)
-                                        Text("100 (50) Дж")
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        //                .frame(maxWidth: 70)
-                                            .font(.caption2)
-                                            .padding(.horizontal, 5)
-                                            .padding(.vertical, 5)
+                                        .background(Color.grayButton)
+                                        VStack (spacing:1) {
+                                            Spacer()
+                                            Text("70-120 Дж")
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                                .font(.caption2)
+                                                .padding(.horizontal, 5)
+                                                .padding(.vertical, 5)
+                                            Spacer()
+                                        }
+                                            .background(Color.grayButton)
+                                        VStack (spacing:1) {
+                                            Spacer()
+                                            Text("100 (50) Дж")
+                                                .frame(maxWidth: .infinity, alignment: .center)
+                                                .font(.caption2)
+                                                .padding(.horizontal, 5)
+                                                .padding(.vertical, 5)
+                                            Spacer()
+                                        }
+                                            .background(Color.grayButton)
+                                        
                                     }
                                 }
+                                .background(Color.backtables)
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded17.toggle()
@@ -433,7 +437,7 @@ struct Postanovlenie59Alg3P6View: View {
                                 }
                             }
                         }
-                    }
+                    
                     
                 }
                 .padding(.horizontal, 10)

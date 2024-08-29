@@ -121,6 +121,7 @@ struct Postanovlenie59Alg2View: View {
                                                 }
                                         }
                                     }
+                                    .background(Color.backtables)
                                     .cornerRadius(10)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 10)
@@ -206,6 +207,7 @@ struct Postanovlenie59Alg2View: View {
                                         }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)

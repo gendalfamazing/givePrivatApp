@@ -103,7 +103,7 @@ struct Postanovlenie59Alg3P1View: View {
                                 MyViewBuilder(title: Text(name.name), content: Text(name.code)).buildTable59OKSSmall()
                             }
                         }
-                        .background(Color.back)
+                        .background(Color.backtables)
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)

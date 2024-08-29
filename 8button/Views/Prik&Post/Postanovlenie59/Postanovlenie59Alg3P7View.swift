@@ -43,10 +43,12 @@ struct Postanovlenie59Alg3P7View: View {
                         
                         
                     }
-                    
+                    .background(Color.backtables)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
                     .onTapGesture {
                         withAnimation (.snappy) {
                             isTextExpanded1.toggle()

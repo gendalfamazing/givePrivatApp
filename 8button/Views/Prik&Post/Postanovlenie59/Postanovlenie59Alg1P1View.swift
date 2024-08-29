@@ -54,6 +54,7 @@ struct Postanovlenie59Alg1P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -84,6 +85,7 @@ struct Postanovlenie59Alg1P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -114,6 +116,7 @@ struct Postanovlenie59Alg1P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -143,6 +146,7 @@ struct Postanovlenie59Alg1P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -173,6 +177,7 @@ struct Postanovlenie59Alg1P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -203,6 +208,7 @@ struct Postanovlenie59Alg1P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
