@@ -51,7 +51,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -75,7 +75,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -99,7 +99,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -123,7 +123,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -147,7 +147,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -171,7 +171,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -195,7 +195,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -219,7 +219,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -243,7 +243,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -267,7 +267,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -291,7 +291,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -315,7 +315,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -339,7 +339,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -363,7 +363,7 @@ struct CodesMkb10: View {
                             MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                         }
                     }
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -456,7 +456,7 @@ struct CodesMkb10Part2: View {
                     MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                 }
             }
-            .background(Color.back)
+            .background(Color.backtables)
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -480,7 +480,7 @@ struct CodesMkb10Part2: View {
                     MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                 }
             }
-            .background(Color.back)
+            .background(Color.backtables)
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -504,7 +504,7 @@ struct CodesMkb10Part2: View {
                     MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                 }
             }
-            .background(Color.back)
+            .background(Color.backtables)
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -528,7 +528,7 @@ struct CodesMkb10Part2: View {
                     MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                 }
             }
-            .background(Color.back)
+            .background(Color.backtables)
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -552,7 +552,7 @@ struct CodesMkb10Part2: View {
                     MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                 }
             }
-            .background(Color.back)
+            .background(Color.backtables)
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -576,7 +576,7 @@ struct CodesMkb10Part2: View {
                     MyViewBuilder(title: Text(name.code), content: Text(name.name)).buildTableCodes()
                 }
             }
-            .background(Color.back)
+            .background(Color.backtables)
             .cornerRadius(10)
             .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)

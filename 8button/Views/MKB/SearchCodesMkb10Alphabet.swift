@@ -86,7 +86,7 @@ struct SearchCode: View {
                         
                     }
                     
-                    .background(Color.back)
+                    .background(Color.backtables)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
