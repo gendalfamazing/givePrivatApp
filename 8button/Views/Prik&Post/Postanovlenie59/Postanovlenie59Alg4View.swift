@@ -169,22 +169,15 @@ struct Postanovlenie59Alg4View: View {
                     }
                     Spacer(minLength: 10)
                     VStack (spacing: 5) {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             NavigationLink (destination: Postanovlenie59Alg4P1View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Амбулаторный этап")).buildBlue59NavigationText()
                             }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                   
                             NavigationLink (destination: Postanovlenie59Alg4P2View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Стационарный этап")).buildBlue59NavigationText()
                             }
-                        }
-                    }
+                     
                     Spacer(minLength: 10)
                         
                         MyViewBuilder(title: Text("""
@@ -199,19 +192,15 @@ struct Postanovlenie59Alg4View: View {
                                 }
                             }
                         if isTextExpanded7 {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                                VStack  (spacing: 1){
+                            
                             VStack (spacing: 1){
                                 HStack (alignment: .bottom){
                                     ZStack {
                                         Text(" ")
                                             .padding(.horizontal, 10)
                                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                        
                                             .font(.footnote)
                                             .bold()
-                                        
                                     }
                                     .frame(width: 40)
                                     Spacer()
@@ -219,7 +208,7 @@ struct Postanovlenie59Alg4View: View {
                                     Фактор риска
                                     """)
                                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-//                                    .frame(maxWidth: 70)
+            //                                    .frame(maxWidth: 70)
                                     .font(.footnote)
                                     .bold()
                                     .padding(3)
@@ -235,11 +224,8 @@ struct Postanovlenie59Alg4View: View {
                                     .padding(3)
                                     
                                 }
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
-                                .padding(2)
                                 .background(Color.grayButton)
+                                
                                 
                                 ForEach(Table59AG.getTable59Tahi11(), id: \.id) { name in
                                     MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59CHA2()
@@ -250,14 +236,18 @@ struct Postanovlenie59Alg4View: View {
                                         }
                                 }
                             }
+                            
+                            .background(Color.backtables)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded7.toggle()
                                 }
                             }
-                                }
-                            }
-                            Spacer(minLength: 5)
+                             
                             MyViewBuilder(title: Text("""
                                                       ----
                                                       """),
@@ -288,19 +278,15 @@ struct Postanovlenie59Alg4View: View {
                                 }
                             }
                         if isTextExpanded8 {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                                VStack  (spacing: 1){
+                            
                             VStack (spacing: 1){
                                 HStack (alignment: .bottom){
                                     ZStack {
                                         Text(" ")
                                             .padding(.horizontal, 10)
                                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                        
                                             .font(.footnote)
                                             .bold()
-                                        
                                     }
                                     .frame(width: 40)
                                     Spacer()
@@ -308,7 +294,7 @@ struct Postanovlenie59Alg4View: View {
                                     Клиническая характеристика
                                     """)
                                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-//                                    .frame(maxWidth: 70)
+            //                                    .frame(maxWidth: 70)
                                     .font(.footnote)
                                     .bold()
                                     .padding(3)
@@ -324,10 +310,6 @@ struct Postanovlenie59Alg4View: View {
                                     .padding(3)
                                     
                                 }
-                                Divider()
-                                    .background(Color.divider)
-                                    .padding(.horizontal, 5)
-                                .padding(2)
                                 .background(Color.grayButton)
                                 
                                 ForEach(Table59AG.getTable59Tahi12(), id: \.id) { name in
@@ -339,14 +321,17 @@ struct Postanovlenie59Alg4View: View {
                                         }
                                 }
                             }
+                            .background(Color.backtables)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded8.toggle()
                                 }
                             }
-                                }
-                            }
-                            Spacer(minLength: 5)
+                            
                             MyViewBuilder(title: Text("""
                                                       ----
                                                       """),

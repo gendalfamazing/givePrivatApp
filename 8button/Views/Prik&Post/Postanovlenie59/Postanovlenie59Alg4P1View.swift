@@ -36,9 +36,7 @@ struct Postanovlenie59Alg4P1View: View {
                             """)).buildGrayTextCenter()
                         .multilineTextAlignment(.center)
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                   
                             MyViewBuilder(title: Text("1"), content: Text("Наджелудочковая тахикардия (I47.1)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -58,8 +56,11 @@ struct Postanovlenie59Alg4P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -72,9 +73,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                     
                     if isTextExpanded2 {
                         VStack {
                             MyViewBuilder(title: Text("Лечение наджелудочковой тахикардии"),
@@ -129,10 +128,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                         }
                     }
-                    
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                   
                             MyViewBuilder(title: Text("1"), content: Text("Желудочковая тахикардия (I47.2)")).buildBlue59Text(isTextExpanded: isTextExpanded4)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -152,8 +148,11 @@ struct Postanovlenie59Alg4P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded4.toggle()
@@ -166,9 +165,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                      
                     if isTextExpanded5 {
                         VStack {
                             MyViewBuilder(title: Text("Лечение желудочковой тахикардии"),
@@ -244,9 +241,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                         }
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Фибрилляция и трепетание предсердий (I48)")).buildBlue59Text(isTextExpanded: isTextExpanded7)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -266,8 +261,11 @@ struct Postanovlenie59Alg4P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded7.toggle()
@@ -280,9 +278,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                       
                     if isTextExpanded8 {
                         VStack {
                             MyViewBuilder(title: Text("Лечение фибрилляции и трепетания предсердий"),
@@ -392,9 +388,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                         }
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Фибрилляция и трепетание желудочков (I49.0)")).buildBlue59Text(isTextExpanded: isTextExpanded10)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -413,8 +407,11 @@ struct Postanovlenie59Alg4P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded10.toggle()
@@ -427,8 +424,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                                 
                             }
-                        }
-                    }
+                    
                     if isTextExpanded11 {
                         VStack {
                             MyViewBuilder(title: Text("Лечение фибрилляции и трепетания желудочков"),
@@ -460,9 +456,6 @@ struct Postanovlenie59Alg4P1View: View {
                         }
                     }
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
                             MyViewBuilder(title: Text("1"), content: Text("Другая и неуточненная преждевременная деполяризация (экстрасистолия) (I49.4)")).buildBlue59Text(isTextExpanded: isTextExpanded13)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -481,8 +474,11 @@ struct Postanovlenie59Alg4P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded13.toggle()
@@ -495,8 +491,7 @@ struct Postanovlenie59Alg4P1View: View {
                                 }
                                 
                             }
-                        }
-                    }
+                     
                     if isTextExpanded14 {
                         VStack {
                             MyViewBuilder(title: Text("Лечение преждевременной деполяризации (экстрасистолии)"),

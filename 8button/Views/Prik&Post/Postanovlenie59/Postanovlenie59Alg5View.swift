@@ -169,22 +169,15 @@ struct Postanovlenie59Alg5View: View {
                     }
                     Spacer(minLength: 10)
                     VStack (spacing: 5) {
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             NavigationLink (destination: Postanovlenie59Alg5P1View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Амбулаторный этап")).buildBlue59NavigationText()
                             }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
                             NavigationLink (destination: Postanovlenie59Alg5P2View()) {
                                 MyViewBuilder(title: Text("1"), content: Text("Стационарный этап")).buildBlue59NavigationText()
                             }
-                        }
-                    }
+                    
                         
                         
                         

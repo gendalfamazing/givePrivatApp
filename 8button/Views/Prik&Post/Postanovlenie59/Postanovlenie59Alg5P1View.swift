@@ -37,9 +37,7 @@ struct Postanovlenie59Alg5P1View: View {
                             """)).buildGrayTextCenter()
                         .multilineTextAlignment(.center)
                        
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                   
                             MyViewBuilder(title: Text("1"), content: Text("Атриовентрикулярная блокада (АВ-блокада) первой степени (I44.0)")).buildBlue59Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -59,8 +57,11 @@ struct Postanovlenie59Alg5P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -73,14 +74,10 @@ struct Postanovlenie59Alg5P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                      
                     
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                    
                             MyViewBuilder(title: Text("1"), content: Text("АВ-блокада второй степени (I44.1)")).buildBlue59Text(isTextExpanded: isTextExpanded4)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -100,8 +97,11 @@ struct Postanovlenie59Alg5P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded4.toggle()
@@ -114,13 +114,8 @@ struct Postanovlenie59Alg5P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
+                     
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
                             MyViewBuilder(title: Text("1"), content: Text("АВ-блокада полная (I44.2)")).buildBlue59Text(isTextExpanded: isTextExpanded7)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -140,8 +135,11 @@ struct Postanovlenie59Alg5P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded7.toggle()
@@ -154,12 +152,7 @@ struct Postanovlenie59Alg5P1View: View {
                                 }
                                 
                             }
-                            
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
                             MyViewBuilder(title: Text("1"), content: Text("""
                                 Блокада передней ветви левой ножки пучка Гиса (**I44.4**)
                                 Блокада задней ветви левой ножки пучка Гиса (**I44.5**)
@@ -182,8 +175,11 @@ struct Postanovlenie59Alg5P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded10.toggle()
@@ -196,12 +192,9 @@ struct Postanovlenie59Alg5P1View: View {
                                 }
                                 
                             }
-                        }
-                    }
+                     
                     
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                
                             MyViewBuilder(title: Text("1"), content: Text("Нарушение проводимости неуточненное (синдром Стокса- Адамса) (**I45.9**)")).buildBlue59Text(isTextExpanded: isTextExpanded13)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -217,8 +210,11 @@ struct Postanovlenie59Alg5P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded13.toggle()
@@ -228,11 +224,8 @@ struct Postanovlenie59Alg5P1View: View {
                                 }
                                 
                             }
-                        }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack  {
+                     
+                    
                             MyViewBuilder(title: Text("1"), content: Text("Синдром слабости синусового узла (**I49.5**)")).buildBlue59Text(isTextExpanded: isTextExpanded15)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -247,8 +240,11 @@ struct Postanovlenie59Alg5P1View: View {
                                     }
                                     
                                 }
+                                .background(Color.backtables)
                                 .cornerRadius(10)
-                                //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded15.toggle()
@@ -257,8 +253,7 @@ struct Postanovlenie59Alg5P1View: View {
                                 }
                                 
                             }
-                        }
-                    }
+                     
                     
             }
                 .padding(.horizontal, 10)
