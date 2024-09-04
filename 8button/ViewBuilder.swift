@@ -413,7 +413,7 @@ class MyViewBuilder: ViewBuilder1 {
     func buildTitleZakon(isTextExpanded: Bool) -> some View {
         
         return HStack {
-            HStack (alignment: .center) {
+            HStack  {
                
                 title
                     .padding(.horizontal, 2)
@@ -423,7 +423,9 @@ class MyViewBuilder: ViewBuilder1 {
                     .padding(5.0)
                     .background(Color.titleNumber)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
                     .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground)
                     .bold()
                 //                    .lineLimit(1)
@@ -432,6 +434,11 @@ class MyViewBuilder: ViewBuilder1 {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 3.0)
                     .font(.footnote)
+                Spacer()
+                Image(systemName: ("chevron.down"))
+                    .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
+                    .opacity(0.3)
+                    .padding(.trailing, 7)
                 
                 
             }
@@ -3883,7 +3890,7 @@ class MyViewBuilder59: ViewBuilder3 {
     }
 }
 #Preview {
-    Postanovlenie59Alg3P3View()
+    ZakonOZdravoohranenii_01()
 }
 
 class FirstResponderController: ObservableObject {
@@ -3925,5 +3932,98 @@ struct FirstResponderTextField: UIViewRepresentable {
         if responder.isActive {
             uiView.becomeFirstResponder()
         }
+    }
+}
+
+// Протокол для объектов, которые могут создавать представление
+protocol ViewBuilder6 {
+    associatedtype Content: View
+    func buildTitleZakon2(isTextExpanded: Bool) -> Content
+    
+}
+
+// Класс, реализующий протокол ViewBuilder
+class MyViewBuilder6: ViewBuilder6 {
+    
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    private let title: Text
+    private let content: Text
+    private let text: Text
+    
+    init(title: Text, content: Text, text: Text) {
+        
+        self.title = title
+        self.content = content
+        self.text = text
+    }
+    
+    func buildTitleZakon2(isTextExpanded: Bool) -> some View {
+        
+        return VStack (spacing: 1){
+            HStack  {
+               
+                title
+                    .padding(.horizontal, 2)
+                    .frame(maxWidth: 80)
+                    .frame(minHeight: 20)
+                    .font(.footnote)
+                    .padding(5.0)
+                    .background(Color.titleNumber)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                    .foregroundColor(isTextExpanded ? Color.titleNumberForeground : Color.titleNumberForeground)
+                    .bold()
+                //                    .lineLimit(1)
+            
+                content
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal, 3.0)
+                    .font(.footnote)
+                Spacer()
+                Image(systemName: ("chevron.down"))
+                    .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
+                    .opacity(0.3)
+                    .padding(.trailing, 7)
+                
+                
+            }
+            .padding(7.0)
+    //                .lineLimit(2)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .fontWeight(.semibold)
+            .frame(minHeight: 49)
+            .frame(minWidth: 49)
+            .modifier(ThemeBlueColorModifier())
+    //                .background(Color.blueButton)
+            .background(isTextExpanded ? Color.toggle : Color.blueButton)
+            .background(Color.grayButton)
+            .font(.subheadline)
+            .cornerRadius(10)
+            if isTextExpanded{
+                VStack {
+                    text
+                        .textSelection(.enabled)
+                }
+                .padding(10)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 20)
+                .modifier(ThemeGrayColorModifier())
+                .font(.subheadline)
+                .cornerRadius(10)
+            }
+        }
+        .background(Color.grayButton)
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+        )
+        
+        
     }
 }
