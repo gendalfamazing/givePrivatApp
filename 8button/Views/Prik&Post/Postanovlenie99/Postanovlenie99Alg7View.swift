@@ -105,7 +105,7 @@ struct Postanovlenie99Alg7View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Медицинская транспортировка пациента в критическом состоянии»")
+                    Text("«Транспортировка в критическом состоянии»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

@@ -129,15 +129,15 @@ struct Postanovlenie99Alg3View: View {
                 Spacer(minLength: 5)
                 VStack (spacing: 5) {
                 
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
                         VStack (spacing: 1) {
-                            MyViewBuilder(title: Text("1"), content: Text("22-26. Мониторинг витальных функций при  СЛР")).buildBlue59Text(isTextExpanded: isTextExpanded14)
+                            MyViewBuilder(title: Text("1"), content: Text("22-26. Мониторинг витальных функций при  СЛР")).buildBlue592Text(isTextExpanded: isTextExpanded14)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded14.toggle()
                                     }
                                 }
+                            
                             
                             if isTextExpanded14{
                                 VStack {
@@ -154,9 +154,13 @@ struct Postanovlenie99Alg3View: View {
                                 }
                                 
                             }
-                            
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                     MyViewBuilder(title: Text("27. Медикаментозное обеспечение СЛР"), content: Text(LocalizedStringKey("Post99Alg3B0G0S29"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded15)
                         .onTapGesture {
                             withAnimation (.snappy) {
@@ -256,7 +260,7 @@ struct Postanovlenie99Alg3View: View {
                         .font(.headline)
                         .foregroundStyle(Color.toolBar)
                         .bold()
-                    Text("«Сердечно-легочная реанимация и интенсивная терапия постреанимационного периода»")
+                    Text("«СЛР и ИТ постреанимационного периода»")
                         .font(.caption2)
                         .foregroundStyle(Color.toolBar)
                 }

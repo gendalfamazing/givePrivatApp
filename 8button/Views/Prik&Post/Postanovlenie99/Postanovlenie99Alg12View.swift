@@ -33,6 +33,7 @@ struct Postanovlenie99Alg12View: View {
                                     и седации
                                     """)
                                 .padding(.horizontal, 10)
+                                .padding(.leading, 20)
                                 .font(.caption2)
                                 .bold()
                                 
@@ -52,8 +53,11 @@ struct Postanovlenie99Alg12View: View {
                             MyViewBuilderTables(title1: Text(name.content1), title2: Text(name.content2), title3: Text(name.content3), title4: Text("")).buildTableRASS()
                         }
                     }
+                    .background(Color.backtables)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)

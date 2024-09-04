@@ -53,7 +53,6 @@ struct Postanovlenie99Alg10View: View {
                         .padding(5.0)
                     }
                     Image(systemName: "arrow.down")
-                        .shadow(radius: 2)
                     ZStack {
                         MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                         VStack {
@@ -65,9 +64,7 @@ struct Postanovlenie99Alg10View: View {
                         .padding(5.0)
                     }
                     Image(systemName: "arrow.down")
-                        .shadow(radius: 2)
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                    
                         VStack {
                             
                             MyViewBuilder(title: Text("6"), content: Text("**Признаки жизни**")).buildGrayInText()
@@ -100,13 +97,16 @@ struct Postanovlenie99Alg10View: View {
                             
                         }
                         .padding(5.0)
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                     
                     if isTextExpanded1 {
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                        
                             VStack {
                                 MyViewBuilder(title: Text("6"),
                                               content: Text("""
@@ -120,16 +120,18 @@ struct Postanovlenie99Alg10View: View {
                                                             - внутривенный доступ или внутрикостный доступ.
                                                             """)).buildGrayInHiddenText()
                             }
-                            .padding(5.0)
-                        }
+                            .background(Color.grayButton)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
+                        
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
                         MyViewBuilder(title: Text("6"),
                                       content: Text("""
                                                     **Вызвать реаниматолога/СМП**
                                                     """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
                         MyViewBuilder(title: Text("6"),
                                       content: Text("""
                                                     **Передача пациента врачам-анестезиологам-реаниматологам/СМП**
@@ -137,16 +139,12 @@ struct Postanovlenie99Alg10View: View {
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
                         MyViewBuilder(title: Text("6"),
                                       content: Text("""
                                                     **Вызвать врача-анестезиолога-реаниматолога/СМП**
                                                     """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
                         
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
                             VStack {
                                 MyViewBuilder(title: Text("6"),
                                               content: Text("""
@@ -159,16 +157,18 @@ struct Postanovlenie99Alg10View: View {
                                                             - внутривенный доступ или внутрикостный доступ
                                                             """)).buildGrayInHiddenText()
                             }
-                            .padding(5.0)
-                        }
+                            .background(Color.grayButton)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
+                        
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
                         MyViewBuilder(title: Text("6"),
                                       content: Text("""
                                                     **Наложить электроды дефибриллятора/монитора**. Выполнить дефибрилляцию, если есть медицинские показания
                                                     """)).buildGrayText()
                         Image(systemName: "arrow.down")
-                            .shadow(radius: 2)
                         MyViewBuilder(title: Text("6"),
                                       content: Text("""
                                                     **Продолжить СЛР совместно с врачами-анестезиологами-реаниматоогами/СМП**

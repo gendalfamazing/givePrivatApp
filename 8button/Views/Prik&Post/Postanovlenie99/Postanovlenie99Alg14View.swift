@@ -34,10 +34,9 @@ struct Postanovlenie99Alg14View: View {
                                         """)
                             ).buildGrayTextCenter()
                       
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
                         VStack {
-                            MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**1. Пропофол**")).buildBlue59Text(isTextExpanded: isTextExpanded1)
+                            MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**1. Пропофол**")).buildBlue592Text(isTextExpanded: isTextExpanded1)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded1.toggle()
@@ -81,7 +80,12 @@ struct Postanovlenie99Alg14View: View {
                                 }
                             }
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                     
                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2. Бензодиазепины**")).buildBlue591Text(isTextExpanded: isTextExpanded2)
                         .onTapGesture {
@@ -95,8 +99,7 @@ struct Postanovlenie99Alg14View: View {
                         }
                     if isTextExpanded2 {
                         VStack (spacing: 5) {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2.1 Мидазолам**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded5)
                                         .onTapGesture {
@@ -142,9 +145,12 @@ struct Postanovlenie99Alg14View: View {
                                         }
                                     }
                                 }
-                            }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**2.2 Диазепам**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded6)
                                         .onTapGesture {
@@ -189,7 +195,12 @@ struct Postanovlenie99Alg14View: View {
                                     }
                                     
                                 }
-                            }
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                         }
                     }
                     
@@ -206,8 +217,7 @@ struct Postanovlenie99Alg14View: View {
                         }
                     if isTextExpanded3 {
                         VStack (spacing: 5) {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3.1 Фентанил**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded7)
                                         .onTapGesture {
@@ -254,9 +264,12 @@ struct Postanovlenie99Alg14View: View {
                                     }
                                     
                                 }
-                            }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**3.2 Морфин**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded8)
                                         .onTapGesture {
@@ -302,7 +315,11 @@ struct Postanovlenie99Alg14View: View {
                                     }
                                     
                                 }
-                            }
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                         }
                     }
                     
@@ -319,8 +336,7 @@ struct Postanovlenie99Alg14View: View {
                         }
                     if isTextExpanded4 {
                         VStack (spacing: 5) {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4.1 Клонидин** *")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded9)
                                         .onTapGesture {
@@ -370,9 +386,12 @@ struct Postanovlenie99Alg14View: View {
                                     }
                                     
                                 }
-                            }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**4.2 Дексмедетомидин**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded10)
                                         .onTapGesture {
@@ -421,7 +440,12 @@ struct Postanovlenie99Alg14View: View {
                                     }
                                     
                                 }
-                            }
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                         }
                     }
                     
@@ -437,8 +461,7 @@ struct Postanovlenie99Alg14View: View {
                         }
                     if isTextExpanded13 {
                         VStack (spacing: 5) {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5.1 Тиопентал натрия** *")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded11)
                                         .onTapGesture {
@@ -490,9 +513,12 @@ struct Postanovlenie99Alg14View: View {
                                     }
                                     
                                 }
-                            }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                                 VStack {
                                     MyViewBuilder(title: Text("Алгоритм 1"), content: Text("**5.2 Кетамин**")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded12)
                                         .onTapGesture {
@@ -540,7 +566,12 @@ struct Postanovlenie99Alg14View: View {
                                         }
                                     }
                                 }
-                            }
+                                .background(Color.grayButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            
                         }
                     }
                     

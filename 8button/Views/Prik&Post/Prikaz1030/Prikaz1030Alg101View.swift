@@ -21,8 +21,7 @@ struct Prikaz1030Alg1View: View {
                     
                 Image(systemName: "arrow.down")
                 
-                ZStack{
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                
                     VStack (spacing: 1){
                         MyViewBuilder(title: Text("1"), content: Text("Осуществить **первичный осмотр пациента** для оценки нарушения витальных функций")).buildGrayInHidden59Text()
                         
@@ -33,8 +32,13 @@ struct Prikaz1030Alg1View: View {
                         
                         MyViewBuilder(title: Text("1"), content: Text("Обеспечить **проходимость дыхательных путей, иммобилизацию шейного отдела позвоночника**, адекватное дыхание, гемодинамику, остановку профузного кровотечения, пульсоксиметрию (по показаниям).")).buildGrayInHidden59Text()
                     }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
                     
-                }
+                
                 Image(systemName: "arrow.down")
                 MyViewBuilder(title: Text("""
                                           **Неотложная медицинская помощь**

@@ -90,20 +90,20 @@ struct Postanovlenie99Alg13View: View {
                             MyViewBuilderTables(title1: Text(name.content1), title2: Text(name.content2), title3: Text(name.content3), title4: Text("")).buildTableAlko()
                         }
                     }
+                    .background(Color.backtables)
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
-                        VStack {
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                    
                             MyViewBuilder(title: Text("dfdfdf"),content: Text("""
                                         * Off-label, назначаются врачебным консилиумом.
                                         """)
-                            ).buildGrayInHiddenText()
+                            ).buildGrayText()
                             
                         }
                         .padding(5)
-                    }
-                }
+                    
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
             }
