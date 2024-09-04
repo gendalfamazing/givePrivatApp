@@ -150,13 +150,12 @@ struct Prikaz155: View {
                                 isTextExpanded3.toggle()
                             }
                         }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
                         VStack  {
                             MyViewBuilder(title: Text("Пункция"),
                                           content: Text("""
                                             4. Дифференциальная диагностика типа инсульта
-                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded4)
+                                            """)).buildBlue592Text(isTextExpanded: isTextExpanded4)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded4.toggle()
@@ -189,7 +188,12 @@ struct Prikaz155: View {
                                 
                             }
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                     
                 }
                 .padding(.horizontal, 10)

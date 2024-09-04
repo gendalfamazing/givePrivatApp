@@ -41,8 +41,7 @@ struct Prikaz47Alg2View: View {
                             }
                         }
                     if isTextExpanded1{
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                        
                             VStack (spacing: 1){
                                 MyViewBuilder(title: Text("2"), content: Text("1. Оказание первой помощи")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded2)
                                     .onTapGesture {
@@ -60,9 +59,12 @@ struct Prikaz47Alg2View: View {
                                         }
                                 }
                             }
-                        }
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            .background(Color.grayButton)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
+                          
                             VStack (spacing: 1){
                                 MyViewBuilder(title: Text("2"), content: Text("2. Оказание первой медицинской помощи")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded3)
                                     .onTapGesture {
@@ -80,9 +82,12 @@ struct Prikaz47Alg2View: View {
                                         }
                                 }
                             }
-                        }
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                            .background(Color.grayButton)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
+                        
                             VStack (spacing: 1){
                                 MyViewBuilder(title: Text("2"), content: Text("3. Оказание медицинской помощи бригадой СМП ")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded4)
                                     .onTapGesture {
@@ -100,7 +105,12 @@ struct Prikaz47Alg2View: View {
                                         }
                                 }
                             }
-                        }
+                            .background(Color.grayButton)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
+                        
                     }
                     
                     
