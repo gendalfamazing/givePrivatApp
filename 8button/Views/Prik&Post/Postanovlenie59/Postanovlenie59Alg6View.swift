@@ -68,10 +68,11 @@ struct Postanovlenie59Alg6View: View {
                                 }
                             }
                         if isTextExpanded1 {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                                VStack  {
+                            
                                     MyViewBuilder(title: Text(""), content: Text("Застойная сердечная недостаточность (I50.0)")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded2)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded2.toggle()
@@ -85,8 +86,11 @@ struct Postanovlenie59Alg6View: View {
                                             }
                                             
                                         }
+                                        .background(Color.backtables)
                                         .cornerRadius(10)
-                                        //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded2.toggle()
@@ -94,12 +98,12 @@ struct Postanovlenie59Alg6View: View {
                                         }
                                         
                                     }
-                                }
-                            }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                                VStack  {
+                               
+                            
                                     MyViewBuilder(title: Text(""), content: Text("Левожелудочковая недостаточность (I50.1)")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded3)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded3.toggle()
@@ -113,8 +117,11 @@ struct Postanovlenie59Alg6View: View {
                                             }
                                             
                                         }
+                                        .background(Color.backtables)
                                         .cornerRadius(10)
-                                        //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded3.toggle()
@@ -122,8 +129,7 @@ struct Postanovlenie59Alg6View: View {
                                         }
                                         
                                     }
-                                }
-                            }
+                              
                         }
                         
                         MyViewBuilder(title: Text(""), content: Text("Стационарный этап")).buildBlue591Text(isTextExpanded: isTextExpanded4)
@@ -133,10 +139,11 @@ struct Postanovlenie59Alg6View: View {
                                 }
                             }
                         if isTextExpanded4 {
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                                VStack  {
+                            
                                     MyViewBuilder(title: Text(""), content: Text("Застойная сердечная недостаточность (I50.0)")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded5.toggle()
@@ -150,8 +157,11 @@ struct Postanovlenie59Alg6View: View {
                                             }
                                             
                                         }
+                                        .background(Color.backtables)
                                         .cornerRadius(10)
-                                        //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded5.toggle()
@@ -159,12 +169,11 @@ struct Postanovlenie59Alg6View: View {
                                         }
                                         
                                     }
-                                }
-                            }
-                            ZStack {
-                                MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                                VStack  {
+                            
                                     MyViewBuilder(title: Text(""), content: Text("Левожелудочковая недостаточность (I50.1)")).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded6)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded6.toggle()
@@ -178,8 +187,11 @@ struct Postanovlenie59Alg6View: View {
                                             }
                                             
                                         }
+                                        .background(Color.backtables)
                                         .cornerRadius(10)
-                                        //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .onTapGesture {
                                             withAnimation (.snappy) {
                                                 isTextExpanded6.toggle()
@@ -187,8 +199,7 @@ struct Postanovlenie59Alg6View: View {
                                         }
                                         
                                     }
-                                }
-                            }
+                             
                         }
                 }
                     Spacer(minLength: 10)
@@ -204,19 +215,16 @@ struct Postanovlenie59Alg6View: View {
                             }
                         }
                     if isTextExpanded7 {
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack  (spacing: 1){
+                        
+                        
                         VStack (spacing: 1){
                             HStack (alignment: .bottom){
                                 ZStack {
                                     Text(" ")
                                         .padding(.horizontal, 10)
                                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    
                                         .font(.footnote)
                                         .bold()
-                                    
                                 }
                                 .frame(width: 40)
                                 Spacer()
@@ -224,7 +232,7 @@ struct Postanovlenie59Alg6View: View {
                                 Фактор риска
                                 """)
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-//                                    .frame(maxWidth: 70)
+        //                                    .frame(maxWidth: 70)
                                 .font(.footnote)
                                 .bold()
                                 .padding(3)
@@ -240,11 +248,8 @@ struct Postanovlenie59Alg6View: View {
                                 .padding(3)
                                 
                             }
-                            Divider()
-                                .background(Color.divider)
-                                .padding(.horizontal, 5)
-                            .padding(2)
                             .background(Color.grayButton)
+                            
                             
                             ForEach(Table59AG.getTable59Tahi11(), id: \.id) { name in
                                 MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTable59CHA2()
@@ -255,21 +260,25 @@ struct Postanovlenie59Alg6View: View {
                                     }
                             }
                         }
+                        .background(Color.backtables)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded7.toggle()
                             }
                         }
-                            }
-                        }
-                        Spacer(minLength: 5)
+                         
+                        
                         MyViewBuilder(title: Text("""
                                                   ----
                                                   """),
                                       content: Text("""
-                                                    **Использование шкалы CHA2DS2-VASc**
+                                                    **Использование шкалы CHA2DS2-VASc**:
                                                     
-                                                    **Антикоагулянтная терапия** для профилактики тромбоэмболии рекомендуется для всех пациентов с ФП ≥ 1 балла по шкале CHA2DS2-VASc, за исключением тех (как мужчины, так и женщины), которые имеют низкий риск (в возрасте <65 лет и только ФП), или при наличии противопоказаний.
+                                                    **Антикоагулянтная терапия** для профилактики тромбоэмболии рекомендуется для всех пациентов с ФП **≥ 1 балла** по шкале CHA2DS2-VASc, за исключением тех (как мужчины, так и женщины), которые имеют низкий риск (в возрасте <65 лет и только ФП), или при наличии противопоказаний.
                                                     **Выбор антикоагулянтной** терапии должен быть основан на абсолютном риске инсульта/ тромбоэмболии, кровотечений и клиническом преимуществе для данного пациента.
                                                     **CHA2DS2-VASc рекомендуется в качестве средства оценки риска инсульта в неклапанной ФП**.
                                                     **Терапия анитромбоцитарными препаратами**: комбинация аспирина и клопидогреля или, что менее эффективно, аспирин должна быть рассмотрена только в случае, если пациент отказывается от приема любого из возможных ОАК: и антагонистов витамина К и новых оральных антикоагулянтов, а также при невозможности приема оральных антикоагулянтов, которая не связана с геморрагическими осложнениями.
@@ -279,6 +288,48 @@ struct Postanovlenie59Alg6View: View {
                                     isTextExpanded7.toggle()
                                 }
                             }
+                        VStack(alignment: .center ,spacing: 1) {
+                            VStack {
+                                Text("**Скорректированные величины риска инсульта**")
+                                    .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                                    .font(.caption)
+                                    .bold()
+                                    .padding(10)
+                            }
+                            .background(Color.grayButton)
+                            HStack (alignment: .bottom){
+                                Text("Баллы")
+                                    .frame(minWidth: 70, maxWidth: .infinity, alignment: .center)
+                                    .font(.caption)
+                                    .bold()
+                                    .padding(3)
+                                Spacer()
+                                Text("""
+                                    % в год
+                                    """)
+                                    .frame(minWidth: 88, maxWidth: .infinity, alignment: .center)
+                                    .font(.caption)
+                                    .bold()
+                                    .padding(3)
+                                
+                                Spacer()
+                                
+                            }
+                            .background(Color.grayButton)
+                            ForEach(TablePamyatki.getTableScaleCHA2DS2(), id: \.id) { name in
+                                MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableScaleCHA2DS2()
+                            }
+                        }
+                        .background(Color.backtables)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded7.toggle()
+                            }
+                        }
                     }
                     
                     MyViewBuilder(title: Text("""
@@ -293,8 +344,7 @@ struct Postanovlenie59Alg6View: View {
                             }
                         }
                     if isTextExpanded8 {
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        
                             VStack  (spacing: 1){
                         VStack (spacing: 1){
                             HStack (alignment: .bottom){
@@ -302,10 +352,8 @@ struct Postanovlenie59Alg6View: View {
                                     Text(" ")
                                         .padding(.horizontal, 10)
                                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    
                                         .font(.footnote)
                                         .bold()
-                                    
                                 }
                                 .frame(width: 40)
                                 Spacer()
@@ -313,7 +361,7 @@ struct Postanovlenie59Alg6View: View {
                                 Клиническая характеристика
                                 """)
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-//                                    .frame(maxWidth: 70)
+        //                                    .frame(maxWidth: 70)
                                 .font(.footnote)
                                 .bold()
                                 .padding(3)
@@ -329,10 +377,6 @@ struct Postanovlenie59Alg6View: View {
                                 .padding(3)
                                 
                             }
-                            Divider()
-                                .background(Color.divider)
-                                .padding(.horizontal, 5)
-                            .padding(2)
                             .background(Color.grayButton)
                             
                             ForEach(Table59AG.getTable59Tahi12(), id: \.id) { name in
@@ -344,21 +388,25 @@ struct Postanovlenie59Alg6View: View {
                                     }
                             }
                         }
+                        .background(Color.backtables)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded8.toggle()
                             }
                         }
                             }
-                        }
-                        Spacer(minLength: 5)
+                        
                         MyViewBuilder(title: Text("""
                                                   ----
                                                   """),
                                       content: Text("""
                                                     **Использование шкалы HAS-BLED**
                                                     
-                                                    Значение ≥ 3 баллов говорит о высоком риске кровотечения. Высокое значение балла по шкале HAS-BLED само по себе не является показанием к отмене или не назначению антикоагулянтов, а должно служить поиску и модификации управляемых факторов риска (гипертензия, использование НПВС, лабильные значения МНО). Требует осторожности и более частого контроля пациентов на терапии оральными антикоагулянтами.
+                                                    Значение **≥ 3 баллов** говорит о высоком риске кровотечения. Высокое значение балла по шкале HAS-BLED само по себе не является показанием к отмене или не назначению антикоагулянтов, а должно служить поиску и модификации управляемых факторов риска (гипертензия, использование НПВС, лабильные значения МНО). Требует осторожности и более частого контроля пациентов на терапии оральными антикоагулянтами.
                                                     """)).buildGrayText()
                             .onTapGesture {
                                 withAnimation (.snappy) {
