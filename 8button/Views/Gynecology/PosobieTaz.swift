@@ -23,11 +23,11 @@ struct PosobieTaz: View {
     @State private var isTextExpanded9 = false
     @State private var isTextExpanded10 = false
     var body: some View {
-            ScrollView {
-                VStack (spacing: 5) {
-                    
-                            MyViewBuilder(title: Text("1"),
-                                          content: Text("""
+        ScrollView {
+            VStack (spacing: 5) {
+                
+                MyViewBuilder(title: Text("1"),
+                              content: Text("""
                                                 **При тазовых вставлениях клинически различают четыре этапа родов**:
                                                 - рождение плода до пупка,
                                                 - от пупка до нижнего угла лопаток,
@@ -38,157 +38,171 @@ struct PosobieTaz: View {
                                                 
                                                 **При тазовых вставлениях акушерские пособия выполняют по методу Н. А. Цовьянова**.
                                                 """)).buildGrayText()
-                            
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Ручное пособие при чисто ягодичном вставлении (метод Цовьянова 1)
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded2.toggle()
-                                        }
-                                    }
-                                if isTextExpanded2 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded2)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded2.toggle()
+                                }
+                            }
+                        if isTextExpanded2 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **Основная цель ручного пособия при чисто ягодичном вставлении по методу Н. А. Цовьянова 1 – это сохранение физиологического членорасположения плода и обеспечение продвижения его по проводной линии таза, что предупреждает развитие таких серьёзных осложнений, как запрокидывание ручек, образование заднего вида и разгибание головки**.
                                                                 
                                                                 **Правильное членорасположение достигается удерживанием и прижатием ножек к туловищу при рождении плода, не давая тем самым им родиться раньше времени**. Ножки плода, прижимая к груди скрещённые ручки, в свою очередь предупреждают их запрокидывание. Поскольку на уровне грудной клетки объём туловища вместе со скрещенными ручками и ножками больше, чем объём головки, последняя рождается без затруднений.
                                                                 
                                                                 К оказанию пособия приступают после прорезывания ягодиц. Ягодицы захватывают руками так, чтобы большие пальцы находились на прижатых к животу бёдрах плода, а остальные пальцы обеих рук располагались на поверхности крестца (рис. 11).
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                        Image("Akusheri11")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                
+                                Image("Akusheri11")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 По мере рождения туловища большими пальцами ножки плода бережно прижимают к его брюшной стенке, а остальные пальцы рук, удерживающие тазовый конец, перемещают вверх по спинке, постепенно передвигая руки к половой щели. **Туловище удерживают так, чтобы не образовался задний вид** (спинка должна поворачиваться кпереди).
                                                                 
                                                                 **Следующая после прорезывания ягодиц потуга обычно приводит к быстрому рождению плода до пупочного кольца, а затем и до нижних углов лопаток**. При этом поперечный размер плечиков плода переходит в один из косых размеров таза, а к моменту рождения плечевого пояса – в прямой размер выхода. **В этот момент ягодицы плода направляют несколько книзу, чтобы облегчить рождение передней ручки из-под лонной дуги**. Затем туловище плода приподнимают кверху, и из крестцовой впадины рождается задняя ручка. Одновременно с рождением задней ручки выпадают ножки плода, а из зияющей половой щели показывается подбородок.
                                                                 
                                                                 **При хороших потугах для освобождения головки туловище плода направляют на себя и затем приподнимают вверх на живот роженицы, головка рождается без какого-либо дополнительного вмешательства** (рис. 12).
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                        Image("Akusheri12")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                            .padding(.bottom, 5)
-                                       
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded2.toggle()
-                                        }
-                                    }
+                                
+                                Image("Akusheri12")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                    .padding(.bottom, 5)
+                                
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded2.toggle()
                                 }
                             }
                         }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Ручное пособие при смешанном ягодичном вставлении
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded3.toggle()
-                                        }
-                                    }
-                                if isTextExpanded3 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded3)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
+                                }
+                            }
+                        if isTextExpanded3 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 При смешанном ягодичном вставлении ручное пособие оказывают с момента рождения плода до нижних углов лопаток. Далее выполняют классическое ручное пособие – освобождение плечевого пояса и освобождение последующей головки плода **(см. раздел классическое ручное пособие при тазовых вставлениях)**.
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded3.toggle()
-                                        }
-                                    }
+                                
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
                                 }
                             }
                         }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Ручное пособие при ножном вставлении (метод Цовьянова 2)
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded4)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded4.toggle()
-                                        }
-                                    }
-                                if isTextExpanded4 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
-                                                                **Роды при ножном вставлении сопровождаются высоким травматизмом матери и плода, вплоть до мертворождения, т.к. рождающиеся ножки не могут расширить родовые пути для беспрепятственного прохождения плечевого пояса и последующей головки**. 
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded4)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded4.toggle()
+                                }
+                            }
+                        if isTextExpanded4 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
+                                                                **Роды при ножном вставлении сопровождаются высоким травматизмом матери и плода, вплоть до мертворождения, т.к. рождающиеся ножки не могут расширить родовые пути для беспрепятственного прохождения плечевого пояса и последующей головки**.
                                                                 Поэтому в настоящее время при ножных предлежаниях, в том числе при выпадении ножек или ножки при неполном раскрытии маточного зева в интересах матери и плода **выполняют кесарево сечение**.
                                                                 
                                                                 **Пособие по Цовьянову 2 применяется как исключение, в том случае если отсутствуют условия для выполнения кесарева сечения**.
                                                                 
                                                                 **Основная цель данного ручного пособия состоит в предупреждении рождения ножек плода до полного раскрытия маточного зева**. Для этого, покрыв половую щель роженицы стерильной пеленкой, ладонной поверхностью правой руки, приставленной к половой щели, противодействуют преждевременному рождению ножек (рис. 13).
                                                                 """)).buildGrayInHiddenText()
-                                        Image("Akusheri13")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                Image("Akusheri13")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                     **Во время каждой потуги плод как бы "садится на корточки" внутри полового канала и ягодицы оказывают давление на маточный зев, способствуя его раскрытию**. Опускаясь во влагалище, ягодицы плода образуют с находящимися там ножками смешанное ягодичное предлежание.
                                                                     
                                                                     Противодействие рождающимся ножкам оказывают до тех пор, пока не наступит полное раскрытие маточного зева, о котором судят на основании сильного выпячивания промежности предлежащей частью, зияния заднепроходного отверстия, частых и энергичных потуг, а так же по высоте стояния контракционного кольца, которое поднимается на пять поперечных пальцев выше лона. Как только ягодицы опустятся до преддверия влагалища, ножки плода, несмотря на оказываемое им противодействие, начинают выступать из-под боковых сторон ладони акушера.
                                                                     
                                                                     **Как только установлено полное раскрытие маточного зева, противодействие прекращают, и ножки, а вслед за ними ягодицы и туловище плода рождаются без затруднений до пупочного кольца, а затем до нижних углов лопаток**. С этого момента в связи с нарушением физиологического членорасположения плода приступают к оказанию классического ручного пособия при тазовых вставлениях, т.е. освобождению плечевого пояса и последующей головки плода (**см. «классическое ручное пособие при тазовых вставлениях»**).
                                                                     """)).buildGrayInHiddenText()
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded4.toggle()
-                                        }
-                                    }
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded4.toggle()
                                 }
                             }
                         }
-                        
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Классическое ручное пособие при тазовых вставлениях
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded5)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded5.toggle()
-                                            isTextExpanded6.toggle()
-                                        }
-                                    }
-                                if isTextExpanded5 {
-                                    
-                                    MyViewBuilder(title: Text("1"),
-                                                  content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded5)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded5.toggle()
+                                    isTextExpanded6.toggle()
+                                }
+                            }
+                        if isTextExpanded5 {
+                            
+                            MyViewBuilder(title: Text("1"),
+                                          content: Text("""
                                                             **Показанием для выполнения классического ручного пособия в родах является нарушение физиологического членорасположения и замедление изгнания плода при тазовых вставлениях**. Если после рождения туловища до нижних углов лопатки не произошло рождение ребенка в течение 2—3 мин., то приступают к ручному пособию.
                                                             
                                                             **Пособие выполняется без наркоза и включает три этапа**:
@@ -198,71 +212,80 @@ struct PosobieTaz: View {
                                                             
                                                             **Все основные действия по извлечению плода начинают с момента, когда в вульварном кольце показался нижний угол лопаток**.
                                                             """)).buildGrayInHiddenText()
-                                        .onTapGesture {
-                                            withAnimation (.snappy) {
-                                                isTextExpanded5.toggle()
-                                                isTextExpanded6.toggle()
-                                            }
-                                        }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded5.toggle()
+                                        isTextExpanded6.toggle()
+                                    }
                                 }
-                                    
-                            }
                         }
-                    if isTextExpanded6 {
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                        
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                if isTextExpanded6 {
+                    
+                        VStack (spacing: 1){
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
                                                         Подготовительный этап – выведение туловища плода до нижнего угла лопаток
                                                         """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded7)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded7.toggle()
-                                        }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded7.toggle()
                                     }
-                                if isTextExpanded7 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                }
+                            if isTextExpanded7 {
+                                VStack {
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             Туловище плода захватывают обеими руками в области бедер и способствуют его повороту в прямой размер выхода таза (рис. 14). **При этом влекущих за туловище движений делать нельзя!**
                                                             """)).buildGrayInHiddenText()
-                                        Image("Akusheri14")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                    Image("Akusheri14")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
+                                        .padding(.horizontal, 5)
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             **После завершения поворота отыскивают нижний угол лопаток**. Для этого удерживая туловище плода рукой, расположенной на переднем (верхнем) бедре, два пальца другой руки продвигают вдоль позвоночника плода. Указательный палец двигают по остистым отросткам позвонков, а средний – параллельно ему на расстоянии 2-3 см до тех пор, пока из половой щели не покажется нижний угол лопатки (если начать освобождение ручек раньше, чем появиться нижний угол лопатки, трудно будет дотянуться пальцами до ручки плода, чтобы вывести ее из половой щели). **Достигнув пальцами нижнего угла лопатки, приступают ко второму этапу – освобождению ручек**.
                                                             """)).buildGrayInHiddenText()
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded7.toggle()
-                                        }
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded7.toggle()
                                     }
                                 }
                             }
                         }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
+                        VStack (spacing: 1){
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
                                                         Второй этап – освобождение ручек и плечевого пояса
                                                         """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded8)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded8.toggle()
-                                        }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded8.toggle()
                                     }
-                                if isTextExpanded8 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                }
+                            if isTextExpanded8 {
+                                VStack {
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             **Освобождение ручек выполняется с соблюдением следующих правил**:
                                                             - каждая ручка плода выводится одноименной рукой акушера: правая ручка — правой рукой, левая ручка — левой;
                                                             - первой всегда освобождается ручка, обращенная кзади, т.е. расположенная у промежности, т.к. здесь больше простора для манипуляций;
@@ -272,15 +295,17 @@ struct PosobieTaz: View {
                                                             
                                                             **Для выведения задней ручки плод захватывают разноименной выводимой ручке рукой в области голеностопных суставов или за обе голени, так чтобы ладонь находилась на передней, а пальцы – на задней поверхности голеней**. Туловище плода энергично  приподнимают вверх и в сторону параллельно паховому сгибу матери, противоположному стороне освобождаемой ручки, т.е. в сторону, противоположную спинке плода (рис. 15).
                                                             """)).buildGrayInHiddenText()
-                                        Image("Akusheri15")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                    Image("Akusheri15")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
+                                        .padding(.horizontal, 5)
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             **После этого два пальца (второй и третий) руки одноименной выводимой ручке вводят в родовые пути по спинке плода со стороны крестцовой впадины и продвигают их до тех пор, пока они не дойдут до плечика плода, и далее, обогнув его, до локтевого сустава и плечевой кости.** Осторожно надавливая на предплечье, сгибают ручку плода в локтевом суставе и выводят ее из родовых путей по передней поверхности грудной клетки «умывательным» движением. При выведении ручки необходимо убедиться, что пальцы расположены именно на предплечье, а не плече, т.к. в последнем случае при надавливании возможен перелом плечевой кости.
                                                             
                                                             **Одновременно с выведением задней ручки передняя ручка часто рождается сама**. **Если этого не происходит, приступают к освобождению передней ручки**. Первоначально переднюю ручку переводят в заднюю путем поворота плода на 180° так, чтобы оставшаяся ручка была обращена к крестцовой впадине. Для этого обе руки кладут плашмя на туловище плода таким образом, чтобы одна рука лежала на переднем плечике (под симфизом), другая – на заднем, освобожденном плечике вместе с ручкой. Большие пальцы располагают на спинке вдоль позвоночника.
@@ -289,97 +314,106 @@ struct PosobieTaz: View {
                                                             
                                                             **Для освобождения второй ручки туловищу плода вновь придают положение, параллельное противоположному паховому сгибу матери, и за локтевой сгиб умывательным движением перед его личиком извлекают ручку из половых путей** (рис. 16).
                                                             """)).buildGrayInHiddenText()
-                                        Image("Akusheri16")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                    Image("Akusheri16")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
+                                        .padding(.horizontal, 5)
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             **При освобождении ручек нельзя пользоваться большим пальцем руки, т.к. круговой обхват ручки плода большим и указательным пальцами может привести к ее перелому.**
                                                             Низведение ручки выполняют только по личику и грудке, т.к. движение через затылок, вдоль по спинке книзу приводит к тяжелым повреждениям и переломам.
                                                             
                                                             **После освобождения ручек немедленно приступают к освобождению головки**.
                                                             """)).buildGrayInHiddenText()
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded8.toggle()
-                                        }
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded8.toggle()
                                     }
                                 }
                             }
                         }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
+                        VStack (spacing: 1){
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
                                                         Третий этап – освобождение последующей головки плода
                                                         """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded9)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded9.toggle()
-                                        }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded9.toggle()
                                     }
-                                if isTextExpanded9 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                }
+                            if isTextExpanded9 {
+                                VStack {
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             **При тазовых вставлениях последующая головка проходит через родовой канал, совершая те же движения, что и при головном вставлении**. При правильном механизме родов она должна проходить через таз в состоянии флексии, соответствующей малому косому размеру, совершая внутренний поворот с образованием переднего вида, установлением стреловидного шва в прямом размере выхода таза и образованием точки фиксации в области подзатылья и нижнего края лонного сочленения. При прорезывании, совершая большой круг вращения над промежностью, последовательно выкатываются подбородок, личико, лоб и, наконец, волосистая часть головки плода.
-
+                                                            
                                                             **Выполняя ручные приемы по освобождению последующей головки, необходимо полностью подражать всем моментам физиологического механизма родов при тазовом вставлении, важно правильно захватить головку и совершать влекущие движения строго в соответствии с направлением проводной оси таза**.
-
+                                                            
                                                             **Освобождение последующей головки слагается из двух моментов**:
                                                             - **первый момент** – сгибание головки,
                                                             - **второй момент** – выведение головки из половой щели.
-
+                                                            
                                                             Для этого туловище плода располагают на предплечье левой руки с перекинутыми по обе стороны ножками («сажают верхом»).
                                                             
                                                             Указательный и средний пальцы той же руки осторожно прижимают к верхней челюсти по сторонам от носика, средний палец приставляют к подбородку (**метод Смелли-Файта**) или указательный и средний пальцы вводят в ротик плода (**метод Морисо-Левре-Ля-Шапелль**).
                                                             
                                                             Одноименные пальцы правой руки прижимают к плоду таким образом, чтобы второй и четвертый пальцы вилообразно располагалась по бокам шеи, не надавливая на ключицы, а средний палец – на затылке плода. Ладонь плотно прижимают к спинке плода. Пальцем, приставленным к подбородку или пальцами, введенными в ротик, бережно приближают подбородок к грудке плода, а пальцем, приставленным к затылку, одновременно надавливают на него, совершая сгибание головки (рис. 17).
                                                             """)).buildGrayInHiddenText()
-                                        Image("Akusheri17")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                    Image("Akusheri17")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(10)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
+                                        .padding(.horizontal, 5)
+                                    MyViewBuilder(title: Text("1"),
+                                                  content: Text("""
                                                             **Одновременно с этим и, при таком же положении рук, осуществляют второй момент пособия – прорезывание головки**. Для этого наружной (правой) рукой выполняют тракции в соответствии с направлением проводной оси таза, следуя за поворотом головки, которая к концу изгнания располагается в прямом размере таза. **При нахождении головки в широкой части полости малого таза влечение осуществляют косо кзади, книзу и затем кпереди, а при нахождении головки в узкой части полости малого таза — книзу и кпереди**.
                                                             
                                                             **К тому моменту, когда подзатылочная ямка показывается под нижним краем симфиза, наружной рукой приостанавливают влечение и главным образом с помощью внутренней руки выполняют поворот головки через промежность вокруг фиксированной под симфизом подзатылочной ямки**.
                                                             
                                                             В случае необходимости при освобождении головки ассистент дополнительно совершает умеренное давление на головку плода сверху через переднюю брюшную стенку, чтобы исключить её разгибание (**метод Брахта**).
                                                             """)).buildGrayInHiddenText()
-                                        
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded9.toggle()
-                                        }
+                                    
+                                }
+                                .onTapGesture {
+                                    withAnimation (.snappy) {
+                                        isTextExpanded9.toggle()
                                     }
                                 }
                             }
                         }
-                    }
-                         
-                    
-                    
-                    
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                     
                 }
-                .padding(.horizontal, 10)
-                .padding(.bottom, 55)
+               
+                
             }
-            //        .padding(.horizontal, 200)
-//            .edgesIgnoringSafeArea(.bottom)
-            .background(Color.back)
+            .padding(.horizontal, 10)
+            .padding(.bottom, 55)
+        }
+        //        .padding(.horizontal, 200)
+        //            .edgesIgnoringSafeArea(.bottom)
+        .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("", displayMode: .inline)

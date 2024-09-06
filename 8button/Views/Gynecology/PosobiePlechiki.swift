@@ -23,13 +23,11 @@ struct PosobiePlechiki: View {
     @State private var isTextExpanded9 = false
     @State private var isTextExpanded10 = false
     var body: some View {
-            ScrollView {
-                VStack (spacing: 5) {
-                    ZStack{
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                        VStack (spacing: 1){
-                            MyViewBuilder(title: Text("1"),
-                                          content: Text("""
+        ScrollView {
+            VStack (spacing: 5) {
+                VStack (spacing: 1){
+                    MyViewBuilder(title: Text("1"),
+                                  content: Text("""
                                                 **Дистоция плечиков** — осложнение периода изгнания, развивающееся в результате диспропорции, т.е. клинического несоответствия плечевого пояса плода тазу матери.
                                                     
                                                 **Несмотря на то, что головка родилась, и ребенок делает попытки сделать вдох, его грудная клетка сильно сдавлена стенками родового канала, и легкие не могут расправиться**. В результате уменьшения объема матки, а иногда и за счет сдавления пуповины нарушается плодово-плацентарный кровоток, и плод может погибнуть от асфиксии в течение короткого времени.
@@ -37,15 +35,17 @@ struct PosobiePlechiki: View {
                                                 **В отечественной литературе термин «дистоция плечиков» идентифицируется с «затрудненным выведением плечиков», что на практике не совсем одно и то же**.
                                                 **Дистоция плечиков** возникает при устанавливании плечиков в прямом размере и задержке переднего плечика над лонным сочленением, а заднего под мысом или вколачивании плечиков между лонным сочленением и крестцовой впадиной (**рис. 5**). Потягивание за головку в этом случае не сопровождается рождением плечиков, задержка составляет более одной минуты после рождения головки и дальнейшее изгнание становится невозможным без применения специальных пособий.
                                                 """)).buildGrayInHiddenText()
-                            Image("Akusheri5")
-                                .resizable()
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                                .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                .padding(.horizontal, 5)
-                            MyViewBuilder(title: Text("1"),
-                                          content: Text("""
+                    Image("Akusheri5")
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(Rectangle())
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                        .padding(.horizontal, 5)
+                    MyViewBuilder(title: Text("1"),
+                                  content: Text("""
                                                         **В случае дистоции плечиков необходимо действовать быстро, избегая при этом трех вещей**:
                                                         - **не тянуть**, т.е. не производить чрезмерных тракций за головку;
                                                         - **не толкать**, т.е. не выдавливать плод;
@@ -68,77 +68,87 @@ struct PosobiePlechiki: View {
                                                                                                                 
                                                         **Одно из основных условий оказания всех пособий при дистоции плечиков – это исключение потуг и адекватное обезболивание! При этом эффективным может быть любой из выше указанных приёмов, однако ни один из них не является универсальным**.
                                                         """)).buildGrayInHiddenText()
-                        }
-                    }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                }
+                .background(Color.grayButton)
+                .cornerRadius(10)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                )
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Приемы по Mazzanti и Rubin
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded2.toggle()
-                                        }
-                                    }
-                                if isTextExpanded2 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded2)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded2.toggle()
+                                }
+                            }
+                        if isTextExpanded2 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **Первый и самый простой ручной приём, применяемый при дистоции плечиков** – это прямое давление над лоном в направлении несколько краниальнее лона (**по Mazzanti**) или поочерёдное давление вправо и влево (**по Rubin**). чтобы перевести плечики в косой размер таза (рис. 6).
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                        Image("Akusheri6")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                            .padding(.bottom, 5)
-                                        
-                                       
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded2.toggle()
-                                        }
-                                    }
+                                
+                                Image("Akusheri6")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                    .padding(.bottom, 5)
+                                
+                                
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded2.toggle()
                                 }
                             }
                         }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Приёмы Вудса, Хиббарда и Рубина
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded3.toggle()
-                                        }
-                                    }
-                                if isTextExpanded3 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded3)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
+                                }
+                            }
+                        if isTextExpanded3 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **Следующий по сложности – это приём Вудса или его модификация (обратный приём Вудса)**.
                                                                 **По Вудсу** давление оказывают на переднюю поверхность заднего плечика и отводят его от грудки («завинчивание»).
                                                                 **По Рубину** давление оказывают на заднюю поверхность заднего плечика с целью приведения обоих плечиков к грудине, что с точки зрения физиологии плода более целесообразно (рис. 7).
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                        Image("Akusheri7")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                        
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                
+                                Image("Akusheri7")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **По Хиббарду** давят на головку, пытаясь несколько «затолкать» её обратно во влагалище. Переднее плечико отталкивают по направлению к прямой кишке, т.е. отодвигают от лонного сочленения. Для выполнения данного приема необходим помощник, чтобы сначала отдавить плечико, а затем оказывать давление на дно матки.
                                                                 
                                                                 **Пособие состоит из нескольких последовательных этапов**:
@@ -149,106 +159,119 @@ struct PosobiePlechiki: View {
                                                                 
                                                                 **При дистоции плечиков средней степени предложено применять сочетание приёмов Хиббарда и обратный приём Вудса**.
                                                                 """)).buildGrayInHiddenText()
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded3.toggle()
-                                        }
-                                    }
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded3.toggle()
                                 }
                             }
                         }
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Прием освобождения задней ручки
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded4)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded4.toggle()
-                                        }
-                                    }
-                                if isTextExpanded4 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded4)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded4.toggle()
+                                }
+                            }
+                        if isTextExpanded4 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **При умеренной дистоции плечиков в качестве ручного пособия можно попытаться освободить сначала заднюю ручку как при запрокидывании ручек при тазовом предлежании, но в обратном направлении** (рис. 8).
                                                                 """)).buildGrayInHiddenText()
-                                        Image("Akusheri8")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                            .padding(.bottom, 5)
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded4.toggle()
-                                        }
-                                    }
+                                Image("Akusheri8")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                    .padding(.bottom, 5)
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded4.toggle()
                                 }
                             }
                         }
-                        
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                              content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Приём Мак-Робертса
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded5)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded5.toggle()
-                                        }
-                                    }
-                                if isTextExpanded5 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                      content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded5)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded5.toggle()
+                                }
+                            }
+                        if isTextExpanded5 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **Для выполнения приема Мак-Робертса требуется два помощника**. Бёдра роженицы приводят в соприкосновение с животом, добиваясь при этом уменьшения лордоза и наклонения таза (рис. 9).
                                                                 
                                                                 **Несмотря на то, что данный прием не уменьшает размеров малого таза, при движении лонного сочленения краниально создаются условия для высвобождения переднего плечика. Если нет немедленного эффекта, добавляют все вышеуказанные приёмы**.
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                        Image("Akusheri9")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                            .padding(.bottom, 5)
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded5.toggle()
-                                        }
-                                    }
+                                
+                                Image("Akusheri9")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                    .padding(.bottom, 5)
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded5.toggle()
                                 }
                             }
                         }
-                    
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                            content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Заправление головки по Заванелли
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded6)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded6.toggle()
-                                        }
-                                    }
-                                if isTextExpanded6 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                    content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded6)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded6.toggle()
+                                }
+                            }
+                        if isTextExpanded6 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **При безуспешной попытке родить плечевой пояс** (**тяжелая дистоция плечиков**) J. A. O’Leary, H. B. Leonetti (1990) рекомендуют прибегнуть к **заправлению головки по Заванелли** (cephalic replacement).
                                                                 
                                                                 **Прием предполагает выполнение следующих манипуляций**:
@@ -259,41 +282,46 @@ struct PosobiePlechiki: View {
                                                                 
                                                                 **Головка, по утверждению авторов, легко заводится при постоянном и достаточно энергичном усилии, оказываемом ладонью**. Головку сгибают и подталкивают вверх до точки «0» по Бишопу, что соответствует уровню «большой сегмент в полости малого таза» (рис.10). При необходимости ассистент удерживает головку на этом уровне стояния до родоразрешения.
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                        Image("Akusheri10")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Rectangle())
-                                            .cornerRadius(10)
-                                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                                            .padding(.horizontal, 5)
-                                            .padding(.bottom, 5)
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded6.toggle()
-                                        }
-                                    }
+                                
+                                Image("Akusheri10")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
+                                    .padding(.horizontal, 5)
+                                    .padding(.bottom, 5)
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded6.toggle()
                                 }
                             }
                         }
-                    
-                        ZStack{
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack (spacing: 1){
-                                MyViewBuilder(title: Text(""),
-                                            content: Text("""
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                
+                    VStack (spacing: 1){
+                        MyViewBuilder(title: Text(""),
+                                      content: Text("""
                                                     Рекомендации ведения родов при узком тазе
-                                                    """)).buildBlue59Text(isTextExpanded: isTextExpanded7)
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded7.toggle()
-                                        }
-                                    }
-                                if isTextExpanded7 {
-                                    VStack {
-                                        MyViewBuilder(title: Text("1"),
-                                                    content: Text("""
+                                                    """)).buildBlue592Text(isTextExpanded: isTextExpanded7)
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded7.toggle()
+                                }
+                            }
+                        if isTextExpanded7 {
+                            VStack {
+                                MyViewBuilder(title: Text("1"),
+                                              content: Text("""
                                                                 **В отечественной литературе специальных приемов, применяемых при дистоции плечиков, не описано, однако имеется информационное письмо с рекомендациями, которые уместны и при дистоции плечиков**:
                                                                 
                                                                 - **На родах присутствуют два врача акушера-гинеколога**, владеющие приёмами оказания помощи при дистоции плечиков, **анестезиолог и неонатолог-реаниматолог**.
@@ -312,26 +340,31 @@ struct PosobiePlechiki: View {
                                                                 
                                                                 - **Все ручные манипуляции выполняют последовательно по мере увеличения сложности их исполнения**: вначале применяют менее сложные и менее травматичные для плода приемы, при их неэффективности – переходят к более сложным.
                                                                 """)).buildGrayInHiddenText()
-                                        
-                                    }
-                                    .onTapGesture {
-                                        withAnimation (.snappy) {
-                                            isTextExpanded7.toggle()
-                                        }
-                                    }
+                                
+                            }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded7.toggle()
                                 }
                             }
                         }
-                    
-                    
-                    
-                }
-                .padding(.horizontal, 10)
-                .padding(.bottom, 55)
+                    }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
+                
+                
+                
             }
-            //        .padding(.horizontal, 200)
-//            .edgesIgnoringSafeArea(.bottom)
-            .background(Color.back)
+            .padding(.horizontal, 10)
+            .padding(.bottom, 55)
+        }
+        //        .padding(.horizontal, 200)
+        //            .edgesIgnoringSafeArea(.bottom)
+        .background(Color.back)
         
         .navigationBarBackButtonHidden(false)
         .navigationBarTitle("", displayMode: .inline)

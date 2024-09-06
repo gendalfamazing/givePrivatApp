@@ -46,13 +46,12 @@ struct Desmurgia: View {
     var body: some View {
         ScrollView {
             VStack (spacing:5) {
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Повязка «Чепец»
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded1)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded1)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded1.toggle()
@@ -84,7 +83,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 
                                     
@@ -97,14 +98,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Повязка «Уздечка»
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded2)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded2.toggle()
@@ -132,7 +136,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 
                             }
@@ -143,14 +149,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Повязка на один глаз «Монокулярная»
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded3)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded3.toggle()
@@ -181,7 +190,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.leading, 10)
                                     .padding(.vertical, 10)
                                 Image("desmurgia4")
@@ -189,7 +200,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.trailing, 10)
                                     .padding(.vertical, 10)
                             }
@@ -201,14 +214,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Повязка на оба глаза «Бинокулярная»
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded4)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded4)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded4.toggle()
@@ -239,7 +255,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.leading, 10)
                                     .padding(.vertical, 10)
                                 Image("desmurgia6")
@@ -247,7 +265,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.trailing, 10)
                                     .padding(.vertical, 10)
                             }
@@ -259,14 +279,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Крестообразная повязка на затылок и шею
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded5)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded5)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded5.toggle()
@@ -296,7 +319,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.leading, 10)
                                     .padding(.vertical, 10)
                                 Image("desmurgia8")
@@ -304,7 +329,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.trailing, 10)
                                     .padding(.vertical, 10)
                             }
@@ -316,14 +343,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Колосовидная повязка на плечевой сустав
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded6)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded6)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded6.toggle()
@@ -354,7 +384,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                             }
                             .onTapGesture {
@@ -364,14 +396,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         «Черепашья» (расходящаяся) на коленный сустав
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded7)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded7)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded7.toggle()
@@ -405,7 +440,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                             }
                             .onTapGesture {
@@ -415,14 +452,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         «Черепашья» (сходящаяся) на локтевой сустав
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded8)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded8)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded8.toggle()
@@ -453,7 +493,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                             }
                             .onTapGesture {
@@ -463,14 +505,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Повязка на все пальцы кисти «Перчатка»
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded9)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded9)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded9.toggle()
@@ -500,7 +545,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                             }
                             .onTapGesture {
@@ -510,14 +557,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Возвращающаяся повязка на кисть и культю
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded10)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded10)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded10.toggle()
@@ -542,7 +592,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.leading, 10)
                                     .padding(.vertical, 10)
                                 Image("desmurgia14")
@@ -550,7 +602,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.trailing, 10)
                                     .padding(.vertical, 10)
                             }
@@ -562,14 +616,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Повязка «Дезо»
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded11)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded11)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded11.toggle()
@@ -604,7 +661,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                             }
                             }
@@ -615,14 +674,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Восьмиобразная повязка на голеностопный сустав
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded12)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded12)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded12.toggle()
@@ -654,7 +716,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.leading, 10)
                                     .padding(.vertical, 10)
                                 Image("desmurgia17")
@@ -662,7 +726,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.trailing, 10)
                                     .padding(.vertical, 10)
                             }
@@ -674,14 +740,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Пращевидная повязка на нос, подбородок
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded13)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded13)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded13.toggle()
@@ -710,7 +779,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                             }
                             }
@@ -721,14 +792,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Косыночная повязка на молочную железу
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded14)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded14)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded14.toggle()
@@ -759,7 +833,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.horizontal, 10)
                                     .padding(.top, 10)
                                 Image("desmurgia20")
@@ -767,7 +843,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.horizontal, 10)
                                     .padding(.bottom, 10)
                             }
@@ -779,14 +857,17 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Наложение лейкопластырной повязки
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded15)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded15)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded15.toggle()
@@ -811,7 +892,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.vertical, 10)
                                     .padding(.leading, 10)
                                 Image("desmurgia22")
@@ -819,7 +902,9 @@ struct Desmurgia: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(.vertical, 10)
                                     .padding(.trailing, 10)
                             }
@@ -831,7 +916,12 @@ struct Desmurgia: View {
                             }
                         }
                     }
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                 
             }
             .padding(.horizontal, 10)

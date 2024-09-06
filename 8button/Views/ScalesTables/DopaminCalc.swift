@@ -64,31 +64,76 @@ struct InfusionRateCalculatorView: View {
     var body: some View {
         ScrollView {
             VStack (spacing: 1){
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle()
+                
                     VStack (spacing: 1){
                         MyViewBuilder(title: Text(""), content: Text("**Введите данные:**")).buildGrayInText()
                         VStack {
-                            TextField("Лекарственная форма (мг/мл)", text: $drugConcentration)
-                                .keyboardType(.numberPad)
-                                .frame(minHeight: 30)
+                            ZStack(alignment: .trailing) {
+                                        TextField("Лекарственная форма", text: $drugConcentration)
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .keyboardType(.numberPad)
+                                            .frame(minHeight: 30)
+                                            .padding(.trailing, 70)
+                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                        Text("мг/мл")
+                                            .foregroundColor(.gray)
+                                            .padding(.trailing, 10) // Размещаем текст внутри поля
+                                    }
                             
                             Divider()
-                            TextField("Объем лекарственной формы (мл)", text: $drugVolume)
-                                .keyboardType(.numberPad)
-                                .frame(minHeight: 30)
+                            ZStack(alignment: .trailing) {
+                                        TextField("Объем лекарственной формы", text: $drugVolume)
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .keyboardType(.numberPad)
+                                            .frame(minHeight: 30)
+                                            .padding(.trailing, 70)
+                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                        Text("мл")
+                                            .foregroundColor(.gray)
+                                            .padding(.trailing, 10) // Размещаем текст внутри поля
+                                    }
+                            
                             Divider()
-                            TextField("Объем растворителя (мл)", text: $solventVolume)
-                                .keyboardType(.numberPad)
-                                .frame(minHeight: 30)
+                            ZStack(alignment: .trailing) {
+                                        TextField("Объем растворителя", text: $solventVolume)
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .keyboardType(.numberPad)
+                                            .frame(minHeight: 30)
+                                            .padding(.trailing, 70)
+                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                        Text("мл")
+                                            .foregroundColor(.gray)
+                                            .padding(.trailing, 10) // Размещаем текст внутри поля
+                                    }
                             Divider()
-                            TextField("Дозировка препарата (мкг/кг/мин)", text: $drugDosage)
-                                .keyboardType(.numberPad)
-                                .frame(minHeight: 30)
+                            ZStack(alignment: .trailing) {
+                                        TextField("Дозировка препарата", text: $drugDosage)
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .keyboardType(.numberPad)
+                                            .frame(minHeight: 30)
+                                            .padding(.trailing, 70)
+                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                        Text("мкг/кг/мин")
+                                            .foregroundColor(.gray)
+                                            .padding(.trailing, 10) // Размещаем текст внутри поля
+                                    }
                             Divider()
-                            TextField("Масса пациента (кг)", text: $patientWeight)
-                                .keyboardType(.numberPad)
-                                .frame(minHeight: 30)
+                            ZStack(alignment: .trailing) {
+                                        TextField("Масса пациента", text: $patientWeight)
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .keyboardType(.numberPad)
+                                            .frame(minHeight: 30)
+                                            .padding(.trailing, 70)
+                                            .padding(.leading, 10)// Увеличиваем отступ для текста единиц
+                                        Text("кг")
+                                            .foregroundColor(.gray)
+                                            .padding(.trailing, 10) // Размещаем текст внутри поля
+                                    }
                             
                             
                         }
@@ -96,19 +141,6 @@ struct InfusionRateCalculatorView: View {
                         .background(Color.back)
                         .cornerRadius(10)
                         Spacer(minLength: 5)
-                        MyViewBuilder(title: Text(""), content: Text(isTextExpanded1 ? "**Сбросить**" : "**Сбросить**")).buildGreen1Text(isTextExpanded: isTextExpanded1)
-                            .asButton(.press) {
-                                hideKeyboard()
-                                withAnimation (.snappy) {
-                                        drugConcentration = ""
-                                        drugVolume = ""
-                                        solventVolume = ""
-                                        drugDosage = ""
-                                        patientWeight = ""
-                                    
-                                    
-                                }
-                            }
                         
                             VStack (alignment: .leading, spacing:1) {
                                 MyViewBuilder(title: Text(""), content: Text("**Доза препарата:**")).buildGrayInText()
@@ -151,11 +183,29 @@ struct InfusionRateCalculatorView: View {
                         }
                             .onTapGesture { UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil) }
                         
-                        
+                        MyViewBuilder(title: Text(""), content: Text(isTextExpanded1 ? "**Сбросить**" : "**Сбросить**")).buildGreen1Text(isTextExpanded: isTextExpanded1)
+                            .asButton(.press) {
+                                hideKeyboard()
+                                withAnimation (.snappy) {
+                                        drugConcentration = ""
+                                        drugVolume = ""
+                                        solventVolume = ""
+                                        drugDosage = ""
+                                        patientWeight = ""
+                                    
+                                    
+                                }
+                            }
                         
                     }
                     .padding(5)
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                    
+                
                 Spacer(minLength: 5)
                 MyViewBuilder(title: Text("""
                                           
