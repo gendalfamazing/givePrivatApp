@@ -90,13 +90,12 @@ struct _9Zond: View {
                             isTextExpanded3.toggle()
                         }
                     }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                
                     VStack  {
                         MyViewBuilder(title: Text("Через простую маску"),
                                       content: Text("""
                                         Выбор зонда
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded4)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded4)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded4.toggle()
@@ -185,9 +184,19 @@ struct _9Zond: View {
                             
                                 Spacer()
                             }
+                            .onTapGesture {
+                                withAnimation (.snappy) {
+                                    isTextExpanded4.toggle()
+                                }
+                            }
                         }
                     }
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                 MyViewBuilder(title: Text("Определение длины зонда"),
                               content: Text("""
                                                 **Дети**: от кончика носа до основания мечевидного отростка + 10 см
@@ -311,8 +320,11 @@ struct _9Zond: View {
                                     MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTableZondPromivanieChild()
                                 }
                             }
+                            .background(Color.backtables)
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded8.toggle()

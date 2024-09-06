@@ -98,8 +98,6 @@ struct ZakonOZdravoohranenii_13: View {
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
             }
-            //        .padding(.horizontal, 200)
-//            .edgesIgnoringSafeArea(.bottom)
             .background(Color.back)
         
         .navigationBarBackButtonHidden(false)

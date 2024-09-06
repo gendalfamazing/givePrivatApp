@@ -178,13 +178,12 @@ struct _0IVL: View {
                             isTextExpanded6.toggle()
                         }
                     }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Легочные объёмы
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded7)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded7)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded7.toggle()
@@ -197,7 +196,9 @@ struct _0IVL: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -225,14 +226,17 @@ struct _0IVL: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Устройство АМБУ
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded8)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded8)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded8.toggle()
@@ -249,7 +253,6 @@ struct _0IVL: View {
                                     })
                                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded9 ? 540 : 540) : (isTextExpanded9 ? 250 : 500))
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                     .padding(5)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -268,7 +271,12 @@ struct _0IVL: View {
                             }
                         }
                     }
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                 MyViewBuilder(title: Text("Факты"),
                               content: Text("""
                                             **Условия применения и режимы ИВЛ:**

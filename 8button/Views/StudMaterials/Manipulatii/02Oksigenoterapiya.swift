@@ -59,7 +59,9 @@ struct _2Oksigenoterapiya: View {
                         .scaledToFit()
                         .clipShape(Rectangle())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .padding(10)
                 }
                 .onTapGesture {
@@ -67,18 +69,12 @@ struct _2Oksigenoterapiya: View {
                         isTextExpanded1.toggle()
                     }
                 }
-                //                    ZStack {
-                //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                //                        VStack (spacing: 1) {
-               
                 
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                     VStack  {
                         MyViewBuilder(title: Text("Через носовой катетер"),
                                       content: Text("""
                                         Через носовой катетер
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded1)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded1)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded1.toggle()
@@ -91,7 +87,9 @@ struct _2Oksigenoterapiya: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -105,7 +103,9 @@ struct _2Oksigenoterapiya: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -117,7 +117,9 @@ struct _2Oksigenoterapiya: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -188,6 +190,11 @@ struct _2Oksigenoterapiya: View {
                                 }
                                     Spacer()
                                 }
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                                .padding(.horizontal, 10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                         5. По окончании **утилизируйте носовой катетер**.
@@ -201,14 +208,17 @@ struct _2Oksigenoterapiya: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Через простую маску"),
                                       content: Text("""
                                         Через простую маску
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded2)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded2.toggle()
@@ -221,7 +231,9 @@ struct _2Oksigenoterapiya: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -262,6 +274,11 @@ struct _2Oksigenoterapiya: View {
                                 
                                     Spacer()
                                 }
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                                .padding(.horizontal, 10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                         5. По окончании **утилизируйте лицевую маску и кислородную магистраль**.
@@ -275,14 +292,17 @@ struct _2Oksigenoterapiya: View {
                             }
                         }
                     }
-                }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                     VStack  {
                         MyViewBuilder(title: Text("Через высокопоточную маску"),
                                       content: Text("""
                                         Через высокопоточную маску
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded3)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded3.toggle()
@@ -295,7 +315,9 @@ struct _2Oksigenoterapiya: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -312,7 +334,9 @@ struct _2Oksigenoterapiya: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -327,7 +351,12 @@ struct _2Oksigenoterapiya: View {
                             }
                         }
                     }
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                 MyViewBuilder(title: Text("Когда используется 100% кислород"),
                               content: Text("""
                                                 – **премедикация перед кардиоверсией**

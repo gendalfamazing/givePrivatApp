@@ -70,9 +70,11 @@ struct MedicinesChild: View {
                                 MyViewBuilder(title: Text(LocalizedStringKey(name.name)), content: Text(LocalizedStringKey(name.code))).buildTablePhafmacologyAdult()
                             }
                         }
-                        .background(Color.back)
+                        .background(Color.backtables)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded3.toggle()

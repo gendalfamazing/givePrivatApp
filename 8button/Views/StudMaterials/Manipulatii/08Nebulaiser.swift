@@ -59,7 +59,9 @@ struct _8Nebulaiser: View {
                         .scaledToFit()
                         .clipShape(Rectangle())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .padding(10)
                 }
                 .onTapGesture {

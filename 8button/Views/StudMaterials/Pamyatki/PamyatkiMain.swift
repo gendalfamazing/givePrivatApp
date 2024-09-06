@@ -117,13 +117,12 @@ struct PamyatkiMain: View {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
                         VStack  {
                             MyViewBuilder(title: Text(""),
                                           content: Text("""
                                             Патологические типы дыхания
-                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
+                                            """)).buildBlue592Text(isTextExpanded: isTextExpanded2)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded2.toggle()
@@ -145,30 +144,36 @@ struct PamyatkiMain: View {
                                                     Нарастание амплитуды дыхания с последующим ее снижением, после чего следует период апноэ (до 25-60 сек.), затем цикл повторяется.
                                                     **Возможные причины:** гипоксия во сне, отравления, уремия, кровоизлияния в головной мозг, различные травмы.
                                                     """)).buildGrayInHiddenText()
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded2.toggle()
+                                            }
+                                        }
                                     
                                     Image("pamyatka1")
                                         .resizable()
                                         .scaledToFit()
                                         .clipShape(Rectangle())
                                         .cornerRadius(10)
-                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .padding(5)
                                 }
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded2.toggle()
-                                    }
-                                }
+                                
                             }
                         }
-                    }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                         VStack  {
                             MyViewBuilder(title: Text("Определение площади ожогов у детей"),
                                           content: Text("""
                                             Определение площади ожогов у детей
-                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                                            """)).buildBlue592Text(isTextExpanded: isTextExpanded3)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded3.toggle()
@@ -180,23 +185,31 @@ struct PamyatkiMain: View {
                                                   content: Text("""
                                             У детей до 15 лет применяется таблица Ланда-Браудера (для обширных повреждений) и правило "ладони" (для локальных повреждений) – площадь ладони пациента составляет 1% от поверхности его тела.
                                             """)).buildGrayInHiddenText()
+                                        .onTapGesture {
+                                            withAnimation (.snappy) {
+                                                isTextExpanded3.toggle()
+                                            }
+                                        }
                                     
                                     Image("pamyatka2")
                                         .resizable()
                                         .scaledToFit()
                                         .clipShape(Rectangle())
                                         .cornerRadius(10)
-                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                         .padding(5)
                                 }
-                                .onTapGesture {
-                                    withAnimation (.snappy) {
-                                        isTextExpanded3.toggle()
-                                    }
-                                }
+                                
                             }
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                             MyViewBuilder(title: Text(""),
                                           content: Text("""
                                             Размеры перифиреческих катетеров
@@ -213,7 +226,9 @@ struct PamyatkiMain: View {
                                         .scaledToFit()
                                         .clipShape(Rectangle())
                                         .cornerRadius(10)
-                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                        )
                                 }
                                 .onTapGesture {
                                     withAnimation (.snappy) {
@@ -232,13 +247,12 @@ struct PamyatkiMain: View {
                             }
                         }
                     if isTextExpanded5{
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack  {
+                        
+                          
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                                 Сердечно-сосудистая система
-                                                """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded6)
+                                                """)).buildBlue592TextLowLevel(isTextExpanded: isTextExpanded6)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded6.toggle()
@@ -250,23 +264,24 @@ struct PamyatkiMain: View {
                                             MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTablePamyatka1()
                                         }
                                     }
+                                    .background(Color.backtables)
                                     .cornerRadius(10)
-                                    //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded6.toggle()
                                         }
                                     }
                                 }
-                            }
-                        }
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack  {
+                            
+                        
+                        
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                                 Легочные причины
-                                                """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded7)
+                                                """)).buildBlue592TextLowLevel(isTextExpanded: isTextExpanded7)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded7.toggle()
@@ -278,23 +293,22 @@ struct PamyatkiMain: View {
                                             MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTablePamyatka2()
                                         }
                                     }
+                                    .background(Color.backtables)
                                     .cornerRadius(10)
-                                    //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded7.toggle()
                                         }
                                     }
                                 }
-                            }
-                        }
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack  {
+                        
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                                 Гастроинтестинальные причины
-                                                """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded8)
+                                                """)).buildBlue592TextLowLevel(isTextExpanded: isTextExpanded8)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded8.toggle()
@@ -306,23 +320,22 @@ struct PamyatkiMain: View {
                                             MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTablePamyatka3()
                                         }
                                     }
+                                    .background(Color.backtables)
                                     .cornerRadius(10)
-                                    //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded8.toggle()
                                         }
                                     }
                                 }
-                            }
-                        }
-                        ZStack {
-                            MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                            VStack  {
+                         
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                                 Другие причины
-                                                """)).buildBlue591TextLowLevel(isTextExpanded: isTextExpanded9)
+                                                """)).buildBlue592TextLowLevel(isTextExpanded: isTextExpanded9)
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded9.toggle()
@@ -334,16 +347,18 @@ struct PamyatkiMain: View {
                                             MyViewBuilder59(title1: name.content1,title2: name.content2,title3: name.content3,title4: name.content4,title5: name.content5,title6: name.content6,title7: name.content7,title8: name.content8,title9: name.content9,title10: name.content10,title11: name.content11,title12: name.content12,title13: name.content13,title14: name.content14, title15: name.content15,title16: name.content16,title17: name.content17,title18: name.content18,title19: name.content19,title20: name.content20,title21: name.content21,title22: name.content22,title23: name.content23,title24: name.content24,title25: name.content25,title26: name.content26,title27: name.content27,title28: name.content28).buildTablePamyatka2()
                                         }
                                     }
+                                    .background(Color.backtables)
                                     .cornerRadius(10)
-                                    //                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .onTapGesture {
                                         withAnimation (.snappy) {
                                             isTextExpanded9.toggle()
                                         }
                                     }
                                 }
-                            }
-                        }
+                           
                     }
                     MyViewBuilder(title: Text(""),
                                   content: Text("""

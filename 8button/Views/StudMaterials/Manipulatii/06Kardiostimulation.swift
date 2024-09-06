@@ -60,7 +60,9 @@ struct _6Kardiostimulation: View {
                         .scaledToFit()
                         .clipShape(Rectangle())
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .padding(10)
                 }
                 .onTapGesture {
@@ -68,18 +70,12 @@ struct _6Kardiostimulation: View {
                         isTextExpanded1.toggle()
                     }
                 }
-                //                    ZStack {
-                //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                //                        VStack (spacing: 1) {
-               
                 
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Проведение
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded1)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded1)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded1.toggle()
@@ -113,7 +109,9 @@ struct _6Kardiostimulation: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -129,7 +127,9 @@ struct _6Kardiostimulation: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -154,7 +154,12 @@ struct _6Kardiostimulation: View {
                             }
                         }
                     }
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                 
                 MyViewBuilder(title: Text("Примечания"),
                               content: Text("""

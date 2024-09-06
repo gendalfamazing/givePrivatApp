@@ -158,22 +158,23 @@ struct Pharmacology: View {
                                 MyViewBuilder(title: Text(LocalizedStringKey(name.name)), content: Text(LocalizedStringKey(name.code))).buildTablePhafmacologyVasopressors()
                             }
                         }
-                        .background(Color.back)
+                        .background(Color.backtables)
                         .cornerRadius(10)
-                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .onTapGesture {
                             withAnimation (.easeInOut) {
                                 isTextExpanded2.toggle()
                             }
                         }
                     }
-                    ZStack {
-                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                    
                         VStack  {
                             MyViewBuilder(title: Text(""),
                                           content: Text("""
                                             Выбор анальгетика при травмах
-                                            """)).buildBlue59Text(isTextExpanded: isTextExpanded3)
+                                            """)).buildBlue592Text(isTextExpanded: isTextExpanded3)
                                 .onTapGesture {
                                     withAnimation (.snappy) {
                                         isTextExpanded3.toggle()
@@ -189,7 +190,6 @@ struct Pharmacology: View {
                                         })
                                         .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded20 ? 390 : 390) : (isTextExpanded20 ? 180 : 360))
                                         .cornerRadius(10)
-                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                         .padding(5)
                                     
                                     ImagePDF(image: Image("pharmacology2"), title: "").buildECGPad(isTextExpanded: isTextExpanded21)
@@ -200,14 +200,18 @@ struct Pharmacology: View {
                                         })
                                         .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded21 ? 350 : 350) : (isTextExpanded21 ? 160 : 320))
                                         .cornerRadius(10)
-                                        .shadow(color: .shadowGrayRectangle, radius: 0.5)
                                         .padding(5)
                                     
                                 }
                                 
                             }
                         }
-                    }
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)

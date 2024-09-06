@@ -76,13 +76,12 @@ struct _5Kardioversion: View {
                             isTextExpanded1.toggle()
                         }
                     }
-                ZStack {
-                    MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
+                
                     VStack  {
                         MyViewBuilder(title: Text("Проведение"),
                                       content: Text("""
                                         Проведение
-                                        """)).buildBlue59Text(isTextExpanded: isTextExpanded2)
+                                        """)).buildBlue592Text(isTextExpanded: isTextExpanded2)
                             .onTapGesture {
                                 withAnimation (.snappy) {
                                     isTextExpanded2.toggle()
@@ -103,7 +102,9 @@ struct _5Kardioversion: View {
                                     .scaledToFit()
                                     .clipShape(Rectangle())
                                     .cornerRadius(10)
-                                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                    )
                                     .padding(10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
@@ -125,6 +126,7 @@ struct _5Kardioversion: View {
                                             .font(.footnote)
                                         .bold()
                                     }
+                                    .padding(5)
                                     .frame(width: 250, alignment: .leading)
                                     VStack {
                                         Text("50 Дж")
@@ -139,6 +141,11 @@ struct _5Kardioversion: View {
                                     }
                                     .frame(width: 80, alignment: .center)
                                 }
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                                .padding(.horizontal, 10)
                                 MyViewBuilder(title: Text(""),
                                               content: Text("""
                                         5. **Установить электроды на передней поверхности грудной клетки: грудной** (в левой руке) под правую ключицу пациента, вдоль правого края грудины,
@@ -158,7 +165,12 @@ struct _5Kardioversion: View {
                             }
                         }
                     }
-                }
+                    .background(Color.grayButton)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                
                 
                 MyViewBuilder(title: Text("Осложнения"),
                               content: Text("""
