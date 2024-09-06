@@ -70,9 +70,8 @@ struct AboutApp: View {
                         }
                         .background(Color.grayButton)
                         .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                         )
                         
                     
@@ -94,15 +93,13 @@ struct AboutApp: View {
                             .modifier(ThemeGrayColorModifier())
                             .font(.subheadline)
                             .bold()
-                            
                             .cornerRadius(10)
                             
                         }
                         .background(Color.grayButton)
                         .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                         )
                     
                     VStack {
@@ -149,33 +146,15 @@ struct AboutApp: View {
                             }
                             .background(Color.grayButton)
                             .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                             )
                         
                     }
 
-                    //                    ZStack{
-                    //                        MyViewBuilder(title: Text(""), content: Text("")).grayRectangle1()
-                    //                        VStack (spacing: 1){
-                    //                            MyViewBuilder(title: Text("1"),
-                    //                                          content: Text("""
-                    //                                                        Данная программа предназначена для использования медицинскими работниками.
-                    //
-                    //                                                        Приложение поддерживает любое устройство под управлением ios 16 и выше.
-                    //
-                    //                                                        Лица, использующие эти данные для медицинских целей, не должны полностью полагаться на точность ограниченных здесь данных.
-                    //
-                    //                                                        Информация, имеющаяся здесь, поставляется "как есть" и без какой-либо гарантии, явной или подразумеваемой.
-                    //                                                        """)).buildGrayInText()
-                    //                                .foregroundColor(.red)
-                    //
-                    //                        }
-                    //
-                    //                    }
+                    
                     Spacer(minLength: 10)
-                    VStack (spacing:10){
+                    VStack {
                         HStack (spacing: 5) {
                             Image(systemName: "person.fill")
                                 .resizable()
@@ -227,8 +206,24 @@ struct AboutApp: View {
                             Text("Version: \(version)")
                             Spacer()
                         }
-                        Divider()
-                            .background(Color.divider)
+                        
+                    }
+                        .multilineTextAlignment(.center)
+                        .textSelection(.enabled)
+                        .padding(.vertical, 5)
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minHeight: 20)
+                        .modifier(ThemeGrayColorModifier())
+                        .font(.subheadline)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
+                    Spacer(minLength: 10)
+                    
+                    VStack (spacing:10){
                         Button {
                             _ = Task<Void, Never> {
                                 do {
@@ -253,7 +248,9 @@ struct AboutApp: View {
                                 .background(Color.grayButton)
                                 .font(.subheadline)
                                 .cornerRadius(10)
-                                .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
                         }
                         
                         Text("Лицензионное соглашение (EULA)")
@@ -271,7 +268,9 @@ struct AboutApp: View {
                             .background(Color.grayButton)
                             .font(.subheadline)
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             .onTapGesture {
                                 guard let url = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/") else { return }
                                 UIApplication.shared.open(url)
@@ -291,7 +290,9 @@ struct AboutApp: View {
                             .background(Color.grayButton)
                             .font(.subheadline)
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             .onTapGesture {
                                 guard let url = URL(string: "http://ambulance-docs.site/privacy.html") else { return }
                                 UIApplication.shared.open(url)
@@ -311,12 +312,15 @@ struct AboutApp: View {
                             .background(Color.grayButton)
                             .font(.subheadline)
                             .cornerRadius(10)
-                            .shadow(color: .shadowGrayRectangle, radius: 0.5)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                             .onTapGesture {
                                 guard let url = URL(string: "http://ambulance-docs.site") else { return }
                                 UIApplication.shared.open(url)
                             }
                     }
+                    
                     .padding(.horizontal, 10)
                 }
                 .padding(.horizontal, 10)

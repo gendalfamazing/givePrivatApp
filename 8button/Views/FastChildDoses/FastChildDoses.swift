@@ -2145,9 +2145,8 @@ struct FastChildView: View {
                     .background(selectedChapter == nil ? Color.blueButton : Color.toggleChild)
                     .font(.subheadline)
                     .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                     )
                     .allowsHitTesting(false)
                     
@@ -2173,9 +2172,8 @@ struct FastChildView: View {
                         .background(selectedDisease == nil ? Color.blueButton : Color.toggleChild)
                         .font(.subheadline)
                         .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                         )
                         .pickerStyle(MenuPickerStyle())
                         .opacity(0.011)
@@ -2218,7 +2216,7 @@ struct FastChildView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: selectedChapter == nil ? 0 : 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: selectedChapter == nil ? 0 : 0.5) // Устанавливаем цвет и ширину границы
                         )
                         .allowsHitTesting(false)
                         
@@ -2245,9 +2243,8 @@ struct FastChildView: View {
                         .background(selectedTreatment == nil ? Color.blueButton : Color.toggleChild)
                         .font(.subheadline)
                         .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: 0.2) // Устанавливаем цвет и ширину границы
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                         )
                         .pickerStyle(MenuPickerStyle())
                         .opacity(0.011)
@@ -2287,7 +2284,7 @@ struct FastChildView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle, lineWidth: selectedChapter == nil ? 0 : 0.2) // Устанавливаем цвет и ширину границы
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: selectedChapter == nil ? 0 : 0.5) // Устанавливаем цвет и ширину границы
                         )
                         .allowsHitTesting(false)
                         
@@ -2307,7 +2304,7 @@ struct FastChildView: View {
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle, lineWidth: selectedChapter == nil ? 0 : 0.2) // Устанавливаем цвет и ширину границы
+                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: selectedChapter == nil ? 0 : 0.5) // Устанавливаем цвет и ширину границы
                                 )
                                 .transition(.opacity)
                             
