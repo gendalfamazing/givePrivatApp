@@ -44,7 +44,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded1 ? 1110 : 1110) : (isTextExpanded1 ? 515 : 1030))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis2"), title: "").buildECGPad(isTextExpanded: isTextExpanded2)
                     .onTapGesture (count: 1, perform: {
@@ -54,7 +53,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded2 ? 1163 : 1163) : (isTextExpanded2 ? 540 : 1080))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis3"), title: "").buildECGPad(isTextExpanded: isTextExpanded3)
                     .onTapGesture (count: 1, perform: {
@@ -64,7 +62,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded3 ? 1088 : 1088) : (isTextExpanded3 ? 505 : 1010))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis4"), title: "").buildECGPad(isTextExpanded: isTextExpanded4)
                     .onTapGesture (count: 1, perform: {
@@ -74,7 +71,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded4 ? 940 : 940) : (isTextExpanded4 ? 435 : 870))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis5"), title: "").buildECGPad(isTextExpanded: isTextExpanded5)
                     .onTapGesture (count: 1, perform: {
@@ -84,7 +80,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded5 ? 890 : 890) : (isTextExpanded5 ? 412 : 824))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis6"), title: "").buildECGPad(isTextExpanded: isTextExpanded6)
                     .onTapGesture (count: 1, perform: {
@@ -94,7 +89,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded6 ? 1175 : 1175) : (isTextExpanded6 ? 544 : 1088))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis7"), title: "").buildECGPad(isTextExpanded: isTextExpanded7)
                     .onTapGesture (count: 1, perform: {
@@ -104,7 +98,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded7 ? 1119 : 1119) : (isTextExpanded7 ? 518 : 1036))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
                 ImagePDF(image: Image("Analis8"), title: "").buildECGPad(isTextExpanded: isTextExpanded8)
                     .onTapGesture (count: 1, perform: {
@@ -114,7 +107,6 @@ struct AtlasECG_Analisis: View {
                     })
                     .frame(minHeight: UIDevice.current.userInterfaceIdiom == .pad ? (isTextExpanded8 ? 896 : 896) : (isTextExpanded8 ? 415 : 830))
                     .cornerRadius(10)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
                 
             }
             .padding(.horizontal, 10)

@@ -1260,8 +1260,11 @@ struct ImagePDF: View {
             ScrollView {
                 image
                     .resizable()
-                    .padding(1)
                     .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                    .padding(2)
                     .frame(maxWidth: (isTextExpanded ? proxy.size.width : proxy.size.width * 2 ))
                     .frame(maxHeight: (isTextExpanded ? proxy.size.height : proxy.size.height))
                     .scaledToFit()
@@ -1281,6 +1284,7 @@ struct ImagePDF: View {
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                     )
+                    .padding(2)
                     .frame(maxWidth: (isTextExpanded ? proxy.size.width : proxy.size.width * 2 ))
                     .frame(maxHeight: (isTextExpanded ? proxy.size.height : proxy.size.height))
                     .scaledToFit()
