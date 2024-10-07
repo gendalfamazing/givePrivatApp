@@ -60,11 +60,11 @@ class CalendarViewModel: ObservableObject {
         var currentDate = date
 
         if repeatInterval == 0 {
-            // Если интервал равен 1, добавляем событие только один раз
+            // Если интервал равен 0, добавляем событие только один раз
             let event = CalendarEvent(date: date, type: type, startTime: startTime, repeatInterval: nil, note: note)
             eventsToAdd.append(event)
         } else {
-            // Если интервал больше 1, добавляем повторяющиеся события
+            // Если интервал больше 0, добавляем повторяющиеся события
             while currentDate <= calendar.date(byAdding: .month, value: 1, to: date)! {
                 let event = CalendarEvent(date: currentDate, type: type, startTime: startTime, repeatInterval: repeatInterval, note: note)
                 eventsToAdd.append(event)
@@ -74,6 +74,7 @@ class CalendarViewModel: ObservableObject {
 
         events.append(contentsOf: eventsToAdd)
     }
+
     
     func updateEvent(event: CalendarEvent, type: EventType, startTime: Date, repeatInterval: Int) {
         if let index = events.firstIndex(where: { $0.id == event.id }) {
@@ -870,8 +871,7 @@ struct EventCreationSheet: View {
                                         viewModel.events[index] = updatedEvent
                                     }
                                 } else {
-                                    let newEvent = CalendarEvent(date: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval, note: note)
-                                    viewModel.events.append(newEvent)
+                                    viewModel.addEvent(on: selectedDate, type: eventType, startTime: startTime, repeatInterval: repeatInterval, note: note)
                                     viewModel.addEventToHistory(type: eventType, startTime: startTime, repeatInterval: repeatInterval)
                                 }
 

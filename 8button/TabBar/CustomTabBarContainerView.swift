@@ -1,68 +1,113 @@
-//
-//  CustomTabBarContainerView.swift
-//  8button
-//
-//  Created by Artur Vladymcev on 13.12.23.
-//
-
 import SwiftUI
 import Foundation
 
-
-
-
-struct CustomTabBarContainerView<Content:View>: View {
-    
+struct CustomTabBarContainerView: View {
     @Binding var selection: TabBarItem
-    let content: Content
-    @State private var tabs: [TabBarItem] = []
-    
-    init(selection: Binding<TabBarItem>, @ViewBuilder content: () -> Content) {
-        self._selection = selection
-        self.content = content()
-    }
-    
+
+    @Binding var homePath: NavigationPath
+    @Binding var adultPath: NavigationPath
+    @Binding var childPath: NavigationPath
+    @Binding var organizerPath: NavigationPath
+    @Binding var searchPath: NavigationPath
+
+    @Binding var homeResetID: UUID
+    @Binding var adultResetID: UUID
+    @Binding var childResetID: UUID
+    @Binding var organizerResetID: UUID
+    @Binding var searchResetID: UUID
+
+    @State private var isResetting: Bool = false
+
     var body: some View {
         ZStack(alignment: .bottom) {
-            content
-//                .ignoresSafeArea()
-            
-            ZStack (alignment: .bottom){
-                Text("")
-                    .frame(height: 47)
-                    .frame(maxWidth: .infinity)
-                    .background(.back)
-                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                CustomTabBarView(tabs: tabs, selection: $selection)
-//                    .shadow(color: .shadowGrayRectangle, radius: 0.5)
-                
-                
+            ZStack {
+                if isResetting {
+                    currentRootView
+                        .transition(.opacity)
+                } else {
+                    NavigationStack(path: currentPathBinding) {
+                        currentRootView
+                            .transition(.opacity)
+                    }
+                    .id(currentResetID)
+                    .transition(.opacity)
+                }
             }
-                
-        }
-        
-        
-        .onPreferenceChange(TabBarItemsPreferenceKey.self, perform: { value in
-            self.tabs = value
-        })
-        
-        
-    }
-}
+            .animation(.easeInOut(duration: 0.4), value: isResetting)
 
-struct CustomTabBarContainerView_Previews: PreviewProvider {
-    
-    static let tabs: [TabBarItem] = [
-        .home, .adult, .child, .search
-    ]
-    
-    
-    static var previews: some View {
-        CustomTabBarContainerView(selection: .constant(tabs.first!)) {
-            Color.red
+            // Кастомный таббар
+            CustomTabBarView(
+                tabs: TabBarItem.allCases,
+                selection: $selection,
+                resetNavigation: resetNavigation
+            )
+        }
+    }
+
+    // Функция для сброса навигации
+    private func resetNavigation(for tab: TabBarItem) {
+        withAnimation(.easeInOut(duration: 0.4)) {
+            isResetting = true
+            switch tab {
+            case .home:
+                homePath = NavigationPath()
+                homeResetID = UUID()
+            case .adult:
+                adultPath = NavigationPath()
+                adultResetID = UUID()
+            case .child:
+                childPath = NavigationPath()
+                childResetID = UUID()
+            case .organizer:
+                organizerPath = NavigationPath()
+                organizerResetID = UUID()
+            case .search:
+                searchPath = NavigationPath()
+                searchResetID = UUID()
+            }
+        }
+        // Сбрасываем флаг после завершения анимации
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            withAnimation(.easeOut(duration: 0)) {
+                isResetting = false
+            }
+        }
+    }
+
+    // Вспомогательные свойства
+    private var currentPathBinding: Binding<NavigationPath> {
+        switch selection {
+        case .home: return $homePath
+        case .adult: return $adultPath
+        case .child: return $childPath
+        case .organizer: return $organizerPath
+        case .search: return $searchPath
+        }
+    }
+
+    private var currentResetID: UUID {
+        switch selection {
+        case .home: return homeResetID
+        case .adult: return adultResetID
+        case .child: return childResetID
+        case .organizer: return organizerResetID
+        case .search: return searchResetID
+        }
+    }
+
+    @ViewBuilder
+    private var currentRootView: some View {
+        switch selection {
+        case .home:
+            HomeViewGear()
+        case .adult:
+            SearchAdultGear()
+        case .child:
+            Postanovlenie118ViewGear()
+        case .organizer:
+            CalendarViewGear()
+        case .search:
+            AboutAppGear()
         }
     }
 }
-#Preview {
-        AppTabBarView()
-    }

@@ -6042,9 +6042,6 @@
         }
       }
     },
-    "Favorites" : {
-
-    },
     "G00-G95" : {
       "localizations" : {
         "ru" : {
@@ -6079,12 +6076,6 @@
       }
     },
     "HAS-BLED" : {
-
-    },
-    "Hello" : {
-
-    },
-    "Home" : {
 
     },
     "I А. Фельдшерско-акушерский пункт" : {
@@ -12933,6 +12924,7 @@
       }
     },
     "Profile" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
