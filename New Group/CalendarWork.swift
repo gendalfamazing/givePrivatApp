@@ -1,34 +1,8 @@
-
-
 import SwiftUI
 import Combine
+import WidgetKit
 
-struct CalendarEvent: Identifiable, Codable {
-    var id = UUID()
-    var date: Date
-    var type: EventType
-    var startTime: Date
-    var repeatInterval: Int? // Интервал повторения в днях
-    var note: String = ""
-    
-}
 
-enum EventType: String, Codable {
-    case day = "День"
-    case night = "Ночь"
-    case twentyFourHours = "Сутки"
-    
-    var color: Color {
-        switch self {
-        case .day:
-            return .yellow
-        case .night:
-            return .blue
-        case .twentyFourHours:
-            return .red
-        }
-    }
-}
 
 class CalendarViewModel: ObservableObject {
     @Published var currentDate: Date = Date()
@@ -48,6 +22,9 @@ class CalendarViewModel: ObservableObject {
     @Published var animationFlag = false
     @Published var isShowingCurrentMonth: Bool = true
     @Published var transition: AnyTransition = .opacity
+
+    // Используем UserDefaults с App Group
+    let userDefaults = UserDefaults(suiteName: "group.com.arturvladymcev.ambulancewidget")!
 
     init() {
         loadEvents()
@@ -75,7 +52,6 @@ class CalendarViewModel: ObservableObject {
         events.append(contentsOf: eventsToAdd)
     }
 
-    
     func updateEvent(event: CalendarEvent, type: EventType, startTime: Date, repeatInterval: Int) {
         if let index = events.firstIndex(where: { $0.id == event.id }) {
             events[index].type = type
@@ -83,16 +59,16 @@ class CalendarViewModel: ObservableObject {
             events[index].repeatInterval = repeatInterval == 1 ? nil : repeatInterval
         }
     }
-    
+
     func deleteEvent(event: CalendarEvent) {
         if let index = events.firstIndex(where: { $0.id == event.id }) {
             events.remove(at: index)
         }
     }
-    
+
     func deleteEvents(in dateRange: ClosedRange<Date>) {
         let calendar = Calendar.current
-        
+
         events.removeAll { event in
             let eventDate = calendar.startOfDay(for: event.date)
             let startDate = calendar.startOfDay(for: dateRange.lowerBound)
@@ -100,68 +76,69 @@ class CalendarViewModel: ObservableObject {
             
             return eventDate >= startDate && eventDate <= endDate
         }
-        
+
         saveEvents() // Сохраняем изменения
     }
-    
+
     func events(for date: Date) -> [CalendarEvent] {
         return events.filter { Calendar.current.isDate($0.date, inSameDayAs: date) }
     }
-    
+
     func previousMonth() {
-            guard let newDate = Calendar.current.date(byAdding: .month, value: -1, to: currentDate) else { return }
-            currentDate = newDate
-            isShowingCurrentMonth.toggle()
-        }
-        
-        func nextMonth() {
-            guard let newDate = Calendar.current.date(byAdding: .month, value: 1, to: currentDate) else { return }
-            currentDate = newDate
-            isShowingCurrentMonth.toggle()
-        }
+        guard let newDate = Calendar.current.date(byAdding: .month, value: -1, to: currentDate) else { return }
+        currentDate = newDate
+        isShowingCurrentMonth.toggle()
+    }
+
+    func nextMonth() {
+        guard let newDate = Calendar.current.date(byAdding: .month, value: 1, to: currentDate) else { return }
+        currentDate = newDate
+        isShowingCurrentMonth.toggle()
+    }
 
     // MARK: - History Management
-    
+
     func addEventToHistory(type: EventType, startTime: Date, repeatInterval: Int) {
         let event = CalendarEvent(date: Date(), type: type, startTime: startTime, repeatInterval: repeatInterval)
         if !eventHistory.contains(where: { $0.type == event.type && $0.startTime == event.startTime && $0.repeatInterval == event.repeatInterval }) {
             eventHistory.append(event)
         }
     }
-    
+
     func removeEventFromHistory(_ event: CalendarEvent) {
-            if let index = eventHistory.firstIndex(where: { $0.id == event.id }) {
-                eventHistory.remove(at: index)
-            }
+        if let index = eventHistory.firstIndex(where: { $0.id == event.id }) {
+            eventHistory.remove(at: index)
         }
-    
+    }
+
     // MARK: - Persistence
-    
+
     func saveEvents() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(events) {
-            UserDefaults.standard.set(encoded, forKey: "CalendarEvents")
+            userDefaults.set(encoded, forKey: "CalendarEvents")
+            WidgetCenter.shared.reloadAllTimelines() // Обновление виджета
         }
     }
 
     func loadEvents() {
-        if let savedEvents = UserDefaults.standard.data(forKey: "CalendarEvents") {
+        if let savedEvents = userDefaults.data(forKey: "CalendarEvents") {
             let decoder = JSONDecoder()
             if let loadedEvents = try? decoder.decode([CalendarEvent].self, from: savedEvents) {
                 events = loadedEvents
             }
         }
     }
-    
+
     func saveEventHistory() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(eventHistory) {
-            UserDefaults.standard.set(encoded, forKey: "EventHistory")
+            userDefaults.set(encoded, forKey: "EventHistory")
         }
     }
 
     func loadEventHistory() {
-        if let savedHistory = UserDefaults.standard.data(forKey: "EventHistory") {
+        if let savedHistory = userDefaults.data(forKey: "EventHistory") {
             let decoder = JSONDecoder()
             if let loadedHistory = try? decoder.decode([CalendarEvent].self, from: savedHistory) {
                 eventHistory = loadedHistory
@@ -551,11 +528,16 @@ struct DaysOfWeekView: View {
     var body: some View {
         HStack (alignment: .bottom){
             ForEach(daysOfWeek, id: \.self) { day in
-                if day.contains("Вс") || day.contains("Сб"){
+                if day.contains("Вс") {
                     Text(day)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.red)
-                } else {
+                } else if day.contains("Сб") {
+                    Text(day)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.blue)
+                
+                }else {
                     Text(day)
                         .frame(maxWidth: .infinity)
                 }
