@@ -79,9 +79,10 @@ struct ShiftCalendarWidgetEntryView: View {
     var smallWidgetView: some View {
         VStack(spacing: 4) {
             Text(formattedFullDate(Date()))
-                .font(.headline)
+                .font(.subheadline)
+                .bold()
                 .padding(.top, 4)
-            WidgetCalendarView(currentDate: Date(), events: entry.events)
+            WidgetCalendarView(currentDate: Date(), events: entry.events, totalGridHeight: 80)
                 .padding(2)
                 .aspectRatio(1, contentMode: .fill)
         }
@@ -126,7 +127,7 @@ struct ShiftCalendarWidgetEntryView: View {
                 Text(formattedMonthYear(Date()))
                     .font(.headline)
                     .padding(.top, 4)
-                WidgetCalendarView(currentDate: Date(), events: entry.events)
+                WidgetCalendarView(currentDate: Date(), events: entry.events, totalGridHeight: 85)
                     .padding(2)
                     .aspectRatio(1, contentMode: .fill)
             }
