@@ -106,12 +106,12 @@ struct ShiftCalendarWidgetEntryView: View {
                                             Text("\(event.type.rawValue)")
                                                 .font(.subheadline)
                                                 .bold()
-                                                .foregroundColor(.black.opacity(0.15))
+                                                .foregroundColor(.white.opacity(0.15))
                                         }
-                                        Text("Время: \(formattedTime(event.startTime))")
+                                        Text("**Время:** \(formattedTime(event.startTime))")
                                             .font(.caption)
                                         if !event.note.isEmpty {
-                                            Text("Заметка: \(event.note)")
+                                            Text("**Заметка:** \(event.note)")
                                                 .font(.caption)
                                         }
                                     }

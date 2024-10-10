@@ -31,7 +31,7 @@ struct WidgetCalendarView: View {
                                 .frame(maxWidth: .infinity)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
-                                .foregroundColor(.black.opacity(0.15))
+                                .foregroundColor(.white.opacity(0.15))
                         }
                     } else if day.contains("Сб") {
                         ZStack {
@@ -48,7 +48,7 @@ struct WidgetCalendarView: View {
                                 .frame(maxWidth: .infinity)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
-                                .foregroundColor(.black.opacity(0.15))
+                                .foregroundColor(.white.opacity(0.15))
                         }
                     }else {
                         Text(day)
