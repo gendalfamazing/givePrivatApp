@@ -81,9 +81,8 @@ struct ShiftCalendarWidgetEntryView: View {
             Text(formattedFullDate(Date()))
                 .font(.subheadline)
                 .bold()
-                .padding(.top, 4)
+                .padding(.bottom, 4)
             WidgetCalendarView(currentDate: Date(), events: entry.events, totalGridHeight: 80)
-                .padding(2)
                 .aspectRatio(1, contentMode: .fill)
         }
     }
@@ -93,8 +92,9 @@ struct ShiftCalendarWidgetEntryView: View {
             // Левая половина: информация о сегодняшних событиях
             VStack(alignment: .leading, spacing: 4) {
                 Text(formattedFullDate(Date()))
-                    .font(.headline)
-                    .padding(.top, 4)
+                    .font(.subheadline)
+                    .bold()
+                    .padding(.bottom, 4)
                 let todayEvents = entry.events.filter { Calendar.current.isDate($0.date, inSameDayAs: Date()) }
                 if !todayEvents.isEmpty {
                                     ForEach(todayEvents, id: \.id) { event in
@@ -116,7 +116,7 @@ struct ShiftCalendarWidgetEntryView: View {
                                         }
                                     }
                 } else {
-                    Text("Нет событий")
+                    Text("Нет смены")
                         .font(.subheadline)
                 }
                 Spacer()
@@ -125,13 +125,16 @@ struct ShiftCalendarWidgetEntryView: View {
             // Правая половина: сетка календаря
             VStack(spacing: 4) {
                 Text(formattedMonthYear(Date()))
-                    .font(.headline)
-                    .padding(.top, 4)
+                    .font(.subheadline)
+                    .bold()
+                    .padding(.bottom, 4)
                 WidgetCalendarView(currentDate: Date(), events: entry.events, totalGridHeight: 85)
                     .padding(2)
                     .aspectRatio(1, contentMode: .fill)
             }
         }
+        .padding(.bottom, 5)
+        .padding(.top, 5)
     }
 
     // Добавьте эти функции внутри структуры, но вне других функций
