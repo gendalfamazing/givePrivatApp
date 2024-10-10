@@ -529,14 +529,27 @@ struct DaysOfWeekView: View {
         HStack (alignment: .bottom){
             ForEach(daysOfWeek, id: \.self) { day in
                 if day.contains("Вс") {
-                    Text(day)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.red)
+                    ZStack {
+                        Text(day)
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .foregroundColor(.red)
+                        Text(day)
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .foregroundColor(.black.opacity(0.15))
+                    }
                 } else if day.contains("Сб") {
-                    Text(day)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.blue)
-                
+                    ZStack {
+                        Text(day)
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .foregroundColor(.blue)
+                        Text(day)
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .foregroundColor(.black.opacity(0.15))
+                    }
                 }else {
                     Text(day)
                         .frame(maxWidth: .infinity)

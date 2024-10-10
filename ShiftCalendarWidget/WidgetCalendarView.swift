@@ -16,13 +16,50 @@ struct WidgetCalendarView: View {
             // Заголовки дней недели
             HStack(spacing: 1) {
                 ForEach(["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], id: \.self) { day in
-                    Text(day)
-                        .font(.caption)
-                        .bold()
-                        .frame(maxWidth: .infinity)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                        .foregroundColor(day == "Сб" ? .blue : day == "Вс" ? .red : .primary)
+                    if day.contains("Вс") {
+                        ZStack {
+                            Text(day)
+                                .font(.caption)
+                                .bold()
+                                .frame(maxWidth: .infinity)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
+                                .foregroundColor(.red)
+                            Text(day)
+                                .font(.caption)
+                                .bold()
+                                .frame(maxWidth: .infinity)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
+                                .foregroundColor(.black.opacity(0.15))
+                        }
+                    } else if day.contains("Сб") {
+                        ZStack {
+                            Text(day)
+                                .font(.caption)
+                                .bold()
+                                .frame(maxWidth: .infinity)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
+                                .foregroundColor(.blue)
+                            Text(day)
+                                .font(.caption)
+                                .bold()
+                                .frame(maxWidth: .infinity)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
+                                .foregroundColor(.black.opacity(0.15))
+                        }
+                    }else {
+                        Text(day)
+                            .font(.caption)
+                            .bold()
+                            .frame(maxWidth: .infinity)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .foregroundColor(.primary)
+                    }
+                    
                 }
             }
             .padding(.bottom, 5)
