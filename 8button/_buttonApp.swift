@@ -13,7 +13,7 @@ import SwiftUI
 struct _buttonApp: App {
     @StateObject
     private var entitlementManager: EntitlementManager
-
+    @StateObject private var updateManager = UpdateManager()
     @StateObject
     private var purchaseManager: PurchaseManager
     @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
@@ -35,6 +35,13 @@ struct _buttonApp: App {
                 .task {
                     await purchaseManager.updatePurchasedProducts()
                 }
+                .environmentObject(updateManager)
+                                .onAppear {
+                                    updateManager.checkForUpdate()
+                                }
+                                .sheet(isPresented: $updateManager.showWhatsNew) {
+                                    WhatsNewView()
+                                }
         }
         var colorScheme: ColorScheme? {
             switch Theme(rawValue: selectedTheme) ?? .system {
@@ -59,3 +66,19 @@ struct _buttonApp: App {
     }
 }
 
+import Foundation
+import SwiftUI
+
+class UpdateManager: ObservableObject {
+    @AppStorage("lastKnownVersion") private var lastKnownVersion: String = ""
+    @Published var showWhatsNew: Bool = false
+
+    func checkForUpdate() {
+        let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+
+        if lastKnownVersion != currentVersion {
+            lastKnownVersion = currentVersion
+            showWhatsNew = true
+        }
+    }
+}

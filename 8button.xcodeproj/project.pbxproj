@@ -248,6 +248,7 @@
 		C6EED7992B65343900E6B5CA /* Postanovlenie99Alg15View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EED7982B65343900E6B5CA /* Postanovlenie99Alg15View.swift */; };
 		C6EED79B2B65344000E6B5CA /* Postanovlenie99Alg16View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EED79A2B65344000E6B5CA /* Postanovlenie99Alg16View.swift */; };
 		C6F2FAAF2B25B47400AC023A /* SearchableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F2FAAE2B25B47400AC023A /* SearchableBootcamp.swift */; };
+		C6F4E8262CBC18910074C65D /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4E8252CBC18910074C65D /* WhatsNewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -531,6 +532,7 @@
 		C6EED7982B65343900E6B5CA /* Postanovlenie99Alg15View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg15View.swift; sourceTree = "<group>"; };
 		C6EED79A2B65344000E6B5CA /* Postanovlenie99Alg16View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie99Alg16View.swift; sourceTree = "<group>"; };
 		C6F2FAAE2B25B47400AC023A /* SearchableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableBootcamp.swift; sourceTree = "<group>"; };
+		C6F4E8252CBC18910074C65D /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -796,6 +798,7 @@
 				C685BC6C2B49455700EAA37D /* -button-Info.plist */,
 				C6DB60572B14BBEA0050DAD6 /* _buttonApp.swift */,
 				C6E1C4822B46B17A0070B0B9 /* Zoom.swift */,
+				C6F4E8252CBC18910074C65D /* WhatsNewView.swift */,
 				C69F13E42B1C793700FBD117 /* ViewBuilder.swift */,
 				C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */,
 				C605763A2B1FB6C200C5BAC9 /* Localizable.xcstrings */,
@@ -1224,6 +1227,7 @@
 				C6DB607E2B14E5500050DAD6 /* Postanovlenie118Alg3View.swift in Sources */,
 				C69A4DF22B272AF200D5C703 /* SearchBeta.swift in Sources */,
 				C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */,
+				C6F4E8262CBC18910074C65D /* WhatsNewView.swift in Sources */,
 				C61EC9322B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift in Sources */,
 				C65484942B4EB1FC00847504 /* Prikaz1030Alg126View.swift in Sources */,
 				C6740B792BCABD6C005F28E6 /* ZakonOZdravoohranenii.swift in Sources */,
@@ -1606,7 +1610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arturvladymcev.AmbulanceDocs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1646,7 +1650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arturvladymcev.AmbulanceDocs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
