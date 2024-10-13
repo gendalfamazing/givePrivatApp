@@ -162,7 +162,7 @@ struct DayView: View {
                     withAnimation(.bouncy) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 6)
-                            .fill(!events.isEmpty ? events.first!.type.color.opacity(0.5) : Color.grayButton)
+                            .fill(!events.isEmpty ? events.first!.type.color : Color.grayButton)
                             .frame(width: 40, height: 40)
                             .cornerRadius(6)
                             .zIndex(2)
@@ -183,7 +183,7 @@ struct DayView: View {
                 } else if isToday {
                     ZStack {
                         RoundedRectangle(cornerRadius: 6)
-                            .fill(!events.isEmpty ? events.first!.type.color.opacity(0.5) : Color.grayButton)
+                            .fill(!events.isEmpty ? events.first!.type.color : Color.grayButton)
                             .frame(width: 40, height: 40)
                             .cornerRadius(6)
                             .zIndex(2)
@@ -199,7 +199,7 @@ struct DayView: View {
                 } else if !events.isEmpty {
                     ZStack {
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(events.first!.type.color.opacity(0.5))
+                        .fill(events.first!.type.color)
                         .frame(width: 40, height: 40)
                         .cornerRadius(6)
                         .zIndex(2)
@@ -376,6 +376,7 @@ struct CalendarView: View {
 
 
 struct CalendarGrid: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: CalendarViewModel
     @State private var previousMonth: Bool = true
     
@@ -529,27 +530,21 @@ struct DaysOfWeekView: View {
         HStack (alignment: .bottom){
             ForEach(daysOfWeek, id: \.self) { day in
                 if day.contains("Вс") {
-                    ZStack {
+                    
                         Text(day)
                             .frame(maxWidth: .infinity)
                             .bold()
-                            .foregroundColor(.red)
-                        Text(day)
-                            .frame(maxWidth: .infinity)
-                            .bold()
-                            .foregroundColor(.black.opacity(0.15))
-                    }
+                            .foregroundColor(.weekendRed)
+                        
+                    
                 } else if day.contains("Сб") {
-                    ZStack {
+                    
                         Text(day)
                             .frame(maxWidth: .infinity)
                             .bold()
-                            .foregroundColor(.blue)
-                        Text(day)
-                            .frame(maxWidth: .infinity)
-                            .bold()
-                            .foregroundColor(.black.opacity(0.15))
-                    }
+                            .foregroundColor(.weekendBlue)
+                        
+                    
                 }else {
                     Text(day)
                         .frame(maxWidth: .infinity)
@@ -607,7 +602,7 @@ struct EventsView: View {
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    .background(event.type.color.opacity(0.5))
+                    .background(event.type.color)
                     .background(Color.grayButton)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
@@ -719,12 +714,11 @@ struct EventCreationSheet: View {
                         Text("Сутки").tag(EventType.twentyFourHours)
                     }
                     .padding(.bottom, 1)
-                    .background(colorScheme == .dark ? Color.white.opacity(0) : Color.white.opacity(0.95))
+                    .background(eventType == .day ? Color.widgetYellow : eventType == .night ? Color.widgetBlue : Color.widgetRed)
                     .cornerRadius(8)
-                    .overlay(RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
-                    )
+                    
                     .pickerStyle(SegmentedPickerStyle())
+                    .animation(.easeInOut, value: eventType)
                     
                     Spacer(minLength: 10)
 
@@ -761,6 +755,9 @@ struct EventCreationSheet: View {
                                 Spacer()
                             }
                         }
+                        .background(eventType == .day ? Color.widgetYellow : eventType == .night ? Color.widgetBlue : Color.widgetRed)
+                        .cornerRadius(10)
+                        .animation(.easeInOut, value: eventType)
                     }
                     Spacer(minLength: 10)
 
@@ -785,6 +782,9 @@ struct EventCreationSheet: View {
                             .frame(height: 100)
                             .clipped()
                         }
+                        .background(eventType == .day ? Color.widgetYellow : eventType == .night ? Color.widgetBlue : Color.widgetRed)
+                        .cornerRadius(10)
+                        .animation(.easeInOut, value: eventType)
                     }
                     Spacer(minLength: 10)
 
@@ -802,6 +802,9 @@ struct EventCreationSheet: View {
                                 .padding(.leading, 15)
                                 .padding(.trailing, 25)
                                 .frame(height: 40)
+                                .background(eventType == .day ? Color.widgetYellow : eventType == .night ? Color.widgetBlue : Color.widgetRed)
+                                .cornerRadius(10)
+                                .animation(.easeInOut, value: eventType)
                                 .onChange(of: note) { newValue in
                                     if newValue.count > characterLimit {
                                         note = String(newValue.prefix(characterLimit)) // Ограничиваем количество символов
@@ -951,8 +954,8 @@ struct EventCreationSheet: View {
                         .padding(.horizontal, 10)
                     }
                     .background(
-                        template.type.rawValue.contains("День") ? .yellow.opacity(0.5) :
-                            template.type.rawValue.contains("Ночь") ? .blue.opacity(0.5) : .red.opacity(0.5))
+                        template.type.rawValue.contains("День") ? .widgetYellow :
+                            template.type.rawValue.contains("Ночь") ? .widgetBlue : .widgetRed)
                     
                 }
                 .background(.grayButton)

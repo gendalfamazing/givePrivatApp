@@ -93,26 +93,29 @@ struct ShiftCalendarWidgetEntryView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(formattedFullDate(Date()))
                     .font(.subheadline)
+                    .foregroundColor(.textNumber1)
                     .bold()
                     .padding(.bottom, 4)
                 let todayEvents = entry.events.filter { Calendar.current.isDate($0.date, inSameDayAs: Date()) }
                 if !todayEvents.isEmpty {
                                     ForEach(todayEvents, id: \.id) { event in
-                                        ZStack {
+                                        
                                             Text("\(event.type.rawValue)")
                                                 .font(.subheadline)
                                                 .bold()
-                                                .foregroundColor(event.type.color)
-                                            Text("\(event.type.rawValue)")
-                                                .font(.subheadline)
-                                                .bold()
-                                                .foregroundColor(.white.opacity(0.15))
-                                        }
+                                                .foregroundColor(event.type.rawValue == "День" ? .widgetEventYellow : event.type.rawValue == "Ночь" ? .weekendBlue : event.type.rawValue == "Сутки" ? .weekendRed : event.type.color)
+                                            
+                                        
                                         Text("**Время:** \(formattedTime(event.startTime))")
                                             .font(.caption)
+                                            .foregroundColor(.textNumber1)
                                         if !event.note.isEmpty {
-                                            Text("**Заметка:** \(event.note)")
+                                            Text("""
+                                                **Заметка:** 
+                                                \(event.note)
+                                                """)
                                                 .font(.caption)
+                                                .foregroundColor(.textNumber1)
                                         }
                                     }
                 } else {
@@ -126,6 +129,7 @@ struct ShiftCalendarWidgetEntryView: View {
             VStack(spacing: 4) {
                 Text(formattedMonthYear(Date()))
                     .font(.subheadline)
+                    .foregroundColor(.textNumber1)
                     .bold()
                     .padding(.bottom, 4)
                 WidgetCalendarView(currentDate: Date(), events: entry.events, totalGridHeight: 85)

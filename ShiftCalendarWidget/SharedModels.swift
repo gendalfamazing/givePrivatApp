@@ -17,11 +17,11 @@ enum EventType: String, Codable {
     var color: Color {
         switch self {
         case .day:
-            return .yellow
+            return .widgetYellow
         case .night:
-            return .blue
+            return .widgetBlue
         case .twentyFourHours:
-            return .red
+            return .widgetRed
         }
     }
 }

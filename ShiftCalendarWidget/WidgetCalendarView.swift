@@ -17,39 +17,26 @@ struct WidgetCalendarView: View {
             HStack(spacing: 1) {
                 ForEach(["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], id: \.self) { day in
                     if day.contains("Вс") {
-                        ZStack {
+                        
                             Text(day)
                                 .font(.caption)
                                 .bold()
                                 .frame(maxWidth: .infinity)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
-                                .foregroundColor(.red)
-                            Text(day)
-                                .font(.caption)
-                                .bold()
-                                .frame(maxWidth: .infinity)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.5)
-                                .foregroundColor(.white.opacity(0.15))
-                        }
+                                .foregroundColor(.weekendRed)
+                            
                     } else if day.contains("Сб") {
-                        ZStack {
+                        
                             Text(day)
                                 .font(.caption)
                                 .bold()
                                 .frame(maxWidth: .infinity)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
-                                .foregroundColor(.blue)
-                            Text(day)
-                                .font(.caption)
-                                .bold()
-                                .frame(maxWidth: .infinity)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.5)
-                                .foregroundColor(.white.opacity(0.15))
-                        }
+                                .foregroundColor(.weekendBlue)
+                            
+                        
                     }else {
                         Text(day)
                             .font(.caption)
@@ -57,7 +44,7 @@ struct WidgetCalendarView: View {
                             .frame(maxWidth: .infinity)
                             .lineLimit(1)
                             .minimumScaleFactor(0.5)
-                            .foregroundColor(.primary)
+                            .foregroundColor(.textNumber1)
                     }
                     
                 }
@@ -67,14 +54,14 @@ struct WidgetCalendarView: View {
             LazyVGrid(columns: columns, spacing: 1) {
                 ForEach(days, id: \.self) { date in
                     let isCurrentMonth = Calendar.current.isDate(date, equalTo: currentDate, toGranularity: .month)
-                    let textColor: Color = isCurrentMonth ? (colorScheme == .dark ? Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9490196078431372) : Color.black) : (colorScheme == .dark ? Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9490196078431372).opacity(0.5) : Color.black.opacity(0.5))
+                    let textColor: Color = isCurrentMonth ? .textNumber1 : .textNumber1.opacity(0.5)
                     
                     let event = events.first(where: { Calendar.current.isDate($0.date, inSameDayAs: date) })
                     Text("\(Calendar.current.component(.day, from: date))")
                         .font(.caption)
                         .foregroundColor(textColor)
                         .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
-                        .background(event != nil ? event!.type.color.opacity(0.5) : Color.clear)
+                        .background(event != nil ? event!.type.color : Color.clear)
                         .cornerRadius(3)
                 }
             }
