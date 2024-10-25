@@ -161,7 +161,7 @@ struct Prikaz1030Alg27View: View {
                            
                         MyViewBuilder(title: Text("27"), content: Text("""
                             **Оценка уровня сознания по шкале Глазго**
-                            """)).buildGrayInText()
+                            """)).buildGrayTextCenter()
                         Image(systemName: "arrow.down")
                            
                         ZStack {

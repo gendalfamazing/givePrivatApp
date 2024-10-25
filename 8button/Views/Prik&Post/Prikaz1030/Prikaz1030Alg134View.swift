@@ -200,7 +200,7 @@ struct Prikaz1030Alg34View: View {
                            
                         MyViewBuilder(title: Text("34"), content: Text("""
                         **Доставка в стационар** по профилю основного заболевания
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayText()
                     }
                     if isTextExpanded2 {
                         Image(systemName: "arrow.down")
@@ -221,7 +221,7 @@ struct Prikaz1030Alg34View: View {
                            
                         MyViewBuilder(title: Text("34"), content: Text("""
                         **Доставка в стационар** по профилю основного заболевания
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayText()
                     }
                     if isTextExpanded3 {
                         Image(systemName: "arrow.down")
@@ -323,7 +323,7 @@ struct Prikaz1030Alg34View: View {
                            
                         MyViewBuilder(title: Text("34"), content: Text("""
                         **Доставка в стационар** по профилю основного заболевания
-                        """)).buildGrayInHiddenText()
+                        """)).buildGrayText()
                     }
                     if isTextExpanded6 {
                         Image(systemName: "arrow.down")
