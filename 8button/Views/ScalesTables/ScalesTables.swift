@@ -535,6 +535,8 @@ struct Scales: View {
             }
             TablesGlazgoView()
             
+            Geneva()
+            
             MyViewBuilder(title: Text("GRACE"), content: Text("Расчет риска у больных с ОКС без подъема ST")).buildBlue591TextScales(isTextExpanded: isTextExpanded3)
                 .onTapGesture {
                     withAnimation (.snappy) {

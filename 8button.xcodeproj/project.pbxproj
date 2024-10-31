@@ -33,6 +33,7 @@
 		C60E0D692BA73D7D00C1088E /* AtlasECG-Aritmii201.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D682BA73D7D00C1088E /* AtlasECG-Aritmii201.swift */; };
 		C60E0D6B2BA7431600C1088E /* AtlasECG-Aritmii301.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D6A2BA7431600C1088E /* AtlasECG-Aritmii301.swift */; };
 		C60E0D6D2BA746BF00C1088E /* AtlasECG-Aritmii401.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E0D6C2BA746BF00C1088E /* AtlasECG-Aritmii401.swift */; };
+		C612B3262CD26ADE00F41B3A /* Geneva.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612B3252CD26ADE00F41B3A /* Geneva.swift */; };
 		C61EC9322B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9312B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift */; };
 		C61EC9342B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */; };
 		C61EC9362B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */; };
@@ -312,6 +313,7 @@
 		C60E0D682BA73D7D00C1088E /* AtlasECG-Aritmii201.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii201.swift"; sourceTree = "<group>"; };
 		C60E0D6A2BA7431600C1088E /* AtlasECG-Aritmii301.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii301.swift"; sourceTree = "<group>"; };
 		C60E0D6C2BA746BF00C1088E /* AtlasECG-Aritmii401.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtlasECG-Aritmii401.swift"; sourceTree = "<group>"; };
+		C612B3252CD26ADE00F41B3A /* Geneva.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geneva.swift; sourceTree = "<group>"; };
 		C61EC9312B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5View.swift; sourceTree = "<group>"; };
 		C61EC9332B99A01700E71EF3 /* Postanovlenie59Alg5P1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P1View.swift; sourceTree = "<group>"; };
 		C61EC9352B99A03A00E71EF3 /* Postanovlenie59Alg5P2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg5P2View.swift; sourceTree = "<group>"; };
@@ -837,6 +839,7 @@
 			isa = PBXGroup;
 			children = (
 				C6445A652B6F8806001CEF35 /* ScalesTables.swift */,
+				C612B3252CD26ADE00F41B3A /* Geneva.swift */,
 				C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */,
 			);
 			path = ScalesTables;
@@ -1228,6 +1231,7 @@
 				C69A4DF22B272AF200D5C703 /* SearchBeta.swift in Sources */,
 				C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */,
 				C6F4E8262CBC18910074C65D /* WhatsNewView.swift in Sources */,
+				C612B3262CD26ADE00F41B3A /* Geneva.swift in Sources */,
 				C61EC9322B999FBF00E71EF3 /* Postanovlenie59Alg5View.swift in Sources */,
 				C65484942B4EB1FC00847504 /* Prikaz1030Alg126View.swift in Sources */,
 				C6740B792BCABD6C005F28E6 /* ZakonOZdravoohranenii.swift in Sources */,

@@ -27,7 +27,7 @@ struct _buttonApp: App {
 
     var body: some Scene {
         WindowGroup {
-            StoreKit8()
+            AppTabBarView()
                 .preferredColorScheme(colorScheme)
                 .environment(\.sizeCategory, fontSizeCategory)
                 .environmentObject(entitlementManager)
