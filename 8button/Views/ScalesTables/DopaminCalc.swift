@@ -11,6 +11,9 @@ struct InfusionRateCalculatorView: View {
     @State private var drugDosage = ""
     @State private var patientWeight = ""
     @State private var convertMG = 1000.0
+    
+    @FocusState private var isKeyFieldFocused: Bool
+    
     var calculatedDose: Double {
         if let concentration = Double(drugConcentration),
            let volume = Double(drugVolume),
@@ -75,7 +78,26 @@ struct InfusionRateCalculatorView: View {
                                             .keyboardType(.numberPad)
                                             .frame(minHeight: 30)
                                             .padding(.trailing, 70)
-                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                            .padding(.leading, 10)
+                                            .onChange(of: drugConcentration) { newValue in
+                                                // Удаляем все нецифровые символы
+                                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                                // Ограничиваем количество символов до двух
+                                                if filtered.count > 3 {
+                                                    drugConcentration = String(filtered.prefix(3))
+                                                } else {
+                                                    drugConcentration = filtered
+                                                }
+                                                }
+                                            .focused($isKeyFieldFocused)
+                                            .toolbar {
+                                                ToolbarItemGroup(placement: .keyboard) {
+                                                    Spacer()
+                                                    Button("Готово") {
+                                                        isKeyFieldFocused = false
+                                                    }
+                                                }
+                                            }
                                         Text("мг/мл")
                                             .foregroundColor(.gray)
                                             .padding(.trailing, 10) // Размещаем текст внутри поля
@@ -89,7 +111,18 @@ struct InfusionRateCalculatorView: View {
                                             .keyboardType(.numberPad)
                                             .frame(minHeight: 30)
                                             .padding(.trailing, 70)
-                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                            .padding(.leading, 10)
+                                            .focused($isKeyFieldFocused)
+                                            .onChange(of: drugVolume) { newValue in
+                                                // Удаляем все нецифровые символы
+                                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                                // Ограничиваем количество символов до двух
+                                                if filtered.count > 3 {
+                                                    drugVolume = String(filtered.prefix(3))
+                                                } else {
+                                                    drugVolume = filtered
+                                                }
+                                                }
                                         Text("мл")
                                             .foregroundColor(.gray)
                                             .padding(.trailing, 10) // Размещаем текст внутри поля
@@ -103,7 +136,18 @@ struct InfusionRateCalculatorView: View {
                                             .keyboardType(.numberPad)
                                             .frame(minHeight: 30)
                                             .padding(.trailing, 70)
-                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                            .padding(.leading, 10)
+                                            .focused($isKeyFieldFocused)
+                                            .onChange(of: solventVolume) { newValue in
+                                                // Удаляем все нецифровые символы
+                                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                                // Ограничиваем количество символов до двух
+                                                if filtered.count > 3 {
+                                                    solventVolume = String(filtered.prefix(3))
+                                                } else {
+                                                    solventVolume = filtered
+                                                }
+                                                }
                                         Text("мл")
                                             .foregroundColor(.gray)
                                             .padding(.trailing, 10) // Размещаем текст внутри поля
@@ -116,7 +160,18 @@ struct InfusionRateCalculatorView: View {
                                             .keyboardType(.numberPad)
                                             .frame(minHeight: 30)
                                             .padding(.trailing, 70)
-                                            .padding(.leading, 10) // Увеличиваем отступ для текста единиц
+                                            .padding(.leading, 10)
+                                            .focused($isKeyFieldFocused)
+                                            .onChange(of: drugDosage) { newValue in
+                                                // Удаляем все нецифровые символы
+                                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                                // Ограничиваем количество символов до двух
+                                                if filtered.count > 3 {
+                                                    drugDosage = String(filtered.prefix(3))
+                                                } else {
+                                                    drugDosage = filtered
+                                                }
+                                                }
                                         Text("мкг/кг/мин")
                                             .foregroundColor(.gray)
                                             .padding(.trailing, 10) // Размещаем текст внутри поля
@@ -129,7 +184,18 @@ struct InfusionRateCalculatorView: View {
                                             .keyboardType(.numberPad)
                                             .frame(minHeight: 30)
                                             .padding(.trailing, 70)
-                                            .padding(.leading, 10)// Увеличиваем отступ для текста единиц
+                                            .padding(.leading, 10)
+                                            .focused($isKeyFieldFocused)
+                                            .onChange(of: patientWeight) { newValue in
+                                                // Удаляем все нецифровые символы
+                                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                                // Ограничиваем количество символов до двух
+                                                if filtered.count > 3 {
+                                                    patientWeight = String(filtered.prefix(3))
+                                                } else {
+                                                    patientWeight = filtered
+                                                }
+                                                }
                                         Text("кг")
                                             .foregroundColor(.gray)
                                             .padding(.trailing, 10) // Размещаем текст внутри поля
