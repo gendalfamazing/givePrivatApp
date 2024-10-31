@@ -40,6 +40,7 @@
 		C61F18D62B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */; };
 		C61F18DA2B9E065200D04496 /* PamyatkiMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F18D92B9E065200D04496 /* PamyatkiMain.swift */; };
 		C625AE3B2C0A208A00FD852B /* CheckMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AE3A2C0A208A00FD852B /* CheckMedicine.swift */; };
+		C627BB642CD3927B006D0DB2 /* PESI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C627BB632CD3927B006D0DB2 /* PESI.swift */; };
 		C62C574A2B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */; };
 		C62C574D2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */; };
 		C62C574F2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C574E2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift */; };
@@ -320,6 +321,7 @@
 		C61F18D52B9DEA2B00D04496 /* Postanovlenie59Alg6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postanovlenie59Alg6View.swift; sourceTree = "<group>"; };
 		C61F18D92B9E065200D04496 /* PamyatkiMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PamyatkiMain.swift; sourceTree = "<group>"; };
 		C625AE3A2C0A208A00FD852B /* CheckMedicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMedicine.swift; sourceTree = "<group>"; };
+		C627BB632CD3927B006D0DB2 /* PESI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESI.swift; sourceTree = "<group>"; };
 		C62C57492B4ADDC9008E7A8F /* Prikaz1030Alg102View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg102View.swift; sourceTree = "<group>"; };
 		C62C574C2B4BF8AB008E7A8F /* Prikaz1030Alg101View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg101View.swift; sourceTree = "<group>"; };
 		C62C574E2B4BF99B008E7A8F /* Prikaz1030Alg103View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg103View.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 			children = (
 				C6445A652B6F8806001CEF35 /* ScalesTables.swift */,
 				C612B3252CD26ADE00F41B3A /* Geneva.swift */,
+				C627BB632CD3927B006D0DB2 /* PESI.swift */,
 				C6C9862D2B8A082800F624B1 /* DopaminCalc.swift */,
 			);
 			path = ScalesTables;
@@ -1365,6 +1368,7 @@
 				C6C986362B8B5E7100F624B1 /* Postanovlenie59Alg3P5View.swift in Sources */,
 				C65484982B4EBB0F00847504 /* Prikaz1030Alg128View.swift in Sources */,
 				C644C85F2B5EC9EC00DBC6EB /* CodeMkbData.swift in Sources */,
+				C627BB642CD3927B006D0DB2 /* PESI.swift in Sources */,
 				C6E33E0E2B514BED00DEC3A1 /* Prikaz1030Alg45View.swift in Sources */,
 				C69282352BCBBD1100E699DA /* ZakonOZdravoohranenii-08.swift in Sources */,
 				C67333792BB80C3C00D52677 /* 07Infusomat.swift in Sources */,
