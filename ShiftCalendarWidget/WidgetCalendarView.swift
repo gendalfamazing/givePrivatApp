@@ -17,27 +17,22 @@ struct WidgetCalendarView: View {
             HStack(spacing: 1) {
                 ForEach(["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], id: \.self) { day in
                     if day.contains("Вс") {
-                        
-                            Text(day)
-                                .font(.caption)
-                                .bold()
-                                .frame(maxWidth: .infinity)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.5)
-                                .foregroundColor(.weekendRed)
-                            
+                        Text(day)
+                            .font(.caption)
+                            .bold()
+                            .frame(maxWidth: .infinity)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .foregroundColor(.weekendRed)
                     } else if day.contains("Сб") {
-                        
-                            Text(day)
-                                .font(.caption)
-                                .bold()
-                                .frame(maxWidth: .infinity)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.5)
-                                .foregroundColor(.weekendBlue)
-                            
-                        
-                    }else {
+                        Text(day)
+                            .font(.caption)
+                            .bold()
+                            .frame(maxWidth: .infinity)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                            .foregroundColor(.weekendBlue)
+                    } else {
                         Text(day)
                             .font(.caption)
                             .bold()
@@ -46,7 +41,6 @@ struct WidgetCalendarView: View {
                             .minimumScaleFactor(0.5)
                             .foregroundColor(.textNumber1)
                     }
-                    
                 }
             }
             .padding(.bottom, 5)
@@ -54,15 +48,43 @@ struct WidgetCalendarView: View {
             LazyVGrid(columns: columns, spacing: 1) {
                 ForEach(days, id: \.self) { date in
                     let isCurrentMonth = Calendar.current.isDate(date, equalTo: currentDate, toGranularity: .month)
+                    let isToday = Calendar.current.isDate(date, inSameDayAs: self.currentDate)
                     let textColor: Color = isCurrentMonth ? .textNumber1 : .textNumber1.opacity(0.5)
                     
                     let event = events.first(where: { Calendar.current.isDate($0.date, inSameDayAs: date) })
-                    Text("\(Calendar.current.component(.day, from: date))")
-                        .font(.caption)
-                        .foregroundColor(textColor)
-                        .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
-                        .background(event != nil ? event!.type.color : Color.clear)
-                        .cornerRadius(3)
+                    
+                    ZStack {
+                        // Фон для сегодняшней даты
+                        if isToday {
+                            RoundedRectangle(cornerRadius: 3)
+                                .fill(Color.clear)
+                                .overlay(RoundedRectangle(cornerRadius: 3)
+                                    .stroke(colorScheme == .dark ? Color.textNumber1.opacity(0.75) : Color.textNumber1.opacity(0.65), lineWidth: 1)
+                                )
+                                .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
+                        }
+                        
+                        // Фон для события
+                        if let event = event {
+                            if isToday {
+                                event.type.color
+                                    .cornerRadius(3)
+                                    .overlay(RoundedRectangle(cornerRadius: 3)
+                                        .stroke(colorScheme == .dark ? Color.textNumber1.opacity(0.75) : Color.textNumber1.opacity(0.65), lineWidth: 1)
+                                    )
+                                    .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
+                            } else {
+                                event.type.color
+                                    .cornerRadius(3)
+                                    .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
+                            }
+                        }
+                        
+                        Text("\(Calendar.current.component(.day, from: date))")
+                            .font(.caption)
+                            .foregroundColor(textColor)
+                    }
+                    .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
                 }
             }
             .frame(height: totalGridHeight)

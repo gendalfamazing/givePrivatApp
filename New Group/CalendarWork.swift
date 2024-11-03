@@ -173,7 +173,7 @@ struct DayView: View {
                             .cornerRadius(6)
                             .zIndex(1)
                         RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.gray.opacity(0.5))
+                            .fill(Color.green.opacity(0.5))
                             .frame(width: 45, height: 45)
                         
                         
@@ -187,13 +187,13 @@ struct DayView: View {
                             .frame(width: 40, height: 40)
                             .cornerRadius(6)
                             .zIndex(2)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color.grayButton)
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(6)
-                            .zIndex(1)
+//                        RoundedRectangle(cornerRadius: 6)
+//                            .fill(Color.gray.opacity(0.5))
+//                            .frame(width: 40, height: 40)
+//                            .cornerRadius(6)
+//                            .zIndex(1)
                         RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.green.opacity(0.5))
+                            .fill(colorScheme == .dark ? Color.textNumber1.opacity(0.75) : Color.textNumber1.opacity(0.5))
                             .frame(width: 45, height: 45)
                     }
                 } else if !events.isEmpty {
@@ -427,10 +427,10 @@ struct CalendarGrid: View {
             ZStack {
                 if viewModel.isShowingCurrentMonth{
                     monthView(days: days)
-                        .transition(.opacity.combined(with: .move(edge: previousMonth == false ? .trailing : .leading)))
+                        .transition(.opacity.combined(with: .move(edge: previousMonth == false ? .leading : .trailing)))
                 } else {
                     monthView(days: days)
-                        .transition(.opacity.combined(with: .move(edge: previousMonth == true ? .leading : .trailing)))
+                        .transition(.opacity.combined(with: .move(edge: previousMonth == true ? .trailing : .leading)))
                 }
             }
             .gesture(
