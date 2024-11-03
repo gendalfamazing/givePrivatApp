@@ -161,61 +161,46 @@ struct DayView: View {
                 if isSelected {
                     withAnimation(.bouncy) {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 6)
+                        RoundedRectangle(cornerRadius: 1)
                             .fill(!events.isEmpty ? events.first!.type.color : Color.grayButton)
                             .frame(width: 40, height: 40)
-                            .cornerRadius(6)
+                            .cornerRadius(8)
+                            .overlay(RoundedRectangle(cornerRadius: 8)
+                                .stroke(!events.isEmpty ? Color.shadowGrayRectangle.opacity(0.35) : Color.clear, lineWidth: 0.5)
+                            )
+                            .overlay(RoundedRectangle(cornerRadius: 9)
+                                .stroke(Color.green.opacity(0.65), lineWidth: 2.5)
+                                .padding(-1)
+                            )
                             .zIndex(2)
-                        
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color.grayButton)
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(6)
-                            .zIndex(1)
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.green.opacity(0.5))
-                            .frame(width: 45, height: 45)
-                        
-                        
                     }
                     .animation(.easeInOut(duration: 0.3), value: isSelected)
                 }
                 } else if isToday {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 6)
+                        RoundedRectangle(cornerRadius: 8)
                             .fill(!events.isEmpty ? events.first!.type.color : Color.grayButton)
                             .frame(width: 40, height: 40)
-                            .cornerRadius(6)
+                            .cornerRadius(8)
+                            .overlay(RoundedRectangle(cornerRadius: 9)
+                                .stroke(colorScheme == .dark ? Color.textNumber1.opacity(0.75) : Color.textNumber1.opacity(0.5), lineWidth: 2.5)
+                                .padding(-1)
+                            )
                             .zIndex(2)
-//                        RoundedRectangle(cornerRadius: 6)
-//                            .fill(Color.gray.opacity(0.5))
-//                            .frame(width: 40, height: 40)
-//                            .cornerRadius(6)
-//                            .zIndex(1)
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(colorScheme == .dark ? Color.textNumber1.opacity(0.75) : Color.textNumber1.opacity(0.5))
-                            .frame(width: 45, height: 45)
                     }
                 } else if !events.isEmpty {
                     ZStack {
-                    RoundedRectangle(cornerRadius: 6)
+                    RoundedRectangle(cornerRadius: 8)
                         .fill(events.first!.type.color)
                         .frame(width: 40, height: 40)
-                        .cornerRadius(6)
+                        .cornerRadius(8)
+                        .overlay(RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                        )
                         .zIndex(2)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color.grayButton)
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(6)
-                            .overlay(RoundedRectangle(cornerRadius: 6)
-                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
-                            )
-                            .zIndex(1)
-                }
-                    
                         
-                    
-                    
+                }
+                   
                 }
                 VStack {
                     Text("\(Calendar.current.component(.day, from: date))")
