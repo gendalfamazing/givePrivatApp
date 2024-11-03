@@ -10,7 +10,7 @@ struct CriterionPESI: Identifiable {
 struct PESI: View {
     @State private var criteria = [
         CriterionPESI(description: "Мужской пол", points: 10),
-        CriterionPESI(description: "Рак", points: 30),
+        CriterionPESI(description: "Онкологическое заболевание", points: 30),
         CriterionPESI(description: "Хроническая сердечная недостаточность", points: 10),
         CriterionPESI(description: "Хронические заболевания лёгких", points: 10),
         CriterionPESI(description: "Частота пульса ≥ 110 в минуту", points: 20),
@@ -20,6 +20,8 @@ struct PESI: View {
         CriterionPESI(description: "Нарушения сознания", points: 60),
         CriterionPESI(description: "SaO2 < 90%", points: 20)
     ]
+    
+    @State private var displayedPoints = 0 // Для анимации
     @State private var isTextExpanded = false
     @State private var age = ""
     @FocusState private var isAgeFieldFocused: Bool
@@ -105,13 +107,19 @@ struct PESI: View {
                                     .fontWeight(.bold)
                                     .frame(maxWidth: 200, alignment: .leading)
                                 Spacer()
-                                Text("\(totalPoints)")
+                                Text("\(displayedPoints)")
                                     .font(.headline)
                                     .fontWeight(.bold)
                                 Spacer()
                             }
                             .padding(10)
                             .background(Color.grayButton)
+                            .onAppear {
+                                animatePointsChange()
+                            }
+                            .onChange(of: totalPoints) { _ in
+                                animatePointsChange()
+                            }
                             
                             HStack(spacing: 10) {
                                 Text("Класс риска:")
@@ -137,6 +145,11 @@ struct PESI: View {
                             .padding(10)
                             .background(Color.grayButton)
                         }
+                        .onTapGesture {
+                            withAnimation(.snappy) {
+                                isTextExpanded.toggle()
+                            }
+                        }
                         .frame(maxWidth: .infinity)
                     }
                     .background(Color.backtables)
@@ -146,6 +159,31 @@ struct PESI: View {
                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                     )
                     
+                }
+            }
+        }
+    }
+    private func animatePointsChange() {
+        let stepTime = 0.035 // Интервал между изменениями значений
+
+        Timer.scheduledTimer(withTimeInterval: stepTime, repeats: true) { timer in
+            if displayedPoints == totalPoints {
+                timer.invalidate()
+            } else {
+                let difference = abs(totalPoints - displayedPoints)
+                
+                if difference >= 10 {
+                    if displayedPoints < totalPoints {
+                        displayedPoints += 10
+                    } else if displayedPoints > totalPoints {
+                        displayedPoints -= 10
+                    }
+                } else {
+                    if displayedPoints < totalPoints {
+                        displayedPoints += 1
+                    } else if displayedPoints > totalPoints {
+                        displayedPoints -= 1
+                    }
                 }
             }
         }
@@ -205,6 +243,7 @@ struct CriterionRowPESI: View {
             }) {
                 Image(systemName: criterion.isSelected ? "checkmark.circle.fill" : "multiply.circle.fill")
                     .foregroundColor(criterion.isSelected ? .green : .gray)
+                    .scaleEffect(1.25)
                     .padding(10)
                     .padding(.vertical, -5)
             }

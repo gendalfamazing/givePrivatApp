@@ -76,6 +76,9 @@ struct WidgetCalendarView: View {
                             } else {
                                 event.type.color
                                     .cornerRadius(3)
+                                    .overlay(RoundedRectangle(cornerRadius: 3)
+                                        .stroke(colorScheme == .dark ? Color.textNumber1 : Color.textNumber1.opacity(0.65), lineWidth: 0.1)
+                                    )
                                     .frame(maxWidth: .infinity, minHeight: cellHeight, maxHeight: cellHeight)
                             }
                         }
