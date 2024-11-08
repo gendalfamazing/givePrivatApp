@@ -181,6 +181,8 @@
 		C6A3B09E2CB708CE00F51CD6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C647C71E2C2C280A00D0609B /* WidgetKit.framework */; };
 		C6A3B09F2CB708CE00F51CD6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C647C7202C2C280A00D0609B /* SwiftUI.framework */; };
 		C6A3B0AC2CB708D000F51CD6 /* ShiftCalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C6A3B09D2CB708CE00F51CD6 /* ShiftCalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C6AF999A2CDE1D3400D31AA2 /* TrialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF99992CDE1D3400D31AA2 /* TrialManager.swift */; };
+		C6AF999C2CDE2F0700D31AA2 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF999B2CDE2F0700D31AA2 /* KeychainHelper.swift */; };
 		C6C2229C2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229B2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift */; };
 		C6C2229E2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229D2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift */; };
 		C6C222A02B4C40E2006CE154 /* Prikaz1030Alg109View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2229F2B4C40E2006CE154 /* Prikaz1030Alg109View.swift */; };
@@ -466,6 +468,8 @@
 		C69F13E42B1C793700FBD117 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		C6A3B09D2CB708CE00F51CD6 /* ShiftCalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiftCalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A3B0B12CB709E700F51CD6 /* ShiftCalendarWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiftCalendarWidgetExtension.entitlements; sourceTree = "<group>"; };
+		C6AF99992CDE1D3400D31AA2 /* TrialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialManager.swift; sourceTree = "<group>"; };
+		C6AF999B2CDE2F0700D31AA2 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		C6C2229B2B4C3DB4006CE154 /* Prikaz1030Alg107View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg107View.swift; sourceTree = "<group>"; };
 		C6C2229D2B4C3F4D006CE154 /* Prikaz1030Alg108View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg108View.swift; sourceTree = "<group>"; };
 		C6C2229F2B4C40E2006CE154 /* Prikaz1030Alg109View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prikaz1030Alg109View.swift; sourceTree = "<group>"; };
@@ -997,6 +1001,8 @@
 				C64BF4672BC6ABE900A504CB /* PurchaseManager.swift */,
 				C64BF4692BC6B59F00A504CB /* EntitlementManager.swift */,
 				C6E834DB2BE2337A0043ADBD /* TestFlightHomeScreen.swift */,
+				C6AF99992CDE1D3400D31AA2 /* TrialManager.swift */,
+				C6AF999B2CDE2F0700D31AA2 /* KeychainHelper.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -1250,6 +1256,7 @@
 				C69B62902BA1BD07009FB0CD /* StudMaterialsDatas.swift in Sources */,
 				C641624F2B6BE07600198A3E /* Prikaz47Alg1View.swift in Sources */,
 				C69B62922BA1C19D009FB0CD /* PamyatkiMedSortirovka.swift in Sources */,
+				C6AF999C2CDE2F0700D31AA2 /* KeychainHelper.swift in Sources */,
 				C664F54B2B4D6B090044E0E1 /* Prikaz1030Alg121View.swift in Sources */,
 				C65484A22B4ED3F900847504 /* Prikaz1030Alg133View.swift in Sources */,
 				C65484A42B4EDD0800847504 /* Prikaz1030Alg134View.swift in Sources */,
@@ -1321,6 +1328,7 @@
 				C692823D2BCBC7FA00E699DA /* ZakonOZdravoohranenii-12.swift in Sources */,
 				C69AE7802B87A57C00B1EADF /* Postanovlenie59Alg3P2View.swift in Sources */,
 				C664F5492B4D68C30044E0E1 /* Prikaz1030Alg120View.swift in Sources */,
+				C6AF999A2CDE1D3400D31AA2 /* TrialManager.swift in Sources */,
 				C6740B7B2BCABE78005F28E6 /* ZakonOZdravoohranenii-01.swift in Sources */,
 				C665BE852B51226E0061CDDF /* Prikaz1030Alg43View.swift in Sources */,
 				C60713302BD3AC1700362554 /* ChildCalcDatas.swift in Sources */,

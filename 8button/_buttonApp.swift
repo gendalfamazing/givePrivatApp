@@ -4,20 +4,17 @@
 //
 //  Created by Artur Vladymcev on 21.11.23.
 //
-
-
 import SwiftUI
-
 
 @main
 struct _buttonApp: App {
-    @StateObject
-    private var entitlementManager: EntitlementManager
+    @StateObject private var entitlementManager: EntitlementManager
+    @StateObject private var purchaseManager: PurchaseManager
+    @StateObject private var trialManager = TrialManager()
     @StateObject private var updateManager = UpdateManager()
-    @StateObject
-    private var purchaseManager: PurchaseManager
     @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
     @AppStorage("fontSize") var fontSize: Double = 14.0
+
     init() {
         let entitlementManager = EntitlementManager()
         let purchaseManager = PurchaseManager(entitlementManager: entitlementManager)
@@ -27,21 +24,22 @@ struct _buttonApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AppTabBarView()
+            StoreKit8()
                 .preferredColorScheme(colorScheme)
                 .environment(\.sizeCategory, fontSizeCategory)
                 .environmentObject(entitlementManager)
                 .environmentObject(purchaseManager)
+                .environmentObject(trialManager) // Добавляем trialManager в окружение
+                .environmentObject(updateManager)
                 .task {
                     await purchaseManager.updatePurchasedProducts()
                 }
-                .environmentObject(updateManager)
-                                .onAppear {
-                                    updateManager.checkForUpdate()
-                                }
-                                .sheet(isPresented: $updateManager.showWhatsNew) {
-                                    WhatsNewView()
-                                }
+                .onAppear {
+                    updateManager.checkForUpdate()
+                }
+                .sheet(isPresented: $updateManager.showWhatsNew) {
+                    WhatsNewView()
+                }
         }
         var colorScheme: ColorScheme? {
             switch Theme(rawValue: selectedTheme) ?? .system {
@@ -69,6 +67,7 @@ struct _buttonApp: App {
 import Foundation
 import SwiftUI
 
+@MainActor
 class UpdateManager: ObservableObject {
     @AppStorage("lastKnownVersion") private var lastKnownVersion: String = ""
     @Published var showWhatsNew: Bool = false

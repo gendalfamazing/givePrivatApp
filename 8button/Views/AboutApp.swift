@@ -13,13 +13,29 @@ struct AboutApp: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.sizeCategory) var sizeCategory
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject private var entitlementManager: EntitlementManager
     @EnvironmentObject private var purchaseManager: PurchaseManager
-    
-    
+    @EnvironmentObject private var trialManager: TrialManager // Добавляем trialManager
+
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
     let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+    
+    var formattedRemainingTime: String {
+            if let remainingTime = trialManager.remainingTime, remainingTime > 0 {
+                let days = Int(remainingTime) / (24 * 3600)
+                let hours = (Int(remainingTime) % (24 * 3600)) / 3600
+                let minutes = (Int(remainingTime) % 3600) / 60
+                // Вы можете также добавить секунды, если нужно
+                // let seconds = Int(remainingTime) % 60
+
+                return "\(days) дн \(hours) ч \(minutes) мин"
+            } else {
+                return "Пробный период истёк"
+            }
+        }
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -101,9 +117,44 @@ struct AboutApp: View {
                         .overlay(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                         )
-                    
-                    VStack {
-                        
+                    if trialManager.isTrialActive && !entitlementManager.hasPro {
+                                            VStack(spacing: 1) {
+                                                Text("Оставшееся время пробного периода:")
+                                                    .multilineTextAlignment(.center)
+                                                    .textSelection(.enabled)
+                                                    .padding(.vertical, 5)
+                                                    .padding(.horizontal, 10)
+                                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                    .fixedSize(horizontal: false, vertical: true)
+                                                    .frame(minHeight: 20)
+                                                    .modifier(ThemeGrayColorModifier())
+                                                    .font(.subheadline)
+                                                    .cornerRadius(10)
+                                                Divider()
+                                                    .background(Color.divider)
+                                                    .padding(.horizontal, 5)
+                                                Text(formattedRemainingTime)
+                                                    .multilineTextAlignment(.center)
+                                                    .bold()
+                                                    .textSelection(.enabled)
+                                                    .padding(.vertical, 5)
+                                                    .padding(.horizontal, 10)
+                                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                                    .fixedSize(horizontal: false, vertical: true)
+                                                    .frame(minHeight: 20)
+                                                    .modifier(ThemeGrayColorModifier())
+                                                    .font(.subheadline)
+                                                    .cornerRadius(10)
+                                            }
+                                            .background(Color.grayButton)
+                                            .cornerRadius(10)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                            )
+                                        }
+                    VStack (spacing: 5) {
+                        if entitlementManager.hasPro {
                             VStack (spacing: 1){
                                 Text("""
                                 **Активные подписки и покупки:**
@@ -149,10 +200,35 @@ struct AboutApp: View {
                             .overlay(RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                             )
+                        }
                         
+                        if trialManager.isTrialActive && !entitlementManager.hasPro {
+                            NavigationLink (destination: StoreKit10()) {
+                                VStack (alignment: .center) {
+                                    Text("Приобрести подписку")
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal, 3.0)
+                                        .font(.subheadline)
+                                    Text("выбор подходящей покупки")
+                                        .multilineTextAlignment(.center)
+                                        .padding(.horizontal, 3.0)
+                                        .font(.footnote)
+                                        .foregroundColor(Color.gray)
+                                }
+                                .padding(7.0)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .fontWeight(.semibold)
+                                .frame(minHeight: 49)
+                                .modifier(ThemeBlueColorModifier())
+                                .background(Color.blueButton)
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                                )
+                            }
+                        }
                     }
-
-                    
                     Spacer(minLength: 10)
                     VStack {
                         HStack (spacing: 5) {
