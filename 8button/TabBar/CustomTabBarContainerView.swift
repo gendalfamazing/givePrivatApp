@@ -101,7 +101,7 @@ struct CustomTabBarContainerView: View {
         case .home:
             HomeViewGear()
         case .adult:
-            SearchAdultGear()
+            SearchAdult()
         case .child:
             Postanovlenie118ViewGear()
         case .organizer:
