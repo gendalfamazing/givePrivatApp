@@ -39,8 +39,16 @@ struct HomeViewGear: View {
 struct SearchAdultGear: View {
     @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
     @AppStorage("fontSize") var fontSize: Double = 14.0
+    @StateObject private var viewModel = SearchableViewModelAdult()
+    @State private var isDataLoaded = false
     var body: some View {
-        SearchAdult()
+        SearchAdult(viewModel: SearchableViewModelAdult())
+            .onAppear {
+                Task {
+                    await viewModel.loadAdult()
+                    isDataLoaded = true
+                }
+            }
             .preferredColorScheme(colorScheme)
             .environment(\.sizeCategory, fontSizeCategory)
     }

@@ -15,6 +15,7 @@ struct Adult: Identifiable {
     let view: AnyView
 }
 
+@MainActor
 final class AdultManager {
     func getAllAdult() async throws -> [Adult] {
         [
@@ -115,6 +116,9 @@ final class SearchableViewModelAdult: ObservableObject {
     
     init() {
         addSubscribers()
+        Task {
+                    await loadDataIfNeeded()
+                }
     }
     
     private func addSubscribers() {
@@ -137,7 +141,7 @@ final class SearchableViewModelAdult: ObservableObject {
             return titleContainsSearch
         })
     }
-    
+    @MainActor
     func loadAdult() async {
         do {
             allAdult = try await manager.getAllAdult()
@@ -146,6 +150,12 @@ final class SearchableViewModelAdult: ObservableObject {
         }
         
     }
+    @MainActor
+        private func loadDataIfNeeded() async {
+            if allAdult.isEmpty {
+                await loadAdult()
+            }
+        }
 }
 
 struct SearchAdult: View {
@@ -156,7 +166,15 @@ struct SearchAdult: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.sizeCategory) var sizeCategory
     
-    @StateObject private var viewModel = SearchableViewModelAdult()
+    @ObservedObject var viewModel: SearchableViewModelAdult
+    
+    init(viewModel: SearchableViewModelAdult? = nil) {
+            if let viewModel = viewModel {
+                _viewModel = ObservedObject(wrappedValue: viewModel)
+            } else {
+                _viewModel = ObservedObject(wrappedValue: SearchableViewModelAdult())
+            }
+        }
     
     var body: some View {
         ZStack {
@@ -169,12 +187,13 @@ struct SearchAdult: View {
                             .frame(maxWidth: .infinity)
                             .background(.back)
                     } else {
-                        LazyVStack(spacing: 5) {
+                        VStack(spacing: 5) {
                             ForEach(viewModel.isSearching ? viewModel.filteredAdult : viewModel.allAdult) { adult in
                                 adultRow(adult: adult)
                                     .padding(.horizontal, 10)
                             }
                         }
+                        
                         .padding(.bottom, 55)
                         .background(Color.back)
                         .environment(\.sizeCategory, fontSizeCategory)
@@ -206,9 +225,7 @@ struct SearchAdult: View {
             }
             
         }
-        .task {
-            await viewModel.loadAdult()
-        }
+        
     }
         
     }
@@ -319,7 +336,7 @@ struct SearchAdult: View {
 
 #Preview {
     NavigationStack {
-        SearchAdult()
+        SearchAdult(viewModel: SearchableViewModelAdult())
             .background(Color.back)
     }
 }

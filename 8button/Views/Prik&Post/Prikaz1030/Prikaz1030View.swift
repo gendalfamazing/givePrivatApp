@@ -17,7 +17,7 @@ struct AdultTitle: Identifiable {
     
 }
 
-
+@MainActor
 func getAllUserData() async throws -> [AdultTitle] {
     
     [
