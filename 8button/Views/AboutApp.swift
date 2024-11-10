@@ -209,11 +209,11 @@ struct AboutApp: View {
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal, 3.0)
                                         .font(.subheadline)
-                                    Text("выбор подходящей покупки")
+                                    Text("(выбор подходящей покупки)")
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal, 3.0)
                                         .font(.footnote)
-                                        .foregroundColor(Color.gray)
+                                        .foregroundColor(colorScheme == .dark ? Color.white.opacity(0.4) : Color.gray)
                                 }
                                 .padding(7.0)
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
@@ -221,7 +221,8 @@ struct AboutApp: View {
                                 .fontWeight(.semibold)
                                 .frame(minHeight: 49)
                                 .modifier(ThemeBlueColorModifier())
-                                .background(Color.blueButton)
+                                .background(Color.blueButtonStoreKit)
+                                .background(Color.grayButton)
                                 .cornerRadius(10)
                                 .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
@@ -229,75 +230,129 @@ struct AboutApp: View {
                             }
                         }
                     }
-                    Spacer(minLength: 10)
-                    VStack {
-                        HStack (spacing: 5) {
-                            Image(systemName: "person.fill")
-                                .resizable()
-                                .frame(maxWidth: 20)
-                                .frame(maxHeight: 20)
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                            Spacer()
-                            Text("Artur Vladymcev")
-                            Spacer()
+                    NavigationLink (destination: WhatsNewAll()) {
+                        VStack (alignment: .center) {
+                            Text("История обновлений")
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 3.0)
+                                .font(.subheadline)
+                            Text("подробное описание нововведений")
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 3.0)
+                                .font(.footnote)
+                                .foregroundColor(colorScheme == .dark ? Color.white.opacity(0.4) : Color.gray)
                         }
-                        Divider()
-                            .background(Color.divider)
-                        HStack (spacing: 5) {
-                            Image(systemName: "envelope.fill")
-                                .resizable()
-                                .frame(maxWidth: 20)
-                                .frame(maxHeight: 15)
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                            Spacer()
-                            Text("ambulance.docs@gmail.com")
-                                .textSelection(.enabled)
-                            Spacer()
-                        }
-                        Divider()
-                            .background(Color.divider)
-                        HStack (spacing: 5) {
-                            Image(systemName: "location.square.fill")
-                                .resizable()
-                                .frame(maxWidth: 20)
-                                .frame(maxHeight: 20)
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                            Spacer()
-                            Text("Belarus, Gomel")
-                            Spacer()
-                        }
-                        Divider()
-                            .background(Color.divider)
-                        HStack (spacing: 5) {
-                            Image(systemName: "externaldrive.fill.badge.icloud")
-                                .resizable()
-                                .frame(maxWidth: 20)
-                                .frame(maxHeight: 15)
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-                            Spacer()
-                            Text("Version: \(version)")
-                            Spacer()
-                        }
-                        
-                    }
-                        .multilineTextAlignment(.center)
-                        .textSelection(.enabled)
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 10)
+                        .padding(7.0)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                         .fixedSize(horizontal: false, vertical: true)
-                        .frame(minHeight: 20)
-                        .modifier(ThemeGrayColorModifier())
-                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(minHeight: 49)
+                        .modifier(ThemeBlueColorModifier())
+                        .background(Color.blueButtonStoreKit)
+                        .background(Color.grayButton)
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                         )
+                    }
                     Spacer(minLength: 10)
+                    AboutAppPersonal()
+                    Spacer(minLength: 10)
+                    HStack (spacing: 10) {
+                        ZStack {
+                            Image("telegram")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 40, maxHeight: 40)
+                                .padding(10)
+                                
+                                
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minHeight: 50)
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            guard let url = URL(string: "https://t.me/ambulancedocs") else { return }
+                            UIApplication.shared.open(url)
+                        }
+                        ZStack {
+                            Image("insta")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 40, maxHeight: 40)
+                                .padding(10)
+                                
+                                
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minHeight: 50)
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            guard let url = URL(string: "https://www.instagram.com/ambulance.docs") else { return }
+                            UIApplication.shared.open(url)
+                        }
+                        ZStack {
+                            Image("tiktok")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 40, maxHeight: 40)
+                                .padding(10)
+                                
+                                
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minHeight: 50)
+                        .foregroundColor(.blue)
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            guard let url = URL(string: "https://www.tiktok.com/@ambulance.docs") else { return }
+                            UIApplication.shared.open(url)
+                        }
+                        ZStack {
+                            Image("web")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 40, maxHeight: 40)
+                                .padding(10)
+                                
+                                
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minHeight: 50)
+                        .foregroundColor(.blue)
+                        .background(Color.grayButton)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
+                        .onTapGesture {
+                            guard let url = URL(string: "http://ambulance-docs.site") else { return }
+                            UIApplication.shared.open(url)
+                        }
+                    }
+                    Spacer(minLength: 10)
+                    
+                    
                     
                     VStack (spacing:10){
                         Button {
@@ -311,16 +366,12 @@ struct AboutApp: View {
                         } label: {
                             Text("Восстановить покупки")
                                 .padding(7.0)
-                            //                .lineLimit(2)
-                            
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .fontWeight(.semibold)
                                 .frame(minHeight: 49)
                                 .frame(minWidth: 49)
-                            
                                 .foregroundColor(.blue)
-                            //                .background(Color.blueButton)
                                 .background(Color.grayButton)
                                 .font(.subheadline)
                                 .cornerRadius(10)
@@ -373,31 +424,8 @@ struct AboutApp: View {
                                 guard let url = URL(string: "http://ambulance-docs.site/privacy.html") else { return }
                                 UIApplication.shared.open(url)
                             }
-                        Text("Обзор приложения")
-                            .padding(7.0)
-                        //                .lineLimit(2)
                         
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .fontWeight(.semibold)
-                            .frame(minHeight: 49)
-                            .frame(minWidth: 49)
-                        
-                            .foregroundColor(.blue)
-                        //                .background(Color.blueButton)
-                            .background(Color.grayButton)
-                            .font(.subheadline)
-                            .cornerRadius(10)
-                            .overlay(RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
-                            )
-                            .onTapGesture {
-                                guard let url = URL(string: "http://ambulance-docs.site") else { return }
-                                UIApplication.shared.open(url)
-                            }
                     }
-                    
-                    .padding(.horizontal, 10)
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 55)
@@ -439,3 +467,117 @@ struct AboutApp: View {
     AboutApp()
 }
 
+
+struct AboutAppPersonal: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.sizeCategory) var sizeCategory
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject private var entitlementManager: EntitlementManager
+    @EnvironmentObject private var purchaseManager: PurchaseManager
+    @EnvironmentObject private var trialManager: TrialManager // Добавляем trialManager
+    
+    @State private var isTextExpanded1 = false
+    @State private var isTextExpanded2 = false
+    let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+    let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+    
+    
+    var body: some View {
+        VStack {
+            HStack (spacing: 5) {
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 20)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+                Spacer()
+                Text("Artur Vladymcev")
+                Spacer()
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 20)
+                    .foregroundColor(Color.clear)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+            }
+            Divider()
+                .background(Color.divider)
+            HStack (spacing: 5) {
+                Image(systemName: "envelope.fill")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 15)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+                Spacer()
+                Text("ambulance.docs@gmail.com")
+                    .textSelection(.enabled)
+                Spacer()
+                Image(systemName: "envelope.fill")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 15)
+                    .foregroundColor(Color.clear)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+            }
+            Divider()
+                .background(Color.divider)
+            HStack (spacing: 5) {
+                Image(systemName: "location.square.fill")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 20)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+                Spacer()
+                Text("Belarus, Gomel")
+                Spacer()
+                Image(systemName: "location.square.fill")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 20)
+                    .foregroundColor(Color.clear)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+            }
+            Divider()
+                .background(Color.divider)
+            HStack (spacing: 5) {
+                Image(systemName: "externaldrive.fill.badge.icloud")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 15)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+                Spacer()
+                Text("Version: \(version)")
+                Spacer()
+                Image(systemName: "externaldrive.fill.badge.icloud")
+                    .resizable()
+                    .frame(maxWidth: 20)
+                    .frame(maxHeight: 15)
+                    .foregroundColor(Color.clear)
+                    .scaledToFit()
+                    .clipShape(Rectangle())
+            }
+            
+        }
+            .multilineTextAlignment(.center)
+            .textSelection(.enabled)
+            .padding(.vertical, 5)
+            .padding(.horizontal, 10)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(minHeight: 20)
+            .modifier(ThemeGrayColorModifier())
+            .font(.subheadline)
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+            )
+    }
+}

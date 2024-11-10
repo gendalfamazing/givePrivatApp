@@ -16,6 +16,14 @@ struct WhatsNewView: View {
                         Text("**- Новый виджет графика работы**")
                             .font(.headline)
                         Text("Теперь вы можете просматривать свои рабочие смены прямо на главном экране. Виджет поможет вам всегда быть в курсе своего расписания без необходимости открывать приложение.")
+                        Image("whatsnew07widget")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(Rectangle())
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
                     }
 
                     Group {

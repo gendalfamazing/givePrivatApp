@@ -42,8 +42,22 @@ struct Geneva: View {
                     }
                 VStack {
                     VStack(spacing: 1) {
-                        MyViewBuilder(title: Text(""), content: Text("**Оценка вероятности развития ТЭЛА по шкале Geneva**")).buildGrayInText()
-                            .background(Color.grayButton)
+                        VStack {
+                            MyViewBuilder(title: Text(""),
+                                          content: Text("""
+                                                    **Оценка вероятности развития ТЭЛА по шкале Geneva**
+                                                    """)).buildGrayInText()
+                            Text("(выберите подходящие пункты)")
+                                .padding(.top,-15)
+                                .padding(.bottom, 5)
+                                .multilineTextAlignment(.center)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .font(.subheadline)
+                                .foregroundColor(Color.gray)
+                                
+                        }
+                        .background(Color.grayButton)
                         VStack(spacing: 1) {
                             ForEach($criteria) { $criterion in
                                 CriterionRow(criterion: $criterion)
@@ -54,12 +68,12 @@ struct Geneva: View {
                         VStack(spacing: 1) {
                             HStack(alignment: .bottom, spacing: 10) {
                                 Text("Сумма баллов:")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: 200, alignment: .leading)
                                 Spacer()
                                 Text("\(displayedPoints)")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(alignment: .center)
                                 Spacer()
@@ -75,12 +89,12 @@ struct Geneva: View {
                             
                             HStack(alignment: .bottom) {
                                 Text("Трехуровневая шкала:")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: 200, alignment: .leading)
                                 Spacer()
                                 Text("\(riskLevel)")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                 Spacer()
                             }
@@ -89,12 +103,12 @@ struct Geneva: View {
                             
                             HStack(alignment: .bottom) {
                                 Text("Двухуровневая шкала:")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: 200, alignment: .leading)
                                 Spacer()
                                 Text("\(riskLevel1)")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(alignment: .center)
                                 Spacer()

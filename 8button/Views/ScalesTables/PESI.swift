@@ -44,8 +44,18 @@ struct PESI: View {
                     }
                 VStack  {
                     VStack(spacing: 1) {
-                        MyViewBuilder(title: Text(""), content: Text("**Оценка риска по шкале PESI**")).buildGrayInText()
-                            .background(Color.grayButton)
+                        VStack {
+                            MyViewBuilder(title: Text(""), content: Text("**Оценка риска по шкале PESI**")).buildGrayInText()
+                            Text("(выберите подходящие пункты)")
+                                .padding(.top,-15)
+                                .padding(.bottom, 5)
+                                .multilineTextAlignment(.center)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .font(.subheadline)
+                                .foregroundColor(Color.gray)
+                        }
+                        .background(Color.grayButton)
                         
                         // Ввод возраста
                         HStack {
@@ -103,12 +113,12 @@ struct PESI: View {
                         VStack(spacing: 1) {
                             HStack(spacing: 10) {
                                 Text("Сумма баллов:")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: 200, alignment: .leading)
                                 Spacer()
                                 Text("\(displayedPoints)")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                 Spacer()
                             }
@@ -123,12 +133,12 @@ struct PESI: View {
                             
                             HStack(spacing: 10) {
                                 Text("Класс риска:")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: 200, alignment: .leading)
                                 Spacer()
                                 Text("\(riskClass)")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                 Spacer()
                             }
@@ -138,7 +148,7 @@ struct PESI: View {
                             HStack(spacing: 10) {
                                 
                                 Text("\(riskLevel)")
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .fontWeight(.bold)
                                 Spacer()
                             }
