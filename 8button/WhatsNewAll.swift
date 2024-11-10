@@ -65,7 +65,7 @@ struct WhatsNew08: View {
     var body: some View {
         
             VStack {
-                MyViewBuilder(title: Text("1.2.1"), content: Text("ХХ ноября 2024")).buildBlue591TextScales(isTextExpanded: isTextExpanded1)
+                MyViewBuilder(title: Text("1.2.1"), content: Text("11 ноября 2024")).buildBlue591TextScales(isTextExpanded: isTextExpanded1)
                     .onTapGesture {
                         withAnimation (.snappy) {
                             isTextExpanded1.toggle()
