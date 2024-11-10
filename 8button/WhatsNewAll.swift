@@ -16,6 +16,7 @@ struct WhatsNewAll: View {
         ScrollView {
             Spacer()
             VStack {
+                WhatsNew08()
                 WhatsNew07()
                 WhatsNew06()
                 WhatsNew05()
@@ -55,6 +56,79 @@ struct WhatsNewAll: View {
 }
 #Preview {
     WhatsNewAll()
+}
+
+struct WhatsNew08: View {
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var isTextExpanded1 = false
+    var body: some View {
+        
+            VStack {
+                MyViewBuilder(title: Text("1.2.1"), content: Text("ХХ ноября 2024")).buildBlue591TextScales(isTextExpanded: isTextExpanded1)
+                    .onTapGesture {
+                        withAnimation (.snappy) {
+                            isTextExpanded1.toggle()
+                        }
+                    }
+                if isTextExpanded1{
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Group {
+                            Text("**- Новые шкалы в разделе 'Шкалы и таблицы'**")
+                                .font(.subheadline)
+                            Text("**Шкала Geneva** – для оценки вероятности развития тромбоэмболии легочной артерии (ТЭЛА).")
+                            Text("**Шкала PESI** – для прогнозирования риска смертности у пациентов с ТЭЛА.")
+                        }
+                        Group {
+                            Text("**- Раздел 'История обновлений'**")
+                                .font(.subheadline)
+                            Text("На странице «Информация о приложении» добавлен новый раздел, где вы можете увидеть все изменения, внесённые в каждом обновлении.")
+                        }
+                        Group {
+                            Text("**- Выделение сегодняшней даты в виджете**")
+                                .font(.subheadline)
+                            Text("Теперь текущая дата выделяется на сетке календаря виджета, чтобы вы могли легко её определить с первого взгляда.")
+                            
+                        }
+                        
+                        Group {
+                            Text("**- Упрощённый пробный период**")
+                                .font(.subheadline)
+                            Text("Пробный период доступен без необходимости выбора подписки. Это особенно полезно для пользователей, у которых не указан способ оплаты в Apple ID, но которые хотят попробовать приложение.")
+                        }
+                        
+                        Group {
+                            Text("**- Общие улучшения и оптимизация**")
+                                .font(.subheadline)
+                            Text("Мы постоянно работаем над тем, чтобы сделать приложение лучше для вас. Внесены небольшие улучшения для повышения стабильности и производительности.")
+                        }
+                        
+                    }
+                    .textSelection(.enabled)
+                    .padding(10)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: false)
+                    .frame(minHeight: 50)
+                    .modifier(ThemeGrayColorModifier())
+                    .font(.subheadline)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                    )
+                    .onTapGesture {
+                        withAnimation (.snappy) {
+                            isTextExpanded1.toggle()
+                        }
+                    }
+                }
+                
+                
+            }
+         
+    }
+    
 }
 
 struct WhatsNew07: View {

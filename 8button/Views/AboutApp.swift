@@ -209,7 +209,7 @@ struct AboutApp: View {
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal, 3.0)
                                         .font(.subheadline)
-                                    Text("(выбор подходящей покупки)")
+                                    Text("выбор подходящей покупки")
                                         .multilineTextAlignment(.center)
                                         .padding(.horizontal, 3.0)
                                         .font(.footnote)
