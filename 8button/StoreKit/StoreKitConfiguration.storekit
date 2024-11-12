@@ -1,11 +1,21 @@
 {
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
   "identifier" : "C8BB99FB",
   "nonRenewingSubscriptions" : [
 
   ],
   "products" : [
     {
-      "displayPrice" : "14.99",
+      "displayPrice" : "19.99",
       "familyShareable" : false,
       "internalID" : "6484269780",
       "localizations" : [
@@ -27,7 +37,7 @@
     "_developerTeamID" : "29R8F9VULL",
     "_disableDialogs" : false,
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 736181341.50583398,
+    "_lastSynchronizedDate" : 753084478.41075599,
     "_locale" : "ru",
     "_storefront" : "BLR",
     "_storeKitErrors" : [
@@ -109,15 +119,15 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "7.99",
+          "displayPrice" : "8.99",
           "familyShareable" : false,
-          "groupNumber" : 3,
+          "groupNumber" : 2,
           "internalID" : "6483809054",
           "introductoryOffer" : {
-            "internalID" : "89CDF994",
+            "internalID" : "7BF7D15A",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
-            "subscriptionPeriod" : "P2W"
+            "subscriptionPeriod" : "P3D"
           },
           "localizations" : [
             {
@@ -130,7 +140,10 @@
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Подписка 1 год",
           "subscriptionGroupID" : "21473205",
-          "type" : "RecurringSubscription"
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
         },
         {
           "adHocOffers" : [
@@ -141,13 +154,13 @@
           ],
           "displayPrice" : "0.99",
           "familyShareable" : false,
-          "groupNumber" : 2,
+          "groupNumber" : 1,
           "internalID" : "6483808418",
           "introductoryOffer" : {
-            "internalID" : "2243B674",
+            "internalID" : "D5051F1C",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
-            "subscriptionPeriod" : "P2W"
+            "subscriptionPeriod" : "P3D"
           },
           "localizations" : [
             {
@@ -160,13 +173,49 @@
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Подписка 1 месяц",
           "subscriptionGroupID" : "21473205",
-          "type" : "RecurringSubscription"
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6738045345",
+          "introductoryOffer" : {
+            "internalID" : "B1EACD71",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "Полный доступ к приложению на 6 месяцев",
+              "displayName" : "Подписка на 6 месяцев",
+              "locale" : "ru"
+            }
+          ],
+          "productID" : "Premium6Months",
+          "recurringSubscriptionPeriod" : "P6M",
+          "referenceName" : "Подписка 6 месяцев",
+          "subscriptionGroupID" : "21473205",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
         }
       ]
     }
   ],
   "version" : {
-    "major" : 3,
+    "major" : 4,
     "minor" : 0
   }
 }

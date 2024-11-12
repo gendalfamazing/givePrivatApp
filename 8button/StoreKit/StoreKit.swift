@@ -543,7 +543,7 @@ struct ProductButtonLabel: View {
             HStack(alignment: .center) {
                 Text(getProductPriceText())
                     .padding(.horizontal, 2)
-                    .frame(maxWidth: 130)
+                    .frame(maxWidth: 150)
                     .frame(minHeight: 20)
                     .font(.subheadline)
                     .padding(5.0)
@@ -591,8 +591,10 @@ struct ProductButtonLabel: View {
             return "\(product.displayPrice)"
         } else if product.displayName.contains("год") {
             return "\(product.displayPrice) / год"
-        } else if product.displayName.contains("месяц") {
+        } else if product.displayName.contains("1 месяц") {
             return "\(product.displayPrice) / месяц"
+        } else if product.displayName.contains("6") {
+            return "\(product.displayPrice) / полгода"
         } else if product.displayName.contains("year") {
             return "\(product.displayPrice) / year"
         } else {

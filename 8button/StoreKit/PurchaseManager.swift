@@ -5,7 +5,7 @@ import StoreKit
 @MainActor
 class PurchaseManager: NSObject, ObservableObject {
 
-    private let productIds = ["Premium_Year", "PremiumMonth", "Premium_Forever"]
+    private let productIds = ["Premium_Year","Premium6Months", "PremiumMonth", "Premium_Forever"]
 
     @Published
     private(set) var products: [Product] = []
