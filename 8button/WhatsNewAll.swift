@@ -16,6 +16,7 @@ struct WhatsNewAll: View {
         ScrollView {
             Spacer()
             VStack {
+                WhatsNew09()
                 WhatsNew08()
                 WhatsNew07()
                 WhatsNew06()
@@ -56,6 +57,56 @@ struct WhatsNewAll: View {
 }
 #Preview {
     WhatsNewAll()
+}
+
+struct WhatsNew09: View {
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var isTextExpanded1 = false
+    var body: some View {
+        
+            VStack {
+                MyViewBuilder(title: Text("1.2.2"), content: Text("12 ноября 2024")).buildBlue591TextScales(isTextExpanded: isTextExpanded1)
+                    .onTapGesture {
+                        withAnimation (.snappy) {
+                            isTextExpanded1.toggle()
+                        }
+                    }
+                if isTextExpanded1{
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Group {
+                            Text("**- Добавлена полугодовая подписка**")
+                                .font(.subheadline)
+                            Text("Теперь вариантов подписок еще больше - выберите наиболее подходящий для вас")
+                        }
+                        
+                        
+                    }
+                    .textSelection(.enabled)
+                    .padding(10)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: false)
+                    .frame(minHeight: 50)
+                    .modifier(ThemeGrayColorModifier())
+                    .font(.subheadline)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                    )
+                    .onTapGesture {
+                        withAnimation (.snappy) {
+                            isTextExpanded1.toggle()
+                        }
+                    }
+                }
+                
+                
+            }
+         
+    }
+    
 }
 
 struct WhatsNew08: View {
