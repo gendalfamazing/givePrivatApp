@@ -99,7 +99,7 @@ struct CustomTabBarContainerView: View {
     private var currentRootView: some View {
         switch selection {
         case .home:
-            HomeViewGear()
+            HomeView()
         case .adult:
             SearchAdult()
         case .child:

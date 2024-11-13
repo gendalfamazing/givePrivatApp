@@ -12,19 +12,20 @@ struct _buttonApp: App {
     @StateObject private var purchaseManager: PurchaseManager
     @StateObject private var trialManager = TrialManager()
     @StateObject private var updateManager = UpdateManager()
-    @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
+    @StateObject var themeManager = ThemeManager()
     @AppStorage("fontSize") var fontSize: Double = 14.0
-
+    
     init() {
         let entitlementManager = EntitlementManager()
         let purchaseManager = PurchaseManager(entitlementManager: entitlementManager)
         self._entitlementManager = StateObject(wrappedValue: entitlementManager)
         self._purchaseManager = StateObject(wrappedValue: purchaseManager)
     }
-
+    
     var body: some Scene {
         WindowGroup {
             StoreKit8()
+                .environmentObject(themeManager)
                 .preferredColorScheme(colorScheme)
                 .environment(\.sizeCategory, fontSizeCategory)
                 .environmentObject(entitlementManager)
@@ -42,7 +43,7 @@ struct _buttonApp: App {
                 }
         }
         var colorScheme: ColorScheme? {
-            switch Theme(rawValue: selectedTheme) ?? .system {
+            switch themeManager.selectedTheme {
             case .light:
                 return .light
             case .dark:
@@ -51,16 +52,17 @@ struct _buttonApp: App {
                 return nil
             }
         }
+        
         var fontSizeCategory: ContentSizeCategory {
-                switch fontSize {
-                case ..<14: return .small
-                case 14..<16: return .medium
-                case 16..<18: return .large
-                case 18..<20: return .extraLarge
-                case 20..<22: return .extraExtraLarge
-                default: return .extraExtraExtraLarge
-                }
+            switch themeManager.fontSize {
+            case ..<14: return .small
+            case 14..<16: return .medium
+            case 16..<18: return .large
+            case 18..<20: return .extraLarge
+            case 20..<22: return .extraExtraLarge
+            default: return .extraExtraExtraLarge
             }
+        }
     }
 }
 
@@ -71,10 +73,10 @@ import SwiftUI
 class UpdateManager: ObservableObject {
     @AppStorage("lastKnownVersion") private var lastKnownVersion: String = ""
     @Published var showWhatsNew: Bool = false
-
+    
     func checkForUpdate() {
         let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-
+        
         if lastKnownVersion != currentVersion {
             lastKnownVersion = currentVersion
             showWhatsNew = true

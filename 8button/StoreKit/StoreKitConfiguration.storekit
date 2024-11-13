@@ -15,7 +15,7 @@
   ],
   "products" : [
     {
-      "displayPrice" : "19.99",
+      "displayPrice" : "17.99",
       "familyShareable" : false,
       "internalID" : "6484269780",
       "localizations" : [
@@ -37,7 +37,7 @@
     "_developerTeamID" : "29R8F9VULL",
     "_disableDialogs" : false,
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 753084478.41075599,
+    "_lastSynchronizedDate" : 753181296.95616698,
     "_locale" : "ru",
     "_storefront" : "BLR",
     "_storeKitErrors" : [
@@ -119,12 +119,12 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "8.99",
+          "displayPrice" : "7.99",
           "familyShareable" : false,
           "groupNumber" : 2,
           "internalID" : "6483809054",
           "introductoryOffer" : {
-            "internalID" : "7BF7D15A",
+            "internalID" : "21BE3D25",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P3D"
@@ -157,7 +157,7 @@
           "groupNumber" : 1,
           "internalID" : "6483808418",
           "introductoryOffer" : {
-            "internalID" : "D5051F1C",
+            "internalID" : "2531DC1A",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P3D"
@@ -190,7 +190,7 @@
           "groupNumber" : 2,
           "internalID" : "6738045345",
           "introductoryOffer" : {
-            "internalID" : "B1EACD71",
+            "internalID" : "55FA7235",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P3D"

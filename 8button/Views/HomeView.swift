@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
     @AppStorage("fontSize") var fontSize: Double = 14.0
+    @EnvironmentObject var themeManager: ThemeManager
+    @Environment(\.sizeCategory) var sizeCategory
     
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         
@@ -378,45 +378,43 @@ struct HomeView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Menu {
-                            Menu {
-                                VStack {
-                                    Button(action: {
-                                        selectedTheme = Theme.light.rawValue
-                                    }) {
-                                        Label("Светлая тема", systemImage: "sun.max")
-                                            
-                                    }
-                                    Button(action: {
-                                        selectedTheme = Theme.dark.rawValue
-                                    }) {
-                                        Label("Темная тема", systemImage: "moon")
-                                    }
-                                    Button(action: {
-                                        selectedTheme = Theme.system.rawValue
-                                    }) {
-                                        Label("Системная тема", systemImage: "circle.righthalf.filled")
-                                    }
-                                }
-                            } label: {
-                                Label("Выбор темы", systemImage: "moonphase.last.quarter")
-                            } //moonphase.last.quarter.inverse
-                            
-                            Menu {
-                                VStack {
-                                    Slider(value: $fontSize, in: 12...20, step: 2) {
-                                        
-                                    }
-                                    .padding()
-                                    Text("Текущий размер: \(Int(fontSize))")
-                                        .font(.system(size: CGFloat(fontSize)))
-                                }
-                            } label: {
-                                Label("Размер шрифта", systemImage: "textformat.size")
-                            }
-                        } label: {
-                            Image(systemName: "gear")
-                                .foregroundColor(.titleNumberForeground)
-                        }
+                                                // Меню выбора темы
+                                                Menu {
+                                                    Button(action: {
+                                                        themeManager.selectedTheme = .light
+                                                    }) {
+                                                        Label("Светлая тема", systemImage: themeManager.selectedTheme == .light ? "checkmark" : "sun.max")
+                                                    }
+                                                    Button(action: {
+                                                        themeManager.selectedTheme = .dark
+                                                    }) {
+                                                        Label("Темная тема", systemImage: themeManager.selectedTheme == .dark ? "checkmark" : "moon")
+                                                    }
+                                                    Button(action: {
+                                                        themeManager.selectedTheme = .system
+                                                    }) {
+                                                        Label("Системная тема", systemImage: themeManager.selectedTheme == .system ? "checkmark" : "circle.righthalf.filled")
+                                                    }
+                                                } label: {
+                                                    Label("Выбор темы", systemImage: "moonphase.last.quarter")
+                                                }
+                                                
+                                                // Меню размера шрифта
+                                                Menu {
+                                                    VStack {
+                                                        Slider(value: $themeManager.fontSize, in: 12...20, step: 2) {
+                                                        }
+                                                        .padding()
+                                                        Text("Текущий размер: \(Int(themeManager.fontSize))")
+                                                            .font(.system(size: CGFloat(themeManager.fontSize)))
+                                                    }
+                                                } label: {
+                                                    Label("Размер шрифта", systemImage: "textformat.size")
+                                                }
+                                            } label: {
+                                                Image(systemName: "gear")
+                                                    .foregroundColor(.titleNumberForeground)
+                                            }
                     }
                 }
                 
@@ -434,15 +432,15 @@ struct HomeView: View {
         
     }
     var fontSizeCategory: ContentSizeCategory {
-            switch fontSize {
-            case ..<14: return .small
-            case 14..<16: return .medium
-            case 16..<18: return .large
-            case 18..<20: return .extraLarge
-            case 20..<22: return .extraExtraLarge
-            default: return .extraExtraExtraLarge
-            }
+        switch themeManager.fontSize {
+        case ..<14: return .small
+        case 14..<16: return .medium
+        case 16..<18: return .large
+        case 18..<20: return .extraLarge
+        case 20..<22: return .extraExtraLarge
+        default: return .extraExtraExtraLarge
         }
+    }
     
 }
 #Preview {

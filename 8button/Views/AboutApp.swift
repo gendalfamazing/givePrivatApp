@@ -10,8 +10,9 @@ import StoreKit
 
 struct AboutApp: View {
     @AppStorage("fontSize") var fontSize: Double = 14.0
-    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.sizeCategory) var sizeCategory
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject private var entitlementManager: EntitlementManager
     @EnvironmentObject private var purchaseManager: PurchaseManager
@@ -451,7 +452,7 @@ struct AboutApp: View {
             .environment(\.sizeCategory, fontSizeCategory)
         }
         var fontSizeCategory: ContentSizeCategory {
-                switch fontSize {
+                switch themeManager.fontSize {
                 case ..<14: return .small
                 case 14..<16: return .medium
                 case 16..<18: return .large

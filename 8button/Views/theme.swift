@@ -6,9 +6,40 @@ enum Theme: String, CaseIterable {
     case system = "Системная тема"
 }
 
+class ThemeManager: ObservableObject {
+    @Published var selectedTheme: Theme {
+        didSet {
+            // Сохранение выбранной темы в UserDefaults
+            UserDefaults.standard.set(selectedTheme.rawValue, forKey: "selectedTheme")
+        }
+    }
+    
+    @Published var fontSize: Double {
+        didSet {
+            UserDefaults.standard.set(fontSize, forKey: "fontSize")
+        }
+    }
+
+    init() {
+        // Загрузка выбранной темы из UserDefaults
+        if let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme"),
+           let theme = Theme(rawValue: savedTheme) {
+            self.selectedTheme = theme
+        } else {
+            self.selectedTheme = .system
+        }
+        
+        // Загрузка размера шрифта из UserDefaults
+        self.fontSize = UserDefaults.standard.double(forKey: "fontSize")
+        if self.fontSize == 0 {
+            self.fontSize = 14.0 // Значение по умолчанию
+        }
+    }
+}
+
 struct HomeViewGear: View {
-    @AppStorage("selectedTheme") var selectedTheme: String = Theme.system.rawValue
-    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @EnvironmentObject var themeManager: ThemeManager
+    @Environment(\.sizeCategory) var sizeCategory
     var body: some View {
         HomeView()
             .preferredColorScheme(colorScheme)
@@ -16,7 +47,7 @@ struct HomeViewGear: View {
     }
 
     var colorScheme: ColorScheme? {
-        switch Theme(rawValue: selectedTheme) ?? .system {
+        switch themeManager.selectedTheme {
         case .light:
             return .light
         case .dark:
@@ -26,7 +57,7 @@ struct HomeViewGear: View {
         }
     }
     var fontSizeCategory: ContentSizeCategory {
-            switch fontSize {
+            switch themeManager.fontSize {
             case ..<14: return .small
             case 14..<16: return .medium
             case 16..<18: return .large
