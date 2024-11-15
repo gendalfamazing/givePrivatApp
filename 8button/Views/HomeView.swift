@@ -15,14 +15,19 @@ struct HomeView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    
     var body: some View {
         
         NavigationStack {
             ScrollView {
                 Spacer(minLength: 5)
-                VStack(spacing: 5) {
+                VStack(spacing: 1) {
                     // яды cross.vial
-                    NavigationLink(destination: PrikazyPostanovleniya()) {
+                    FavoriteableNavigationLink(
+                        destination: PrikazyPostanovleniya(),
+                        label:{
                         HStack {
                             Image(systemName: "list.bullet.clipboard")
                                 .resizable()
@@ -63,38 +68,42 @@ struct HomeView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
-                    }
-                    
-                    
-                    NavigationLink(destination: CodesMkb10()) {
-                        HStack {
-                            Image(systemName: "doc.append") //ivfluid.bag  candybarphone
-                                .resizable()
-                                .frame(width: 18, height: 24)
-                            //                                .padding(.horizontal)
-                                .font(.caption2)
-                                .padding(.horizontal, 11.0)
-                                .padding(.vertical, 8.0)
-                                .background(Color.titleNumber)
-                                .cornerRadius(10)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
-                                )
-                                .foregroundColor(Color.titleNumberForeground)
-                            Spacer()
-                            Spacer()
-                            Text("МКБ-10")
-                                .padding(.horizontal, 3.0)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                            Spacer()
-                            Spacer()
-                            Image(systemName: ("chevron.right"))
-                                .opacity(0.3)
-                                .padding(.trailing, 15)
-                                .padding(.leading, 10)
-                        }
+                    },
+                        itemName: "Приказы и постановления",
+                        destinationIdentifier: "PrikazyPostanovleniya"
+                    )
+                    .environmentObject(favoritesManager)
+                    FavoriteableNavigationLink(
+                        destination: CodesMkb10(),
+                        label:{
+                            HStack {
+                                Image(systemName: "doc.append") //ivfluid.bag  candybarphone
+                                    .resizable()
+                                    .frame(width: 18, height: 24)
+                                //                                .padding(.horizontal)
+                                    .font(.caption2)
+                                    .padding(.horizontal, 11.0)
+                                    .padding(.vertical, 8.0)
+                                    .background(Color.titleNumber)
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                                    )
+                                    .foregroundColor(Color.titleNumberForeground)
+                                Spacer()
+                                Spacer()
+                                Text("МКБ-10")
+                                    .padding(.horizontal, 3.0)
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                Spacer()
+                                Spacer()
+                                Image(systemName: ("chevron.right"))
+                                    .opacity(0.3)
+                                    .padding(.trailing, 15)
+                                    .padding(.leading, 10)
+                            }
                         .padding(5.0)
                         //        .lineLimit(2)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -106,7 +115,13 @@ struct HomeView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                         )
-                    }
+                    },
+                        itemName: "МКБ-10",
+                        destinationIdentifier: "CodesMkb10"
+                    )
+                    .environmentObject(favoritesManager)
+                    
+                    
                     
                     NavigationLink(destination: ScalesTables()) {
                         HStack {
@@ -359,7 +374,7 @@ struct HomeView: View {
                     
                     
                 }
-                .padding(.horizontal, 10)
+                .padding(.horizontal, 8)
                 .padding(.bottom, 55)
                 .navigationBarTitle("", displayMode: .inline)
                 .toolbar {
@@ -378,44 +393,50 @@ struct HomeView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Menu {
-                                                // Меню выбора темы
-                                                Menu {
-                                                    Button(action: {
-                                                        themeManager.selectedTheme = .light
-                                                    }) {
-                                                        Label("Светлая тема", systemImage: themeManager.selectedTheme == .light ? "checkmark" : "sun.max")
-                                                    }
-                                                    Button(action: {
-                                                        themeManager.selectedTheme = .dark
-                                                    }) {
-                                                        Label("Темная тема", systemImage: themeManager.selectedTheme == .dark ? "checkmark" : "moon")
-                                                    }
-                                                    Button(action: {
-                                                        themeManager.selectedTheme = .system
-                                                    }) {
-                                                        Label("Системная тема", systemImage: themeManager.selectedTheme == .system ? "checkmark" : "circle.righthalf.filled")
-                                                    }
-                                                } label: {
-                                                    Label("Выбор темы", systemImage: "moonphase.last.quarter")
-                                                }
-                                                
-                                                // Меню размера шрифта
-                                                Menu {
-                                                    VStack {
-                                                        Slider(value: $themeManager.fontSize, in: 12...20, step: 2) {
-                                                        }
-                                                        .padding()
-                                                        Text("Текущий размер: \(Int(themeManager.fontSize))")
-                                                            .font(.system(size: CGFloat(themeManager.fontSize)))
-                                                    }
-                                                } label: {
-                                                    Label("Размер шрифта", systemImage: "textformat.size")
-                                                }
-                                            } label: {
-                                                Image(systemName: "gear")
-                                                    .foregroundColor(.titleNumberForeground)
-                                            }
+                            // Меню выбора темы
+                            Menu {
+                                Button(action: {
+                                    themeManager.selectedTheme = .light
+                                }) {
+                                    Label("Светлая тема", systemImage: themeManager.selectedTheme == .light ? "checkmark.circle" : "sun.max")
+                                }
+                                Button(action: {
+                                    themeManager.selectedTheme = .dark
+                                }) {
+                                    Label("Темная тема", systemImage: themeManager.selectedTheme == .dark ? "checkmark.circle" : "moon")
+                                }
+                                Button(action: {
+                                    themeManager.selectedTheme = .system
+                                }) {
+                                    Label("Системная тема", systemImage: themeManager.selectedTheme == .system ? "checkmark.circle" : "circle.righthalf.filled")
+                                }
+                            } label: {
+                                Label("Выбор темы", systemImage: "moonphase.last.quarter")
+                            }
+                            
+                            // Меню размера шрифта
+                            Menu {
+                                VStack {
+                                    Slider(value: $themeManager.fontSize, in: 12...20, step: 2) {
+                                    }
+                                    .padding()
+                                    Text("Текущий размер: \(Int(themeManager.fontSize))")
+                                        .font(.system(size: CGFloat(themeManager.fontSize)))
+                                }
+                            } label: {
+                                Label("Размер шрифта", systemImage: "textformat.size")
+                            }
+                        } label: {
+                            Image(systemName: "gear")
+                                .foregroundColor(.titleNumberForeground)
+                        }
                     }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                                            NavigationLink(destination: FavoritesView()) {
+                                                Image(systemName: "star.fill")
+                                                    .foregroundColor(.yellow)
+                                            }
+                                        }
                 }
                 
             }

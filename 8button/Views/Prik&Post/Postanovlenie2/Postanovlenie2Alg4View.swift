@@ -10,6 +10,8 @@ import SwiftUI
 struct Postanovlenie2Alg4View: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @State private var showingAddToFavorites = false
     
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
@@ -26,13 +28,13 @@ struct Postanovlenie2Alg4View: View {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5){
-                    MyViewBuilder(title: Text("20. Поступление обращений в службу СМП"), content: Text(LocalizedStringKey("Post2Alg4B0G0S1"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
+                    FavoritableTextBlockView(title: "20. Поступление обращений в службу СМП", contentKey: "Post2Alg4B0G0S1")
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded1.toggle()
                             }
                         }
-                    MyViewBuilder(title: Text("21. Прием обращения в службу СМП"), content: Text(LocalizedStringKey("Post2Alg4B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
+                    FavoritableTextBlockView(title: "21. Прием обращения в службу СМП", contentKey: "Post2Alg4B0G0S2")
                         .onTapGesture {
                             withAnimation (.snappy) {
                                 isTextExpanded2.toggle()

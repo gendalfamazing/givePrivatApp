@@ -8,6 +8,7 @@ import SwiftUI
 
 @main
 struct _buttonApp: App {
+    @StateObject var favoritesManager = FavoritesManager.shared
     @StateObject private var entitlementManager: EntitlementManager
     @StateObject private var purchaseManager: PurchaseManager
     @StateObject private var trialManager = TrialManager()
@@ -25,6 +26,7 @@ struct _buttonApp: App {
     var body: some Scene {
         WindowGroup {
             StoreKit8()
+                .environmentObject(favoritesManager)
                 .environmentObject(themeManager)
                 .preferredColorScheme(colorScheme)
                 .environment(\.sizeCategory, fontSizeCategory)

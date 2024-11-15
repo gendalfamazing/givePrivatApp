@@ -564,6 +564,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		C69B8D192CE622BD000B0164 /* Favorite */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Favorite; sourceTree = "<group>"; };
 		C6A3B0A02CB708CE00F51CD6 /* ShiftCalendarWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C6A3B0B72CB70BE700F51CD6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, C6A3B0AF2CB708D000F51CD6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ShiftCalendarWidget; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -812,6 +813,7 @@
 				C6F4E8252CBC18910074C65D /* WhatsNewView.swift */,
 				C62FE7512CDF5B2B0018DB18 /* WhatsNewAll.swift */,
 				C67445FC2BA9906D0067FAEF /* ButtonStyleViewModifier.swift */,
+				C69B8D192CE622BD000B0164 /* Favorite */,
 				C605763A2B1FB6C200C5BAC9 /* Localizable.xcstrings */,
 				C6A557AD2BAEE1640014590C /* StoreKit */,
 				C6C3FEA12B29CCC400FF44BC /* TabBar */,
@@ -1121,6 +1123,9 @@
 			);
 			dependencies = (
 				C6A3B0AB2CB708D000F51CD6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C69B8D192CE622BD000B0164 /* Favorite */,
 			);
 			name = 8button;
 			packageProductDependencies = (
