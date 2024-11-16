@@ -8,29 +8,15 @@
 import Foundation
 import SwiftUI
 
-import Foundation
 
 struct FavoriteItem: Identifiable, Codable, Equatable {
     let id: UUID
     var name: String
-    var destinationIdentifier: String // Идентификатор вью для навигации
+    var viewIdentifier: String
 
-    init(id: UUID = UUID(), name: String, destinationIdentifier: String) {
+    init(id: UUID = UUID(), name: String, viewIdentifier: String) {
         self.id = id
         self.name = name
-        self.destinationIdentifier = destinationIdentifier
+        self.viewIdentifier = viewIdentifier
     }
 }
-
-struct FavoriteTextBlock: Identifiable, Codable, Equatable {
-    let id: UUID
-    var title: String
-    var contentKey: String // Ключ для локализованного контента
-
-    init(id: UUID = UUID(), title: String, contentKey: String) {
-        self.id = id
-        self.title = title
-        self.contentKey = contentKey
-    }
-}
-

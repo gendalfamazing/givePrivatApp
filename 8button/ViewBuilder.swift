@@ -20,6 +20,10 @@ protocol ViewBuilder1 {
 class MyViewBuilder: ViewBuilder1 {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @Environment(\.viewContext) var context: ViewContext
+   
+    
     private let title: Text
     private let content: Text
     
@@ -251,6 +255,68 @@ class MyViewBuilder: ViewBuilder1 {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
                 )
+//
+                
+    }
+    func buildBlue591TextScalesFavorites(isTextExpanded: Bool, isInFavorites: Bool, shouldShowOverlay: Bool) -> some View {
+        @Environment(\.viewContext) var context: ViewContext
+        return
+                HStack {
+                    VStack (alignment: .leading){
+                        title
+                            .padding(.leading, 7)
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        content
+                            .padding(.leading, 7)
+                            .font(.caption2)
+                            .opacity(0.65)
+                    }
+                    Spacer()
+                    Spacer()
+                    Image(systemName: ("chevron.down"))
+                        .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
+//                        .resizable()
+//                        .frame(width: 20, height: 20)
+                        .opacity(0.3)
+//                        .multilineTextAlignment(.center)
+                        .padding(.trailing, 7)
+                }
+                .padding(7.0)
+//                .lineLimit(2)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 49)
+                .frame(minWidth: 49)
+                .modifier(ThemeBlueColorModifier())
+//                .background(Color.blueButton)
+                .background(isTextExpanded ? Color.toggle : Color.blueButton)
+                .background(Color.grayButton)
+                .cornerRadius(10)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        VStack {
+                            if shouldShowOverlay {
+                                Image(systemName: "star.fill")
+                                    .resizable()
+                                    .frame(width: 14, height: 14)
+                                    .foregroundColor(isInFavorites ? .favoriteStar : Color.clear)
+                                    .rotationEffect(.degrees(isInFavorites ? -360 : 0))
+                                    .animation(.snappy, value: isInFavorites)
+                                    .padding(.vertical, 3)
+                                    .padding(.horizontal, 3)
+                            }
+                            Spacer()
+                        }
+                    }
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                )
+                
 //
                 
     }

@@ -25,102 +25,12 @@ struct HomeView: View {
                 Spacer(minLength: 5)
                 VStack(spacing: 1) {
                     // яды cross.vial
-                    FavoriteableNavigationLink(
-                        destination: PrikazyPostanovleniya(),
-                        label:{
-                        HStack {
-                            Image(systemName: "list.bullet.clipboard")
-                                .resizable()
-                                .frame(width: 18, height: 28)
-                            //                                .padding(.horizontal)
-                                .font(.caption2)
-                                .padding(.horizontal, 11.0)
-                                .padding(.vertical, 6.0)
-                                .background(Color.titleNumber)
-                                .cornerRadius(10)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
-                                )
-                                .foregroundColor(Color.titleNumberForeground)
-                            
-                            Spacer()
-                            
-                            Text("Приказы и постановления")
-                                .padding(.horizontal, 3.0)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                            Spacer()
-                            Image(systemName: ("chevron.right"))
-                                .opacity(0.3)
-                                .padding(.trailing, 15)
-                                .padding(.leading, 10)
-                            
-                        }
-                        .padding(5.0)
-                        //        .lineLimit(2)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(minHeight: 50)
-                        .modifier(ThemeTitleBlueColorModifier())
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
-                        )
-                    },
-                        itemName: "Приказы и постановления",
-                        destinationIdentifier: "PrikazyPostanovleniya"
-                    )
-                    .environmentObject(favoritesManager)
-                    FavoriteableNavigationLink(
-                        destination: CodesMkb10(),
-                        label:{
-                            HStack {
-                                Image(systemName: "doc.append") //ivfluid.bag  candybarphone
-                                    .resizable()
-                                    .frame(width: 18, height: 24)
-                                //                                .padding(.horizontal)
-                                    .font(.caption2)
-                                    .padding(.horizontal, 11.0)
-                                    .padding(.vertical, 8.0)
-                                    .background(Color.titleNumber)
-                                    .cornerRadius(10)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
-                                    )
-                                    .foregroundColor(Color.titleNumberForeground)
-                                Spacer()
-                                Spacer()
-                                Text("МКБ-10")
-                                    .padding(.horizontal, 3.0)
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                Spacer()
-                                Spacer()
-                                Image(systemName: ("chevron.right"))
-                                    .opacity(0.3)
-                                    .padding(.trailing, 15)
-                                    .padding(.leading, 10)
-                            }
-                        .padding(5.0)
-                        //        .lineLimit(2)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(minHeight: 50)
-                        .modifier(ThemeTitleBlueColorModifier())
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
-                        )
-                    },
-                        itemName: "МКБ-10",
-                        destinationIdentifier: "CodesMkb10"
-                    )
-                    .environmentObject(favoritesManager)
                     
+                    PrikazyPostanovleniyaFavorites()
+                        .environment(\.viewContext, .nonFavorites)
+                    
+                    CodesMkb10Favorites()
+                        .environment(\.viewContext, .nonFavorites)
                     
                     
                     NavigationLink(destination: ScalesTables()) {
@@ -466,4 +376,299 @@ struct HomeView: View {
 }
 #Preview {
     HomeView()
+}
+
+struct PrikazyPostanovleniyaFavorites: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @EnvironmentObject var themeManager: ThemeManager
+    @Environment(\.sizeCategory) var sizeCategory
+    
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.viewContext) var context: ViewContext
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
+    var shouldShowOverlay: Bool {
+            switch context {
+            case .favorites:
+                // В избранном не показываем оверлей
+                return false
+            case .nonFavorites, .other:
+                // В других контекстах показываем оверлей
+                return true
+            }
+        }
+    var isInFavorites: Bool {
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "PrikazyPostanovleniyaFavorites" }
+    }
+    
+    func addToFavorites() {
+        let newItem = FavoriteItem(name: "PrikazyPostanovleniyaFavorites", viewIdentifier: "PrikazyPostanovleniyaFavorites")
+        let success = favoritesManager.addItem(newItem)
+        if success {
+            // Элемент успешно добавлен
+        } else {
+            // Элемент уже существует
+            alertMessage = "Этот элемент уже добавлен в избранное"
+            showAlert = true
+        }
+    }
+    
+    func removeFromFavorites() {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "PrikazyPostanovleniyaFavorites" }) {
+            favoritesManager.removeItem(item)
+        }
+    }
+    
+
+    var body: some View {
+        VStack {
+            NavigationLink(destination: PrikazyPostanovleniya()) {
+                HStack {
+                    Image(systemName: "list.bullet.clipboard")
+                        .resizable()
+                        .frame(width: 18, height: 28)
+                    //                                .padding(.horizontal)
+                        .font(.caption2)
+                        .padding(.horizontal, 11.0)
+                        .padding(.vertical, 6.0)
+                        .background(Color.titleNumber)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
+                        .foregroundColor(Color.titleNumberForeground)
+                    
+                    Spacer()
+                    
+                    Text("Приказы и постановления")
+                        .padding(.horizontal, 3.0)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Image(systemName: ("chevron.right"))
+                        .opacity(0.3)
+                        .padding(.trailing, 15)
+                        .padding(.leading, 10)
+                    
+                }
+                .padding(5.0)
+                //        .lineLimit(2)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 50)
+                .modifier(ThemeTitleBlueColorModifier())
+                .cornerRadius(10)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        VStack {
+                            if shouldShowOverlay {
+                                Image(systemName: "star.fill")
+                                    .resizable()
+                                    .frame(width: 14, height: 14)
+                                    .foregroundColor(isInFavorites ? .favoriteStar : Color.clear)
+                                    .rotationEffect(.degrees(isInFavorites ? -360 : 0))
+                                    .animation(.snappy, value: isInFavorites)
+                                    .padding(.vertical, 3)
+                                    .padding(.horizontal, 3)
+                            }
+                            Spacer()
+                        }
+                    }
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                )
+            }
+        }
+        .padding(2)
+        .contextMenu {
+            switch context {
+            case .favorites:
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
+            case .nonFavorites:
+                if isInFavorites {
+                    Button(action: {
+                        removeFromFavorites()
+                    }) {
+                        Text("Удалить из избранного")
+                        Image(systemName: "star.slash")
+                    }
+                } else {
+                    Button(action: {
+                        addToFavorites()
+                    }) {
+                        Text("Добавить в избранное")
+                        Image(systemName: "star.fill")
+                    }
+                }
+            default:
+                EmptyView()
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertMessage))
+        }
+        
+    }
+    
+}
+
+struct CodesMkb10Favorites: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @EnvironmentObject var themeManager: ThemeManager
+    @Environment(\.sizeCategory) var sizeCategory
+    
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.viewContext) var context: ViewContext
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
+    var shouldShowOverlay: Bool {
+            switch context {
+            case .favorites:
+                // В избранном не показываем оверлей
+                return false
+            case .nonFavorites, .other:
+                // В других контекстах показываем оверлей
+                return true
+            }
+        }
+    var isInFavorites: Bool {
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "CodesMkb10Favorites" }
+    }
+    
+    func addToFavorites() {
+        let newItem = FavoriteItem(name: "CodesMkb10Favorites", viewIdentifier: "CodesMkb10Favorites")
+        let success = favoritesManager.addItem(newItem)
+        if success {
+            // Элемент успешно добавлен
+        } else {
+            // Элемент уже существует
+            alertMessage = "Этот элемент уже добавлен в избранное"
+            showAlert = true
+        }
+    }
+    
+    func removeFromFavorites() {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "CodesMkb10Favorites" }) {
+            favoritesManager.removeItem(item)
+        }
+    }
+    
+
+    var body: some View {
+        VStack {
+            NavigationLink(destination: CodesMkb10()) {
+                HStack {
+                    Image(systemName: "doc.append") //ivfluid.bag  candybarphone
+                        .resizable()
+                        .frame(width: 18, height: 24)
+                    //                                .padding(.horizontal)
+                        .font(.caption2)
+                        .padding(.horizontal, 11.0)
+                        .padding(.vertical, 8.0)
+                        .background(Color.titleNumber)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        )
+                        .foregroundColor(Color.titleNumberForeground)
+                    Spacer()
+                    Spacer()
+                    Text("МКБ-10")
+                        .padding(.horizontal, 3.0)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Spacer()
+                    Image(systemName: ("chevron.right"))
+                        .opacity(0.3)
+                        .padding(.trailing, 15)
+                        .padding(.leading, 10)
+                }
+                .padding(5.0)
+                //        .lineLimit(2)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 50)
+                .modifier(ThemeTitleBlueColorModifier())
+                .cornerRadius(10)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        VStack {
+                            if shouldShowOverlay {
+                                Image(systemName: "star.fill")
+                                    .resizable()
+                                    .frame(width: 14, height: 14)
+                                    .foregroundColor(isInFavorites ? .favoriteStar : Color.clear)
+                                    .rotationEffect(.degrees(isInFavorites ? -360 : 0))
+                                    .animation(.snappy, value: isInFavorites)
+                                    .padding(.vertical, 3)
+                                    .padding(.horizontal, 3)
+                            }
+                            Spacer()
+                        }
+                    }
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                )
+            }
+        }
+        .padding(2)
+        .contextMenu {
+            switch context {
+            case .favorites:
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
+            case .nonFavorites:
+                if isInFavorites {
+                    Button(action: {
+                        removeFromFavorites()
+                    }) {
+                        Text("Удалить из избранного")
+                        Image(systemName: "star.slash")
+                    }
+                } else {
+                    Button(action: {
+                        addToFavorites()
+                    }) {
+                        Text("Добавить в избранное")
+                        Image(systemName: "star.fill")
+                    }
+                }
+            default:
+                EmptyView()
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertMessage))
+        }
+        
+    }
+    
 }

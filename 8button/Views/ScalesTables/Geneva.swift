@@ -22,10 +22,46 @@ struct Geneva: View {
     
     @State private var displayedPoints = 0 // Для анимации
     @State private var isTextExpanded3 = false
-
+    @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    
+    @Environment(\.viewContext) var context: ViewContext
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    var isInFavorites: Bool {
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Geneva" }
+    }
+    var shouldShowOverlay: Bool {
+            switch context {
+            case .favorites:
+                // В избранном не показываем оверлей
+                return false
+            case .nonFavorites, .other:
+                // В других контекстах показываем оверлей
+                return true
+            }
+        }
+    func addToFavorites() {
+        let newItem = FavoriteItem(name: "GENEVA", viewIdentifier: "Geneva")
+        let success = favoritesManager.addItem(newItem)
+        if success {
+            // Элемент успешно добавлен
+        } else {
+            // Элемент уже существует
+            alertMessage = "Этот элемент уже добавлен в избранное"
+            showAlert = true
+        }
+    }
+    
+    func removeFromFavorites() {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Geneva" }) {
+            favoritesManager.removeItem(item)
+        }
+    }
     var body: some View {
         VStack {
-            MyViewBuilder(title: Text("GENEVA"), content: Text("Оценка вероятности развития ТЭЛА")).buildBlue591TextScales(isTextExpanded: isTextExpanded3)
+            MyViewBuilder(title: Text("GENEVA"), content: Text("Оценка вероятности развития ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isTextExpanded3, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay)
+                
                 .onTapGesture {
                     withAnimation(.snappy) {
                         isTextExpanded3.toggle()
@@ -55,7 +91,7 @@ struct Geneva: View {
                                 .fixedSize(horizontal: false, vertical: true)
                                 .font(.subheadline)
                                 .foregroundColor(Color.gray)
-                                
+                            
                         }
                         .background(Color.grayButton)
                         VStack(spacing: 1) {
@@ -131,6 +167,42 @@ struct Geneva: View {
                     )
                 }
             }
+        }
+        
+        .padding(2)
+        .contextMenu {
+            switch context {
+            case .favorites:
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
+            case .nonFavorites:
+                if isInFavorites {
+                    Button(action: {
+                        removeFromFavorites()
+                    }) {
+                        Text("Удалить из избранного")
+                        Image(systemName: "star.slash")
+                    }
+                } else {
+                    Button(action: {
+                        addToFavorites()
+                    }) {
+                        Text("Добавить в избранное")
+                        Image(systemName: "star.fill")
+                    }
+                }
+                
+                
+            default:
+                EmptyView()
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertMessage))
         }
     }
     

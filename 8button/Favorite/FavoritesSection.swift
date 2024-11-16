@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FavoritesSection: Identifiable, Codable {
+struct FavoritesSection: Identifiable, Codable, Equatable {
     let id: UUID
     var name: String
     var items: [FavoriteItem]

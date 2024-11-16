@@ -28,18 +28,7 @@ struct Postanovlenie2Alg4View: View {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5){
-                    FavoritableTextBlockView(title: "20. Поступление обращений в службу СМП", contentKey: "Post2Alg4B0G0S1")
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded1.toggle()
-                            }
-                        }
-                    FavoritableTextBlockView(title: "21. Прием обращения в службу СМП", contentKey: "Post2Alg4B0G0S2")
-                        .onTapGesture {
-                            withAnimation (.snappy) {
-                                isTextExpanded2.toggle()
-                            }
-                        }
+                    
                     MyViewBuilder(title: Text("22. Автоматическая запись обращения"), content: Text(LocalizedStringKey("Post2Alg4B0G0S3"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
                         .onTapGesture {
                             withAnimation (.snappy) {
