@@ -29,7 +29,7 @@ struct Geneva: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "Geneva" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "GENEVA" }
     }
     var shouldShowOverlay: Bool {
             switch context {
@@ -42,7 +42,7 @@ struct Geneva: View {
             }
         }
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "GENEVA", viewIdentifier: "Geneva", isExpandable: true)
+        let newItem = FavoriteItem(name: "Шкалы и таблицы", viewIdentifier: "GENEVA", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -54,7 +54,7 @@ struct Geneva: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Geneva" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "GENEVA" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -65,6 +65,9 @@ struct Geneva: View {
                 .onTapGesture {
                     withAnimation(.snappy) {
                         isTextExpanded3.toggle()
+                        if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == "GENEVA" }) {
+                            favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                        }
                     }
                 }
             if isTextExpanded3 {

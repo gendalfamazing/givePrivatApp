@@ -173,11 +173,11 @@ struct Postanovlenie118ViewFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "Postanovlenie118ViewFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Постановление №118 (детские протоколы)" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Postanovlenie118ViewFavorites", viewIdentifier: "Postanovlenie118ViewFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Постановление №118 (детские протоколы)", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -189,7 +189,7 @@ struct Postanovlenie118ViewFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Postanovlenie118ViewFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Постановление №118 (детские протоколы)" }) {
             favoritesManager.removeItem(item)
         }
     }

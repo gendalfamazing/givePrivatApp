@@ -4,26 +4,26 @@ import SwiftUI
 struct ViewFactory {
     static func view(for identifier: String) -> AnyView {
         switch identifier {
-        case "Geneva":
+        case "GENEVA":
             return AnyView(Geneva())
                 
-        case "PrikazyPostanovleniyaFavorites":
+        case "Приказы и постановления":
             return AnyView(PrikazyPostanovleniyaFavorites())
-        case "CodesMkb10Favorites":
+        case "МКБ-10":
             return AnyView(CodesMkb10Favorites())
-        case "ScalesTablesFavorites":
+        case "Шкалы и таблицы":
             return AnyView(ScalesTablesFavorites())
-        case "StudMaterialsFavorites":
+        case "Учебные материалы":
             return AnyView(StudMaterialsFavorites())
-        case "InfusionRateCalculatorViewFavorites":
+        case "Калькулятор Допамина":
             return AnyView(InfusionRateCalculatorViewFavorites())
-        case "AkusherskoePosobieFavorites":
+        case "Акушерское пособие":
             return AnyView(AkusherskoePosobieFavorites())
-        case "AtlasECGFavorites":
+        case "Атлас ЭКГ":
             return AnyView(AtlasECGFavorites())
-        case "FastChildDosesFavorites":
+        case "Поиск детских дозировок":
             return AnyView(FastChildDosesFavorites())
-        case "Postanovlenie118ViewFavorites":
+        case "Постановление №118 (детские протоколы)":
             return AnyView(Postanovlenie118ViewFavorites())
         case "Post1030Alg02":
             return AnyView(Prikaz1030Alg2View())
@@ -64,7 +64,7 @@ struct FavoritesView: View {
                                             // Обновляем высоту только один раз после открытия представления
                                             DispatchQueue.main.async {
                                                 if itemHeights[item.id] == nil {
-                                                    itemHeights[item.id] = geometry.size.height - 8
+                                                    itemHeights[item.id] = geometry.size.height - 5.5
                                                 }
                                             }
                                         }
@@ -72,14 +72,22 @@ struct FavoritesView: View {
                             )
                             .overlay(
                                 HStack (spacing: 0){
-                                    VStack {
+                                    VStack (alignment: .leading){
+                                        Text(item.name)
+                                            .padding(.leading, 7)
+                                            .font(.caption2)
+                                            .opacity(0.65)
+                                            
                                         Text(item.viewIdentifier)
+                                            .padding(.leading, 7)
+                                            .fontWeight(.semibold)
+                                            .font(.subheadline)
                                     }
                                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                     .frame(
                                         height: itemHeights[item.id]
                                     )
-                                    .background(Color.brown)
+                                    .background(item.isExpanded ? Color.toggle : Color.blueButton)
                                     
                                     VStack {
                                         
@@ -88,7 +96,7 @@ struct FavoritesView: View {
                                         height: itemHeights[item.id]
                                     )
                                     .frame(width: 35)
-                                    .background(Color.red)
+                                    .background(Color.clear)
                                     
                                     
                                 }
@@ -97,8 +105,8 @@ struct FavoritesView: View {
                                 )
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                 .cornerRadius(10)
-                                .padding(4)
-                                .allowsHitTesting(true)
+                                .padding(2.5)
+                                .allowsHitTesting(false)
                                 .contextMenu {
                                     Button(action: {
                                         favoritesManager.removeItem(item)
@@ -149,6 +157,14 @@ struct FavoritesView: View {
                             .foregroundColor(Color.toolBar)
                     }
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button(action: {
+                                        removeAllFavorites() // Удаление всех элементов
+                                    }) {
+                                        Image(systemName: "trash")
+                                            .foregroundColor(.red)
+                                    }
+                                }
             }
         }
         .background(Color.back)
@@ -157,6 +173,9 @@ struct FavoritesView: View {
             itemHeights.removeAll()
         }
     }
+    private func removeAllFavorites() {
+            favoritesManager.favorites.removeAll()
+        }
 }
             
 enum ViewContext {
@@ -179,4 +198,8 @@ extension EnvironmentValues {
 
 #Preview {
     FavoritesView()
+}
+
+class SharedState: ObservableObject {
+    @Published var isTextExpanded3 = false
 }

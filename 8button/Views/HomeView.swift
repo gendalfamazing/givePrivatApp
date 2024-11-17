@@ -172,11 +172,11 @@ struct PrikazyPostanovleniyaFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "PrikazyPostanovleniyaFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Приказы и постановления" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "PrikazyPostanovleniyaFavorites", viewIdentifier: "PrikazyPostanovleniyaFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Приказы и постановления", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -188,7 +188,7 @@ struct PrikazyPostanovleniyaFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "PrikazyPostanovleniyaFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Приказы и постановления" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -320,11 +320,11 @@ struct CodesMkb10Favorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "CodesMkb10Favorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "МКБ-10" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "CodesMkb10Favorites", viewIdentifier: "CodesMkb10Favorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "МКБ-10", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -336,7 +336,7 @@ struct CodesMkb10Favorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "CodesMkb10Favorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "МКБ-10" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -467,11 +467,11 @@ struct ScalesTablesFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "ScalesTablesFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Шкалы и таблицы" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "ScalesTablesFavorites", viewIdentifier: "ScalesTablesFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Шкалы и таблицы", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -483,7 +483,7 @@ struct ScalesTablesFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "ScalesTablesFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Шкалы и таблицы" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -614,11 +614,11 @@ struct StudMaterialsFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "StudMaterialsFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Учебные материалы" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "StudMaterialsFavorites", viewIdentifier: "StudMaterialsFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Учебные материалы", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -630,7 +630,7 @@ struct StudMaterialsFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "StudMaterialsFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Учебные материалы" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -761,11 +761,11 @@ struct InfusionRateCalculatorViewFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "InfusionRateCalculatorViewFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Калькулятор Допамина" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "InfusionRateCalculatorViewFavorites", viewIdentifier: "InfusionRateCalculatorViewFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Калькулятор Допамина", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -777,7 +777,7 @@ struct InfusionRateCalculatorViewFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "InfusionRateCalculatorViewFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Калькулятор Допамина" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -908,11 +908,11 @@ struct AkusherskoePosobieFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "AkusherskoePosobieFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Акушерское пособие" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "AkusherskoePosobieFavorites", viewIdentifier: "AkusherskoePosobieFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Акушерское пособие", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -924,7 +924,7 @@ struct AkusherskoePosobieFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "AkusherskoePosobieFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Акушерское пособие" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -1055,11 +1055,11 @@ struct AtlasECGFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "AtlasECGFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Атлас ЭКГ" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "AtlasECGFavorites", viewIdentifier: "AtlasECGFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Атлас ЭКГ", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -1071,7 +1071,7 @@ struct AtlasECGFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "AtlasECGFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Атлас ЭКГ" }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -1202,11 +1202,11 @@ struct FastChildDosesFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "FastChildDosesFavorites" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Поиск детских дозировок" }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "FastChildDosesFavorites", viewIdentifier: "FastChildDosesFavorites", isExpandable: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Поиск детских дозировок", isExpanded: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -1218,7 +1218,7 @@ struct FastChildDosesFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "FastChildDosesFavorites" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Поиск детских дозировок" }) {
             favoritesManager.removeItem(item)
         }
     }
