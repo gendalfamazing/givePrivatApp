@@ -13,10 +13,12 @@ struct FavoriteItem: Identifiable, Codable, Equatable {
     let id: UUID
     var name: String
     var viewIdentifier: String
+    let isExpandable: Bool // Новое свойство
 
-    init(id: UUID = UUID(), name: String, viewIdentifier: String) {
+    init(id: UUID = UUID(), name: String, viewIdentifier: String, isExpandable: Bool) {
         self.id = id
         self.name = name
         self.viewIdentifier = viewIdentifier
+        self.isExpandable = isExpandable
     }
 }

@@ -46,13 +46,9 @@ struct PrikazyPostanovleniya: View {
                 }
                 
                 
-                NavigationLink(destination: Postanovlenie118View()) {
-                    MyViewBuilder(title: Text("""
-                        Постановление 
-                        МЗ РБ от 17.08.23
-                        № 118
-                        """), content: Text("«Клинические протоколы оказания экстренной и неотложной медицинской помощи пациентам детского возраста»")).buildTitle1BlueText()
-                }
+                Postanovlenie118ViewFavorites()
+                    .environment(\.viewContext, .nonFavorites)
+                
                 NavigationLink(destination: Postanovlenie99View()) {
                     MyViewBuilder(title: Text("""
                         Постановление 
@@ -149,4 +145,100 @@ struct PrikazyPostanovleniya: View {
 
 #Preview {
     PrikazyPostanovleniya()
+}
+
+
+struct Postanovlenie118ViewFavorites: View {
+    @AppStorage("fontSize") var fontSize: Double = 14.0
+    @EnvironmentObject var themeManager: ThemeManager
+    @Environment(\.sizeCategory) var sizeCategory
+    
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.viewContext) var context: ViewContext
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
+    var shouldShowOverlay: Bool {
+            switch context {
+            case .favorites:
+                // В избранном не показываем оверлей
+                return false
+            case .nonFavorites, .other:
+                // В других контекстах показываем оверлей
+                return true
+            }
+        }
+    var isInFavorites: Bool {
+        return favoritesManager.favorites.contains { $0.viewIdentifier == "Postanovlenie118ViewFavorites" }
+    }
+    
+    func addToFavorites() {
+        let newItem = FavoriteItem(name: "Postanovlenie118ViewFavorites", viewIdentifier: "Postanovlenie118ViewFavorites", isExpandable: false)
+        let success = favoritesManager.addItem(newItem)
+        if success {
+            // Элемент успешно добавлен
+        } else {
+            // Элемент уже существует
+            alertMessage = "Этот элемент уже добавлен в избранное"
+            showAlert = true
+        }
+    }
+    
+    func removeFromFavorites() {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Postanovlenie118ViewFavorites" }) {
+            favoritesManager.removeItem(item)
+        }
+    }
+    
+
+    var body: some View {
+        VStack {
+            NavigationLink(destination: Postanovlenie118View()) {
+                MyViewBuilder(title: Text("""
+                    Постановление 
+                    МЗ РБ от 17.08.23
+                    № 118
+                    """), content: Text("«Клинические протоколы оказания экстренной и неотложной медицинской помощи пациентам детского возраста»")).buildTitle1BlueText()
+            }
+        }
+        .padding(2)
+        .contextMenu {
+            switch context {
+            case .favorites:
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
+            case .nonFavorites:
+                if isInFavorites {
+                    Button(action: {
+                        removeFromFavorites()
+                    }) {
+                        Text("Удалить из избранного")
+                        Image(systemName: "star.slash")
+                    }
+                } else {
+                    Button(action: {
+                        addToFavorites()
+                    }) {
+                        Text("Добавить в избранное")
+                        Image(systemName: "star.fill")
+                    }
+                }
+            default:
+                EmptyView()
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertMessage))
+        }
+        
+    }
+    
 }

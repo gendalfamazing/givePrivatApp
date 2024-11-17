@@ -42,7 +42,7 @@ struct Geneva: View {
             }
         }
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "GENEVA", viewIdentifier: "Geneva")
+        let newItem = FavoriteItem(name: "GENEVA", viewIdentifier: "Geneva", isExpandable: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -173,12 +173,7 @@ struct Geneva: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
