@@ -14,11 +14,13 @@ struct FavoriteItem: Identifiable, Codable, Equatable {
     var name: String
     var viewIdentifier: String
     var isExpanded: Bool = false
+    var isNavigationLink: Bool = false
 
-    init(id: UUID = UUID(), name: String, viewIdentifier: String, isExpanded: Bool) {
+    init(id: UUID = UUID(), name: String, viewIdentifier: String, isExpanded: Bool, isNavigationLink: Bool) {
         self.id = id
         self.name = name
         self.viewIdentifier = viewIdentifier
         self.isExpanded = isExpanded
+        self.isNavigationLink = isNavigationLink
     }
 }

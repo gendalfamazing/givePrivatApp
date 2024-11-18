@@ -42,7 +42,7 @@ struct Geneva: View {
             }
         }
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Шкалы и таблицы", viewIdentifier: "GENEVA", isExpanded: false)
+        let newItem = FavoriteItem(name: "Шкалы и таблицы", viewIdentifier: "GENEVA", isExpanded: false, isNavigationLink: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен

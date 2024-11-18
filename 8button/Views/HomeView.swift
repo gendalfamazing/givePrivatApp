@@ -176,7 +176,7 @@ struct PrikazyPostanovleniyaFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Приказы и постановления", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Приказы и постановления", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -324,7 +324,7 @@ struct CodesMkb10Favorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "МКБ-10", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "МКБ-10", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -471,7 +471,7 @@ struct ScalesTablesFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Шкалы и таблицы", isExpanded: false)
+        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Шкалы и таблицы", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -618,7 +618,7 @@ struct StudMaterialsFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Учебные материалы", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Учебные материалы", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -765,7 +765,7 @@ struct InfusionRateCalculatorViewFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Калькулятор Допамина", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Калькулятор Допамина", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -912,7 +912,7 @@ struct AkusherskoePosobieFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Акушерское пособие", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Акушерское пособие", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -1059,7 +1059,7 @@ struct AtlasECGFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Атлас ЭКГ", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Атлас ЭКГ", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -1206,7 +1206,7 @@ struct FastChildDosesFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Поиск детских дозировок", isExpanded: false)
+        let newItem = FavoriteItem(name: "Главный экран", viewIdentifier: "Поиск детских дозировок", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен

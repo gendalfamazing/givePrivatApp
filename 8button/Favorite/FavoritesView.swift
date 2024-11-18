@@ -57,6 +57,9 @@ struct FavoritesView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(favoritesManager.favorites) { item in
                         ViewFactory.view(for: item.viewIdentifier)
+                            .frame(
+                                maxHeight: item.isNavigationLink ? 55 : .infinity
+                            )
                             .background(
                                 GeometryReader { geometry in
                                     Color.clear
@@ -64,7 +67,7 @@ struct FavoritesView: View {
                                             // Обновляем высоту только один раз после открытия представления
                                             DispatchQueue.main.async {
                                                 if itemHeights[item.id] == nil {
-                                                    itemHeights[item.id] = geometry.size.height - 5.5
+                                                    itemHeights[item.id] = geometry.size.height - 4
                                                 }
                                             }
                                         }
@@ -105,7 +108,11 @@ struct FavoritesView: View {
                                 )
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                 .cornerRadius(10)
-                                .padding(2.5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.shadowFavorites, lineWidth: 0.5)
+                                )
+                                .padding(2)
                                 .allowsHitTesting(false)
                                 .contextMenu {
                                     Button(action: {
@@ -118,6 +125,7 @@ struct FavoritesView: View {
                                 ,
                                 alignment: .top
                             )
+                            
                             .environment(\.viewContext, .favorites)
 //                            .contextMenu {
 //                                switch context {
@@ -203,3 +211,4 @@ extension EnvironmentValues {
 class SharedState: ObservableObject {
     @Published var isTextExpanded3 = false
 }
+

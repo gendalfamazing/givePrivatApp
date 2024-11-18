@@ -177,7 +177,7 @@ struct Postanovlenie118ViewFavorites: View {
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Постановление №118 (детские протоколы)", isExpanded: false)
+        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Постановление №118 (детские протоколы)", isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
