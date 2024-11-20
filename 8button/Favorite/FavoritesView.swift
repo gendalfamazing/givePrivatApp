@@ -25,9 +25,11 @@ struct ViewFactory {
             return AnyView(FastChildDosesFavorites())
         case "Постановление №118 (детские протоколы)":
             return AnyView(Postanovlenie118ViewFavorites())
-        case "Post1030Alg02":
+        case "Алгоритм 1. «Порядок оказания скорой (неотложной) медицинской помощи»":
+            return AnyView(Prikaz1030Alg1ViewFavorites())
+        case "Алгоритм 2. «Первичный осмотр пациента (ABCD)»":
             return AnyView(Prikaz1030Alg2View())
-        case "Post1030Alg03":
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
             return AnyView(Prikaz1030Alg3View())
         // Добавьте остальные представления
         default:
@@ -54,25 +56,15 @@ struct FavoritesView: View {
                         .background(.back)
                 }
 
-                VStack(alignment: .leading, spacing: 0) {
+                VStack(alignment: .leading, spacing: 5) {
                     ForEach(favoritesManager.favorites) { item in
                         ViewFactory.view(for: item.viewIdentifier)
                             .frame(
-                                maxHeight: item.isNavigationLink ? 55 : .infinity
+                                minHeight: itemHeights[item.id],
+                                maxHeight: item.isNavigationLink ? itemHeights[item.id] : .infinity
                             )
-                            .background(
-                                GeometryReader { geometry in
-                                    Color.clear
-                                        .onAppear {
-                                            // Обновляем высоту только один раз после открытия представления
-                                            DispatchQueue.main.async {
-                                                if itemHeights[item.id] == nil {
-                                                    itemHeights[item.id] = geometry.size.height - 4
-                                                }
-                                            }
-                                        }
-                                }
-                            )
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            
                             .overlay(
                                 HStack (spacing: 0){
                                     VStack (alignment: .leading){
@@ -80,39 +72,53 @@ struct FavoritesView: View {
                                             .padding(.leading, 7)
                                             .font(.caption2)
                                             .opacity(0.65)
-                                            
+                                        
                                         Text(item.viewIdentifier)
                                             .padding(.leading, 7)
+                                            .multilineTextAlignment(.leading)
                                             .fontWeight(.semibold)
                                             .font(.subheadline)
                                     }
-                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    .frame(
-                                        height: itemHeights[item.id]
-                                    )
-                                    .background(item.isExpanded ? Color.toggle : Color.blueButton)
-                                    
-                                    VStack {
-                                        
+                                    Spacer()
+                                    Spacer()
+                                    if item.isNavigationLink {
+                                        Image(systemName: ("chevron.right"))
+                                            .opacity(0.3)
+                                            .padding(.trailing, 15)
+                                            .padding(.leading, 10)
+                                    } else {
+                                        Image(systemName: ("chevron.down"))
+                                            .rotationEffect(.degrees(item.isExpanded ? -180 : 0))
+                                            .opacity(0.3)
+                                            .padding(.trailing, 7)
                                     }
-                                    .frame(
-                                        height: itemHeights[item.id]
-                                    )
-                                    .frame(width: 35)
-                                    .background(Color.clear)
-                                    
                                     
                                 }
+                                .padding(10.0)
                                 .frame(
-                                    height: itemHeights[item.id]
+                                    maxHeight: itemHeights[item.id]
                                 )
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .background(item.isNavigationLink ? Color.blueButton : item.isExpanded ? Color.toggle : Color.blueButton)
+                                .background(
+                                    GeometryReader { geometry in
+                                        Color.clear
+                                            .onAppear {
+                                                // Обновляем высоту только один раз после открытия представления
+                                                DispatchQueue.main.async {
+                                                    if itemHeights[item.id] == nil {
+                                                        itemHeights[item.id] = geometry.size.height
+                                                    }
+                                                }
+                                            }
+                                    }
+                                )
+                                
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.shadowFavorites, lineWidth: 0.5)
                                 )
-                                .padding(2)
                                 .allowsHitTesting(false)
                                 .contextMenu {
                                     Button(action: {
@@ -150,7 +156,7 @@ struct FavoritesView: View {
                     }
                 }
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal, 10)
             .padding(.bottom, 55)
             .navigationBarTitle("", displayMode: .inline)
             .toolbar {

@@ -10,7 +10,8 @@ import SwiftUI
 struct PrikazyPostanovleniya: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.viewContext) var context: ViewContext
     @StateObject private var viewModel = SearchableViewModelAdult()
     @State private var isDataLoaded = false
     
@@ -30,7 +31,7 @@ struct PrikazyPostanovleniya: View {
                 }
                 
                 if isDataLoaded {
-                    NavigationLink(destination: SearchAdult(viewModel: viewModel)) {
+                    NavigationLink(destination: SearchAdult(viewModel: viewModel).environmentObject(FavoritesManager.shared)) {
                         MyViewBuilder(
                             title: Text("""
                                             Приказ МЗ РБ 
@@ -41,6 +42,7 @@ struct PrikazyPostanovleniya: View {
                         )
                         .buildTitle1BlueText()
                     }
+                    .environmentObject(FavoritesManager.shared)
                 } else {
                     ProgressView("Загрузка данных...")
                 }

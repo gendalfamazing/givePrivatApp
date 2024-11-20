@@ -16,6 +16,7 @@ struct _buttonApp: App {
     @StateObject var themeManager = ThemeManager()
     @AppStorage("fontSize") var fontSize: Double = 14.0
     
+    
     init() {
         let entitlementManager = EntitlementManager()
         let purchaseManager = PurchaseManager(entitlementManager: entitlementManager)

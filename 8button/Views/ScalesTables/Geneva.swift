@@ -77,6 +77,9 @@ struct Geneva: View {
                     .onTapGesture {
                         withAnimation(.snappy) {
                             isTextExpanded3.toggle()
+                            if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == "GENEVA" }) {
+                                favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                            }
                         }
                     }
                 VStack {
@@ -159,6 +162,9 @@ struct Geneva: View {
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 isTextExpanded3.toggle()
+                                if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == "GENEVA" }) {
+                                    favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                                }
                             }
                         }
                     }

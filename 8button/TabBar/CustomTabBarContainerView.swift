@@ -18,6 +18,9 @@ struct CustomTabBarContainerView: View {
 
     @State private var isResetting: Bool = false
 
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.viewContext) var context: ViewContext
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             ZStack {
@@ -102,6 +105,7 @@ struct CustomTabBarContainerView: View {
             HomeView()
         case .adult:
             SearchAdult()
+                .environmentObject(favoritesManager)
         case .child:
             Postanovlenie118ViewGear()
         case .organizer:
