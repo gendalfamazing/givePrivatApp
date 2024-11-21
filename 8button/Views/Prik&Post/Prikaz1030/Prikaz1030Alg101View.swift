@@ -245,12 +245,7 @@ struct Prikaz1030Alg1ViewFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {

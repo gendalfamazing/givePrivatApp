@@ -28,9 +28,9 @@ struct ViewFactory {
         case "Алгоритм 1. «Порядок оказания скорой (неотложной) медицинской помощи»":
             return AnyView(Prikaz1030Alg1ViewFavorites())
         case "Алгоритм 2. «Первичный осмотр пациента (ABCD)»":
-            return AnyView(Prikaz1030Alg2View())
+            return AnyView(Prikaz1030Alg2ViewFavorites())
         case "Алгоритм 3. «Острая дыхательная недостаточность»":
-            return AnyView(Prikaz1030Alg3View())
+            return AnyView(Prikaz1030Alg3ViewFavorites())
         // Добавьте остальные представления
         default:
             return AnyView(Text("Неизвестное представление"))

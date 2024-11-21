@@ -261,12 +261,7 @@ struct PrikazyPostanovleniyaFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -408,12 +403,7 @@ struct CodesMkb10Favorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -555,12 +545,7 @@ struct ScalesTablesFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -702,12 +687,7 @@ struct StudMaterialsFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -849,12 +829,7 @@ struct InfusionRateCalculatorViewFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -996,12 +971,7 @@ struct AkusherskoePosobieFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -1143,12 +1113,7 @@ struct AtlasECGFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
@@ -1290,12 +1255,7 @@ struct FastChildDosesFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {

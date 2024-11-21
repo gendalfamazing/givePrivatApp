@@ -211,12 +211,7 @@ struct Postanovlenie118ViewFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                Button(action: {
-                    removeFromFavorites()
-                }) {
-                    Text("Удалить из избранного")
-                    Image(systemName: "star.slash")
-                }
+                EmptyView()
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {
