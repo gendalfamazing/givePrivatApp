@@ -277,20 +277,15 @@ class MyViewBuilder: ViewBuilder1 {
                     Spacer()
                     Image(systemName: ("chevron.down"))
                         .rotationEffect(.degrees(isTextExpanded ? -180 : 0))
-//                        .resizable()
-//                        .frame(width: 20, height: 20)
                         .opacity(0.3)
-//                        .multilineTextAlignment(.center)
                         .padding(.trailing, 7)
                 }
                 .padding(7.0)
-//                .lineLimit(2)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(minHeight: 49)
                 .frame(minWidth: 49)
                 .modifier(ThemeBlueColorModifier())
-//                .background(Color.blueButton)
                 .background(isTextExpanded ? Color.toggle : Color.blueButton)
                 .background(Color.grayButton)
                 .cornerRadius(10)
@@ -314,7 +309,7 @@ class MyViewBuilder: ViewBuilder1 {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
+                        .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                 )
                 
 //
@@ -1196,13 +1191,74 @@ class MyViewBuilder: ViewBuilder1 {
         .frame(minHeight: 50)
         .modifier(ThemeTitleBlueColorModifier())
         .cornerRadius(10)
+        
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
         )
         
     }
-    
+    func buildTitle1BlueTextFavorites(isInFavorites: Bool, shouldShowOverlay: Bool) -> some View {
+        
+        return HStack {
+            HStack (alignment: .center) {
+                title
+                    .frame(maxWidth: 125)
+                    .frame(maxHeight: .greatestFiniteMagnitude)
+                    .font(.caption)
+                    .padding(5.0)
+                    .background(Color.titleNumber)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                    )
+                    .foregroundColor(Color.titleNumberForeground)
+                    .bold()
+            
+                content
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal, 3.0)
+                    .font(.footnote)
+                Spacer()
+                Spacer()
+                Image(systemName: ("chevron.right"))
+                    .opacity(0.3)
+                    .padding(.trailing, 7)
+                
+            }
+            Spacer()
+        }
+        .padding(5.0)
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+        .fixedSize(horizontal: false, vertical: true)
+        .frame(minHeight: 50)
+        .modifier(ThemeTitleBlueColorModifier())
+        .cornerRadius(10)
+        .overlay(
+            HStack {
+                Spacer()
+                VStack {
+                    if shouldShowOverlay {
+                        Image(systemName: "star.fill")
+                            .resizable()
+                            .frame(width: 14, height: 14)
+                            .foregroundColor(isInFavorites ? .favoriteStar : Color.clear)
+                            .rotationEffect(.degrees(isInFavorites ? -360 : 0))
+                            .animation(.snappy, value: isInFavorites)
+                            .padding(.vertical, 3)
+                            .padding(.horizontal, 3)
+                    }
+                    Spacer()
+                }
+            }
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+        )
+        
+    }
     struct BlueText: View {
         private let text: Text = Text("")
         var body: some View {

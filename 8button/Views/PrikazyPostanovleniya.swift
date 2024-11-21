@@ -204,7 +204,7 @@ struct Postanovlenie118ViewFavorites: View {
                     Постановление 
                     МЗ РБ от 17.08.23
                     № 118
-                    """), content: Text("«Клинические протоколы оказания экстренной и неотложной медицинской помощи пациентам детского возраста»")).buildTitle1BlueText()
+                    """), content: Text("«Клинические протоколы оказания экстренной и неотложной медицинской помощи пациентам детского возраста»")).buildTitle1BlueTextFavorites(isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay)
             }
         }
         .padding(2)

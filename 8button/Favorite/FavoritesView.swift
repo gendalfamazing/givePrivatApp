@@ -84,7 +84,7 @@ struct FavoritesView: View {
                                     if item.isNavigationLink {
                                         Image(systemName: ("chevron.right"))
                                             .opacity(0.3)
-                                            .padding(.trailing, 15)
+                                            .padding(.trailing, 10)
                                             .padding(.leading, 10)
                                     } else {
                                         Image(systemName: ("chevron.down"))
