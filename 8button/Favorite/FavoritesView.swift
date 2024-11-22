@@ -31,6 +31,80 @@ struct ViewFactory {
             return AnyView(Prikaz1030Alg2ViewFavorites())
         case "Алгоритм 3. «Острая дыхательная недостаточность»":
             return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 4. «Внезапная смерть, сердечно-легочная реанимация»":
+            return AnyView(Prikaz1030Alg4ViewFavorites())
+        case "Алгоритм 5. «Гиповолемический шок»":
+            return AnyView(Prikaz1030Alg5ViewFavorites())
+        case "Алгоритм 6. «Фибрилляция желудочков (ФЖ), желудочковая тахикардия (ЖТ) с острой сердечной недостаточностью»":
+            return AnyView(Prikaz1030Alg6ViewFavorites())
+        case "Алгоритм 7. «Асистолия»":
+            return AnyView(Prikaz1030Alg7ViewFavorites())
+        case "Алгоритм 8. «Электромеханическая диссоциация (нарушение насосной функции при сохранении электрической активности)»":
+            return AnyView(Prikaz1030Alg8ViewFavorites())
+        case "Алгоритм 9. «Постреанимационная поддержка»":
+            return AnyView(Prikaz1030Alg9ViewFavorites())
+        case "Алгоритм 10. «Пароксизмальная тахикардия с узким комплексом QRS»":
+            return AnyView(Prikaz1030Alg10ViewFavorites())
+        case "Алгоритм 11. «Пароксизмальная тахикардия с широким комплексом QRS»":
+            return AnyView(Prikaz1030Alg11ViewFavorites())
+        case "Алгоритм 12. «Желудочковая экстрасистолия (злокачественная)»":
+            return AnyView(Prikaz1030Alg12ViewFavorites())
+        case "Алгоритм 13. «Брадиаритмии (синусовая брадикардия, AV-блокада II степени, полная AV-блокада, синдром слабости синусового узла)»":
+            return AnyView(Prikaz1030Alg13ViewFavorites())
+        case "Алгоритм 14. «Пароксизмальная мерцательная аритмия»":
+            return AnyView(Prikaz1030Alg14ViewFavorites())
+        case "Алгоритм 15. «Острый коронарный синдром»":
+            return AnyView(Prikaz1030Alg15ViewFavorites())
+        case "Алгоритм 16. «Кардиогенный шок»":
+            return AnyView(Prikaz1030Alg16ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
+        case "Алгоритм 3. «Острая дыхательная недостаточность»":
+            return AnyView(Prikaz1030Alg3ViewFavorites())
         // Добавьте остальные представления
         default:
             return AnyView(Text("Неизвестное представление"))
