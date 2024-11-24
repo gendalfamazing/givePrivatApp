@@ -342,28 +342,29 @@ struct StoreKit8: View {
                                 Button(action: {
                                     trialManager.activateTrial()
                                 }) {
-                                    VStack (alignment: .center) {
-                                    Text("Начать 14-дневный пробный период")
+                                    VStack(alignment: .center) {
+                                        Text("Начать 14-дневный пробный период")
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal, 3.0)
                                             .font(.subheadline)
-                                    Text("без активации подписки")
+                                        Text("без активации подписки")
                                             .multilineTextAlignment(.center)
                                             .padding(.horizontal, 3.0)
                                             .font(.footnote)
-                                            .foregroundColor(Color.gray)
-                                }
-                                        .padding(7.0)
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                                        .fixedSize(horizontal: false, vertical: true)
-                                        .fontWeight(.semibold)
-                                        .frame(minHeight: 49)
-                                        .modifier(ThemeBlueColorModifier())
-                                        .background(Color.blueButton)
-                                        .cornerRadius(10)
-                                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                    }
+                                    .padding(7.0)
+                                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .fontWeight(.semibold)
+                                    .frame(minHeight: 49)
+                                    .modifier(ThemeBlueColorModifier())
+                                    .background(Color.buttonTrialPeriod)
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
-                                        )
+                                    )
+                                    .modifier(HeartbeatEffect())
                                 }
                             } else {
                                 VStack (alignment: .center) {
@@ -459,7 +460,7 @@ struct StoreKit8: View {
                             }
 
                             Text("""
-                                После бесплатного пробного периода (14 дней), подписка автоматически продлевается по указанной выше цене и сроку действия, если ее не отменить по крайней мере за 24 часа до окончания текущего периода. Оплата будет списана с вашего Apple ID при подтверждении покупки. Плата за продление будет списана с вашего счета в течение 24 часов до окончания текущего периода. Вы можете управлять своими подписками и отменять их, перейдя в настройки учетной записи в App Store после покупки. Неиспользованная часть бесплатного пробного периода будет аннулирована при покупке пользователем подписки на данное приложение.
+                                При выборе подписки, после бесплатного пробного периода (3 дня), подписка автоматически продлевается по указанной выше цене и сроку действия, если ее не отменить по крайней мере за 24 часа до окончания текущего периода. Оплата будет списана с вашего Apple ID при подтверждении покупки. Плата за продление будет списана с вашего счета в течение 24 часов до окончания текущего периода. Вы можете управлять своими подписками и отменять их, перейдя в настройки учетной записи в App Store после покупки. Неиспользованная часть бесплатного пробного периода будет аннулирована при покупке пользователем подписки на данное приложение.
                                 """)
                                 .padding(.leading, 10.0)
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
@@ -513,12 +514,20 @@ import SwiftUI
 struct ProductButton: View {
     let product: Product
     @EnvironmentObject private var purchaseManager: PurchaseManager
-
+    @EnvironmentObject private var trialManager: TrialManager
     var body: some View {
         Button {
             purchaseProduct()
         } label: {
-            ProductButtonLabel(product: product)
+            if product.displayName.contains("Premium") && trialManager.hasUsedTrial {
+                ProductButtonLabel(product: product)
+                    .modifier(ShimmerEffect())
+            } else if product.displayName.contains("Premium") && !trialManager.hasUsedTrial{
+                ProductButtonLabel(product: product)
+            } else {
+                ProductButtonLabel(product: product)
+            }
+            
         }
     }
 
@@ -637,13 +646,7 @@ struct StoreKit10: View {
                 
                     ScrollView {
                         VStack {
-                            Image("LaunchImage1")
-                                .resizable()
-                                .frame(maxWidth: 111)
-                                .frame(maxHeight: 150)
-                                .scaledToFit()
-                                .clipShape(Rectangle())
-
+                            
                             VStack(spacing: 1) {
                                 Text("""
                                     **AmbulanceDocs - справочник для работников СМП Республики Беларусь**.
@@ -746,7 +749,7 @@ struct StoreKit10: View {
                             }
 
                             Text("""
-                                После бесплатного пробного периода (14 дней), подписка автоматически продлевается по указанной выше цене и сроку действия, если ее не отменить по крайней мере за 24 часа до окончания текущего периода. Оплата будет списана с вашего Apple ID при подтверждении покупки. Плата за продление будет списана с вашего счета в течение 24 часов до окончания текущего периода. Вы можете управлять своими подписками и отменять их, перейдя в настройки учетной записи в App Store после покупки. Неиспользованная часть бесплатного пробного периода будет аннулирована при покупке пользователем подписки на данное приложение.
+                                При выборе подписки, после бесплатного пробного периода (3 дня), подписка автоматически продлевается по указанной выше цене и сроку действия, если ее не отменить по крайней мере за 24 часа до окончания текущего периода. Оплата будет списана с вашего Apple ID при подтверждении покупки. Плата за продление будет списана с вашего счета в течение 24 часов до окончания текущего периода. Вы можете управлять своими подписками и отменять их, перейдя в настройки учетной записи в App Store после покупки. Неиспользованная часть бесплатного пробного периода будет аннулирована при покупке пользователем подписки на данное приложение.
                                 """)
                                 .padding(.leading, 10.0)
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)

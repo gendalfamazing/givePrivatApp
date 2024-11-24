@@ -202,7 +202,33 @@ struct AboutApp: View {
                                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                             )
                         }
-                        
+                        Button(action: {
+                            trialManager.activateTrial()
+                        }) {
+                            VStack(alignment: .center) {
+                                Text("Начать 14-дневный пробный период")
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 3.0)
+                                    .font(.subheadline)
+                                Text("без активации подписки")
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 3.0)
+                                    .font(.footnote)
+                            }
+                            .padding(7.0)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .fontWeight(.semibold)
+                            .frame(minHeight: 49)
+                            .modifier(ThemeBlueColorModifier())
+                            .background(Color.buttonTrialPeriod)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
+                            )
+                            .modifier(HeartbeatEffect())
+                        }
                         if trialManager.isTrialActive && !entitlementManager.hasPro {
                             NavigationLink (destination: StoreKit10()) {
                                 VStack (alignment: .center) {
@@ -580,5 +606,82 @@ struct AboutAppPersonal: View {
             .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
             )
+    }
+}
+
+struct ShimmerEffect: ViewModifier {
+    @State private var phase: CGFloat = -250
+
+    func body(content: Content) -> some View {
+        content
+            .overlay(
+                LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white.opacity(0.6), Color.clear]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                    .mask(
+                        Rectangle()
+                            .fill(Color.white)
+                            .rotationEffect(Angle(degrees: 45))
+                            .offset(x: phase)
+                    )
+            )
+            .onAppear {
+                withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
+                    self.phase = UIScreen.main.bounds.width + 200
+                }
+            }
+    }
+}
+
+struct PulsatingEffect: ViewModifier {
+    @State private var scale: CGFloat = 1.0
+
+    func body(content: Content) -> some View {
+        content
+            .scaleEffect(scale)
+            .onAppear {
+                let animation = Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true)
+                withAnimation(animation) {
+                    self.scale = 1.05
+                }
+            }
+    }
+}
+struct HeartbeatEffect: ViewModifier {
+    @State private var scale: CGFloat = 1.0
+
+    func body(content: Content) -> some View {
+        content
+            .scaleEffect(scale)
+            .onAppear {
+                self.animateHeartbeat()
+            }
+    }
+
+    func animateHeartbeat() {
+        // Первый удар
+        withAnimation(Animation.easeIn(duration: 0.1)) {
+            self.scale = 1.03
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            withAnimation(Animation.easeOut(duration: 0.1)) {
+                self.scale = 1.0
+            }
+            // Второй удар
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                withAnimation(Animation.easeIn(duration: 0.1)) {
+                    self.scale = 1.03
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    withAnimation(Animation.easeOut(duration: 0.1)) {
+                        self.scale = 1.0
+                    }
+                    // Пауза перед следующим циклом
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.animateHeartbeat()
+                    }
+                }
+            }
+        }
     }
 }
