@@ -202,33 +202,7 @@ struct AboutApp: View {
                                 .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
                             )
                         }
-                        Button(action: {
-                            trialManager.activateTrial()
-                        }) {
-                            VStack(alignment: .center) {
-                                Text("Начать 14-дневный пробный период")
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal, 3.0)
-                                    .font(.subheadline)
-                                Text("без активации подписки")
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal, 3.0)
-                                    .font(.footnote)
-                            }
-                            .padding(7.0)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .fontWeight(.semibold)
-                            .frame(minHeight: 49)
-                            .modifier(ThemeBlueColorModifier())
-                            .background(Color.buttonTrialPeriod)
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5)
-                            )
-                            .modifier(HeartbeatEffect())
-                        }
+                        
                         if trialManager.isTrialActive && !entitlementManager.hasPro {
                             NavigationLink (destination: StoreKit10()) {
                                 VStack (alignment: .center) {
