@@ -23,13 +23,17 @@ struct Geneva: View {
     @State private var displayedPoints = 0 // Для анимации
     @State private var isTextExpanded3 = false
     @Environment(\.colorScheme) private var colorScheme
-    @EnvironmentObject var favoritesManager: FavoritesManager
     
     @Environment(\.viewContext) var context: ViewContext
+    @EnvironmentObject var favoritesManager: FavoritesManager
     @State private var showAlert = false
     @State private var alertMessage = ""
+    
+    private var allViewIdentifiersTitle: String = "Шкалы и таблицы"
+    private var allViewIdentifiers: String = "GENEVA"
+    
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "GENEVA" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == allViewIdentifiers }
     }
     var shouldShowOverlay: Bool {
             switch context {
@@ -42,7 +46,7 @@ struct Geneva: View {
             }
         }
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Шкалы и таблицы", viewIdentifier: "GENEVA", isExpanded: false, isNavigationLink: false)
+        let newItem = FavoriteItem(name: allViewIdentifiersTitle, viewIdentifier: allViewIdentifiers, isExpanded: false, isNavigationLink: false)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -54,18 +58,18 @@ struct Geneva: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "GENEVA" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == allViewIdentifiers }) {
             favoritesManager.removeItem(item)
         }
     }
     var body: some View {
         VStack {
-            MyViewBuilder(title: Text("GENEVA"), content: Text("Оценка вероятности развития ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isTextExpanded3, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay)
+            MyViewBuilder(title: Text("GENEVA"), content: Text("Оценка вероятности развития ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isTextExpanded3, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
                 
                 .onTapGesture {
                     withAnimation(.snappy) {
                         isTextExpanded3.toggle()
-                        if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == "GENEVA" }) {
+                        if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
                             favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
                         }
                     }
@@ -77,7 +81,7 @@ struct Geneva: View {
                     .onTapGesture {
                         withAnimation(.snappy) {
                             isTextExpanded3.toggle()
-                            if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == "GENEVA" }) {
+                            if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
                                 favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
                             }
                         }
@@ -162,7 +166,7 @@ struct Geneva: View {
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 isTextExpanded3.toggle()
-                                if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == "GENEVA" }) {
+                                if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
                                     favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
                                 }
                             }
@@ -182,7 +186,12 @@ struct Geneva: View {
         .contextMenu {
             switch context {
             case .favorites:
-                EmptyView()
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {

@@ -25,12 +25,55 @@ struct PESI: View {
     @State private var isTextExpanded = false
     @State private var age = ""
     @FocusState private var isAgeFieldFocused: Bool
+    
+    @Environment(\.viewContext) var context: ViewContext
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
+    private var allViewIdentifiersTitle: String = "Шкалы и таблицы"
+    private var allViewIdentifiers: String = "PESI"
+    
+    var isInFavorites: Bool {
+        return favoritesManager.favorites.contains { $0.viewIdentifier == allViewIdentifiers }
+    }
+    var shouldShowOverlay: Bool {
+            switch context {
+            case .favorites:
+                // В избранном не показываем оверлей
+                return false
+            case .nonFavorites, .other:
+                // В других контекстах показываем оверлей
+                return true
+            }
+        }
+    func addToFavorites() {
+        let newItem = FavoriteItem(name: allViewIdentifiersTitle, viewIdentifier: allViewIdentifiers, isExpanded: false, isNavigationLink: false)
+        let success = favoritesManager.addItem(newItem)
+        if success {
+            // Элемент успешно добавлен
+        } else {
+            // Элемент уже существует
+            alertMessage = "Этот элемент уже добавлен в избранное"
+            showAlert = true
+        }
+    }
+    
+    func removeFromFavorites() {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == allViewIdentifiers }) {
+            favoritesManager.removeItem(item)
+        }
+    }
+    
     var body: some View {
         VStack {
-            MyViewBuilder(title: Text("PESI"), content: Text("Оценка прогноза 30-дневного летального исхода больных с ТЭЛА")).buildBlue591TextScales(isTextExpanded: isTextExpanded)
+            MyViewBuilder(title: Text("PESI"), content: Text("Оценка прогноза 30-дневного летального исхода больных с ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isTextExpanded, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
                 .onTapGesture {
                     withAnimation(.snappy) {
                         isTextExpanded.toggle()
+                        if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
+                            favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                        }
                     }
                 }
             if isTextExpanded {
@@ -40,6 +83,9 @@ struct PESI: View {
                     .onTapGesture {
                         withAnimation(.snappy) {
                             isTextExpanded.toggle()
+                            if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
+                                favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                            }
                         }
                     }
                 VStack  {
@@ -158,6 +204,9 @@ struct PESI: View {
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 isTextExpanded.toggle()
+                                if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
+                                    favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                                }
                             }
                         }
                         .frame(maxWidth: .infinity)
@@ -171,6 +220,37 @@ struct PESI: View {
                     
                 }
             }
+        }
+        
+        .padding(2)
+        .contextMenu {
+            switch context {
+            case .favorites:
+                EmptyView()
+            case .nonFavorites:
+                if isInFavorites {
+                    Button(action: {
+                        removeFromFavorites()
+                    }) {
+                        Text("Удалить из избранного")
+                        Image(systemName: "star.slash")
+                    }
+                } else {
+                    Button(action: {
+                        addToFavorites()
+                    }) {
+                        Text("Добавить в избранное")
+                        Image(systemName: "star.fill")
+                    }
+                }
+                
+                
+            default:
+                EmptyView()
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertMessage))
         }
     }
     private func animatePointsChange() {

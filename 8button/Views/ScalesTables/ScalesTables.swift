@@ -540,6 +540,8 @@ struct Scales: View {
                 .environment(\.viewContext, .nonFavorites)
                 
             PESI()
+                .environmentObject(favoritesManager)
+                .environment(\.viewContext, .nonFavorites)
             MyViewBuilder(title: Text("GRACE"), content: Text("Расчет риска у больных с ОКС без подъема ST")).buildBlue591TextScales(isTextExpanded: isTextExpanded3)
                 .onTapGesture {
                     withAnimation (.snappy) {
