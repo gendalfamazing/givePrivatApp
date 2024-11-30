@@ -146,6 +146,9 @@ struct Prikaz1030Alg1ViewFavorites: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     
+    private var allViewIdentifiersTitle: String = "Приказ №1030"
+    private var allViewIdentifiers: String = "Алгоритм 1. «Порядок оказания скорой (неотложной) медицинской помощи»"
+    
     var shouldShowOverlay: Bool {
             switch context {
             case .favorites:
@@ -157,11 +160,11 @@ struct Prikaz1030Alg1ViewFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "Алгоритм 1. «Порядок оказания скорой (неотложной) медицинской помощи»" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == allViewIdentifiers }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Приказ №1030", viewIdentifier: "Алгоритм 1. «Порядок оказания скорой (неотложной) медицинской помощи»", isExpanded: false, isNavigationLink: true)
+        let newItem = FavoriteItem(name: allViewIdentifiersTitle, viewIdentifier: allViewIdentifiers, isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -173,7 +176,7 @@ struct Prikaz1030Alg1ViewFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Алгоритм 1. «Порядок оказания скорой (неотложной) медицинской помощи»" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == allViewIdentifiers }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -182,32 +185,23 @@ struct Prikaz1030Alg1ViewFavorites: View {
     var body: some View {
         VStack {
             NavigationLink(destination: Prikaz1030Alg1View()) {
-                HStack {
-                    Image(systemName: "doc.text.magnifyingglass")
-                        .resizable()
-                        .frame(width: 18, height: 24)
-                    //                                .padding(.horizontal)
-                        .font(.caption2)
-                        .padding(.horizontal, 11.0)
-                        .padding(.vertical, 8.0)
-                        .background(Color.titleNumber)
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.shadowGrayRectangle.opacity(0.35), lineWidth: 0.5) // Устанавливаем цвет и ширину границы
-                        )
-                        .foregroundColor(Color.titleNumberForeground)
+                HStack(spacing: 0) {
+                    VStack(alignment: .leading) {
+                        Text(allViewIdentifiersTitle)
+                            .padding(.leading, 7)
+                            .font(.caption2)
+                            .opacity(0.65)
+                        
+                        Text(allViewIdentifiers)
+                            .padding(.leading, 7)
+                            .multilineTextAlignment(.leading)
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                    }
                     Spacer()
-                    Spacer()
-                    Text("Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030Приказ 1030")
-                        .padding(.horizontal, 3.0)
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                    Spacer()
-                    Spacer()
-                    Image(systemName: ("chevron.right"))
+                    Image(systemName: "chevron.right")
                         .opacity(0.3)
-                        .padding(.trailing, 15)
+                        .padding(.trailing, 10)
                         .padding(.leading, 10)
                 }
                 .padding(5.0)
@@ -245,7 +239,12 @@ struct Prikaz1030Alg1ViewFavorites: View {
         .contextMenu {
             switch context {
             case .favorites:
-                EmptyView()
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {

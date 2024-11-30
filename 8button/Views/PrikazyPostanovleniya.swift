@@ -164,6 +164,9 @@ struct Postanovlenie118ViewFavorites: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     
+    private var allViewIdentifiersTitle: String = "Приказы и постановления"
+    private var allViewIdentifiers: String = "Постановление №118 (детские протоколы)"
+    
     var shouldShowOverlay: Bool {
             switch context {
             case .favorites:
@@ -175,11 +178,11 @@ struct Postanovlenie118ViewFavorites: View {
             }
         }
     var isInFavorites: Bool {
-        return favoritesManager.favorites.contains { $0.viewIdentifier == "Постановление №118 (детские протоколы)" }
+        return favoritesManager.favorites.contains { $0.viewIdentifier == allViewIdentifiers }
     }
     
     func addToFavorites() {
-        let newItem = FavoriteItem(name: "Приказы и постановления", viewIdentifier: "Постановление №118 (детские протоколы)", isExpanded: false, isNavigationLink: true)
+        let newItem = FavoriteItem(name: allViewIdentifiersTitle, viewIdentifier: allViewIdentifiers, isExpanded: false, isNavigationLink: true)
         let success = favoritesManager.addItem(newItem)
         if success {
             // Элемент успешно добавлен
@@ -191,7 +194,7 @@ struct Postanovlenie118ViewFavorites: View {
     }
     
     func removeFromFavorites() {
-        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == "Постановление №118 (детские протоколы)" }) {
+        if let item = favoritesManager.favorites.first(where: { $0.viewIdentifier == allViewIdentifiers }) {
             favoritesManager.removeItem(item)
         }
     }
@@ -204,14 +207,19 @@ struct Postanovlenie118ViewFavorites: View {
                     Постановление 
                     МЗ РБ от 17.08.23
                     № 118
-                    """), content: Text("«Клинические протоколы оказания экстренной и неотложной медицинской помощи пациентам детского возраста»")).buildTitle1BlueTextFavorites(isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay)
+                    """), content: Text("«Клинические протоколы оказания экстренной и неотложной медицинской помощи пациентам детского возраста»")).buildTitle1BlueTextFavorites(isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
             }
         }
         .padding(2)
         .contextMenu {
             switch context {
             case .favorites:
-                EmptyView()
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {

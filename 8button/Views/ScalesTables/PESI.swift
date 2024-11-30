@@ -226,7 +226,12 @@ struct PESI: View {
         .contextMenu {
             switch context {
             case .favorites:
-                EmptyView()
+                Button(action: {
+                    removeFromFavorites()
+                }) {
+                    Text("Удалить из избранного")
+                    Image(systemName: "star.slash")
+                }
             case .nonFavorites:
                 if isInFavorites {
                     Button(action: {

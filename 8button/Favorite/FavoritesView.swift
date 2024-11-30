@@ -21,77 +21,11 @@ struct FavoritesView: View {
                         .background(.back)
                 }
 
-                VStack(alignment: .leading, spacing: 5) {
+                VStack(alignment: .leading, spacing: 1) {
                     ForEach(favoritesManager.favorites) { item in
                         ViewFactory.view(for: item.viewIdentifier)
-                            .frame(
-                                minHeight: itemHeights[item.id],
-                                maxHeight: item.isNavigationLink ? itemHeights[item.id] : .infinity
-                            )
+                            .frame(maxHeight: .infinity)
                             .frame(minWidth: 0, maxWidth: .infinity)
-                            .overlay(
-                                Group {
-                                    if item.isNavigationLink {
-                                        // Оверлей для элементов с isNavigationLink == true
-                                        HStack(spacing: 0) {
-                                            VStack(alignment: .leading) {
-                                                Text(item.name)
-                                                    .padding(.leading, 7)
-                                                    .font(.caption2)
-                                                    .opacity(0.65)
-                                                
-                                                Text(item.viewIdentifier)
-                                                    .padding(.leading, 7)
-                                                    .multilineTextAlignment(.leading)
-                                                    .fontWeight(.semibold)
-                                                    .font(.subheadline)
-                                            }
-                                            Spacer()
-                                            Image(systemName: "chevron.right")
-                                                .opacity(0.3)
-                                                .padding(.trailing, 10)
-                                                .padding(.leading, 10)
-                                        }
-                                        .padding(10.0)
-                                        .frame(
-                                            maxHeight: itemHeights[item.id]
-                                        )
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                        .background(Color.blueButton)
-                                        .background(
-                                            GeometryReader { geometry in
-                                                Color.clear
-                                                    .onAppear {
-                                                        // Обновляем высоту только один раз после открытия представления
-                                                        DispatchQueue.main.async {
-                                                            if itemHeights[item.id] == nil {
-                                                                itemHeights[item.id] = geometry.size.height
-                                                            }
-                                                        }
-                                                    }
-                                            }
-                                        )
-                                        .cornerRadius(10)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(Color.shadowFavorites, lineWidth: 0.5)
-                                        )
-                                        .allowsHitTesting(false)
-                                        .contextMenu {
-                                            Button(action: {
-                                                favoritesManager.removeItem(item)
-                                            }) {
-                                                Text("Удалить из избранного")
-                                                Image(systemName: "star.slash")
-                                            }
-                                        }
-                                    } else {
-                                        // Пустой вид, если оверлей не нужен
-                                        EmptyView()
-                                    }
-                                },
-                                alignment: .top
-                            )
                             .environment(\.viewContext, .favorites)
                     }
                 }
