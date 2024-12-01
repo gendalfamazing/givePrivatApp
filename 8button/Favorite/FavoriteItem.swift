@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct FavoriteItem: Identifiable, Codable, Equatable {
+struct FavoriteItem: Identifiable, Codable, Equatable, Hashable {
     let id: UUID
     var name: String
     var viewIdentifier: String

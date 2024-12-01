@@ -1,78 +1,57 @@
 // FavoritesView.swift
 
+// FavoritesView.swift
+
 import SwiftUI
-
-
 
 struct FavoritesView: View {
     @EnvironmentObject var favoritesManager: FavoritesManager
-    @Environment(\.viewContext) var context: ViewContext
-    @State private var itemHeights: [UUID: CGFloat] = [:] // Словарь для хранения высот элементов
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 1) {
-                if favoritesManager.favorites.isEmpty {
-                    Text("Нет элементов в избранном")
-                        .foregroundColor(.gray)
-                        .bold()
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(.back)
-                }
-
-                VStack(alignment: .leading, spacing: 1) {
-                    ForEach(favoritesManager.favorites) { item in
-                        ViewFactory.view(for: item.viewIdentifier)
-                            .frame(maxHeight: .infinity)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .environment(\.viewContext, .favorites)
+        NavigationView {
+            FavoritesUIKitView()
+                .padding(.horizontal, 10)
+                .cornerRadius(10)
+                .background(Color.back)
+                .environmentObject(favoritesManager)
+                .environment(\.viewContext, .favorites)
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Избранное")
+                                .font(.headline)
+                                .foregroundColor(Color.toolBar)
+                                .bold()
+                            Text("«Часто используемые элементы»")
+                                .font(.caption2)
+                                .foregroundColor(Color.toolBar)
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            favoritesManager.favorites.removeAll()
+                            favoritesManager.saveFavorites()
+                        }) {
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                        }
                     }
                 }
-            }
-            .padding(.horizontal, 10)
-            .padding(.bottom, 55)
-            .navigationBarTitle("", displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack {
-                        Text("Избранное")
-                            .font(.headline)
-                            .foregroundColor(Color.toolBar)
-                            .bold()
-                        Text("«Часто используемые элементы»")
-                            .font(.caption2)
-                            .foregroundColor(Color.toolBar)
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        removeAllFavorites() // Удаление всех элементов
-                    }) {
-                        Image(systemName: "trash")
-                            .foregroundColor(.red)
-                    }
-                }
-            }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .cornerRadius(10)
         .background(Color.back)
-        .onAppear {
-            // Очищаем словарь высот, чтобы пересчитать при открытии
-            itemHeights.removeAll()
-        }
-    }
-
-    private func removeAllFavorites() {
-        favoritesManager.favorites.removeAll()
     }
 }
-            
+
+// Дополнительные компоненты
 enum ViewContext {
     case favorites
     case nonFavorites
     case other
 }
-    
+
 struct ViewContextKey: EnvironmentKey {
     static let defaultValue: ViewContext = .other
 }
@@ -83,7 +62,6 @@ extension EnvironmentValues {
         set { self[ViewContextKey.self] = newValue }
     }
 }
-
 
 #Preview {
     FavoritesView()
@@ -279,4 +257,325 @@ struct ViewFactory {
             return AnyView(Text("Неизвестное представление"))
         }
     }
+}
+
+
+import SwiftUI
+
+// FavoritesUIKitView.swift
+
+
+struct FavoritesUIKitView: UIViewControllerRepresentable {
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.viewContext) var context: ViewContext
+
+    func makeUIViewController(context: Context) -> FavoritesViewController {
+        let viewController = FavoritesViewController()
+        viewController.favoritesManager = favoritesManager
+        viewController.viewContext = self.context
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: FavoritesViewController, context: Context) {
+        uiViewController.favoritesManager = favoritesManager
+        uiViewController.viewContext = self.context
+        uiViewController.tableView.reloadData()
+    }
+}
+
+import UIKit
+import SwiftUI
+
+
+// FavoritesViewController.swift
+
+
+class FavoritesViewController: UIViewController {
+    var favoritesManager: FavoritesManager!
+    var viewContext: ViewContext = .other
+    var tableView: UITableView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTableView()
+        setupNavigationBar()
+
+        // Observe content size change notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange), name: .didUpdateContentSize, object: nil)
+    }
+
+    @objc private func contentSizeDidChange() {
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    private func setupTableView() {
+        tableView = UITableView(frame: view.bounds)
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        tableView.register(FavoriteCell.self, forCellReuseIdentifier: "FavoriteCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+
+        // Включаем возможность перетаскивания
+        tableView.dragInteractionEnabled = true
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
+
+        // Отключаем разделители
+        tableView.separatorStyle = .none
+
+        // Настраиваем автоматическое определение высоты ячеек
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+
+        view.addSubview(tableView)
+    }
+
+    private func setupNavigationBar() {
+        navigationItem.title = "Избранное"
+        navigationItem.rightBarButtonItem = editButtonItem
+    }
+
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: animated)
+    }
+
+    
+}
+
+// UITableViewDataSource и UITableViewDelegate
+extension FavoritesViewController: UITableViewDataSource, UITableViewDelegate {
+    // MARK: - Data Source
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return favoritesManager.favorites.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else {
+            return UITableViewCell()
+        }
+
+        let item = favoritesManager.favorites[indexPath.row]
+        cell.configure(with: item, viewContext: viewContext)
+        cell.delegate = self
+        return cell
+    }
+
+    // MARK: - Editing
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    // Удаление элемента
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            favoritesManager.favorites.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            favoritesManager.saveFavorites()
+        }
+    }
+}
+
+// UITableViewDragDelegate и UITableViewDropDelegate
+extension FavoritesViewController: UITableViewDragDelegate, UITableViewDropDelegate {
+    // MARK: - UITableViewDragDelegate
+
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+            let item = favoritesManager.favorites[indexPath.row]
+            let itemProvider = NSItemProvider(object: item.id.uuidString as NSString)
+            let dragItem = UIDragItem(itemProvider: itemProvider)
+            dragItem.localObject = item
+            return [dragItem]
+        }
+
+    
+    func tableView(_ tableView: UITableView, dragPreviewParametersForRowAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+            let cell = tableView.cellForRow(at: indexPath)
+
+            let parameters = UIDragPreviewParameters()
+            // Устанавливаем закруглённые углы
+            parameters.visiblePath = UIBezierPath(roundedRect: cell?.bounds ?? CGRect.zero, cornerRadius: 10)
+            return parameters
+        }
+    // MARK: - UITableViewDropDelegate
+
+    func tableView(_ tableView: UITableView, canHandle session: UIDropSession) -> Bool {
+        // Разрешаем только внутренние перетаскивания
+        return session.localDragSession != nil
+    }
+
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession,
+                   withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+
+        if tableView.hasActiveDrag {
+            // Разрешаем перемещение внутри таблицы
+            return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        } else {
+            // Отклоняем внешние дропы
+            return UITableViewDropProposal(operation: .forbidden)
+        }
+    }
+
+    func tableView(_ tableView: UITableView,
+                   performDropWith coordinator: UITableViewDropCoordinator) {
+        guard coordinator.session.localDragSession != nil else {
+            // Не принимаем дропы из других приложений
+            return
+        }
+
+        let destinationIndexPath: IndexPath
+        if let indexPath = coordinator.destinationIndexPath {
+            destinationIndexPath = indexPath
+        } else {
+            // Если нет destinationIndexPath, дропаем в конец таблицы
+            let row = tableView.numberOfRows(inSection: 0)
+            destinationIndexPath = IndexPath(row: row, section: 0)
+        }
+
+        reorderItems(coordinator: coordinator,
+                     destinationIndexPath: destinationIndexPath,
+                     tableView: tableView)
+    }
+
+    private func reorderItems(coordinator: UITableViewDropCoordinator,
+                              destinationIndexPath: IndexPath,
+                              tableView: UITableView) {
+
+        for item in coordinator.items {
+            if let sourceIndexPath = item.sourceIndexPath,
+               let favoriteItem = item.dragItem.localObject as? FavoriteItem {
+
+                tableView.performBatchUpdates({
+                    // Удаляем элемент из старой позиции
+                    favoritesManager.favorites.remove(at: sourceIndexPath.row)
+                    // Вставляем элемент в новую позицию
+                    favoritesManager.favorites.insert(favoriteItem, at: destinationIndexPath.row)
+
+                    // Перемещаем строку в таблице
+                    tableView.moveRow(at: sourceIndexPath, to: destinationIndexPath)
+                }, completion: nil)
+
+                coordinator.drop(item.dragItem, toRowAt: destinationIndexPath)
+            }
+        }
+
+        // Сохраняем изменения
+        favoritesManager.saveFavorites()
+    }
+}
+
+// Реализация FavoriteCellDelegate
+extension FavoritesViewController: FavoriteCellDelegate {
+    func didUpdateContentSize() {
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+    }
+}
+// FavoriteCell.swift
+
+import UIKit
+import SwiftUI
+
+protocol FavoriteCellDelegate: AnyObject {
+    func didUpdateContentSize()
+}
+
+class FavoriteCell: UITableViewCell {
+    private var hostingController: UIHostingController<AnyView>?
+    weak var delegate: FavoriteCellDelegate?
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.selectionStyle = .none
+        self.backgroundColor = .back
+
+        // Устанавливаем закруглённые углы на contentView
+        self.contentView.layer.cornerRadius = 10
+        self.contentView.layer.masksToBounds = true
+
+        // Устанавливаем цвет фона
+        self.contentView.backgroundColor = UIColor.clear
+
+        // Включаем взаимодействие с пользователем
+        self.contentView.isUserInteractionEnabled = true
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func configure(with item: FavoriteItem, viewContext: ViewContext) {
+        // Удаляем предыдущий hostingController
+        if let hostingController = hostingController {
+            hostingController.view.removeFromSuperview()
+            self.hostingController = nil
+        }
+
+        // Создаём SwiftUI представление
+        let swiftUIView = ViewFactory.view(for: item.viewIdentifier)
+            .environment(\.viewContext, viewContext)
+            .onPreferenceChange(ContentSizePreferenceKey.self) { [weak self] _ in
+                self?.delegate?.didUpdateContentSize()
+            }
+
+        // Встраиваем SwiftUI представление в hostingController
+        let controller = UIHostingController(rootView: AnyView(swiftUIView))
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        controller.view.backgroundColor = .clear
+
+        // Добавляем представление hostingController в contentView ячейки
+        self.contentView.addSubview(controller.view)
+        NSLayoutConstraint.activate([
+            controller.view.topAnchor.constraint(equalTo: contentView.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+        ])
+
+        // Убеждаемся, что взаимодействие включено
+        controller.view.isUserInteractionEnabled = true
+
+        // Применяем закруглённые углы к представлению hostingController
+        controller.view.layer.cornerRadius = 10
+        controller.view.layer.masksToBounds = true
+
+        self.hostingController = controller
+    }
+
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        let fittingSize = CGSize(width: size.width, height: UIView.layoutFittingCompressedSize.height)
+        let size = contentView.systemLayoutSizeFitting(fittingSize)
+        return size
+    }
+}
+
+// ContentSizePreferenceKey.swift
+
+import SwiftUI
+
+struct ContentSizePreferenceKey: PreferenceKey {
+    static var defaultValue: CGSize = .zero
+
+    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
+        let next = nextValue()
+        value = CGSize(width: max(value.width, next.width), height: max(value.height, next.height))
+    }
+}
+
+extension Notification.Name {
+    static let didUpdateContentSize = Notification.Name("didUpdateContentSize")
 }

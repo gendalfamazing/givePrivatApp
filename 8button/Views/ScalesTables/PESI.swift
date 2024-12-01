@@ -73,6 +73,7 @@ struct PESI: View {
                         isTextExpanded.toggle()
                         if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
                             favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                            NotificationCenter.default.post(name: .didUpdateContentSize, object: nil)
                         }
                     }
                 }
@@ -220,6 +221,15 @@ struct PESI: View {
                     
                 }
             }
+        }
+        .background(
+            GeometryReader { geometry in
+                Color.clear
+                    .preference(key: ContentSizePreferenceKey.self, value: geometry.size)
+            }
+        )
+        .onPreferenceChange(ContentSizePreferenceKey.self) { _ in
+            // Ничего не нужно делать здесь
         }
         
         .padding(2)
