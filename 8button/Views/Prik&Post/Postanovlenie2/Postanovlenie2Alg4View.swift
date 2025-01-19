@@ -28,7 +28,18 @@ struct Postanovlenie2Alg4View: View {
             ScrollView {
                 Spacer()
                 VStack (spacing: 5){
-                    
+                    MyViewBuilder(title: Text("20. Обращения в службу СМП поступают:"), content: Text(LocalizedStringKey("Post2Alg4B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded1)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded1.toggle()
+                            }
+                        }
+                    MyViewBuilder(title: Text("21. Обращение, поступившее в службу СМП"), content: Text(LocalizedStringKey("Post2Alg4B0G0S2"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded2)
+                        .onTapGesture {
+                            withAnimation (.snappy) {
+                                isTextExpanded2.toggle()
+                            }
+                        }
                     MyViewBuilder(title: Text("22. Автоматическая запись обращения"), content: Text(LocalizedStringKey("Post2Alg4B0G0S3"))).buildDualBlockBlueGray(isTextExpanded: isTextExpanded3)
                         .onTapGesture {
                             withAnimation (.snappy) {

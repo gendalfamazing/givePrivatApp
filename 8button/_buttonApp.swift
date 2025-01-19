@@ -27,13 +27,13 @@ struct _buttonApp: App {
     var body: some Scene {
         WindowGroup {
             StoreKit8()
+                .environmentObject(trialManager) // Добавляем trialManager в окружение
                 .environmentObject(favoritesManager)
                 .environmentObject(themeManager)
                 .preferredColorScheme(colorScheme)
                 .environment(\.sizeCategory, fontSizeCategory)
                 .environmentObject(entitlementManager)
                 .environmentObject(purchaseManager)
-                .environmentObject(trialManager) // Добавляем trialManager в окружение
                 .environmentObject(updateManager)
                 .task {
                     await purchaseManager.updatePurchasedProducts()

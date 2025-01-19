@@ -293,7 +293,7 @@ struct StoreKit8: View {
     var body: some View {
         VStack {
             VStack(spacing: 5) {
-                if entitlementManager.hasPro || trialManager.isTrialActive {
+                if entitlementManager.hasPro || !trialManager.isTrialExpired {
                     AppTabBarView()
                 } else {
                     ScrollView {

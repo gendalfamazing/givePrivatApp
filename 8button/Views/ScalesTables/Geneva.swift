@@ -23,12 +23,11 @@ struct Geneva: View {
     @State private var displayedPoints = 0 // Для анимации
     @State private var isTextExpanded3 = false
     @Environment(\.colorScheme) private var colorScheme
-    
     @Environment(\.viewContext) var context: ViewContext
     @EnvironmentObject var favoritesManager: FavoritesManager
+    
     @State private var showAlert = false
     @State private var alertMessage = ""
-    
     private var allViewIdentifiersTitle: String = "Шкалы и таблицы"
     private var allViewIdentifiers: String = "GENEVA"
     
@@ -63,18 +62,21 @@ struct Geneva: View {
         }
     }
     var body: some View {
+        let isExpanded = favoritesManager.favorites
+                    .first(where: { $0.viewIdentifier == allViewIdentifiers })?
+                    .isExpanded ?? false
         VStack {
-            MyViewBuilder(title: Text("GENEVA"), content: Text("Оценка вероятности развития ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isTextExpanded3, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
-                
+            MyViewBuilder(title: Text("GENEVA"), content: Text("Оценка вероятности развития ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isExpanded, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
+            
                 .onTapGesture {
                     withAnimation(.snappy) {
-                        isTextExpanded3.toggle()
                         if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
-                            favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
+                            favoritesManager.favorites[index].isExpanded.toggle()
+                            favoritesManager.saveFavorites()
                         }
                     }
                 }
-            if isTextExpanded3 {
+            if isExpanded {
                 MyViewBuilder(title: Text(""), content: Text("""
                     **Женевская шкала** используется для оценки клинической вероятности тромбоэмболии легочной артерии (ТЭЛА). Чем больше факторов, предрасполагающих к возникновению тромбоза глубоких вен и ТЭЛА, а также симптомов и признаков, характерных для данных состояний, тем более вероятно наличие легочной эмболии.
                     """)).buildGrayText()

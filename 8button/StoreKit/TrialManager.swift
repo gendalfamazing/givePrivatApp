@@ -9,6 +9,7 @@ class TrialManager: ObservableObject {
 
     @Published var isTrialActive: Bool = false
     @Published var isTrialExpired: Bool = false
+    @Published var isTrialExpiredReserved: Bool = false
     @Published var remainingTime: TimeInterval? = nil
 
     private var trialDuration: TimeInterval = 14 * 24 * 60 * 60
@@ -23,7 +24,14 @@ class TrialManager: ObservableObject {
             _ = KeychainHelper.saveBool(newValue, forKey: hasUsedTrialKey)
         }
     }
-
+    var hasUsedTrialReserved: Bool {
+        get {
+            return KeychainHelper.loadBool(forKey: hasUsedTrialKey) ?? false
+        }
+        set {
+            _ = KeychainHelper.saveBool(newValue, forKey: hasUsedTrialKey)
+        }
+    }
     var trialActivatedTimeInterval: Double? {
         get {
             return KeychainHelper.loadDouble(forKey: trialActivatedTimeIntervalKey)
@@ -45,6 +53,7 @@ class TrialManager: ObservableObject {
     func activateTrial() {
         trialActivatedTimeInterval = Date().timeIntervalSince1970
         hasUsedTrial = true
+        hasUsedTrialReserved = true
         checkTrialStatus()
     }
 
@@ -55,22 +64,27 @@ class TrialManager: ObservableObject {
             if elapsedTime < trialDuration {
                 isTrialActive = true
                 isTrialExpired = false
+                isTrialExpiredReserved = false
                 remainingTime = trialDuration - elapsedTime
             } else {
                 isTrialActive = false
                 isTrialExpired = true
+                isTrialExpiredReserved = true
                 remainingTime = nil
             }
         } else {
             isTrialActive = false
             isTrialExpired = hasUsedTrial
+            isTrialExpiredReserved = hasUsedTrialReserved
             remainingTime = nil
         }
     }
 
     private func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
-            self?.checkTrialStatus()
+            Task { @MainActor [weak self] in
+                self?.checkTrialStatus()
+            }
         }
     }
 

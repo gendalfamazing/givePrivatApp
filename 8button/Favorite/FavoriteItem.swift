@@ -24,3 +24,9 @@ struct FavoriteItem: Identifiable, Codable, Equatable, Hashable {
         self.isNavigationLink = isNavigationLink
     }
 }
+
+extension FavoriteItem {
+    mutating func toggleExpanded() {
+        self.isExpanded.toggle()
+    }
+}

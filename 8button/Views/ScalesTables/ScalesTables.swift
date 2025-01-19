@@ -11,7 +11,6 @@ struct ScalesTables: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
     @State private var isTextExpanded3 = false
@@ -507,6 +506,7 @@ struct Scales: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var favoritesManager: FavoritesManager
+    @StateObject var sharedState = SharedState()
     
     @State private var isTextExpanded1 = false
     @State private var isTextExpanded2 = false
@@ -542,6 +542,7 @@ struct Scales: View {
             PESI()
                 .environmentObject(favoritesManager)
                 .environment(\.viewContext, .nonFavorites)
+            
             MyViewBuilder(title: Text("GRACE"), content: Text("Расчет риска у больных с ОКС без подъема ST")).buildBlue591TextScales(isTextExpanded: isTextExpanded3)
                 .onTapGesture {
                     withAnimation (.snappy) {

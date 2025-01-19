@@ -5,7 +5,7 @@ import Combine
 
 class FavoritesManager: ObservableObject {
     @Published var favorites: [FavoriteItem] = []
-
+    @Published var expandedItemID: UUID?
     static let shared = FavoritesManager()
 
     private let userDefaultsKey = "favorites_items"
@@ -46,6 +46,15 @@ class FavoritesManager: ObservableObject {
         if let index = favorites.firstIndex(of: item) {
             favorites.remove(at: index)
             saveFavorites()
+        }
+    }
+}
+
+extension FavoritesManager {
+    func toggleExpanded(for item: FavoriteItem) {
+        if let index = favorites.firstIndex(of: item) {
+            favorites[index].toggleExpanded()
+            saveFavorites() // Сохраняем обновлённое состояние
         }
     }
 }

@@ -66,18 +66,20 @@ struct PESI: View {
     }
     
     var body: some View {
+        let isExpanded = favoritesManager.favorites
+                    .first(where: { $0.viewIdentifier == allViewIdentifiers })?
+                    .isExpanded ?? false
         VStack {
-            MyViewBuilder(title: Text("PESI"), content: Text("Оценка прогноза 30-дневного летального исхода больных с ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isTextExpanded, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
+            MyViewBuilder(title: Text("PESI"), content: Text("Оценка прогноза 30-дневного летального исхода больных с ТЭЛА")).buildBlue591TextScalesFavorites(isTextExpanded: isExpanded, isInFavorites: isInFavorites, shouldShowOverlay: shouldShowOverlay, allViewIdentifiersTitle: allViewIdentifiersTitle, allViewIdentifiers: allViewIdentifiers, context: context)
                 .onTapGesture {
                     withAnimation(.snappy) {
-                        isTextExpanded.toggle()
                         if let index = favoritesManager.favorites.firstIndex(where: { $0.viewIdentifier == allViewIdentifiers }) {
-                            favoritesManager.favorites[index].isExpanded.toggle() // Изменяем состояние
-                            NotificationCenter.default.post(name: .didUpdateContentSize, object: nil)
+                            favoritesManager.favorites[index].isExpanded.toggle()
+                            favoritesManager.saveFavorites()
                         }
                     }
                 }
-            if isTextExpanded {
+            if isExpanded {
                 MyViewBuilder(title: Text(""), content: Text("""
                 **Шкала PESI** используется для прогнозирования риска смертности у пациентов с острой тромбоэмболией легочной артерии (ТЭЛА). Она помогает определить необходимость госпитализации и интенсивности терапии.
                 """)).buildGrayText()
@@ -361,3 +363,4 @@ struct CriterionRowPESI: View {
 #Preview {
     PESI()
 }
+
